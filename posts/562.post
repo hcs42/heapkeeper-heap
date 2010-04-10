@@ -1,0 +1,15 @@
+Author: Attila Nagy
+Subject: Heapkeeper version 0.3
+Tag: discussion
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0908301356o549a243ds7168cf4b3c5d1169@mail.gmail.com>
+Parent: <4ddb9e5b0908301256x5ad40eb5nd4f91843fe99dc88@mail.gmail.com>
+Date: Sun, 30 Aug 2009 22:56:38 +0200
+
+Good point.
+
+But I have faith in what we are trying to do. It gives me a sense of
+"officiality" or "seriousness" about the project, which is good, as it
+leads to cleaner code and, hopefully, more pure design. But I still
+have concerns that it might slow things down.

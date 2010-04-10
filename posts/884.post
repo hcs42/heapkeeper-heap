@@ -1,0 +1,18 @@
+Author: Attila Nagy
+Subject: Sphinx install: status?
+Message-Id: <b29f917d0911080239u386ad163tdf1160d370ddf02e@mail.gmail.com>
+Parent: <4ddb9e5b0910150537x48502b83ma0832b89d7f3474f@mail.gmail.com>
+Date: Sun, 8 Nov 2009 11:39:32 +0100
+
+> I still use the Sphinx version I specified in the Hk docs.
+
+My laptop didn't have Sphinx installed, I always compiled docs on the
+desktop. Now I installed the newest stable Sphinx on my laptop, mostly
+out of curiosity, and it seems to work OK.
+
+E.g. in hkgen.html, the line that comes from "Real type:
+fun(|PostItem|) -> |PostItem|" results in two working links to
+PostItem, where |PostItem| is defined in defs.hrst like
+":class:`PostItem <hklib.PostItem>`", the kind of thing that caused
+the problem, if I understood correctly. So it seems like they have
+fixed the bug in the 0.6.3 stable release.

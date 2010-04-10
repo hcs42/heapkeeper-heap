@@ -1,0 +1,26 @@
+Author: Attila Nagy
+Subject: Moving heapkeeper/script to hk-dev-utils
+Tag: prop
+Message-Id: <20100210180642.97ff8b23.nagy.attila.1984@gmail.com>
+Parent: <4B5C1C41.9010703@gmail.com>
+Date: Wed, 10 Feb 2010 18:06:42 +0100
+
+> I think the scripts in heapkeeper/scripts would have a better place in
+> the hk-dev-utils repository. The heapkeeper repository should contain
+> the program executed by the users, not our utilities.
+> 
+> What do you think?
+
+I don't think the repository would be for users. It is for other
+developers. So I think we should keep the scripts that could be useful
+to other developers, and only migrate those that are only valuable to
+us.
+
+Of the current set, `statistics` and `statistics.py` are the only ones
+that are not concerned with our workflow. They could be kept if we
+wanted to, but since they aren't maintained, we could just as well
+remove them. (E.g. `statistics` calls `stat.py` instead of
+`statistics.py`, so it wouldn't run as it is now.)
+
+If we choose to remove the statistics script, my opinion is the same
+as yours.

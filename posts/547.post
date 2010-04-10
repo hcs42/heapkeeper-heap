@@ -1,0 +1,55 @@
+Author: Attila Nagy
+Subject: Managing several heaps in Heapkeeper
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0908281251g10bdab8dv2ae8c46fe30ed6fe@mail.gmail.com>
+Parent: <4A98290A.2080002@gmail.com>
+Date: Fri, 28 Aug 2009 21:51:39 +0200
+
+=== Terminology ===
+
+>> An example: for the post created from "<postdir>/ums/1234.post", the
+>> "post name" could be "ums/1234".
+>
+> Well, it would rather be a tuple: ("ums", "1234"). It's easier to
+> handle tuples than manipulate strings.
+
+OK.
+
+>> The part before the "/" would be called "heapid",
+>
+> I would call it "heap name". Do you prefer "heapid"?
+
+I prefer "id" because the other one would have to be "postid" anyway,
+in order to avoid conflict with "post name". Of course, "heapid" is
+already used, but in another meaning, which could be a problem. How
+about using "heap_id" to denote this new meaning, ie. the first
+element of the tuple that is the "post name"?
+
+>> the part after it would be "postid".
+>
+> Is it "post id" or "postid"?
+
+I think either should be acceptable in text. In code, we should of
+course stick to one form. If you accept my previous comment, it should
+be "post_id".
+
+== Storage ==
+
+>> You decided to store posts of distinct heaps in different
+>> subdirectories of the post directory. There is an alternative, namely,
+>> storing all the post files in a single directory, naming them in a
+>> "<heapid><separator><postid>.post" syntax, where <separator> is
+>> commonly "_". This is what I would have done, simply for simplicity.
+>
+> The separator of my proposal is the "/" character :)
+
+In a sense, yes. :)
+
+== Example: moving a post ==
+
+> I had the temptation to give all posts a message id... But it would
+> not be right. (Or at least I have not find the way to do it right.)
+
+We are both Git enthusiasts. I can't imagine you haven't had the idea
+of using SHA-1 :)

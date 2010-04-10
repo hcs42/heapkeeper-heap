@@ -1,0 +1,19 @@
+Author: Attila Nagy
+Subject: Ideas sleeping in the heap
+Tag: cleanup
+Tag: meta
+Message-Id: <20100127083802.b3e265ff.nagy.attila.1984@gmail.com>
+Parent: <4AF70293.1010403@gmail.com>
+Date: Wed, 27 Jan 2010 08:38:02 +0100
+
+> There are quite a few ideas I think that we have already written down
+> and sent to the heap but cannot find them. (I sent a new post about
+> how to prevent this [1], but the current post is about what to do with
+> the ones we already have.)
+
+We decided to add keywords to posts [1]. When we are cleaning up the heap,
+we should add keywords to existing posts.
+
+[keywords keyword tidying heap]
+
+[1] heap://hh/917

@@ -1,0 +1,23 @@
+Author: Csaba Hoch
+Subject: "hkshell: enew accepts prefix" (2009-09-06 90b4c7d6)
+Tag: commit
+Message-Id: <4ddb9e5b0909072358q6d840ac7j485eb384eb2b75a4@mail.gmail.com>
+Parent: <b29f917d0909071241x4aaf503bl245e99a75d1ee3ed@mail.gmail.com>
+Date: Tue, 8 Sep 2009 08:58:30 +0200
+
+>> So maybe the best title is the following:
+>>
+>>    PostDB.next_heapid,hkshell.enew: accepting prefix
+>>
+>> (We can spare the space before the colon, too.)
+>
+> You mean the one after the comma.
+
+Yes, sorry.
+[todo Fix]
+
+>  Probably, though I'd only do that as
+> a last resort to cut down 51 chars to 50. My ties to typography are
+> strong :)
+
+OK :)

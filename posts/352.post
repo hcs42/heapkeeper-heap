@@ -1,0 +1,29 @@
+Author: Attila Nagy
+Subject: Preview
+Tag: post syntax
+Tag: prop
+Message-Id: <20090530203936.770dc113.nagy.attila.1984@gmail.com>
+Parent: <4A21138D.2000105@gmail.com>
+Date: Sat, 30 May 2009 20:39:36 +0200
+
+>>> Hkweb could have a service that does this: you paste the body of post
+>>> into a textarea and it shows you a preview of the post page.
+>> 
+>> How would you do this in hkshell?
+> 
+> The following example is the answer:
+> 
+>   $ gvim new_mail
+>   <composing the email>
+>   $ ./hkshell --configfile NONE \
+>               --command "gen_preview('new_mail', 'result.html'); q()"
+>   <opening the created web page in a browser>
+>   <modifying the email if necessary; regenerating the preview; etc.>
+
+Cool! I like your solution.
+
+> - We could even call this functionality from Vim. It would be easy to
+>   write a Vim-command that orders hkshell to generate the HTML page
+>   for the currently edited file.
+
+Definitely. That'd also be nice.

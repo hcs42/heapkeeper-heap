@@ -1,0 +1,50 @@
+Author: Csaba Hoch
+Subject: Wiki-like heap, pseudo posts
+Tag: hh-conventions
+Tag: idea
+Tag: post syntax
+Tag: reviewed
+Message-Id: <4ddb9e5b0903191018q56d657den5a0afecf09fdbb94@mail.gmail.com>
+Parent: <b29f917d0903190628x1c555f1fg7ccbd35ae727e6a4@mail.gmail.com>
+Date: Thu, 19 Mar 2009 18:18:07 +0100
+
+> Though you didn't mention the question of syntax directly in your
+> proposal, I guess from your other posts that you propose to use a
+> MediaWiki/Wiko-like syntax.
+
+Yes.
+
+> But for numbered lists, you used numbers
+> in your post instead of the #'s demanded by the syntax.
+>
+> Which leads to the question: do you think we should integrate Wiko
+> with Heap?
+>
+> If it is done, #'s will be seen on the Heap as a nice numbered list,
+> with automatic numbering, which is a nice feature. Downside is that
+> it's slightly inconvenient when you read the posts as received by
+> email.
+
+This is a very valid point. There are pros and cons on each side;
+maybe we should make a list of them?
+
+> Another question: should we start using #'s and similar
+> Wiko-markup now, or only when the integration is complete (that is, if
+> we choose to integrate)?
+
+No; see the next paragraph.
+
+> An idea for such an integration which fits together well with your
+> wiki-heap idea: how about adding a special meta to mark a post as a
+> wiki, possibly specifying a title, too? If no such meta is present, we
+> could use the normal body parser, otherwise we would use Wiko to
+> render the page.
+
+Good idea, I'm all for it. This way we don't have to start using
+wiki-syntax in our posts, only in some special posts. Those posts
+(which will be few in number I think) may be modified later if the
+wiki syntax changes. What do you say to using a special tag, e.g.
+[wiki-syntax] or [ws]?
+
+[note] Originally a point was made here about when to use tags and when
+to use meta text. This was moved to heap://hh/21.

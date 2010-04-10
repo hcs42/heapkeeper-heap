@@ -1,0 +1,33 @@
+Author: Csaba Hoch
+Subject: Developing with vim
+Tag: ppc
+Tag: reviewed
+Tag: vim
+Message-Id: <49E2D6F2.4010703@gmail.com>
+Parent: <49e2cb44.09c5660a.1595.fffffd1a@mx.google.com>
+Date: Mon, 13 Apr 2009 08:08:50 +0200
+
+> Any progress in this field recently? I'm always on the look for new
+> editor tips!
+
+Just small adjustments.
+
+~/.vim/ftplugin/rst.vim:
+
+    nnoremap <buffer> <F2> "_yiwi``<esc>ea``<esc>
+    vnoremap <buffer> <F2> <esc>`>a``<esc>`<lt>i``<esc>
+    inoremap <buffer> <F2> ````<left><left>
+    setlocal tw=79
+    setlocal makeprg="make html"
+
+~/.vim/ftplugin/python.vim:
+
+    setlocal fo+=r
+    noremap <buffer> gD ?\(def\<bar>class\) <c-r>=expand('<cword>')<cr>\><cr>
+    setlocal efm=\ \ File\ \"%f\"\\,\ line\ %l%m
+    setlocal tw=79
+
+> Btw. I use ctags only through :Tlist (what is the real name for that
+> plugin?), which I mapped to F8.
+
+Thanks, I'll try that.

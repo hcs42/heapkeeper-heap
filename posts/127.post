@@ -1,0 +1,28 @@
+Author: Attila Nagy
+Subject: Setting up a new installation with an existing heap
+Tag: bug
+Message-Id: <b29f917d0904280852m6232bdcfq98a2c0e771a56c04@mail.gmail.com>
+Date: Tue, 28 Apr 2009 17:52:36 +0200
+
+Today, I played with the idea of what Heapkeeper would look like in the eyes
+of a newcomer. To simulate this situation, I cloned our git repository into a
+fresh directory, added our config file, but nothing else, and started hkshell.
+No problems so far. Then, I did a 'dl()'. OK, some messages were downloaded.
+Then, a 'ga()' resulted in an exception complaining no sections were provided.
+
+This hints an error in the hkcustomlib, which I later found and corrected
+(commit e1bd606, 2009-04-28 16:15).
+
+The cautious reader might have wondered why the cautious wording in the above:
+"some messages were downloaded". This is the bigger problem. Right now, we
+occasionally log into the heap's GMail account, and archive old messages so
+that they are no longer checked for when downloading (as only Inbox is
+checked).
+
+Of course, our way of using Heapkeeper includes versioning the heap with a
+distributed VCS like Git. So, our hypothetical neophyte would have to
+git-clone the post files (i.e. the heap itself) from its official source.
+
+Question is: do things already work the way we want them on a longer
+term, or is this just a stopgap solution? (Very probably we'll get
+this answer when we'll be moving on to the Web phase.)

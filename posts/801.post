@@ -1,0 +1,9 @@
+Author: Csaba Hoch
+Subject: CSS files in the Hk repo should overwrite CSS files in the HTML directory
+Tag: prop
+Tag: reviewed
+Message-Id: <4ddb9e5b0910290931u52842ffana78f57b69b045cc0@mail.gmail.com>
+Parent: <b29f917d0910290746i69be9dd3o1999fefe914537e2@mail.gmail.com>
+Date: Thu, 29 Oct 2009 17:31:05 +0100
+
+OK, you are right. But that's also silly :)

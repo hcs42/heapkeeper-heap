@@ -1,0 +1,35 @@
+Author: Csaba Hoch
+Subject: Removing Google Groups stuff
+Tag: issue
+Message-Id: <4ddb9e5b1002060120w7330e337r980e6ceee18e2f66@mail.gmail.com>
+Parent: <20100206092731.201e5b2d.nagy.attila.1984@gmail.com>
+Date: Sat, 6 Feb 2010 10:20:32 +0100
+
+> Confirmed; there are 445 posts now that contain these lines.
+
+Pull from shrek, I corrected them last weekend.
+
+>> Post.remove_google_stuff should be improved to remove this text as
+>> well; and we should not forget to remove the boilerplate from the
+>> posts that are already affected.
+>
+> How would you implement the filtering?
+
+Pull from GitHub, I already implemented it :D
+
+(Yes, there is one post that still contains that text and will remain
+so -- the root of this thread :) )
+
+http://github.com/hcs42/heapkeeper/commit/9ab03ac4517ee859a9375ccb2c71d027ff295274
+
+> Which one would you prefer?
+
+See the code.
+
+> Also, is it possible to turn these lines off somehow in Google Groups? I
+> haven't found such a setting, though.
+
+I'm not sure, and I'm not sure we want to turn this off e.g. for the
+public mailing list under Hh. It is quite annoying on a mailing list
+to get "How do I unsubscribe" email to the mailing list from time to
+time. OK, that's not a problem now...

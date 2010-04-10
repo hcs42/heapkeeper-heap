@@ -1,0 +1,77 @@
+Author: Csaba Hoch
+Subject: Free-text search
+Tag: feature
+Message-Id: <4ddb9e5b1002060723r60c7711q250168b6ba82857c@mail.gmail.com>
+Parent: <20100206094826.854e58e8.nagy.attila.1984@gmail.com>
+Date: Sat, 6 Feb 2010 16:23:29 +0100
+
+>> === Ranking ===
+>>
+>> We could implement ranking so that a post will be higher in the
+>> search results if the word is present as a tag/keyword/subject. Or a
+>> post will be lower in the results if the expression is present only in
+>> a quote.
+>
+> Looks useful! Would you give the tag, keyword and subject matches an
+> equal weight?
+
+I guess.
+
+>> === Thread search ===
+>>
+>> We could also implement "thread search", which would return only one
+>> post per thread.
+>
+> This one seems useful, too.
+>
+> An idea: how about adding a `root()` function to the shell? Or to
+> `hklib.PostSet`? It would return a post set which contains the root
+> posts of any threads from which at least one post was present in the
+> original post set.
+>
+> Then we could have this feature like this:
+>
+>    root(grep('dead trees'))
+>
+> or
+>
+>    grep('dead trees').root()
+
+grep('dead trees').expf().collect.is_root()
+
+We can introcude a function it gets used very often.
+
+>> === Generation output ===
+>>
+>> We should make a generator that would generate HTML pages with the
+>> search results, inlining the relevant posts, highlighting the found
+>> expressions, etc.
+>
+> Nice -- but sounds like an awful lot of work. It sounds like this
+> would be needed for your next idea, however.
+
+It is work, but I don't think it's awful lot.
+
+>> === Vim integration ===
+>>
+>> We could feed the results into Vim so that Vim could jump between the
+>> hits in its usual way (:cnext, :cprev, :clist).
+>
+> Wow. That'd be awesome!
+>
+> I have to admit I've never used this functions, though.
+
+Have you used :cw or :cope? They use the same error list.
+
+> And the multi-word
+> lookup feature would also be useful. For example, I would have used it
+> today if it were easily available, but I rather used an alternative
+> solution instead.
+
+You mean easier than
+
+    grep("master branch", grep("hh"))
+
+It would not be hard to modify grep to accept
+
+    grep("master branch", "hh")

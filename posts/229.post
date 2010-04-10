@@ -1,0 +1,23 @@
+Author: Csaba Hoch
+Subject: Web-interactive Heap on GAE
+Tag: idea
+Message-Id: <4ddb9e5b0905170312j191302d9gc82a19784ca386b8@mail.gmail.com>
+Parent: <20090516083348.28cae65e.nagy.attila.1984@gmail.com>
+Date: Sun, 17 May 2009 12:12:44 +0200
+
+> A while back I have assessed the usability of Google App Engine to host our
+> project once we enter the Hkweb stage [1]. My conclusion then was that the most
+> painful deficiency of GAE was the inability to handle incoming e-mail. Then, I
+> proposed we could use an external server to inject incoming mail into GAE via
+> HTTP requests.
+>
+> This is exactly what a very kind free service offers [2] -- apparently
+> without even any advertisements!
+
+Great!
+
+> If we can wait a bit more, Google itself promises to include this feature in
+> the next update of GAE [3]. So, it seems GAE might be our target when going on
+> to the Web stage.
+
+Also great!

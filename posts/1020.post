@@ -1,0 +1,33 @@
+Author: Attila Nagy
+Subject: dl() is getting slower
+Message-Id: <b29f917d1001091442h7e224f0el3de7e3ac6d0b6b18@mail.gmail.com>
+Date: Sat, 9 Jan 2010 23:42:29 +0100
+
+`dl()` is getting slower again:
+
+The first `dl()` after about two weeks:
+
+    >>> dl()
+    Reading settings...
+    Connecting...
+    Connected
+    Checking...
+    288 new messages found.
+    Downloading...
+    288 new messages downloaded.
+    Mail database saved.
+    dl: 54.979973 seconds.
+
+Then another `dl()`, right after this one:
+
+    >>> dl()
+    Reading settings...
+    Connecting...
+    Connected
+    Checking...
+    No new messages.
+    dl: 50.394206 seconds.
+
+This used to be much faster. Maybe Gmail's IMAP servers are getting
+overloaded, or complex searches are throttled down. I think we'll soon
+have to do another optimization of the IMAP code.

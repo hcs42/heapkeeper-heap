@@ -1,0 +1,92 @@
+Author: Csaba Hoch
+Subject: Body parsing - the how
+Tag: post syntax
+Tag: prop
+Message-Id: <4A0463BB.2010007@gmail.com>
+Parent: <b29f917d0905080616m272e54b3o59d986424fb033c@mail.gmail.com>
+Date: Fri, 08 May 2009 18:54:19 +0200
+
+>> It seems to me that body parsing aims to do many things.
+
+True.
+
+>> Because of this, I propose a modular system where the body parser
+>> is handed a list of parsing modules which are then executed one
+>> after another.
+
+Good!
+
+> In the simplest form, such a modular framework does nothing else
+> besides keeping a list of processing modules and iterating over this
+> list and call upon all the modules to do their specific processing.
+
+So far so good.
+
+> In this model, a processing module is simply a function that takes a
+> string and returns the complete HTML representation of the body as
+> another string. Despite its simplicity, most of the tasks we want to
+> do during the body parsing can be achieved with such a model.
+
+Keep in mind that we want to use meta things also as properties of the
+posts. We don't only use them to create the post pages.
+
+We want to be able to do something like this:
+
+    >>> ls(postdb().collect.has_meta('todo'))
+    ...
+
+or this:
+
+    def todos():
+        for post in hkshell.postdb().collect.has_meta('todo'):
+            print "%s: %s" % (post.heapid, post.get_meta('todo'))
+
+    >>> todos()
+    1: change the subject of this thread
+    5: add this to the previous post
+
+We also want these to be automatically processed: IIRC, we agreed that
+a meta that starts with '!' should be automatically processed (after a
+maintainer's approval).
+
+> However, what we aim for is more than what this approach can handle,
+> in at least two ways:
+> * we need to be able to access the post and the post database, while
+> parsing the bodies
+
+OK.
+
+> * the separation of already processed (HTML) and still unprocessed
+> (raw) parts of the body have to be distinguished
+
+I don't really understand why. But you don't have to answer it now if
+it is just a feeling that we will need that.
+
+> For this, I propose to keep the body throughout the individual stages
+> of processing in a special structure, which is a list of segments.
+> Each segment consists of a string and a flag to indicate if that
+> particular segment is in HTML or in plaintext.
+> 
+> When the processing starts, the framework class puts the whole body
+> into a single segment. Then, the very first module would break it up
+> into paragraphs, and add each paragraph as an individual segment into
+> a new list, with these segments all still flagged as plaintext.
+
+What do you mean by "paragraph"? Probably the paragraph's definition
+should go into the "what" thread.
+
+> At the end of the pipeline, the last module finishes the parsing by
+> calling Html.encode() on any remaining plaintext segments. Then, the
+> framework joins these plaintext strings to create the final HTML
+> output.
+
+This is OK.
+
+You haven't talked about these explicitly:
+- The current "body" attribute of the post should remain as it is, the
+  list of segments and the HTML representation would be other
+  objects (either data attributes (=data members) or local variables
+  of some function)
+- It seems to me that now we want only one layer between the
+  string->paragraphs-as-plain-text and finished-paragraphs->HTML. It
+  this correct?

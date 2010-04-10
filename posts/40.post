@@ -1,0 +1,18 @@
+Author: Attila Nagy
+Subject: Subjects should start with capital letter
+Tag: hh-conventions
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0903230844t3402f2e5r6837db864e068a87@mail.gmail.com>
+Parent: <49C3E343.2090809@gmail.com>
+Date: Mon, 23 Mar 2009 16:44:29 +0100
+
+> Subjects and commit messages are kinda similar things to me.
+
+Not for me. I think what makes these two things different in my
+opinion is that a comment message states what you've _done_, therefore
+it has to contain a verb and a subject, which make a complete
+sentence. With subjects, you just state what will you be talking
+about: very often, this is a noun phrase, with no verb, hence not a
+complete sentence. Which means I don't feel the capitalization and
+period right for them.

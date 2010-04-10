@@ -1,0 +1,12 @@
+Author: Attila Nagy
+Subject: Repo topic name
+Tag: git
+Message-Id: <b29f917d0911060344x53df57f7r847d6be577a23d1d@mail.gmail.com>
+Parent: <4AF3C66F.3080605@gmail.com>
+Date: Fri, 6 Nov 2009 12:44:59 +0100
+
+> But I'll do it then.
+
+I don't like the topic "[new generation page generation]", it is not
+evident (at least to me) that you mean a HTML page. How about simply
+using "[new generator]" or "[new HTML generator]"?

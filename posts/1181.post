@@ -1,0 +1,13 @@
+Author: Csaba Hoch
+Subject: Email parsing problem
+Tag: issue
+Message-Id: <4ddb9e5b1002200412u39e63e5bx587aee9da5c657b4@mail.gmail.com>
+Parent: <20100209112053.0821c6e0.nagy.attila.1984@gmail.com>
+Date: Sat, 20 Feb 2010 13:12:29 +0100
+
+> I think `8bit` and `binary` don't have to be decoded either, but they
+> shouldn't give a warning.
+
+[open]
+
+Warnings should be removed then.

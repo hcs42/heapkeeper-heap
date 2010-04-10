@@ -1,0 +1,99 @@
+Author: Attila Nagy
+Subject: Body parsing - the what - examples
+Tag: post syntax
+Tag: prop
+Message-Id: <20090529073451.8b24cad7.nagy.attila.1984@gmail.com>
+Parent: <4A1AFFC8.40609@gmail.com>
+Date: Fri, 29 May 2009 07:34:51 +0200
+
+>> <<<!todo Rather "do without">>>
+>> ...
+>> [!todo We should change "cite" to "footnote".]
+> 
+> I guess this was the point where you were convinced to use brackets
+> instead of the old meta syntax :) Seven lines earlier you used the old
+> meta syntax, here you use a bracket segment.
+
+I couldn't wait for our dog food to be ready. :)
+
+== Quotes ==
+ 
+>> Here, you have a guarantee that the depth of the recursion will not
+>> exceed the depth of the quotation, which I'd like not to exceed 20 in
+>> any reasonable conversation.
+> 
+> You don't know how long discussions our users will have on their heaps.
+
+That's why the wording was so careful.
+
+> How much simpler can it get? It would be more difficult if we used
+> hierarchical quotes.
+> 
+>> But since we probably don't want to do this,
+> 
+> I do :)
+
+OK :)
+
+>> I'm being swayed towards flat representation. Simple representation
+>> is probably better than simple algorithm, at least that's what
+>> Heapkeeper's evolution has been about so far.
+> 
+> True, that could be one of our design principle. In this particular
+> case, however, simple representation means simple algorithm.
+
+Flat it is, then.
+
+== Authors and signatures ==
+ 
+>>> Why should we generate signature?
+>> 
+>> Ummm...
+>> 
+>>> Maybe we should not sign our emails at all and should not generate
+>>> signatures in posts.
+>> 
+>> But since it wouldn't be hard, why not make it possible?
+> 
+> Because it is not useful? :D
+> 
+> Joke aside, if you would like to see this feature, go for it, as I
+> said previously.
+
+I guess I will, but with a low priority.
+
+== Quotes again ==
+ 
+> (I have a feeling that you argued in your mail for hierarchical
+> storing of quotes _before_ you actually read the end of my email where
+> I explain how would I actually store quotes.)
+
+Not impossible. Since I almost failed to notice one of the most important
+parts of your post, nothing can surprise me. Vim folding (or rather my
+being addicted to it) is to blame :)
+
+== Modularity, parser steps (was: Wiki-like headers) ==
+
+>> OK by me. But what would we do if the Dissector creates Quote segments,
+>> and the Parser stack contains no module to process them?
+> 
+> *Sigh*. There are no "quote segments". See again above and in my
+> proposal on what segments do I envision.
+
+I guess you may be right about my not reading your whole post before
+replying. My bad.
+
+On the other hand, it was just an example. The question in a generic
+form:
+
+But what would we do if the Dissector creates Xyz segments, and the
+Parser stack contains no module to process them?
+
+== Posts we have ==
+
+> Just kidding. We will see if we want to have some automatism when we
+> have done a few posts by hand.
+
+Of course. But don't overdo it: almost all the old posts require hand
+labor anyway for non-automatable reasons, like excessive quoting,
+mistyping, outdated information and the like.

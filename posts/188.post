@@ -1,0 +1,79 @@
+Author: Csaba Hoch
+Subject: Nice work, elif, same commits (2009-05-07 3b4f6d3677, 179f5cf18e, 4e32bdad1c)
+Tag: commit
+Message-Id: <4A0547C7.9020807@gmail.com>
+Parent: <b29f917d0905090049r7dd91263s6255ac516fff2032@mail.gmail.com>
+Date: Sat, 09 May 2009 11:07:19 +0200
+
+>> == elif ==
+>>
+>> A small comment though: there is an "elif" statement in Python. So
+>> please do not write
+>>
+>>    if a:
+>>        b
+>>    else:
+>>        if c:
+>>            d
+>>        else:
+>>            e
+
+I'm sorry that I have not referred to the code in question, I'll do it
+now. But first I'll explain why the code you found is that way it is.
+
+== The code not in question ==
+
+> Although git credits me with writing the code in question, I think it's a
+> mistake. I merely renamed that function, and git thinks it's all new.
+
+If you talk about the thread and summarize_thread functions, I think
+you _copied_ and not _renamed_ it. But you are right -- I wrote those
+else and if. But there is a reason for that; the mentioned code looks
+like this:
+
+    if a:
+        b
+    else:
+        if c:
+            d
+        else:
+            e
+        x # note this command
+
+So it cannot be replaced by elifs easily.
+
+== The code in question ==
+
+This is the commit in question (179f5cf18e):
+
+    @@ -2092,10 +2120,13 @@ class Generator(object):
+             date_str = options.date_fun(post, options)
+     
+             section = options.section
+    -        if section.posts == CYCLES:
+    +        if options.always_active:
+                 active = True
+             else:
+    -            active = post in section.posts
+    +            if section.posts == CYCLES:
+    +                active = True
+    +            else:
+    +                active = post in section.posts
+     
+             if options.locallinks:
+                 link = '#' + post.heapid()
+
+That is the new version of the code that could be simplified with
+elif (in Generator.post_summary):
+
+    section = options.section
+    if options.always_active:
+        active = True
+    else:
+        if section.posts == CYCLES:
+            active = True
+        else:
+            active = post in section.posts
+
+Or now that I have a look at it more closely, a simple if-else is
+enough.

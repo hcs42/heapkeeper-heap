@@ -1,0 +1,40 @@
+Author: Csaba Hoch
+Subject: Sentences that start with the name of a module, function, etc.
+Tag: prop
+Tag: reviewed
+Message-Id: <4A009EF2.1010604@gmail.com>
+Parent: <b29f917d0905050118m7d9bc4ebo167d7d8f667e6433@mail.gmail.com>
+Date: Tue, 05 May 2009 22:17:54 +0200
+
+[close]
+
+> Yes, you are right on most points, so I say OK.
+
+Thank you.
+
+> I've checked those commit messages, and I see that you've already
+> followed this convention you're proposing now, it was me who didn't.
+> Sorry.
+
+No problem. I'm not keen on keeping the commit history as tidy as a
+heap. Linus said something like people usually don't go back to much
+earlier commits, they care only about the last few changes (e.g. last
+one month?) That's a good idea to write nice commit messages though,
+first of all for each other, and second of all to get accustomed to
+writing nice messages.
+
+>>> Thus, a message like:
+>>>
+>>>     Hklib: corrected bugs
+>>>
+>>> won't make anybody go and grep for a code element called 'Hklib' with capital H.
+>> Why not? How does a reader know whether it is a class or a module? We
+>> don't have a rule that the first word is a module. Maybe we will write
+>> at some point:
+>>
+>>    Generator: new methods gen_thread and thread added
+> 
+> You've misunderstood me here. What I wanted to say is unlikely that
+> commit messages will ever be machine-processed.
+
+OK, that's true.

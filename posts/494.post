@@ -1,0 +1,13 @@
+Author: Attila Nagy
+Subject: Posts without message-id, duplicate message-ids
+Message-Id: <b29f917d0908100209p62d0a69eq78940751c6e6039@mail.gmail.com>
+Date: Mon, 10 Aug 2009 11:09:43 +0200
+
+> "A post may have a message id, which is the Message-Id attribute in
+> the header. The message id is the message id of the email from which
+> the post was created. It is supposed to be unique." [1]
+
+I understand 'may', but what does 'supposed to be unique' mean? When
+is it a problem when two messages have the same Message-Id?
+
+> [1] http://heapkeeper.org/hklib.html#hklib.Post

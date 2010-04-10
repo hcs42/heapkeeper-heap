@@ -1,0 +1,32 @@
+Author: Csaba Hoch
+Subject: Single-use lists vs. tuples
+Tag: python
+Message-Id: <4AE2DCC1.3080604@gmail.com>
+Parent: <b29f917d0910240327jcb4daf7rfabb2d8a2bbda9a6@mail.gmail.com>
+Date: Sat, 24 Oct 2009 12:53:53 +0200
+
+> I noticed that you consequently use lists instead of tuples even if
+> they are never altered. E.g.
+> 
+>     assert(pos in ['begin', 'end'])
+> 
+> Why is it better than
+> 
+>     assert(pos in ('begin', 'end'))
+> 
+> ?
+
+It's not.
+
+> Isn't the second one quicker? If not, why use tuples at all?
+
+Yes, I guess tuples are quicker.
+
+Good thing you mention this, I will use tuples from now on.
+
+Long ago I tried something like this:
+
+    pos in 'begin', 'end'
+
+and since it did not work, I thought this does not work with tuples,
+and I got used to writings lists without thinking.

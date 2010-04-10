@@ -1,0 +1,122 @@
+Author: Csaba Hoch
+Subject: Renaming the github repository to "heapmanipulator" (later "heapkeeper")
+Tag: prop
+Tag: reviewed
+Message-Id: <49E2CA07.2040705@gmail.com>
+Parent: <49DC35D5.1070205@gmail.com>
+Date: Mon, 13 Apr 2009 07:13:43 +0200
+
+>>> Maybe we should talk about the distinction between the project and the
+>>> program. What other things are in the project in your opinion? The
+>>> research? :) The web-Hm? I thought the web-Hm would also be called
+>>> Heapmanipulator. (But I don't have a strong opinion on this.)
+
+>> The web interface, as I see it, will be the kind of interface to a
+>> heap that doesn't exist today: a single interface to view and
+>> manipulate the heap.
+
+Yes. But heapia could display the posts, as well. The ls command is
+the first step into that direction.
+
+>> I imagine our project, the name of which is being debated, will
+>> produce a suite consisting of:
+>> - a documented format for a mutable mailing list (called a heap)
+
+Well... I'm not sure that the current format with many-many small
+files is our final choice. We might even use database tables to store
+the posts. Especially in the web-Hm. Maybe we will have two formats:
+- internal, efficient representation: database tables
+- external, human-readable, easy-to-parse, exportable and importable
+representation: the current mail file format, XML or YAML.
+
+Now the internal format is in the memory in the form of a MailDB
+object. Maybe that is the right choice, not a traditional database.
+I'm not saying what will happen; I'm just saying many things can
+happen.
+
+For me "heap" is not a concrete format but rather an abstract one.
+Like the expression "mailing list". The difference is that a heap has
+posts instead of emails, and it has tags and meta text. (There may be
+more differences, that's not the point.) The similarity is that both
+have parent-children relationships, and threaded structure based on
+these. Neither "heap" nor "mailing list" say how the posts/emails
+shall be stored: they are just abstract concepts.
+
+> - a library for editing of said list (called Heapmanipulator)
+> - a simple interactive interface for said library (called Heapia)
+
+I don't think of these as separate programs. Maybe when the web-Hm is
+ready, we will have to think of them as separate entities. On the
+other hand, we don't want to confuse users by telling them about a
+bunch of different names when actually what now exists is just one
+traditional software program and nothing else. E.g. Sphinx does have
+different generators (HTML, LaTeX, etc.), a common parser (which is
+from another project called reStructuredText), an extension system,
+and some extensions that it ships with (e.g. one called autodoc that
+extracts doctrings from Python modules). Yet, they don't confuse
+users: the project and the program are both called Sphinx, end of
+story. (OK, I admit, they mention reStructuredText, but that's all.)
+
+Similarly, we could say we have a program called Hm, which has a
+console and a web interface, end of story. I think the users would be
+most happy with that solution. They don't care about the modules
+structure and things like that.
+
+Another example is git. Linus's philosophy was that it is a set of
+tools (e.g. git-commit, git-checkout, etc.) that operate on a common
+database. But the users didn't like this philosophy: they didn't want
+a bunch of separate programs (which "polluted their bin directory").
+Now the philosophy is that git is one program with many subcommands
+(e.g. "git commit", "git checkout"), and invoking "git-commit" is
+deprecated. The Unix philosophy with orthogonal tools is a good one,
+but one should use it only when appropriate -- and in most cases it is
+not. It is not appropriate in git's case and it is not appropriate in
+our case.
+
+> - a Web-based interface for the same library (no name yet; Heapweb?)
+
+Well, if the name of the console interface is heapia, the name of the
+web-interface could be heapweb.
+
+> If we want to maintain clarity, the name of the suite should be
+> identical to none of its constituents.
+
+True.
+
+So my proposal is having only these concepts that require a name:
+
+- "heap": the abstract structure and the database that stores it
+(regardless of the method of storage).
+
+- "Heapkeeper": the name of the whole program, the name of the
+  project, the name of the website, the name of the repository, the
+  name of the mailing list -- sorry, the name of the heap :D
+
+- "heapia" or "interactive console interface": the console interface
+  of Heapkeeper. The user will think it is the "./heapia" shell script
+  (or heapia.bat for windows users...), or it is at least started by
+  that script.
+
+- "heapweb" or "web interface": modules that allow using Heapkeeper
+  via the web. Since we don't know how we will do this, we don't know
+  if this will be one module like heapia, or many modules, or even
+  some XML files, or something else.
+
+>> - Heapkeeper: I like this probably the most; it satisfies the
+>> generality criterion, and Googlable, now has only 127 hits
+> 
+> I like it. First I didn't, because it reminds me to "Bitkeeper".
+> I think our whole program (web and console interface, parser,
+> everything included) should be named Heapkeeper.
+
+Probably Heapkeeper is better than Heapmanipulator in the way that it
+suggests a program that stores and manages the data, maintaining its
+consistency and correctness.
+
+Shall we call our program Heapkeeper then? Of course it will be
+abbreviated as Hk. (Which is better than Hm.)
+
+If yes, then I will rename the github repository to "heapkeeper".
+I'll create a heapkeeper.heap GMail account and a heapkeeper-heap
+Google Group (although I think we won't use it until Hk supports
+managing multiple heaps.)

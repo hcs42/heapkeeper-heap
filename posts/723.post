@@ -1,0 +1,19 @@
+Author: Attila Nagy
+Subject: State of the project
+Tag: docs
+Tag: homepage
+Message-Id: <b29f917d0910210012h4981d434hcb5f9e606f0b1e56@mail.gmail.com>
+Parent: <4ddb9e5b0910201208l23c16fedrdf8c40b1c2ebf362@mail.gmail.com>
+Date: Wed, 21 Oct 2009 09:12:59 +0200
+
+>> "Procedures" would be a better word for what you want to express, but
+>> I replaced it with "workflow" since I don't know what other procedures
+>> you meant.
+>
+> Workflow is all right. I meant things like how to use the repository,
+> how to make a new release, how to add a new feature (e.g. in the best
+> case the commit contains tests, docstrings and the modifications of
+> the rst files), or how to update the website.
+
+You are right, these are the "standard procedures" of our project, but
+I think we can put them under the heading "Workflow".

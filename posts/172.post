@@ -1,0 +1,39 @@
+Author: Csaba Hoch
+Subject: Nice work, elif, same commits (2009-05-07 3b4f6d3677, 179f5cf18e, 4e32bdad1c)
+Tag: commit
+Message-Id: <4A034922.5070203@gmail.com>
+Date: Thu, 07 May 2009 22:48:34 +0200
+
+I had a brief look at the commits. I have to say, it is very nice job!
+I hope I can dig deeper into it in the weekend. I will fix the test
+cases if you say so.
+
+== elif ==
+
+A small comment though: there is an "elif" statement in Python. So
+please do not write
+
+    if a:
+        b
+    else:
+        if c:
+            d
+        else:
+            e
+
+but write
+
+    if a:
+        b
+    elif c:
+        d
+    else:
+        e
+
+instead.
+
+== Same commits ==
+
+What happened to 179f5cf18e and 4e32bdad1c, why do they both seem the
+same? Have you used "git amend" after push, or was it something else?
+It is not a problem, I'm just curious :)

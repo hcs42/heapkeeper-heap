@@ -1,0 +1,11 @@
+Author: Csaba Hoch
+Subject: Sphinx versions
+Tag: prop
+Tag: reviewed
+Parent: hh/152
+Date: Sat, 2 May 2009 23:09:44 +0200
+
+[close]
+
+We decided to use a repository version of Sphinx and to specify that
+version on the Hk homepage.

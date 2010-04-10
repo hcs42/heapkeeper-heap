@@ -1,0 +1,15 @@
+Author: Csaba Hoch
+Subject: Having thread pages instead of post pages
+Tag: heap pages
+Tag: prop
+Tag: reviewed
+Message-Id: <4ADB5747.2060700@gmail.com>
+Parent: <b29f917d0910181055k357ac16au38c9d83cb80f3f68@mail.gmail.com>
+Date: Sun, 18 Oct 2009 19:58:31 +0200
+
+> Cycles are an interesting story. To the best of my knowledge, we've
+> never seen them, but we have put quite a bit of effort in trying to
+> handle them. Not that it's a bad thing, only funny.
+
+I have never though of this as being funny, but now that you mention
+it... :)

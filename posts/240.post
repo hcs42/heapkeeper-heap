@@ -1,0 +1,34 @@
+Author: Csaba Hoch
+Subject: Separating Heapkeeper heap and UMS heap
+Message-Id: <4A11A86F.9050601@gmail.com>
+Date: Mon, 18 May 2009 20:26:55 +0200
+
+Heapkeeper heap and UMS heap have been living as one entity until now.
+I think it is worth to start to think and talk about how should we
+separate them.
+
+== Reorganizing Hh heapids ==
+
+Usually it is a very bad idea to modify the heapids of existing posts.
+In Hh's case, on the other hand, I think it would be rather desirable.
+Hh's index page otherwise would look weird for new people.
+
+== Heapkeeper support for managing several heaps ==
+
+Hk should have a good support for managing both heaps at the same
+time. We want to be able to write commands like this:
+
+    >>> ums_heap = heap('~/documents/heaps/ums')
+    >>> hh_heap = heap('~/documents/heaps/hh')
+    >>> ums = ums_heap.postdb()
+    >>> hh = hh_heap.postdb()
+    >>> p = ums.post('123')
+    >>> p.move(hh)
+
+Posts can reference to each other, so probably it will not be this
+simple. (Or the implementation has to be smart in some way to make it
+simple.)
+
+Csabi
+
+<<<wiki>>>

@@ -1,0 +1,77 @@
+Author: Csaba Hoch
+Subject: heapid mismatch bug
+Message-Id: <4ddb9e5b0908101240n28c2415ey63b4433ef854309f@mail.gmail.com>
+Parent: <b29f917d0908091244m2da017ev4781414041c88e3b@mail.gmail.com>
+Date: Mon, 10 Aug 2009 21:40:53 +0200
+
+== Problem ==
+
+You found a real bug in Heapkeeper's post file parser, which was introduced by
+me in commit 779f05bff7. I was aware of the bug, but I did not think it would
+reveal itself. There are some posts with subjects ending with newlines, which
+is insane (also introduced by me), which made it happen.
+
+There seems to be some posts like post 1793. I introduced an additional newline
+into the subject of these posts in commit a3f92; I don't know, how and why.
+
+But git does not lie:
+
+    -From: Attis
+    +Author: Attis
+     Subject: Subjects should start with capital
+       letter
+    +
+     Tag: hh
+     Tag: hh-conventions
+     Tag: prop
+     Message-Id: <b29f917d0905101016k7de25884p8587e99565fb9cc@mail.gmail.com>
+    -In-Reply-To: <b29f917d0903191129w3b774b86u1abe719903820d1c@mail.gmail.com>
+    +Parent: <b29f917d0903191129w3b774b86u1abe719903820d1c@mail.gmail.com>
+     Date: Sun, 10 May 2009 19:16:18 +0200
+
+     > Uppercase? Somehow deep in my heart I wished this to come out
+to lowercase...
+
+The original subject was:
+
+    "Subjects should start with capital\n letter"
+
+The new subject is:
+
+    "Subjects should start with capital\n letter\n"
+
+The final "\n" means an *empty line that contains only a space* in the post
+file. In a previous thread [1] we discussed that I modified the parser so that
+it will consider empty lines and empty lines containing only whitespace to be
+equivalent. This caused the problem: the new parser will stop at the empty line
+of the header of post 1793, and will consider all the rest (tag and parent
+information included) to be part of the body. You can see it if you click in
+the post page.
+
+> The second half of the thread is not the same. This means two things:
+> - the thread summary is generated differently in these cases,
+> - there is a bug in the download mechanism, and duplicate posts are
+>   in the database
+
+Nope, there is no bug in the download mechanism, this failure is the
+consequence of the described bug. Post 1793 seemed to have no message id, so
+the email in the Google Inbox that had the same message id got downloaded, and
+post 2237 were created from it.
+
+== Solution ==
+
+One solution regarding Hk is to go back right to the previous, conservative
+parsing mechanism. As keen I was to promote the new parser, now I think that we
+should go back to the original parser until we know better.
+
+Nevertheless, the ugly subjects have to be fixed. And your repository have to
+be fixed with its duplicate posts. I advise you to do the following:
+- Go to the head of my repo that I just sent in a non-heap email.
+- Create patches for aa62fbc0c8 and 2a20faccdf5d. Remove the downloading part
+  (as opposed to the tidying part) of the latter.
+- Apply them to the head of my repo.
+
+As far as I saw, you did not edit newly downloaded posts, which would make us
+much harder to merge our repos and fix the problems.
+
+[todo] [1] ref needed

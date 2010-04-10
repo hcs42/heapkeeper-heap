@@ -1,0 +1,29 @@
+Author: Csaba Hoch
+Subject: "nothing added..." in commit message (2009-05-15 ac1803f877)
+Tag: commit
+Message-Id: <4A125B87.8050004@gmail.com>
+Date: Tue, 19 May 2009 09:11:03 +0200
+
+The last line of the commit message of the specified commit is weird:
+
+  $ git show ac1803f877 | cat
+  commit ac1803f877144db74ed770008d83fa570b0e8295
+  Merge: b996200... 102f5fd...
+  Author: Attila Nagy <nagy.attila.1984@gmail.com>
+  Date:   Fri May 15 09:48:32 2009 +0200
+  
+      Merge branch 'master' of git@github.com:hcs42/heapkeeper
+  
+      Conflicts:
+  
+          hkrc_attis.py
+  
+      nothing added to commit but untracked files present (use "git
+      add" to track)
+
+I don't know how this could happen. Do you have an idea? If not,
+please, be aware next time when you merge branches, and try to find
+the root of the problem. (I'm very curious.)
+
+The same error occurred in 2009-05-15 a48ce4f17f8. I checked in the
+git log and it has never happened before.

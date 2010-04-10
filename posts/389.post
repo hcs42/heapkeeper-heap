@@ -1,0 +1,9 @@
+Author: Csaba Hoch
+Subject: "is not None" versus "!= None" (2009-05-07 179f5cf18e)
+Tag: commit
+Tag: prop
+Tag: reviewed
+Parent: hh/388
+Date: Wed, 8 Jul 2009 08:32:31 +0200
+
+[close]

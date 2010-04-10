@@ -1,0 +1,16 @@
+Author: Csaba Hoch
+Subject: Storage on IMAP servers
+Tag: idea
+Message-Id: <4ddb9e5b0905171157u6b5a5573qa9589031f640861c@mail.gmail.com>
+Parent: <20090516082323.5f3a2397.nagy.attila.1984@gmail.com>
+Date: Sun, 17 May 2009 20:57:10 +0200
+
+> What struck me now as a new idea is that if IMAP is such a
+> filesystem-like read-write resource, we could have used it as "the one
+> final repository". Of course, a local filesystem is more elegant, but
+> then, we would have no need for a DVCS for collaborative editing. But, of
+> course, we also could not make use of Git's advantages either.
+>
+> There is a way to mount an IMAP account as a file system using FUSE, though.
+
+Which means we can theoretically use git over IMAP...

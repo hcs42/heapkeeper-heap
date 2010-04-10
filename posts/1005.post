@@ -1,0 +1,26 @@
+Author: Csaba Hoch
+Subject: Using super; "blog: added module for building a blog with Hk" (c24058f 2009-11-28)
+Tag: commit
+Message-Id: <4B3A53D9.6020109@gmail.com>
+Date: Tue, 29 Dec 2009 20:09:13 +0100
+
++ def print_postitem(self, postitem):
+    +     if postitem.pos == 'flat':
+    +         return self.print_postitem_flat_blog(postitem)
+    +     else:
+    +         return super(Generator, self).print_postitem(postitem)
+
+I don't think you are using `super` right.
+
+super(`type`, object-or-type) returns "a proxy object that delegates
+method calls to a parent or sibling class of `type`." [1] So the
+correct expression is this:
+
+    +         return super(Blog, self).print_postitem(postitem)
+
+because `super(Blog, self)` will return an object that will use the
+methods of Blog's base class (which is Generator) on `self`.
+
+Before you ask: if your code works, I don't know why :)
+
+[1] Python documentation / Built-in Functions

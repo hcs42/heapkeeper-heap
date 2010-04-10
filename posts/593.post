@@ -1,0 +1,11 @@
+Author: Csaba Hoch
+Subject: hkshell.ga falls into endless loop when there is a cycle in the thread structure
+Tag: bug
+Tag: reviewed
+Message-Id: <4AAC9C72.4040304@gmail.com>
+Date: Sun, 13 Sep 2009 09:17:06 +0200
+
+The thread and post generation are the problematic points.
+
+Probably we should implement cycle detection so that all our functions
+are safe from endless loops, even if we forgot to check for them.

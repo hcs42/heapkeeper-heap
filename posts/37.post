@@ -1,0 +1,39 @@
+Author: Csaba Hoch
+Subject: Developing with vim
+Tag: reviewed
+Tag: vim
+Message-Id: <49C57180.2020505@gmail.com>
+Date: Sun, 22 Mar 2009 00:00:16 +0100
+
+In this thread, we could discuss developing Hm with Vim. It could
+contain small tips or larger essays as well. E.g. I'd like to read a
+howto sometime for using ctags with Vim and Python.
+
+
+== For Python programming ==
+
+* Executing the tests with :make. When pressing F1, it runs the tests
+  and jumps to the last function call in the stack trace.
+
+    " Place in some global place, e.g. your vimrc.
+    set makeprg=./test.py
+
+    " These should be executed for all Python buffers.
+    " (E.g. place them in ~/.vim/ftplugin/python.vim.)
+    setlocal errorformat=\ \ File\ \"%f\"\\,\ line\ %l\\,\ %m
+    noremap <buffer> <F1> :make <bar> cw <bar> silent! 999cn<cr>
+
+* Getting gD ("go to function or class definition") to kinda work.
+
+    noremap <buffer> gD ?\(def\<bar>class\) <c-r>=expand('<cword>')<cr>\><cr>
+
+
+== For wiki files ==
+
+* Putting `` around a word:
+
+    noremap <buffer> <F1> "_yiwi`<esc>ea`<esc>
+
+* Putting `` around the selected string:
+
+    vnoremap <buffer> <F1> <esc>`>a`<esc>`<lt>i`<esc>

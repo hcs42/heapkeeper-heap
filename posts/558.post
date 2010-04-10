@@ -1,0 +1,17 @@
+Author: Attila Nagy
+Subject: Graphical Hk output
+Tag: idea
+Message-Id: <b29f917d0908300803k344fb4fbxf1cd0bbee4acbe06@mail.gmail.com>
+Parent: <4A9A906B.4080101@gmail.com>
+Date: Sun, 30 Aug 2009 17:03:27 +0200
+
+> For me, it would be enough to display the date in the same way we
+> display the body. The real question for me is how to display the tags
+> and the body :)
+
+My ideas:
+- author in color of the node
+- body length in the size of the node
+- body in a mouseover box
+- tags and subject in small font
+- time in line thickness (thinner line for longer delay in reply)

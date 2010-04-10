@@ -1,0 +1,12 @@
+Author: Attila Nagy
+Subject: Image source files
+Tag: git
+Tag: prop
+Tag: reviewed
+Tag: workflow
+Message-Id: <b29f917d0910231422o214ff8fas18be62e570ee5650@mail.gmail.com>
+Parent: <4ADFFF9A.4000900@gmail.com>
+Date: Fri, 23 Oct 2009 23:22:30 +0200
+
+Now if you fetch my master and make it your master, we'll have to
+rebase everything up to _newgen on it.

@@ -1,0 +1,26 @@
+Author: Attila Nagy
+Subject: Tidy repository
+Message-Id: <b29f917d0908100027m62830972u46b14064306b0285@mail.gmail.com>
+Parent: <4ddb9e5b0908091315p32a21ae0k3612a43ae852922e@mail.gmail.com>
+Date: Mon, 10 Aug 2009 09:27:07 +0200
+
+> == Check ==
+>
+> I uploaded the tidy repo to a sandbox:
+>
+>    http://github.com/hcs42/sandbox
+>
+> Do you think everything is OK?
+>
+> == Tag ==
+>
+> I saw that tag v0.1 has the comment "Heapmanipulator v0.1 released.". I guess
+> it would be wrong to say "Heapkeeper v0.1 released"...
+
+That's why I said Heapmanipulator. I wrote about it in the thread
+"Heapkeeper version 0.3":
+
+" I accept these, but I think the project's history should preserve the
+" project's name as it was at the time. Both v0.1 and v0.2 were releases
+" of Heapmanipulator, which became Heapkeeper only between v0.2 and
+" v0.3.

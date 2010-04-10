@@ -1,0 +1,10 @@
+Author: Csaba Hoch
+Subject: Mapping for removing trailing whitespace
+Tag: vim
+Message-Id: <4B3F7639.2010406@gmail.com>
+Parent: <b29f917d1001020556u4918f68av70e4fc4f72c1f0c5@mail.gmail.com>
+Date: Sat, 02 Jan 2010 17:37:13 +0100
+
+Good idea! It is easy:
+
+    :au BufWritePre * :%s/ \+$//

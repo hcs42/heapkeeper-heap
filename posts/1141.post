@@ -1,0 +1,13 @@
+Author: Attila Nagy
+Subject: testhtml: Testing that generated HTMLs change only as intended
+Tag: hk-dev-utils
+Message-Id: <b29f917d1002101238q56813dbfic2033318a9288775@mail.gmail.com>
+Parent: <4B659344.3070404@gmail.com>
+Date: Wed, 10 Feb 2010 21:38:42 +0100
+
+> A merit of this wrapper is that it clones the repository to a
+> temporary directory and works there, so the Heapkeeper developer can
+> continue the work without having to wait for the tests to finish.
+
+We're getting closer to a setting up a continuous integration server
+every day :)

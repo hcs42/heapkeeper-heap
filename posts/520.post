@@ -1,0 +1,121 @@
+Author: Attila Nagy
+Subject: "hklib: optimized IMAP downloading" (2009-08-17 e23aa8b83d)
+Tag: commit
+Message-Id: <b29f917d0908180352w10a20f9by576475d2019cf3cc@mail.gmail.com>
+Parent: <4A8A3F19.3040300@gmail.com>
+Date: Tue, 18 Aug 2009 12:52:40 +0200
+
+> == If `emails` is "", don't do anything ==
+
+> Please, fix the bug. (Or prove that the code is not buggy :) ) I leave
+> it to you to decide whether you examine the result of `strip` or you
+> compare the result of `split` to [''].
+
+It is buggy, and I fixed the bug. I simulated the empty mailbox with
+replacing "(ALL)" with "(FROM nobody)", and it works OK now.
+
+> == Other ==
+
+> Could you put spaces around brackets that mark list generators?
+
+Corrected.
+
+> Also, I would call the `mail` variable `email`.
+
+No good, as it would hide the `email` module! So, instead I corrected
+all "email"s to "mail", so that the naming will be consistent.
+
+> the convention in Python (and in many other languages) is to write "2 *
+> x" and not "2*x".
+
+My personal preference is to write multiplications and divisions
+together without spaces, additions and subtractions with spaces. But
+it it's convention, I'll follow.
+
+> the convention is to call "unnamed" integer loop variables `i`.
+
+Corrected.
+
+> You can use the zip function so that you don't need the
+> `emails_messids` variable:
+>
+>    for index, messid in zip(emails, messids):
+>
+> zip creates a tuple-list from two lists that have the same length:
+>
+>    >>> zip([1,2,3], ['a','b','c'])
+>    [(1, 'a'), (2, 'b'), (3, 'c')]
+
+Yes, I was looking for this (and I found filter() instead, which
+distracted me). Thanks!
+
+>> +            post = self._postdb.post_by_messid(messid)
+>> +            if post == None:
+>> +                download_list.append(index)
+>> +#            else:
+>> +#                log('Post #%s (#%s in INBOX) found.' %
+>> +#                    (post.heapid(), int(index) + lower_value))
+>
+> You can delete the `else` branch.
+
+I want to introduce a new option called `download_details`, which,
+when enabled, would bring back these per-email status messages. That's
+why I kept them as comments.
+
+> Maybe we need a hkutils.plural function so that you can write this:
+>
+>    log('%d new message%s found.' %
+>        (num_new, (hkutils.plural(num_new))
+>
+> What do you think? I know it would be trivial (you basically
+> implemented it a few lines below).
+
+OK, I'll do it in an upcoming commit.
+
+> If you feel like, please do it! But don't forget to document and test
+> it :)
+
+Of course. But that brings up the question: which numbers are plural?
+Possible answers:
+- all, except 1
+- all, except 1 and -1
+
+At least we can be sure that zero is plural (which is kind of
+nonsense). Plurality of fractions is even more insane. (Just think
+about it: 0.999... is singular ;))
+
+> == parse_email ==
+>
+> What do you say to creating a static Post.from_email method, which
+> would contain much of the code of EmailDownloader.parse_email?
+
+I'm not sure. This is a question of distribution of responsibilities.
+I think that everything that's email-specific should belong to
+EmailDownloader. Post is already the central object of the program. We
+should avoid making it a God object by maintaining limits to its
+responsibilites.
+
+> You don't have to do this refactoring if you don't feel like. And even
+> if you do it, it should be a separate commit from the previous
+> improvement. This also implies that you can fix the improvements of
+> current commit, I will pull from you, and later you may do this
+> refactoring.
+
+> == return value of dl() ==
+>
+> What do you say to having dl() return the set of downloaded posts?
+> It would be nice for example from the tutorial reader's point of view
+> to see what are the messages downloaded.
+
+OK. Sounds useful.
+
+> It could be useful in other ways, too:
+>
+>    >>> new = dl()
+>    ...
+>    >>> ls(new)
+>    ...
+>    >>> cat(new)
+>    ...
+
+Useful indeed! I like this idea, and maybe I'll implement it today or tomorrow.

@@ -1,0 +1,21 @@
+Author: Csaba Hoch
+Subject: List comprehension
+Tag: coding-convention
+Tag: prop
+Tag: reviewed
+Message-Id: <4ddb9e5b0910230613y2fe731afn1e0a49c85fb5a69f@mail.gmail.com>
+Date: Fri, 23 Oct 2009 15:13:55 +0200
+
+[effort 0:30]
+[priority low]
+
+So far I have been writing list comprehensions this way:
+
+    [ x for y in z ]
+
+Since the convention seems to be not to write whitespaces around the
+brackets, I propose using the following form:
+
+    [x for y in z]
+
+[1] http://docs.python.org/tutorial/datastructures.html

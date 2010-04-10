@@ -1,0 +1,39 @@
+Author: Attila Nagy
+Subject: Let's provide an option to turn off tracebacks!
+Tag: idea
+Message-Id: <b29f917d0910210607g49b178ceo7c142963a28fe679@mail.gmail.com>
+Parent: <4ADF010A.1010700@gmail.com>
+Date: Wed, 21 Oct 2009 15:07:23 +0200
+
+> Do you mean not even the last line of the trace? Could you give me an
+> example of what you want to print?
+
+An example:
+
+	>>> p('no')
+	Traceback (most recent call last):
+	  File "<console>", line 1, in <module>
+	  File "/data/lab/hk/heapkeeper/hkshell.py", line 1049, in p
+		postset = postdb().postset(pp)
+	  File "/data/lab/hk/heapkeeper/hklib.py", line 1133, in postset
+		return PostSet(self, posts)
+	  File "/data/lab/hk/heapkeeper/hklib.py", line 1610, in __init__
+		super(PostSet, self).__init__(PostSet._to_set(postdb, posts))
+	  File "/data/lab/hk/heapkeeper/hklib.py", line 1642, in _to_set
+		return PostSet._to_set(postdb, [prepostset])
+	  File "/data/lab/hk/heapkeeper/hklib.py", line 1649, in _to_set
+		post = postdb.post(prepost, True)
+	  File "/data/lab/hk/heapkeeper/hklib.py", line 1156, in post
+		return self.heapid_to_post[heapid]
+	KeyError: 'no'
+
+You can see that the output consists of 2 parts: the traceback first,
+then, in one line, the exception message. I think that for most
+users, this last line would be sufficient. So, what the user would see
+without tracebacks enabled:
+
+	>>> p('no')
+	KeyError: 'no'
+
+Though not the best possible error message here, it is not as
+frightening to the uninitiated as the traceback.

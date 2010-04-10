@@ -1,0 +1,16 @@
+Author: Csaba Hoch
+Subject: Heapkeeper website should use Google Analytics
+Tag: idea
+Tag: prop
+Message-Id: <4ddb9e5b0912030940r734a2d2bjf897f4ffba94a82e@mail.gmail.com>
+Date: Thu, 3 Dec 2009 18:40:43 +0100
+
+http://www.google.com/analytics/
+
+I'm trying it out right now on my tiny personal website
+(http://hcs42.github.com/).
+
+The only thing we have to do is to register and put a javascript code
+inside all HTML files just before the </body> tag. So if it seems to
+be good, we can start and think about how to put the javascript code
+into the HTML files.

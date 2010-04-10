@@ -1,0 +1,26 @@
+Author: Attila Nagy
+Subject: Effort
+Tag: hh-conventions
+Tag: prop
+Message-Id: <b29f917d0911182319q11e333b0k7ea6bd107f9ef519@mail.gmail.com>
+Parent: <4AFA4EB7.5000202@gmail.com>
+Date: Thu, 19 Nov 2009 08:19:20 +0100
+
+> I propose to generate a dictionary like this for the post similar to
+> the latter post:
+>
+>    Post:
+>        [effort 1]     # no colons
+>        [effort 2]
+>        [important]
+>        [!todo many things]
+>        [!todo this]
+>    Meta dict:
+>        {'effort', [1, 2],
+>         'important': [''],
+>         '!todo': ['many things', 'this']}
+>
+> So a non-empty list of strings will be assigned to each meta that is
+> present in the post body.
+
+OK, I like this idea.

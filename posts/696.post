@@ -1,0 +1,10 @@
+Author: Csaba Hoch
+Subject: hkshell.e raises ugly exception when called on a non-existing post
+Tag: bug
+Tag: reviewed
+Message-Id: <4ADACB62.5060401@gmail.com>
+Parent: <b29f917d0910172322l6a59b163i4ff15a092d289f7c@mail.gmail.com>
+Date: Sun, 18 Oct 2009 10:01:38 +0200
+
+I found the problematic commit (with bisect :) ). I'll deal with it
+and write when I'm ready.

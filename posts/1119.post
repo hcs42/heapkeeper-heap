@@ -1,0 +1,28 @@
+Author: Csaba Hoch
+Subject: Email parsing problem
+Tag: issue
+Message-Id: <4ddb9e5b1002091025u73da7c4dte199d86a7097102c@mail.gmail.com>
+Parent: <20100209112053.0821c6e0.nagy.attila.1984@gmail.com>
+Date: Tue, 9 Feb 2010 19:25:40 +0100
+
+> The current implementation handles for `base64` and
+> `quoted-printable`, and it recognizes these in both upper- and
+> lowercase. So these remain:
+>
+>    Content-Transfer-Encoding: 7bit
+>    Content-Transfer-Encoding: 8bit
+>    Content-Transfer-Encoding: binary
+>    Content-Transfer-Encoding: x-uuencode
+>
+> `7bit` is the default. Despite this, sometimes it is specified. Such
+> cases would now yield a warning, but the emails are correctly parsed.
+
+7bit is handled now: (search for 7bit)
+http://github.com/hcs42/heapkeeper/blob/_0.4/hklib.py
+
+> I think `8bit` and `binary` don't have to be decoded either, but they
+> shouldn't give a warning.
+
+These are not handled now. Why do you think they should not give a
+warning? If something has 8bit encoding, is it latin1? Shouldn't we
+convert that into UTF-8?

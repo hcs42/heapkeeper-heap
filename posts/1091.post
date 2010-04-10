@@ -1,0 +1,14 @@
+Author: Csaba Hoch
+Subject: Mapping for removing trailing whitespace
+Tag: vim
+Message-Id: <4ddb9e5b1002062358r31a692d4r530b7a8d7c7980fa@mail.gmail.com>
+Parent: <20100207085429.c4060ab2.nagy.attila.1984@gmail.com>
+Date: Sun, 7 Feb 2010 08:58:57 +0100
+
+We should have trailing white space in emails. It messes them up. For example:
+
+This is a line with a trailing whitespace.
+This is another line.
+
+In my experience, Thunderbird will show the two lines as one line. I
+will report back in a minute.

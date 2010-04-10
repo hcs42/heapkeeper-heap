@@ -1,0 +1,11 @@
+Author: Attila Nagy
+Subject: Dependency on old Generator in hkcustomlib
+Tag: bug
+Message-Id: <20100128082142.8646de99.nagy.attila.1984@gmail.com>
+Parent: <4AFA4861.7090706@gmail.com>
+Date: Thu, 28 Jan 2010 08:21:42 +0100
+
+> Currently both hkshell and hkcustomlib use hklib.Generator. The reason
+> is that it haven't been tested and accepted by you :)
+
+OK, I'll shut up and get back to reviewing. :)

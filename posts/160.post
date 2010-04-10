@@ -1,0 +1,93 @@
+Author: Csaba Hoch
+Subject: Assess what we need for a usable product
+Tag: prop
+Tag: reviewed
+Message-Id: <49FD9269.4060408@gmail.com>
+Parent: <b29f917d0905021726r55f86a30u83b186b812d74754@mail.gmail.com>
+Date: Sun, 03 May 2009 14:47:37 +0200
+
+In my reply, I handled "setup script" as a simple sh script. I
+realized only at the end of your email that you mean a complete
+character-graphical program that would perform the setup.
+
+>>> My list of what we need:
+>>> * a setup script
+> 
+>> Really? What do you mean by a setup script? A script that for example
+>> creates hk.cfg?
+> 
+> Yes.
+> 
+>> I'm not a fan of the idea. I think it is easier to
+>> edit a config file based on the tutorial than answering question. As
+>> least I hate answering questions for a script, because:
+> 
+> You don't have any kind of psychological restraints from diving into
+> using the program right away, of course, but don't forget that it's
+> you who wrote it. I think in the world of open source, when a
+> potential user (in our case, a user is an administrator) decides which
+> product to use, the ability to provide a user experience in a few
+> minutes without having to dig into manuals or follow tutorials could
+> be a clincher.
+
+It is impossible to use Hk without looking through at least the index
+page and the a tutorial. If the user starts a setup script, he/she
+won't be able to answer to the questions ("where is the user name that
+belongs to the IMAP account of heap?"). And if he/she reads the
+tutorial, what is easier to say?
+a. Put these lines into the hk.cfg: ...
+b. Start the setup script; when it ask question X, answer Y; when it
+   asks W, answer Z; ...
+
+Although I admit that the setup script can be useful in creating the
+"mail" and "html" directories.
+
+> Believe me -- I've been at the other end of this situation plenty of
+> times.
+
+I don't :)
+
+>> - I don't see the full picture (e.g. all questions) when answering a
+>>  particular one.
+> 
+> You are right, but just think of .git/config. It's neither long nor
+> overly complicated, and it could perfectly be written by hand; still
+> it's a huge gain you don't have to do it every time you set up a new
+> repository. (Yes, I know, you don't set up a new repository all that
+> often, but some people version control everything, including saved
+> games :P)
+
+Valid point. A difference though: "git init" does not ask me any
+questions. If I had to answer to every question that goes into "git
+init", I would rather copy and modify an existing config file.
+
+>> - You have to became familiar with the config file itself anyway if
+>>  you want to change a setting.
+> 
+> Probably not if all you want to do is change something later, e.g. if
+> the e-mail password changes.
+
+True.
+
+>> - It is usually impossible to go back if you later realize you give an
+>>  incorrect answer before; you can only redo the whole thing.
+> 
+> Of course a setup script doesn't have to be dumb. It takes love, care
+> and patience to do it, but using Dialog or Whiptale [1], you can do
+> things like elegant ncurses-based setup scripts with 'back' and 'next'
+> options.
+
+I would not call a character-graphical program a "setup script". I would
+not even call it a "script".
+
+If you want to do a setup program that you described, it' OK, do it.
+(I'm curious about these software, but as you want to read POSS with
+my eyes, I want to try these out with your hands.) But a setup program
+that matches Hk's (wanted) quality indeed seems to be a lot of work.
+A tutorial would be much less work, and I think it would be even more
+important in effect -- would you try out a software that does not even
+have a tutorial? And don't forget, there are Windows users and
+developers, too, who can't use an ncurses-based setup script.
+
+Do you think it is worth to talk about our priorities concerning every
+Hk-related task in a different thread?

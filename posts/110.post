@@ -1,0 +1,20 @@
+Author: Csaba Hoch
+Subject: New design ideas
+Message-Id: <49EA31AC.1020401@gmail.com>
+Parent: <b29f917d0904181059m1b1fd9bam28f229976513bfd4@mail.gmail.com>
+Date: Sat, 18 Apr 2009 22:01:48 +0200
+
+>> I thought you mean using the colors of Vim itself. That would not be a
+>> bad idea, either...
+> 
+> We can give it a try :)
+
+You can have a look at the Vim colors at :h group-name.
+
+>> But do you mean grabbing the CSS files or grabbing only the
+>> colors?
+> 
+> Only the colors.
+
+That's not stealing, I think. We can mention somewhere in the doc
+though where we got the colors from.

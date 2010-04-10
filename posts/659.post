@@ -1,0 +1,16 @@
+Author: Attila Nagy
+Subject: Incorrect git identity, impact graph
+Tag: git
+Tag: github
+Message-Id: <b29f917d0910160110n309a0c05vfd6982fe728536eb@mail.gmail.com>
+Parent: <4A6A8E7D.9070606@gmail.com>
+Date: Fri, 16 Oct 2009 10:10:40 +0200
+
+> If you have a look at the impact graph [1], you see that we made the
+> same mistakes. We are not shown as two people, but four instead.
+
+We sorted this out by rewriting history.
+
+Of course we don't want to do so again, so we should pay attention to
+our identities. (It's much easier now, actually, thanks to the
+constantly moving _-threads.)

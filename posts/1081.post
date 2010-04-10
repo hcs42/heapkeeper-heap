@@ -1,0 +1,40 @@
+Author: Attila Nagy
+Subject: Removing Google Groups stuff
+Tag: issue
+Message-Id: <20100206092731.201e5b2d.nagy.attila.1984@gmail.com>
+Parent: <4B3A5402.6020104@gmail.com>
+Date: Sat, 6 Feb 2010 09:27:31 +0100
+
+> The following message is appended after each posts since post 3462
+> (2009-11-26):
+> 
+>     You received this message because you are subscribed to the Google Groups "UMS Heap" group.
+>     To post to this group, send email to ums-heap@googlegroups.com.
+>     To unsubscribe from this group, send email to ums-heap+unsubscribe@googlegroups.com.
+>     For more options, visit this group at http://groups.google.com/group/ums-heap?hl=en.
+> 
+> There are a few older messages as well that contain this text:
+> 
+>     1668
+>     1743
+>     2561
+
+Confirmed; there are 445 posts now that contain these lines.
+
+> Post.remove_google_stuff should be improved to remove this text as
+> well; and we should not forget to remove the boilerplate from the
+> posts that are already affected.
+
+How would you implement the filtering? Stupid Google, I thought that
+pattern was there to identify this section to scripts, and they
+scrapped it just like that. Now we have two choices:
+- throw away everything below a `/^--$/` line (usually this denotes
+  signatures, too)
+- filter for the first few words, that is, throw away any six lines of
+  which the 3rd starts with "You received this message", the 4th with
+  "To post to this group" etc.
+
+Which one would you prefer?
+
+Also, is it possible to turn these lines off somehow in Google Groups? I
+haven't found such a setting, though.

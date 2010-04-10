@@ -1,0 +1,20 @@
+Author: Csaba Hoch
+Subject: Workflow with separate repositories: example
+Message-Id: <4AA4ABF0.6060303@gmail.com>
+Parent: <b29f917d0909021413y7c094ef7w2d6753a36db812e1@mail.gmail.com>
+Date: Mon, 07 Sep 2009 08:45:04 +0200
+
+>> It would be a bit faster to store your changes in git then writing
+>> diffs in email.
+> 
+> Sending the diffs in email sounds a bit silly. The diffs are there in
+> Git, why bother send it in email too?
+
+Because if we want to discuss the commit in email, we will copy and
+paste parts of the diff into the email and write the comments after
+that. Have a look at almost any thread that discusses the commits.
+
+It would not only be inconvenient not to paste the relevant parts of
+the diff into the email, but it would make following the conversation
+for someone else difficult, because we rebase and rewrite commits when
+we talk about them on Hh.

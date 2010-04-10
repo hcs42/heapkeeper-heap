@@ -1,0 +1,15 @@
+Author: Csaba Hoch
+Subject: Filename operations of Post (2009-05-07 179f5cf18e)
+Tag: commit
+Message-Id: <4A53A9BF.5010803@gmail.com>
+Date: Tue, 07 Jul 2009 22:02:07 +0200
+
+class GeneratorOptions(object):
+     
+         """Options that are used by the Generator.
+     
+         This class follows the Options pattern.
+     
+    +    TODO: standardize underscore usage.
+
+What do you mean by this?

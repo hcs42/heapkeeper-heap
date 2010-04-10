@@ -1,0 +1,19 @@
+Author: Attila Nagy
+Subject: Connecting Hk with a mailing list management software
+Tag: idea
+Message-Id: <b29f917d0905222326t5a14a3f7pf4f5115a96ddbfd9@mail.gmail.com>
+Parent: <4A12F323.8020903@gmail.com>
+Date: Sat, 23 May 2009 08:26:54 +0200
+
+>> At least initially -- though heapids are of a very volatile nature -
+>> this, of course, being the direct consequence of the editable archive.
+>
+> They should not be. That's the main reason why I'm hesitant about
+> giving decent support for moving emails between heaps.
+
+That is just a result of the maintainers' behavior. They can do
+whatever they want, even change heapids manually. So, if you bookmark
+a post, you will have a link to the post to the same forever, but it
+is possible that the maintainers decide to move that content that is
+interesting to you to a new post. That's what I meant; not that we can
+do anything about it.

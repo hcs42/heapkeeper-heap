@@ -1,0 +1,15 @@
+Author: Attila Nagy
+Subject: Removing Post.html*
+Tag: issue
+Message-Id: <20100131221709.ee7fe06b.nagy.attila.1984@gmail.com>
+Parent: <4B115F6C.1040604@gmail.com>
+Date: Sun, 31 Jan 2010 22:17:09 +0100
+
+> Hm, they are used in hkweb as well.
+
+The new incarnation of hkweb is built on the new Generator. It uses
+only one of the mentioned functions, but it is not necessary. Even if
+it were, it could be accessed from the Generator instance.
+
+So please go ahead, and move them. I also think that they are more
+closely tied to the Generator.

@@ -1,0 +1,17 @@
+Author: Attila Nagy
+Subject: "Last updated" feature
+Tag: sphinx
+Message-Id: <b29f917d0908010446j133a44a7w56b2d2b6ddb4fb91@mail.gmail.com>
+Parent: <4A7416C0.1000403@gmail.com>
+Date: Sat, 1 Aug 2009 13:46:04 +0200
+
+> Do we want text like "Last updated on Aug 01, 2009" to be written at
+> the bottom of every page? I think it would be important that people
+> see easily that Hk is a living project, and this line would be a
+> testament to it.
+>
+> If you wonder how it looks like, just edit doc/conf.py and uncomment
+> line 127.
+
+I tried it and I say OK. However, if we both slack off, it'll also
+show that very clearly.

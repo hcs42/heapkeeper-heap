@@ -1,0 +1,22 @@
+Author: Csaba Hoch
+Subject: Ellipsis
+Tag: post syntax
+Tag: prop
+Tag: reviewed
+Message-Id: <4A227F85.3090001@gmail.com>
+Date: Sun, 31 May 2009 15:00:53 +0200
+
+I often use `[...]` in quotes:
+
+    > People I like:
+    > [...]
+    > - Asimov
+
+    Yes, I like Asimov, too.
+
+I think `[...]` should be a special bracket segment. I don't know
+though what we should do with it. Maybe it could be converted to
+simple text for now. Afterwards (with a slightly backward incompatible
+solution) we may introduce another behaviour, e.g. it could link to
+the original paragraph. (We could have a setting about turning off the
+new behaviour.)

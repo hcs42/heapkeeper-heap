@@ -1,0 +1,40 @@
+Author: Attila Nagy
+Subject: Hardwired vs. customization-added features
+Tag: idea
+Message-Id: <b29f917d0905140414t9cab436g63eef31dcde89576@mail.gmail.com>
+Date: Thu, 14 May 2009 13:14:21 +0200
+
+On points 2 and 3: at the current stage, we handle a lot of things via
+customizations, and we enjoy it this way. But I think others would feel
+like it's a hack, and not a serious project.
+
+What it means in our case: if we want to offer a feature, we'll have to
+provide a hardcoded way to make it possible. I think "your average system
+administrator" lacks both the funding and the enthusiasm (read: funding)
+to dig deep into the provided cookbook of interesting customization ideas
+in order to implement what the bosses want. What these people need is a
+complete and prepackaged feature that they can turn on with the addition
+of a Boolean assignment at most.
+
+I've never ever seen a mature product that you customize in the same
+language that the product is written in. This is a powerful approach --
+but might also strike others as a sign of inmaturity of the project.
+
+However, I have the feeling that all of this will automatically come
+closer with the advent of the web interface: if the web interface resides
+and runs on a central server, it has to provide an out-of-the-box user
+experience that appeals to most users, and then we'll no longer be
+speaking about power users who we can trust with customizing the system
+to their liking in Python.
+
+But even if we go on to the Web interface, I want to retain the
+interactive/local HTML option forever for the simple-minded hackers'
+own heaps. All these months with the UMS Heap has amply proven that
+the approach of static HTML generation, backed by truly distributed
+Git versioning is a viable option.
+
+I can even imagine the final form of our product will have the best
+of both worlds: all the simple operations could be done from the web
+interface, and when more complicated operations are needed, for example a
+mass search&replace, authorized administrators could log into the system
+and do the work via hkshell.

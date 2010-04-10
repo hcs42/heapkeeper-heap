@@ -1,0 +1,42 @@
+Author: Attila Nagy
+Subject: Augmentation in hkgen.Generator
+Tag: discussion
+Tag: issue
+Tag: reviewed
+Message-Id: <b29f917d0911070054q3a876a69hd47cf342d2b89f7@mail.gmail.com>
+Parent: <4ddb9e5b0911020445k714a8abeua491674cc536be64@mail.gmail.com>
+Date: Sat, 7 Nov 2009 09:54:25 +0100
+
+>> - why copy the `PostItem` object?
+>
+> The reason is ugly, I have to admit.
+>
+> We copy it because we don't want to change the PostItem object
+> returned by e.g. PostDB.walk_thread. PostDB.walk_thread stores the
+> 'begin' PostItems, so it assumes that the post items it yield will not
+> change.
+
+Augmentation wouldn't really change it in any way relevant to
+`PostDB.walk_thread`. But I still argue against the whole concept of
+augmentation. My main problem is that it spends "real" CPU time (copying
+and modifying objects) to achieve conceptual clarity (so that we can be
+sure that the `PostItem`s have a `print_fun` attribute).
+
+>> - why alter the object instead of using `getattr` with the default
+>>  value `Generator.print_postitem` whenever a post item is printed?
+>
+> Because it is nice that you can be sure that the post items have a
+> print_fun attribute. There are functions that wrap the post item's
+> original print_fun and create new print_funs based on this (e.g.
+> hkgen.Generator.{reverse_threads,enclose_posts,enclose_threads}. For
+> how to use them, see issue_tracker.Generator.enclose_issue_posts.). It
+> would not be nice if all those functions had to do this getattr-stuff.
+> These "post item modifier functions" should be as simple as possible,
+> because they are one of the main tools to customize generators.
+
+I can still see alternatives to the current method:
+- adding a getter function to Generator that defaults to
+  `Generator.print_postitem`; then any "post item modifier functions"
+  could use this function
+- adding a `__getattr__` method to `PostItem` that returns
+  `Generator.print_postitem` whenever `print_fun` is read

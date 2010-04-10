@@ -1,0 +1,33 @@
+Author: Csaba Hoch
+Subject: Commit hooks
+Tag: git
+Tag: github
+Message-Id: <4ddb9e5b0910201216l5ce045ean9d1a65f0e6d95e5f@mail.gmail.com>
+Parent: <b29f917d0910200734l6e98bdcek27e411bd93fe9882@mail.gmail.com>
+Date: Tue, 20 Oct 2009 21:16:31 +0200
+
+>> Maybe we should use more commit hooks. A few days ago I sent a commit
+>> hook that checks that there are no trailing spaces. Other ideas I
+>> have:
+>> [...]
+>> - checking that all tests pass
+>
+> Is there any hook that gets invoked when a commit is created via
+> rebasing?
+
+I don't know.
+
+> We like to boast that our commits are 100% sure to pass the
+> tests, but we only tested when we committed first;
+
+We don't execute the tests automatically for commits yet; we should do
+that first. But I understand your concern.
+
+> when they are rebased, they have a thermodynamical chance
+> of breaking. So I'd like to be sure.
+
+I often do this before pushing:
+
+$ for i in `seq 1 10`; do rm *.pyc; ./test.py; git checkout HEAD^; done
+
+and watch the result.

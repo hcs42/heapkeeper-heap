@@ -1,0 +1,9 @@
+Author: Attila Nagy
+Subject: Heapkeeper's version number in the documentation
+Message-Id: <20090721211033.93fe64fc.nagy.attila.1984@gmail.com>
+Date: Tue, 21 Jul 2009 21:10:33 +0200
+
+In the documentation output, Heapkeeper's version is incorrectly
+marked as v1.0. This could be changed to 0.2, or 0.3 once it is
+reached, but I think it'd be better to remove the version number
+from the name of the documentation root altogether.

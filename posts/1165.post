@@ -1,0 +1,44 @@
+Author: Csaba Hoch
+Subject: Moving heapkeeper/script to hk-dev-utils
+Tag: prop
+Message-Id: <4B76762E.20708@gmail.com>
+Parent: <20100210180642.97ff8b23.nagy.attila.1984@gmail.com>
+Date: Sat, 13 Feb 2010 10:51:42 +0100
+
+Nagy Attila wrote:
+>> I think the scripts in heapkeeper/scripts would have a better place in
+>> the hk-dev-utils repository. The heapkeeper repository should contain
+>> the program executed by the users, not our utilities.
+>>
+>> What do you think?
+>
+> I don't think the repository would be for users. It is for other
+> developers. So I think we should keep the scripts that could be useful
+> to other developers, and only migrate those that are only valuable to
+> us.
+
+OK, I modify my position then. The hk repository is for programmers
+who want to play around with Heapkeeper, maybe modify a few bytes,
+then maybe even send patches. I don't want them to be intimidated or
+overwhelmed by the scripts that are very specific to our workflow and
+working environment.
+
+> Of the current set, `statistics` and `statistics.py` are the only ones
+> that are not concerned with our workflow. They could be kept if we
+> wanted to, but since they aren't maintained, we could just as well
+> remove them. (E.g. `statistics` calls `stat.py` instead of
+> `statistics.py`, so it wouldn't run as it is now.)
+>
+> If we choose to remove the statistics script, my opinion is the same
+> as yours.
+
+I don't use them, so it is OK for me to remove them.
+
+The statistics* files are a very good example of why I don't want
+these scripts in these repositories. We will have more and more
+scripts over time, which are created only for a very specific purpose,
+will maybe thrown away, and are usually not well documented (although
+this last part is not true for statistics*). They will just make it
+harder for the programmers to dig into Hk. I don't expect them to care
+about our workflow. I expect only serious Hk developers to care about
+it. hk-dev-utils is for them.

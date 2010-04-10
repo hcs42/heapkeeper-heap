@@ -1,0 +1,40 @@
+Author: Csaba Hoch
+Subject: New design ideas
+Message-Id: <49E9F3EA.3010502@gmail.com>
+Parent: <b29f917d0904180745g4bc69c34n32e8f9a846c7dd47@mail.gmail.com>
+Date: Sat, 18 Apr 2009 17:38:18 +0200
+
+> As I lack the skill to do it right, I'll have to steal an existing
+> design. I love green. And also love and use Vim.
+
+I thought you mean using the colors of Vim itself. That would not be a
+bad idea, either...
+
+> Vim's home page has a green-based design. What a coincidence, how
+> about modeling our design after it?
+>
+> It's simple, but powerful, and we love it. (At least I do.)
+
+OK. But do you mean grabbing the CSS files or grabbing only the
+colors?
+
+> Besides, have you ever examined that site closely? Not a single div, it's all
+> tables.
+
+Nice :)
+
+> Of course, Vim is all about sticking with the good things that have
+> stood the test of time :)
+>
+> Besides, there is a repository of many open-source designs [2]. Most of those
+> are provided on an attribution-mandatory license, but that's OK with us.
+
+Yes.
+
+> (Of course we'd give credit to Bram if we decide to use his site as
+> a template.)
+
+The Vim page was not created by Bram. [1][2]
+
+[1] http://www.vim.org/huh.php
+[2] http://vimonline.sourceforge.net/

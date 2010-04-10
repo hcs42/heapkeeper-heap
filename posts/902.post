@@ -1,0 +1,136 @@
+Author: Attila Nagy
+Subject: Augmentation in hkgen.Generator: measurement
+Tag: discussion
+Tag: issue
+Tag: reviewed
+Message-Id: <b29f917d0911100854y45bbdaf8k10922ef6580afc95@mail.gmail.com>
+Parent: hh/895
+Date: Tue, 10 Nov 2009 17:54:39 +0100
+
+>> I can still see alternatives to the current method:
+>> - adding a getter function to Generator that defaults to
+>>   `Generator.print_postitem`; then any "post item modifier functions"
+>>   could use this function
+>
+> Hm. Just for making sure that we are on the same page, the following
+> changes would be done for example to hkgen.Generator.enclose_posts.
+> [...]
+>  -             old_print_fun = postitem.print_fun
+>  +             old_print_fun = self.get_print_fun(postitem)
+> [...]
+> Generator.get_print_fun itself would be a trivial function.
+
+We are definitely on the same page :)
+
+> I like this idea! Shall we open this thread as a ticket? (I would
+> estimate the effort to be "2"). You may implement it, but I am
+> happy to do it, as well.
+
+OK, I will, but not tonight [1].
+
+>> - adding a `__getattr__` method to `PostItem` that returns
+>>   `Generator.print_postitem` whenever `print_fun` is read
+>
+> This is not good because that would _always_ use
+> hkgen.Generator.print_postitem as the default printer function, while
+> in the current system if override MyGenerator.print_postitem, the
+> augmented postitems created (and augmented) in MyGenerator will have
+> MyGenerator.print_postitem as the default printer function. I think
+> the current behaviour is the desirable one.
+
+Yes, I considered this, too. I even imagined a way to set a
+class-level attribute in PostItem to control which printer function to
+default to, but I could feel this is a dead end. __getattr__ has
+another serious flaw, but more on that a bit later...
+
+[note I did the following measurement before reading this post's
+parent, so I'm glad we came to the same conclusion.]
+
+I wanted to measure the costs of augmentation. So I made this timing
+test (a bit longer code section follows than what looks nice in an
+e-mail or a post, but I felt it was easier to make my point like this):
+
+    import random
+    import hkutils
+    import math
+
+    class Numop(object):
+        def __init__(self):
+            self._num = random.uniform(0, 1000)
+
+        def __getattr__(self, name):
+            if name == 'do2':
+                return self.do_sqrt
+            raise AttributeError
+
+        def do_with_default(self):
+            do = getattr(self, 'do', self.do_sqrt)
+            do()
+
+        def do_sqrt(self):
+            math.sqrt(self._num)
+
+    print 'generating 1M objects...'
+    numops = []
+    for i in range(1000000):
+        numops.append(Numop())
+
+    print 'using defaulting getter method...'
+    hkutils.int_time()
+    for numop in numops:
+        numop.do_with_default()
+    hkutils.print_time()
+
+    print 'using defaulting via __getattr__...'
+    hkutils.int_time()
+    for numop in numops:
+        numop.do2()
+    hkutils.print_time()
+
+    print 'augmenting...'
+    hkutils.int_time()
+    for numop in numops:
+        if not hasattr(numop, 'do'):
+            numop.do = numop.do_sqrt
+    hkutils.print_time()
+    print 'using augmented objects...'
+    for numop in numops:
+        numop.do()
+    hkutils.print_time()
+
+This is pretty much self-explanatory, so I'll present the results
+without further explanation:
+
+    $ python augmentation.py
+    generating 1M objects...
+    using defaulting getter method...
+    5.350327
+    using defaulting via __getattr__...
+    3.331235
+    augmenting...
+    9.367637
+    using augmented objects...
+    1.580619
+
+This means that the augmentating approach takes 9.37 + 1.58 = 10,95
+seconds, and using __getattr__ would be the quickest.
+
+But then I realized that having a __getattr__ slows down all other
+approaches! So I commented it out, and did another run:
+
+    generating 1M objects...
+    using defaulting getter method...
+    3.285651
+    augmenting...
+    7.492890
+    using augmented objects...
+    1.375648
+
+This means that a defaulting getter is the quickest, but there's no
+real difference between an ordinary getter method and one implemented
+as a __getattr__. But, as seen above, a __getattr__ slows a bit down
+every access to the object, so I think a defaulting getter method is
+the best solution also with respect to efficiency.
+
+[1] My hobby[2]: hiding DM song titles in my posts.
+[2] http://en.wikipedia.org/w/index.php?title=Xkcd&oldid=325022174#cite_note-hobbycomics-22

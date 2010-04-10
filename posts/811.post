@@ -1,0 +1,57 @@
+Author: Attila Nagy
+Subject: Caching of next heapid leads to inconsequent behavior
+Tag: bug
+Tag: reviewed
+Message-Id: <b29f917d0910301549n3b776697p4d51460b8ee15828@mail.gmail.com>
+Date: Fri, 30 Oct 2009 23:49:54 +0100
+
+The new `PostDB.next_heapid()` function introduced in the commit
+"PostDB.next_heapid, hkshell.enew: accepting prefix" (2009-09-06,
+0582aec) handles prefixes in addition to the previous version's
+functionality.
+
+The problem is that the "next heapid" is calculated in a radically
+different way for empty and non-empty prefixes (that is, with or
+without prefix). Without a prefix, the function returns a heapid that
+is larger than any heapid that is a number. With a prefix, a heapid is
+returned that is composed of the given prefix and a number for which
+there is no unused heapid with a smaller number and the same prefix.
+
+As an example, create an empty post directory, and add any two valid
+post files with the names `2.post` and `a_2.post`. Then, execute these
+in hkshell:
+
+    >>> postdb().next_heapid()
+    '3'
+    >>> postdb().next_heapid('a_')
+    'a_1'
+
+You see my point: in one case, the number returned will be larger than
+any other, in the other, it finds the first one available.
+
+The obvious and known difference is that in the unprefixed case, the
+result is cached, while when a (non-empty) prefix is given, the result
+is newly constructed. But the caching and the definition of "next
+heapid" should be orthogonal.
+
+Thus, we can have two aims:
+- make the definition of "next heapid" consistent for non-prefixed and
+  prefixed use,
+- enable caching for non-empty prefixes.
+
+Of these, the latter one is harder to achieve, but still not a very
+hard task.
+
+I think the former behavior is more reasonable, the one which
+disregards filling the gaps in the numbering, and always gives the
+largest available number. This way, numerical sorting of heapids tend
+to yield a more chronological order of posts.
+
+Another, somewhat unrelated issue is that the unprefixed call increases
+the counter, which is in my opinion, counter-intuitive. If the
+function would be called `step_heapid()`, I would expect it to
+increase the counter, while the current name only suggests an innocent
+getter with no such side-effect.
+
+Another inconsistency is that numbering starts from 0 without
+prefixes, and from 1 with prefixes.

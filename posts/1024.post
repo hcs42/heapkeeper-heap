@@ -1,0 +1,19 @@
+Author: Csaba Hoch
+Subject: Email parsing problem
+Tag: issue
+Message-Id: <4B50D5FA.2080402@gmail.com>
+Date: Fri, 15 Jan 2010 21:54:18 +0100
+
+[priority high]
+
+Since post 3820, posts are not parsed correctly.
+
+The post body contains things like this:
+
+    --0016e68fcdeaa61245047c7c631a
+    Content-Type: text/plain; charset=ISO-8859-2
+    Content-Transfer-Encoding: quoted-printable
+
+Also, the non-ascii characters in the text are encoded:
+
+    Szerintem zavarn=E1, de ilyen cs=FAnyas=E1gra m=E9g nem l=E1ttam p=E9ld=E1t=

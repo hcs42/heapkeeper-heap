@@ -1,0 +1,17 @@
+Author: Attila Nagy
+Subject: Optimization in Hk
+Tag: idea
+Message-Id: <b29f917d0911190638n63ac79bdybf00b4223e903aff@mail.gmail.com>
+Parent: <4ddb9e5b0911190334l409d6334md3f3f4b6135b7222@mail.gmail.com>
+Date: Thu, 19 Nov 2009 15:38:17 +0100
+
+> In case of initialization and post parsing, I don't know where to expect the
+> bottleneck, I'm not sure it can be done significantly faster within Python.
+
+I think we should do a "null parser" that reads (ie. iterates once)
+over all the post files, and does nothing but emits the same post
+object for all the post files. This would give us a lower bound for
+the optimization, a reference value we know we can't get better.
+
+If this is still not fast enough to scale up to much larger post
+counts, then some serious thinking will be needed.

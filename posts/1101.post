@@ -1,0 +1,54 @@
+Author: Csaba Hoch
+Subject: The need for trailing whitespaces in Heap posts
+Tag: issue
+Message-Id: <4ddb9e5b1002070720o6bb43acfy638e285325e4e121@mail.gmail.com>
+Parent: <b29f917d1002070308g5c74d57ch24bcdbae725a195f@mail.gmail.com>
+Date: Sun, 7 Feb 2010 16:20:34 +0100
+
+> Maybe you misunderstood my original problem.
+
+Not really :)
+
+> In Hk posts, the trailing
+> whitespace should never be valid if it matches /[^ ]\s\+$/. (That is,
+> the only acceptable situation is a line that is only whitespace, and
+> nothing else.) See for example this:
+>
+>    #include <stdio>
+>
+>    int main() {}
+>
+> If I write this, if we ever do any syntax highlighting, this will show
+> up as two distinct code blocks.
+>
+> There is an alternate solution: we could declare that adjacent code
+> blocks are to be interpreted as continuous including any empty lines,
+
+That's what Sphinx does. (And that's what Pyhon does as well, if you
+think about it.)
+
+> but then we'd have to include a separator element, e.g. a special "no-op"
+> meta. Like this:
+>
+>    Compare these two examples:<cr>
+>    <cr>
+>    <spc>print 'hello world'<cr>
+>    [sep]<cr>
+>    <spc>print('hello world')<cr>
+
+We would have to include it if we wanted to be able to express
+everything, including your example. I don't think it it important to
+be able to express that. For example, in Sphinx, you would put the two
+code examples into an itemization:
+
+    Compare these two examples:
+
+    - ::
+
+        print 'hello world'<cr>
+
+    - ::
+
+        print('hello world')<cr>
+
+But we can say that we will add a separator later if we seem to need it.

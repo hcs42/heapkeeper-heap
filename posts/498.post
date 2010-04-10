@@ -1,0 +1,19 @@
+Author: Csaba Hoch
+Subject: Separate Heapkeeper repos
+Message-Id: <4ddb9e5b0908100952p2d78eba7i2cc6c80ac4b5af58@mail.gmail.com>
+Parent: <b29f917d0908100909k740de6dexbe0a608ceb658e31@mail.gmail.com>
+Date: Mon, 10 Aug 2009 18:52:37 +0200
+
+Thanks for your cooperation :)
+
+Do you think we should try out in sandbox repos how this works so that
+we won't make silly mistakes again which would force us to delete and
+upload the repository again? For example I'm wondering how easily can
+I to reorganize (rebase) your commits instead of just pulling them. Or
+if I think something should be done in a different way, how easy it
+for you to change it so that I can pick it again and my history will
+be still fine.
+
+Or shall we practice a few weeks on the real repo, and wait a few
+weeks with 0.3, so that we can delete and upload the repository again
+if we screw up something?

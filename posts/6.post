@@ -1,0 +1,14 @@
+Author: Csaba Hoch
+Subject: Using `` in docstring for variables
+Tag: prop
+Tag: reviewed
+Message-Id: <49B2BC67.1030603@gmail.com>
+Date: Sat, 07 Mar 2009 19:26:47 +0100
+
+I propose using `` for variables in docstrings:
+
+    def sum(l):
+        """Sums the elements of `l`."""
+        ...
+
+Until now I was using '', but that's very ambiguous.

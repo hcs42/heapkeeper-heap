@@ -1,0 +1,16 @@
+Author: Csaba Hoch
+Subject: Roadmap for v0.4 and v0.5
+Tag: prop
+Tag: v0.4
+Tag: v0.5
+Message-Id: <4ddb9e5b0912042347s3712cbcfu335a6491a2e5d373@mail.gmail.com>
+Parent: <4AF70251.5060803@gmail.com>
+Date: Sat, 5 Dec 2009 08:47:02 +0100
+
+Do you agree?
+
+I think we should make a "0.4" branch and a "0.5" branch. Stuff that
+concerns the new generator and smaller fixes should go into 0.4. Hkweb
+and support for multiple heaps should go into branch 0.5. Eventually,
+when the old generator is removed from 0.4, we should release it, and
+merge or rebase it with 0.5.

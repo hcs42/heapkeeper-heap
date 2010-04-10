@@ -1,0 +1,11 @@
+Author: Attila Nagy
+Subject: Storage on IMAP servers
+Tag: idea
+Message-Id: <b29f917d0905181043k76164aav19bf7032e4f21c20@mail.gmail.com>
+Parent: <4ddb9e5b0905171157u6b5a5573qa9589031f640861c@mail.gmail.com>
+Date: Mon, 18 May 2009 19:43:37 +0200
+
+> Which means we can theoretically use git over IMAP...
+
+Theoretically yes. We should do an experiment sometime. This is a
+really interesting possibility.

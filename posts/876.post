@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: Repo topic name
+Tag: git
+Message-Id: <4ddb9e5b0911060447w2776b9f5o7c66dae52eb7ce90@mail.gmail.com>
+Parent: <b29f917d0911060344x53df57f7r847d6be577a23d1d@mail.gmail.com>
+Date: Fri, 6 Nov 2009 13:47:58 +0100
+
+Hm. At some point I said something like "what if we use the word
+'page' to mean 'HTML page'". (Maybe it is even present somewhere in
+the documentation.) I think it is a nice shortcut; for example it is
+nice that we don't write "print_*_html_page", only "print_*_page".
+What do you think about this?

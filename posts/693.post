@@ -1,0 +1,13 @@
+Author: Attila Nagy
+Subject: Meta to forbid downloading
+Tag: idea
+Message-Id: <b29f917d0910172328t33d7bc19ga8ae3295ab7de97a@mail.gmail.com>
+Parent: <4AD9EB9B.9000908@gmail.com>
+Date: Sun, 18 Oct 2009 08:28:46 +0200
+
+> What you describe is a special case of interpreting the post and
+> executing its orders when downloading it. It's OK for me to implement
+> this special case first, and implement more later if we find it
+> useful.
+
+OK.

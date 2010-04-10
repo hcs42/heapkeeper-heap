@@ -1,0 +1,37 @@
+Author: Csaba Hoch
+Subject: "hkshell: enew accepts prefix" (2009-09-06 90b4c7d6)
+Tag: commit
+Message-Id: <4ddb9e5b0909071109h129cda9eobcbcd48f5e50c823@mail.gmail.com>
+Parent: <b29f917d0909070601g584807acy7a9f6a0ae748cff6@mail.gmail.com>
+Date: Mon, 7 Sep 2009 20:09:37 +0200
+
+I had thought about the title of this commit before commiting, and I
+had similar thoughts.
+
+I'm not sure that it's a good idea to mention all the modules that has
+changed in the title; we have only 50 characters there. Your
+recommendation for example is 55 characters.
+
+I choose to mention "enew accepts prefixes", because it is easier to
+comprehend and see its usefulness than do the same for
+"Post.next_heapid accepts prefixes". But I might have been wrong.
+
+I could also have cut the commit into two, but that would not make too
+much sense. (It's not useful if we have many tiny commits.)
+
+Another thought: you don't always have to state the module, you can
+state a class or a method, too:
+
+    PostDB: much nicer
+
+or
+
+    PostDB.next_heapid: accepts prefix
+
+The main idea is to state the scope of the change before the colon.
+
+So maybe the best title is the following:
+
+    PostDB.next_heapid,hkshell.enew: accepting prefix
+
+(We can spare the space before the colon, too.)

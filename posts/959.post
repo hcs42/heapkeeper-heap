@@ -1,0 +1,17 @@
+Author: Attila Nagy
+Subject: Using annotated tags for messages
+Tag: idea
+Tag: repo
+Message-Id: <b29f917d0911190857x7b967f1ep17e9f9224cac5f3b@mail.gmail.com>
+Parent: <b29f917d0911190836g2e4d51dek951be7a3f328de4c@mail.gmail.com>
+Date: Thu, 19 Nov 2009 17:57:40 +0100
+
+> What do you think, is it OK to push these tags to my repository? Then,
+> we could discuss them, and delete. Or, we could just discuss them on
+> the heap. In this case, I'd keep these tags private, and delete them
+> as soon as the thread is opened on the heap.
+
+I decided to stay with the second. This is not exactly what tags are
+meant for, and I don't want to clutter up the repository with them.
+Anyway, if you want to answer them, you have to open a thread on the
+heap, so why not do it myself?

@@ -1,0 +1,11 @@
+Author: Csaba Hoch
+Subject: Wiko
+Tag: prop
+Tag: reviewed
+Message-Id: <49C56735.4090607@gmail.com>
+Parent: <49C4B258.7020608@gmail.com>
+Date: Sat, 21 Mar 2009 23:16:21 +0100
+
+I suggest using `` instead of <code></code>. It's much more readable
+and in the long term we want to add `` support for Wiko. If we don't,
+we will just do :%s/`\(.\{-}\)`/<code>\1<\/code>/g.

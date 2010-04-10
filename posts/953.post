@@ -1,0 +1,9 @@
+Author: Attila Nagy
+Subject: PostDB.walk_thread: tidying (2009-10-04 daaf09a)
+Tag: commit
+Message-Id: <b29f917d0911190851q7cf06184u484677ffbee8f708@mail.gmail.com>
+Date: Thu, 19 Nov 2009 17:51:23 +0100
+
+I don't think that we should try to explain what a generator is in a
+docstring. I don't think understanding "yield" is too much to expect
+from a Python programmer :)

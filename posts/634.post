@@ -1,0 +1,13 @@
+Author: Attila Nagy
+Subject: Accept all header attributes?
+Tag: idea
+Message-Id: <20091006202743.c385cace.nagy.attila.1984@gmail.com>
+Date: Tue, 6 Oct 2009 20:27:43 +0200
+
+> We may even say at one point that we accept any attribute so that
+> Heapkeeper is forward compatible. But this is a point of another
+> discussion.
+
+Do you think so?
+
+Original parent: heap://hh/394

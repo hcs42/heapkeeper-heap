@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: New generator
+Message-Id: <4AE2B5FF.8020605@gmail.com>
+Parent: <b29f917d0910231502k48d1d296m927b2769fb4a565d@mail.gmail.com>
+Date: Sat, 24 Oct 2009 10:08:31 +0200
+
+>> I pushed the clean version of the new generator to my github repo.
+> 
+> Is it stable enough so that I can start re-implementing hkweb on top
+> of it?
+
+Yes.

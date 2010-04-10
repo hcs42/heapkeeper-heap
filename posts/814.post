@@ -1,0 +1,36 @@
+Author: Attila Nagy
+Subject: hkshell.p: bug fixed (2009-09-12, 3724473)
+Tag: commit
+Message-Id: <b29f917d0910301857i2c017a86qfa96c0832a313335@mail.gmail.com>
+Date: Sat, 31 Oct 2009 02:57:45 +0100
+
+"hkshell.p did not work when the argument was a real Post object."
+
+You solved it like this:
+
+    -    return postdb().post(pp)
+    +    # PostSet is better in making post from a prepost...
+    +    postset = postdb().postset(pp)
+    +    return postset.pop()
+
+I always thought that joke about the mathematician and the teapot was
+only a joke :)
+
+`PostSet._to_set` is where the work is done. No surprise here, a loop
+and a chain-if:
+
+    for prepost in prepostset:
+        # calculating the post for prepost
+        if isinstance(prepost, str) or isinstance(prepost, int):
+            # prepost is a heapid
+            post = postdb.post(prepost, True)
+        elif isinstance(prepost, Post): # prepost is a Post
+            post = prepost
+        elif prepost == None: # prepost is None
+            continue
+
+This of course does the job, but it would have been conceptually
+cleaner to have this chain-if in a separate function, and call that
+from the loop and `hkshell.p`, too. But this may be a bit faster (one
+function call saved), which can matter a lot, since `PostSet` is an
+important part of `hklib`'s structure.

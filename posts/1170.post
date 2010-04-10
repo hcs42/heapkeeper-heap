@@ -1,0 +1,28 @@
+Author: Csaba Hoch
+Subject: Email parsing problem
+Tag: issue
+Message-Id: <4B780F68.8030505@gmail.com>
+Parent: <b29f917d1002091448o5423cf17m5f2bbaf7f3803631@mail.gmail.com>
+Date: Sun, 14 Feb 2010 15:57:44 +0100
+
+> This is how I understand this topic.
+
+Thanks, you managed to clear up a few things.
+
+> Now I'll try to answer your questions:
+>
+>> Why do you think they should not give a
+>> warning?
+>
+> They should not give warnings because they are perfectly legal. See
+> e.g. the original of heap://173 or heap://1984 .
+
+OK, this is implied by your explanation.
+
+>> Shouldn't we convert that into UTF-8?
+>
+> It would be reasonable to convert text in any other charset to
+> UTF-8: the heap posts have no way of specifying charset, and frankly,
+> I am happy it doesn't. UTF-8 is optimal for our purposes.
+
+OK then, that's what we do now.

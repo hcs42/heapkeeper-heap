@@ -1,0 +1,32 @@
+Author: Attila Nagy
+Subject: Caching of next heapid leads to inconsequent behavior
+Tag: bug
+Tag: reviewed
+Message-Id: <b29f917d0910301805i403ae1a7re011eaaa5b5050f2@mail.gmail.com>
+Parent: <b29f917d0910301549n3b776697p4d51460b8ee15828@mail.gmail.com>
+Date: Sat, 31 Oct 2009 02:05:46 +0100
+
+> Thus, we can have two aims:
+> - make the definition of "next heapid" consistent for non-prefixed and
+>  prefixed use,
+> - enable caching for non-empty prefixes.
+
+I have solved these in two distinct commits on the `_next_heapid`
+branch.
+
+> Another, somewhat unrelated issue is that the unprefixed call increases
+> the counter, which is in my opinion, counter-intuitive. If the
+> function would be called `step_heapid()`, I would expect it to
+> increase the counter, while the current name only suggests an innocent
+> getter with no such side-effect.
+
+I haven't changed this, but we could still rename the function to
+`step_heapid`. However, previously only the empty prefix could do this
+"stepping", the other prefixes returned the same name on consequent
+calls. Now the non-empty prefixes step their numbering the same way
+the empty prefix does.
+
+> Another inconsistency is that numbering starts from 0 without
+> prefixes, and from 1 with prefixes.
+
+I haven't changed this, though it would be trivial.

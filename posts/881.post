@@ -1,0 +1,164 @@
+Author: Attila Nagy
+Subject: The openness algorithm of the issue tracker
+Tag: discussion
+Message-Id: <b29f917d0911071114scb4ce93j7c7adfe000f1488f@mail.gmail.com>
+Date: Sat, 7 Nov 2009 20:14:38 +0100
+
+[!note I think we've already had a discussion on this, but I don't
+remember any details.]
+
+    def is_open(root):
+        postdb = root._postdb
+        openness = 0
+        if root.has_tag('prop'):
+            openness += 1
+        for post in postdb.postset(root).expf():
+            if tag_in_body(post, 'open'):
+                openness += 1
+            elif tag_in_body(post, 'close'):
+                openness -= 1
+        return openness > 0
+
+Your solution is beautifully simple, but I want to check if the results
+are consistent with our expectations. I want to list some possible
+scenarios and check if this solution handles them correctly. Later,
+this list could be used in test cases for the issue tracker.
+
+== #1: Proposal and agreement on straight line ==
+
+    <1> Attis New convention \[prop\]
+    Let's agree that we do X.
+
+      <2> Attis New convention \[prop\]
+      OK.
+
+        <3> Csabi New convention \[prop\]
+        \[close\]
+
+Openness table:
+
+    1   1
+    2   1
+    3   0
+
+This scenario is handled as expected.
+
+== #2: Opening in thread and agreement on straight line ==
+
+    <1> Attis Strange behavior when X -- intended? \[discussion\]
+    Hk behaves strangely when I do X. Is this a bug, or is this
+    intended?
+
+      <2> Csabi Bug in X \[bug\]
+      It is a bug.
+      \[open\]
+
+        <3> Attis Bug in X \[bug\]
+        I've pushed a bugfix to the branch _x-bugfix.
+
+          <2> Csabi Bug in X \[bug\]
+          Thanks.
+          \[close\]
+
+Openness table:
+
+    1   0
+    2   1
+    3   1
+    4   0
+
+This scenario is handled as expected.
+
+== #3: Proposal and agreement with side branch ==
+
+    <1> Attis New convention \[prop\]
+    Let's agree that we do X.
+
+      <2> Attis New convention \[prop\]
+      Do you think Y should be considered?
+
+        <3> Csabi New convention \[prop\]
+        Y is totally unrelated to X.
+
+          <4> Attis New convention \[prop\]
+          I see.
+
+        <5> Attis New convention \[prop\]
+        I agree to X.
+
+          <6> Csabi New convention \[prop\]
+          \[close\]
+
+Note: in this case, it would be more logical to modify <4>'s parent to
+<1> instead of <2>.
+
+Openness table:
+
+    1   1
+    2   1
+    3   1
+    4   1
+    5   1
+    6   0
+
+This scenario is handled as expected.
+
+== #4: One issue split and one part resolved ==
+
+    <1> Attis Bug found \[bug\]
+    Doing X causes errors during index generation.
+    \[open\]
+
+      <2> Attis Double bug! \[bug\]
+      I discovered that the errors are a result of two discinct bugs,
+      A and B.
+
+        <3> Attis Bug A \[bug\]
+        Bug A affects module M.
+
+          <4> Csabi Bug A: suggestion \[bug\]
+          You should correct this bug by doing 1.
+
+            <5> Csabi Bug A: solution \[bug\]
+            I have pushed a bugfix.
+
+              <6> Attis Bug A: solution \[bug\]
+              Thanks!
+              \[close\]
+
+        <7> Attis Bug B \[bug\]
+        Bug A affects module N.
+
+Openness table:
+
+    1   1
+    2   1
+    3   1
+    4   1
+    5   1
+    6   0
+    7   0
+
+This is not handled as expected. We should be extra careful when
+splitting issues.
+
+== #4: Proposal with "open" tag ==
+
+A user who is not familiar with this algorithm may add an "open" tag
+to a proposal, resulting in a double-open state that has to be closed
+twice, like this:
+
+    <1> Attis Important proposal \[prop\]
+    We should improve X immediately.
+    \[open\]
+
+      <2> Csabi Important proposal \[bug\]
+      I have improved X and pushed the changes.
+      \[close\]
+
+Openness table:
+
+    1   2
+    2   1
+
+This is not handled as expected.

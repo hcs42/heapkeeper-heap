@@ -1,0 +1,10 @@
+Author: Csaba Hoch
+Subject: Renaming In-Reply-To in post file header to Parent
+Tag: prop
+Tag: reviewed
+Message-Id: <4A11A8A5.1030406@gmail.com>
+Date: Mon, 18 May 2009 20:27:49 +0200
+
+I propose renaming the "In-Reply-To" header attribute in post files to
+be "Parent" instead. The old name is a remnant of our old terminology
+that should not be used any more.

@@ -1,0 +1,16 @@
+Author: Csaba Hoch
+Subject: Optimized IMAP downloading
+Message-Id: <4A91ABD7.1030503@gmail.com>
+Parent: <b29f917d0908162349ne8dcce4i7179b1fe7f8b1c92@mail.gmail.com>
+Date: Sun, 23 Aug 2009 22:51:35 +0200
+
+I saw that new commits were made in this branch.
+
+Will you send me an email or a pull request when you think it is ready
+to be pulled into my master?
+
+I suggest rebasing the branch. (E.g. adf3980806 should not be a
+separate commit.)
+
+If you don't agree with this, please reflect to my opinion described
+in thread "Workflow with separate repositories."

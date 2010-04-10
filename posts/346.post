@@ -1,0 +1,36 @@
+Author: Csaba Hoch
+Subject: Links in post pages to syntax definition
+Tag: post syntax
+Tag: prop
+Tag: reviewed
+Message-Id: <4A205139.9070601@gmail.com>
+Date: Fri, 29 May 2009 23:18:49 +0200
+
+When people read post pages, they will wonder sometimes what a
+specific bracket segment does. I propose having a link to the
+corresponding help section for each bracket segment.
+
+Example post:
+    
+    Items:[-]
+    - 1
+    - 2
+
+    [note This is ugly.]
+
+Post page:
+
+    <div>
+    Items:<a href="somewhere/post_format.html#itemization">[-]</a>
+    <ul>1</li>
+    <ul>2</li>
+    </div>
+
+    <div>
+    <red>[<a href="somewhere/post_format.html#note">note This is ugly.]</red>
+    </div>
+
+"somewhere" could be either http://heapkeeper.org or a custom
+location.
+
+This would make learning post syntax much easier for users.

@@ -1,0 +1,52 @@
+Author: Csaba Hoch
+Subject: Managing several heaps in Heapkeeper
+Tag: prop
+Message-Id: <4B76739D.8060508@gmail.com>
+Parent: <20100210165514.3871cfe7.nagy.attila.1984@gmail.com>
+Date: Sat, 13 Feb 2010 10:40:45 +0100
+
+> We can't take it granted that all users will have access to all the
+> heaps a thread may span across.
+
+True.
+
+> We've already discussed a similar matter in Hungarian [1]. Then,
+> we decided that if there's a public and a private heap, posts on the
+> private heap could have public parents, but not the other way around.
+
+Yes, this is a very important principle.
+
+> Moving a post from a public heap to a private one will break the thread
+> for those who don't have access to the private heap. We should consider if
+> this is a mistake or not.
+
+How could it *not* be the mistake? If you move a post from a public
+heap to a private one without copying all its descendants, you will
+break the principle you just said.
+
+Sometimes copying the whole thread to a private heap (which would not
+break this principle but would raise other questions) could make
+sense, but I think it will be a very rare situation. If a thread does
+not belong to the public heap, it will just get deleted.
+
+>     <pub/1> Susan   New positronic brain announced!
+>         <pub/2> PR      Public reception of new positronic brain
+>             <priv/1> Susan  Robot misbehaves during press conference
+>                 <priv/2> Eng.Dept.  Fix released
+>                     <pub/5> Susan       Robot is safe, error fixed
+
+This example breaks the principle we just agreed upon.
+
+> But what if someone takes the time to check the headers of pub/5?
+> They'll see that it has a parent post. Even worse, email Message-IDs
+> are formed like email addresses. This means that readers of the
+> public heap will know that this post is the child of an invisible
+> post that has been written by someone at "@engineering.usrobot.com",
+> which is the leakage of sensitive information. This is just one
+> problem, but I think many such subtleties may be out there if
+> threads contain posts from multiple heaps.
+
+Nice explanation of one reason behind the principle :)
+
+I'm not sure whether you wanted to make a point in this post beside
+spelling out this principle and the reason behind it.

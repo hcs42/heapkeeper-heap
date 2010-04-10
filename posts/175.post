@@ -1,0 +1,15 @@
+Author: Csaba Hoch
+Subject: iPython
+Message-Id: <4ddb9e5b0905080604l6ed8b2f9vd1b83e57d5e19c0d@mail.gmail.com>
+Date: Fri, 8 May 2009 15:04:55 +0200
+
+It is worth to have a look at:
+
+"[iPython's goal is to] serve as an embeddable, ready to use interpreter for
+your own programs." [1]
+
+Csabi
+
+[1] http://ipython.scipy.org/doc/nightly/html/overview.html#enhanced-interactive-python-shell
+[2] http://ipython.scipy.org/screenshots/index.html - screenshots
+[3] http://ipython.scipy.org/ - homepage

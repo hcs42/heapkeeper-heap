@@ -1,0 +1,16 @@
+Author: Attila Nagy
+Subject: Augmentation in hkgen.Generator
+Tag: discussion
+Tag: issue
+Tag: reviewed
+Message-Id: <b29f917d0911020424g3c3feef9o684f48de73a2526e@mail.gmail.com>
+Date: Mon, 2 Nov 2009 13:24:10 +0100
+
+I noticed that the post items get "augmented" before they can be
+printed. This means adding a default `print_fun` member to a copy of
+the `PostItem` object, if the object doesn't have one.
+
+Two questions:
+- why copy the `PostItem` object?
+- why alter the object instead of using `getattr` with the default
+  value `Generator.print_postitem` whenever a post item is printed?

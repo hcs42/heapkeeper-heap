@@ -1,0 +1,13 @@
+Author: Csaba Hoch
+Subject: Replying to synthetic messages
+Tag: issue
+Message-Id: <4B7670E7.6050103@gmail.com>
+Parent: <20100211201407.e772f7ce.nagy.attila.1984@gmail.com>
+Date: Sat, 13 Feb 2010 10:29:11 +0100
+
+> We have these options when replying to synthetic posts:
+> - use this workaround, though it's clumsy,
+> - reply as a new mail, and specify the parent in a todo meta
+
+I would propose specifying the parent in the *parent* meta. We could
+handle that automatically.

@@ -1,0 +1,66 @@
+Author: Csaba Hoch
+Subject: None is also accepted as prepost (4b2977e9b7 2009-04-27)
+Tag: commit
+Message-Id: <49F8070B.1020004@gmail.com>
+Parent: <b29f917d0904282351j3af040e7l7efe3962a2b73e7f@mail.gmail.com>
+Date: Wed, 29 Apr 2009 09:51:39 +0200
+
+>> Why is it good that None is also accepted as prepost?
+>
+> See commit efa4653435, 2009-04-27 19:59:22:
+>
+>     ps_singles = postdb.roots()
+>     for post in postdb.all():
+>         ps_singles -= hklib.PostSet(postdb, [])
+
+You can write "postdb.postset(xx)" instead of "hklib.PostSet(postdb, xx)".
+
+> This could have been written as something like:
+>
+>     ps_singles = postdb.roots()
+>     for post in postdb.all():
+>         parent = postdb.parent(post)
+>         if parent is not None:
+>             ps_singles -= hklib.PostSet(postdb, [parent])
+
+This works without accepting None as a prepost in the constructor or
+prepostset:
+
+    ps_singles = postdb.roots()
+    for post in postdb.all():
+        ps_singles -= [postdb.parent(post)] # when postdb.parent(post)
+                                            # is None, nothing happens
+
+But that's what I would write, which is more efficient and nicer in my eyes:
+
+    ps_singles = \
+        postdb.postset(postdb.roots()). \
+        collect(lambda post: postdb.children(post) == [])
+
+> I thought that an empty set is perfectly sensible, and it
+> should also make sense to create an empty PostSet.
+
+Yes, an empty PostSet is perfectly sensible. It can be created as
+PostSet([]) or PostSet(set()). [] and set() are also good prepostsets.
+
+> Then, the special case when a post has no parents would not be
+> special at all and needs no special handling. After all, creating an
+> empty set on a None input seems logical.
+
+It is not logical. It is only handy :)
+
+Now the logic of prepostset is the following:
+- There are preposts. Each prepost represents exactly one post.
+- A prepostset is any of the followings:
+  - a PostSet
+  - a prepost
+  - a set or list of preposts
+
+With accepting None as a prepost, we would lose the principle that
+"each prepost represents exactly one post"; or we would lose the
+principle that a prepostset is a collection of preposts.
+
+I'm hesitant to decide whether accepting None is handy enough to
+give up these principles. Although I don't think it is handy at all in
+your example, it may be handy at some other time, considering that
+there are functions like `parent` that return either a Post or None.

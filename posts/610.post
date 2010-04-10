@@ -1,0 +1,11 @@
+Author: Csaba Hoch
+Subject: `enew` should copy the tags of the parent
+Tag: issue
+Tag: reviewed
+Message-Id: <4AC054B9.4040108@gmail.com>
+Date: Mon, 28 Sep 2009 08:16:25 +0200
+
+When enew is called with a parent, it should copy the parent post's
+tags:
+
+    >>> enew(parent=42)

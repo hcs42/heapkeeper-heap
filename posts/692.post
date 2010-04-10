@@ -1,0 +1,52 @@
+Author: Attila Nagy
+Subject: Docstring tracking tool
+Tag: idea
+Message-Id: <b29f917d0910172328i53058c0bw974bcda82c42ccab@mail.gmail.com>
+Parent: <4AD9ECAB.7040103@gmail.com>
+Date: Sun, 18 Oct 2009 08:28:10 +0200
+
+> What do you mean by "proper documentation"?
+>
+> It could e.g. check that the documentation is in correct format
+
+That's exactly what I was thinking about. We have several levels of
+documentation for functions:
+- none,
+- one line only, to state what the function is for,
+- detailed (arguments and return), but in the old form,
+- detailed (arguments and return), and in the newest form.
+
+An example of the old form:
+
+    @staticmethod
+    def parse_header(f):
+        """Parses the header from f.
+
+        Arguments:
+        f -- A file descriptor.
+
+        Returns:
+        dict(str, [str]).
+        """
+
+And the new form:
+
+    @staticmethod
+    def from_str(s, heapid=None, postdb=None):
+        """Creates a |Post| object from the given string.
+
+        **Arguments:**
+
+        - `s` (str) -- String from which the post should be created. It is
+          handled like the content of a post file.
+        - `heapid` (|Heapid| | None) -- Initial value of the `_heapid` data
+          attribute.
+        - `postdb` (|PostDB| None) -- Initial value of the `_postdb` data
+          attribute.
+
+        **Returns:** |Post|
+        """
+
+I think we should fill this up from the bottom, i.e. it is more
+important to document everything than to improve existing
+documentation. Do you agree?

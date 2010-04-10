@@ -1,0 +1,14 @@
+Author: Attila Nagy
+Subject: "nothing added..." in commit message (2009-05-15 ac1803f877)
+Tag: commit
+Message-Id: <20090519094239.70fe5fdb.nagy.attila.1984@gmail.com>
+Parent: <4A125B87.8050004@gmail.com>
+Date: Tue, 19 May 2009 09:42:39 +0200
+
+> I don't know how this could happen. Do you have an idea? If not,
+> please, be aware next time when you merge branches, and try to find
+> the root of the problem. (I'm very curious.)
+
+I must admit I made a mess of the threads, and I had many conflicts that
+day. Still, I don't know how I did an empty commit. Maybe I forgot a "-a"
+option? I thought that results in failure of the commit. Maybe it doesn't?

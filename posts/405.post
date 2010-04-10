@@ -1,0 +1,16 @@
+Author: Csaba Hoch
+Subject: Interpreter problem solved; tests on other python versions
+Tag: python
+Message-Id: <4A6A8E66.8060901@gmail.com>
+Parent: <4ddb9e5b0907171424k46fc11b5re1565ca71baecb5c@mail.gmail.com>
+Date: Sat, 25 Jul 2009 06:47:34 +0200
+
+> We have a problem with running Hk on Python 2.6. Python 2.6 which
+> handles the -i option differently from 2.5.
+
+Problem solved in commit 0adaf99477 (2009-17-19) with using
+"code.interact" instead of "python -i".
+
+But from now on, we should do additional tests on Python 2.5, since
+normally I use 2.6. What do you use? (And we should also test on
+Windows, as you pointed out.)

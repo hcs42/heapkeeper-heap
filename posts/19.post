@@ -1,0 +1,30 @@
+Author: Attila Nagy
+Subject: Wiki-like heap, pseudo posts
+Tag: hh-conventions
+Tag: idea
+Tag: post syntax
+Tag: reviewed
+Message-Id: <b29f917d0903190628x1c555f1fg7ccbd35ae727e6a4@mail.gmail.com>
+Parent: <49B284FF.8080500@gmail.com>
+Date: Thu, 19 Mar 2009 14:28:33 +0100
+
+Though you didn't mention the question of syntax directly in your
+proposal, I guess from your other posts that you propose to use a
+MediaWiki/Wiko-like syntax. But for numbered lists, you used numbers
+in your post instead of the #'s demanded by the syntax.
+
+Which leads to the question: do you think we should integrate Wiko
+with Heap?
+
+If it is done, #'s will be seen on the Heap as a nice numbered list,
+with automatic numbering, which is a nice feature. Downside is that
+it's slightly inconvenient when you read the posts as received by
+email. Another question: should we start using #'s and similar
+Wiko-markup now, or only when the integration is complete (that is, if
+we choose to integrate)?
+
+An idea for such an integration which fits together well with your
+wiki-heap idea: how about adding a special meta to mark a post as a
+wiki, possibly specifying a title, too? If no such meta is present, we
+could use the normal body parser, otherwise we would use Wiko to
+render the page.

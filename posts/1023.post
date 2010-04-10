@@ -1,0 +1,13 @@
+Author: Attila Nagy
+Subject: Miraculous automatic reloading of hkrc
+Message-Id: <b29f917d1001100511n5ea864d9nc1a68e53ca0fa5bd@mail.gmail.com>
+Parent: <4ddb9e5b1001100447g342b23ecl5cd49831434fb156@mail.gmail.com>
+Date: Sun, 10 Jan 2010 14:11:23 +0100
+
+>> So web.py does it for us. I wonder how they handle those problems
+>> we've discussed related to objects, namely that on reloading modules,
+>> objects retain their membership to the old versions of the classes.
+>
+> Are you sure it handles those?
+
+No, I'm almost sure it doesn't. But I haven't checked.

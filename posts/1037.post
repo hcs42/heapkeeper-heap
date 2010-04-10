@@ -1,0 +1,83 @@
+Author: Csaba Hoch
+Subject: Pylint
+Message-Id: <4B5C3EF9.70800@gmail.com>
+Date: Sun, 24 Jan 2010 13:37:13 +0100
+
+I tried out pylint [1], which is a static analyser tool for Python. It
+can be installed by doing "apt-get install pylint".
+
+pylint can warn us when the code does not conform to coding
+conventions, when it thinks something should be refactored, or when the
+code would raise runtime error because e.g. we use an unassigned
+variable. It also finds unused imports. It seems to examine a lot of
+things.
+
+It is not as smart as its Erlang counterpart called Dialyser. Dialyser
+would do type inference and warn when a function is called wrong types
+of arguments. pylint does not warn even for the following:
+
+    def f():
+        print
+
+    f(1)
+
+If you give this code to pylint, you will get 3 warnings: one because
+the module does not have a docstring, another because f does not have
+a docstring, and a third one because f is too short and function names
+should have at least 3 characters according to pylint.
+
+Fortunately it can be controlled which warnings are suppressed:
+
+    $ pylint --output=colorized --reports=n --include-ids=y --disable-msg=C0111 a.py
+    No config file found, using default configuration
+    ************* Module a
+    C0103:  1:f: Invalid name "f" (should match [a-z_][a-z0-9_]{2,30}$)
+
+The warning code of missing docstring is C0111.
+
+Comments into source code can instruct pylint to suppress warnings:
+
+    # pylint: disable-msg=C0111
+    def f():
+        # pylint: disable-msg=C0103
+        print
+
+    def g():
+        print
+
+The first line instructs it to suppress the "missing documentation"
+warning. The third line instructs it to suppress "invalid name", but
+it will be applied only for `f`, go we will still get a warning for
+`g`. This way we can suppress certain messages either locally or
+globally.
+
+After I implemented several heaps and tested it with the automatic
+tests, but before I tried it out, I ran pylint, and it found two bugs.
+One was that I raised "HkException" instead of "hkutils.HkException",
+and the other one was that I forgot to remove an argument from the
+argument list of a function. The latter would have been uncovered
+during the manual test, but the former would not.
+
+Probably if I used pylint before executing the automatic tests and
+correcting the bunch of errors uncovered by them, pylint have found
+more errors, and I would have spent less time debugging.
+
+pylint prints this error quite a few time when used on Heapkeeper's
+code:
+
+    Exception RuntimeError: 'maximum recursion depth exceeded while
+    calling a Python object' in <type 'exceptions.AttributeError'>
+    ignored
+
+It does not exit and still prints warnings, but this is annoying. I
+found the entry in the pylint developer's bug tracker [2], so I hope
+something will be done about this soon. Until then:
+
+    $ pylint <args> 2>&1 | sed '/^Exc/d'
+
+I have commited the hk_pylint script to hk-dev-utils which contains
+this workaround, and instructs pylint to ignore all warning that we
+don't care (or at least not for now).
+
+[1] http://www.logilab.org/857
+[2] http://www.logilab.org/ticket/19641

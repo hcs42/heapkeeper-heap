@@ -1,0 +1,33 @@
+Author: Csaba Hoch
+Subject: Caching of next heapid
+Tag: discussion
+Message-Id: <4AEBEB9A.7070608@gmail.com>
+Parent: <b29f917d0910301617kcb6b137m7f38f154addd7883@mail.gmail.com>
+Date: Sat, 31 Oct 2009 08:47:38 +0100
+
+The code you gave it not equivalent to my code.
+
+    def f(self, heapids):
+        """My code"""
+        next_heapid_0 = max(heapids) + 1 if heapids != [] else 0
+        self._next_heapid = max([self._next_heapid, next_heapid_0])
+
+    def g(self, heapids):
+        """Your code"""
+        try:
+            self._next_heapid = max((self._next_heapid, max(heapids) + 1))
+        except ValueError:
+            self._next_heapid = 0
+
+    class A:
+        pass
+
+    self = A()
+    self._next_heapid = 2
+    f(self, [])
+    print self._next_heapid  # My code gives 2
+
+    self = A()
+    self._next_heapid = 2
+    g(self, [])
+    print self._next_heapid  # Your code gives 0

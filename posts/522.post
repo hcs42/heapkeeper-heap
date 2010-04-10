@@ -1,0 +1,20 @@
+Author: Attila Nagy
+Subject: "hklib: optimized IMAP downloading" (2009-08-17 e23aa8b83d)
+Tag: commit
+Message-Id: <b29f917d0908180745h68114414w51194aa3e8502b40@mail.gmail.com>
+Parent: <b29f917d0908180352w10a20f9by576475d2019cf3cc@mail.gmail.com>
+Date: Tue, 18 Aug 2009 16:45:39 +0200
+
+>>> +#            else:
+>>> +#                log('Post #%s (#%s in INBOX) found.' %
+>>> +#                    (post.heapid(), int(index) + lower_value))
+>>
+>> You can delete the `else` branch.
+>
+> I want to introduce a new option called `download_details`, which,
+> when enabled, would bring back these per-email status messages. That's
+> why I kept them as comments.
+
+The new option is called 'detailed'. To use it:
+
+    >>> dl(detailed=True)

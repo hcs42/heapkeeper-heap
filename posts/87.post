@@ -1,0 +1,24 @@
+Author: Csaba Hoch
+Subject: Post files, pages
+Tag: prop
+Tag: reviewed
+Message-Id: <49E2E2C9.4070707@gmail.com>
+Date: Mon, 13 Apr 2009 08:59:21 +0200
+
+== Post files ==
+
+I propose to use the expression "post file" instead of "mail file".
+The reason is that these files are the persistent variants of Post
+objects. I think even their extension should be .post and not .mail.
+
+== Pages ==
+
+Another proposal: "page" should mean an HTML page. This way we could
+use these simple expressions:
+- post file (<heapid>.post)
+- post object (Post)
+- post page (<heapid>.html or dynamically generated HTML page)
+- index object (Index)
+- index page (<index name>.html or dynamically generated HTML page);
+  previously we used awkward names for this
+- thread page (<root>.html? or dynamically generated HTML page)

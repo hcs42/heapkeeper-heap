@@ -1,0 +1,19 @@
+Author: Csaba Hoch
+Subject: The reality log
+Tag: workflow
+Message-Id: <4ddb9e5b1002211152l59260dc6x26865bc33872f002@mail.gmail.com>
+Parent: <b29f917d1002130017g151193e9gfbaa1cda5788cd9a@mail.gmail.com>
+Date: Sun, 21 Feb 2010 20:52:04 +0100
+
+>>> What would such a log look like exactly?
+>>
+>> Like an IM conversation about what we are rebasing. But it does not
+>> have to be real time, thanks to wave.
+>>
+>> Just imagine that there is an IRC room where we only talk about
+>> rewriting git history. The log of that room would be the reality log.
+>> Nothing formal.
+>
+> OK, this sounds usable.
+
+I created a wave for the reality log.

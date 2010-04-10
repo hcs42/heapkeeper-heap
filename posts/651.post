@@ -1,0 +1,30 @@
+Author: Attila Nagy
+Subject: Storing our post files on GitHub
+Tag: idea
+Message-Id: <20091014212022.d3943904.nagy.attila.1984@gmail.com>
+Parent: <4A12E71F.4090100@gmail.com>
+Date: Wed, 14 Oct 2009 21:20:22 +0200
+
+> [...] we could have a server
+> that pushes new posts to the repository in real time. That's how
+> mailing lists work -- if you post something, it is in the web archive
+> a few minutes later.
+
+Why not? It'd be very easy to set up a cron job on our server. We'd
+have it run a download, and return the number of new posts. If this is
+greater than 0, we'd do an automatic commit. These automatic d()-s
+would be committed into a separate branch.
+
+So this is how I imagine this would look at GitHub:
+
+                                                autodl
+                                                  |
+                                                  V
+  init---dl---dl---dl---dl---dl---dl---dl---dl---dl
+           \         \              \
+            \tidy-----tidy-----------tidy
+                                      ^
+                                      |
+                                   attistidy
+
+This, of course, could be rebased into a linear history.

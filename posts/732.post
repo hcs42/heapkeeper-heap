@@ -1,0 +1,40 @@
+Author: Csaba Hoch
+Subject: Effort
+Tag: hh-conventions
+Tag: prop
+Tag: reviewed
+Message-Id: <4ADF407D.7070308@gmail.com>
+Date: Wed, 21 Oct 2009 19:10:21 +0200
+
+I'd like to assign some meta information to the issues.
+
+For example:
+- how much effort is it to implement them
+- when do we plan to do it (Heapkeeper version)
+- is it assigned to someone
+- what is the priority
+
+I will not be strict about writing these about every issue, but it can
+be useful sometimes if we can express our thoughts about these
+questions in a "standard" way, which can even be displayed by Heapkeeper.
+
+== Effort ==
+
+An estimate about how much effort is it to solve the issue in hours.
+Documentation, testing and writing the commit message are included.
+
+== Version ==
+
+The version of Heapkeeper in which we plan to implement the issue,
+e.g. "0.4".
+
+== Assigned to someone ==
+
+If a task is assigned to someone, others should not work on it, in
+order to avoid wasted efforts.
+
+== Priority ==
+
+I don't really know yet what priorities should be have. I propose
+to use words like "high", "normal", "low". I guess "normal" is the
+default priority.

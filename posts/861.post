@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: Creating sections in the new generator
+Tag: discussion
+Message-Id: <4ddb9e5b0911020032n6fd4f00j63df88778f4a1af8@mail.gmail.com>
+Parent: <b29f917d0911011208i1d2ad057h5fc0a28cd08b6227@mail.gmail.com>
+Date: Mon, 2 Nov 2009 09:32:15 +0100
+
+It depends. If don't want the "default" index page to be generated,
+then yes. If you want a new page (e.g. attis_index.html) beside the
+default index, then you can write print_attis_page+write_attis_page
+methods and modify the `write_all` method so that it will print that
+as well.

@@ -1,0 +1,21 @@
+Author: Attila Nagy
+Subject: Body parsing - the what
+Tag: post syntax
+Tag: prop
+Message-Id: <b29f917d0905090005u5caf64b0n6512affb6275ec6b@mail.gmail.com>
+Parent: <b29f917d0905021657p2cd16492p34c37a593d40776b@mail.gmail.com>
+Date: Sat, 9 May 2009 09:05:37 +0200
+
+== The When ==
+
+An important addition to what should happen is when exactly should it happen.
+That is, besides specifying the exact steps that must take place during body
+parsing, we also have to decide when to invoke the processing.
+
+Candidates (the possible times of invocation):
+* during creation of PostDB, when post has been loaded from the disk
+* during downloading from the IMAP server
+* during generation of HTML output
+
+Note that the first two can be handled at the same time if we do the parsing
+during the init of the Post objects.

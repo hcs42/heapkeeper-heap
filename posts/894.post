@@ -1,0 +1,20 @@
+Author: Csaba Hoch
+Subject: Ideas sleeping in the heap
+Tag: cleanup
+Tag: meta
+Tag: reviewed
+Message-Id: <4AF70293.1010403@gmail.com>
+Date: Sun, 08 Nov 2009 18:40:35 +0100
+
+There are quite a few ideas I think that we have already written down
+and sent to the heap but cannot find them. (I sent a new post about
+how to prevent this [1], but the current post is about what to do with
+the ones we already have.)
+
+If I find one that is interesting in Hungarian, I will probably send
+its main idea to Hh as a new email. If I find one that is in English,
+I will probably update its terminology and tag it with Hh. If the
+thread is related to our current issues, I may sent a reminder email
+to UMS that is a reply to a post in the thread.
+
+[1] heap://hh/893

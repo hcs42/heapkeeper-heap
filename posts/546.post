@@ -1,0 +1,129 @@
+Author: Csaba Hoch
+Subject: Managing several heaps in Heapkeeper
+Tag: prop
+Tag: reviewed
+Message-Id: <4A98290A.2080002@gmail.com>
+Parent: <b29f917d0908281038n7a89f4ceh3bd9066edabd3e2@mail.gmail.com>
+Date: Fri, 28 Aug 2009 20:59:22 +0200
+
+== Idea ==
+
+> What you propose is a very simple and powerful approach, and I like
+> it. However, it seems a step away from OO.
+> 
+> When I studied Java, a book I read had ideas on good OO design. One of
+> them was "if you can think about it as an entity, make it an object;
+> if you can think about it as a kind of entity, make it a class".
+> 
+> A "heap" seems to be a kind of entity, so it should have its
+> corresponding class. Of course, you can create a `Heap` class acting
+> as an adaptor to this scheme. This class would be useful as a natural
+> container for actions that affect a single heap, e.g. it could mirror
+> `PostDB`'s methods for retrieving threads, cycles, posts in a
+> `PostSet`... Does not seem very useful.
+
+When I first though about having multiple heaps, I thought about
+having a Heap class. But as you say, it would be a lot of work for
+nothing. It would also make moving posts, caching, lazy data
+structures, etc. harder.
+
+=== Terminology ===
+
+>> The name of the heap will be a string. The identifier of posts inside
+>> the heap would be similar to what we now call "heapid". I would rather
+>> call it "post name". "heapid" would confuse users, who would think
+>> that it identifies the heap. I would call the pair of heap name and
+>> post name "post id": that would be an unambiguous identifier of a
+>> post, even across heaps. If you know better name than "post name", I
+>> would be glad to hear it.
+> 
+> An example: for the post created from "<postdir>/ums/1234.post", the
+> "post name" could be "ums/1234".
+
+Well, it would rather be a tuple: ("ums", "1234"). It's easier to
+handle tuples than manipulate strings.
+
+> The part before the "/" would be called "heapid",
+
+I would call it "heap name". Do you prefer "heapid"?
+
+> the part after it would be "postid".
+
+Is it "post id" or "postid"?
+
+== Storage ==
+
+> You decided to store posts of distinct heaps in different
+> subdirectories of the post directory. There is an alternative, namely,
+> storing all the post files in a single directory, naming them in a
+> "<heapid><separator><postid>.post" syntax, where <separator> is
+> commonly "_". This is what I would have done, simply for simplicity.
+
+The separator of my proposal is the "/" character :)
+
+== Example: moving a post ==
+
+>> This way moving the post will be easy:
+> 
+> Moving a single post will be easy, but if you move just one, its
+> connections to other posts will break.
+
+No, they won't. In my previous post I described what steps should we
+perform to prevent breaking connections. Among them I wrote:
+
+>> - All references in the other posts to post id of the moved post
+>>   have to be modified so that they point to the new post id. (The
+>>   references to its message id does not have to be changed.)
+
+That means we won't break connections if we do this.
+
+We will of course make an `mv` command that moves any set of posts to
+another heap without breaking anything.
+
+One thing I have to emphasize though: only those connections will not
+be broken that are understood by Hk. So parent-child relations won't
+be, and I will implement the "Reference" post attribute soon. Body
+parsing would provide us with Hk's understanding of all references
+made in the body of the post. Until then, we have to find a way to
+deal with those. Maybe we should have special expressions like
+"post://<post>".
+
+> Probably it'll be necessary to include a ready-made command for
+> moving complete threads between heaps.
+
+It won't be necessary. We should of course make an mvR command, but
+only for the sake of convenience:
+
+    >>> mvR(rootpost, 'other_heap')
+
+> The nice thing is that most of the "Parent:" header lines use "real"
+> "Message-Id"s from the original e-mails. This is nice because this
+> way, moved messages "find each other" automatically.
+
+I had the temptation to give all posts a message id... But it would
+not be right. (Or at least I have not find the way to do it right.)
+
+== Current heap ==
+
+> How about having the empty string, '', as a special heapid?
+
+That's a good idea.
+
+> We could have a current heap if you'd like to.
+
+OK.
+
+> This could even be used with the previous "unnamed heap" idea:
+> after a `select('hh')` call, a `p('0')` would be equivalent to
+> `p(('ums, '0'))`, so the "default heap" would be, by default, the
+> unnamed heap, but a new default could be selected by a `select()`
+> call.
+
+I would rather write `select('')` for that purpose :)
+
+>> The only thing I don't know whether it should be better to have a
+>> current heap in hkshell or in PostDB. [...] Opinions?
+> 
+> I'd implement it in hkshell. hklib should only see the tuples.
+
+OK.

@@ -1,0 +1,11 @@
+Author: Csaba Hoch
+Subject: Free-text search
+Tag: feature
+Message-Id: <4B3B285C.3040604@gmail.com>
+Parent: <4B32849A.6060507@gmail.com>
+Date: Wed, 30 Dec 2009 11:15:56 +0100
+
+I made a basic implementation. I plan to rewrite it to conform to what
+I wrote in this thread, but I needed it and it is good enough for now.
+
+http://github.com/hcs42/heapkeeper/commit/f9be5f57619d4e96fb1a2c145d3ad2149fa2eaa9

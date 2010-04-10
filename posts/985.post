@@ -1,0 +1,17 @@
+Author: Csaba Hoch
+Subject: Gravatar profile pictures in HTML pages
+Tag: idea
+Tag: prop
+Message-Id: <4ddb9e5b0912061112m2acb57banc8c2b963bd1d0a77@mail.gmail.com>
+Date: Sun, 6 Dec 2009 20:12:06 +0100
+
+[effort 4]
+
+We could have profile pictures in the generated HTML pages. The
+easiest way would be to use Gravatar pictures.
+
+It would be nice if the user would not have to be online to be able to
+use the Gratavar pictures. So I propose a command that
+downloads/updates Gravatar pictures of the authors and stores them
+locally, and the generator commands should just use those locally
+stored image files.

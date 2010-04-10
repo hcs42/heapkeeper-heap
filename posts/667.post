@@ -1,0 +1,9 @@
+Author: Attila Nagy
+Subject: Testing on Windows
+Tag: hk0.3
+Message-Id: <b29f917d0910161006m55f881en8ab8d91e4ed0a90d@mail.gmail.com>
+Parent: <4ddb9e5b0908021155r52a68bb1m146fbb9e74aa0b07@mail.gmail.com>
+Date: Fri, 16 Oct 2009 19:06:09 +0200
+
+How about making it a rule to always do a test on Windows before
+releasing a version?

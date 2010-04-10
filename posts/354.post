@@ -1,0 +1,35 @@
+Author: Attila Nagy
+Subject: Post syntax matched to user needs
+Tag: post syntax
+Tag: prop
+Message-Id: <20090530224824.GB7993@lepke>
+Parent: <4A205129.4000405@gmail.com>
+Date: Sun, 31 May 2009 00:48:24 +0200
+
+> I develop Hk for people who do have 5 minutes to spend on a syntax
+> format tutorial and not for people who don't care. It is not an
+> enterprise software, after all, but an open source project. I think we
+> should follow the first model that I described. For example, we should
+> not make Hk support all possible itemizations -- it is enough if it
+> supports the itemizations we use. It others want to use Hk, they can
+> use those. The alternative would be even worse: everybody can use the
+> itemizations they like and hope that Hk will process it well.
+
+I imagine Hk's role in a slightly different way. I think it should aim
+to be a drop-in replacement for a traditional mailing list. The fact
+that it has an editable archive and a nice and usable HTML output
+should not affect the way people write emails to a list. People who
+just write to a list to ask a question from the members, and couldn't
+care less about the maintainers and the archive, will be annoyed when
+faced the fact that this list is different, and you can't follow your
+customs when posting here.
+
+I therefore propose that Heapkeeper should have alternate syntaxes for
+post bodies. For those heaps that want to take advantage of all
+advanced features, all the syntax described up to now would be in
+effect, including bracket-delimited metas and advanced itemizations.
+Where users demand a traditional mailing list behavior, all body
+parsing could be turned off, maybe with the exception of turning URLs
+into links. There could also be an intermediate level, where all metas
+would work, but with a harder-to-misuse notation, which could be the
+old triple-angle-bracket format.

@@ -1,0 +1,86 @@
+Author: Attila Nagy
+Subject: Itemization
+Tag: post syntax
+Tag: prop
+Message-Id: <20090529103206.8fc6a32f.nagy.attila.1984@gmail.com>
+Parent: <4A1F7F98.5010907@gmail.com>
+Date: Fri, 29 May 2009 10:32:06 +0200
+
+> Just to annoy you:
+> 
+>       Items:[-]
+> ...
+>       e. I wanted to write a Python function. A good friend of mine told
+>       me the name of the function should be g, but I think it should be
+>       f. I think though g is better.
+
+Yes. So it's either your solution with the indentation, or once again
+we ask the user to be careful, and put things like that within single
+or double quotes.
+
+>> But what if one needs structures like this:
+>> 
+>>     Head:[-]
+>>     a. Apple
+>>     aa. Green apple
+>>     ab. Red apple
+>>     b. Banana
+>>     ba. Green banana
+>>     bb. Yellow banana
+>>     bba. Yellow banana with brown spots
+>> 
+>> Lawyers like to use this kind of multi-level itemization with
+>> multi-character letter marking.
+> 
+> Oh, I haven't thought about multiple levels. It would be very
+> convenient to write stuff like this:
+> 
+>     My favourite things:[-]
+>     - Authors:
+>         - Asimov
+>         - Dawkins
+>     - Sitcoms:
+>         - Two and a half men
+>         - Friends
+
+Indentation is one way. Another would be multiple itemization signs,
+as MediaWiki uses it, and I think I'd use this one, purely out of
+habit.
+
+ My favourite things:[-]
+ * entertainment
+ ** reading
+ ** films
+ * programming
+ ** C
+ ** Python
+
+> A possible solution, which I very much dislike:
+> 
+>     My favourite things:[-]
+>     - Authors:[-]
+>         - Asimov
+>         - Dawkins
+>     - Sitcoms:[-]
+>         - Two and a half men
+>         - Friends
+
+Me too.
+
+> I'm confident we can define indentation-based itemizations without
+> having to write more than one `[-]`.
+> 
+>> Other than this, I think we can live with a fixed set of itemization
+>> marks. A sensible set would be [-+*]. Do you think we need others?
+> 
+> I would also like to have numbers.
+
+Good thing you mentioned that. Now ordinary decimal numbers written in
+Arabic numerals are easy to filter out, but it's much more than that.
+First, you have multiple number systems, and even in purely
+Latin-letter cultures, you have Roman numerals, which are not that
+easy to filter out.
+
+So, your use of indentation in all lines after the first is becoming
+increasingly attractive. But the idea of forcing our customs on our
+potential users, however well-founded they are (our customs), is not.

@@ -1,0 +1,89 @@
+Author: Csaba Hoch
+Subject: Convention about expected/real result
+Tag: prop
+Tag: reviewed
+Message-Id: <4AE016ED.3030903@gmail.com>
+Date: Thu, 22 Oct 2009 10:25:17 +0200
+
+I think we should have a convention about whether the expected or real
+result should be written first in the assertions. I'll discuss the two
+possible conventions and than describe my idea.
+
+== Real result first ==
+
+Usually I have been following the "real result first" convention,
+which reads nice when you read the _test code_:
+
+    self.assertTextStructsAreEqual(
+        g.print_post_summary_div(postitem)
+        g.enclose(
+            class_='postsummary',
+            id='post_0',
+            newlines=True,
+            content=expected_header))
+
+It reads like this: if I execute the `print_post_summary_div`
+function, the result should be an enclosed structure where the class
+is "postsummary", the id is "post_0", the new lines are enabled and
+the content is the same as the previously created `expected_header`
+text.
+
+== Expected result first ==
+
+On the other hand, if we read the _test results_ instead of the test
+code, the "expected result first" seems to be better:
+
+The test code:
+
+    self.assertTextStructsAreEqual(
+        g.enclose(
+            class_='postsummary',
+            id='post_0',
+            newlines=True,
+            content=expected_header)),
+        g.print_post_summary_div(postitem)
+
+The test result:
+
+    AssertionError: The following strings should be equal but they are not:
+
+    -<span class="postsummary" id="post_0">
+    +<span class="postsummary" id="post_0"><!-- post 0 -->
+     <span class="author">author0</span>
+     <span class="subject">subject0</span>
+     <span class="button"><a href="thread_0.html"><img src="thread.png" /></a></span>
+     <span class="tags">[tag1, tag2]</span>
+     <span class="index"><a href="thread_0.html#post_0">&lt;0&gt;</a></span>
+    -</span>
+    +</span><!-- post 0 --><!-- postsummary -->
+
+The test result reads nicely because it says "the real result has
+extra comments compared to the expected result".
+
+The order does not really have a significance when reading non-diff
+test results:
+    
+    AssertionError: ['a', 'b'] != ['a']
+
+== Idea ==
+
+I have an idea to have the best of the two worlds. We should write the
+real results first, the unittest module should do the "diff" in the
+other way around!
+
+This way the test code would look like this:
+
+    self.assertEquals(
+        real,
+        expected)
+
+The normal test results would look like this:
+
+    AssertionError: real != expected
+
+The diff test results would look like this:
+
+    AssertionError: The following strings should be equal but they are not:
+
+    -expected
+    +real

@@ -1,0 +1,29 @@
+Author: Csaba Hoch
+Subject: The decreasing significance of ad-hoc tagging
+Tag: conventions
+Message-Id: <4B328479.50203@gmail.com>
+Date: Wed, 23 Dec 2009 21:58:33 +0100
+
+I feel more and more certain that tagging's significance will be
+shrunk if we implement a free-text search engine.
+
+We use tagging for two situations:
+1. We agreed on using some tags that are used intensively to create
+   HTML pages and find our way in the heap: these tags include "hh",
+   "issue", "prop", "reviewed"; and, to a lesser extent, "python",
+   "git", "workflow", "timestat" etc.
+2. Sometimes we use ad-hoc tagging: when writing about encfs, I
+   thought about whether I should add a "linux" tag, a "unix" tag,
+   both of them or neither of them.
+
+This post is strictly about the second kind of tagging; the first one
+has proven its usefulness. After we have implemented free-text search
+[1], it does not seem important to me to continue to add these ad-hoc
+tags. If you want to browse the linux or unix-related threads and
+posts, you will search for "linux unix". Even if we kept ad-hoc
+tagging, I would not trust it as much as search... so it does not make
+sense to keep it.
+
+What do you think?
+
+[1] heap://3713

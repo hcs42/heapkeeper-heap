@@ -1,0 +1,14 @@
+Author: Csaba Hoch
+Subject: hkshell.e raises ugly exception when called on a non-existing post
+Tag: bug
+Tag: reviewed
+Message-Id: <4AD9ED53.3060202@gmail.com>
+Parent: <b29f917d0910170018j126df81ek1729a8b4c754c3b0@mail.gmail.com>
+Date: Sat, 17 Oct 2009 18:14:11 +0200
+
+No it's not, the latest Hk still does that.
+
+(If the problem had been solved on 2009-08-28, I would not have
+written an email on 2009-09-13.)
+
+[open]

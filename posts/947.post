@@ -1,0 +1,21 @@
+Author: Attila Nagy
+Subject: Tidying up my hkrc
+Message-Id: <b29f917d0911182346y7555580at8d563a29660b4935@mail.gmail.com>
+Parent: <4AE00978.1070009@gmail.com>
+Date: Thu, 19 Nov 2009 08:46:33 +0100
+
+>> Then we could have
+>>
+>>     ps_python = ps_all.collect.has_tag(['python', 'Python'])
+>>
+>> which is cleaner and more simple than our previous solutions.
+>
+> Nice! Go ahead.
+
+OK, it has been implemented and pushed (it used to be in a topic
+branch, but now it is integrated in the main branch.
+
+However, I think not all remaining code has been updated to use this.
+It should be fairly easy to do this: just find and disable all
+remaining `has_tag` functions (I think there are 2 of them.), and fix
+whatever is broken by this.

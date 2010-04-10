@@ -1,0 +1,25 @@
+Author: Csaba Hoch
+Subject: Cleanup; which tags to use for discussing the cleanup
+Tag: cleanup
+Tag: prop
+Tag: reviewed
+Message-Id: <4AF7025F.6030707@gmail.com>
+Date: Sun, 08 Nov 2009 18:39:43 +0100
+
+It seems to me that more and more often we find ourselves in the
+situation that we talked about something on the heap but we can't find
+it. We should do a cleanup. My proposal is that I will do the posts
+that are Hk-related (with or without "hh" tag), and Attis will do the
+rest.
+
+Probably questions about conventions or concrete problems will arise.
+(The first one: [1]) The questions about conventions should be posted
+with "heap-conventions" tag to Hh. If they are specifically about Hh,
+they should be posted with "hh-conventions" tag. If they are about a
+specific set of posts and not about general rules that could be
+applied in the future, they should be tagged with "meta". We could
+also add the tag "cleanup" for all related threads.
+
+What do you think?
+
+[1] heap://3246

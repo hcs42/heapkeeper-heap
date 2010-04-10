@@ -1,0 +1,10 @@
+Author: Attila Nagy
+Subject: Comments in commit messages
+Message-Id: <b29f917d0910310706gc23339bk9d20474dbda26fdd@mail.gmail.com>
+Parent: <4AEC2D48.1000201@gmail.com>
+Date: Sat, 31 Oct 2009 15:06:39 +0100
+
+> I didn't even do that. I just modified the existing test case of
+> `enew` so that it tests the new arguments.
+
+Sorry, maybe `git diff` fooled me. I thought it was all new.

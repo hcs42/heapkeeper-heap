@@ -1,0 +1,25 @@
+Author: Csaba Hoch
+Subject: Web-interactive Heap on GAE
+Tag: idea
+Message-Id: <4A17AAD2.4040500@gmail.com>
+Parent: <4A17AA2D.2020908@gmail.com>
+Date: Sat, 23 May 2009 09:50:42 +0200
+
+Just to clarify:
+
+>>>>> Wikipedia says:
+>>>>> 
+>>>>>    Time per request = 30 sec
+>>>>> 
+>>>>> I thought it meant I had to wait 30 seconds after a request to make
+>>>>> another one.
+>>>>> 
+>>>>> But Google says this [1]:
+>>>>> 
+>>>>>    Free Default Quota / Daily Limit: 1300000 requests (15 req/sec)
+>>>>>    Free Default Quota / Maximum rate: 7400 requests (123 req/sec)
+
+That is:
+
+    Wikipedia says: 1/30 req/sec
+    Google says: 15 req/sec

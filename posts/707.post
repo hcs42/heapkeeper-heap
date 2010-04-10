@@ -1,0 +1,27 @@
+Author: Csaba Hoch
+Subject: Docstring tracking tool
+Tag: idea
+Message-Id: <4ADB56BD.6010503@gmail.com>
+Parent: <b29f917d0910181050g1ecf409p750055dba85d373e@mail.gmail.com>
+Date: Sun, 18 Oct 2009 19:56:13 +0200
+
+>> But we (I) should still
+> 
+> We/I/Gaia :D
+
+:)))
+
+> Maybe we could have a documentation weekend sometime.
+
+Sorting the documentation is a boring activity, so I think it should
+be done by a tired person who does not feel like doing more active
+things like working on new features or debugging. We should not waste
+weekends for sorting out hklib documentation :)
+
+But actually it's not that big a deal now. hklib.Post is partly ready,
+and hklib.Generator will be deleted. So there is only a few classes
+whose documentation should be updated. (All other documentation is
+fine.)
+
+Or maybe I miss something and you mean something else by
+"documentation weekend".

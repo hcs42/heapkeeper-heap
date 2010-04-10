@@ -1,0 +1,65 @@
+Author: Csaba Hoch
+Subject: _bugfix and _hcs-bugfix branches
+Tag: git
+Tag: workflow
+Message-Id: <4AE2CCD2.4010001@gmail.com>
+Date: Sat, 24 Oct 2009 11:45:54 +0200
+
+Previously you made a bugfix commit and rebased my branch [1] onto it
+[2]. First I was happy that you did the rebase for me, but now I think
+it was not a good idea. Now the commit looks like this (older commits
+first):
+
+- Attis's bugfix
+- Csabi's commit 1
+- ...
+- Csabi's commit n
+- Csabi's correction proposal to Attis's bugfix 1
+- Csabi's correction proposal to Attis's bugfix 2
+
+But I'm afraid of making new commits, since that would mess up this
+branch even more.
+
+It would have been better if we had two branches, _bugfix and _hcs.
+Then I could make my new commits, and I would not need the separate
+_newgen branch:
+
+_bugfix:
+    - Attis's bugfix
+    - Csabi's correction proposal to Attis's bugfix 1
+    - Csabi's correction proposal to Attis's bugfix 2
+_hcs:
+    - Csabi's commit 1
+    - ...
+    - Csabi's commit n
+    - Csabi's new commit 1
+    - ...
+    - Csabi's new commit n
+
+As Linus said, it is not good practice for Linux developers to pull in
+random points of Linus's master branch. I would say, regarding our
+workflow, that it is not good practice to rebase random points of
+other's branches into your branches.
+
+Previously we talked about every branch having one person who is
+responsible for the branch (unfortunately this discussion was in
+Hungarian, and outside of UMS/hh).
+
+This branch is no neither mine, nor yours. Would you agree that we
+should not have branches like this? It is unclear whose responsibility
+is to clean up this branch and merge into the master.
+
+If you agree, I will take it apart: I will make a separate
+_star-bugfix and a _hcs branch.
+
+I was desperate to make a concrete goal and concrete rules about how
+the development would be easier, but I haven't managed to reach a
+conclusion.
+
+[1] If a branch is "my branch", it means that "it contains my changes
+    and other people's corrections about my changes, and when everyone
+    seems to be satisfied with it, I should merge/rebase it into my
+    master".
+[2] heap://hh/714
+[3] heap://hh/765
+[4] heap://3035

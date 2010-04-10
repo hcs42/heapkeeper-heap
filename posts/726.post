@@ -1,0 +1,63 @@
+Author: Csaba Hoch
+Subject: Let's provide an option to turn off tracebacks!
+Tag: idea
+Message-Id: <4ADECF3D.5080801@gmail.com>
+Parent: <b29f917d0910200930o71c14142k3b3759d37552b8dd@mail.gmail.com>
+Date: Wed, 21 Oct 2009 11:07:09 +0200
+
+> There is one more thing that might strike others as a strong sign of
+> immaturity: exceptions.
+
+True.
+
+> Due to the way we implemented an interactive interface in Python,
+> the user is bound to encounter Python tracebacks quite often,
+
+We could catch them if we wanted to. But currently we don't. (The
+project is immature :) )
+
+> and these may be confusing to the casual user.
+
+True.
+
+> Even if the exception message is sensible and helpful, it is lost in
+> the jumble.
+
+You don't know in advance which line of the stack trace helps.
+Sometimes it sits in the middle.
+
+> A page I found [1] says to turn off tracebacks, just set
+> `sys.tracebacklimit` to 0.
+
+Interesting.
+
+But I don't want to do that. Even if users don't want to see
+exceptions, they are useful for developers if they are sent to them.
+What I want to do at some point is to write the uncaught exceptions
+into an error log file. When a "casual" users got errors and do not
+understand why, they can look at the error log file, and if they don't
+understand even that, they can send it to us and ask.
+
+We should not throw away any information regarding the exception. It
+is OK to turn off printing all the stack trace only if we make sure it
+gets written somewhere else. But in that case, we should not use
+"sys.tracebacklimit = 0", but instead catch the exception, write it to
+the error log and print out something sensible to the user (e.g. "An
+error occured: 'x does not have attribute y'. See errorlog.23 for the
+complete stack trace.").
+
+I don't have any motivation to do that now, I like the stack traces
+being printed on the console [1]. The only problem is that when users
+see them, they feel that the database may get corrupted, which
+fortunately cannot be done without manipulating the database itself.
+(I.e. you cannot corrupt the database by using post sets, generators,
+the shell etc. incorrectly.) So this could motivate us to implement
+the user friendly error message and the error log files, and turn them
+on by default, with the possibility of printing stack traces to the
+console instead.
+
+All that said: it is _our_ project, so if you want to do it, go ahead,
+and make an option for this.
+
+[1] I don't like _when_ they are printed, but I like _the fact_ that
+they are printed :)

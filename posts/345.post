@@ -1,0 +1,77 @@
+Author: Csaba Hoch
+Subject: What the users need
+Tag: discussion
+Tag: post syntax
+Message-Id: <4A205129.4000405@gmail.com>
+Parent: <20090529103206.8fc6a32f.nagy.attila.1984@gmail.com>
+Date: Fri, 29 May 2009 23:18:33 +0200
+
+[todo split thread]
+
+I am just composing two posts about how to make it easier for users to
+learn the post syntax [1][2]. Here I will talk about what should be
+the philosophy behind the post syntax format.
+
+I think we should acknowledge these "observations":[-]
+- First law of syntax formats: 80% of the people don't care.
+- Second law of syntax formats: 19% of the people don't want to spend
+  initially more than 5 minutes learning it.
+
+> So, your use of indentation in all lines after the first is becoming
+> increasingly attractive. But the idea of forcing our customs on our
+> potential users, however well-founded they are (our customs), is
+> not.
+
+We should talk about what we think the users need, especially with
+regards to the post syntax. There are two obvious ways we can build
+the post syntax and the post parser.
+
+== In a simple and well-defined way ==
+
+If the post syntax is simple, it will be easy to learn. If it is also
+well-defined, people will look at a post and see in a moment exactly
+what page will be generated from that. Most wiki syntax formats (e.g.
+MediaWiki) use this principle. This solution is conservative: if it is
+not sure what the user wants, it considers the post incorrect. If
+people are not familiar with the format, at first it may seem
+restrictive and non-intuitive to them; but after spending a few
+minutes reading the post syntax tutorial page (which should be short),
+it will be trivial. Hk's source code (& test & documentation) will be
+nice, clean, easy to modify and understand.
+
+As time goes, of course, new features may be introduced with care.
+
+== In a heuristic way ==
+
+Another way is to build a heuristic parser. It will try to understand
+what the user wants. Its code and documentation is huge. It does not
+have a comprehensive philosophy and it is hard to understand. It is
+hard to maintain, especially with regards to backward compatibility.
+The programmers who use it will hate it -- how many programmers
+actually like using word processors? [3] Maybe it is better for people
+who don't care and don't know what they are doing anyway, and who
+won't even spend 5 minutes on reading the tutorial to the syntax.
+
+This is also how Google works: you don't have to have an idea how it
+works: you just type words and go through the results that may or may
+not be what you wanted. In the field of Internet search we don't have
+a better alternative unfortunately; we don't have massive semantic
+information that would allow us to find exactly the information.
+
+== Conclusion ==
+
+I develop Hk for people who do have 5 minutes to spend on a syntax
+format tutorial and not for people who don't care. It is not an
+enterprise software, after all, but an open source project. I think we
+should follow the first model that I described. For example, we should
+not make Hk support all possible itemizations -- it is enough if it
+supports the itemizations we use. It others want to use Hk, they can
+use those. The alternative would be even worse: everybody can use the
+itemizations they like and hope that Hk will process it well.
+
+[1] heap://2080
+[2] heap://2081
+[3] I dislike MS Office, OpenOffice and Google Docs. They all try to
+    find out what I want to do and they all fail and make horrible
+    things when I for example hit "backspace" in the beginning of a
+    line or paragraph.

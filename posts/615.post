@@ -1,0 +1,61 @@
+Author: Csaba Hoch
+Subject: SHA1 as post id
+Tag: discussion
+Message-Id: <4AC4ECF1.8010409@gmail.com>
+Parent: <b29f917d0910010609m28268789rfbd86ee03302d32b@mail.gmail.com>
+Date: Thu, 01 Oct 2009 19:54:57 +0200
+
+First terminology: currently we have heapids and message ids. A heapid
+is usually an integer, or an integer prefixed with something. Every
+post has a heapid. Message ids are a bit like email addressed, they
+have @ in them. Only posts that used to be emails have them. They are
+both supposed to be unique within a heap.
+
+Heapids are the primary ids of post in Heapkeeper -- mainly because
+all posts have them. Message ids are used only to prevent downloading
+emails that already have been downloaded.
+
+(We are discussing using different terminology in another thread, but
+I think let's stick with our current terminology in this thread.)
+
+>> Do we want to allow shortening UUIDs, as far as they are unique?
+> 
+> I think we discussed this on Skype. If I remember correctly, we
+> dismissed the whole idea of using any kind of hash or UUID as postids,
+> on the basis that the IDs used by mailing agents are pretty random
+> (and therefore very probably unique) as they are.
+
+I don't know what you mean by "postid" here; you mean either heapid or
+message id. I have never wanted to use hash or UUID instead of the
+message id, because that would undermine their goal: keeping track of
+downloaded emails. On the other hand, I _was_ thinking about using
+hash or UUID instead of heapid. But on Skype, we dismissed it because
+it would be inconvenient:
+- heapids are much shorter than either a SHA-1 hashes or a UUIDs
+- UUIDs are hard to shorten
+- SHA-1 is easier to shorten, but it has philosophical problems: it is
+  not very nice to stick we the SHA-1 of the original version of the
+  post, even though it has been modified.
+
+> However, I think the question of shortening these remained open. Well,
+> of course, we could quite easily enable this, but would it really be
+> useful?
+
+I don't think it remained open. We cannot shorten heapids, they are
+numbers starting from one. We could shorten message ids, I guess, but
+there is no point in shortening them: for I don't think they ever
+should be used by humans. Message ids are just for the email
+downloader to track which emails have already been downloaded.
+
+> In the current post file format, we use the postids only to link
+> parent and child posts together, but even here we can optionally use
+> the heapid instead.
+
+We do use them optionally now. If the "Parent" attribute of a post is
+"3", Hk will find post 3 as its parent.
+
+> So I guess things are pretty OK. Anyone for Scrabble later? [1]
+> 
+> [1] http://xkcd.com/470/
+
+:)))

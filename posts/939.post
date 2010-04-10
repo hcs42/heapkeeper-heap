@@ -1,0 +1,12 @@
+Author: Attila Nagy
+Subject: Test case for sorted_list may be insufficient
+Tag: issue
+Tag: test
+Message-Id: <b29f917d0911150233l5f910606gee4512aa79c2a2e1@mail.gmail.com>
+Date: Sun, 15 Nov 2009 11:33:14 +0100
+
+[!todo break thread]
+
+I think the test case `Test_PostSet__threads.test_sorted_list` is a no-op.
+
+[open]

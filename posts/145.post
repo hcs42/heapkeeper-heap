@@ -1,0 +1,17 @@
+Author: Attila Nagy
+Subject: Should the "reviewed" tag be part of the infrastructure?
+Tag: idea
+Tag: reviewed
+Message-Id: <b29f917d0905020342x223bbe37k2d81c63124b0ab47@mail.gmail.com>
+Parent: <49F77528.50807@gmail.com>
+Date: Sat, 2 May 2009 12:42:16 +0200
+
+> 2. We customize our heap to handle it specially.
+
+> For the moment, I think, we should step into stage 2 (which would
+> require custom postsummary-customization that I plan anyway).
+
+What do you mean?
+
+I already stepped into this stage. My hkrc removes all reviewed posts
+from "tidy" and "todo" sections.

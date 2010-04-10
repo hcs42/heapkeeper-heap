@@ -1,0 +1,25 @@
+Author: Attila Nagy
+Subject: heapia command for re-reading mail database or splitting posts
+Tag: idea
+Tag: reviewed
+Message-Id: <b29f917d0904190550k1955c4a5pff28501476a40ff@mail.gmail.com>
+Parent: <49E9C1B5.5040302@gmail.com>
+Date: Sun, 19 Apr 2009 14:50:31 +0200
+
+> Why would you say e(124)? Why would you get a nasty exception?
+
+In this situation, you have a post (123), which contains two topics. 125 is an
+aswer to the first, the more important, so I'll leave the "125 is a reply to
+123" relationship in place. 124 is the answer to the "side topic" of 123, so I
+split the part of 123 which deals with this into a separate post (x42), and
+modify 124 (hence e(124) ) to have this new post as its parent.
+
+>> This would also spare the editor the burden of keeping track of the x-numbers.
+>
+> I don't understand this.
+
+Now, when we split a post, we give the new post file an ID, which is the
+letter 'x' followed by a number. If one wants to create a new post file, they
+have to look at the mail directory listing to find the highest number after
+the 'x' in mail files already present. This cannot be done from within heapia
+as of now. This is one part of the problem I aim to solve.

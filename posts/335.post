@@ -1,0 +1,75 @@
+Author: Csaba Hoch
+Subject: Itemization
+Tag: post syntax
+Tag: prop
+Message-Id: <4A1D8A6E.7000909@gmail.com>
+Parent: <4A1AFFC8.40609@gmail.com>
+Date: Wed, 27 May 2009 20:46:06 +0200
+
+>> I like your solution. It really is elegant, although at first I wanted
+>> to argue against it, since it is somewhat arteficial, ie. the post
+>> author must pay attention.
+>>
+>> An addition: itemizations look neat with the non-first lines of an
+>> item being indented by 2. Emacs or Vim can create these automatically,
+>> but we should nonetheless recognize multiline items even if the
+>> non-first lines are not indented, as it would make the life of those
+>> using more simplistic editors unconfortable.
+>>
+>> So I think this would also have to be valid:
+>>
+>>    My favourite book writers:[-]
+>>    - Isaac Asimov: he was born in the Soviet Union, but his family
+>>    emigrated to the US when he was 3.
+>>    - Richard Dawkins: he was born in Kenya as a son of British
+>>    parents. They returned to England when he was 8.
+> 
+> OK.
+
+I gave more thought to this. The rules of itemization won't be
+trivial.
+
+Have a look at these examples (I don't say we have to handle all as
+correct itemization):
+
+    Items:[-]
+    a bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    b bla bla bla
+    c bla bla bla bla bla bla bla bla bla bla bla bla bla bla there is
+    a person outside
+
+    Items:[-]
+    + bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    - bla bla bla
+    * bla bla bla
+
+    Items:[-]
+    - bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    - bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    a. bla bla bla
+    b. bla bla bla
+
+    Items:[-]
+    -> bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+    -> bla bla bla
+
+    Items:[-]
+    good: Linux
+    bad: Windows
+    ugly: guess...
+
+Would we allow only a well-defined set of itemization marks, or do we
+want to have a general rule?
+
+These general rules were in my mind that could determine the type of a
+line:[-]
+1. If a line is empty (or contains only whitespace), the itemization
+   is finised.
+2. Otherwise, if the line starts with a whitespace, its first word
+   (`[^ \t]\+`) is the itemization mark, the rest is text.
+3. Otherwise it is text that in the continuation of the previous line.
+
+If you want to accept the example you said you wanted to accept (which
+makes sense, I have to admit), then we have to find other rules. They
+will be either restrictive (e.g. only a set of itemization marks are
+allowed), or quite complicated.

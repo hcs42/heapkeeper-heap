@@ -1,0 +1,32 @@
+Author: Csaba Hoch
+Subject: X for iterator
+Tag: prop
+Tag: reviewed
+Message-Id: <4AF3C5A6.1010700@gmail.com>
+Date: Fri, 06 Nov 2009 07:43:50 +0100
+
+I use the prefix `x` to denote that a variable is an iterator (e.g.
+"xpostitems"). It is important to be noted, because there are some
+things that cannot be done with iterators that can be done with
+lists/sets. The most important difference is that they can be iterated
+only once:
+
+    for postitem in xpostitems: # ok
+        print postitem
+    for postitem in xpostitems: # problem
+        print postitem
+
+So basically iterators are a disposable collection type.
+
+For the sake of completeness, you can make lists from iterators in
+which case you can use them without this restriction:
+
+    postitems = list(xpostitems)
+    for postitem in postitems: # ok
+        print postitem
+    for postitem in postitems: # ok
+        print postitem
+
+The new Generator uses iterators for customizing the post items, so it
+may be worth to have a look at them:
+http://docs.python.org/library/stdtypes.html#iterator-types

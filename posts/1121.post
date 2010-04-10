@@ -1,0 +1,166 @@
+Author: Attila Nagy
+Subject: Email parsing problem
+Tag: issue
+Message-Id: <b29f917d1002091448o5423cf17m5f2bbaf7f3803631@mail.gmail.com>
+Parent: <4ddb9e5b1002091025u73da7c4dte199d86a7097102c@mail.gmail.com>
+Date: Tue, 9 Feb 2010 23:48:53 +0100
+
+This is how I understand this topic. It is not necessarily the correct
+answer.
+
+I think in the world of MIME/SMTP email, content-encoding and charset
+are two different things.
+
+For example, this is from an email I wrote in Hungarian:
+
+    Content-Type: text/plain; charset=UTF-8
+    Content-Transfer-Encoding: 8bit
+
+This is from an email I wrote in English:
+
+    Content-Type: text/plain; charset=ISO-8859-1
+
+(`Content-Transfer-Encoding` is omitted, so it is `7bit`.)
+
+Charset and encoding refer to two different layers of the stack. Let's
+see what this means if we want to send this Hungarian sentence:
+
+    Szép időnk van.
+
+Note: there are two characters in this sentence that are not in the
+lower 128 chars of ISO-8859-1 (that is, which are not in standard
+ASCII). The first (the accented e) is a fairly common character, e.g.
+French also has this, and therefore, it is part of the higher 128
+characters of ISO-8859-1 (a.k.a. Latin-1). (Latin-1 is a charset which
+covers the most widely spoken European languages [1].) The second, the
+o with a double comma accent is a character specific to Hungarian. It
+is therefore not part of ISO-8859-1, but part of ISO-8859-2. Of
+course, all these characters are part of Unicode Plane 0 (the
+so-called Base Multilingual Plane [2]).
+
+From this it follows that this sentence can be correctly represented
+either in Unicode or in Latin-2. Unicode is expressed in a family of
+different "encodings", which would be a confusing word to use, since
+this concept is called a "charset" in MIME. So, Unicode is expressed
+in several different charsets, of which three are widely used: UTF-16,
+UTF-8 and UTF-7. Of these, UTF-8 is by far the most common. UTF-7 is a
+strange beast, and no email in my corpus of 5.5k messages uses it.
+UTF-16 is used by Microsoft Notepad, for example, when asked for;
+Microsoft also uses it in PE (EXE, DLL etc.) files, and some others.
+
+If we represent our sentence in UTF-8 and Latin-2, this is how it
+would look like in a hexdump:
+
+    53 7a c3 a9 70 20 69 64 c5 91 6e 6b 20 76 61 6e 2e  |Sz..p id..nk van.|
+
+If we represent it in Latin-2, here's how it looks like:
+
+    53 7a e9 70 20 69 64 f5 6e 6b 20 76 61 6e 2e  |Sz.p id.nk van.|
+
+And this is the "content" that we'll encode in the next step using a
+method represented by a possible value of `Content-Transfer-Encoding`.
+
+`7bit` is the default encoding. It is quite restrictive, mainly for
+historical reasons, but it's guaranteed to work anywhere. However, it
+is impossible to transmit content where not all octets are smaller
+than 128, i.e. where bit 7 is not 0. In hex, this translates to the
+first digit being less than 8. It is easy to see that our content
+can't be transmitted using the `7bit` encoding. [3]
+
+`8bit` is quite simple, since it seems to do nothing. It represents a
+sequence of octets as -- the same sequence of octets. But there's a catch:
+not every sequence can be encoded in `8bit`. The limitations are not
+as harsh as with `7bit`: now all octets may be present, but lines may
+not be longer than 993 characters. That means that there can't be more
+than 993 octets between two neighboring "0x0D 0x0A" octet pairs (that
+is "CR LF", of course, or "\r\n" for C-ists). Of course you can't just
+ask a PNG file to respect that, but, purely by chance, many binary
+files may be sent using `8bit`.
+
+`binary` is total freedom: any octet sequence is represented as
+itself, just like with `8bit`, and every octet sequence may be
+encoded.
+
+It is easy to remember that in some cases the charset, while in other
+cases, the encoding said "no" to certain characters. This means that
+not every combination will handle every content. Let's see some
+examples.
+
+
+
+    Content | Charset | Encoding | Result
+   ------------------------------------------------------------
+    fridge  | latin1  | 7bit     | OK
+    fridge  | latin1  | 8bit     | OK
+    fridge  | latin1  | base64   | OK
+    fridge  | latin2  | 7bit     | OK
+    fridge  | latin2  | 8bit     | OK
+    fridge  | latin2  | base64   | OK
+    fridge  | utf-8   | 7bit     | OK [4]
+    fridge  | utf-8   | 8bit     | OK
+    fridge  | utf-8   | base64   | OK
+    hűtő    | latin1  | 7bit     | Charset error
+    hűtő    | latin1  | 8bit     | Charset error
+    hűtő    | latin1  | base64   | Charset error
+    hűtő    | latin2  | 7bit     | Encoding error
+    hűtő    | latin2  | 8bit     | OK
+    hűtő    | latin2  | base64   | OK
+    hűtő    | utf-8   | 7bit     | Encoding error
+    hűtő    | utf-8   | 8bit     | OK
+    hűtő    | utf-8   | base64   | OK
+    冰箱    | latin1  | 7bit     | Charset error
+    冰箱    | latin1  | 8bit     | Charset error
+    冰箱    | latin1  | base64   | Charset error
+    冰箱    | latin2  | 7bit     | Charset error
+    冰箱    | latin2  | 8bit     | Charset error
+    冰箱    | latin2  | base64   | Charset error
+    冰箱    | utf-8   | 7bit     | Encoding error
+    冰箱    | utf-8   | 8bit     | OK
+    冰箱    | utf-8   | base64   | OK
+
+The conclusion of this table is that the farther a writing system is
+from English, the fewer charset/encoding combinations will work.
+
+Now I'll try to answer your questions:
+
+> Why do you think they should not give a
+> warning?
+
+They should not give warnings because they are perfectly legal. See
+e.g. the original of heap://173 or heap://1984.
+
+> If something has 8bit encoding, is it latin1?
+
+If the encoding is 8bit, the charset may be anything. We have to
+respect the charset declatation of the `Content-Type` header, if it's
+present; but I don't know what it defaults to when it isn't.
+
+To see how `8bit` can be used to "encode" both Latin-2 and UTF-8,
+compare the originals of the previously mentioned heap://173 and
+heap://1984.
+
+> Shouldn't we convert that into UTF-8?
+
+It would be reasonable to convert text in any other charset to
+UTF-8: the heap posts have no way of specifying charset, and frankly,
+I am happy it doesn't. UTF-8 is optimal for our purposes.
+
+
+[1] With some bias, of course.
+[2] This roughly means the first 64k code points of Unicode.  Unicode is
+32-bit. Needless to say, this is a huge space of code points ("code point"
+is Unicodish for "character"), and it is unlikely that all human writing
+systems that ever existed together would have this many characters. The
+"inhabited" part of Unicode is larger than Plane 0, but I think it
+was the aim of the creators that glyphs of all (major?) living scripts
+should fit into this first plane.  Examples of writing systems that were
+banished to Plane 1 are Hungarian runic script and Tengwar.
+[3] I silently dismissed UTF-7 with the reason that it is too awkward.
+It indeed is, to the point that the Internet Mail Consortium warns
+against using it (according to Wikipedia). Still, if we used UTF-7 to
+represent the Hungarian sentence, it could be transmitted in the
+`7bit` encoding.
+[4] This is almost incidental: UTF-8 generally isn't 7-bit safe. But
+it has been constructed so that all ASCII characters are coded to
+themselves, so encoding ordinary English text is an identity
+operation.

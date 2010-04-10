@@ -1,0 +1,37 @@
+Author: Csaba Hoch
+Subject: Wiki-like heap, pseudo posts
+Tag: hh-conventions
+Tag: idea
+Tag: post syntax
+Tag: reviewed
+Message-Id: <49B284FF.8080500@gmail.com>
+Date: Sat, 07 Mar 2009 15:30:23 +0100
+
+This heap could also be an experiment to have a bit more wiki-like
+heap.
+
+In a wiki, a page consists of a wiki page and a discussion page. The
+discussion page is not the strength of the wiki, the threads can be
+quite messy. But that's our strength. On the heap, the discussion
+would be on a real thread of posts, and the wiki page would be a
+pseudo post. The pseudo post would be version controlled together with
+the whole heap, and it could have references to the real posts.
+
+Ideas for wiki-like pages:
+- Hh conventions
+- Glossary about expressions related to using Hh ("Hm", "Hh")
+- Glossary about using Hm ("heap", "post", "thread", "index",
+  "Heapmanipulator", "heapid"); maybe this should be in the User
+  Manual and not here.
+- Glossay about developing Hm: maybe this also should be in the User
+  Manual rather than in Hh.
+
+If it works, we can think about making it possible to use a heap in a
+more wiki-like fashion, with having names for some posts, just like
+wiki-pages have names. Or we could embed some kind of wiki syntax into
+the posts and have an option to display the formatted text in the post
+HTML. But let's see first how the pseudo post system works in the Hh,
+which would be the base of the wiki-oriented development.
+
+Until then, what do you say to using wiki-syntax when it seems to be
+appropriate? Especially in large posts.

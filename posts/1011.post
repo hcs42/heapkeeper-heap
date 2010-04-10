@@ -1,0 +1,14 @@
+Author: Attila Nagy
+Subject: hkweb: no web.py; state of hkweb
+Tag: issue
+Message-Id: <b29f917d0912311210w2bbb4e3i3c59a3ff6a3c4d63@mail.gmail.com>
+Parent: <4B3CFE60.8080807@gmail.com>
+Date: Thu, 31 Dec 2009 21:10:56 +0100
+
+> web.py is on github [1]. It is not just one file but quite a few ones.
+> There is also a web.py Ubuntu package. These facts make me prefer not
+> to add web.py to our repository.
+
+You may be right, but the Ubuntu repo may be outdated. 0.3 was an
+almost complete rewrite, and 0.2 and 0.3 are not compatible. web.py is
+a new project, similar compatibility-breaking changes may be ahead.

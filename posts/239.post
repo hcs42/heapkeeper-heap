@@ -1,0 +1,16 @@
+Author: Csaba Hoch
+Subject: Connecting Hk with a mailing list management software
+Tag: idea
+Message-Id: <4A11A84B.3000901@gmail.com>
+Date: Mon, 18 May 2009 20:26:19 +0200
+
+This is a very long-term idea.
+
+Many times it would be handy if the email I got from a heap contained
+the heapid of that email. As far as I see there is one way to reach
+this goal: by plugging in some part of Hk into the list management
+software that manages the mailing list on which the heap is based.
+
+This approach would solve another inconvenience: we would not need the
+"IMAP user" whose account is subscribed to the mailing list and is
+used to store the emails until they are downloaded by Hk.

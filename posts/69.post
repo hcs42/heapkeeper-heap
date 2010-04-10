@@ -1,0 +1,38 @@
+Author: Csaba Hoch
+Subject: Renaming the github repository to "heapmanipulator" (later "heapkeeper")
+Tag: prop
+Tag: reviewed
+Message-Id: <49D8C63E.4070102@gmail.com>
+Parent: <b29f917d0904050656s22b9f3c9x44cd904446bf9ee3@mail.gmail.com>
+Date: Sun, 05 Apr 2009 16:54:54 +0200
+
+You could elaborate on that. Choosing a good name is very important;
+let's have discussion about it.
+
+IIUC, you accept that Heapmanipulator is a better name for the
+_program_ than Heap, you just don't agree that it is better for the
+_project_.
+
+I like the name Heapmanipulator more than Heap even for the project,
+because it is unique. E.g. the domains heap.com and heap.org do exist.
+It is practically impossible to find information about a program or
+project called Heap. "Heap project" raises 1390 hits on Google, "heap
+program" raises 7340. There are even a very few hits for "heap
+manipulator": someone wrote a Heap Manipulator in Java to manipulate
+the heap data structure. If we want a decent project homepage, its
+address could be heapmanipulator.org; but it will not be heap.org. (It
+could be e.g. heapproject.org, though.)
+
+Maybe we should talk about the distinction between the project and the
+program. What other things are in the project in your opinion? The
+research? :) The web-Hm? I thought the web-Hm would also be called
+Heapmanipulator. (But I don't have a strong opinion on this.)
+
+Is it worth at all to draw any distinction between the program and the
+project? I can hardly think of any project that did that; besides the
+GNU project, which of course contains hundreds of programs [1] and
+other stuff like licenses.
+
+I'm very interested in reading what you think.
+
+[1] http://directory.fsf.org/GNU/

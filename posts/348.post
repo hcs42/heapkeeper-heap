@@ -1,0 +1,31 @@
+Author: Csaba Hoch
+Subject: Body parsing - the what - examples
+Tag: post syntax
+Tag: prop
+Message-Id: <4A20531D.5020906@gmail.com>
+Parent: <20090529102136.24fa93c4.nagy.attila.1984@gmail.com>
+Date: Fri, 29 May 2009 23:26:53 +0200
+
+== Quotes ==
+  
+>>>>> Here, you have a guarantee that the depth of the recursion will not
+>>>>> exceed the depth of the quotation, which I'd like not to exceed 20 in
+>>>>> any reasonable conversation.
+>>>> You don't know how long discussions our users will have on their heaps.
+>>> That's why the wording was so careful.
+>> And that's why your statement means nothing...
+> 
+> A common problem with careful wording. Though I really don't see
+> what's your problem with the depth of the recursion the processing
+> of quotes would mean. Of course, recursion is bad if its depth is
+> truly uncontrolled. But depth that is reached by "human methods", i.e.
+> replying to replies, will hardly ever reach a problematic range.
+
+Maybe someone will use a heap entirely differently from us. Maybe they
+will have a thread to which all team members should report the result
+of their daily work.
+
+> Now if a malevolent user sends a mail filled with millions of '>'s,
+> that's another problem.
+
+I haven't even realized this problem...

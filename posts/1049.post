@@ -1,0 +1,15 @@
+Author: Csaba Hoch
+Subject: "if l" versus "if l != []"
+Tag: efficiency
+Message-Id: <4ddb9e5b1001272309jfde6f0ak5da6f33f5b55950d@mail.gmail.com>
+Parent: <20100128075402.e48144e6.nagy.attila.1984@gmail.com>
+Date: Thu, 28 Jan 2010 08:09:38 +0100
+
+>> So I would not change our convention about writing "if l != []", but
+>> it was an interesting experiment.
+>
+> Even if we came to this conclusion now, we gained experence. Later, we
+> may encounter situations where this optimization may provide a
+> significant speed gain.
+
+True.

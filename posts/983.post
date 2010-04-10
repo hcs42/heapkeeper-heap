@@ -1,0 +1,14 @@
+Author: Attila Nagy
+Subject: Heapkeeper website should use Google Analytics
+Tag: idea
+Tag: prop
+Message-Id: <b29f917d0912031157w11eef31r42323c7d3246aac9@mail.gmail.com>
+Parent: <4ddb9e5b0912031001u2790b9bam57e204ba19c9b762@mail.gmail.com>
+Date: Thu, 3 Dec 2009 20:57:02 +0100
+
+>> Hey! This is the same template markup syntax Django uses!
+> Small (Python) world...
+
+The Django book said there are hundreds of template engines for
+Python, and that it's a rite of passage for Pythonists to implement
+one.

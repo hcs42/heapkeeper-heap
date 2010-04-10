@@ -1,0 +1,13 @@
+Author: Attila Nagy
+Subject: PostDB methods: optional `threadstruct` param (2009-10-17 df0c673)
+Tag: commit
+Message-Id: <b29f917d0911211216i40a0e564pb3ef5a24b8112515@mail.gmail.com>
+Parent: <4B0843A4.5090803@gmail.com>
+Date: Sat, 21 Nov 2009 21:16:25 +0100
+
+> For example it is used in hkgen.Generator.print_post_page:
+>[...]
+>        # We create a thread structure that contains only out post.
+>        threadst = {None: [post.heapid()]}
+
+OK, I see.

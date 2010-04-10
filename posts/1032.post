@@ -1,0 +1,43 @@
+Author: Csaba Hoch
+Subject: Code coverage
+Message-Id: <4ddb9e5b1001230945n5b19d521k16ed450d6697e3bb@mail.gmail.com>
+Date: Sat, 23 Jan 2010 18:45:31 +0100
+
+I tried out coverage.py (which is wrapped by python-coverage.py).
+
+    $ sudo apt-get install python-coverage
+
+    # deleted previous measurements if any
+    $ python-coverage -e
+
+    # execution
+    $ python-coverage -x test.py
+    ---------------------------------------------------------------------
+    Ran 112 tests in 1.294s
+
+    OK
+
+    # report
+    $ python-coverage -r hklib.py hkshell.py hkutils.py hkgen.py hkcustomlib.py
+    Name          Stmts   Exec  Cover
+    ---------------------------------
+    hkcustomlib      67     38    56%
+    hkgen           368    267    72%
+    hklib           848    690    81%
+    hkshell         454    301    66%
+    hkutils         115     93    80%
+    ---------------------------------
+    TOTAL          1852   1389    75%
+
+The results are slightly better on my _several_heaps branch that I
+haven't pushed yet:
+
+    Name          Stmts   Exec  Cover
+    ---------------------------------
+    hkcustomlib      65     36    55%
+    hkgen           377    273    72%
+    hklib           953    802    84%
+    hkshell         470    341    72%
+    hkutils         116     94    81%
+    ---------------------------------
+    TOTAL          1981   1546    78%

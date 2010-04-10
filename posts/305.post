@@ -1,0 +1,29 @@
+Author: Csaba Hoch
+Subject: Web page hosting
+Message-Id: <4A1711A0.20304@gmail.com>
+Parent: <b29f917d0905221329g3570b2f6i9d6d3655af1ae485@mail.gmail.com>
+Date: Fri, 22 May 2009 22:57:04 +0200
+
+> At newhosting.hu, hosting is free, and the domain costs about 2000
+> HUF / year.
+
+.hu is around 2000 HUF, others (com, org) are 3000 HUF. But still nice
+prices.
+
+> Also free of advertisements, and PHP and MySQL are included.
+> Definitely worth looking.
+
+I like it! Shall I register a domain name and an account?
+
+>> I had a look at Google Apps on how easy it is to store static web
+>> pages. I registered the "heapkeeper" Google App domain. Well, static
+>> HTML pages can be copied and shown, but I haven't manage to do it
+>> nicely: you have to write "/static/index.html" after the domain. [2]
+> 
+> Can you use FTP to upload files?
+
+No. I was looking for it and someone explicitly stated this. The
+Google App SDK works from command line, though, so it can be
+automatized.
+
+[1] http://www.newhosting.hu/domain.php

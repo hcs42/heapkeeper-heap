@@ -1,0 +1,12 @@
+Author: Attila Nagy
+Subject: "r" tag for revised posts
+Tag: hh-conventions
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0903230904oc286a85h94d21963d9ff3248@mail.gmail.com>
+Parent: <b29f917d0903230903x5dc5ed32xa7113ba8f032cc11@mail.gmail.com>
+Date: Mon, 23 Mar 2009 17:04:33 +0100
+
+> The [r] doesn't say anything on when was the post deemed acceptable.
+
+However, you could do a git-blame on the "Tag: r" line.

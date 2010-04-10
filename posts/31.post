@@ -1,0 +1,41 @@
+Author: Csaba Hoch
+Subject: "r" tag for revised posts
+Tag: hh-conventions
+Tag: prop
+Tag: reviewed
+Message-Id: <49C4838B.7030508@gmail.com>
+Parent: <49C47F67.9080408@gmail.com>
+Date: Sat, 21 Mar 2009 07:04:59 +0100
+
+>> How would this be related to the proposal that we should always
+>> respond to proposals? (I mean the obligatory answer that can be a
+>> simple OK too.)
+>
+> Not at all.
+
+== "OK" responses ==
+
+An "OK" post means that you, as a Hh user (and probably Hm developer)
+agree with a proposal (or at least you don't have any objections that
+are worth mentioning). The proposal usually has its own thread. The
+"OK" convention is related only to Hh, not other heaps.
+
+== [r] ==
+
+If you are a heap maintainer, you would add [r] to a post when you
+think that it is OK. (E.g. it does not contain meta-commands to be
+executed). It would help the maintenance of a heap, because this way
+a maintainer's work could described as this:
+1. Download the new posts.
+2. Read through the posts without [r] tag. (Mostly they will be new
+   posts I guess, but not necessarily.) If they need some change,
+   change them.
+3. Add [r] tag to the posts that are OK. (If you had time to finish
+   with all posts (without [r]), then you should add [r] for all of
+   them.)
+4. The work is finished for today. You don't need to care about posts
+   with [r], as they have been already reviewed by either you or
+   another maintainer in the past.
+
+The [r] tag would go individually to the posts. This convention makes
+sense for all heaps.

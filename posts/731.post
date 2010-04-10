@@ -1,0 +1,9 @@
+Author: Csaba Hoch
+Subject: `enew` command should add the current date
+Tag: issue
+Tag: reviewed
+Message-Id: <4ADF29E3.1060408@gmail.com>
+Date: Wed, 21 Oct 2009 17:33:55 +0200
+
+It is hard to sort posts that lack timestamp. The enew command should
+add the current date to the attributes of the new post.

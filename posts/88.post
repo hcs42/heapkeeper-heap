@@ -1,0 +1,189 @@
+Author: Csaba Hoch
+Subject: Renaming the github repository to "heapmanipulator" (later "heapkeeper")
+Tag: ppc
+Tag: prop
+Tag: reviewed
+Message-Id: <49E2E935.5020307@gmail.com>
+Parent: <49e2d53b.095c5e0a.0c8d.ffffc14b@mx.google.com>
+Date: Mon, 13 Apr 2009 09:26:45 +0200
+
+> You are right. We should keep the option of using a heap via command
+> line only open as long as possible, ie. forever.
+
+:))
+
+>> Did you write "Heapanipulator" intentionally?
+> 
+> No, but we can fall back to the expression if something goes
+> wrong...
+
+:)
+
+>>>> - a documented format for a mutable mailing list (called a heap)
+> 
+>> Well... I'm not sure that the current format with many-many small
+>> files is our final choice. We might even use database tables to store
+>> the posts. Especially in the web-Hm. Maybe we will have two formats:
+>> - internal, efficient representation: database tables
+>> - external, human-readable, easy-to-parse, exportable and importable
+>> representation: the current mail file format, XML or YAML.
+> 
+> I like this idea. Still, a heap will be a documented format, one of
+> a set of possibilities: mailfiles, XML, YAML, SQL... 
+> 
+> A possible roadmap:
+> 1. Mailfile-based Hk with static HTML output (nearing completion, only lacking body parsing, as I see it)
+
+Nearing, especially if we decide to satisfy your needs that aren't
+implemented yet within the web interface instead of the static web
+interface.
+
+> 2. Mailfile-based Hk with Web interface
+> - at this point, we'll very probably need a single server (back to Shrek?)
+> - this will probably be the end of the distributed Git two-way
+> pulling storage mechanism (not necessarily, though, we could have a
+> discussion on this)
+
+I think we should discuss this in a separate thread (or even
+thread-set), when we are ready. Do you think we are? Or should we
+concentrate on the body parsing first?
+
+> 3. SQL-backed Hk with Web interface (with Mailfiles/XML/YAML
+> import/export capability)
+
+>> For me "heap" is not a concrete format but rather an abstract one.
+>> Like the expression "mailing list". The difference is that a heap has
+>> posts instead of emails, and it has tags and meta text. (There may be
+>> more differences, that's not the point.) The similarity is that both
+>> have parent-children relationships, and threaded structure based on
+>> these. Neither "heap" nor "mailing list" say how the posts/emails
+>> shall be stored: they are just abstract concepts.
+> 
+> Thus, we have two things called 'heap':
+> - the idea of an editable mailing list and the associated terminology
+> - the syntax and semantics of header elements which I think will be
+> independent of the storage mechanism
+> 
+> Should we distinguish these?
+
+They are distinguished, at least for me: I called the latter "mail
+file". BTW, I want to propose renaming it, but I'll do that in a
+separate mail.
+
+>> - a library for editing of said list (called Heapmanipulator)
+>> - a simple interactive interface for said library (called Heapia)
+> 
+>> I don't think of these as separate programs. Maybe when the web-Hm is
+>> ready, we will have to think of them as separate entities. On the
+>> other hand, we don't want to confuse users by telling them about a
+>> bunch of different names when actually what now exists is just one
+>> traditional software program and nothing else
+> 
+>> Similarly, we could say we have a program called Hm, which has a
+>> console and a web interface, end of story.
+> 
+> For that, the name 'Heapkeeper' (abbr. Hk) would be best.
+
+True. (At this point of the mail Hk has not been settled yet :) )
+
+>> I think the users would be most happy with that solution.
+> 
+> We are not yet at the point where we'd have 'ordinary' users
+> ignoring implementation details. Though, of course, it is our goal
+> to have them :)
+
+If we want to have developers, we will catch them only if they can
+easily understand what we are doing. Understanding the program as a
+user will help them to understand it as a developer.
+
+>> Now the philosophy is that git is one program with many subcommands
+>> (e.g. "git commit", "git checkout"), and invoking "git-commit" is
+>> deprecated. The Unix philosophy with orthogonal tools is a good one,
+>> but one should use it only when appropriate -- and in most cases it is
+>> not. It is not appropriate in git's case and it is not appropriate in
+>> our case.
+> 
+> Avoiding "bin pollution" via subcommands and Unixish tool
+> orthogonality are orthogonal.
+
+Almost. If git is a set of programs and you implement a few other
+programs that operate on the same database, they could be seen as
+being on the same level. On the other hand, if git is one tool with
+subcommands and you create another program, everybody will think that
+the comprehension between the git commands is far more than the
+comprehension between a git command and yours. (Maybe there is a
+better word instead of "comprehension"?)
+
+E.g. if you write a program "cirmos" to be used in the unix shell, it
+will be indistinguishable from "head" and "tail" in its use. That's
+not true for git: "real" git commands run the "git" program, but your
+commands won't.
+
+So you are right in that using subcommands and Unixish orthogonality
+are orthogonal things. On the other hand, they are not totally
+independent: if you use subcommands, your _feeling_ of orthogonality
+will be weaker.
+
+> You can (should) retain access to junction points in the plumbing
+> behind the uniform shining porcelain, like git has. Eg. you have
+> pull, but you still have fetch. (Is it a good example? You're much
+> better at Git than I am.)
+
+I don't think that's an example of orthogonality. That's an example of
+git letting you work on different abstraction levels. Git doesn't do
+that very often, but in this case it does. Another example for a
+higher abstraction level is "git commit --amend".
+
+Actually, I can't tell you any examples of orthogonality of the
+subcommands. Maybe there is not any?
+
+An example for another type of orthogonality is the parametrization.
+You can specify a commit in many ways:
+- SHA id
+- HEAD
+- <commit>^ (e.g. HEAD^^ is the commit before the commit before that head)
+- <commit>~<number> (e.g. HEAD~2 is the same as HEAD^^)
+
+The orthogonality is in the fact that you can use any format with any
+git command.
+
+>> So my proposal is having only these concepts that require a name:
+>> - "heap": the abstract structure and the database that stores it
+>> (regardless of the method of storage).
+>> - "Heapkeeper": the name of the whole program, the name of the
+>>  project, the name of the website, the name of the repository, the
+>>  name of the mailing list -- sorry, the name of the heap :D
+>> - "heapia" or "interactive console interface": the console interface
+>>  of Heapkeeper. The user will think it is the "./heapia" shell script
+>>  (or heapia.bat for windows users...), or it is at least started by
+>>  that script.
+>> - "heapweb" or "web interface": modules that allow using Heapkeeper
+>>  via the web. Since we don't know how we will do this, we don't know
+>>  if this will be one module like heapia, or many modules, or even
+>>  some XML files, or something else.
+> 
+> OK.
+> 
+>> Shall we call our program Heapkeeper then? Of course it will be
+>> abbreviated as Hk. (Which is better than Hm.)
+> 
+> Hmm. This takes us back to the suit/non-suit problem above. What
+> binary(ies) or command(s) exactly do you propose to be called
+> Heapkeeper?
+
+Everything. We don't have any binaries, just a bunch of Python
+modules; the set of Python modules that we create will be (is?)
+Heapkeeper. heapia would be a part of Hk, so would be heapweb.
+
+Did I answer your question?
+
+>> If yes, then I will rename the github repository to "heapkeeper".
+>> I'll create a heapkeeper.heap GMail account and a heapkeeper-heap
+>> Google Group (although I think we won't use it until Hk supports
+>> managing multiple heaps.)
+> 
+> The project name should be changed. What do you want to use these
+> new addresses for? Is this the new name for the place we want to
+> migrate the hh-part of the present-day Heap?
+
+Yes.

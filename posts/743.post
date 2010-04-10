@@ -1,0 +1,13 @@
+Author: Csaba Hoch
+Subject: Image source files
+Tag: git
+Tag: prop
+Tag: reviewed
+Tag: workflow
+Message-Id: <4ADFFF9A.4000900@gmail.com>
+Parent: <b29f917d0910212332q5d7f7705s9032ed0bfd43bcca@mail.gmail.com>
+Date: Thu, 22 Oct 2009 08:45:46 +0200
+
+Just to make sure we are on the same page regarding the workflow:
+I pushed a _logo branch which is at the same commit as yours, which
+means that I reviewed it and you can merge it into your master.

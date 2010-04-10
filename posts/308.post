@@ -1,0 +1,575 @@
+Author: Csaba Hoch
+Subject: Body parsing - the what - examples
+Tag: post syntax
+Tag: prop
+Message-Id: <4A172469.8000901@gmail.com>
+Parent: <b29f917d0905211025k7e03b34dt6dcb792e12100d8e@mail.gmail.com>
+Date: Sat, 23 May 2009 00:17:13 +0200
+
+== Place of meta text ==
+
+=== Link appearance ===
+
+>>>    Please have a look at <<<link http://www.example.com this site>>>.
+>> Previously we agreed on allowing the <<< and >>> of the meta text only
+>> in the beginning of the lines [2]. Have you changed your mind about
+>> this?
+>
+> No, not at all. But of course this feature is so "inline" that it'd
+> almost ruin its usability if we'd have to write it in a new line. Of
+> course I don't want to change the convention regarding the start of
+> metas, mainly for performance considerations. How about adopting
+> MediaWiki's solution instead? Thus, this example would look like:
+>
+>     Please have a look at [http://www.example.com this site].
+>
+> I think this would be the most convenient and less obtrusive solution.
+
+But then how would be define when is "[" special and when not? It
+seems to be a daunting task... Except if we say "[" is always special
+in a non-raw text. But then we won't need "<<<" -- its role can be
+merged into the role of "[". I thought about this a lot, and I make a
+proposal. But first, motivation.
+
+== Basic principle of post syntax and semantics ==
+
+Backward compatibility of post syntax and semantics is a very
+important issue. Otherwise people will always have to modify the posts
+sitting on their heaps in order to comply the latest post syntax.
+That's not convenient for hobby users, but much more worse for
+institutional users.
+
+Thus I formulate a basic principle which makes backward compatibility
+not so difficult to achieve. The basic principle of creating the
+syntax and semantics of posts should be the following. We have to make
+an initial ruleset that states clearly what is a syntactically and
+semantically correct post. The syntax and semantics of those posts
+should _never_ change. The way we can add more features: we change the
+ruleset so that posts there were previously syntactically or
+semantically incorrect will become correct. These posts refer to new
+features that were introduced with the change of the ruleset. The post
+syntax/semantics can evolve continuously, as we turn more and more
+previously incorrect posts to correct ones. Of course we will never
+run out of incorrect posts -- they are infinite in number.
+
+=== Note about programming languages ===
+
+This is the way how programming languages like evolve maintaining
+backward compatibility. Most new features take syntactically incorrect
+programs and adds syntax and semantics to them.
+
+=== Example of the principle working ===
+
+A good example of when this principle works is meta text. We said that
+a meta text looks like this (with Vim regexps):
+
+    ^<<<[^ \t]\+\([ \t\n]\_.\{-}\)\=>>>$
+
+In more detail:
+
+    ^                    - beginning of line
+    <<<                  - <<<
+    [^ \t]\+             - head (command or type of meta text)
+    \([ \t\n]\_.\{-}\)\= - the body of the meta text, preceded by a
+                           whitespace that separates it from the head
+    >>>                  - >>>
+    $                    - end of line
+
+(I later realized this regexp-stuff is totally unnecessary here, but I
+don't have the heart to delete it.)
+
+Currently this would be an incorrect post:
+
+    <<<xx something>>>
+
+But at some point we may decide to use "xx" as a meta text type, and
+with that decision, this post would be turned into a correct one.
+
+Another example is the <<<wiki>>> text. Until we say what does it
+exactly mean, anyone who uses it risks being incompatible with a
+future version of post syntax. But once we said that, we kinda promise
+that if you use it, the syntax of your post will be correct forever.
+
+Of course while there are just the two and a half of us, we can cheat.
+By cheating I mean being not backward compatible and modify old posts
+to conform the new syntax. But I think it is a good practice to cheat
+as little as possible. I would like to make the foundation of the
+syntax/semantics so robust, that we won't ever have to cheat. If we
+don't cheat now, we can be safe that we won't have to cheat later.
+
+=== Example of the principle not working ===
+
+I'll give an example that does not respect the principle.
+
+Consider we convert [http://link text] (\[http://.\{-}\]) into an
+HTML link, but we accept anything else as normal text. We release a
+version of Hk that works this way. Then we realize sometimes we want
+to write lines like this:
+
+    My favourite author is [http://en.wikipedia.org/wiki/Isaac_Asimov
+    Isaac Asimov, the genius.]
+
+But we can't go back without cheating, because we said this was a
+syntactically/semantically correct text already!
+
+We have to put a lot of effort now into avoiding these kind of
+problems in the future.
+
+=== Example: your concrete proposal ===
+
+Further thought experiments on the subject.
+
+A proposal to your link-in-the-text problem (the idea is borrowed from
+Sphinx):
+
+    Please have a look at [this site _1].
+
+    <<<link _1 http://www.example.com>>>.
+
+Theoretically, we would not break the principle, because "<<<link"
+would have made the post incorrect, which would be turned into correct
+by the proposal. It is not very nice though that parsing the footnote
+heads is affected by the kinds of meta text that are present in the
+post.
+
+== My proposal ==
+
+I love the way we think about the syntax of meta text. I think maybe
+that is what we need now, but in more general. This may sound a bit
+strong, but here it is.
+
+Let's handle [...] special _all the time_ when it is outside a raw
+text. (The line is a raw text if its first character is a whitespace.
+Except when it is in an itemization; now don't think about this, I'll
+elaborate on this later in this post.) We could throw <<< and >>>
+away. I'll call these [...] syntax elements "bracket segments".
+
+If you are worried about how many times we use '[' and ']', I have
+looked at our posts. (You are free to ignore my regexps again :) )
+
+- We have 54510 lines that are not quotes (grep -v '^>' *.post).
+- 1419 of these lines contain '[' (... | grep -e '\[').
+- 436 of the 1419 started with whitespace.
+- 690 of the remaining lines contained '^[^\]\[]*\[\d\][^][]*$',
+  i.e. they contained a "[, digit, ]" sequence and no brackets
+  anywhere else in the line. These were the lines that contained one
+  footnote header or footnote body. (Or contained code like a[0], but
+  that would be a problem with the current footnote-plan, as well.)
+- 29 of the remaining lines contained '^[^\]\[]*\(\[\d\+\][^][]*\)*$'.
+  These were the lines with multiple digits and/or multiple citations,
+  but no other '[' and ']'.
+- in 126 of the remaining lines we talked about tags (e.g. "I like the
+  [hh] tag"). We could use quotation signs in these cases.
+- 50 of the remaining lines should have been start with whitespace.
+- 88 lines remained. This is a tiny number compared the number of
+  total lines. So if we go with []-s as meta text and everything, 22
+  post in average would contain one '[' that should be escaped.
+
+Back to the proposal:
+- I propose escaping a '[' by writing '\['. ']' can live without
+  escaping. We also may have `` for inline raw text, in which [ would
+  not be interpreted.
+- We could retain the meta text model: the first word should indicate
+  the type of the meta text. This word could be any symbol-sequence,
+  actually, that excludes whitespace.
+
+Examples follow.
+
+=== Meta text and command ===
+
+   [note I am drunk.]
+
+   [todo Something should be done.]
+
+   [!deltext This is boring.]
+
+=== Link ===
+
+    My favourite author is [http://www.asimovs.com/ Isaac Asimov]
+
+    My favourite author is [http://en.wikipedia.org/wiki/Isaac_Asimov
+    Isaac Asimov].
+
+    Have a look at [http://www.asimovs.com/]!
+
+=== Footnote ===
+
+    My favourite author is Isaac Asimov [1].
+
+    [1] http://en.wikipedia.org/wiki/Isaac_Asimov
+
+Another one:
+
+    My favourite author is [1 Isaac Asimov].
+
+    [1] http://en.wikipedia.org/wiki/Isaac_Asimov
+
+Latter is equivalent to this (and will be transformed to this before
+processing):
+
+    My favourite author is [1 Isaac Asimov].
+
+    [1 http://en.wikipedia.org/wiki/Isaac_Asimov]
+
+=== Escaping ===
+
+    In Python, "x\[0] = 0" is invalid if x is a tuple.
+
+=== Inline raw text ===
+
+    In Python, [raw] x[0] = 0 [/raw] is invalid if x is a tuple.
+
+`` is of course better to read:
+
+    In Python, `x[0] = 0` is invalid if x is a tuple.
+
+My point is, we have to decide on using `` now (otherwise we will
+break compatibility), but we would be free to introduce [raw] at any
+time in the future.
+
+=== Summary ===
+
+Types of bracket segments:
+- first word matches \w\+ -> meta text (e.g. "[note ...]")
+- first word matches /\w\+ -> meta text (e.g. "[/raw])
+- first word matches !\w\+ -> command (e.g. "[!deltext ...]")
+- first word matches \w\+://.* -> link
+- first word matches \d\+ in the beginning of the line -> footnote body
+- first word matches \d\+ -> footnote head
+
+== Cites ==
+
+>> I would also like to write emails like this:
+>>
+>>   Our website [1] should be improved according to them [2].
+>>
+>>   [1] Currently http://hste.uw.hu/heapkeeper/index.html
+>>   [2] http://www.boring.org, section "Heapkeeper is boring"
+>
+> Now, if I understand you correctly, you would also like to handle
+> those cites that fall into neither of these, namely, the ones which
+> contain both an URL and a textual comment. The question is, of course,
+> how should we handle these? Would the head link to the body, or right
+> to the URL contained in the body (assuming, of course, that there's
+> only one URI in the body!)
+
+I think linking to the first URL is a good solution.
+
+There are two possibilities to solve the "two links for one footnote"
+problem that you describe:
+
+a. The text of the footnote points somewhere and there is an image
+   next to it that points somewhere else.
+b. The tooltip of the link shows the text of the footnote body.
+
+I prefer the second one, but YMMV.
+
+== Quotes ==
+
+>> Are you sure this recursive structure is the best one?
+>
+> No, not at all. We should have a discussion dedicated solely to this
+> matter, maybe on Skype or IRC?
+
+OK.
+
+>> I think from the parser's point of view the two approaches need equal
+>> amount of work. From the HTML presentation's point of view, yours is
+>> probably easier. From the point of view of all the other processors,
+>> though, I think my approach is simpler.
+>
+> This point also needs to be clarified, and I'm really eager to hear
+> about your ideas. This, I think, is one of the most difficult matters
+> in body parsing.
+
+The HTML probably will have the same recursive structure as the quotes
+in the segment list in your proposal. That's why I think it is easier
+to write the HTML generator if it can be recursive. (Although I don't
+want to see recursive functions in Hk if I don't have a guarantee
+about the length of the recursion.)
+
+All the other body processors that want to do something with quotes
+will be more complicated if they have to walk through the recursive
+structure of quote segments. Otherwise they can just do a loop on all
+segments.
+
+Do you need further clarification?
+
+== Authors and signatures ==
+
+> I've been omitting the signature from my posts from some time now.
+
+For 3 weeks apparently. I haven't noticed, just now that you pointed
+out.
+
+> We don't have to sign our mails since the body parser can put the
+> signature there automatically when displaying the post. But to avoid
+> having two signatures, we should ignore the signatures already
+> present. An equivalently viable approach would be to output the
+> generated signature only if there is the body itself does not
+> contain a signature.
+
+Why should we generate signature?
+
+I think if we want to see signatures in post pages (e.g. because
+that's how people usually write emails), we want to see signatures in
+emails. If we don't want to see signatures in emails, we do we want to
+see them in post pages?
+
+Maybe we should not sign our emails at all and should not generate
+signatures in posts.
+
+=== Itemization ===
+
+>> And here is another one. I write itemizations very frequently. Like
+>> these:
+>>
+>>    Nice animals:
+>>    - cat
+>>    - dog
+>>    - fish
+>>
+>>    We could do:
+>>    a. this
+>>    b. that
+>>
+>>    If we choose (a), we have to:
+>>    1. start
+>>    2. stop
+>>
+>> We have to find a way to render these. (I haven't found yet.)
+>
+> This is another important issue. I've also thought about them. I this
+> topic would also have to be included into our consultation.
+
+My proposal gives a straightforward way to solve this problem.
+"[-]" would mean: "itemize the following paragraph". Examples:
+
+    Nice animals:[-]
+    - cat
+    - dog
+    - fish
+
+    We could do:[-]
+    a. this
+    b. that
+
+    If we choose (a), we have to:[-]
+    1. start
+    2. stop
+
+Actually, [-] would be more special than other bracket segments,
+because it would stop the lines starting with whitespace from becoming
+raw text:
+
+    My favourite book writers:[-]
+    - Isaac Asimov: he was born in the Soviet Union, but his family
+      emigrated to the US when he was 3.
+    - Richard Dawkins: he was born in Kenya as a son of British
+      parents. They returned to England when he was 8.
+
+Which means that Dissector has to know about "[-]".
+
+If we want to put blank lines between the items, I suggest using
+another bracket segment indicator for that. Something like this:
+
+    My favourite book writers: [items]
+  
+    - Isaac Asimov: he was born in the Soviet Union, but his family
+      emigrated to the US when he was 3.
+  
+    - Richard Dawkins: he was born in Kenya as a child of British
+      parents. They returned to England when he was 8.
+  
+    [/items]
+
+Combining items and raw lines is easy: items end with a blank line.
+
+    Hello world in different languages: [items]
+  
+    - C++: a very complicated language, developed by Bjarne
+      Stroustrup at Bell Labs.
+  
+      #include <iostream>
+  
+      int main()
+      {
+          std::cout<<"Hello world!"<<std::endl;
+      }
+  
+    - Python: a beautiful language, developed by Guido van Rossum.
+  
+      import sys;
+  
+      sys.stdout.write('Hello world!\n')
+  
+    [/items]
+
+== Quotes again ==
+
+I realized we do want to handle quotes as just "quote blocks". For
+example they can have raw text inside them. They also may have
+itemizations inside them. They may contain links.
+
+I propose that we parse everything in quotes. (I suggested the exact
+opposite so far, but I think I was wrong. The concrete examples we had
+(meta text, cites) would not make too much sense to parse in quotes;
+but in general, there is a point in parsing them, and as we talk now,
+new and new text objects come up that must be parsed inside quotes.)
+
+== Raw text ==
+
+Beware the blank lines:
+
+    Code:
+
+        print 1
+
+        print 2
+
+    Isn't it nice?
+
+Although the line between "print 1" and "print 2" is totally empty, it
+should be part of the raw text, i.e. as if it started with whitespace.
+But we should not handle the blank line after "print 2" as raw text...
+
+== Modularity, parser steps (was: Wiki-like headers) ==
+
+>>> Plaintext:
+>>>
+>>>    <<<wiki>>>
+>>>    == Bacteria ==
+>>>
+>>> Initial segmenting:
+>>>
+>>>    Plaintext [<<<wiki>>>\n== Bacteria ==]
+>> I don't know how do you think the parser will work, but I would think
+>> it never creates that text. It is highly illogical to me that our main
+>> text object is the TeX-like paragraph, and everything else is parsed
+>> from those. Consider this:
+>>
+>>    <<<note
+>>
+>>    This is a long note.
+>>
+>>    Eh.>>>
+>>
+>> In my opinion we can create the following text objects in first go:
+>> - quote blocks
+>> - meta text blocks
+>> - text blocks
+>> - raw blocks (lines that start with whitespace and would be in a text
+>>  block otherwise)
+>
+> In general, I like the idea, but it seems to conflict with the idea of
+> modularity. If we hardwire these in the Dissector (in the current
+> implementation, this is the name of the module that creates the
+> initial segmentation), the module to process, say, quotes will not be
+> turned off by simply not loading its module into the parser framework.
+> Adding a new kind of object will not be impossible, though, only we
+> have to find them in the initial segments. Maybe the Dissector could
+> be customized: by default, it'd create all the text object you've
+> mentioned, but they could be turned off individually.
+
+We don't have to be _that_ modular. If Dissector creates these blocks,
+we can say Dissector is one module. It should not be more then one
+screen of "real" code -- why should we modularize that?
+
+>> The first go takes into account only the first few characters of each
+>> line.
+>
+> Yes, this would be very important. Right now, parsing only the headers
+> is quite a task, with only ~2000 posts. Imagine what happens if the
+> whole body will be parsed!
+
+Well, my latest proposal is a bit different from what I said here...
+But I don't think that makes a difference in efficiency.
+
+These I the steps I propose now:
+
+First go:
+- quote segments
+- non-quote segments
+
+Second go (in both previous segments):
+- text segments
+- bracket segments
+- raw segments
+- itemizations item segments, see later
+
+Third go:
+- text segments -> text paragraphs, separators
+
+A possible layout:
+
+    > Eh.
+    >
+    > Watch [http://this this]!
+    >
+    > Code:
+    >   print "hello"
+    >
+    > Items:[-]
+    > - item 1
+    > - item 2
+  
+    Yes.
+  
+    Watch [http://that that].
+  
+    In my opinion:
+      print "hi"
+  
+    My items:[-]
+    a. item 1
+    b. item 2
+
+The structure after each steps (I don't care about newlines here,
+the real implementation will probably contain some):
+
+    quote level  type      text
+    ------------------------------------------
+    1            text       'Eh.'
+    1            separator
+    1            text       'Watch'
+    1            bracket    'http://this this'
+    1            text       '!'
+    1            separator
+    1            text       'Code:'
+    1            raw        ' print "hello"'
+    1            separator
+    1            text       'Items:'
+    1            bracket    '-'
+    1            item       '- item 1'
+    1            item       '- item 2'
+    0            text       'Yes.'
+    0            separator
+    0            text       'Watch '
+    0            bracket    'http://that that'
+    0            text       '.'
+    0            separator
+    0            text       'In my opinion:'
+    0            raw        '  print "hi"'
+    0            separator
+    0            text       'My items:'
+    0            bracket    '-'
+    0            item       'a. item 1'
+    0            item       'b. item 2'
+
+Each line of this table could be an object of a Segment class. This
+class could have an integer `quote_level` data attribute, an enum
+`type` attribute and a string `text` attribute. (There is no enum type
+in Python, but we can use integer constants instead.) Segments may
+have additional attributes later.
+
+== Posts we have ==
+
+We do have a lot of meta text now. If/when we all agreed that the
+body parsing should be done according to my proposal and implemented it
+that way, I suggest replacing all '^<<<' with '[' and all '.>>>$' with
+']' in the posts.
+
+== Conclusion ==
+
+The more I think about it, the more I like my proposal... Please give
+it serious consideration.

@@ -1,0 +1,16 @@
+Author: Attila Nagy
+Subject: Network graph
+Tag: github
+Message-Id: <b29f917d0907312345l1dba5f4ck3ccae1a02eef0f0b@mail.gmail.com>
+Parent: <4A73DD30.8010109@gmail.com>
+Date: Sat, 1 Aug 2009 08:45:11 +0200
+
+> What do you see if you have a look at this:
+> http://github.com/hcs42/heapkeeper/network
+>
+> I see only "hcs42" on the left side, as if I made all commits.
+
+Because you own the repo. I guess that if I forked it, there'd be
+another bar, and it'd show the interactions between our repos. It
+knows that not all commits are yours: just point on the commit tagged
+"bodyparsing" (end of red line after the 5th June).

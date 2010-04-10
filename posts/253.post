@@ -1,0 +1,61 @@
+Author: Csaba Hoch
+Subject: Separating Heapkeeper heap and UMS heap
+Message-Id: <4A12CEB9.9000902@gmail.com>
+Parent: <20090519094841.2067be8f.nagy.attila.1984@gmail.com>
+Date: Tue, 19 May 2009 17:22:33 +0200
+
+>> == Reorganizing Hh heapids ==
+>>
+>> Usually it is a very bad idea to modify the heapids of existing posts.
+>> In Hh's case, on the other hand, I think it would be rather desirable.
+>> Hh's index page otherwise would look weird for new people.
+> 
+> Do you have any idea for this mass-renaming? We'd have to take care of
+> any in-body references as well as heapids in In-Reply-To: headers. No
+> simple task, especially the latter. Maybe we should add a feature for
+> this to hklib? Then, anyone facing this problem later would have a
+> readily usable solution.
+
+I think this problem can be solved elegantly only if we make a change
+in our model. We take heapids as unique identifiers of posts; from the
+moment we have multiple heaps, this is not true.
+
+We have three options:
+1. Give a decent support for moving posts between heaps.
+2. Give a little support for moving posts between heaps that solves
+   our problem with our human help. We may give a decent support at
+   some point in the future.
+3. Don't give any support, just implement a post-mover function, use
+   it and throw it away.
+
+Let's talk about how we could implement a decent support, and if we
+decide it would be too hard and we want to separate the two heaps, we
+fall back onto the second or third option.
+
+>> == Heapkeeper support for managing several heaps ==
+>>
+>> Hk should have a good support for managing both heaps at the same
+>> time. We want to be able to write commands like this:
+>>
+>>     >>> ums_heap = heap('~/documents/heaps/ums')
+>>     >>> hh_heap = heap('~/documents/heaps/hh')
+>>     >>> ums = ums_heap.postdb()
+>>     >>> hh = hh_heap.postdb()
+>>     >>> p = ums.post('123')
+>>     >>> p.move(hh)
+> 
+> Nice examples! Of course, we'd have to take great care when moving,
+> since heapids are heap-specific, so if a parent message is specified
+> via its heapid, it will break when moved. Basically the same issue as
+> with renumbering the split-off heap.
+> 
+>> Posts can reference to each other, so probably it will not be this
+>> simple. (Or the implementation has to be smart in some way to make it
+>> simple.)
+> 
+> Which is also manageable as long as the format is precisely specified,
+> as with headers. It is the body that makes me worried.
+
+These comments of yours reveal the two main problems we have.
+
+I'll think about them.

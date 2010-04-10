@@ -1,0 +1,9 @@
+Author: Csaba Hoch
+Subject: Python logger
+Tag: idea
+Message-Id: <4AD10414.4010003@gmail.com>
+Date: Sun, 11 Oct 2009 00:00:52 +0200
+
+We could use Python's logging facility at some point.
+
+[1] http://docs.python.org/library/logging.html

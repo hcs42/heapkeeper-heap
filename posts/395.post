@@ -1,0 +1,27 @@
+Author: Csaba Hoch
+Subject: "python -i" + "sys.exit(0) in hkshell.py" raises an exception, prints stack trace, and does not quit
+Tag: python
+Message-Id: <4ddb9e5b0907171424k46fc11b5re1565ca71baecb5c@mail.gmail.com>
+Date: Fri, 17 Jul 2009 23:24:19 +0200
+
+We have a problem with running Hk on Python 2.6. Python 2.6 which handles the
+-i option differently from 2.5. In 2.6, If you start hkshell in a way that it
+wants to quit right after performing its task, you will see an exception:
+
+    $ ./hkshell --version
+    Heapkeeper version 0.3uc
+    Traceback (most recent call last):
+      File "hkshell.py", line 1369, in <module>
+        sys.exit(0)
+    SystemExit: 0
+    >>>
+
+The reason is that hkshell invokes "python -i hkshell.py", which used to quit
+silently after hkshell.py called sys.exit(), up until Python 2.5. But in Python
+2.6, the philosophy seems to be that if you type "-i", you want to inspect what
+happened in the program, so you don't want to quit from the Python interpreter.
+
+We should solve this problem at least temporarily before releasing Hk 0.3. It
+was quite difficult to make everything work even in 2.5. Now we have one option
+less. Maybe we should change direction; this is clearly not the way Python is
+supposed to be used. I will think about this.

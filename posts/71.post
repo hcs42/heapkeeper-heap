@@ -1,0 +1,39 @@
+Author: Csaba Hoch
+Subject: Renaming the github repository to "heapmanipulator" (later "heapkeeper")
+Tag: prop
+Tag: reviewed
+Message-Id: <49DC35D5.1070205@gmail.com>
+Parent: <b29f917d0904050857w1a6bc8edw5c5133e57dbc75@mail.gmail.com>
+Date: Wed, 08 Apr 2009 07:27:49 +0200
+
+>> Is it worth at all to draw any distinction between the program and the
+>> project?
+> 
+> Sometimes it is. Some projects build programs, like, say, Gimp. Others
+> build suites of programs, like OpenOffice or Mozilla. (Of these, I
+> think only the latter produces distinct binaries for the individual
+> members of the suite.) I imagine our project, the name of which is
+> being debated, will produce a suite consisting of:
+> - a documented format for a mutable mailing list (called a heap)
+> - a library for editing of said list (called Heapmanipulator)
+> - a simple interactive interface for said library (called Heapia)
+> - a Web-based interface for the same library (no name yet; Heapweb?)
+
+I think the users should see only one program (with one name, which is
+the same as the project's name), which has different features and can
+be used on different ways. The developers can still think of the
+program as different modules -- some of them API, some of them console
+interface, some of them dynamic web interface.
+
+> - Digger: a digger is something that builds a heap, isn't it? but
+> probably a very common word
+
+I think it makes a hole as its main task; the heap is just a
+side effect.
+
+> - Heapkeeper: I like this probably the most; it satisfies the
+> generality criterion, and Googlable, now has only 127 hits
+
+I like it. First I didn't, because it reminds me to "Bitkeeper".
+I think our whole program (web and console interface, parser,
+everything included) should be named Heapkeeper.

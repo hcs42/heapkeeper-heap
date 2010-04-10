@@ -1,0 +1,11 @@
+Author: Csaba Hoch
+Subject: hkshell commands fall into endless recursion
+Tag: bug
+Tag: reviewed
+Message-Id: <4AFEFD97.6000401@gmail.com>
+Date: Sat, 14 Nov 2009 19:57:27 +0100
+
+hkshell commands like eR fall into endless recursion if the post we
+give it is in a cycle.
+
+(I made a cycle accidently, that's how I realized this problem.)

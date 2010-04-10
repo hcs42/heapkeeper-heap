@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: Mapping for removing trailing whitespace
+Tag: vim
+Message-Id: <4ddb9e5b1002070004l1103909dpcb6e1d85158d0941@mail.gmail.com>
+Parent: <4ddb9e5b1002070001r467a230fg5aad288acd3a20ec@mail.gmail.com>
+Date: Sun, 7 Feb 2010 09:04:29 +0100
+
+There is another concern though, which do not apply to either
+Heapkeeper or any document I edit at home, but it does apply to my day
+job. If I turned this automatic trailing space-remover on, it would
+remove trailing whitespace from existing code, and CVS would show that
+I modified those lines, which would mess up the diff.

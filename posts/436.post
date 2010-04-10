@@ -1,0 +1,44 @@
+Author: Attila Nagy
+Subject: Ownership of history is a delicate matter
+Tag: git
+Message-Id: <b29f917d0908010108m2cbc6482y3e75210ef1d1ed69@mail.gmail.com>
+Parent: <4A73EF8A.5020900@gmail.com>
+Date: Sat, 1 Aug 2009 10:08:03 +0200
+
+>> My question is: once you show all those people what we have, will they
+>> see what it is good for?
+>
+> That's a question for another thread I think.
+
+I'm never afraid to start a thread in another one... though it is
+laborous to separate them later, especially if the two have been
+running in parallel in several posts. But in another thread, then.
+
+>> But do you think it
+>> is a limitation of github or git? I mean, that we can't just push a
+>> totally rewritten repository.
+>
+> I think it's git.
+
+A little bit of heartbreak over there.
+
+>> So, we'd hard-reset, edit README, commit, tag and rebase for both
+>> 0.1 and 0.2, if I understand correctly.
+>
+> Yes, that is what I thought, but it does not seem to work because of
+> the motorway.
+
+Umm... both the 0.1 and 0.2 tags are on "single sections". Will that
+still cause a problem with motorways coming after the tag? I think
+I'll go and experiment with it.
+
+>>> == Further changes ==
+
+> Why isn't minimal merged into master?
+
+That is the middle of the Chaos of May 2009. Minimal is now at a merge
+of a merge of a merge and something else and something else
+(literally), and I guess I didn't dare to merge the merge back into
+master. I think the best way to save the minimal branch would be to
+start off from before the chaos and cherry-pick the necessary changes
+to form a new minimal, then throw the old one away.

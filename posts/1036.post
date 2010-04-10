@@ -1,0 +1,13 @@
+Author: Csaba Hoch
+Subject: Moving heapkeeper/script to hk-dev-utils
+Tag: prop
+Message-Id: <4B5C1C41.9010703@gmail.com>
+Date: Sun, 24 Jan 2010 11:09:05 +0100
+
+I think the scripts in heapkeeper/scripts would have a better place in
+the hk-dev-utils repository. The heapkeeper repository should contain
+the program executed by the users, not our utilities.
+
+What do you think?
+
+[timeout 1 week]

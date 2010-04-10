@@ -1,0 +1,17 @@
+Author: Csaba Hoch
+Subject: Release process
+Tag: 0.3
+Message-Id: <4ABC5973.2060505@gmail.com>
+Date: Fri, 25 Sep 2009 07:47:31 +0200
+
+I pushed a branch called _v0.3. The first commit contains the
+description of our release process. I have also done the first 5 steps
+of this process -- the other commits and the thread itself are the
+result of this.
+
+Could you review it in the weekend?
+
+I have also tried out the release making scripts, which would only be
+step 8, but I wanted to make sure they work. So heapkeeper.org looks
+now as if we have released 0.3, but next time it will not look like
+this.

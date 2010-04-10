@@ -1,0 +1,9 @@
+Author: Attila Nagy
+Subject: Sphinx version message in output
+Message-Id: <20090721173040.fcaaea71.nagy.attila.1984@gmail.com>
+Parent: <4A5D949F.7060805@gmail.com>
+Date: Tue, 21 Jul 2009 17:30:40 +0200
+
+[!todo break thread, preserve reference]
+
+By the way, I wonder why is the line "Created using Sphinx 1.0." present in our Sphinx output? The official Sphinx homepage has "Created using Sphinx 0.6.2+."

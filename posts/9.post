@@ -1,0 +1,11 @@
+Author: Csaba Hoch
+Subject: "r" tag for revised posts
+Tag: hh-conventions
+Tag: prop
+Tag: reviewed
+Message-Id: <49B3F6F7.4070508@gmail.com>
+Date: Sun, 08 Mar 2009 17:48:55 +0100
+
+I think in order to make it easier to keep this heap tidy, we
+should use a tag that states "this post has been revised". It
+should be short, so I started using the [r] tag.

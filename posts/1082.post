@@ -1,0 +1,112 @@
+Author: Attila Nagy
+Subject: Free-text search
+Tag: feature
+Message-Id: <20100206094826.854e58e8.nagy.attila.1984@gmail.com>
+Parent: <4B32849A.6060507@gmail.com>
+Date: Sat, 6 Feb 2010 09:48:26 +0100
+
+> == More specific specification ==
+
+[note :))))]
+
+> I propose to use regular expressions. So if a user searches for the
+> following word sequence:
+> 
+>     word1 word2 word3
+> 
+> the resulted postset would be equal to the result of the following
+> program:
+>     
+>     def contains(word):
+>         """Returns a function that can decide whether a given post
+>         contains the given word."""
+>         def f(post):
+>             return (re.search(word, post.body()) or
+>                     re.search(word, post.author())
+>                     re.search(word, post.subject()) or
+>                     re.search(word, ' '.join(post.tags())))
+>         return f
+> 
+>     postdb.all().collect(contains("word1")). \
+>                  collect(contains("word2")). \
+>                  collect(contains("word3"))
+> 
+> (This is not the implementation, this is only the specification :) )
+
+I like this, but it doesn't work like this yet, so I'll do it.
+
+[assign Attis]
+
+> The would could be regular expressions, if the user wants to use them.
+
+[!todo correct: They could]
+
+> == Advanced features ==
+> 
+> The following features are only ideas, I don't propose to implement
+> them in the first go.
+> 
+> === Ranking ===
+> 
+> We could implement ranking so that a post will be higher in the
+> search results if the word is present as a tag/keyword/subject. Or a
+> post will be lower in the results if the expression is present only in
+> a quote.
+
+Looks useful! Would you give the tag, keyword and subject matches an
+equal weight?
+
+> === Thread search ===
+> 
+> We could also implement "thread search", which would return only one
+> post per thread.
+
+This one seems useful, too.
+
+An idea: how about adding a `root()` function to the shell? Or to
+`hklib.PostSet`? It would return a post set which contains the root
+posts of any threads from which at least one post was present in the
+original post set.
+
+Then we could have this feature like this:
+
+    root(grep('dead trees'))
+
+or
+
+    grep('dead trees').root()
+
+> === Generation output ===
+> 
+> We should make a generator that would generate HTML pages with the
+> search results, inlining the relevant posts, highlighting the found
+> expressions, etc.
+
+Nice -- but sounds like an awful lot of work. It sounds like this
+would be needed for your next idea, however.
+
+> === Hkweb integration ===
+> 
+> And of course we should have a textbox and a "Search" button on hkweb.
+
+Definitely. Together with all the highlighting you mentioned in the
+previous idea.
+
+> === Vim integration ===
+> 
+> We could feed the results into Vim so that Vim could jump between the
+> hits in its usual way (:cnext, :cprev, :clist).
+
+Wow. That'd be awesome!
+
+I have to admit I've never used this functions, though.
+
+> == Effort estimation ==
+> 
+> This only concerns the basic features. We could spent an arbitrary
+> amount of time with the advanced ones :)
+
+But ranking and thread search would come quite cheap. And the multi-word
+lookup feature would also be useful. For example, I would have used it
+today if it were easily available, but I rather used an alternative
+solution instead.

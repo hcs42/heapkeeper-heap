@@ -1,0 +1,11 @@
+Author: Attila Nagy
+Subject: Renaming the "main" post item position to "inner"
+Tag: issue
+Message-Id: <20100128080911.2737f55a.nagy.attila.1984@gmail.com>
+Parent: <4AFE98DF.7090207@gmail.com>
+Date: Thu, 28 Jan 2010 08:09:11 +0100
+
+This is a simple refactoring, and I think the new name is indeed
+clearer. So I'll do it.
+
+[assign Attis]

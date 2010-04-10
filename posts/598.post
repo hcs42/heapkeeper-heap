@@ -1,0 +1,45 @@
+Author: Csaba Hoch
+Subject: Workflow: what to do with old branches
+Tag: workflow
+Message-Id: <4ddb9e5b0909142204o76665a59uba48ddcaea63c5d6@mail.gmail.com>
+Parent: <b29f917d0909140322k65f9b9d5p8b3497bb7dcd67e6@mail.gmail.com>
+Date: Tue, 15 Sep 2009 07:04:14 +0200
+
+> Please remove your _fastdownload and _bugfix as they are fully
+> integrated into the master now, and the former keeps a sidetrack in my
+> gitk display that is visually distracting. (It'd be nice to have a
+> linear history up to the current master.)
+
+I don't have these branches! I removed them quite a while ago.
+
+    $ git fetch origin
+    $ git fetch attis
+    $ git branch -a
+      _count
+      _custom-post-summary
+      _dl-improved
+      _e
+    * _issue-tracker
+      _review
+      exp
+      exp-old
+      master
+      attis/_count
+      attis/_dl-improved
+      attis/_e
+      attis/_fastdownload
+      attis/_golem
+      attis/_review
+      attis/fastdownload
+      attis/master
+      origin/HEAD
+      origin/_count
+      origin/_custom-post-summary
+      origin/_dl-improved
+      origin/_e
+      origin/_issue-tracker
+      origin/_review
+      origin/master
+
+But you could remove your unnecessary remote branches: you seem to
+have two fastdownload branches for example.

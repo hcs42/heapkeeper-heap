@@ -1,0 +1,55 @@
+Author: Csaba Hoch
+Subject: Concerns about the workflow
+Tag: workflow
+Message-Id: <4B309B75.7040800@gmail.com>
+Parent: <b29f917d0912190012xd6e5919n63aaf8bfc4bc860@mail.gmail.com>
+Date: Tue, 22 Dec 2009 11:12:05 +0100
+
+>>> I see you have some concerns about our workflow. You've also voiced
+>>> these doubts at the VigConf. I would love to hear the specifics, maybe
+>>> we can find an easy answer, or, if not, at least we'll know better
+>>> what we're looking for.
+>> You mean the specific concerns?
+> 
+> Yes.
+
+I don't know about you, but I have to admit, I am lost in our commits.
+We have quite a few branches, and we are not good at keeping track of
+the state of the commits. Now for example we have a linear tree of a
+few segments; the first segment has been review by both of us, the
+second waits for you, the third waits for me etc. We don't have a good
+way for describing our state. If I put Gitk and the wave next to each
+other, I still have a very hard time finding out where we are, and
+which commits belong to a segment. And I'm the author of most
+commits...
+
+If I decide to rebase something, I can't do it without effecting you.
+That's OK, but we should have a place where I describe what I did, so
+that when you start your work, you can catch up, destroy the necessary
+branches etc. This would be an informal git log: it would log the
+reality and not the rewritten reality. It would be nice if you could
+mark the log entries as "read" or "done". It should be a linear list
+of changes, maybe with some comments intervened.
+
+You have not answered to my question on dec 1 on the Branches wave.
+(Note: I'm not here to blame you.) If we don't want to be slow (I
+don't), we should either be more responsive, or be able to make
+decisions like this on our own. I have not been very responsive either
+in the last few weeks, so I think we should go for the second option.
+
+Our master branch is so far behind; we should fast forward it more
+often. It is an important factor because the chaos is always *after*
+the master; so if we have half as commit after the master, the
+chaos in the new branches is half as big. Also, the relevant part is
+the "reality log" would be smaller, and the "branch state" page would
+also be half as big.
+
+I think these are the biggest problems, and that's what I think
+we could do about it:
+1. Find a better way to describe the state of the tree. Either inside
+   our outside of Wave, I don't know. The goal is to be very tidy, and
+   maybe Wave does not force us to have a discipline.
+2. Let's have a reality log. Maybe Wave, maybe not.
+3. Have a one week timeout for proposals. I.e. if there is no
+   discussion nor agreement for one week, the proposer can go ahead.
+4. Let's fast forward the master branch more often.

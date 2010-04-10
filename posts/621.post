@@ -1,0 +1,40 @@
+Author: Attila Nagy
+Subject: The principle of expanding syntax; example
+Tag: prop
+Message-Id: <20091002142217.423ded03.nagy.attila.1984@gmail.com>
+Parent: <4A172469.8000901@gmail.com>
+Date: Fri, 2 Oct 2009 14:22:17 +0200
+
+> Thus I formulate a basic principle which makes backward compatibility
+> not so difficult to achieve. The basic principle of creating the
+> syntax and semantics of posts should be the following. We have to make
+> an initial ruleset that states clearly what is a syntactically and
+> semantically correct post. The syntax and semantics of those posts
+> should _never_ change. The way we can add more features: we change the
+> ruleset so that posts there were previously syntactically or
+> semantically incorrect will become correct. These posts refer to new
+> features that were introduced with the change of the ruleset. The post
+> syntax/semantics can evolve continuously, as we turn more and more
+> previously incorrect posts to correct ones. Of course we will never
+> run out of incorrect posts -- they are infinite in number.
+
+Well said. Let's call this the "principle of expanding syntax".
+
+> === Example of the principle not working ===
+> 
+> I'll give an example that does not respect the principle.
+> 
+> Consider we convert [http://link text] (\[http://.\{-}\]) into an
+> HTML link, but we accept anything else as normal text. We release a
+> version of Hk that works this way. Then we realize sometimes we want
+> to write lines like this:
+> 
+>     My favourite author is [http://en.wikipedia.org/wiki/Isaac_Asimov
+>     Isaac Asimov, the genius.]
+> 
+> But we can't go back without cheating, because we said this was a
+> syntactically/semantically correct text already!
+
+I don't understand your example. How is the example line different
+from \[http://link text]? Also what does "we accept anything else as
+normal text" mean?

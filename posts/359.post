@@ -1,0 +1,23 @@
+Author: Csaba Hoch
+Subject: Post syntax matched to user needs
+Tag: post syntax
+Tag: prop
+Message-Id: <4A223798.6000305@gmail.com>
+Parent: <20090530224824.GB7993@lepke>
+Date: Sun, 31 May 2009 09:54:00 +0200
+
+OK.
+
+But don't forget: when the body parsing is turned off, you have to
+display the newline characters in the HTML. So the post pages won't be
+much nicer then the pages of any other archive. Although we will have
+tags, index pages, hkshell for modifying the heap; having nice post
+pages is not our only merit.
+
+I don't see much point in having an intermediate post syntax now.
+Maybe in the future. Now we should concentrate on the "advanced
+syntax".
+
+What do you think should be the default behaviour? Parsing turned off
+or on? That's also important from the tutorial's point of view. (Not
+the current tutorial of course.)

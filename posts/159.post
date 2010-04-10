@@ -1,0 +1,23 @@
+Author: Csaba Hoch
+Subject: 'amend' posts
+Tag: idea
+Message-Id: <49FD7305.7090703@gmail.com>
+Parent: <b29f917d0905021730q525a275bl7dd604288037f663@mail.gmail.com>
+Date: Sun, 03 May 2009 12:33:41 +0200
+
+> Suppose you wrote a post but soon after discover that you missed out
+> the quotes, forgot to finish a sentence etc. It'd be nice to correct
+> this in another post so that it'd become right on the Heap, without
+> any editing. For this, you could add an 'amend' tag. When Hk would
+> download a post with such a tag, this new post would silently replace
+> its parent.
+
+Nice idea.
+
+> Of course we should validate if the senders are the same. Otherwise
+> misbehaved users could do nasty things to others' posts...
+
+Think this issue is not specific to the "amend". We have to discuss
+the conceptual model of running code in posts by Hk at some point. We
+talked about it in UMS thread 1176, but we have yet to discuss it
+here and make an agreement on it.

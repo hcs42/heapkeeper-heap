@@ -1,0 +1,29 @@
+Author: Csaba Hoch
+Subject: "email" vs "mail"
+Tag: commit
+Message-Id: <4A8C3E0A.10904@gmail.com>
+Parent: <b29f917d0908180352w10a20f9by576475d2019cf3cc@mail.gmail.com>
+Date: Wed, 19 Aug 2009 20:01:46 +0200
+
+>> Also, I would call the `mail` variable `email`.
+> 
+> No good, as it would hide the `email` module! So, instead I corrected
+> all "email"s to "mail", so that the naming will be consistent.
+
+I think the word "mail" does not have a plural form. (At least in the
+sense that "these are two mails"). You could call it "em" or "email_"
+in the list comprehension, and you could use the emails_* variables in
+all other places.
+
+If we used the word "email" more often, I would even say importing
+email with another name:
+
+    import email as email_mod
+
+Then you could have "email" variables.
+
+Do you know why did I change the word "mail" to "post" everywhere?
+(Mail files -> post files, Mail -> Post, MailDB -> PostDB, etc.)
+Because its plural sounds just unnatural. (Later I realized that
+"post" sounds better from the of the Google Wave philosophy's point of
+view .)

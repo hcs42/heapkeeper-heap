@@ -1,0 +1,19 @@
+Author: Csaba Hoch
+Subject: Incorrect git identity, impact graph
+Tag: git
+Tag: github
+Message-Id: <4A6A8E7D.9070606@gmail.com>
+Date: Sat, 25 Jul 2009 06:47:57 +0200
+
+If you have a look at the impact graph [1], you see that we made the
+same mistakes. We are not shown as two people, but four instead.
+Please, make sure that when you install git on a new system, you
+introduce yourself: [2]
+
+   $ git config --global user.name "Your Name Comes Here"
+   $ git config --global user.email you@yourdomain.example.com
+
+Of course you should always use the exact same name and email address.
+
+[1] http://github.com/hcs42/heapkeeper/graphs/impact
+[2] man://gittutorial(7)

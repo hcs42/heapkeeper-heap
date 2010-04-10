@@ -1,0 +1,30 @@
+Author: Csaba Hoch
+Subject: Keep abbreviations for the most important settings
+Tag: prop
+Tag: reviewed
+Message-Id: <4A12FFF3.5020809@gmail.com>
+Parent: <20090519085624.3b366f70.nagy.attila.1984@gmail.com>
+Date: Tue, 19 May 2009 20:52:35 +0200
+
+I accept your point of view, although I don't agree. Since you seem to
+have a stronger opinion that I do, let's have shortcuts for _some_
+settings along with your wishes.
+
+A side note though (you don't have to answer): Vim newbies often
+complain that experts use the short names of commands on the mailing
+list without explaining them. In our case they are the third category
+of users: they will be intimidated by reading "on('gi')" on Hh and
+will be reluctant to look it up. Thus the setting shortcuts will help
+only the first two categories of people. And not much: they can write
+better shortcuts in their hkrc just as easily (e.g. "t()" instead of
+"on('t'")). And as I noted, our settings are not like Vim settings
+that are changed often while using Vim: they are like Thunderbird
+settings that are changed once when you figure out whether you like
+them or not.
+
+I propose than that all setting should have a name in the hierarchical
+structure, at least on the second level (a.b, a.b.c, a.b.c.d etc).
+Shortcuts should be outside the hierarchical structure. E.g.:
+
+    >>> on('etc.something')
+    >>> on('st')

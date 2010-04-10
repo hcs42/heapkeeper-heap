@@ -1,0 +1,16 @@
+Author: Csaba Hoch
+Subject: CSS files in the Hk repo should overwrite CSS files in the HTML directory
+Tag: prop
+Tag: reviewed
+Message-Id: <4AE03249.5090505@gmail.com>
+Date: Thu, 22 Oct 2009 12:22:01 +0200
+
+[effort 1]
+[version 0.4]
+
+I propose that CSS files in the Hk repo should overwrite CSS files in
+the HTML directory. Now we don't overwrite the existing file; we
+assume that files in the repo will not change, which is silly.
+
+Workaround: make symlinks in the HTML directory to the CSS files in
+the Hk repo.

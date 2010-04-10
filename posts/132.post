@@ -1,0 +1,18 @@
+Author: Csaba Hoch
+Subject: Should the "reviewed" tag be part of the infrastructure?
+Tag: idea
+Tag: reviewed
+Message-Id: <49F77528.50807@gmail.com>
+Parent: <b29f917d0904170944o69310b0di9fbc88bd7b4a4398@mail.gmail.com>
+Date: Tue, 28 Apr 2009 23:29:12 +0200
+
+Nice idea.
+
+I think for most new features (like the [r] tag) we could have a few
+stages:
+1. It is just a new tag that we use by convention.
+2. We customize our heap to handle it specially.
+3. If we think it is worth to implement specific support, we do so.
+
+For the moment, I think, we should step into stage 2 (which would
+require custom postsummary-customization that I plan anyway).

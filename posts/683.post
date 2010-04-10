@@ -1,0 +1,24 @@
+Author: Csaba Hoch
+Subject: Docstring tracking tool
+Tag: idea
+Message-Id: <4AD9ECAB.7040103@gmail.com>
+Parent: <b29f917d0910162338p10c81b3ft93ad29bc499639@mail.gmail.com>
+Date: Sat, 17 Oct 2009 18:11:23 +0200
+
+> Maybe we could build a small tool to track the docstrings and point
+> out functions lacking proper documentation.
+
+What do you mean by "proper documentation"?
+
+It could e.g. check that the documentation is in correct format, and
+that the function's documentation is included in the corresponding
+*.rst file.
+
+> Maybe it could even be a Vim script.
+
+I think if we do it, we should write it in Python, so we don't have
+tough limitations, and we can use it as a commit hook.
+
+> Do you think this would be useful?
+
+Probably yes.

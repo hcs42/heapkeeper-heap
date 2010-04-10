@@ -1,0 +1,31 @@
+Author: Attila Nagy
+Subject: Issues: summary
+Tag: hh-conventions
+Tag: prop
+Message-Id: <20100128180714.6cb8a980.nagy.attila.1984@gmail.com>
+Parent: <4AE2CF95.6040601@gmail.com>
+Date: Thu, 28 Jan 2010 18:07:14 +0100
+
+Some summarization, to see if I got the idea:
+
+Some Hh threads are special, in that we want to track them using a
+specialized Hk module, called the issue tracker. These threads fall
+into several categories:
+
+- bug (`bug`): threads marked as bugs are about problems with Hk perceived as
+  deficiencies, failures to meet an expected standard, and in general,
+  discordance between expected and actual function.
+- feature (`feature`): threads about the addition of new features to
+  Hk
+- issue (`issue`): a thread that is about a concrete part of Hk, but
+  doesn't fall into any of the 
+- proposal (`prop`): threads marked as proposals present plans for the
+  future, not about concrete parts of Hk, but rather the
+  "infrastructure": coding conventions, repository etc.
+
+Any of these may optionally have the "idea" tag, which means that the
+author has xer own doubts about the usefulness or feasibility of the
+contents of the post.
+
+Is this correct? (I'll add my additions as replies to this post, I just
+want to be sure that I've understood what you said.)

@@ -1,0 +1,28 @@
+Author: Attila Nagy
+Subject: SHA1 as post id
+Tag: discussion
+Message-Id: <b29f917d0910010609m28268789rfbd86ee03302d32b@mail.gmail.com>
+Parent: <4AA4AC00.8020402@gmail.com>
+Date: Thu, 1 Oct 2009 15:09:39 +0200
+
+>> But all we need is uniqueness. How about UUIDs as post ids? [1]
+>> [1] http://en.wikipedia.org/wiki/UUID#Python
+>
+> I like it, but I have to think about all the implications.
+>
+> Do we want to allow shortening UUIDs, as far as they are unique?
+
+I think we discussed this on Skype. If I remember correctly, we
+dismissed the whole idea of using any kind of hash or UUID as postids,
+on the basis that the IDs used by mailing agents are pretty random
+(and therefore very probably unique) as they are.
+
+However, I think the question of shortening these remained open. Well,
+of course, we could quite easily enable this, but would it really be
+useful? In the current post file format, we use the postids only to
+link parent and child posts together, but even here we can optionally
+use the heapid instead.
+
+So I guess things are pretty OK. Anyone for Scrabble later? [1]
+
+[1] http://xkcd.com/470/

@@ -1,0 +1,10 @@
+Author: Attila Nagy
+Subject: Profiling
+Tag: idea
+Message-Id: <b29f917d0910221128r17d389ecyf563d9543e625997@mail.gmail.com>
+Date: Thu, 22 Oct 2009 20:28:34 +0200
+
+You have recently created several issues regarding performance
+improvements. We had best not work blindly: we should use a profiler
+to determine what is taking up time. Do you know of any such tool for
+Python?

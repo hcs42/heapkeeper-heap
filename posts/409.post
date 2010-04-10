@@ -1,0 +1,26 @@
+Author: Csaba Hoch
+Subject: Python won't start in the "scripts" directory
+Message-Id: <4A6A8E79.6080804@gmail.com>
+Date: Sat, 25 Jul 2009 06:47:53 +0200
+
+If I go into the "scripts" directory, python hangs. With -v:
+
+   $ python -v
+   # installing zipimport hook
+   import zipimport # builtin
+   # installed zipimport hook
+   # /usr/lib/python2.6/site.pyc matches /usr/lib/python2.6/site.py
+   import site # precompiled from /usr/lib/python2.6/site.pyc
+   # /usr/lib/python2.6/os.pyc matches /usr/lib/python2.6/os.py
+   import os # precompiled from /usr/lib/python2.6/os.pyc
+   import errno # builtin
+   import posix # builtin
+   # /usr/lib/python2.6/posixpath.pyc matches /usr/lib/python2.6/posixpath.py
+   import posixpath # precompiled from /usr/lib/python2.6/posixpath.pyc
+   # ./stat.pyc matches ./stat.py
+   import stat # precompiled from ./stat.pyc
+   import math # builtin
+
+It seems that Python needs a "stat" package, and it tries to use the
+"stat" package of Attis. Would you rename "stat.py" to something else
+in order to avoid this collision?

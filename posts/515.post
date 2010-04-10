@@ -1,0 +1,13 @@
+Author: Csaba Hoch
+Subject: Optimized IMAP downloading
+Message-Id: <4A8A3F66.1040809@gmail.com>
+Parent: <b29f917d0908162349ne8dcce4i7179b1fe7f8b1c92@mail.gmail.com>
+Date: Tue, 18 Aug 2009 07:43:02 +0200
+
+> This means we can un-archive all messages back into INBOX, so we won't
+> have to explain ourselves to anyone who wants to download the whole
+> heap into an empty mail directory.
+
+IIRC, we had a hard limit somewhere that made us archive old emails. I
+think you even wrote a post about it considering it a bug in the email
+download mechanism.

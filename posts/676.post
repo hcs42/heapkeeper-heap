@@ -1,0 +1,12 @@
+Author: Attila Nagy
+Subject: hkshell.e raises ugly exception when called on a non-existing post
+Tag: bug
+Tag: reviewed
+Message-Id: <b29f917d0910170018j126df81ek1729a8b4c754c3b0@mail.gmail.com>
+Parent: <4AAC9BA6.9020605@gmail.com>
+Date: Sat, 17 Oct 2009 09:18:24 +0200
+
+This has been resolved in the commit "hkshell.e can edit more files"
+on 2009-08-28.
+
+[close]

@@ -1,0 +1,29 @@
+Author: Attila Nagy
+Subject: Caching of next heapid
+Tag: discussion
+Message-Id: <b29f917d0910301617kcb6b137m7f38f154addd7883@mail.gmail.com>
+Date: Sat, 31 Oct 2009 00:17:35 +0100
+
+This piece of code is used to determine the cached value of the next
+numerical heapid:
+
+    next_heapid_0 = max(heapids) + 1 if heapids != [] else 0
+    self._next_heapid = max([self._next_heapid, next_heapid_0])
+
+My first version:
+
+    try:
+        self._next_heapid = max((self._next_heapid, max(heapids) + 1))
+    except ValueError:
+        self._next_heapid = 0
+
+My second version (more verbose, but more self-documenting):
+
+    try:
+        current = self._next_heapid
+        first_free = max(heapids) + 1
+        self._next_heapid = max(current, first_free)
+    except ValueError:
+        self._next_heapid = 0
+
+Which one do you prefer?

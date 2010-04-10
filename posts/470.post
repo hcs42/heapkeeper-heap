@@ -1,0 +1,39 @@
+Author: Csaba Hoch
+Subject: CRLF issues
+Tag: hk0.3
+Tag: windows
+Message-Id: <4ddb9e5b0908021155p25e4cecfrccbc1928f22b0a06@mail.gmail.com>
+Date: Sun, 2 Aug 2009 20:55:35 +0200
+
+When the `enew` hkshell command is called, on Windows we create post
+files with only \n (=LF=0A) and not \r\n (=CRLF=0D0A) in them, which
+will be shown incorrectly by e.g. notepad. If the users copy and paste
+the example post files from the browser and insert it, it will contain
+CRLF, which is handled, so Hk will work. But it is not a good user
+experience I guess to see rectangles instead of newlines.
+
+The interesting thing is that if we modify the post in hkshell (e.g.
+with sS), and save it, it will contain CRLF -- which I certainly did
+not expect. The reason is that os.write, which is used in the initial
+post creation, writes only LF for os.write('\n'), while the function
+that writes the post to the disk calls the `write` method of the file
+object, which writes CRLF for f.write('\n') (on Windows).
+
+I'm not even 100% sure what is the right solution.
+a) If we use LF all the time, it won't work for Windows users, who
+will put CRLF-s when editing the post files anyway.
+b) If we use CRLF all the time, that will be hard to handle on Unix.
+c) We haven't even mentioned OS X which uses only CR.
+d) If we use the native EOL on all systems, the syncronization of the
+posts will be messy. Although version control systems are used to this
+situation, and can handle it; using native EOLs is even their
+preferred way of doing things. The installer of the non-cygwin Windows
+version of git [1] asks which EOL behaviour to use; using CRLF is the
+default.
+
+So I guess we should go with (d). Actually, that is also the easiest
+for us to handle; we just have to write a wrapper around os.write. Or
+we may even get away without it -- it is very probable that someone
+else already wrote it for us.
+
+[1] http://code.google.com/p/msysgit/downloads/list

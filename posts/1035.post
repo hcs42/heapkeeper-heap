@@ -1,0 +1,14 @@
+Author: Csaba Hoch
+Subject: Managing several heaps in Heapkeeper
+Tag: prop
+Message-Id: <4B5C14B7.1070803@gmail.com>
+Parent: <4B114642.90201@gmail.com>
+Date: Sun, 24 Jan 2010 10:36:55 +0100
+
+> Now I propose a third version:
+>
+>    heap_id + post_index = post_id
+
+I implemented this version of supporting several heaps and pushed it.
+
+Moving posts is not implemented yet.

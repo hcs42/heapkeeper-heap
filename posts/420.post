@@ -1,0 +1,52 @@
+Author: Attila Nagy
+Subject: Ownership of history is a delicate matter
+Tag: git
+Message-Id: <b29f917d0907300825ld1398ffmf52ec2b3d9fb769d@mail.gmail.com>
+Date: Thu, 30 Jul 2009 17:25:09 +0200
+
+I ran across this:
+
+http://www-cs-students.stanford.edu/~blynn/gitmagic/ch05.html
+
+It seems a nice document. It starts explaining Git history manipulation like
+this:
+
+    A consequence of Git’s distributed nature is that history can be edited
+    easily.  But if you tamper with the past, take care: only rewrite that part
+    of history which you alone possess. Just as nations forever argue over who
+    committed what atrocity, if someone else has a clone whose version of
+    history differs to yours, you will have trouble reconciling when your trees
+    interact.
+
+    Of course, if you control all the other trees too, then there is no problem
+    since you can overwrite them.
+
+    Some developers strongly feel history should be immutable, warts and all.
+    Others feel trees should be made presentable before they are unleashed in
+    public. Git accommodates both viewpoints. Like cloning, branching and
+    merging, rewriting history is simply another power Git gives you. It is up
+    to you to use it wisely.
+
+My thoughts on this:
+- a nice simile
+- all your tree are belong to us [1]
+- if one has bad thoughts about altering the purity of the past (not
+  out of considering adverse effects, but simply out of knowing it to
+  be a Bad Thing to Do (TM)), interest in using or developing Heapkeeper
+  is to be reconsidered
+
+However, if we choose to alter history now to sort out multiple
+personality issues may have a compelling effect for the future. If we
+get caught in a craving for a tidy repository, we'll sooner or later
+be inclined to clean up the "motorway sections" by rebasing them. Now
+we could do it. Once we have "followers" (either in the quoted or the
+literal sense), we can't. By (hopefully) gaining attention with the
+launch of the homepage, we, so to say, 'set up us the bomb', so we had
+better 'make our time' (um, sorry; what I want to say is we should do
+all our history-changing now while we control all copies of the source
+tree).
+
+`git rebase -i`, that is, interactive rebase, seems very powerful. Have you
+ever used it?
+
+[1] http://en.wikipedia.org/wiki/All_your_base_are_belong_to_us

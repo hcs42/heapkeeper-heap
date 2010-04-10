@@ -1,0 +1,18 @@
+Author: Attila Nagy
+Subject: Writing tests
+Message-Id: <20090912135341.f071a9a5.nagy.attila.1984@gmail.com>
+Parent: <4AAB79B5.1030508@gmail.com>
+Date: Sat, 12 Sep 2009 13:53:41 +0200
+
+Thanks for the advices! Maybe we could include them in the coding conventions.
+
+>   +        self.assertEquals(
+>   +            g.section(0, genopts),
+>   +            self.flat_result(g, genopts, [p(1), p(4)], sectionname='Sec (2)'))
+
+OK, now I understand how I mean including "concrete data" in the test case.
+
+>   +
+>        def test_section__cycle(self):
+>            postdb, g, p = self.init()
+>            p(1).set_parent('2')

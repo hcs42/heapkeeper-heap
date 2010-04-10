@@ -1,0 +1,145 @@
+Author: Csaba Hoch
+Subject: Body parsing - the how
+Tag: post syntax
+Tag: prop
+Message-Id: <4A0519EB.1020403@gmail.com>
+Parent: <b29f917d0905081230h18f7ab16yfb4b8a34471ee0e9@mail.gmail.com>
+Date: Sat, 09 May 2009 07:51:39 +0200
+
+>>> * the separation of already processed (HTML) and still unprocessed
+>>> (raw) parts of the body have to be distinguished
+>> I don't really understand why. But you don't have to answer it now if
+>> it is just a feeling that we will need that.
+> 
+> I think I can explain. Suppose we want to decorate all occurences of
+> authors' names in a special manner, e.g. surround them with @'s, but
+> only in the original text of the posts, not in the generated output.
+> Now we'll have to somehow keep track of the already processed or
+> unprocessed parts of a partly composed body, since we don't process in
+> one go, but in multiple passes.
+> 
+> Pass 1: add the author's name before each quote.
+> Pass 2: decorate mentioned names
+> Pass 2: escape HTML and finish
+
+<<<todo: correct this to Pass 3>>>
+
+> Before pass 1:
+> 
+>     > I think Attis is right on this.
+> 
+>     Josh, what do you say?
+> 
+> Before pass 2:
+> 
+>     <div id="quoteheader">Attis wrote:</div>
+>     > I think Attis is right on this.
+> 
+>     Josh, what do you say?
+
+<<<todo: correct the example>>>
+
+Why does Attis wrote "I think Attis is right on this."? :D
+
+Why do you use "div id", why not "div class"?
+
+> Before pass 3:
+> 
+>     <div id="quoteheader">Attis wrote:</div>
+>     > I think @Attis@ is right on this.
+> 
+>     @Josh@, what do you say?
+> 
+> After pass 3:
+> 
+>     <div id="quoteheader">Attis wrote:</div>
+>     &gt; I think @Attis@ is right on this.
+> 
+>     @Josh@, what do you say?
+> 
+> This is what we want to happen. First, we don't want to decorate the
+> name inside the div. Secondly, and this is much more important: we
+> have to HTML-escape the quote introduction, but we mustn't escape the
+> same character in the HTML part. Therefore, I imagined a partly
+> processed body as a sequence of blocks, each marked either as being in
+> HTML or in plaintext.
+
+I got your model, but I think it has a flaw.
+
+Let's say we have another "processor" that creates div-blocks from quotes:
+
+     <div class="quoteheader">Attis wrote:</div>
+     <div class="quote"> I think Attis is right on this.</div>
+ 
+     Josh, what do you say?
+
+How would this interact with the "normal" processing? How would the
+@-placer know to process quote and not to process quote header?
+
+Your processed/unprocessed boolean could be replaced with a string
+which states the type of that segment. This type could be "quote",
+"quoteheader". The processors would know what types of segment they
+want to process. This is similar to the model of many tools, I think.
+In those tools (e.g. Sphinx, probably GCC), there is a syntax tree
+augmented with other information, and the processors can manipulate
+the tree. We would have a list instead of a tree, because our
+structure is so simple - but otherwise their idea seems more feasible
+to me than a pure processed/notprocessed flag.
+
+>> - The current "body" attribute of the post should remain as it is, the
+>>  list of segments and the HTML representation would be other
+>>  objects (either data attributes (=data members) or local variables
+>>  of some function)
+> 
+> This is a very important question. I think it is directly related to a
+> broader one: when should the processing happen? Also, it brings up the
+> question: do we have to hardcode the elements parsed from the body?
+
+Do you mean hardcoding the _types_ of the elements? I think there are
+two kinds of "types". A type is plain text vs HTML, another is
+quote/"quote header"/footnote/etc. I guess if we just say there are these
+two kinds of types, the each processor would be free to process only
+certain types. (Of course one of these should have a different name;
+e.g. plain text/HTML could be "format" and quote/footnote/etc could be
+"type".)
+
+BTW, I would like to discuss more examples here before reading the
+source code that implements it. You are free to write prototypes, of
+course, but it is hard to read source code without knowing what it is
+doing. The best way to give that information is to document it; but if
+you don't feel like writing documentation yet, examples in this thread
+would be as helpful for me.
+
+== Processors and paragraphs ==
+
+>> - It seems to me that now we want only one layer between the
+>>  string->paragraphs-as-plain-text and finished-paragraphs->HTML. It
+>>  this correct?
+> 
+> Not necessarily -- but it'd be nice.
+
+Well, if you want a separate quote-processor, quote-header-creator,
+footnote-finder etc. then we will have more than one.
+
+My model in my brain was about how the body parsing will work:
+
+    create paragraphs # paragraphs = list of segments
+    for p in paragraphs:
+        if p is quote:
+            quote_process(p)
+        elif p is footnote:
+            process_footnote(p)
+        elif p is text:
+            process_text(p)
+        ...
+
+Your model is probably better though, in the way that it is much
+easier to extend:
+
+    create paragraphs # paragraphs = list of segments
+    for processor in processors:
+        processor(paragraphs)
+
+However, as this pseudo code snippet shows, probably the most
+important thing to get right is the format of the "paragraphs"
+list.

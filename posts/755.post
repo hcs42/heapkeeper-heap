@@ -1,0 +1,11 @@
+Author: Attila Nagy
+Subject: Post._header['tags'] should be a set
+Tag: issue
+Tag: reviewed
+Message-Id: <b29f917d0910221014j2c59ea02v78fe887c7e81e45f@mail.gmail.com>
+Parent: <4AE006AA.6050400@gmail.com>
+Date: Thu, 22 Oct 2009 19:14:01 +0200
+
+OK, but I think it should be carefully benchmarked. After the
+realization that strings are faster than constants, I think we
+shouldn't act instinctively.

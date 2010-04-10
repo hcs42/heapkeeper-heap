@@ -1,0 +1,13 @@
+Author: Attila Nagy
+Subject: New master
+Tag: repo
+Message-Id: <b29f917d0911010127g34894d68q83606279a1a3d63c@mail.gmail.com>
+Date: Sun, 1 Nov 2009 09:27:26 +0100
+
+I rebased _status on your new master.
+
+I would suggest that you integrate it into your master, then rebase
+_hcs on top of it, so that we would have fewer long branches.
+
+If you don't feel like doing it, I can do it for you. I will have to
+integrate the _star-flat-bugfix into it

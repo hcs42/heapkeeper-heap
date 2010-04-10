@@ -1,0 +1,10 @@
+Author: Attila Nagy
+Subject: Sphinx versions
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0905021340p7cf48cadu7428e9b6c7139c22@mail.gmail.com>
+Parent: <49FCA5FB.8020707@gmail.com>
+Date: Sat, 2 May 2009 22:40:23 +0200
+
+How exactly does this change affect us? What makes our current docs
+incompatible with the official release?

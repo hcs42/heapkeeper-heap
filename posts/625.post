@@ -1,0 +1,55 @@
+Author: Csaba Hoch
+Subject: The principle of expanding syntax; example
+Tag: prop
+Message-Id: <4ddb9e5b0910021008y56582d7o25b34dcb99b2e0e7@mail.gmail.com>
+Parent: <20091002142217.423ded03.nagy.attila.1984@gmail.com>
+Date: Fri, 2 Oct 2009 19:08:26 +0200
+
+>> Thus I formulate a basic principle which makes backward compatibility
+>> not so difficult to achieve. The basic principle of creating the
+>> syntax and semantics of posts should be the following. We have to make
+>> an initial ruleset that states clearly what is a syntactically and
+>> semantically correct post. The syntax and semantics of those posts
+>> should _never_ change. The way we can add more features: we change the
+>> ruleset so that posts there were previously syntactically or
+>> semantically incorrect will become correct. These posts refer to new
+>> features that were introduced with the change of the ruleset. The post
+>> syntax/semantics can evolve continuously, as we turn more and more
+>> previously incorrect posts to correct ones. Of course we will never
+>> run out of incorrect posts -- they are infinite in number.
+>
+> Well said. Let's call this the "principle of expanding syntax".
+>
+>> === Example of the principle not working ===
+>>
+>> I'll give an example that does not respect the principle.
+>>
+>> Consider we convert [http://link text] (\[http://.\{-}\]) into an
+>> HTML link, but we accept anything else as normal text. We release a
+>> version of Hk that works this way. Then we realize sometimes we want
+>> to write lines like this:
+>>
+>>     My favourite author is [http://en.wikipedia.org/wiki/Isaac_Asimov
+>>     Isaac Asimov, the genius.]
+>>
+>> But we can't go back without cheating, because we said this was a
+>> syntactically/semantically correct text already!
+>
+> I don't understand your example. How is the example line different
+> from \[http://link text]?
+
+It contains a newline character after the link and before the text. The pattern
+"[http://en.wikipedia.org/wiki/Isaac_Asimov\n Isaac Asimov, the genius.]" does
+not match the regexp \[http://.\{-}\], because '.' usually means "any
+character but
+newline".
+
+> Also what does "we accept anything else as normal text" mean?
+
+It means that if a text does not match the \[http://.\{-}\] regexp,
+then we accept it
+as syntactically correct, usual, normal text. Since
+"[http://en.wikipedia.org/wiki/Isaac_Asimov\n Isaac Asimov, the genius.]" does
+not match that regexp, we would (in my example) accept it as normal,
+syntactically
+correct text.

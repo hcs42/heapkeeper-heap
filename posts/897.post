@@ -1,0 +1,16 @@
+Author: Attila Nagy
+Subject: Funny non-ascii character in commit message (2009-05-07 1192ed8)
+Message-Id: <b29f917d0911081108s56bc2adeif61dfd9f9a21cbf7@mail.gmail.com>
+Parent: <4AF701F0.7000808@gmail.com>
+Date: Sun, 8 Nov 2009 20:08:42 +0100
+
+> Quote from the commit message:
+>
+>    Some changes were introduced due to changes indirectly introduced
+>    during the change.  Namely, ˙˙Post˙˙'s ``htmlthreadfilename`` and
+>
+> What is that character around "Post"?
+
+It is U+02d9, and on the Hungarian keyboard, it can be typed by
+AltGr+8, while the backtick would be AltGr+7. So it's a simple typo,
+sorry about that.

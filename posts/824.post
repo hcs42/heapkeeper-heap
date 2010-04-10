@@ -1,0 +1,11 @@
+Author: Attila Nagy
+Subject: _star-flat-bugfix branch
+Tag: repo
+Message-Id: <b29f917d0910310058y5435abdye5bc942af8000353@mail.gmail.com>
+Parent: <4AEBE3D9.4040104@gmail.com>
+Date: Sat, 31 Oct 2009 08:58:57 +0100
+
+Thanks for the warning. In fact, I didn't want to include anything
+about the flat sections bug in that bug -- it seems like I based it
+off the wrong commit, or made a mistake during rebasing. I'll fix that
+now.

@@ -1,0 +1,20 @@
+Author: Csaba Hoch
+Subject: Email parsing problem
+Tag: issue
+Message-Id: <4ddb9e5b1001151620j3172ac73rda047327f85f01b4@mail.gmail.com>
+Parent: <4ddb9e5b1001151541s5e47f7e7ua5ca8c50845f3038@mail.gmail.com>
+Date: Sat, 16 Jan 2010 01:20:20 +0100
+
+I have solved the problem [1][2]. See more information in the commit message.
+
+We should write test cases for the email parser part of
+EmailDownloader, because we never know when will GMail change
+something again, and this is not an easy area. The programmer has to
+know the email format standard (RFC2822), the MIME standard (a bunch
+of RFCs), and the IMAP standard (RFC 3501) to understand other parts
+of EmailDownloader.
+
+[close]
+
+[1] hk repo/7017452
+[2] http://github.com/hcs42/heapkeeper/commit/4b173f7d64dc2b4202ce52d914333abf18e312b8

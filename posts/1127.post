@@ -1,0 +1,14 @@
+Author: Csaba Hoch
+Subject: Managing several heaps in Heapkeeper
+Tag: prop
+Message-Id: <4ddb9e5b1002100733xa14efaekaf12ae18a4b25117@mail.gmail.com>
+Parent: <20100210161224.c729645f.nagy.attila.1984@gmail.com>
+Date: Wed, 10 Feb 2010 16:33:42 +0100
+
+>> OK. Then we will have heap_id, post_id and post_name in code, and
+>> "heap id", "post id" and "post name" in text.
+>
+> heap://hh/1035 suggests that the final, implemented version does not
+> follow this. Am I right?
+
+You are right.

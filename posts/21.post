@@ -1,0 +1,16 @@
+Author: Csaba Hoch
+Subject: When to use tag and when meta text
+Tag: hh-conventions
+Date: Thu, 19 Mar 2009 18:18:07 +0100
+
+The advantage of using a tag over a piece of meta text is that it is
+easy to see how the tags are inherited.
+
+A rule of thumb: if the usual usage for a meta-thing is
+to be inherited by the posts' children, then it should be a tag;
+otherwise, it should be a metatext command.
+
+An application of this rule: "delthis" should be a tag and not a meta
+command when we start talking about something that should not be kept.
+
+[note] This text was moved from heap://hh/20.

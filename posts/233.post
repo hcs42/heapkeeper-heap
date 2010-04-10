@@ -1,0 +1,217 @@
+Author: Csaba Hoch
+Subject: Developing with Vim
+Tag: ppc
+Tag: vim
+Message-Id: <4ddb9e5b0905180353q7d739ef1oe0a5ce066bfbce99@mail.gmail.com>
+Parent: <49E2D6F2.4010703@gmail.com>
+Date: Mon, 18 May 2009 12:53:20 +0200
+
+I'm posting the current state of my customized Vim-Heapkeeper
+development environment.
+
+== .vimrc ==
+
+This underline feature is from Attis. I will still describe it, since
+this is a public heap.
+
+  " Underline:
+  "   Underlines the current line with the given character.
+  " Example:
+  "   Type this line:
+  "       something
+  "   Type the following command while the cursor is on that line:
+  "       :call Underline('-')
+  "   Now the line has been underlined with '-':
+  "       something
+  "       ---------
+  function! Underline(ch)
+     let len = strlen(substitute(getline("."), ".", "x", "g"))
+     normal o
+     call setline(".",repeat(a:ch, len))
+  endfunction
+
+  " Concrete mappings for Heapkeeper's documentation.
+  " ,<char><char> underlines the current line with <char>.
+  " <char> may be any of the followings: - = ^ " ' :
+
+  " to be used in *.rst:
+  noremap ,-- :call Underline('-')<cr>
+  noremap ,== :call Underline('=')<cr>
+  noremap ,^^ :call Underline('^')<cr>
+  noremap ,"" :call Underline('"')<cr>
+  " to be used in *.py docstring:
+  noremap ,'' :call Underline("'")<cr>
+  noremap ,:: :call Underline(":")<cr>
+
+== hk/auto.vim ==
+
+This file is automatically sourced by my vimrc when starting Vim from hk.
+
+  " List:
+  "   Lists the python files in the given directory and puts them into a new
+  "   buffer in the current window. When hitting ENTER on a file, Vim will jump
+  "   to that file, and the list-buffer will be deleted.
+  " Examples:
+  "   :List .
+  "   :List       " the same as 'List .'
+  "   :sp | List  " List in a new window
+
+  " The 'List' command delegates the call to the 'HCSList' function
+  command! -nargs=* List call HCSList("<args>")
+
+  function! HCSList(dir)
+      " new buffer
+      enew
+      " storing the id of this buffer (because later we should delete it)
+      let g:hcs_buffer_to_delete = bufnr('%')
+      " setting buffer settings
+      setlocal buftype=nofile
+      setlocal nobuflisted
+      setlocal bufhidden=hide
+      setlocal noswapfile
+      " calculating the directory to be listed
+      if a:dir == '' || a:dir == 's'
+          let dir = '.'
+      else
+          let dir = a:dir
+      endif
+      normal dd
+      " inserting the list
+      exec "r!ls ".dir." | grep '\.py$'"
+      normal gg
+      " mapping ENTER to jump to the file under the cursor and delete the buffer
+      noremap <buffer> <cr> gf:bd <c-r>=g:hcs_buffer_to_delete<cr><cr>
+  endfunction
+
+
+  " PyDiff:
+  "   Sets python-diff syntax highlight for the current file. python-diff means
+  "   that the syntax highlight is the python one, except for the + and - signs
+  "   in the beginning of the lines which will be blue and red. Useful when
+  "   reading a diff with a lot of Python code.
+  command PyDiff call PyDiff()
+  function PyDiff()
+      set ft=python
+      syntax match x1 '^+' | hi x1 guifg=blue gui=bold
+      syntax match x2 '^-' | hi x2 guifg=red gui=bold
+  endfunction
+
+
+  " HeapDiff:
+  "   Puts a failing test assertion into two separate lines so that it is easier
+  "   to stop the difference.
+  " Example:
+  "   $ ./test.py
+  "   ======================================================================
+  "   FAIL: test_TouchedPostPrinterListener (test_hkshell.Test__3)
+  "   ----------------------------------------------------------------------
+  "   Traceback (most recent call last):
+  "     File "/a/cp/python/heap/hk/test_hkshell.py", line 379, in test_TouchedPostPrinterListener
+  "       off=lambda: hkshell.remove_listener(
+  "     File "/a/cp/python/heap/hk/test_hkshell.py", line 363, in _test_TouchedPostPrinter
+  "       "['1']\n"])
+  "   AssertionError: ['1 post has been touched:\n', "['1']\n"] != ['1 post has beentouched:\n', "['1']\n"]
+  "
+  "   ----------------------------------------------------------------------
+  "   Ran 83 tests in 0.169s
+  "
+  "   FAILED (failures=1)
+  "   $
+  "
+  "   At this point, select this text with the mouse:
+  "     ['1 post has been touched:\n', "['1']\n"] != ['1 post has beentouched:\n', "['1']\n"]
+  "
+  "   Then switch to Vim and type ':HeapDiff'. Vim will open a new window that
+  "   contains the following:
+  "     ['1 post has been touched:\n', "['1']\n"]
+  "     ['1 post has beentouched:\n', "['1']\n"]
+  "
+  "   It is easy now to spot the difference.
+  command! HeapDiff call HeapDiff()
+  function! HeapDiff()
+      new
+      set nowrap
+      exec "normal \"*P"
+      %s/ != /\r/
+  endfunction
+
+  " PD:
+  "   Shows the modifications that were made to a file in one commit in a new
+  "   window. The diff context is 9999, so basically the whole file will be
+  "   shown with + and - signs. The best is to use it for Python files, since
+  "   currently it sets python-diff syntax highlighting (see the PyDiff command).
+  " Example:
+  "   The following command shows the modifications of hkrc_attis.py in commit
+  "   102f5fd:
+  "     :call PD("102f5fd", "hkrc_attis.py")
+  "   The whole hkrc_attis.py file is displayed, and some of the lines are
+  "   prefixed with + and - signs. These lines were modified by the commit.
+  command! PD call PD()
+  function! PD(commit, file)
+      new
+      exec "normal \<c-w>K"
+      exec "!git show ".a:commit."^:".a:file ." >tmp1"
+      exec "!git show ".a:commit.":".a:file ." >tmp2"
+      exec "r!diff -U 9999 tmp1 tmp2; echo"
+      PyDiff
+  endfunction
+
+  " FM:
+  "   Finds the definiton of a class or method in a Python buffer.
+  " Examples:
+  "   :FM Post            " class
+  "   :FM from_file       " method or function
+  "   :FM Post __init__   " method
+  command! -nargs=* FM call FM("<args>")
+  function! FM(arg)
+      let spaceplace = match(a:arg, ' ')
+      if spaceplace == -1 " the caller specified a class or a global fun
+          let name1 = a:arg
+          execute "silent /^ *\\(class\\|def\\) \\<" . name1 . "\\>"
+      else " the caller specified a class and a method
+          let classname = a:arg[0 : spaceplace - 1]
+          let methodname = a:arg[spaceplace + 1 : -1]
+          execute "silent /^ *class \\<" . classname . "\\>"
+          execute "silent /^ *def \\<" . methodname . "\\>"
+      endif
+      normal _
+  endfunction
+
+== ~/.vim/ftplugin/python.vim ==
+
+  " Insert '#' after I press ENTER in insert mode
+  setlocal fo+=r
+
+  " text width
+  setlocal tw=79
+
+  " Run test.py when I say :make, highlight the correct lines and enable me to
+  " jump to those.
+  set makeprg=./test.py
+  setlocal efm=\ \ File\ \"%f\"\\,\ line\ %l%m
+
+  " gD is normally "go to the definition of the global thing under the cursor",
+  " but it does not work for Python by default. With this mapping, it does.
+  noremap <buffer> gD ?\(def\<bar>class\) <c-r>=expand('<cword>')<cr>\><cr>
+
+  " inserting ````
+  nnoremap <buffer> <F2> "_yiwi``<esc>ea``<esc>
+  vnoremap <buffer> <F2> <esc>`>a``<esc>`<lt>i``<esc>
+  inoremap <buffer> <F2> ````<left><left>
+  " in insert mode you type: class<F3>, the result is :class:`<cursor>`
+  inoremap <buffer> <F3> :<esc>bi:<esc>Ea``<left>
+
+== ~/.vim/ftplugin/rst.vim ==
+
+  "text width
+  setlocal tw=79
+
+  " make
+  setlocal makeprg=make\ html
+
+  " inserting ````
+  nnoremap <buffer> <F2> "_yiwi``<esc>ea``<esc>
+  vnoremap <buffer> <F2> <esc>`>a``<esc>`<lt>i``<esc>
+  inoremap <buffer> <F2> ````<left><left>
+  " in insert mode you type: class<F3>, the result is :class:`<cursor>`
+  inoremap <buffer> <F3> :<esc>bi:<esc>Ea``<left>

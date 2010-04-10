@@ -1,0 +1,14 @@
+Author: Attila Nagy
+Subject: CSS files in the Hk repo should overwrite CSS files in the HTML directory
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0910290746i69be9dd3o1999fefe914537e2@mail.gmail.com>
+Parent: <4AE03249.5090505@gmail.com>
+Date: Thu, 29 Oct 2009 15:46:54 +0100
+
+> Now we don't overwrite the existing file; we assume that files in
+> the repo will not change, which is silly.
+
+I don't think that we assume the CSS won't change; I think we assume
+that the user will take care of propagating this change to the output
+directory, which, of course should be done automatically.

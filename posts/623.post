@@ -1,0 +1,25 @@
+Author: Attila Nagy
+Subject: Mysterious comment about underscore usage
+Tag: commit
+Message-Id: <20091002155635.7ef33956.nagy.attila.1984@gmail.com>
+Parent: <4A53A9BF.5010803@gmail.com>
+Date: Fri, 2 Oct 2009 15:56:35 +0200
+
+>     +    TODO: standardize underscore usage.
+> 
+> What do you mean by this?
+
+If you have a look at tha data attributes of GeneratorOptions, you see
+this:
+
+    indices
+    write_toc
+    shortsubject
+    shorttags
+    locallinks
+    always_active
+    ...
+
+Most of them are composed from two words, but some are just written
+together, some are separated by underscore. This is the situation I
+wanted to warn about.

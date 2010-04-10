@@ -1,0 +1,21 @@
+Author: Csaba Hoch
+Subject: Comments in commit messages
+Message-Id: <4AEC1412.6050004@gmail.com>
+Parent: <b29f917d0910301916p6535ac69o1e7047b150f7ee1f@mail.gmail.com>
+Date: Sat, 31 Oct 2009 11:40:18 +0100
+
+> I think you really should have mentioned the `enew` test case in the
+> commit message, it's great! A fine example of how to construct test
+> cases for those hard-to-test parts.
+
+Should we write things like this in the commit message? :)
+
+"Have a look at the test cases, they are great!"
+
+Or what did you have in your mind?
+
+I had thought about whether commit messages should mention test cases
+and documentation but then I decided that since they should be
+written all the time, there is no point in mentioning them. ("Test
+cases have been written to test the new feature.") Do you have a
+different opinion?

@@ -1,0 +1,78 @@
+Author: Attila Nagy
+Subject: Developing with Vim
+Tag: vim
+Message-Id: <20090731131334.129cc74d.nagy.attila.1984@gmail.com>
+Parent: <4ddb9e5b0905180353q7d739ef1oe0a5ce066bfbce99@mail.gmail.com>
+Date: Fri, 31 Jul 2009 13:13:34 +0200
+
+[todo Remove the ppc tag from this thread; why is it there?]
+
+Cool! This post has convinced me that not only there is much to learn
+about Vim, it is also worthy.
+
+> This underline feature is from Attis. I will still describe it, since
+> this is a public heap.
+
+When I designed this, I had no idea about rst, but now I see that rst
+is what really makes it useful.
+
+> == hk/auto.vim ==
+> 
+> This file is automatically sourced by my vimrc when starting Vim from hk.
+
+Does your .vimrc look for an auto.vim in whatever directory you launch
+Vim from?
+
+>   " List:
+>   "   Lists the python files in the given directory and puts them into a new
+>   "   buffer in the current window. When hitting ENTER on a file, Vim will jump
+>   "   to that file, and the list-buffer will be deleted.
+
+Wow, you essentially duplicated Vim's file explorer!
+
+>   " PyDiff:
+>   "   Sets python-diff syntax highlight for the current file. python-diff means
+>   "   that the syntax highlight is the python one, except for the + and - signs
+>   "   in the beginning of the lines which will be blue and red. Useful when
+>   "   reading a diff with a lot of Python code.
+
+Seems useful, I think I'll import it into my environment the next
+thing I do...
+
+>   " HeapDiff:
+>   "   Puts a failing test assertion into two separate lines so that it is easier
+>   "   to stop the difference.
+
+I had problems spotting small differences in asserts where both sides
+of the `!=` were longer than 5 screen lines. But I think it would
+have to be sorted out manually even with this.
+ 
+>   " PD:
+>   "   Shows the modifications that were made to a file in one commit in a new
+>   "   window. The diff context is 9999, so basically the whole file will be
+>   "   shown with + and - signs. The best is to use it for Python files, since
+>   "   currently it sets python-diff syntax highlighting (see the
+> PyDiff command).
+>   " Example:
+>   "   The following command shows the modifications of hkrc_attis.py in commit
+>   "   102f5fd:
+>   "     :call PD("102f5fd", "hkrc_attis.py")
+
+I like it. Elegant Git integration.
+
+>   " FM:
+>   "   Finds the definiton of a class or method in a Python buffer.
+
+Wouldn't it be nice to wire this to gD?
+
+> == ~/.vim/ftplugin/python.vim ==
+
+Many of these are new to me.
+
+>   " gD is normally "go to the definition of the global thing under the cursor",
+>   " but it does not work for Python by default. With this mapping, it does.
+>   noremap <buffer> gD ?\(def\<bar>class\) <c-r>=expand('<cword>')<cr>\><cr>
+
+Great!
+
+Thanks for your tips!

@@ -1,0 +1,49 @@
+Author: Csaba Hoch
+Subject: Sphinx versions
+Tag: prop
+Tag: reviewed
+Message-Id: <49FCB55A.3030609@gmail.com>
+Parent: <b29f917d0905021340p7cf48cadu7428e9b6c7139c22@mail.gmail.com>
+Date: Sat, 02 May 2009 23:04:26 +0200
+
+> How exactly does this change affect us?
+
+The bug is described in this thread [1]. Essentially it is the
+following. There is a macro-like facility in Sphinx which allows
+defining shorthands:
+
+    .. |Hk| rename:: Heapkeeper
+
+    |Hk| is a nice tool. I love |Hk|.
+
+It will be "precompiled to":
+
+    Heapkeeper is a nice tool. I love Heapkeeper.
+
+The problem is that it did work for plain text, but did not for other
+text objects like classes. So I could not write this:
+
+    .. |Post| rename:: :class:`Post <hklib.Post>`
+
+Which is very useful, since we have a lot of text like this:
+
+    A :class:`Post <hklib.Post>` object represents a post.
+    :class:`Post <hklib.Post>` is a very nice class.
+
+Which could be written just like this:
+
+    A |Post| object represents a post. |Post| is a very nice class.
+
+Fortunately the newest version fixes the bug, so I started writing
+stuff like this in the documentation. (See the beginning of
+hkshell.rst and the docstrings in hkshell.py).
+
+> What makes our current docs incompatible with the official release?
+
+The bugfix is not present in the official release of Sphinx yet.
+
+But don't worry - it turned out that installing Sphinx from the
+Mercurial repository is easier than installing from an official
+version stored in a zip file.
+
+[1] http://groups.google.com/group/sphinx-dev/browse_thread/thread/fa74333222db8435

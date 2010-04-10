@@ -1,0 +1,29 @@
+Author: Attila Nagy
+Subject: Ellipsis
+Tag: post syntax
+Tag: prop
+Tag: reviewed
+Message-Id: <20090531152245.f23c0b96.nagy.attila.1984@gmail.com>
+Parent: <4A227F85.3090001@gmail.com>
+Date: Sun, 31 May 2009 15:22:45 +0200
+
+> I often use `[...]` in quotes:
+> 
+>     > People I like:
+>     > [...]
+>     > - Asimov
+> 
+>     Yes, I like Asimov, too.
+> 
+> I think `[...]` should be a special bracket segment. I don't know
+> though what we should do with it. Maybe it could be converted to
+> simple text for now.
+
+I also use this notation, so it's a good idea.
+
+> Afterwards (with a slightly backward incompatible
+> solution) we may introduce another behaviour, e.g. it could link to
+> the original paragraph. (We could have a setting about turning off the
+> new behaviour.)
+
+OK, but how would you find the original paragraph?

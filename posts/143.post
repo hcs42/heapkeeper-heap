@@ -1,0 +1,11 @@
+Author: Attila Nagy
+Subject: git blame (62f6bee830 2009-04-27)
+Tag: commit
+Message-Id: <b29f917d0905020216r19e551e6pcbf573cd641712c8@mail.gmail.com>
+Parent: <49F76EE9.70904@gmail.com>
+Date: Sat, 2 May 2009 11:16:32 +0200
+
+> Sometimes I don't believe I wrote a piece of code until I use git blame...
+
+For me, it's much easier to remember my part of the code, since it's
+much much smaller...

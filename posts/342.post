@@ -1,0 +1,24 @@
+Author: Csaba Hoch
+Subject: Source code, test suite, documentation
+Tag: discussion
+Message-Id: <4A203897.1060508@gmail.com>
+Date: Fri, 29 May 2009 21:33:43 +0200
+
+[deltext Before answering, please read my next email.]
+
+Probably the most important product of a software project is the
+source code. However, the test suite and documentation are almost as
+important. Without a test suite, developers (us included) cannot be
+bold, because they don't know when they introduce a bug in a place
+where they don't expect. Without user documentation, people won't be
+able to use the software easily -- so they just won't use it. Without
+developer documentation, it will be hard for developers to find their
+way in the source code.
+
+Do you agree that we should aim for a test suite and a documentation
+that covers _all_ source code? I'm not saying it should not be allowed
+to add source code without tests or documentation. I'm saying that we
+should _aim for_ a complete test suite and documentation. We should
+consider an untested or undocumented function or class incomplete.
+
+What is your opinion on this?

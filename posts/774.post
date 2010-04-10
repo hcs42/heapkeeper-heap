@@ -1,0 +1,21 @@
+Author: Attila Nagy
+Subject: _bugfix and _hcs-bugfix branches
+Tag: git
+Tag: workflow
+Message-Id: <b29f917d0910240303p5eaf6ce9lfb089dd52ead13d1@mail.gmail.com>
+Parent: <4AE2CCD2.4010001@gmail.com>
+Date: Sat, 24 Oct 2009 12:03:57 +0200
+
+Yes, you are right that this is a problem.
+
+> Previously we talked about every branch having one person who is
+> responsible for the branch (unfortunately this discussion was in
+> Hungarian, and outside of UMS/hh).
+
+Was it on skype? It sounds reasonable, so we should write a proposal
+and make it official.
+
+> If you agree, I will take it apart: I will make a separate
+> _star-bugfix and a _hcs branch.
+
+OK. I am right now busy reading commits up to 0.3, so thanks for doing it.

@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: Mapping for removing trailing whitespace
+Tag: vim
+Message-Id: <4ddb9e5b1002070001r467a230fg5aad288acd3a20ec@mail.gmail.com>
+Parent: <4B6E72FB.20703@gmail.com>
+Date: Sun, 7 Feb 2010 09:01:21 +0100
+
+It is shown as one line even in GMail!
+
+So post should never have trailing whitespace.
+
+Sphinx documents don't need them either.

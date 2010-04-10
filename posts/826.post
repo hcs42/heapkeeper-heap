@@ -1,0 +1,48 @@
+Author: Attila Nagy
+Subject: Caching of next heapid
+Tag: discussion
+Message-Id: <b29f917d0910310212y430d259ay11dade33a681ad27@mail.gmail.com>
+Parent: <4AEBEB9A.7070608@gmail.com>
+Date: Sat, 31 Oct 2009 10:12:35 +0100
+
+> The code you gave it not equivalent to my code.
+
+OK, I wanted to replicate your code's function, at which I failed, but the
+result is not necessarily useless. This code is in the `_load_from_disk`
+method, so this difference matters only if you delete all post files from
+the mail directory, and do an `rl()`. Then, with your code, if you do an
+`enew()` and you had had 1234 posts, the new post will be '1235.post',
+with my code, it'll be '0.post'.
+
+I think we should throw away the current value of `_next_heapid` whenever
+a reload is performed, since "the disk knows better" which is the next
+heapid to use. Right now, there is a way `_next_heapid` and the "real"
+next heapid can get out of sync:
+
+    >>> postdb().all()
+    PostSet([<post '1'>, <post '2'>, <post '3'>])
+    >>> off('save')
+    >>> enew()
+    Post created.
+    <post '4'>
+    >>> enew()
+    Post created.
+    <post '5'>
+    >>> rl()
+    >>> enew()
+    Post created.
+    <post '6'>
+    >>> postdb().all()
+    PostSet([<post '1'>, <post '2'>, <post '3'>, <post '6'>])
+
+I think in this case, the last enew should create a post with the heapid
+'4' and not '6'.
+
+So, my newest version:
+
+   try:
+       self._next_heapid = max(heapids) + 1
+   except ValueError:
+       self._next_heapid = 0
+
+Do you think it would be important to preserve `_next_heapid` across a reload?

@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: Standardizing post references
+Tag: post references
+Tag: prop
+Message-Id: <4B65E0A3.5040506@gmail.com>
+Parent: <4B627355.6050202@gmail.com>
+Date: Sun, 31 Jan 2010 20:57:23 +0100
+
+Is it OK if references will not be printed in 0.4, only in 0.5?
+The _several_heaps branch (that will go into 0.5) contains a major
+refactoring, and I don't want to implement this feature both in the
+pre-refactoring and post-refactoring code.

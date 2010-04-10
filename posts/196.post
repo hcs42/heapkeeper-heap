@@ -1,0 +1,24 @@
+Author: Csaba Hoch
+Subject: Crazy GitHub commit emails
+Tag: github
+Message-Id: <4A06BB32.8030903@gmail.com>
+Date: Sun, 10 May 2009 13:32:02 +0200
+
+GitHub commit emails seem to be crazy, but I realized, what happened.
+The same commits are present in multiple commit emails, and it is what
+seems crazy at the first sight.
+
+The reason of this "crazy" behaviour is that when we merge a
+lot of changes into a thread (like the changes of "threads" into
+"master"), those changes will be included in the commit emails (no
+matter they were emailed us before).
+
+I think it is annoying, but there seems to be a reason behind this.
+A commit email belongs to exactly one branch. All changes to a branch
+are included in the emails that belong to that branch. This way, you
+can easily emulate "subscribing" to only a few branches, and you will
+see every changeset that goes into these exactly at the time they go
+there. If someone had been interested only in our master, he/she would
+have seen the improvements you implemented in the "threads" branch
+only when you merged "threads" into "master" and pushed this merge, so
+today at 11:18 (CEST).

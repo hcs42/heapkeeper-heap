@@ -1,0 +1,13 @@
+Author: Attila Nagy
+Subject: `enew` command should add the current date
+Tag: issue
+Tag: reviewed
+Message-Id: <b29f917d0910291048n45d7ffe5k2fd1e798e9327e85@mail.gmail.com>
+Parent: <4ddb9e5b0910290939l3776f19i2580b9e82d21d614@mail.gmail.com>
+Date: Thu, 29 Oct 2009 18:48:19 +0100
+
+> [...] it is not trivial to test features like this (we can't use the
+> system time when doing the test)
+
+I suggest replacing datetime.datetime.now() with a function that
+returns a constant timestamp for testing this.

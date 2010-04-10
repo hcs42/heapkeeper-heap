@@ -1,0 +1,15 @@
+Author: Attila Nagy
+Subject: Should the "reviewed" tag be part of the infrastructure?
+Tag: idea
+Tag: reviewed
+Message-Id: <b29f917d0905110555w391c2cc7w36513146a1b2fb4d@mail.gmail.com>
+Parent: <b29f917d0904170944o69310b0di9fbc88bd7b4a4398@mail.gmail.com>
+Date: Mon, 11 May 2009 14:55:57 +0200
+
+You already proposed a while ago [1] that it could be a flag.
+
+Right now, the whole flag mechanism exists because of deleted posts.
+But it is there, and it's a great place for those tags that have aged
+to the point of becoming part of the infrastructure.
+
+[1] heap://ums/302

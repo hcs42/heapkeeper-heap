@@ -1,0 +1,23 @@
+Author: Csaba Hoch
+Subject: Web page hosting
+Message-Id: <4A1704F7.7000705@gmail.com>
+Date: Fri, 22 May 2009 22:03:03 +0200
+
+Do you know free web page hosting services that also make us easy to
+buy a domain? (The domain will not be free of course.) I think of
+the homepage of Hk. We have only static HTML pages, that could be
+enough.
+
+For example with uw [1], the hosting and a domain would be 6000 HUF +
+VAT / year, i.e. around 37$/yr. But I know uw is not the best. Do you
+know alternatives?
+
+I had a look at Google Apps on how easy it is to store static web
+pages. I registered the "heapkeeper" Google App domain. Well, static
+HTML pages can be copied and shown, but I haven't manage to do it
+nicely: you have to write "/static/index.html" after the domain. [2]
+
+Csabi
+
+[1] http://www.ultraweb.hu/domainreg.jsp (Hungarian)
+[2] http://heapkeeper.appspot.com/static/index.html

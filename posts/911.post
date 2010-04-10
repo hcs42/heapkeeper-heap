@@ -1,0 +1,26 @@
+Author: Csaba Hoch
+Subject: Dependency on old Generator in hkcustomlib
+Tag: bug
+Message-Id: <4AFA4861.7090706@gmail.com>
+Parent: <b29f917d0911080621x427f9ea4v31507712f10e6ad@mail.gmail.com>
+Date: Wed, 11 Nov 2009 06:15:13 +0100
+
+I haven't considered it a bug, rather an issue.
+
+Currently both hkshell and hkcustomlib use hklib.Generator. The reason
+is that it haven't been tested and accepted by you :)
+
+When you finished the review and modified your hkrc and everything
+works, we will first modify hkshell and hkcustomlib to use the
+hkgen.Generator. (These have to be done at the same time in one commit
+I think.)
+
+In the last step we will remove the tests and source code of
+hklib.Generator. (Before that we should have a look at whether there
+is test code relevant for hkgen.Generator and transfer it.)
+
+But thanks for pointing out the fact that there is a dependency.
+
+There is a bunch of code in hkcustomlib (e.g. the date handling) which
+is unnecessary and not used by hkgen.Generator. These should be
+removed.

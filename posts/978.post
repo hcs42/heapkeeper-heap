@@ -1,0 +1,20 @@
+Author: Csaba Hoch
+Subject: Pre-commit-hook
+Tag: hk-dev-utils
+Message-Id: <4ddb9e5b0911291129j3c4e9dfci9e35db1a86a9b5d9@mail.gmail.com>
+Parent: <b29f917d0911290951l605eaed8k9936fc1b4f74a1d3@mail.gmail.com>
+Date: Sun, 29 Nov 2009 20:29:10 +0100
+
+> Is there a hook that fires when you push?
+
+Yes, the hook is called "update" [1].
+
+> And preferably fires for each commit to be pushed...
+> This would be beautiful, but I doubt Git supports it. Maybe we should
+> consider adding it, it would be a nice feature.
+
+It seemed to me that you can do anything in a commit hook, even things
+like examining each commit to be pushed separately. It's just that
+it's not trivial...
+
+[1] http://ftp.kernel.org/pub/software/scm/git/docs/v1.5.3.8/hooks.html

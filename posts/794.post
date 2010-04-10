@@ -1,0 +1,15 @@
+Author: Attila Nagy
+Subject: Convention about expected/real result
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0910290722i5e5a1e77i8fb9bc73692636e9@mail.gmail.com>
+Parent: <4AE016ED.3030903@gmail.com>
+Date: Thu, 29 Oct 2009 15:22:04 +0100
+
+> This way the test code would look like this:
+>
+>    self.assertEquals(
+>        real,
+>        expected)
+
+OK.

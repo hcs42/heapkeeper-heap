@@ -1,0 +1,17 @@
+Author: Attila Nagy
+Subject: Posts without message-id
+Message-Id: <b29f917d0908100117h2900fec6gbf347034b878c10c@mail.gmail.com>
+Date: Mon, 10 Aug 2009 10:17:26 +0200
+
+Some posts (the  do not have a Message-Id header.
+
+    $ grep -L "^Message-Id" *.post
+    x10.post
+    x11.post
+    x12.post
+    x13.post
+    x6.post
+    x7.post
+    x8.post
+
+Is this a problem?

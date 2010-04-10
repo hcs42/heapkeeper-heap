@@ -1,0 +1,38 @@
+Author: Csaba Hoch
+Subject: PostDB: walk_cycles method added (2009-10-03 6a610b6)
+Tag: commit
+Message-Id: <4B08EDB3.9000306@gmail.com>
+Parent: <b29f917d0911211213q1a8fb900i9ac7ea2fc24ca248@mail.gmail.com>
+Date: Sun, 22 Nov 2009 08:52:19 +0100
+
+>> PostDB.walk_thread walks over a given thread and yields non-flat post
+>> items. PostDB.walk_cycle walks over the posts in cycles and yields
+>> flat post items.
+> 
+> How about having one common `walk_postset` with having flat or
+> non-flat as a parameter? The only difference in the current
+> implementation is augmentation, which we agreed to phase out.
+
+No, you are wrong about "this is the only difference". Firstly, this
+is not a difference, and secondly, there are much more difference.
+
+1. The augmentation happens in hkgen, while these function are in
+   hklib. Although if we remove augmentation, we have to modify
+   walk_thread to yield object that are not used by them in the
+   future. So neither of these functions do any augmentation. (Are you
+   sure you are looking at PostDB.walk_thread and not
+   hkgen.Generator.walk_thread?)
+
+2. On a high level, these functions do similar things (walking and
+   creating post items) to different things (given thread
+   structure/posts in cycles in the post database) in a different
+   way. That's why they have similar names, but they are different
+   functions. Walking the structure is much more complicated than
+   walking the posts in cycles in a flat way. Just look at the
+   docstrings of the functions or their parameter list. I don't think
+   it would make any sense to make one function from them.
+
+That said, we could have a function that walks over a flat list of
+posts. That could be walk_postset or walk_postlist. That would also
+have different parameters, because that does not use a thread
+structure.

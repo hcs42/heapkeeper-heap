@@ -1,0 +1,11 @@
+Author: Csaba Hoch
+Subject: Grammatical error in _-branches
+Tag: workflow
+Message-Id: <4ddb9e5b0909142219h5a117626s7f8644dd71d6769@mail.gmail.com>
+Parent: <b29f917d0909140206g4b97f89fvb7c0f6e8b342c5d5@mail.gmail.com>
+Date: Tue, 15 Sep 2009 07:19:09 +0200
+
+Thanks for pointing this out! I mistakenly thought that your
+"Correction" commit was only about the correcting the commit message.
+My bad. Now it should be OK: everything is in my _hcs branch. I
+removed the other branches (_review, _e, etc.).

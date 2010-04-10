@@ -1,0 +1,14 @@
+Author: Attila Nagy
+Subject: Caching of next heapid leads to inconsequent behavior
+Tag: bug
+Tag: reviewed
+Message-Id: <b29f917d0910310705q7e8daa3bqfc771962612e30e5@mail.gmail.com>
+Parent: <4AEC10EE.1010100@gmail.com>
+Date: Sat, 31 Oct 2009 15:05:57 +0100
+
+> I think "next" functions are accepted to have side-effects. Have a
+> look at the iterator.next() function [1], which you use all the time
+> implicitly when writing for-loops.
+
+Thanks for the example. Good thing I implemented the extended
+next_heapid like this :)

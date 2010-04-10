@@ -1,0 +1,54 @@
+Author: Attila Nagy
+Subject: Body parsing - the what
+Tag: post syntax
+Tag: prop
+Message-Id: <b29f917d0905021657p2cd16492p34c37a593d40776b@mail.gmail.com>
+Date: Sun, 3 May 2009 01:57:56 +0200
+
+== The What ==
+
+Our TODO sums it up pretty well, so I'll copy its points here:
+
+* render URLs as links
+* render post metas as links
+** this may be obsolete
+* handle an inline link syntax
+** this'd be similar to MediaWiki's [http://url.com URL] link renaming mechanism
+* automatically add tags based on metas
+** e.g. if body contains <<<!todo X>>>, add "todo" tag, change meta to
+<<<todo X>>>
+* handle cites
+** this is probably one of the more challenging tasks
+** already discussed
+<<<!link>>>
+* automatic actions on metas
+** e.g. if body contains <<<!tagthreadtag unix>>>, add "unix" tag to
+whole thread, remove meta
+* show authors of quotes
+** this requires looking back in the list of parents by the depth of the quote
+** will probably ignore errorneous quote depth
+* the post’s HTML could contain the whole thread of the post below the
+post itself?
+** this would break our rule of dependencies; see Architecture
+<<<!link>>>
+* pre-references to yet non-existing posts
+** this is detailed in another post
+<<<!link>>>
+* hide known metas unless otherwise noted
+** probably an option
+* show unknown metas specifically
+** probably an option
+
+Other ideas:
+* the name of authors, and authors' names quoted should be totally ignored
+** I long sticked to my habit of keeping others quoted names in posts
+** this turned out to be a bad decision, since the names of current
+and previous authors are stored on the Heap
+<<<!link Hcs already warned me months ago, link it here.>>>
+** so, instead of cleaning up manually, let's just make Hk immune to
+this dated style
+* similarly, Hk could ignore email-ish quote introduction lines (e.g.
+Xyz <x@y.z> wrote:)
+* perhaps integrate with Wiko? enable
+** already discussed
+<<<!link>>>

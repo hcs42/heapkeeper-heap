@@ -1,0 +1,205 @@
+Author: Csaba Hoch
+Subject: Body parsing - the what - examples
+Tag: post syntax
+Tag: prop
+Message-Id: <4A1AFFC8.40609@gmail.com>
+Parent: <b29f917d0905241315n5ef45cf2v1308cf7286967713@mail.gmail.com>
+Date: Mon, 25 May 2009 22:30:00 +0200
+
+> <<<!todo Rather "do without">>>
+> 
+> A remark: we should pay attention to eliminating the "multiple quote
+> heads" we used earlier; these look like \[3,4].
+> 
+> == Cites ==
+> 
+> [!todo We should change "cite" to "footnote".]
+
+I guess this was the point where you were convinced to use brackets
+instead of the old meta syntax :) Seven lines earlier you used the old
+meta syntax, here you use a bracket segment.
+
+== Quotes ==
+
+>> The HTML probably will have the same recursive structure as the quotes
+>> in the segment list in your proposal. That's why I think it is easier
+>> to write the HTML generator if it can be recursive. (Although I don't
+>> want to see recursive functions in Hk if I don't have a guarantee
+>> about the length of the recursion.)
+> 
+> Here, you have a guarantee that the depth of the recursion will not
+> exceed the depth of the quotation, which I'd like not to exceed 20 in
+> any reasonable conversation.
+
+You don't know how long discussions our users will have on their heaps.
+
+>> All the other body processors that want to do something with quotes
+>> will be more complicated if they have to walk through the recursive
+>> structure of quote segments. Otherwise they can just do a loop on
+>> all segments.
+> 
+> Just as long as we don't want to do any complicated processing inside
+> the quotes. For example, if we want to interpret footnote headers
+> inside cites, that would be easier if the representation were
+> hierarchical.
+
+No, it would not be!
+
+An example:
+
+    >> Watch this: [1]
+    
+    > Or this: [1]
+
+    No, this: [1]
+
+    [1] http://no.this
+
+(Note: this email does not contain footnote-bodies for the
+footnote-heads in quotes.)
+
+The parsed version of this post would be the following according to my
+suggestion about non-hierarchical quote representation:
+
+    quote level  type     text
+    ------------------------------------------
+    2            text     'Watch this:'
+    2            bracket  '1'
+    1            text     'Or this:'
+    1            bracket  '1'
+    0            text     'No, this:'
+    0            bracket  '1'
+    ...
+
+After the footnote-processor (which may or may not be a different go):
+
+    quote level  type            text
+    ------------------------------------------
+    2            text           'Watch this:'
+    2            footnote-head  '1'
+    1            text           'Or this:'
+    1            footnote-head  '1'
+    0            text           'No, this:'
+    0            footnote-head  '1'
+    ...
+
+A function that creates HTML from given footnote head of given post: 
+(post.ancestor(n) returns the nth ancestor of a post. post.footnotes()
+returns the dictionary of footnotes, where indices are the keys and
+footnote bodies are the values.)
+
+    def footnote_head_to_html(post, footnote_head):
+        # post0: the post which defines the footnote
+        post0 = post.ancestor(footnote_head.quote_level)
+        footnote_body = post0.footnotes()[int(footnote_head.text)]
+        ... creating HTML from footnote_body...
+
+How much simpler can it get? It would be more difficult if we used
+hierarchical quotes.
+
+> But since we probably don't want to do this,
+
+I do :)
+
+> I'm being swayed towards flat representation. Simple representation
+> is probably better than simple algorithm, at least that's what
+> Heapkeeper's evolution has been about so far.
+
+True, that could be one of our design principle. In this particular
+case, however, simple representation means simple algorithm.
+
+== Authors and signatures ==
+
+>> Why should we generate signature?
+> 
+> Ummm...
+> 
+>> Maybe we should not sign our emails at all and should not generate
+>> signatures in posts.
+> 
+> But since it wouldn't be hard, why not make it possible?
+
+Because it is not useful? :D
+
+Joke aside, if you would like to see this feature, go for it, as I
+said previously.
+
+== Itemization ==
+
+> I like your solution. It really is elegant, although at first I wanted
+> to argue against it, since it is somewhat arteficial, ie. the post
+> author must pay attention.
+> 
+> An addition: itemizations look neat with the non-first lines of an
+> item being indented by 2. Emacs or Vim can create these automatically,
+> but we should nonetheless recognize multiline items even if the
+> non-first lines are not indented, as it would make the life of those
+> using more simplistic editors unconfortable.
+> 
+> So I think this would also have to be valid:
+> 
+>    My favourite book writers:[-]
+>    - Isaac Asimov: he was born in the Soviet Union, but his family
+>    emigrated to the US when he was 3.
+>    - Richard Dawkins: he was born in Kenya as a son of British
+>    parents. They returned to England when he was 8.
+
+OK.
+
+== Quotes again ==
+
+>> I propose that we parse everything in quotes. (I suggested the exact
+>> opposite so far, but I think I was wrong. The concrete examples we had
+>> (meta text, cites) would not make too much sense to parse in quotes;
+>> but in general, there is a point in parsing them, and as we talk now,
+>> new and new text objects come up that must be parsed inside quotes.)
+> 
+> I am happy you came to this conclusion. But don't you think it
+> justifies hierarchical storing of quotes? If we parse a quote just
+> like a body, it should be stored the same way.
+
+It _is_ stored in the same way in my proposal. See above.
+
+(I have a feeling that you argued in your mail for hierarchical
+storing of quotes _before_ you actually read the end of my email where
+I explain how would I actually store quotes.)
+
+== Modularity, parser steps (was: Wiki-like headers) ==
+
+>>> Maybe the Dissector could be customized: by default, it'd create
+>>> all the text object you've mentioned, but they could be turned off
+>>> individually.
+>>
+>> We don't have to be _that_ modular. If Dissector creates these blocks,
+>> we can say Dissector is one module. It should not be more then one
+>> screen of "real" code -- why should we modularize that?
+> 
+> OK by me. But what would we do if the Dissector creates Quote segments,
+> and the Parser stack contains no module to process them?
+
+*Sigh*. There are no "quote segments". See again above and in my
+proposal on what segments do I envision.
+
+== Posts we have ==
+
+>> We do have a lot of meta text now. If/when we all agreed that the
+>> body parsing should be done according to my proposal and implemented it
+>> that way, I suggest replacing all '^<<<' with '[' and all '.>>>$' with
+>> ']' in the posts.
+> 
+> I think we should do this change only manually. Sounds too drastic to
+> do in one move.
+
+OK: UMS yours, Hh mine :)
+
+Just kidding. We will see if we want to have some automatism when we
+have done a few posts by hand.
+
+== Conclusion ==
+
+> My conclusion: we made a rational choice when choosing the "<<< >>>"
+> syntax for metas. It was a careful choice made on no practical
+> experience. Now we have the experience to make the move to a more
+> simple solution.
+
+Well said!

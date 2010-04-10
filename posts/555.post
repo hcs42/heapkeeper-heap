@@ -1,0 +1,108 @@
+Author: Attila Nagy
+Subject: Splitting threads with multiple topics per post
+Tag: idea
+Message-Id: <b29f917d0908300548k5b267405s27a2eea84428c2d1@mail.gmail.com>
+Date: Sun, 30 Aug 2009 14:48:49 +0200
+
+[!todo Consider breaking thread, keeping only reference.]
+
+We've all seen it happen. In a homogenous thread, a totally different
+topic is mentioned through the course of several posts, but mixed with
+the "normal" content of the thread. At one point, this new topic gets
+recognized, and replied in its own subthread, at which point it can be
+safely split off into a new thread easily. But the part where the two
+topics are mixed needs strenous manual labor.
+
+An example:
+
+  <101>   Attis   Fallout
+    <102>   Csabi   Fallout, nuclear weapons
+    <103>   Attis   Fallout, radiation sickness
+      <104>   Csabi   Radiation sickness
+      <105>   Attis   Radiation sickness, cats
+        <106>   Csabi   Radiation sickness, cats
+          <107>   Attis   Radiation sickness, cats
+            <108>   Csabi   Radiation sickness
+            <109>   Csabi   Cats
+              <110>   Attis   Cats
+                  <111>   Csabi   Cats, rats
+
+This is how the thread looked when it was downloaded from IMAP. The
+obvious first move would be to split <109> off (i.e. changing its
+"Parent:" header line to "Reference:" once it's implemented, now make
+it into a "reference" meta). But the alternative topic is still there
+in posts 105 to 107!
+
+Now an imaginary procedure follows, which I think would be the best
+(= most comfortable) solution to this problem.
+
+You enter this in Hkshell:
+
+    >>> split(105, 107, 'cats', 'x')
+
+Now nasty voodoo magic happens inside Hk, and the user gets a Vim
+window like this (keep in mind, this is not final, only an artist's
+concept of what it could look like):
+
+(View this in fixed width font!)
+
+ +-------------------------------------+----------------------------+
+ |Author: Attis                        |Author: Attis               |
+ |Parent: 103                          |Parent: 103                 |
+ |Subject: Radiation sickness, cats    |Subject: cats               |
+ |                                     |                            |
+ |Symptoms of radiation sickness...    |cats                        |
+ |                                     |~                           |
+ |Multiply the dose by 9 for cats.     |~                           |
+ |105.post-[+]-------5,1------------All+x9.post-[+]--------4,0-1-All|
+ |Author: Csabi                        |Author: Csabi               |
+ |Parent: 105                          |Parent: x9                  |
+ |Subject: Radiation sickness, cats    |Subject: cats               |
+ |                                     |                            |
+ |> Symptoms of radiation sickness...  |cats                        |
+ |                                     |~                           |
+ |Ouch.                                |~                           |
+ |                                     |~                           |
+ |> Multiply the dose by 9 for cats.   |~                           |
+ |                                     |~                           |
+ |Cats are lucky.                      |~                           |
+ |106.post-[+]-------5,3------------All+x10.post-[+]-------3,13--All|
+ |Author: Csabi                        |Author: Csabi               |
+ |Parent: 106                          |Parent: x10                 |
+ |Subject: Radiation sickness, cats    |Subject: cats               |
+ |                                     |                            |
+ |>> Symptoms of radiation sickness... |cats                        |
+ |>>                                   |~                           |
+ |> Ouch.                              |~                           |
+ |                                     |~                           |
+ |If you get bone marrow...            |~                           |
+ |                                     |~                           |
+ |> Cats are lucky.                    |~                           |
+ |                                     |~                           |
+ |I once knew a cat that...            |~                           |
+ |107.post-[+]-------13,25----------All+x11.post-[+]-------3,13--All|
+ +------------------------------------------------------------------+
+
+Now the user can view each message, and, for each one, move the lines
+dealing with the alternative topic into the right-hand side window.
+The "cats" line acts as a boilerplate or reminder to the user about
+the topic of the newly-created thread (to prevent confusion of the old
+and new thread's topic).
+
+The new thread's filenames (and heapids) are formed by taking the
+prefix given as the 4th parameter, and finding the next free number
+available. We've discussed the advantages of this feature before.
+
+By default, the split thread shares the same parent as the original.
+If the user doesn't want this, as in this case, all they have to do is
+change the first new post's "Parent:" line to "References:" (or now to
+a "reference" meta).
+
+What we need to have this working:
+- mechanism to track the subthread specified
+- Vim sorcery to throw up this complicated window setup
+- mechanism to find the next free filename
+
+Other than that, this command would be similar to `e()`, i.e. it
+should reload the affected posts from the disk once the editor has
+exited.

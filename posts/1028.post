@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: Test case for sorted_list may be insufficient
+Tag: issue
+Tag: test
+Message-Id: <4B51700A.6030407@gmail.com>
+Parent: <4AFFDDC0.2080909@gmail.com>
+Date: Sat, 16 Jan 2010 08:51:38 +0100
+
+[assign Csabi]
+
+During the implementation of the "multiple heaps" feature, I wrote
+a decent test. I will close this issue when I committed this.

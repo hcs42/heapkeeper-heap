@@ -1,0 +1,37 @@
+Author: Csaba Hoch
+Subject: Post not marked as touched when changed via rl()
+Tag: issue
+Message-Id: <4ddb9e5b1002141448g65dd8f1em760e70dea31b5bf3@mail.gmail.com>
+Parent: <20100214071153.93f2a563.nagy.attila.1984@gmail.com>
+Date: Sun, 14 Feb 2010 23:48:48 +0100
+
+> The problem is that doing an `e()` or an `sS()` or many other kinds of
+> operations marks the thread as "touched", but `rl()` does not. This
+> means that its thread HTML will not be regenerated.
+
+I made a fix:
+
+http://github.com/hcs42/heapkeeper/commit/667e17db93e03030d254735eea43820450492ce2
+
+I have tried it out, but not very thoroughly. Does it work for your scenarios?
+
+> This is how `rl()` should work:
+> - load post from file into a temporary post object,
+> - see if there is a post with the same heapid in the postdb,
+> - if there is, compare, and if not identical, set as touched,
+> - if there is no post with the same heapid, set as touched,
+> - add the post to the postdb (replacing existing one, if any).
+
+This is how `rl()` works now:
+- see if there is a post with the same post id (former heapid) in the postdb
+- if there is no post with the same heapid, read it into a new post
+  object and add it to the post database
+- if there is, parse it, and compare the parsed header and body to the
+  header and the body of the post, and if they are not identical,
+  update the header and the body of the post, and set it as touched
+
+The PostDB.load_heap function is a bit more complicated, but the other
+stuff does not have to much to do with the post touching.
+
+This fix is on the _0.4 branch, but you can cherry-pick it without
+problem on _several_heaps.

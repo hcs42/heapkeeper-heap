@@ -1,0 +1,14 @@
+Author: Attila Nagy
+Subject: Section is_flat refactoring
+Message-Id: <b29f917d0905121210n47a4ee22n25e14aae475c9c38@mail.gmail.com>
+Date: Tue, 12 May 2009 21:10:45 +0200
+
+I have changed Section's is_flat option. Previously, a section could
+be either threaded or flat for the values False and True,
+respectively. Now there are three types: threaded (the default), flat
+and a new type, minimal. A minimal section only displays the root of
+each thread that has at least one post in the section.
+
+Question is: where should I put it? I don't want to push it to master
+right away, and somehow I don't really feel like creating a thread --
+this change doesn't seem significant enough for that.

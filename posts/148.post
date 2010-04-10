@@ -1,0 +1,24 @@
+Author: Attila Nagy
+Subject: Bible of Python
+Tag: python
+Message-Id: <b29f917d0905020733j5b14b7a1x84391923d85a5c1d@mail.gmail.com>
+Parent: <49FC4736.3000908@gmail.com>
+Date: Sat, 2 May 2009 16:33:49 +0200
+
+> I don't think there is a book that has that role. The documentation is
+> the most obvious candidate, that's what I always almost use. The best
+> (free) Python book is probably the one called Dive Into Python [1].
+
+Yes, I used that as an introduction, too, but I think it is far from
+the perfection of a Bible. I don't really know what it lacks. A Bible
+is at the very same time serious and easy to read.
+
+I've read a only bit more than a hundred pages of Stroustrup's book,
+and I think it has the language use that is perfect for a professional
+Bible. Much, much better than K&R's book, despite K&R being native
+English speakers (to the best of my knowledge). Programming in Lua is
+also fantastic.
+
+(Perhaps we prefer non-native writers because we aren't natives
+either? Well, if I remember correctly, Dive Into Python is written by
+an Indian.)

@@ -1,0 +1,37 @@
+Author: Attila Nagy
+Subject: Body parsing - the how
+Tag: post syntax
+Tag: prop
+Message-Id: <b29f917d0905080616m272e54b3o59d986424fb033c@mail.gmail.com>
+Parent: <b29f917d0905071540s12cbc52fx48e376bf00377b90@mail.gmail.com>
+Date: Fri, 8 May 2009 15:16:45 +0200
+
+In the simplest form, such a modular framework does nothing else
+besides keeping a list of processing modules and iterating over this
+list and call upon all the modules to do their specific processing. In
+this model, a processing module is simply a function that takes a
+string and returns the complete HTML representation of the body as
+another string. Despite its simplicity, most of the tasks we want to
+do during the body parsing can be achieved with such a model.
+
+However, what we aim for is more than what this approach can handle,
+in at least two ways:
+* we need to be able to access the post and the post database, while
+parsing the bodies
+* the separation of already processed (HTML) and still unprocessed
+(raw) parts of the body have to be distinguished
+
+For this, I propose to keep the body throughout the individual stages
+of processing in a special structure, which is a list of segments.
+Each segment consists of a string and a flag to indicate if that
+particular segment is in HTML or in plaintext.
+
+When the processing starts, the framework class puts the whole body
+into a single segment. Then, the very first module would break it up
+into paragraphs, and add each paragraph as an individual segment into
+a new list, with these segments all still flagged as plaintext.
+
+At the end of the pipeline, the last module finishes the parsing by
+calling Html.encode() on any remaining plaintext segments. Then, the
+framework joins these plaintext strings to create the final HTML
+output.

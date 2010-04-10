@@ -1,0 +1,109 @@
+Author: Attila Nagy
+Subject: Body parsing - the how
+Tag: post syntax
+Tag: prop
+Message-Id: <b29f917d0905081230h18f7ab16yfb4b8a34471ee0e9@mail.gmail.com>
+Parent: <4A0463BB.2010007@gmail.com>
+Date: Fri, 8 May 2009 21:30:20 +0200
+
+> Keep in mind that we want to use meta things also as properties of the
+> posts. We don't only use them to create the post pages.
+
+Of course. Maybe I dived into implementation a bit early, the
+semantics of 'automatic processing' and 'acting on a meta' should have
+been more elaborated.
+
+> We want to be able to do something like this:
+>
+>    >>> ls(postdb().collect.has_meta('todo'))
+>    ...
+>
+> or this:
+>
+>    def todos():
+>        for post in hkshell.postdb().collect.has_meta('todo'):
+>            print "%s: %s" % (post.heapid, post.get_meta('todo'))
+>
+>    >>> todos()
+>    1: change the subject of this thread
+>    5: add this to the previous post
+
+Yes. Your examples further emphasize the need for body processing to
+be present elsewhere, not just in Generator's context.
+
+> We also want these to be automatically processed: IIRC, we agreed that
+> a meta that starts with '!' should be automatically processed (after a
+> maintainer's approval).
+
+And of course, the semantics of '!'.
+
+>> * the separation of already processed (HTML) and still unprocessed
+>> (raw) parts of the body have to be distinguished
+>
+> I don't really understand why. But you don't have to answer it now if
+> it is just a feeling that we will need that.
+
+I think I can explain. Suppose we want to decorate all occurences of
+authors' names in a special manner, e.g. surround them with @'s, but
+only in the original text of the posts, not in the generated output.
+Now we'll have to somehow keep track of the already processed or
+unprocessed parts of a partly composed body, since we don't process in
+one go, but in multiple passes.
+
+Pass 1: add the author's name before each quote.
+Pass 2: decorate mentioned names
+Pass 2: escape HTML and finish
+
+Before pass 1:
+
+    > I think Attis is right on this.
+
+    Josh, what do you say?
+
+Before pass 2:
+
+    <div id="quoteheader">Attis wrote:</div>
+    > I think Attis is right on this.
+
+    Josh, what do you say?
+
+Before pass 3:
+
+    <div id="quoteheader">Attis wrote:</div>
+    > I think @Attis@ is right on this.
+
+    @Josh@, what do you say?
+
+After pass 3:
+
+    <div id="quoteheader">Attis wrote:</div>
+    &gt; I think @Attis@ is right on this.
+
+    @Josh@, what do you say?
+
+This is what we want to happen. First, we don't want to decorate the
+name inside the div. Secondly, and this is much more important: we
+have to HTML-escape the quote introduction, but we mustn't escape the
+same character in the HTML part. Therefore, I imagined a partly
+processed body as a sequence of blocks, each marked either as being in
+HTML or in plaintext.
+
+> What do you mean by "paragraph"? Probably the paragraph's definition
+> should go into the "what" thread.
+
+Yes, exactly.
+
+> - The current "body" attribute of the post should remain as it is, the
+>  list of segments and the HTML representation would be other
+>  objects (either data attributes (=data members) or local variables
+>  of some function)
+
+This is a very important question. I think it is directly related to a
+broader one: when should the processing happen? Also, it brings up the
+question: do we have to hardcode the elements parsed from the body?
+
+> - It seems to me that now we want only one layer between the
+>  string->paragraphs-as-plain-text and finished-paragraphs->HTML. It
+>  this correct?
+
+Not necessarily -- but it'd be nice.

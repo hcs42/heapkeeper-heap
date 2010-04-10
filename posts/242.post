@@ -1,0 +1,106 @@
+Author: Csaba Hoch
+Subject: Heapkeeper version 0.3
+Tag: prop
+Tag: reviewed
+Message-Id: <4A11A8C1.8060500@gmail.com>
+Date: Mon, 18 May 2009 20:28:17 +0200
+
+== Current status ===
+
+What do you say to having a new release in a few weeks? Our last
+release was in 2009-02-17. We have implemented many improvements since
+then:
+
+- options pattern: GeneratorOptions, Section, Index, etc.
+- customization possibilities, creating hkcustomlib
+- hkshell: features (or settings), event handling, better handling of
+  arguments
+- thread printing
+- a lot of documentation, homepage
+- a lot of tests
+- Grand Renaming 1; most importantly, the name of the program has been
+  changed to Heapkeeper
+- adapting GPLv3
+
+(BTW, I was struck by how many of the current functionality we had
+back then. What we improved is mainly customizability, testability,
+usability, documentation, and administrative things like license,
+homepage, and new names for things.)
+
+== Heapkeeper 0.3 ===
+
+Heapkeeper 0.3 should contain the following things besides the
+improvements we currently have:
+- tutorial on Heapkeeper
+- screenshots
+- automatic copying of heapindex.css next to the HTML files
+- enew(heapid) command to create and edit a new post: this way the
+  tutorial can be performed without having real emails as posts
+- renaming In-Reply-To field to Parent in post files [1]
+
+I would like to do the first two, but it is also OK if I will do the
+other ones.
+
+== Later versions ==
+
+What about later versions? I'll write down a few things that is in my
+mind about them. Most of them are described in the Todo.
+
+These are not promises by any means, just plans about what we would
+like to do.
+
+=== Version 0.4 (summer?) ===
+
+- references
+  - "Reference" attributes in posts and post files
+  - commands that help splitting a post with keeping the old parent as a
+    reference
+- customization
+  - handling [open]/[close], [todo] specially
+  - custom post summary
+  - more comprehensive setting system (described in [2])
+- body parsing
+- support for using several heaps at the same time [3]
+- solving every problems that make it more difficult for anybody to
+  collaborate with us
+  - setting up the public heap/public mailing list
+  - docs on setting up the development environment
+    - git tutorial links
+    - how to download, install and use Sphinx
+  - getting a better domain (http://www.heapkeeper.org) and a better
+    host than uw
+  - not vital, but we should have logo by this time...
+
+I have collected many things into 0.4. Maybe it will be divided into
+two versions instead, we will see. I can't prioritize between these
+items now.
+
+=== Version 0.5 (end of summer, autumn?) ===
+
+- controlled execution of meta text (like [!delpost])
+- handling wiki-headers in posts
+- new tag/flag system
+- PostSetGrepDelegate (see Todo for more info)
+
+=== Things we should do continuously ===
+
+- code cleanup (e.g. using classes instead of dictionaries in
+  hkcustomlib)
+- documentation (user documentation, developer documentation,
+  docstrings)
+- play around with the web stuff (Google App Engine, Django, whatever)
+
+== Distribution ==
+
+I think we should have a download page on the Heapkeeper homepage [4].
+There is a download page on github [5], but our download page should
+contain more information, for example new features. (We could describe
+those in the commit message, but I want to have the right to change it
+later.) We could also distribute the corresponding HTML documentation
+in a zip file.
+
+[1] heap://hh/241
+[2] heap://hh/235
+[3] heap://hh/240
+[4] Currently http://hste.uw.hu/heapkeeper/index.html
+[5] Citation needed

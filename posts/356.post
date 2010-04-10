@@ -1,0 +1,16 @@
+Author: Csaba Hoch
+Subject: Wiki syntax: is the "wiki" bracket segment necessary?
+Tag: post syntax
+Tag: prop
+Message-Id: <4A222701.3090700@gmail.com>
+Date: Sun, 31 May 2009 08:43:13 +0200
+
+We have been writing a `[wiki]` bracket segment in the posts that has
+wiki syntax.
+
+But what is wiki syntax? We want to handle itemization, raw blocks,
+inline raw text, quotes, citations, etc. anyway. I think the only
+thing we included in wiki and excluded from normal posts are the wiki
+headers. But why not include them in normal posts? It is highly
+unlikely that people start a normal line with `==` by accident, and it
+is so unnecessary to write the `[wiki]` bracket segment all the time.

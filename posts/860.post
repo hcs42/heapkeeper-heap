@@ -1,0 +1,8 @@
+Author: Attila Nagy
+Subject: Creating sections in the new generator
+Tag: discussion
+Message-Id: <b29f917d0911011208i1d2ad057h5fc0a28cd08b6227@mail.gmail.com>
+Date: Sun, 1 Nov 2009 21:08:07 +0100
+
+If I think right, the way to add sections in `hkgen.Generator` is to
+subclass and override `print_main_index_page`. Am I right?

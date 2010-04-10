@@ -1,0 +1,19 @@
+Author: Csaba Hoch
+Subject: Optimization in Hk
+Tag: idea
+Message-Id: <4ddb9e5b0911190334l409d6334md3f3f4b6135b7222@mail.gmail.com>
+Date: Thu, 19 Nov 2009 12:34:57 +0100
+
+In case of the new Generator, I hope it's not the customizable/flexible
+architecture that will prove to be the bottleneck. That we can do some caching
+and regenerate e.g. only the affected part of the index page after modifying
+some posts. Currently regenerating the index is the bottleneck in my hh
+maintaining/tidying workflow.
+
+In case of initialization and post parsing, I don't know where to expect the
+bottleneck, I'm not sure it can be done significantly faster within Python.
+Maybe if we use loops instead of regexp, but I'm not even sure that would help,
+since the regexp engine is written in C, which can be faster then our Python
+loops. The one thing that I'm sure could help a lot is to rewrite the parser
+(hklib.Post.parse_header, currently 14 lines of Python code) in C. Maybe even
+the create_header function is a good idea to rewrite.

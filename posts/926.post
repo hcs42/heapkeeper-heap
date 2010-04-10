@@ -1,0 +1,11 @@
+Author: Csaba Hoch
+Subject: Touching deleted posts
+Tag: bug
+Tag: reviewed
+Message-Id: <4AFEF95E.2070704@gmail.com>
+Date: Sat, 14 Nov 2009 19:39:26 +0100
+
+When a post is deleted (and also touched by the delete method), the
+new Generator won't realize that is changed, because it examines only
+the non-deleted posts. Therefore it does not regenerate a thread page
+when a post is deleted from it.

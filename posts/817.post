@@ -1,0 +1,14 @@
+Author: Csaba Hoch
+Subject: _v0.3+
+Tag: issue
+Tag: reviewed
+Message-Id: <4AEBE1A9.3010305@gmail.com>
+Date: Sat, 31 Oct 2009 08:05:13 +0100
+
+The branch hcs42/heapkeeper/_v0.3+ contains only one commit which
+modified the Hk version number from v0.3 to v0.3+. I think the master
+branch should be merged into _v0.3+ and all other commits should be
+rebased onto _v0.3+ before merging them into the master. (I don't want
+to rebase them now.)
+
+Opinions?

@@ -1,0 +1,19 @@
+Author: Csaba Hoch
+Subject: Sentences that start with the name of a module, function, etc.
+Tag: prop
+Tag: reviewed
+Message-Id: <49FF4E9B.2040904@gmail.com>
+Date: Mon, 04 May 2009 22:22:51 +0200
+
+I think the names of programming objects should be written exactly as
+they are, without capitalizing them. For example you should not write:
+
+    Hklib is a nice module.
+
+But you should write:
+
+    hklib is a nice module.
+
+This is true for commit messages, documentation, etc.
+
+Do you agree?

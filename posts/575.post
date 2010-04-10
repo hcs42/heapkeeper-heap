@@ -1,0 +1,88 @@
+Author: Attila Nagy
+Subject: Return value of `dl()` in hkshell
+Message-Id: <b29f917d0909021527mc67a49cob82a376b392a1779@mail.gmail.com>
+Date: Thu, 3 Sep 2009 00:27:13 +0200
+
+This was Csabi's idea:
+
+>> == return value of dl() ==
+>>
+>> What do you say to having dl() return the set of downloaded posts?
+>> It would be nice for example from the tutorial reader's point of view
+>> to see what are the messages downloaded.
+
+And my response:
+
+> OK. Sounds useful.
+
+I implemented this idea today. I wanted it to work like this:
+
+    >>> new = dl()
+    Reading settings...
+    Connecting...
+    [...]
+    3 new messages downloaded.
+    >>> ls(new)
+    <101> Security breach at Bander's estate  Master Robot (29987.01.01)
+    <102> Security breach examined  RX-01 (29987.01.01)
+    <103> Urgent command  Master Robot (29987.01.01)
+
+I implemented it, but soon an unexpected surprise turned up:
+
+    >>> dl()
+    Reading settings...
+    Connecting...
+    [...]
+    3 new messages downloaded.
+    PostSet([<post  '101'>, <post '102'>, <post '103'>])
+    >>>
+
+Such an output is unexpected and looks horrible if there are hundreds
+of new posts downloaded, so it can't stay like this.
+
+The problem is trivial. In interactive mode, if an expression's value
+is not assigned to anything, it is printed. This can't be avoided to
+the best of my knowledge, but three solutions came to my mind, none of
+which are really elegant.
+
+== Using two commands ==
+
+Perhaps the most obvious solution. `dl()` would just download, `dlr()`
+would return the new posts in a `PostSet`. In the implementation,
+`dl()` could be a wrapper around `dlr()` that would swallow its return
+value, and return ``None``.
+
+The user can even implement this scheme in their hkrc file.
+
+== Using a parameter to control the returned value ==
+
+It works like this now:
+
+    >>> dl()
+    Reading settings...
+    Connecting...
+    [...]
+    3 new messages downloaded.
+
+    >>> new = dl(ps=True)
+    Reading settings...
+    Connecting...
+    [...]
+    3 new messages downloaded.
+    >>> len(new)
+    3
+
+== Using a parameter to receive the posts ==
+
+Simple and unobtrusive, but not very elegant.
+
+    >>> new = []
+    >>> dl(posts=new)
+    Reading settings...
+    Connecting...
+    [...]
+    3 new messages downloaded.
+    >>> len(new)
+    3
+
+Which one do we prefer?

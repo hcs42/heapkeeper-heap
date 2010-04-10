@@ -1,0 +1,20 @@
+Author: Community
+Subject: Issues
+Tag: hh-conventions
+Tag: prop
+Tag: reviewed
+Date: Fri, 23 Oct 2009 21:14:51 +0200
+
+=========
+WIKI PAGE
+=========
+
+We agreed on using the following tags for posts about issues:
+- bug: bugs
+- feature: new features or improving existing features
+- improvement: code improvement that do not provide new features (e.g.
+  caching)
+- issue: everything else about concrete parts of Hk
+- prop: proposals that not about concrete parts of Hk, but about
+  coding conventions, procedures, repository usage, workflows, heap
+  usage

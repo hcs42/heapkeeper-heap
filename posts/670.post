@@ -1,0 +1,19 @@
+Author: Attila Nagy
+Subject: Testing on Windows
+Tag: hk0.3
+Message-Id: <b29f917d0910161021s30f812a0se19b17bc7e790d0f@mail.gmail.com>
+Parent: <4ddb9e5b0910161011t5d0fcd01lec06bad7a0e8f3b1@mail.gmail.com>
+Date: Fri, 16 Oct 2009 19:21:02 +0200
+
+> [open]
+>
+>> How about making it a rule to always do a test on Windows before
+>> releasing a version?
+>
+> Good idea! The question is what is "doing a test".
+>
+> As for 0.3, I executed the automatic test and tried out enew() before
+> the release, but that was all.
+
+I guess the test suite has good coverage except for IMAP, so I think a
+dl() should also be tested on Windows before release.

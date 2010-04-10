@@ -1,0 +1,10 @@
+Author: Csaba Hoch
+Subject: Workflow: what to do with old branches
+Tag: workflow
+Message-Id: <4AACDD60.1080905@gmail.com>
+Parent: <4ddb9e5b0909110237u66ede9dau6fb42ca0fe0d6bb3@mail.gmail.com>
+Date: Sun, 13 Sep 2009 13:54:08 +0200
+
+What is your opinion, if you have a look at the heap? I have _e,
+_review and _custom-post-summary branches. Do they help you? For me,
+it would be easier if I just removed the first two.

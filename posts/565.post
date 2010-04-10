@@ -1,0 +1,83 @@
+Author: Attila Nagy
+Subject: Workflow with separate repositories
+Message-Id: <b29f917d0908311451n7b63ca64x4174571d2cc47197@mail.gmail.com>
+Parent: hh/527
+Date: Mon, 31 Aug 2009 23:51:46 +0200
+
+== Problems with our previous workflow ==
+
+The problems I can remember:
+- wrong author names and emails
+- no commits for releases 0.1 and 0.2
+- excessive amount of "motorways"
+
+All of this can be traced back to our ineptness with Git to a certain
+degree, but most of all the third one. I am ready to admit that I was
+slow to adopt Git, and also a bit lazy in bringing my skills up to a
+decent level.
+
+I think I would now be able to make a nicer job of handling the repo
+in the previous workflow, but I support moving to separate repos per
+developer. Git is still a pretty new technology. If a new developer
+arrives, we would have to be very lucky to get a Git pro. It would be
+much more probable that the newcomer is accustomed to working in a
+centralized system like Subversion. If we give them commit access,
+they will use our repo to practice, just like I did. Which would mean
+new commits with wrong names and a big mess of motorways. Offense is
+intended, but it also goes for me. I shouldn't have used the
+Heapkeeper repo as a sandbox.
+
+Another point: if a newcomer arrives, and wants to take part in the
+project, they will demand commit access. A developer wants commit
+access as a form of approval, and if I would still have commit access,
+he would regard himself as inferior. If no developer has other rights
+than what can safely be given to any newcomer, they will feel better.
+
+== The "real master" proposal ==
+
+> You don't have to answer if you accept not having a "real master" :)
+
+I am convinced that we don't need a real master. Maybe I would have
+been convinced in much less lines :)
+
+My strongest motivation towards a "real master" was the desire to keep
+a clean history. I never imagined that developers should follow it;
+they should follow the repo where things are happening. It doesn't
+make sense if the developers don't see what's happening, of course. I
+imagined that we should have a way to show a "clean history" to
+visitors, maybe to show them that we are experienced and careful
+developers. If the developers clone our repository, they also get the
+unstable "_" threads, which might be messy. Now that we fetch and
+rebase extensively instead of pulling, this is much less likely, of
+course, but I felt the need to show a clean history to visitors.
+
+> If your motivation for a "real master" is that than [!todo then] we
+> are allowed to rebase other public branches, I would advise you to
+> forget it.
+
+In my model, all branches in the "heapkeeper_" repositories would have
+been the equivalents of private remote threads of your model, and
+because of this, rebasing them would have been permitted.
+
+== Merge policy ==
+
+> When we discovered "git rebase", we were quite happy that we can get
+> rid of the motorways. It is true, it can help us, but don't get too
+> obsessed: don't use it for public branches. The rule of thumb is the
+> following: use rebase for local branches, and use merge for remote
+> branches. If we introduce the notion of private remote branches, we
+> may do rebase there. But otherwise we should keep ourselves from
+> rebasing published commits.
+
+Of course.
+
+== Feature freeze ==
+
+We could have feature freezes, but I have a slightly different idea.
+During a feature freeze, it would still be OK to implement new
+features in private remote branches, but during this interval, they
+wouldn't be integrated into the master. This means that those who
+track and use the master branch could find bugs, fix them and these
+fixes would be integrated into the master.
+
+Or am I missing what feature freeze is about?

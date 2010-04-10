@@ -1,0 +1,32 @@
+Author: Csaba Hoch
+Subject: Workflow: should we change the others' new changes?
+Message-Id: <4ddb9e5b0908242258g36425740j41b71c1029c959c6@mail.gmail.com>
+Parent: <b29f917d0908241434m5548d1bej397e15b2c41ff966@mail.gmail.com>
+Date: Tue, 25 Aug 2009 07:58:39 +0200
+
+> These are all about code. You can alter commits though: for example
+> you can join separate commits that belong together (eg. adf3980 and
+> e23aa8b (both IMAP), baf5227 and 9c73e08 (both plural)) . You could
+> use interactive rebase, and mark such commits for "squish".
+
+I have been using this all the time for a few weeks for my own commits :)
+
+> Since the code itself doesn't change, you can do this without redoing the tests.
+
+In this very special case when I squish two commits next to each other
+into one, probably it is OK. (Not counting the problem that I have to
+make one commit messages from two.)
+
+But if the commits were not parent and child, conflicts would emerge.
+Even worse, sometimes there is no conflict, but some intermediate
+commits does not work properly. So when I rebased my own commits
+(interactively), I executed the tests for all commits:
+
+$ git checkout <head of my working branch>
+$ for i in `seq 1 10`; do ./test.py; rm *.pyc; git checkout HEAD^; done
+
+(You have to do either "rm *.pyc" or "sleep 1" after the test, because
+otherwise the pyc may not be recompiled, since the timestamp (using
+seconds) may be the same. I experienced this problem: the tests failed
+at some point in the for-loop, but it turned out that some of the py
+files were not recompiled.)

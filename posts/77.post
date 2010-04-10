@@ -1,0 +1,33 @@
+Author: Attila Nagy
+Subject: RE: [hh][idea] Linking commits
+Tag: idea
+Message-Id: <49e26d52.0baa660a.687b.18b1@mx.google.com>
+Parent: hh/76
+Date: Sun, 12 Apr 2009 22:00:00 +0200
+
+<<<note From PocketPC's built-in Messaging app.>>>
+
+> Probably we should look for an extendable solution, because anyone
+> should be able to have their own syntax thingies.
+
+An intriguing idea. We need something like this for the auto-linking
+of URLs in the body. I suggest that we keep either a list of
+regexp-based transformation rules, or, probably better, a list of
+body-transforming functions for such purposes.
+
+> Maybe we should have something that tells the parser to parse that
+> word as a commit id.
+
+My idea would be to recognise the format "commit\s\+[0-9a-f]\+".
+
+A problem: we won't use all 40 digits of the SHA-1 hash, but github
+needs all of them in the URL. No really simple solution for this, I'm
+afraid. Manipulator will have to call on git to get the full hash from
+the short one.
+
+It should be easy to specify which repo to link to, perhaps w.r.t.
+tags. E.g. with any of the Heap tags present, commit IDs could link to
+the Heap repo, while commit IDs in posts tagged "linux" could link to
+relevant commits in the Linux repo.
+
+Attis

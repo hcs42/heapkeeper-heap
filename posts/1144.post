@@ -1,0 +1,30 @@
+Author: Csaba Hoch
+Subject: testhtml: Testing that generated HTMLs change only as intended
+Tag: hk-dev-utils
+Message-Id: <4ddb9e5b1002110015p2be597aes98c0c040097272c0@mail.gmail.com>
+Parent: <b29f917d1002110005w36699e38y7a54538a922d2b63@mail.gmail.com>
+Date: Thu, 11 Feb 2010 09:15:08 +0100
+
+>>> Sounds like a lot of work. Wouldn't it suffice to compare only with
+>>> the previous commit?
+>>
+>> I don't understand what you are saying. I compare every commit to its parent.
+>
+> I noted this because you demonstrated comparing 3 commits. Maybe the
+> script could have been simpler if it only compared two. But since you
+> already implemented it, it doesn't matter :)
+
+I think you don't understand what the script does. It is designed to
+compare a *sequence* of commits. Each commit in the sequence should be
+the child of the previous one. The script compares each commit in the
+sequence to the previous commit, so if you use it right, you will
+always compare a parent commit to a child commit.
+
+If you run the script twice, the second execution will delete the
+result of the previous one. Thus it was not OK to implement getting
+only two commits and compare those, and let the users call the script
+multiple times if they have more than 2 commits to compare.
+
+For me, it is a very common workflow that I create a sequence of
+commits, and then I decide to push all of them. This script can go
+through that sequence and check each commit against its parent.

@@ -1,0 +1,11 @@
+Author: Csaba Hoch
+Subject: Pylint
+Message-Id: <4ddb9e5b1002101142t79aaf73ei627976a6e567353a@mail.gmail.com>
+Parent: <b29f917d1002101131uab3001k88fe7943a7069daf@mail.gmail.com>
+Date: Wed, 10 Feb 2010 20:42:41 +0100
+
+> But, of course, good docstrings are at least as useful -- the only
+> difference is that docstrings are optional.
+
+Optional and not checked by any automatic mechanism, so a docstring
+may be obsolete.

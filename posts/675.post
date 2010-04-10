@@ -1,0 +1,9 @@
+Author: Attila Nagy
+Subject: Docstring tracking tool
+Tag: idea
+Message-Id: <b29f917d0910162338p10c81b3ft93ad29bc499639@mail.gmail.com>
+Date: Sat, 17 Oct 2009 08:38:01 +0200
+
+Maybe we could build a small tool to track the docstrings and point
+out functions lacking proper documentation. Maybe it could even be a
+Vim script. Do you think this would be useful?

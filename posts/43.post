@@ -1,0 +1,18 @@
+Author: Csaba Hoch
+Subject: "r" tag for revised posts
+Tag: hh-conventions
+Tag: prop
+Tag: reviewed
+Message-Id: <4ddb9e5b0903230902g3b35299bvc8d0e099652e3538@mail.gmail.com>
+Parent: <b29f917d0903230857g2e1d4edfk5878b238c9a76200@mail.gmail.com>
+Date: Mon, 23 Mar 2009 17:02:19 +0100
+
+> Do you think we can be certain that a given post or thread is "OK", so
+> that it needs no further editing? (This is not a rhetorical question,
+> "yes" is a perfectly acceptable answer.)
+
+I don't say it is sure that it does not need any futher editing; it
+say that the maintainer currently doesn't see anything that should be
+done. It is like commiting your code or pushing it to github: you
+don't say it doesn't have to be rewritten ever, but the fact that you
+commited it means that you think it reached a certanin quality.

@@ -1,0 +1,16 @@
+Author: Attila Nagy
+Subject: Renaming tag-manipulator commands
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0907190827w4109a3cbp2d27c88f7d7f41b5@mail.gmail.com>
+Parent: <4ddb9e5b0907190820p53ce02t80af608034f7134e@mail.gmail.com>
+Date: Sun, 19 Jul 2009 17:27:02 +0200
+
+> - Subject manipulator commands:
+>    - pS
+>    - sS
+>    - sSr
+>    - cS
+>    - cSr
+
+Can you remember why we decided to capitalize the letter S in these?

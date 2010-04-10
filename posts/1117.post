@@ -1,0 +1,12 @@
+Author: Attila Nagy
+Subject: Roadmap for v0.4 and v0.5
+Tag: prop
+Tag: v0.4
+Tag: v0.5
+Message-Id: <b29f917d1002091003m143b7eeexdfa47375860203f5@mail.gmail.com>
+Parent: <4ddb9e5b1002090955o3a3217dej9020709ff5f3b7c6@mail.gmail.com>
+Date: Tue, 9 Feb 2010 19:03:34 +0100
+
+So, if I understand correctly, the "only" new feature in 0.5 will be
+the multiple heap support (and of course the whole project of
+separating heaps, going public etc.)

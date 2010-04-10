@@ -1,0 +1,13 @@
+Author: Attila Nagy
+Subject: Separate hh from ums
+Message-Id: <b29f917d0908020142q63769bc2ke88f37d1b255bc0e@mail.gmail.com>
+Parent: <4A754903.3060702@gmail.com>
+Date: Sun, 2 Aug 2009 10:42:03 +0200
+
+> But I don't think we should separate the two heaps (i.e. post files
+> and git repositories) yet. We don't have the infrastructure for that.
+
+We have, but only as two separate installations of Hk, which I'm not afraid of.
+
+I'm interested in reading about your ideas, if you have the time to
+write about them.

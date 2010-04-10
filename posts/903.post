@@ -1,0 +1,19 @@
+Author: Attila Nagy
+Subject: Effort
+Tag: hh-conventions
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0911100908k760368f2x86bed7b8057c8623@mail.gmail.com>
+Parent: <4ADF407D.7070308@gmail.com>
+Date: Tue, 10 Nov 2009 18:08:17 +0100
+
+The only thing I don't like about this proposal is the syntax (not
+covered in the proposal, but the syntax of actual usage). You write
+metas like this:
+
+    [effort: 4]
+
+I don't like the colon. We said the first word is special in metas, so
+the colon is not necessary to separate the first word. (Of course if
+we say the name of the meta is "effort:" and not "effort", that's
+another matter.)

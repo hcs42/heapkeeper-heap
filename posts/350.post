@@ -1,0 +1,19 @@
+Author: Attila Nagy
+Subject: Preview
+Tag: post syntax
+Tag: prop
+Message-Id: <20090530110640.9c61e4c9.nagy.attila.1984@gmail.com>
+Parent: <4A20520B.9030804@gmail.com>
+Date: Sat, 30 May 2009 11:06:40 +0200
+
+> It would be nice to have a "preview" feature. When you compose a post,
+> you could say "show me this in HTML". The body parser would parse it
+> and the Generator would generate an HTML page. This should be done
+> without touching the mail database.
+
+Yes. With the post syntax getting more complex, this starts to make sense.
+ 
+> Hkweb could have a service that does this: you paste the body of post
+> into a textarea and it shows you a preview of the post page.
+
+How would you do this in hkshell?

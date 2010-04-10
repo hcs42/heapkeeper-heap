@@ -1,0 +1,16 @@
+Author: Csaba Hoch
+Subject: Test case for sorted_list may be insufficient
+Tag: issue
+Tag: test
+Message-Id: <4AFFDAC2.5080109@gmail.com>
+Parent: <b29f917d0911150233l5f910606gee4512aa79c2a2e1@mail.gmail.com>
+Date: Sun, 15 Nov 2009 11:41:06 +0100
+
+> [!todo break thread]
+
+It is broken for me... But since we want a reference for the former
+parent, could you write it down?
+
+> I think the test case `Test_PostSet__threads.test_sorted_list` is a no-op.
+
+What do you mean by no-op?

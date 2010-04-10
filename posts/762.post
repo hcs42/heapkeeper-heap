@@ -1,0 +1,23 @@
+Author: Csaba Hoch
+Subject: CRLF issues
+Tag: hk0.3
+Tag: windows
+Message-Id: <4AE1DF43.7030703@gmail.com>
+Parent: <4ddb9e5b0910161058t225da67bs39b2849e305a3e83@mail.gmail.com>
+Date: Fri, 23 Oct 2009 18:52:19 +0200
+
+> I think the canonical solution is to use the native EOL on all
+> systems and the tools (version control systems, email clients,
+> browsers, whatever) should do the translation.
+
+[effort 4]
+[version 0.5]
+[open]
+
+We should make the Post class to respect the native newlines of the
+OS.
+
+This would mean for example newline conversion when reading and
+writing post bodies. I think internally we should store only LF
+characters so that other Heapkeeper code does not have to care about
+what kind of newline to handle.

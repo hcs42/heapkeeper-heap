@@ -1,0 +1,19 @@
+Author: Attila Nagy
+Subject: List comprehension
+Tag: coding-convention
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0910230633ldf85321j7ea80c8dfba81911@mail.gmail.com>
+Parent: <4ddb9e5b0910230613y2fe731afn1e0a49c85fb5a69f@mail.gmail.com>
+Date: Fri, 23 Oct 2009 15:33:45 +0200
+
+> So far I have been writing list comprehensions this way:
+>
+>    [ x for y in z ]
+
+Me, too. It seems that our conventions differ from that of the general
+Python community. But they are conventions nonetheless. So we should
+decide which to follow. This question is made more difficult by the
+fact that I think it's a wiser choice to use whitespaces. It
+emphasizes that this is not an ordinary list, but a list
+comprehension, and that it should be read accordingly.

@@ -1,0 +1,24 @@
+Author: Csaba Hoch
+Subject: Renamings
+Tag: prop
+Tag: reviewed
+Message-Id: <49EA0A6C.1080308@gmail.com>
+Date: Sat, 18 Apr 2009 19:14:20 +0200
+
+What do you say to perform the following renamings:
+- MailDB -> PostDB
+- In general: heap*.py -> hk*.py
+- heapmanip -> hklib
+- heaplib -> hkutils
+- heapia -> hkshell
+- heapcustomlib -> hkcustomlib (better name?)
+- heapcustom (not in the repo) -> hkrc
+
+BTW, do you now what is "rc" in .vimrc, .kderc, etc?
+
+And to moving the following code:
+- heapmanip.Html -> current heaplib, proposed hkutils
+
+I think we should move Section, Index and Generator in the future, but
+I don't know where. It will depend on the implementation of the
+dynamic web pages. So I think we should leave them now as they are.

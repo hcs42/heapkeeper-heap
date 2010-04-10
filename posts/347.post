@@ -1,0 +1,14 @@
+Author: Csaba Hoch
+Subject: Preview
+Tag: post syntax
+Tag: prop
+Message-Id: <4A20520B.9030804@gmail.com>
+Date: Fri, 29 May 2009 23:22:19 +0200
+
+It would be nice to have a "preview" feature. When you compose a post,
+you could say "show me this in HTML". The body parser would parse it
+and the Generator would generate an HTML page. This should be done
+without touching the mail database.
+
+Hkweb could have a service that does this: you paste the body of post
+into a textarea and it shows you a preview of the post page.

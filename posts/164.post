@@ -1,0 +1,47 @@
+Author: Csaba Hoch
+Subject: Sentences that start with the name of a module, function, etc.
+Tag: prop
+Tag: reviewed
+Message-Id: <49FFEEA7.2020706@gmail.com>
+Parent: <b29f917d0905042156k1bbfb2a7v7ac9e5c004720d97@mail.gmail.com>
+Date: Tue, 05 May 2009 09:45:43 +0200
+
+> We already have many commit messages in the repo that are capitalized.
+
+And there are much more that are not capitalized.
+
+> Thus, we have to choose between being consistent with these or with
+> the code.
+
+Have a look at the commit messages. You are being consistent with most
+of them and with the code at the same time: if you don't capitalize
+them.
+
+> Why is it that important to keep capitalization consistent with the
+> code? Of course, Python is case-sensitive, but my guess is that we'll
+> never make use of this feature,
+
+We do! We have a lot of variables called "post". Just two examples:
+
+    $ grep 'post = Post' *.py
+    hklib.py:                    post = Post.from_file(absname, heapid, self)
+    hklib.py:        post = Post.create_empty()
+
+> AND the commit messages will always be aimed at human readers.
+
+I, as a human reader, would like to see a module's name with the right
+capitalization. If you read a thesis or an article in a programming
+topic -- it is aimed at human readers, but they don't capitalize
+variables' name. That would be simply confusing.
+
+> Thus, a message like:
+> 
+>     Hklib: corrected bugs
+> 
+> won't make anybody go and grep for a code element called 'Hklib' with capital H.
+
+Why not? How does a reader know whether it is a class or a module? We
+don't have a rule that the first word is a module. Maybe we will write
+at some point:
+
+    Generator: new methods gen_thread and thread added

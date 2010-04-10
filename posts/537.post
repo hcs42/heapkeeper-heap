@@ -1,0 +1,18 @@
+Author: Csaba Hoch
+Subject: Heapkeeper version 0.3
+Tag: prop
+Tag: reviewed
+Message-Id: <4A91ABC0.1030507@gmail.com>
+Parent: <4A11A8C1.8060500@gmail.com>
+Date: Sun, 23 Aug 2009 22:51:12 +0200
+
+What do you say to having a 0.3 release soon, without announcing it
+anywhere? I would not include fastdownload and my current ls
+improvement. Neither would it have my current work (custom post
+summary), nor multiple heaps. We would have it just so that we can
+have a milestone, and if people read the project homepage after
+releasing 0.4, they will see how we progressed in a more fine grained
+scale. They will see that we made a new release in every couple of
+months.
+
+So I propose releasing my current master branch.

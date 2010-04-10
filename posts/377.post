@@ -1,0 +1,45 @@
+Author: Attila Nagy
+Subject: Problem with quoted raw lines
+Tag: post syntax
+Tag: prop
+Message-Id: <20090605222520.e342ccce.nagy.attila.1984@gmail.com>
+Parent: <20090518011928.99444ebf.nagy.attila.1984@gmail.com>
+Date: Fri, 5 Jun 2009 22:25:20 +0200
+
+All this time we've been missing a rather obvious problem.
+
+We defined a raw line as beginning with a whitespace, and a raw line
+as beginning with at least one quote leading character, ie. '>'.
+
+However, we _always_ wrote quoted normal lines (that is, quoted
+non-raw lines) starting with '> '.
+
+This means the naive approach to trim any number of '>'s from the start
+of the lines, and then check if the remainder starts with a whitespace
+character or not, fails miserably, since all lines will start with
+whitespace once stripped of the '>'s.
+
+Therefore, I recommend the following rules for parsing:[-]
+- if the line starts with a '>':
+    - the line is part of a quoted segment
+    - get and count all the '>'s, and strip them from the string
+    - if the next character is a space, strip it
+    - continue to the next step
+- if the line (or what's left of it) starts with whitespace:
+    - strip exactly one space
+    - treat the rest as raw
+- else the line is normal, and part of a paragraph
+
+To sum it up, this:
+
+    >hello
+
+would be normal, quote level 1, this:
+
+    > hello
+
+would also be normal, quote level 1, while this:
+
+    >  hello
+
+would be raw, quote level 1.

@@ -1,0 +1,42 @@
+Author: Attila Nagy
+Subject: heapid mismatch bug
+Message-Id: <b29f917d0908101345r33b4193fu5bc59f45f5c169f@mail.gmail.com>
+Parent: <4ddb9e5b0908101240n28c2415ey63b4433ef854309f@mail.gmail.com>
+Date: Mon, 10 Aug 2009 22:45:22 +0200
+
+== Problem ==
+
+>    -From: Attis
+>    +Author: Attis
+>     Subject: Subjects should start with capital
+>       letter
+>    +
+>     Tag: hh
+>     Tag: hh-conventions
+>     Tag: prop
+
+OK, I noticed just now. I wanted to tell you about it, but you were quicker :)
+
+>> The second half of the thread is not the same. This means two things:
+>> - the thread summary is generated differently in these cases,
+>> - there is a bug in the download mechanism, and duplicate posts are
+>>   in the database
+
+But it's still strange that generating the thread summary for a single
+post and a thread page is different.
+
+== Solution ==
+
+> Nevertheless, the ugly subjects have to be fixed. And your repository have to
+> be fixed with its duplicate posts. I advise you to do the following:
+> - Go to the head of my repo that I just sent in a non-heap email.
+> - Create patches for aa62fbc0c8 and 2a20faccdf5d. Remove the downloading part
+>  (as opposed to the tidying part) of the latter.
+> - Apply them to the head of my repo.
+
+OK.
+
+> As far as I saw, you did not edit newly downloaded posts, which would make us
+> much harder to merge our repos and fix the problems.
+
+Yes, my tidying efforts haven't yet reached that point, luckily.

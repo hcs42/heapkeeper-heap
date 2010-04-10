@@ -1,0 +1,216 @@
+Author: Csaba Hoch
+Subject: "hklib: optimized IMAP downloading" (2009-08-17 e23aa8b83d)
+Tag: commit
+Message-Id: <4A8A3F19.3040300@gmail.com>
+Parent: <b29f917d0908162349ne8dcce4i7179b1fe7f8b1c92@mail.gmail.com>
+Date: Tue, 18 Aug 2009 07:41:45 +0200
+
+Nice job!
+
+I have some comments though.
+
+== If `emails` is "", don't do anything ==
+
+The old code contained the following code (hklib.py:1753):
+
+> -        emails = self._server.search(None, '(ALL)')[1][0].strip()
+> -        if emails != '':
+> -            for email_index in emails.split(' '):
+> -                ...
+
+Which was replaced by this (hklib.py:1757):
+
+> +        all_emails = self._server.search(None, '(ALL)')[1][0].strip().split(' ')
+> +        if len(all_emails) == 0:
+> +            log('Message box is empty.')
+> +            return
+
+This is buggy I think and will result in an exception when the mailbox
+is empty. ''.split(' '), returns [''] and not []:
+
+    >>> 'email1 email2'.split(' ')
+    ['email1', 'email2']
+    >>> 'email1'.split(' ')
+    ['email1']
+    >>> ''.split(' ')
+    ['']
+
+I don't think it is logical for split to return [''], that's why I
+checked the result of strip(). That way the produced code would be
+more readable, because the reader does not have to know that split('')
+returns [''].
+
+Please, fix the bug. (Or prove that the code is not buggy :) ) I leave
+it to you to decide whether you examine the result of `strip` or you
+compare the result of `split` to [''].
+
+== Other ==
+
+> +        emails = [mail for mail in all_emails if int(mail) >= lower_value]
+
+Could you put spaces around brackets that mark list generators? Like
+this:
+
+    emails = [ mail for mail in all_emails if int(mail) >= lower_value ]
+
+Also, I would call the `mail` variable `email`.
+
+> +        emails_imap = ','.join(emails)
+> +
+> +        log('Checking...')
+> +
+> +        result = self._server.fetch(emails_imap,
+> +                                    '(BODY[HEADER.FIELDS (MESSAGE-ID)])')[1]
+> +        raw_messids = [result[2*x][1] for x in range(len(emails))]
+
+Same here with the spaces. Also, the convention in Python (and in many
+other languages) is to write "2 * x" and not "2*x".
+
+Also, the convention is to call "unnamed" integer loop variables `i`.
+
+> +        messids = [email.message_from_string(s)['Message-Id']
+> +                   for s in raw_messids]
+
+Same here with the spaces.
+
+BTW, if you had to break it into lines, do it the way you just did :)
+
+Or another acceptable way is this:
+
+    emails_messids = \
+        [ (emails[x], messids[x]) for x in range(len(emails))]
+
+But the first one (yours) is usually more readable IMO.
+
+> +        emails_messids = [(emails[x], messids[x]) for x in range(len(emails))]
+> +
+> +        # assembling a list of new messages
+> +        download_list = []
+> +        for index, messid in emails_messids:
+
+You can use the zip function so that you don't need the
+`emails_messids` variable:
+
+    for index, messid in zip(emails, messids):
+
+zip creates a tuple-list from two lists that have the same length:
+
+    >>> zip([1,2,3], ['a','b','c'])
+    [(1, 'a'), (2, 'b'), (3, 'c')]
+
+> +            post = self._postdb.post_by_messid(messid)
+> +            if post == None:
+> +                download_list.append(index)
+> +#            else:
+> +#                log('Post #%s (#%s in INBOX) found.' %
+> +#                    (post.heapid(), int(index) + lower_value))
+
+You can delete the `else` branch.
+
+> +        download_imap = ','.join(download_list)
+> +        num_new = len(download_list)
+> +
+> +        if num_new == 0:
+> +            log('No new messages.')
+> +            return
+> +        else:
+> +            log('%d new messages found.' % num_new)
+
+Maybe we need a hkutils.plural function so that you can write this:
+
+    log('%d new message%s found.' %
+        (num_new, (hkutils.plural(num_new))
+
+What do you think? I know it would be trivial (you basically
+implemented it a few lines below).
+
+If you feel like, please do it! But don't forget to document and test
+it :) This is a nice and simple function, where the documentation and
+testing are easy enough so that it is ideal for you to learn how to do
+them. Also, the documentation and testing module for hkutils are fine,
+they are both according to the current convention. This is
+unfortunately not true for hklib. [1] If you document hkutils.plural,
+you should also modify doc/hkutils.rst; you will see how. Another
+note: hkutils.plural's implementation should be a different commit
+from this one.
+
+> +
+> +        log('Downloading...')
+> +
+> +        result = self._server.fetch(download_imap,
+> +                                    '(BODY[TEXT] BODY[HEADER])')[1]
+> +        for n in range(num_new):
+
+Again, please use `i`.
+
+> +            text = result[n*3][1]
+> +            header = result[n*3 + 1][1]
+
+Again, "n * 3" (or rather "i * 3" :) )
+
+> +            post = self.parse_email(header, text)
+> +            self._postdb.add_new_post(post)
+> +#            log('Post #%s (#%s in INBOX) downloaded.' %
+> +#                (post.heapid(), download_list[n]))
+
+You can delete the comment.
+
+> +        log('%d new message%s downloaded.' %
+> +            (num_new, 's' if num_new > 1 else ''))
+
+== parse_email ==
+
+What do you say to creating a static Post.from_email method, which
+would contain much of the code of EmailDownloader.parse_email? The
+only code that cannot be simply placed into Post.from_email is the end
+of EmailDownloader.parse_email:
+
+
+    if self._config.has_section('nicknames'):
+        for entry, author_regex in self._config.items('nicknames'):
+            [author, regex] = \
+                self._config.get('nicknames', entry).split(' ',1)
+            if re.search(regex, post.author()) != None:
+                post.set_author(author)
+                break
+
+The best solution I can come up with is that the Post.parse_email
+sets the author of the post as it finds in the email, and
+EmailDownloader.parse_email sets it afterwards to the nickname.
+
+You don't have to do this refactoring if you don't feel like. And even
+if you do it, it should be a separate commit from the previous
+improvement. This also implies that you can fix the improvements of
+current commit, I will pull from you, and later you may do this
+refactoring.
+
+== return value of dl() ==
+
+What do you say to having dl() return the set of downloaded posts?
+It would be nice for example from the tutorial reader's point of view
+to see what are the messages downloaded.
+
+It could be useful in other ways, too:
+
+    >>> new = dl()
+    ...
+    >>> ls(new)
+    ...
+    >>> cat(new)
+    ...
+
+Again: you may do it if you feel like, and it should be a separate
+commit :)
+
+== git branches ==
+
+What do you think, which branch should I pull your commit into, when
+I think it's "perfect"? It seems that master should be used for this.
+Do you agree?
+
+I think I will make another branch, which you can review before I
+merge them into master. Shall it be named "experimental", "exp",
+"slave", "hcs", or something else?
+
+[1] I guess I got Python disease: whenever I see "true", I want to
+correct it to "True".

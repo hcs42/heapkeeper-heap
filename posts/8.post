@@ -1,0 +1,30 @@
+Author: Csaba Hoch
+Subject: Indices, sections, posts, and HTML generated from them
+Tag: prop
+Tag: reviewed
+Message-Id: <49B3F6F5.5040804@gmail.com>
+Date: Sun, 08 Mar 2009 17:48:53 +0100
+
+The HTML files generated from indices, the HTML files generated from
+threads, and HTML files generated from posts should be totally
+independent from each other and any other generated HTML file.
+This could be one of the Key Design Principles of Hk.
+
+Hk would become complicated if we wired those kind of dependencies.
+
+But I have another, stronger argument. Generating the HTML pages for
+all posts takes 4 seconds now. It will be longer in the future, due to
+generating real HTML with divs and everything (not just pseudo-HTML
+with <pre> tags as now), the more flexible customization system, and
+the larger number of posts. If we implemented the dependencies, that
+would increase the generation time even more, and more importantly, it
+would make it necessary to generate all posts all the time.
+
+I plan to implement a system in hkshell, which would allow us to
+regenerate the HTML files only for the posts that has been changed.
+(Or whose thread has been changed, I'm not sure about that.)
+Implementing this should be relatively easy, and it would save a lot of
+time; but it would not be usable if we had index-post dependencies.
+
+In web server version, I'm not against such dependencies; we will talk
+about that in the future.

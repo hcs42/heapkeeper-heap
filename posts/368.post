@@ -1,0 +1,28 @@
+Author: Attila Nagy
+Subject: Html output for multilevel itemizations
+Tag: post syntax
+Tag: prop
+Message-Id: <20090601085736.1522aec8.nagy.attila.1984@gmail.com>
+Parent: <4A222B18.8070201@gmail.com>
+Date: Mon, 1 Jun 2009 08:57:36 +0200
+
+>> How about a special meta for nonregular itemization marks? This
+>> could be "*", for example.
+>> 
+>>     Good:[-]
+>>     [* a.] Authors:
+>>     [* aa.] Asimov
+>>     [* ab.] Stapledon
+>>     [* b.] Drinks:
+>>     [* ba.] Coffee
+>>     [* bb.] Tea
+> 
+> And what HTML would you generate from that?
+
+This can be done using nothing but HTML and CSS. See the example in the CSS
+standard:
+
+http://www.w3.org/TR/CSS2/generate.html#scope
+
+(Now really, if CSS can support such sophisticated expressions, why
+isn't simple algebra like "width: 50%-300px;" supported?)

@@ -1,0 +1,24 @@
+Author: Csaba Hoch
+Subject: testhtml: Testing that generated HTMLs change only as intended
+Tag: hk-dev-utils
+Message-Id: <4ddb9e5b1002101257p78842971wd1c32a48faf4f80e@mail.gmail.com>
+Parent: <20100210213300.bfa789b3.nagy.attila.1984@gmail.com>
+Date: Wed, 10 Feb 2010 21:57:32 +0100
+
+>> I plan to execute the testhtml script on every commit that I push,
+>
+> Sounds like a lot of work. Wouldn't it suffice to compare only with
+> the previous commit?
+
+I don't understand what you are saying. I compare every commit to its parent.
+
+>> It accepts only SHA1 ids as commit messages. It would be nice if it
+>> accepted any commit id (e.g. HEAD), but that's a job for someone else :)
+>
+> It's easy: `git rev-parse` does exactly that: you give it a revspec,
+> it prints the hash, like this:
+>
+>    $ git rev-parse HEAD^^^
+>    1a2b3c4d...
+
+Thanks, I should use this.

@@ -1,0 +1,14 @@
+Author: Attila Nagy
+Subject: Heapkeeper's version number in the documentation
+Message-Id: <b29f917d0907250630t657f7620sc50ba856855f107c@mail.gmail.com>
+Parent: <4A6A8E84.2080304@gmail.com>
+Date: Sat, 25 Jul 2009 15:30:31 +0200
+
+> What do you mean by "documentation root"?
+
+It says in the topmost navigation bar:
+
+        Heapkeeper v0.3uc documentation » Developer’s Guide
+
+So, it seemed to me that the version number is part of the name given
+to the root node of the documentation.

@@ -1,0 +1,8 @@
+Author: Attila Nagy
+Subject: Sorting posts
+Tag: issue
+Message-Id: <b29f917d0911150224u774d6823vcd3a814d649b92a2@mail.gmail.com>
+Parent: <4ADF40C6.4060806@gmail.com>
+Date: Sun, 15 Nov 2009 11:24:44 +0100
+
+I implemented this as `Post.__lt__`. It is now pushed to branch "_post-sort".

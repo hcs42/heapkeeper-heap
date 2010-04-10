@@ -1,0 +1,23 @@
+Author: Attila Nagy
+Subject: Using the "reviewed" tag
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0904170940s4d643d30o538d7f1b798702ad@mail.gmail.com>
+Date: Fri, 17 Apr 2009 18:40:06 +0200
+
+It is already a convention [1], that we tag any posts that require no
+further attention from the editors with a tag, and I thought this tag
+was [r].
+
+First, Csabi noted that "reviewed" might be a better word that
+"revised". I didn't answer this proposal back then, but now I strongly
+agree. Revised seems to suggest that it has also been changed, which
+is not necessarily true: the post can be marked "complete" by the
+editor the same way it entered the heap.
+
+Then, I looked into the matter, and saw that Csabi already tagged some
+posts with the "revised" tag.
+
+So, I propose the replacement of both [r] and [revised] tags with [reviewed].
+
+[1] heap://hh/9

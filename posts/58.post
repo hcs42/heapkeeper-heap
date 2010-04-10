@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: Documentation is accessible on the web
+Message-Id: <49D6FB9E.2090209@gmail.com>
+Date: Sat, 04 Apr 2009 08:18:06 +0200
+
+Hi,
+
+you can find Hm's documentation here:
+http://hste.uw.hu/heapmanipulator/html/index.html
+
+I wrote a script (and pushed it to github) that copies the locally
+generated documentation here.

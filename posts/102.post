@@ -1,0 +1,36 @@
+Author: Attila Nagy
+Subject: New design ideas
+Message-Id: <b29f917d0904180745g4bc69c34n32e8f9a846c7dd47@mail.gmail.com>
+Date: Sat, 18 Apr 2009 16:45:43 +0200
+
+I have to admit that I dislike the current web design of Heapkeeper's
+HTML output. I think I hurt nobody will take this as an offense, as it
+was me who designed our current CSS. However, I am partially color blind
+[1], which severely limits my abilities as a web designer. I'm sorry.
+
+I think I designed the color scheme using Agave (which is a great tool
+for people who are not very good with colors), and my vision was a desert
+sunset. (Rationale: I am fed up with blue as it is overused in visual
+designs, and I wanted simple and unobtrusive design.)
+
+But I screwed up. The current design is not only unobtrusive, but rather
+dull; and, what hurts more, there are serious legibility issues. The
+gray of the post ID's is not well readable, and the index and section
+headers also fail to guide your attention.
+
+As I lack the skill to do it right, I'll have to steal an existing design. I
+love green. And also love and use Vim. Vim's home page has a green-based
+design. What a coincidence, how about modeling our design after it?
+
+It's simple, but powerful, and we love it. (At least I do.)
+
+Besides, have you ever examined that site closely? Not a single div, it's all
+tables. Of course, Vim is all about sticking with the good things that have
+stood the test of time :)
+
+Besides, there is a repository of many open-source designs [2]. Most of those
+are provided on an attribution-mandatory license, but that's OK with us. (Of
+course we'd give credit to Bram if we decide to use his site as a template.)
+
+[1] http://en.wikipedia.org/wiki/Colorblindness#Red-green_color_blindness
+[2] http://www.oswd.org

@@ -1,0 +1,8 @@
+Author: Attila Nagy
+Subject: Caching of next heapid
+Tag: discussion
+Message-Id: <b29f917d0910310732y471740fexc1f8e849e761c07f@mail.gmail.com>
+Parent: <b29f917d0910310449w6e36539agece0c6b4ccfb6ee9@mail.gmail.com>
+Date: Sat, 31 Oct 2009 15:32:01 +0100
+
+OK, it is implemented now, and pushed to _next_heapid.

@@ -1,0 +1,130 @@
+Author: Attila Nagy
+Subject: Renaming the github repository to "heapmanipulator" (later "heapkeeper")
+Tag: ppc
+Tag: prop
+Tag: reviewed
+Message-Id: <49e2d53b.095c5e0a.0c8d.ffffc14b@mx.google.com>
+Parent: hh/81
+Date: Mon, 13 Apr 2009 08:02:14 +0200
+
+> The web interface, as I see it, will be the kind of interface to a
+> heap that doesn't exist today: a single interface to view and
+> manipulate the heap.
+
+> Yes. But heapia could display the posts, as well. The ls command is
+> the first step into that direction.
+
+You are right. We should keep the option of using a heap via command
+line only open as long as possible, ie. forever.
+
+>>> - a documented format for a mutable mailing list (called a heap)
+
+> Well... I'm not sure that the current format with many-many small
+> files is our final choice. We might even use database tables to store
+> the posts. Especially in the web-Hm. Maybe we will have two formats:
+> - internal, efficient representation: database tables
+> - external, human-readable, easy-to-parse, exportable and importable
+> representation: the current mail file format, XML or YAML.
+
+I like this idea. Still, a heap will be a documented format, one of a
+set of possibilities: mailfiles, XML, YAML, SQL... 
+
+A possible roadmap:
+1. Mailfile-based Hk with static HTML output (nearing completion, only
+   lacking body parsing, as I see it)
+2. Mailfile-based Hk with Web interface
+    - at this point, we'll very probably need a single server (back to
+      Shrek?)
+    - this will probably be the end of the distributed Git two-way
+      pulling storage mechanism (not necessarily, though, we could
+      have a discussion on this)
+3. SQL-backed Hk with Web interface (with Mailfiles/XML/YAML
+   import/export capability)
+
+> For me "heap" is not a concrete format but rather an abstract one.
+> Like the expression "mailing list". The difference is that a heap
+> has posts instead of emails, and it has tags and meta text. (There
+> may be more differences, that's not the point.) The similarity is
+> that both have parent-children relationships, and threaded structure
+> based on these. Neither "heap" nor "mailing list" say how the
+> posts/emails shall be stored: they are just abstract concepts.
+
+Thus, we have two things called 'heap':
+- the idea of an editable mailing list and the associated terminology
+- the syntax and semantics of header elements which I think will be
+  independent of the storage mechanism
+
+Should we distinguish these?
+
+> - a library for editing of said list (called Heapmanipulator)
+> - a simple interactive interface for said library (called Heapia)
+
+> I don't think of these as separate programs. Maybe when the web-Hm
+> is ready, we will have to think of them as separate entities. On the
+> other hand, we don't want to confuse users by telling them about a
+> bunch of different names when actually what now exists is just one
+> traditional software program and nothing else
+
+> Similarly, we could say we have a program called Hm, which has a
+> console and a web interface, end of story.
+
+For that, the name 'Heapkeeper' (abbr. Hk) would be best.
+
+> I think the users would be most happy with that solution.
+
+We are not yet at the point where we'd have 'ordinary' users ignoring
+implementation details. Though, of course, it is our goal to have them
+:)
+
+> Now the philosophy is that git is one program with many subcommands
+> (e.g. "git commit", "git checkout"), and invoking "git-commit" is
+> deprecated. The Unix philosophy with orthogonal tools is a good one,
+> but one should use it only when appropriate -- and in most cases it
+> is not. It is not appropriate in git's case and it is not
+> appropriate in our case.
+
+Avoiding "bin pollution" via subcommands and Unixish tool
+orthogonality are orthogonal. You can (should) retain access to
+junction points in the plumbing behind the uniform shining porcelain,
+like git has. Eg. you have pull, but you still have fetch. (Is it a
+good example? You're much better at Git than I am.)
+
+>> - a Web-based interface for the same library (no name yet; Heapweb?
+
+> Well, if the name of the console interface is heapia, the name of the
+> web-interface could be heapweb.
+
+Agreed then.
+
+> So my proposal is having only these concepts that require a name:
+> - "heap": the abstract structure and the database that stores it
+> (regardless of the method of storage).
+> - "Heapkeeper": the name of the whole program, the name of the
+>  project, the name of the website, the name of the repository, the
+>  name of the mailing list -- sorry, the name of the heap :D
+> - "heapia" or "interactive console interface": the console interface
+>  of Heapkeeper. The user will think it is the "./heapia" shell script
+>  (or heapia.bat for windows users...), or it is at least started by
+>  that script.
+> - "heapweb" or "web interface": modules that allow using Heapkeeper
+>  via the web. Since we don't know how we will do this, we don't know
+>  if this will be one module like heapia, or many modules, or even
+>  some XML files, or something else.
+
+OK.
+
+>Shall we call our program Heapkeeper then? Of course it will be
+>abbreviated as Hk. (Which is better than Hm.)
+
+Hmm. This takes us back to the suit/non-suit problem above. What
+binary(ies) or command(s) exactly do you propose to be called
+Heapkeeper?
+
+> If yes, then I will rename the github repository to "heapkeeper".
+> I'll create a heapkeeper.heap GMail account and a heapkeeper-heap
+> Google Group (although I think we won't use it until Hk supports
+> managing multiple heaps.)
+
+The project name should be changed. What do you want to use these new
+addresses for? Is this the new name for the place we want to migrate
+the hh-part of the present-day Heap?

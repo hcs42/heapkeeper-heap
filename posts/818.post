@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: _star-flat-bugfix branch
+Tag: repo
+Message-Id: <4AEBE3D9.4040104@gmail.com>
+Date: Sat, 31 Oct 2009 08:14:33 +0100
+
+Attis,
+
+you seem to have ignored my corrections on the _star-flat-bugfix
+branch. You cherry-picked your "hklib: stars in flat sections bug
+fixed" commit onto the _hcs branch, creating the branch _has_tags, but
+you have not squashed my "Correction" commit into it.

@@ -1,0 +1,12 @@
+Author: Attila Nagy
+Subject: Body parsing - the how
+Tag: post syntax
+Tag: prop
+Message-Id: <b29f917d0905071540s12cbc52fx48e376bf00377b90@mail.gmail.com>
+Date: Fri, 8 May 2009 00:40:55 +0200
+
+== The How ==
+
+It seems to me that body parsing aims to do many things. Because of
+this, I propose a modular system where the body parser is handed a
+list of parsing modules which are then executed one after another.

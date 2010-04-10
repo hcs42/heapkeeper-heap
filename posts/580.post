@@ -1,0 +1,74 @@
+Author: Csaba Hoch
+Subject: EDITOR variable
+Tag: git
+Tag: issue
+Tag: reviewed
+Message-Id: <4AA4ABFD.2060201@gmail.com>
+Date: Mon, 07 Sep 2009 08:45:17 +0200
+
+I have a problem with the EDITOR environment variable.
+
+In the _e branch I have a commit, which is not the perfect solution.
+
+== Before ==
+
+Before the commit, we just do this:
+
+    subprocess.call(editor.split() + files)
+
+This has a problem for example with this EDITOR variable:
+
+    $ export EDITOR="gvim -c 'setf mail'"
+
+Because `editor.split()` is this:
+
+    ["gvim", "-c", "'setf", "mail'"]
+
+So this is what we called if we had 2 files:
+
+    subprocess.call(["gvim", "-c", "'setf", "mail'", file1, file2])
+
+Btw, "git commit" has the same problem, it does not work with 
+EDITOR="gvim -c 'setf mail'". But I want Hk to handle this better,
+git's incapability should not be an excuse.
+
+== After ==
+
+Now (after applying the commits of the _e branch) we do this instead:
+
+    quoted_files = [ ("'%s'" % file) for file in files ]
+    subprocess.call(editor + ' ' + ' '.join(files), shell=True)
+
+Which handles the previous case correctly:
+
+    subprocess.call("gvim -c 'setf mail' '" + file1 + "' '" + file2 + "'")
+
+But it fails if a file contains a quote character. For example if
+we have one file which is called "a'b", this will be the function
+call:
+
+    subprocess.call("gvim -c 'setf mail' 'a'b')
+
+== Another solution ==
+
+I came up with another solution:
+
+    quoted_files = [ ("'%s'" % re.sub("'", "'\"'\"'", file))
+                     for file in files ]
+    subprocess.call(editor + ' ' + ' '.join(quoted_files), shell=True)
+
+The trick it does is the easier to see using the a'b example. It
+replaces every ' with '"'"', so for example it replaces a'b with
+a'"'"'b. The list comprehension will put the file name between quotes,
+so the whole file name of a'b will be expressed like this:
+
+    'a'"'"'b'
+
+Which expands nicely to "a'b".
+
+I have two problems:
+- Is it a proper solution? Can we expect this to work everywhere?
+(Especially where not sh is the default shell.)
+- Don't we have a better way to do this? Using double quote instead of
+single quote and escaping a bunch of characters with backslash (i.e.
+writing "a\'b") is not a better one, IMO.

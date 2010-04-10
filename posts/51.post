@@ -1,0 +1,115 @@
+Author: Csaba Hoch
+Subject: Commit threads
+Tag: prop
+Tag: reviewed
+Message-Id: <49C7FD7D.90805@gmail.com>
+Parent: <b29f917d0903230943h5f9b1c47ne23000f86c9cf437@mail.gmail.com>
+Date: Mon, 23 Mar 2009 22:22:05 +0100
+
+>> - `sha` is the first 10 characters of the SHA1 ID. Or should it be
+>>  less?
+> 
+> With 5 digits, you have 16^5 = 2^20 = 1048576 different hashes.
+
+Why do you take 16 as a base? A SHA character can be either a
+lowercase letter, an uppercase letter or a digit: 26+26+10=62.
+So the number of all variations with 5 digits is 62^5 = 916132832.
+
+> With 10000 non-colliding hashes, the chance of collision is about
+> 1:100 with each new hash added.
+
+If you add a new hash, the chance of having a collision is:
+
+    10000/916132832 = 1:91613 = .0000109154
+
+Having no collision:
+
+    1 - .0000109154 = .9999890846 = 99.99890846%
+
+The chance that there is no collision between k concrete hashes when
+there are n possible hashes:
+
+    positive cases: n*(n-1)*...*(n-k+1)
+    all cases:  n^k
+    probability: positive_cases / all_cases
+
+A small bc script that calculates the probability:
+
+    n = 62^5
+    k = 10000
+
+    s = 1
+    last = n - k + 1
+    for (i=n; i>=last; i--) {
+        s = s * i
+    }
+
+    scale = 20
+    print "The probability of NOT having collision:"
+    print s/(n^k)
+    print "\n"
+    quit
+
+The famous example: 30 people in a classroom, what are the chances
+that there are at least two people with the same birthday?
+
+Answer: the probability is around 71%. (n=365, k=30)
+
+The probability of not having a collision when using 5 characters long
+ids:
+
+    94.689034994794458384%
+
+The probability of not having a collision when using 10 characters
+long ids:
+
+    99.999999994043245827%
+
+I was wondering about all the numbers between 1 and 10. They are as
+follows:
+
+     3:  0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000039334920%
+     4:  3.3904284628652179833%
+     5: 94.689034994794458384%
+     6: 99.912019719070384845%
+     7: 99.998580348767266275%
+     8: 99.999977102239580324%
+     9: 99.999999630681241958%
+    10: 99.999999994043245827%
+
+1 and 2 are effectively 0. I was wondering about 40 as well, the
+number git uses. I started bc with 40, but I haven't had the patience
+to wait for the result (maybe tomorrow). But you can extrapolate from
+the number of 9-s in the numbers:
+
+ number: nines
+     6: 1
+     6: 3
+     7: 4
+     8: 6
+     9: 8
+    10: 10
+    ...
+    40: 50
+
+So it should be around:
+    40: 99.99999999999999999999999999999999999999999999999999%
+
+> (Correct me on that if I'm wrong, combinatorics is not exactly my
+> forte.)
+
+I see :)
+
+> So we seem to be better off with 10 digits. (Even if I started this
+> letter with the intent of advocating 5 digit hashes...)
+
+Maybe your initial feeling was right? If we work on the project for 3
+years, doing 10 commits per day, commenting every single commit, and
+trying to check out every single one -- we would have a 95% chance of
+not having any problems. And if this collision occurred once in 3
+years, then what? It will be trivial to identify which commit is the
+one we were talking about by its date. (We are not talking about is it
+enough to use 5-long ids by git - we are talking about using them in
+the subjects of our posts.)
+
+So, I'm in favour of 5-long ids in subjects.

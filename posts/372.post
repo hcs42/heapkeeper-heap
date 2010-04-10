@@ -1,0 +1,30 @@
+Author: Attila Nagy
+Subject: Tracking missing tests, documentation and other todos
+Tag: prop
+Tag: reviewed
+Message-Id: <20090604074744.a9b06b3f.nagy.attila.1984@gmail.com>
+Parent: <4ddb9e5b0906030911i16d9a060g911f95021c9a1e6a@mail.gmail.com>
+Date: Thu, 4 Jun 2009 07:47:44 +0200
+
+>> How about marking missing stuff only locally, and reserving the TODO
+>> file to emphasize missing and important pieces of test and docs?
+> 
+> My proposal was this:[-]
+> - marking missing documentation and tests locally
+> - everything else goes into the issue tracker (now todo file, later
+> probably a heap)
+> 
+> How is your suggestion different from this? Do you suggest placing
+> notes about other minor missing things in the source code?
+
+No, I misunderstood you, then you misunderstood me. I say cluttering
+up the source code with all kinds of notes is no good, but one line
+per function stating what is missing would be a nice thing. We should
+save all else for the TODO file.
+
+On the other hand, it'd be quite senseless to list each and every
+missing function documentation and test in the TODO file, since these
+are already there in the source code, and anyone can find them, even
+automatically. So, for the missing docs and tests, we should only list
+the most important ones in the TODO. All other notes and missing
+things would, of course, belong there.

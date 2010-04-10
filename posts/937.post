@@ -1,0 +1,15 @@
+Author: Attila Nagy
+Subject: Error displaying posts without heapid
+Tag: bug
+Message-Id: <b29f917d0911150152sb86646y7382725316749450@mail.gmail.com>
+Date: Sun, 15 Nov 2009 10:52:55 +0100
+
+To reproduce:
+
+    >>> import hklib
+    >>> a=hklib.Post.from_str('Author: a')
+    >>> a
+    Traceback (most recent call last):
+      File "<console>", line 1, in <module>
+      File "/data/lab/hk/heapkeeper/hklib.py", line 851, in __repr__
+        return "<post '" + self._heapid + "'>"

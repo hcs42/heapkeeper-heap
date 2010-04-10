@@ -1,0 +1,16 @@
+Author: Attila Nagy
+Subject: Ownership of history is a delicate matter
+Tag: git
+Message-Id: <b29f917d0908010207v3ae6a93k19bb41708c1cb75a@mail.gmail.com>
+Parent: <4A73F915.5050403@gmail.com>
+Date: Sat, 1 Aug 2009 11:07:52 +0200
+
+> We have three options:
+> 1. Do the linearization.
+> 2. Try another mechanism, e.g. git filter.
+> 3. Put back v0.1 and v0.2 tags as they were and do work that actually
+>   matters :)
+
+Option 3 is of course attractive, but learning Git is fun _and_
+matters, so I think I'll try and read about rebasing with preserving
+loops.

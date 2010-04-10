@@ -1,0 +1,29 @@
+Author: Csaba Hoch
+Subject: Ownership of history is a delicate matter
+Tag: git
+Message-Id: <4A73F915.5050403@gmail.com>
+Parent: <b29f917d0908010108m2cbc6482y3e75210ef1d1ed69@mail.gmail.com>
+Date: Sat, 01 Aug 2009 10:13:09 +0200
+
+>>> So, we'd hard-reset, edit README, commit, tag and rebase for both
+>>> 0.1 and 0.2, if I understand correctly.
+>> Yes, that is what I thought, but it does not seem to work because of
+>> the motorway.
+> 
+> Umm... both the 0.1 and 0.2 tags are on "single sections". Will that
+> still cause a problem with motorways coming after the tag? I think
+> I'll go and experiment with it.
+
+I tried it. The problem is the rebase tries to linearize everything,
+all the motorways that are present in the history back until 0.1/0.2.
+There are also merge conflicts: usually those that conflicted for us
+back then, but it seems that there are other conflicts as well, which
+are not automatically resolved now. (Maybe git rebase uses a different
+merge algorithm than git merge uses by default?) It would be a few
+hours I think to do that: it would mean linearizing all our history.
+
+We have three options:
+1. Do the linearization.
+2. Try another mechanism, e.g. git filter.
+3. Put back v0.1 and v0.2 tags as they were and do work that actually
+   matters :)

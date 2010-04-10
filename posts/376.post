@@ -1,0 +1,68 @@
+Author: Attila Nagy
+Subject: Footnotes in cites
+Tag: post syntax
+Tag: prop
+Message-Id: <b29f917d0906040950k6c64fa5due4e408449a212d1b@mail.gmail.com>
+Parent: <4A18F860.4070907@gmail.com>
+Date: Thu, 4 Jun 2009 18:50:05 +0200
+
+> Now I realized another thing: parsing and processing the footnotes in
+> quotes are two different things. If I look at this way, it is obvious
+> how we should handle footnote-heads in quotes:
+> 1. We should definitely parse them.
+> 2. They should point to the place where they should point.
+
+I've read this sentence a few times, but it still makes no sense, only
+with the example.
+
+> Example:
+>
+> First email:
+>
+>    Nice place: [1]
+>
+>    [1] http://nice.place
+>
+> Answer:
+>
+>    > Nice place: [1]
+>
+>    Indeed!
+>
+> How should we display "[1]" be on the post page of the second post?
+> Of course it should be a link to http://nice.place!
+
+A possible solution, but not the only one. It is a viable option if
+the footnote body contains nothing but an URL. If there's anything
+else included, it would also have to be displayed.
+
+I imagine the output for every post that includes footnotes would have
+a "footnote body block". This would be based on the footnote bodies of
+the post in question, but also the parents, where needed by quoted
+footnotes. To clarify with an example:
+
+First post:
+
+    Nice place: [1]
+
+    [1] http://nice.place
+
+Second post
+
+    > Nice place: [1]
+
+    Indeed!
+
+Sample output for the second post:
+
+    > Nice place: [>1]
+
+    Indeed!
+
+    ----
+
+    [>1] http://nice.place
+
+Hk could automatically display a [1] as [>1] when quoted 1-deep, to
+help avoid confusion with [1], which would be used in the unquoted
+part of the post.

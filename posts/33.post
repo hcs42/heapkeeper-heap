@@ -1,0 +1,30 @@
+Author: Csaba Hoch
+Subject: Wiko
+Tag: prop
+Tag: reviewed
+Message-Id: <49C4B258.7020608@gmail.com>
+Date: Sat, 21 Mar 2009 10:24:40 +0100
+
+We agreed on using a "wiki compiler" called Wiko [1][2][3] for our
+documentation.
+
+I think after the merge today evening we should do the followings:
+1. Create a directory called "doc".
+2. Move all documentation there. Commit.
+3. Rename all files from *.txt to *.wiki. Commit.
+
+Then we should gradually rewrite the wiki files to contain real wiki
+syntax. It is not urgent, it is OK if it takes weeks. But the new
+content should follow Wiko's syntax. I would not care about
+compilation now.
+
+When we have the time and motivation, and we translated all pages to
+use Wiko's syntax, we will start using Wiko, compile all documentation
+and correct the errors. Then we also have to write documentation on
+how to configure and use Wiko for Hm. Maybe we will put Wiko in our
+git repo; that is subject to further discussion, since it may have
+serious implications (e.g. licences).
+
+[1] http://www.iua.upf.edu/~dgarcia/wiko/index.html
+[2] http://www.iua.upf.edu/~dgarcia/wiko/Sample.wiki
+[3] http://www.iua.upf.edu/~dgarcia/wiko/Sample.html

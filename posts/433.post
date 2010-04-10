@@ -1,0 +1,98 @@
+Author: Attila Nagy
+Subject: Ownership of history is a delicate matter
+Tag: git
+Message-Id: <b29f917d0907312354v2bce15bcg3fd2814d5896aebc@mail.gmail.com>
+Parent: <4A73DDB4.1020207@gmail.com>
+Date: Sat, 1 Aug 2009 08:54:48 +0200
+
+>>> I'm not sure that we control in 100% what is on github. But it we do, than
+>>> changing the past before 0.3 is OK. I want to put the news about 0.3 on
+>>> freshmeat, send it to the Sphinx mailing list, tell about this to my
+>>> colleagues, etc.
+>>
+>> Do you think we'll be ready for all that with 0.3?
+>
+> I don't want to do things like this after 0.3 is released. For me
+> that's like going to public.
+
+My question is: once you show all those people what we have, will they
+see what it is good for?
+
+> The conclusion is: it seems to me that we have no way of doing what we
+> want to do except for deleting and re-creating the heapkeeper
+> repository.
+
+Yes, it seems so. Not that bad solution, though. But do you think it
+is a limitation of github or git? I mean, that we can't just push a
+totally rewritten repository.
+
+> == Heapkeeper-tidy ==
+>
+> I did exactly that with another sandbox. I pushed the repository you
+> sent into my second sandbox repo on github [4]. Pushing all commits of
+> the last 10 months was so fast that I thought something must be wrong.
+> But as it turns out, it worked. The impact graph contains only two
+> people, and everything else seems to work fine. The non-master
+> branches are lost, but they could have been pushed just as easily if
+> the tidied up repository contained them. We can also use patches to
+> introduce them, see in the next section.
+
+Git rules :)
+
+> The tags are also lost, which made me think that we should not just
+> put them to the same place, because that would cause the descriptions
+> on the download page look as ugly as they are now [5]. We could place
+> new commits which would only change the README and whose commit
+> message would say something like this:
+>
+>    Heapkeeper version 0.1
+>
+>    This release is a propotype.
+>
+>    Features:
+>
+>    - Downloading emails over IMAP.
+>    - Storing posts in individual files.
+>    - Generating threaded index page that contains all posts.
+>
+> What do you say?
+
+OK. So, we'd hard-reset, edit README, commit, tag and rebase for both
+0.1 and 0.2, if I understand correctly.
+
+> == Creating and applying patches ==
+>
+> Then I wanted to solve my problem of having worked on files yesterday,
+> which were not of course in your repository tidied up. I had 5 commits
+> in my own repo that I wanted to introduce into the new repository. It
+> was surprisingly easy: I just had to create a bunch of patches in my
+> old repository and apply them in the new one. The patches even contain
+> log message and author information.
+
+I guess then that these are not your average diff-patches, but
+something Git-specific.
+
+> In the new heapkeeper repository ($Hk is the old repo; don't bother
+> with the "whitespace error"):
+>
+>    # Applying patch 1
+>    $ git am $Hk/0001-hklib-don-t-crash-if-nicknames-is-missing.patch
+>    Applying: hklib: don't crash if 'nicknames' is missing
+
+`git-am` means 'apply patches from mailbox'. If there is functionality
+in git that suggests a particular workflow, this is it. (Some mention
+git is suited for "Linux kernel-style workflow", would this be an
+example? :) )
+
+> == Further changes ==
+>
+> - Adding tags in the way I described.
+> - Do you want to do something with your 'bodyparsing' and 'minimal'
+>  branches? Or let's just leave them for now and you can use the
+>  patch-technique to introduce them at any time?
+
+Do you consider them mature enough for inclusion into the "public"
+repo? I think minimal is mature, and also useful. Bodyparsing is
+in early stages, and very probably it'll work quite differently, so if
+you say so, I'll be happy to exclude it until we take on the task more
+seriously.

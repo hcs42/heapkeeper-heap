@@ -1,0 +1,19 @@
+Author: Csaba Hoch
+Subject: heapid mismatch bug
+Message-Id: <4ddb9e5b0908102259j487c9643ve251ec67f9aea925@mail.gmail.com>
+Parent: <b29f917d0908101345r33b4193fu5bc59f45f5c169f@mail.gmail.com>
+Date: Tue, 11 Aug 2009 07:59:41 +0200
+
+>>> The second half of the thread is not the same. This means two things:
+>>> - the thread summary is generated differently in these cases,
+>>> - there is a bug in the download mechanism, and duplicate posts are
+>>>   in the database
+>
+> But it's still strange that generating the thread summary for a single
+> post and a thread page is different.
+
+Yes it is, I forgot about this yesterday. The thread page generating
+code contains a bunch of copy paste code to walk the thread structure.
+I want to write a generic thread structure walking function that can
+be used for thread page generation, post page generation etc. When I
+do that, I'll try to investigate what is the reason of this behavior.

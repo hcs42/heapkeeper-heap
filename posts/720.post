@@ -1,0 +1,33 @@
+Author: Csaba Hoch
+Subject: State of the project
+Tag: docs
+Tag: homepage
+Message-Id: <4ddb9e5b0910201208l23c16fedrdf8c40b1c2ebf362@mail.gmail.com>
+Parent: <b29f917d0910200712p72c497b5w598278b3e6714da1@mail.gmail.com>
+Date: Tue, 20 Oct 2009 21:08:25 +0200
+
+>> You could write a paragraph that could replace mine.
+>
+> What do you think about this:
+>
+> "Workflow: our workflow has gone stable with the release of 0.3. We
+> strongly rely on Git in continuous integration of bugfixes and new
+> features into mature code."
+
+I like it.
+
+> We could also mention it here that the underscore-branches may be
+> rewritten, but I think in this short status summary, it would be too
+> much detail (and it would not do too much to prove how mature our
+> methods are, at least to someone not acquainted to Git workflows).
+
+I agree, we should describe those in the developer documentation.
+
+> "Procedures" would be a better word for what you want to express, but
+> I replaced it with "workflow" since I don't know what other procedures
+> you meant.
+
+Workflow is all right. I meant things like how to use the repository,
+how to make a new release, how to add a new feature (e.g. in the best
+case the commit contains tests, docstrings and the modifications of
+the rst files), or how to update the website.

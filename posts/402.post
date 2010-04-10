@@ -1,0 +1,37 @@
+Author: Attila Nagy
+Subject: Sphinx install
+Message-Id: <20090721191537.e5b60724.nagy.attila.1984@gmail.com>
+Parent: <4A5D949F.7060805@gmail.com>
+Date: Tue, 21 Jul 2009 19:15:37 +0200
+
+I tried to install Sphinx as described in the Developer documentation.
+I got the following errors:
+
+    ...
+    Installed /usr/lib/python2.5/site-packages/docutils-0.5-py2.5.egg
+    Searching for Jinja2>=2.1
+    Reading http://pypi.python.org/simple/Jinja2/
+    Reading http://jinja.pocoo.org/
+    Best match: Jinja2 2.1.1
+    Downloading
+    http://pypi.python.org/packages/source/J/Jinja2/Jinja2-2.1.1.tar.gz#md5=b37fc262e4f613eec57c3defe6aea97c
+    Processing Jinja2-2.1.1.tar.gz
+    Running Jinja2-2.1.1/setup.py -q bdist_egg --dist-dir
+    /tmp/easy_install-4efUjT/Jinja2-2.1.1/egg-dist-tmp-YeSOLg
+    warning: no files found matching 'Makefile'
+    warning: no files found matching 'ez_setup.py'
+    warning: no previously-included files matching '*' found under
+    directory 'docs/_build/doctrees'
+    jinja2/_speedups.c:15:20: error: Python.h: No such file or directory
+    ...
+
+As expected, "sudo easy_install Jinja2" gives the same output.
+
+Solution: I asked packages.ubuntu.com which package contains Python.h.
+It is python-<your-version-here>-dev, or python-dev, which is a
+metapackage depending on the dev package for the default version of
+Python for your distibution.
+
+What is strange is that by this step, the main Sphinx package and
+docutils are already installed. So they don't need python-dev, only
+jinja2 does?

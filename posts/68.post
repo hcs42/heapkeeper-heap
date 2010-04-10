@@ -1,0 +1,14 @@
+Author: Attila Nagy
+Subject: Renaming the github repository to "heapmanipulator" (later "heapkeeper")
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0904050656s22b9f3c9x44cd904446bf9ee3@mail.gmail.com>
+Parent: <49D8B678.1060700@gmail.com>
+Date: Sun, 5 Apr 2009 15:56:12 +0200
+
+No.
+
+Somehow I find the idea of naming the whole project "Heapmanipulator"
+unattractive. We invented the concept of heap, and we have a
+manipulator to handle that, that's true, but I feel the concept is
+more central to the project than the program.

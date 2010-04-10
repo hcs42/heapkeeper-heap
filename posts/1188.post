@@ -1,0 +1,16 @@
+Author: Csaba Hoch
+Subject: Managing several heaps in Heapkeeper
+Tag: prop
+Message-Id: <4ddb9e5b1003151019o12ec0d12l6bf669e0019ba652@mail.gmail.com>
+Parent: <4A918DBC.6040009@gmail.com>
+Date: Mon, 15 Mar 2010 18:19:06 +0100
+
+I implemented handling several heaps in Heapkeeper, including moving
+posts within and across heaps. It required the partial implementation
+of post body parsing, since there are heap links (=post references) in
+the post body that should be updated during post moving.
+
+The only missing feature from Hk regarding handling several heaps is
+that one Hk config file can contain only one IMAP account. So I'm
+considering using another config file format, because this one does
+not seem to be optimal for our purposes.

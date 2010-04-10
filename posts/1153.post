@@ -1,0 +1,23 @@
+Author: Attila Nagy
+Subject: The reality log
+Tag: workflow
+Message-Id: <20100211112110.e9a8277e.nagy.attila.1984@gmail.com>
+Parent: <4ddb9e5b1002060712p78e5cf16rceb828d59c51dd82@mail.gmail.com>
+Date: Thu, 11 Feb 2010 11:21:10 +0100
+
+>>> If I decide to rebase something, I can't do it without effecting you.
+>>> That's OK, but we should have a place where I describe what I did, so
+>>> that when you start your work, you can catch up, destroy the necessary
+>>> branches etc. This would be an informal git log: it would log the
+>>> reality and not the rewritten reality. It would be nice if you could
+>>> mark the log entries as "read" or "done". It should be a linear list
+>>> of changes, maybe with some comments intervened.
+>>
+>> An intriguing idea. How would you implement it?
+> 
+> My only idea is to use Wave.
+
+What would such a log look like exactly?
+
+How about logging only rebases instead of having to log every commit
+into the reality log too?

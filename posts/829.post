@@ -1,0 +1,36 @@
+Author: Csaba Hoch
+Subject: Caching of next heapid leads to inconsequent behavior
+Tag: bug
+Tag: reviewed
+Message-Id: <4AEC10EE.1010100@gmail.com>
+Parent: <b29f917d0910301549n3b776697p4d51460b8ee15828@mail.gmail.com>
+Date: Sat, 31 Oct 2009 11:26:54 +0100
+
+> The problem is that the "next heapid" is calculated in a radically
+> different way for empty and non-empty prefixes (that is, with or
+> without prefix).
+
+Good point.
+
+> I think the former behavior is more reasonable, the one which
+> disregards filling the gaps in the numbering, and always gives the
+> largest available number. This way, numerical sorting of heapids tend
+> to yield a more chronological order of posts.
+
+I agree.
+
+> Another, somewhat unrelated issue is that the unprefixed call increases
+> the counter, which is in my opinion, counter-intuitive. If the
+> function would be called `step_heapid()`, I would expect it to
+> increase the counter, while the current name only suggests an innocent
+> getter with no such side-effect.
+
+I think "next" functions are accepted to have side-effects. Have a
+look at the iterator.next() function [1], which you use all the time
+implicitly when writing for-loops. It sets the value that is to be
+returned next time, which is a side effect. (Exactly the kind of
+side-effect we have in our next.)
+
+This is not so only it Python: Java programmers do the same.
+
+[1] http://docs.python.org/library/stdtypes.html#iterator-types

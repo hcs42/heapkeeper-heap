@@ -1,0 +1,55 @@
+Author: Csaba Hoch
+Subject: Renaming the "main" post item position to "inner"
+Tag: issue
+Tag: reviewed
+Message-Id: <4AFE98DF.7090207@gmail.com>
+Date: Sat, 14 Nov 2009 12:47:43 +0100
+
+[effort 1]
+
+Currently there are 4 valid post item positions:
+- begin
+- main
+- end
+- flat
+
+I propose to rename the "main" post item position to "inner" so that
+our function names will be more sensible (e.g. print_postsummary_inner
+instead of print_postsummary_main).
+
+Example thread structure:
+    
+    0 <- 1 <- 2
+      <- 3
+    
+Post items yielded now:
+    
+    <begin 0>
+    <main 0>
+      <begin 1>
+      <main 1>
+        <begin 2>
+        <main 2>
+        <end 2>
+      <end 1>
+      <begin 3>
+      <main 3>
+      <end 3>
+    <end 0>
+
+Post items yielded according to this proposal:
+    
+    <begin 0>
+    <inner 0>
+      <begin 1>
+      <inner 1>
+        <begin 2>
+        <inner 2>
+        <end 2>
+      <end 1>
+      <begin 3>
+      <inner 3>
+      <end 3>
+    <end 0>
+
+[keywords refactoring, PostItem, post item]

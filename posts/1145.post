@@ -1,0 +1,12 @@
+Author: Attila Nagy
+Subject: testhtml: Testing that generated HTMLs change only as intended
+Tag: hk-dev-utils
+Message-Id: <b29f917d1002110045i3cf1f582h561101f6cc1777c1@mail.gmail.com>
+Parent: <4ddb9e5b1002110015p2be597aes98c0c040097272c0@mail.gmail.com>
+Date: Thu, 11 Feb 2010 09:45:56 +0100
+
+> For me, it is a very common workflow that I create a sequence of
+> commits, and then I decide to push all of them. This script can go
+> through that sequence and check each commit against its parent.
+
+Ah, I see. That explains why the n-way comparison is useful.

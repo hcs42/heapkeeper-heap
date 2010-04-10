@@ -1,0 +1,16 @@
+Author: Csaba Hoch
+Subject: Managing several heaps in Heapkeeper
+Tag: prop
+Message-Id: <4ddb9e5b1002121401x2a99f512jb11e541283e5f9d1@mail.gmail.com>
+Parent: <20100210160858.67e61920.nagy.attila.1984@gmail.com>
+Date: Fri, 12 Feb 2010 23:01:12 +0100
+
+>> [effort: 40]
+>
+> Note 2: now that you've done it, how precise was this effort estimate?
+
+It was about right. It is hard to say because I did not measure
+exactly how much time I spent in this feature. I measure the time
+spent on Hk, but during these weeks I implemented other features,
+documented undocumented code and tested untested code. Also, I'm not
+100% finished yet, moving posts is yet to be done.

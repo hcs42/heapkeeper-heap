@@ -1,0 +1,20 @@
+Author: Attila Nagy
+Subject: Managing several heaps in Heapkeeper
+Tag: prop
+Message-Id: <20100210160721.95bfc912.nagy.attila.1984@gmail.com>
+Parent: <4B5C14B7.1070803@gmail.com>
+Date: Wed, 10 Feb 2010 16:07:21 +0100
+
+>> Now I propose a third version:
+>>
+>>    heap_id + post_index = post_id
+> 
+> I implemented this version of supporting several heaps and pushed it.
+
+Thanks for sorting this out. I'm reading this thread now, and I
+noticed my mistake in the process. I wanted to write a post to correct
+it, but I can see that you've made a good job.
+
+I like this final version a lot more than either your original
+suggestion or my misunderstanded one, so after all, the
+misunderstanding was a good thing.

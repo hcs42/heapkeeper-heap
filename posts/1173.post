@@ -1,0 +1,24 @@
+Author: Attila Nagy
+Subject: Monospace font for post body in generated HTML
+Tag: prop
+Message-Id: <20100214210449.4a5f2f83.nagy.attila.1984@gmail.com>
+Parent: <4B781A98.4090607@gmail.com>
+Date: Sun, 14 Feb 2010 21:04:49 +0100
+
+> I'd like to use a monospace font for post bodies in the generated
+> HTML. This would mean the following modification to heapindex.css:
+
+Of course. I see all posts in monospace, too.
+
+The fact that you don't may be because you don't have Microsoft fonts
+installed. They're free (but not open), and there is a free and open
+Linux tool to install them (also a package in Ubuntu).
+
+>     -    font-family: Courier, sans-serif;
+
+This doesn't seem to make sense, since Courier is not sans-serif.
+
+>     +    font-family: Courier, monospace;
+
+This is the correct line, but you may also add free monospace fonts,
+such as FreeMono or Nimbus Mono L.

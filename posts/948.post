@@ -1,0 +1,25 @@
+Author: Attila Nagy
+Subject: Profiling
+Tag: idea
+Message-Id: <b29f917d0911182353j62b4e57ewf70de5358781b010@mail.gmail.com>
+Parent: <b29f917d0910221128r17d389ecyf563d9543e625997@mail.gmail.com>
+Date: Thu, 19 Nov 2009 08:53:50 +0100
+
+I have used Hk on very limited hardware (a linux PDA), and it turned
+out to be very slow. It was a critical moment of realizing how much we
+rely on the power of our machines instead of optimizing our
+algorithms.
+
+So, I would like to use a profiler to find those nasty bottlenecks in
+the code and make it run faster.
+
+Another reason for this is that our heap is growing, but there are
+just the two of us. I think we should take a real-life mailing list
+(Python, Linux, Ubuntu, anything), and mirror it in Hk. We should have
+a look at how our current implementation copes with a load of over 1M
+messages, and what we could do to make it better.
+
+I don't think this would be very important right now, or anytime
+before releasing 0.4, but if we want to make Hk commercially or
+community-wise successful, we'll have to consider performance in a
+more real-life scenario sooner or later.

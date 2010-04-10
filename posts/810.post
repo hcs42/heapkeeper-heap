@@ -1,0 +1,13 @@
+Author: Attila Nagy
+Subject: State of the project
+Tag: docs
+Tag: homepage
+Message-Id: <b29f917d0910300840s2f825a21r1d8191fbd11ffd40@mail.gmail.com>
+Parent: <4ddb9e5b0910300042x4a8f0b9gbff83c869c2a3855@mail.gmail.com>
+Date: Fri, 30 Oct 2009 16:40:08 +0100
+
+> OK. But it is more difficult to rebase _hcs onto _status than the
+> other way around?
+
+If we modify only one commit, there can be only one conflict, that's
+why I thought it would be easier.

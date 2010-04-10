@@ -1,0 +1,44 @@
+Author: Attila Nagy
+Subject: Lost threads
+Tag: cleanup
+Tag: issue
+Tag: reviewed
+Message-Id: <b29f917d0911081045v494356acl47a311985ba1d66b@mail.gmail.com>
+Parent: <4AF7027A.5050909@gmail.com>
+Date: Sun, 8 Nov 2009 19:45:50 +0100
+
+> It is easy to lose threads in the heap: someone sends it, we decide
+> that yes, something could be done, and then even the existence of
+> that thread gets forgotten. Email clients have a starring-mechanism
+> for this problem.
+
+I know what you are talking about...
+
+> The open-close system tries to solve this problem for the issue
+> threads, but we don't have any mechanism for non-issue threads.
+
+> Do you experience this problem? Do you think we should do something
+> about this? If yes, do you have any ideas?
+
+Yes, I think so. Maybe we could have a number of states for non-issue
+threads:
+- "closed": the question has been answered, the proposition discussed,
+  the recommended content viewed, and no further comments are needed,
+  but of course, if someone wishes to, xe can revive the thread [1]
+- "open": the thread is not closed, so response is still expected
+- "asleep": the thread was open for a long enough time to assume that
+  the expected response will not occur in the foreseeable future; of
+  course, this is not to discourage anyone finding this thread in the
+  archive and willing to continue it
+
+One situation not covered here would be when a thread is open, but
+it loses its actuality due to any reason, e.g. it is a question about
+a code fragment that has become rewritten. I don't know if we simply
+should close such threads or mark them somehow differently, e.g.
+"timeout".
+
+Do you have any other ideas? Also, what do you think of my state
+ideas?
+
+[1] This practice is called "thread necromancy", and frown upon in
+    many forums, but I think it is totally acceptable in our heaps.

@@ -1,0 +1,60 @@
+Author: Attila Nagy
+Subject: Standardizing post references
+Tag: post references
+Tag: prop
+Message-Id: <20100211110220.60214472.nagy.attila.1984@gmail.com>
+Parent: <4AF7022B.5000301@gmail.com>
+Date: Thu, 11 Feb 2010 11:02:20 +0100
+
+> Alternative forms:
+> 
+>     [1] heap://hh/1234
+
+I would have supported this form, but I didn't have time to answer,
+and you used the other form (<heap_id>/<post_index>) in so many posts,
+that I chose to accept it.
+
+I prefer this form because it can easily be found in the post bodies.
+You seem to have a similar thought in hh/2556 .
+
+If we think of moving posts between heaps and updating references, the
+obvious solution would be simple textual search and replace. E.g. if
+we move post "1234" on "heapa" to "heapb", where it will have the post
+index "5678", we could simply replace all occurences of "heapa/1234"
+to "heapb/5678".
+
+But it's not always this simple. What if "heapa" is large, and there
+is also a post called "heapa/12341"? (It doesn't even have to be large
+as post indices are arbitrary.) We could rule that post references
+should be space-delimited. (I've been putting a space between post
+refs and any following punctuation because of this.)
+
+Since post indices are arbitrary, they could even contain spaces.
+That'd be even more nasty; if we used an URI-like form, we could
+use URL escaping for such cases (then, a space would be "%20").
+
+It should be easy to find post references in bodies. If we use the
+slash notation, we can find postrefs like this:
+- find names of heaps followed by a slash
+- get the letter after the slash
+- is what we have a correct post id?
+- if not, add the next letter, if it's permitted as part of a post
+  index [1]
+- examine what we have now; if it's the post id of an existing post,
+  it's a candidate
+- repeat (go back to adding another letter)
+- when we finish this, we'll take the longest candidate as the final
+post id.
+
+While this could be used, it would make finding post references
+computationally intensive. It would be much easier if we could find
+postrefs without checking for existing posts. A form like
+
+    heap://hh/1234
+
+would have exactly this property.
+
+[1] Besides whitespace, punctuation should be disallowed as well, so
+that we could write e.g. "I found it in heapa://1234." In general,
+since the form is URI-like, the same set of characters should be
+allowed as in URIs.

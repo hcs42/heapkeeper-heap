@@ -1,0 +1,26 @@
+Author: Csaba Hoch
+Subject: Web-interactive Heap on GAE
+Tag: idea
+Message-Id: <4A12F724.9000403@gmail.com>
+Parent: <20090519080027.87da75cd.nagy.attila.1984@gmail.com>
+Date: Tue, 19 May 2009 20:15:00 +0200
+
+> Seems quite generous. What do you want to show?
+
+Wikipedia says:
+
+    Time per request = 30 sec
+
+I thought it meant I had to wait 30 seconds after a request to make
+another one.
+
+But Google says this [1]:
+
+    Free Default Quota / Daily Limit: 1300000 requests (15 req/sec)
+    Free Default Quota / Maximum rate: 7400 requests (123 req/sec)
+
+Do you understand it?
+
+Csabi
+
+[1] http://code.google.com/appengine/docs/quotas.html#Requests

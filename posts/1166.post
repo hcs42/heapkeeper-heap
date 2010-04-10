@@ -1,0 +1,38 @@
+Author: Csaba Hoch
+Subject: Standardizing post references
+Tag: post references
+Tag: prop
+Message-Id: <4B767962.2080005@gmail.com>
+Parent: <20100211110220.60214472.nagy.attila.1984@gmail.com>
+Date: Sat, 13 Feb 2010 11:05:22 +0100
+
+Nagy Attila wrote:
+>> Alternative forms:
+>>
+>>     [1] heap://hh/1234
+>
+> I would have supported this form, but I didn't have time to answer,
+> and you used the other form (<heap_id>/<post_index>) in so many posts,
+> that I chose to accept it.
+>
+> I prefer this form because it can easily be found in the post bodies.
+
+You just convinced me to accept this form :) What do you say?
+
+We still have a "great post review" over ourselves, in which we review
+all posts. We could convert my notation into this one. (We could
+convert most of them with a script, something that you described, and
+the rest by hand when we review the posts.)
+
+> If we think of moving posts between heaps and updating references, the
+> obvious solution would be simple textual search and replace.
+
+That's not the solution I planned to use. I wanted to parse the
+references in the footnotes. But your solution is both easier to do
+and better. It is easier because we could get away without some form of
+post parsing, and better because it will not miss references in the
+body (which I have deliberately avoided so far).
+
+My only question is: is it OK if post ids are interpreted in block
+text? If not, we have to do some post parsing anyway. It would go with
+"it is OK now, but we will change it later".

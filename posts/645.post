@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: Release process
+Tag: 0.3
+Message-Id: <4ddb9e5b0910130028m5261e3d9ted2f65f80234ab3b@mail.gmail.com>
+Parent: <4AD18AEC.6000509@gmail.com>
+Date: Tue, 13 Oct 2009 09:28:47 +0200
+
+I finished releasing Heapkeeper v0.3 on the weekend. I started to use
+the "heapkeeper" repository again.
+
+The only thing I did not do was that I did not create a v0.3 tag, so
+that if you find something, we can rewrite the history.

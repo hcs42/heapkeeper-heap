@@ -1,0 +1,29 @@
+Author: Attila Nagy
+Subject: Connecting Hk with a mailing list management software
+Tag: idea
+Message-Id: <20090519195206.a8013465.nagy.attila.1984@gmail.com>
+Parent: <4A12E9B9.1050408@gmail.com>
+Date: Tue, 19 May 2009 19:52:06 +0200
+
+> This feature could be implemented inside Heapkeeper, but I think
+> people will trust the "real" mail archive more. Not without reason:
+> heap maintainers could of course manipulate the "original" post, even
+> if we don't give them hkshell commands for that.
+
+I'm pretty sure no archive is ever tamper-proof. Even if it's stored on
+IMAP, it's changed easily in a download-edit-delete-upload sequence. If
+the user doesn't trust those with access to the server, it's all futile.
+
+But if such concerns would arise, we could send back a receipt, containing
+the MD5 of the original message. But of course, then the sender would
+be able to wave a fake receipt, claiming that the message has been
+altered. Further discussion would be in the domain of cryptography,
+and I have next to absolutely no knowledge on such things. But I do
+remember hearing about such situations from you. :)
+
+> [1] I'm not sure if I have mentioned this piece of terminology before.
+> Email is an immutable object that has been sent by someone and is
+> stored in mailboxes; post is a mutable object usually created from an
+> email that can be modified and has a history like a wiki page.
+
+OK.

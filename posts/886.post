@@ -1,0 +1,14 @@
+Author: Csaba Hoch
+Subject: Funny non-ascii character in commit message (2009-05-07 1192ed8)
+Message-Id: <4AF701F0.7000808@gmail.com>
+Date: Sun, 08 Nov 2009 18:37:52 +0100
+
+Quote from the commit message:
+
+    Some changes were introduced due to changes indirectly introduced
+    during the change.  Namely, ˙˙Post˙˙'s ``htmlthreadfilename`` and
+
+What is that character around "Post"? I think we should not use
+non-ASCII characters in the commit messages.
+
+(Of course we should not rewrite the commit now.)

@@ -1,0 +1,30 @@
+Author: Csaba Hoch
+Subject: PostDB methods: optional `threadstruct` param (2009-10-17 df0c673)
+Tag: commit
+Message-Id: <4B0843A4.5090803@gmail.com>
+Parent: <b29f917d0911190854k71b77b3blcf28031e7492f94a@mail.gmail.com>
+Date: Sat, 21 Nov 2009 20:46:44 +0100
+
+When you want a different thread structure to be walked.
+
+For example it is used in hkgen.Generator.print_post_page:
+
+    def print_post_page(self, post):
+        """Prints a post page.
+
+        **Argument:**
+
+        - `post` (|Post|)
+
+        **Returns:** |HtmlText|
+        """
+
+        # We create a thread structure that contains only out post.
+        threadst = {None: [post.heapid()]}
+
+        xpostitems = self.walk_thread(threadstruct=threadst)
+        xpostitems = \
+            itertools.imap(
+                self.set_postitem_attr('print_post_body'),
+                xpostitems)
+        return self.print_postitems(xpostitems)

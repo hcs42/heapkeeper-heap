@@ -1,0 +1,20 @@
+Author: Attila Nagy
+Subject: Sentences that start with the name of a module, function, etc.
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0905042156k1bbfb2a7v7ac9e5c004720d97@mail.gmail.com>
+Parent: <49FF4E9B.2040904@gmail.com>
+Date: Tue, 5 May 2009 06:56:26 +0200
+
+We already have many commit messages in the repo that are capitalized.
+Thus, we have to choose between being consistent with these or with
+the code.
+
+Why is it that important to keep capitalization consistent with the
+code? Of course, Python is case-sensitive, but my guess is that we'll
+never make use of this feature, AND the commit messages will always be
+aimed at human readers. Thus, a message like:
+
+    Hklib: corrected bugs
+
+won't make anybody go and grep for a code element called 'Hklib' with capital H.

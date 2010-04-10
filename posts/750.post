@@ -1,0 +1,11 @@
+Author: Csaba Hoch
+Subject: "Star" appears in flat sections
+Tag: bug
+Tag: reviewed
+Message-Id: <4AE0247D.9070004@gmail.com>
+Parent: <4ADECC79.6070206@gmail.com>
+Date: Thu, 22 Oct 2009 11:23:09 +0200
+
+The issue persists in the new Generator. Let's not close this thread
+until we corrected the bug there. I want to correct it there only
+after we merged your current change into the master.

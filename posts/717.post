@@ -1,0 +1,24 @@
+Author: Attila Nagy
+Subject: State of the project
+Tag: docs
+Tag: homepage
+Message-Id: <b29f917d0910200712p72c497b5w598278b3e6714da1@mail.gmail.com>
+Parent: <4ADCB6BA.8070508@gmail.com>
+Date: Tue, 20 Oct 2009 16:12:30 +0200
+
+> You could write a paragraph that could replace mine.
+
+What do you think about this:
+
+"Workflow: our workflow has gone stable with the release of 0.3. We
+strongly rely on Git in continuous integration of bugfixes and new
+features into mature code."
+
+We could also mention it here that the underscore-branches may be
+rewritten, but I think in this short status summary, it would be too
+much detail (and it would not do too much to prove how mature our
+methods are, at least to someone not acquainted to Git workflows).
+
+"Procedures" would be a better word for what you want to express, but
+I replaced it with "workflow" since I don't know what other procedures
+you meant.

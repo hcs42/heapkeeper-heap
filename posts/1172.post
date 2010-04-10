@@ -1,0 +1,47 @@
+Author: Csaba Hoch
+Subject: Managing several heaps in Heapkeeper
+Tag: prop
+Message-Id: <4B781CCD.9040509@gmail.com>
+Parent: <4A98290A.2080002@gmail.com>
+Date: Sun, 14 Feb 2010 16:54:53 +0100
+
+>>> == Current heap ==
+>>>
+>> How about having the empty string, '', as a special heapid?
+>
+> That's a good idea.
+>
+>> We could have a current heap if you'd like to.
+>
+> OK.
+>
+>> This could even be used with the previous "unnamed heap" idea:
+>> after a `select('hh')` call, a `p('0')` would be equivalent to
+>> `p(('ums, '0'))`, so the "default heap" would be, by default, the
+>> unnamed heap, but a new default could be selected by a `select()`
+>> call.
+>
+> I would rather write `select('')` for that purpose :)
+>
+>>> The only thing I don't know whether it should be better to have a
+>>> current heap in hkshell or in PostDB. [...] Opinions?
+>>
+>> I'd implement it in hkshell. hklib should only see the tuples.
+>
+> OK.
+
+That's how I implemented this:
+
+I created a variable called hkshell.heap_id_hint_var that contains the
+"current" heap. It can be set using the `set_heap_id_hint` command. We
+can rename it to something shorter if you insist.
+
+This terminology of "heap id hint" was introduced in hklib and used in
+hkshell as well. The reason behind this expression is that Hk will try
+to find the post no matter how it was specified, but if only the post
+index is given, it will use the "heap id hint". So for example it will
+find 'ums/123' or ('ums', 123) regardless of the heap id hint, but it
+will find '123' only if the heap id hint is set to its container heap.
+
+I encourage you to write hkshell.set_heap_id_hint('ums') into your
+hkrc file.

@@ -1,0 +1,51 @@
+Author: Csaba Hoch
+Subject: Guideline about conventions
+Message-Id: <4AE2E2BA.10301@gmail.com>
+Parent: <b29f917d0910240333m12db637qd99e473a6b463b07@mail.gmail.com>
+Date: Sat, 24 Oct 2009 13:19:22 +0200
+
+[!todo break the thread]
+
+> I think we should have a written guideline on good docstrings before
+> setting out to improve them.
+
+I'm not sure it would make any difference.
+
+People are lazy to read long documents and will forgot them. For
+example there is http://heapkeeper.org/codingconventions.html which
+shows that you should put function arguments in docstrings between
+backticks (`) instead of stars (*), and you still put them between
+stars. But I don't blame you: it is hard to remember things like this,
+and people are lazy to look up information in documents like this all
+the time. Probably you did what everyone else would do: you searched
+for another docstring in the Python code and copied the patterns you
+saw there. Which is all right IMO.
+
+If I see you make a mistake, I'll correct you. If you see me make a
+mistake, you will correct me. Sometimes we will have an argument about
+what is the best thing to do. I think this is the way to go. I don't
+expect anybody to know the conventions by heart.
+
+Another advantage of this procedure is that if someone does not
+correct the other person, it means they implicitly agree. So we can
+talk only about the things in which we disagree (or the mistakes we
+make), we don't waste our time by specifying obvious things.
+
+Also, if I set out and write a lengthy document, it will be according
+to _my_ taste, but if the conventions evolve on the heap and in the
+code, it will be more _ours_. Actually, if it evolves, it will be a
+very dynamic process: the more you contribute to the project, the more
+effect will you have on the conventions, because the convention is
+(almost by definition) the way most of the code does a certain thing.
+
+Another reason against specifying things like when to write "post
+item" and when to write "PostItem" is that it is very hard to specify
+this. I don't really want to think about things like this.
+
+Finally, the conventions change, and I don't want to constantly update
+the document.
+
+It is fine to have a small document about the most important and most
+concrete conventions, but now I don't feel like writing a document
+with a bunch of very specific and complicated things. Maybe as the
+project grows, my opinion on this will change.

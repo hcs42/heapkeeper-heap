@@ -1,0 +1,17 @@
+Author: Csaba Hoch
+Subject: Sphinx version message in output
+Message-Id: <4A6A8E6B.9090806@gmail.com>
+Parent: <20090721173040.fcaaea71.nagy.attila.1984@gmail.com>
+Date: Sat, 25 Jul 2009 06:47:39 +0200
+
+> By the way, I wonder why is the line "Created using Sphinx 1.0."
+> present in our Sphinx output? The official Sphinx homepage has
+> "Created using Sphinx 0.6.2+."
+
+The next Sphinx release will be version 1.0. The version we use from
+the Sphinx repository is newer than the last released version (0.6.2).
+
+http://sphinx.pocoo.org/latest/ says:
+
+   "This documentation is for version 1.0 (hg), which is not released
+   yet."

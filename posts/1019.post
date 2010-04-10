@@ -1,0 +1,13 @@
+Author: Csaba Hoch
+Subject: Mapping for removing trailing whitespace
+Tag: vim
+Message-Id: <4B3F8D74.9040807@gmail.com>
+Parent: <4B3F7639.2010406@gmail.com>
+Date: Sat, 02 Jan 2010 19:16:20 +0100
+
+This is better:
+
+    :au BufWritePre * :silent! %s/ \+$//
+
+This way we can avoid the error message when there was no trailing
+whitespace to be removed.

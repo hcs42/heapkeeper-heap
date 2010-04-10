@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: Back to the heapkeeper repo
+Tag: prop
+Tag: reviewed
+Message-Id: <4ABC5976.1060705@gmail.com>
+Date: Fri, 25 Sep 2009 07:47:34 +0200
+
+After releasing 0.3, I'd like to go back to the original heapkeeper
+(and not heapkeeper_) repo. I would re-create it and upload everything
+again. I don't see any reason to stay with heapkeeper_.
+
+Opinions?

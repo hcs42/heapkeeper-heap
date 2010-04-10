@@ -1,0 +1,18 @@
+Author: Csaba Hoch
+Subject: Lost threads
+Tag: cleanup
+Tag: issue
+Tag: reviewed
+Message-Id: <4AF7027A.5050909@gmail.com>
+Date: Sun, 08 Nov 2009 18:40:10 +0100
+
+It is easy to lose threads in the heap: someone sends it, we decide
+that yes, something could be done, and then even the existence of that
+thread gets forgotten. Email clients have a starring-mechanism for
+this problem.
+
+The open-close system tries to solve this problem for the issue
+threads, but we don't have any mechanism for non-issue threads.
+
+Do you experience this problem? Do you think we should do something
+about this? If yes, do you have any ideas?

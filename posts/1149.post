@@ -1,0 +1,18 @@
+Author: Attila Nagy
+Subject: Free-text search
+Tag: feature
+Message-Id: <b29f917d1002110127j2e12514ava46734ad060247d8@mail.gmail.com>
+Parent: <4ddb9e5b1002110118v9642dc3gb0a60d992d47508d@mail.gmail.com>
+Date: Thu, 11 Feb 2010 10:27:54 +0100
+
+>>>    grep('dead trees').expf().collect.is_root()
+>>
+>> I like how you totally disregard how something works as long as it
+>> does the work. No, I'm not sarcastic: I really like it. I think it is
+>> the mathematician within you. Like how the mathematician makes tea. :) [1]
+>
+> I don't understand why you say that.
+
+Never mind. It's just that at first sight, this approach seemed to do
+the work, but highly inefficiently. Which would be the case if you
+would have used `exp()`. But `expb()` makes it efficient.

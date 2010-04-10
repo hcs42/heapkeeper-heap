@@ -1,0 +1,15 @@
+Author: Csaba Hoch
+Subject: Touching deleted posts
+Tag: bug
+Message-Id: <4AFFBDE3.70902@gmail.com>
+Parent: <4AFEF95E.2070704@gmail.com>
+Date: Sun, 15 Nov 2009 09:37:55 +0100
+
+Workaround in hkshell:
+
+    >>> p(<root>).touch()
+    >>> gi()
+
+<root> is a pre post, e.g. the heapid.
+
+This will regenerate the thread page.

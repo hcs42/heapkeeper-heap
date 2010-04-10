@@ -1,0 +1,32 @@
+Author: Attila Nagy
+Subject: Hk config file format, ini files
+Message-Id: <20090826183504.5de50a17.nagy.attila.1984@gmail.com>
+Parent: <4A918D8B.1040607@gmail.com>
+Date: Wed, 26 Aug 2009 18:35:04 +0200
+
+> == Multiple heaps ==
+> 
+> Do you think that the following representation is good enough for the
+> multiple heaps?
+> 
+>     [heap "UMS"]
+>     host=imap.gmail.com
+>     port=993
+>     username=...
+>     password=...
+>     postdb_dir=...
+> 
+>     [heap "hh"]
+>     host=imap.gmail.com
+>     port=993
+>     username=...
+>     password=...
+>     postdb_dir=...
+
+I like this format. I imagined something similar when we decided there'd be multiple heaps.
+
+> == Conclusion ==
+> 
+> It seems to me that the ini format is OK for us now.
+
+So it seems. OK.

@@ -1,0 +1,126 @@
+Author: Csaba Hoch
+Subject: Tidying up my hkrc
+Message-Id: <4AE00978.1070009@gmail.com>
+Parent: <b29f917d0910212341y31d7baawb4269c7b3e26b6c0@mail.gmail.com>
+Date: Thu, 22 Oct 2009 09:27:52 +0200
+
+Well, my hkrc needs tidying, as well... I will tidy it up when I will
+commit the new Generator into a non-double-underscore branch.
+
+== Editing ==
+
+> Are the `vim()`, `gvim()` and `edit_file()` functions obsolete?
+
+Yes.
+
+> Also, what do you use `get_content()` for?
+
+For the same thing hkcustomlib.edit_files uses the `old_content`
+variable. If a file did not change (its old content is the same as its
+new content), it is unnecessary to call its `touch` method.
+
+> == Generating indices ==
+> 
+> It seems like you generate the indices twice (three times, actually,
+> but the third is for the generator). You have this:
+> 
+> def gen_indices(postdb):
+> 
+>     hkcustomlib.gen_indices(postdb)
+>     # Date options
+>     date_options = hkcustomlib.date_defopts()
+>     ...
+>     genopts.shorttags = True
+>     genopts.date_fun = date_fun
+> 
+>     # Generating my index
+>     hklib.Generator(postdb).gen_indices(genopts)
+> 
+>     # Generator the issue tracker index
+>     generator = issue_tracker.create_generator(genopts)
+>     generator.gen_indices(genopts)
+> 
+> So, first you do the default index generation, then the customized
+> one. Is this necessary?
+
+What do you mean by "necessary"? It is necessary in the sense that
+all the different index generators generate different index pages.
+
+1. hkcustomlib.gen_indices(postdb) generates the default main index
+   page that contains all posts.
+2. hklib.Generator(postdb).gen_indices(genopts) generates my own index
+   pages, 'ums' and 'hh' that are defined in my hkrc module.
+3. The issue tracker generator generates the "all issues" and "sorted
+   issues" index pages that are defined in issue_tracker.py.
+
+> There is a typo: "Generator the issue tracker index" should read
+> "Generating the ..."
+
+Thanks.
+
+== Collecting posts matching any of a set of tags ==
+
+> In `index0()`, where you collect posts based on tags, you wrote this:
+> 
+>     python_tags = ['python', 'Python']
+>     ps_python = ps_all.collect(has_tag(python_tags))
+> 
+> which uses:
+> 
+> def has_tag(tags):
+>     def has_tag_fun(post):
+>         for tag in tags:
+>             if post.has_tag(tag):
+>                 return True
+>         return False
+>     return has_tag_fun
+> 
+> In my hkrc, this reads:
+> 
+>     ps_py = ps_all.collect.has_tag_from(('python', 'Python'))
+> 
+> You introduced your solution on 2009-03-21, I did mine on 2009-05-09.
+> We did basically the same thing (albeit yours has a brilliant
+> functional style ;)).
+
+I guess I wanted my solution to be a short term solution. The long
+term solution would be to automatically convert tags to match the
+canonical form (e.g. "Python" -> "python"). Maybe we should not use
+uppercase letters at all in tags.
+
+> What do you think about this new implementation of `Post.has_tag`?
+> 
+>     def has_tag(self, tagset):
+>         assert(isinstance(tagset, str) or hasattr(tagset, '__iter__'))
+>         if isinstance(tagset, str):
+>             return tagset in self._header['Tag']
+>         for tag in tagset:
+>             if tag in self._header['Tag']:
+>                 return True
+>         return False
+> 
+> Then we could have
+> 
+>     ps_python = ps_all.collect.has_tag(['python', 'Python'])
+> 
+> which is cleaner and more simple than our previous solutions.
+
+Nice! Go ahead.
+
+Note: Later I want to make self._header['Tag'] a set instead of a list
+for efficiency reasons. But that can wait. I'll file an issue about
+it.
+
+> == Dead code ==
+> 
+> Your `sections1()` seems to be dead code. (Also, why 1204?)
+
+I think I made `sections1` for a very specific purpose; probably
+something was wrong with the thread of 1204 and I wanted to see only
+that thread when doing the debugging. And I didn't remove it, because
+I thought when I have a trouble with a specific thread again, it will
+be useful to just change 1204 to something else.
+
+== Improvements ==
+
+I'll rewrite mine after I pushed the new generator.

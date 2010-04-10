@@ -1,0 +1,19 @@
+Author: Attila Nagy
+Subject: The need for trailing whitespaces in Heap posts
+Tag: issue
+Message-Id: <20100208115322.2dfb08a3.nagy.attila.1984@gmail.com>
+Parent: <4ddb9e5b1002070720o6bb43acfy638e285325e4e121@mail.gmail.com>
+Date: Mon, 8 Feb 2010 11:53:22 +0100
+
+> We would have to include it if we wanted to be able to express
+> everything, including your example. I don't think it it important to
+> be able to express that.
+
+At first I found it very hard to accept such a thought...
+
+> But we can say that we will add a separator later if we seem to need it.
+
+...but this seemed to comfort me. After all, a Heap free of trailing
+whitespace is not an insignificant gain.
+
+So I agree.

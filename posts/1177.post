@@ -1,0 +1,21 @@
+Author: Attila Nagy
+Subject: Moving heapkeeper/script to hk-dev-utils
+Tag: prop
+Message-Id: <b29f917d1002150307j5c532c2frd4c0d5e6cf13848a@mail.gmail.com>
+Parent: <4B76762E.20708@gmail.com>
+Date: Mon, 15 Feb 2010 12:07:03 +0100
+
+> The statistics* files are a very good example of why I don't want
+> these scripts in these repositories. We will have more and more
+> scripts over time, which are created only for a very specific purpose,
+> will maybe thrown away, and are usually not well documented (although
+> this last part is not true for statistics*). They will just make it
+> harder for the programmers to dig into Hk.
+
+Well said.
+
+I think what we need to be useful to others would be a cookbook with
+many examples to handle a wide range of situations. It shouldn't be
+hard: Hk is built to be customizable. Besides, it would be very
+important to show how we can do what traditional mailing lists do. I
+expect many potential users will be coming from that direction.

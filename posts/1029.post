@@ -1,0 +1,47 @@
+Author: Csaba Hoch
+Subject: Roadmap for v0.4 and v0.5
+Tag: prop
+Tag: v0.4
+Tag: v0.5
+Message-Id: <4B5175B5.2090204@gmail.com>
+Parent: <4ddb9e5b0912042347s3712cbcfu335a6491a2e5d373@mail.gmail.com>
+Date: Sat, 16 Jan 2010 09:15:49 +0100
+
+> Do you agree?
+>
+> I think we should make a "0.4" branch and a "0.5" branch. Stuff that
+> concerns the new generator and smaller fixes should go into 0.4. Hkweb
+> and support for multiple heaps should go into branch 0.5. Eventually,
+> when the old generator is removed from 0.4, we should release it, and
+> merge or rebase it with 0.5.
+
+I think it is time now to prepare for releasing 0.4.
+
+About the branches: let's stay with master, _master and the topic
+branches for now. (master and _master are practically the
+unmodifiable/modifiable versions of the branch called "0.4" that I
+proposed.) I don't think we should create a 0.5 branch, the topic
+branches are better instead. (We don't know yet which of
+hkweb/multiple heaps/blog/etc. will we include in 0.5.)
+
+Things we have to do before the release:
+- Remove the old generator and modify hkshell to use the new one.
+  //Csabi
+- Try the new code. //Attis, Csabi
+- Modify the tutorial and other documentation (e.g. the Architecture
+  page). //Csabi
+
+I will create a new branch called "_old_gen_removed" which removes the
+new generator and write an email when I pushed it. If is works, we
+should merge it into _master/master, and we should rebase all other
+branches on it. Then we can announce "feature freeze" for ourselves :)
+We wait for one or two weeks before releasing 0.4, so we may catch
+some errors. [1] Then we do the release.
+
+What do you think?
+
+[timeout 1 week]
+
+[1] I proposed rebasing everything on _old_gen_removed because this
+    way we might catch errors in the following weeks even if we use
+    other branches like _hkweb, _blog, etc.

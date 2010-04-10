@@ -1,0 +1,51 @@
+Author: Csaba Hoch
+Subject: CSS span + postbody
+Tag: issue
+Message-Id: <4ddb9e5b1002281235j3959f419qbbb913ab05fccf58@mail.gmail.com>
+Date: Sun, 28 Feb 2010 21:35:01 +0100
+
+The heapindex.css file contains the following items:
+
+    span, td
+    {
+        font-family: Arial, sans-serif;
+    }
+
+    .postbody
+    {
+        background-color: #fff;
+        border: 1px solid #080;
+        color: #000;
+        font-family: Courier, monospace;
+
+        padding-left: 0.5em;
+        padding-top: 0.5em;
+        padding-right: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+I would like to create every kind of item inside post bodies:
+
+    <div class="postbody">
+    This is an important task.
+
+    <span class="meta-text">[effort 2]</span>
+    </div>
+
+So I would like to add rules to the CSS:
+
+    .postbody .meta-text
+    {
+        /* display meta in red */
+        color: #f00;
+    }
+
+My problem is that the 'span class="meta-text"' text in the HTML file will not
+inherit the "font-family" rule from postbody, because it inherites that from
+"span". So it will be Arial instead of Courier. But I want Courier of course. I
+could redefine the font-family in the meta-text CSS rule, but I will have to do
+that in all new rules. If we add new lines to the span rule (e.g. a color), we
+will have to add those new lines to all rules. It seems suboptimal.
+
+Can I remove that span rule? Where do we use it? Or do you know another
+solution?

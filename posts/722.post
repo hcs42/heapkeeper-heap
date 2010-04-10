@@ -1,0 +1,18 @@
+Author: Attila Nagy
+Subject: Customizing the unittest module
+Message-Id: <b29f917d0910210006t20a7e6f2v3d78df2a9461e1ed@mail.gmail.com>
+Parent: <4AD8DFE6.4020103@gmail.com>
+Date: Wed, 21 Oct 2009 09:06:01 +0200
+
+> 2. When two strings should be equal but they are not, print a diff
+>   instead of just printing them as Python expressions.
+
+This is a life-saver!
+
+> Do you think I should share them? If yes, where?
+> a. "heapkeeper" repo
+> b. Another github repo (e.g. heapkeeper_devtools)
+> c. hh
+> d. UMS Heap
+
+I guess "hh" would be the best option.

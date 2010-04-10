@@ -1,0 +1,20 @@
+Author: Csaba Hoch
+Subject: Separate hkemail module
+Tag: issue
+Message-Id: <4ddb9e5b1001152337h28fcff8fj577ca0902005bb26@mail.gmail.com>
+Date: Sat, 16 Jan 2010 08:37:34 +0100
+
+I propose createing a hkemail modul and moving EmailDownloader there.
+The reason is that it is EmailDownloader does a very different things
+from the other parts of hklib: other parts of hklib define the post
+database, which is our invention, while EmailDownloader communicates
+with email servers though the IMAP protocol, the email format standard
+and the MIME standard.
+
+Another motive of mine is that I would like to have test cases for
+EmailDownloader, but that tests would be rather different from the
+current tests in test_hklib, and I would like to see the in a
+different module.
+
+[timeout 1 week]
+[effort 1]

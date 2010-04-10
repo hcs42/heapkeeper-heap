@@ -1,0 +1,19 @@
+Author: Attila Nagy
+Subject: hkshell: outdated posts recognized at startup (2009-05-10 0c52914207)
+Tag: commit
+Message-Id: <b29f917d0905100606x3eeecf15x1d698575aeb58991@mail.gmail.com>
+Parent: <4A06AE85.3050106@gmail.com>
+Date: Sun, 10 May 2009 15:06:49 +0200
+
+> Very nice job! It would have taken some Googling and documentation
+> reading for me to figure out os.stat.
+
+Of course I googled and RTFM'd too... Heck, I can't even calculate the
+average and SD of numbers read from stdin without Google & docs. And I
+have to admit it makes me feel awful.
+
+> Here, you were very fast to implement this feature probably because it
+> scratched your itch :)
+
+Yes, mostly. But of course you must be acknowledged for creating that
+dummy method, it made my work very simple.

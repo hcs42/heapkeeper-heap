@@ -1,0 +1,43 @@
+Author: Csaba Hoch
+Subject: Printing text without new lines
+Tag: idea
+Tag: issue
+Tag: reviewed
+Message-Id: <4ADF4A46.3030304@gmail.com>
+Date: Wed, 21 Oct 2009 19:52:06 +0200
+
+[effort 2]
+[version 0.5]
+
+Currently our logging facility (which is not really logging, but
+never mind) supports only printing whole lines.
+
+However, it would be nice to use this pattern (but of course we should
+use a more customizable logging function instead of this):
+    
+    def log(s):
+        sys.stdout.write(s)
+        sys.stdout.flush()  # I don't whether it is necessary in
+                            # Python. I know it is necessary in C/C++.
+
+    def do_something():
+        log('Doing something... ')
+        try:
+            ...doing something...
+        finally:
+            sys.stdout.write('[FINISHED]\n')
+
+Or even better:
+
+    def do_something():
+        log('Doing something... ')
+        try:
+            ...doing something...
+        except Exception, e:
+            sys.stdout.write('[FAILED]\n')
+            raise e
+        else: # no error happened
+            sys.stdout.write('[OK]\n')
+
+But for this, we should have a logger function that does not print a
+new line automatically after the strings given to it.

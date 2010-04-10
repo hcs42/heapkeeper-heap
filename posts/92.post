@@ -1,0 +1,37 @@
+Author: Csaba Hoch
+Subject: Renaming the github repository to "heapmanipulator" (later "heapkeeper")
+Tag: ppc
+Tag: prop
+Tag: reviewed
+Message-Id: <49E33CEA.2070503@gmail.com>
+Parent: <49E2E935.5020307@gmail.com>
+Date: Mon, 13 Apr 2009 15:23:54 +0200
+
+[close]
+
+>>> Shall we call our program Heapkeeper then? Of course it will be
+>>> abbreviated as Hk. (Which is better than Hm.)
+>>
+>> Hmm. This takes us back to the suit/non-suit problem above. What
+>> binary(ies) or command(s) exactly do you propose to be called
+>> Heapkeeper?
+> 
+> Everything. We don't have any binaries, just a bunch of Python
+> modules; the set of Python modules that we create will be (is?)
+> Heapkeeper. heapia would be a part of Hk, so would be heapweb.
+> 
+> Did I answer your question?
+> 
+>>> If yes, then I will rename the github repository to "heapkeeper".
+>>> I'll create a heapkeeper.heap GMail account and a heapkeeper-heap
+>>> Google Group (although I think we won't use it until Hk supports
+>>> managing multiple heaps.)
+>>
+>> The project name should be changed. What do you want to use these
+>> new addresses for? Is this the new name for the place we want to
+>> migrate the hh-part of the present-day Heap?
+> 
+> Yes.
+
+I renamed the repo to "heapkeeper". You should change "heap" to
+"heapkeeper" in your .git/config.

@@ -1,0 +1,16 @@
+Author: Attila Nagy
+Subject: Mapping for removing trailing whitespace
+Tag: vim
+Message-Id: <b29f917d1002070307n795e1e29rd4fc09aeaadd4ce3@mail.gmail.com>
+Parent: <4ddb9e5b1002070001r467a230fg5aad288acd3a20ec@mail.gmail.com>
+Date: Sun, 7 Feb 2010 12:07:27 +0100
+
+Sorry, I didn't really catch what you did here. I think it'd be wise to
+do such experimentation by clearly stating what you wrote in the original
+form. E.g.:
+
+    One line.<tab><tab><spc>
+    Another line.<tab>
+
+This way, we could see what got swallowed, because I really don't have
+a clue now.

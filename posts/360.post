@@ -1,0 +1,40 @@
+Author: Csaba Hoch
+Subject: Sphinx install
+Message-Id: <4A223C94.4030504@gmail.com>
+Date: Sun, 31 May 2009 10:15:16 +0200
+
+Would you try to install Sphinx? I'd like to make a documentation page
+about installing and using Sphinx, and I'd like to make sure that it
+works for you too.
+
+Installing hg: (if you can apt-get it, do that)
+
+  $ cd <my programs>
+  $ wget http://www.selenic.com/mercurial/release/mercurial-1.2.1.tar.gz
+  $ tar xzf mercurial-1.2.1.tar.gz
+  $ cd mercurial-1.2.1
+  $ make && sudo make install
+
+Installing Sphinx:
+
+  $ cd <my programs>
+  $ hg clone http://bitbucket.org/birkenfeld/sphinx/
+  $ cd sphinx
+  $ python setup.py build
+  $ sudo python setup.py install
+
+I think this mechanism also downloads the Pygments lib if it is not
+present.
+
+Building the docs:
+
+  $ cd <heapkeeper>
+  $ cd doc
+  $ make html
+  <Open <heapkeeper>/doc/_build/html/index.html>
+
+You can push the documentation to the web:
+
+  $ cd <heapkeeper>
+  $ scripts/pushdoc
+  <Type the password for hste.uw.hu>

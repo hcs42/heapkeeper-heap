@@ -1,0 +1,75 @@
+Author: Csaba Hoch
+Subject: Customizing the unittest module
+Message-Id: <4AD8DFE6.4020103@gmail.com>
+Date: Fri, 16 Oct 2009 23:04:38 +0200
+
+I made my second modification to the standard Python module
+`unittest`.
+
+My modifications:
+1. Stop when the first test case fails.
+2. When two strings should be equal but they are not, print a diff
+   instead of just printing them as Python expressions.
+
+Example:
+
+    $ ./test.py
+    ======================================================================
+    FAIL: Tests the following functions:
+    ----------------------------------------------------------------------
+    Traceback (most recent call last):
+      File "/a/cp/hk/hk/test_hklib.py", line 2348, in test_write_post_pages_NEW
+        Html.doc_footer()])
+      File "/a/cp/hk/hk/test_hklib.py", line 2190, in assertTextStructsAreEqual
+        hkutils.textstruct_to_str(text2))
+    AssertionError: The following strings should be equal but they are not:
+    
+     <html>
+       <head>
+         <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+         <title>Heap index</title>
+         <link rel=stylesheet href="heapindex.css" type="text/css">
+       </head>
+       <body>
+         <h1 id="header">Heap index</h1>
+     
+     <div class="postbox">
+     <span class="postsummary"><span class="author"><a href="0.html">author0</a></span>
+     <span class="subject"><a href="0.html">subject0</a></span>
+     <span class="button"><a href="thread_0.html"><img src="thread.png" /></a></span>
+     <span class="tags"><a href="0.html">[]</a></span>
+     <span class="index"><a href="0.html"><span class="index">&lt;0&gt;</span></a></span>
+     <span class="date"><a href="0.html"></a></span>
+    -<div class="body"><pre class="postbody">body0
+    -</pre></div>
+    +
+    +</span><div class="postbox">
+    +<span class="postsummary"><span class="author"><a href="1.html">author1</a></span>
+    +<span class="subject"><a href="1.html">subject1</a></span>
+    +
+    +<span class="tags"><a href="1.html">[]</a></span>
+    +<span class="index"><a href="1.html"><span class="index">&lt;1&gt;</span></a></span>
+    +<span class="date"><a href="1.html"></a></span>
+    +
+    +</span><div class="postbox">
+     </span></div>
+    +</div>
+     
+       </body>
+     </html>
+    
+    
+    ----------------------------------------------------------------------
+    Ran 108 tests in 0.240s
+    
+    FAILED (failures=1)
+
+Together with the commit hooks and my Vim customization for the
+Python+git combination, I make more and more stuff that could be
+useful for Hk developers.
+
+Do you think I should share them? If yes, where?
+a. "heapkeeper" repo
+b. Another github repo (e.g. heapkeeper_devtools)
+c. hh
+d. UMS Heap

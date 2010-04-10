@@ -1,0 +1,14 @@
+Author: Csaba Hoch
+Subject: Length of the lines in the documentation
+Tag: prop
+Tag: reviewed
+Message-Id: <49C56DB8.1020900@gmail.com>
+Date: Sat, 21 Mar 2009 23:44:08 +0100
+
+We should also agree on the length of the lines in the documentation.
+I suggest 79, because that's the length of the lines in the Python
+code.
+
+Other candidates: 80, 72, 70.
+
+Reference: heap://hh/35

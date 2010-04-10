@@ -1,0 +1,23 @@
+Author: Csaba Hoch
+Subject: Should the "reviewed" tag be part of the infrastructure?
+Tag: idea
+Tag: reviewed
+Message-Id: <4A090663.6090505@gmail.com>
+Parent: <4ddb9e5b0905110707g1b41c038xe5cf9c19854eaba4@mail.gmail.com>
+Date: Tue, 12 May 2009 07:17:23 +0200
+
+I have been thinking about this, and meta attribute is as good as a
+flag, even if we don't have the "custom post summary" feature! If we
+want "todo" to be displayed specially in the post summary, we have to
+hard-code displaying posts with "todo" differently in either case --
+it is just that if we have a flag, we have to hard-code "if the post
+has a 'todo' flag, do X", while if it is only a meta attribute, we
+have to hard-code "if the post has meta attribute 'todo', do X".
+
+I also have been thinking about why do you insist on having a flag for
+'todo'. If it is sheer misunderstanding, I hope this thread helps. But
+I realized you may have another concern: performance. You don't want
+to parse all posts all the time when only generating an index. I have
+to assure you, though, that having a "todo" flag is not the right
+solution to this performance issue: there are much better and much
+generic solutions. (I'll talk about one if you are curious.)

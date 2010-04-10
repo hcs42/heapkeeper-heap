@@ -1,0 +1,19 @@
+Author: Csaba Hoch
+Subject: Code coverage
+Message-Id: <4ddb9e5b1001231351y328024b1i43a8a85fcb31bdc9@mail.gmail.com>
+Parent: <4ddb9e5b1001230945n5b19d521k16ed450d6697e3bb@mail.gmail.com>
+Date: Sat, 23 Jan 2010 22:51:36 +0100
+
+>    $ sudo apt-get install python-coverage
+
+This method installs coverage.py 2.85 on Ubuntu 9.10. Version 3.2 has
+a different command-line interface. Since 3.2 is described on the home
+page [1], I guess that would be the "official" coverage.py that we
+should use. You can installing it in the following way:
+
+    $ sudo apg-get remove python-coverage # if you already installed
+coverage.py using apt-get
+    $ sudo apt-get install python-dev python-setuptools
+    $ sudo easy_install coverage
+
+[1] http://nedbatchelder.com/code/coverage/

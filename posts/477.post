@@ -1,0 +1,23 @@
+Author: Attila Nagy
+Subject: Heapkeeper version 0.3
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0908041415s7fe59976qcaa6a3309a26ce17@mail.gmail.com>
+Parent: <b29f917d0908032334i3756a7dau3c3f81367d5d2852@mail.gmail.com>
+Date: Tue, 4 Aug 2009 23:15:44 +0200
+
+> Almost there. I think I can do it this afternoon.
+
+Almost did it... the problem was that the commit tagged as v0.2 is a
+commit where two branches diverge. Before rebasing on top of it, I
+reset the repository to this point, and added a new commit in which I
+updated the README file. This was an error: only one branch became a
+child of this new commit, the other branch retained its 0.1 version
+until its merging. This, for some reason, makes the chaotic part look
+even more chaotic. So, after cleaning up, the repo seems to be a big
+mess, which is not what we want.
+
+A more elegant solution would have been to amend that commit with the
+README edit instead of adding a new one. Or manually rebasing that one
+loop which causes the problem. But this will have to wait until
+tomorrow.

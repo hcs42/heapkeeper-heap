@@ -1,0 +1,35 @@
+Author: Csaba Hoch
+Subject: The decreasing significance of ad-hoc tagging
+Tag: conventions
+Message-Id: <4B33F38F.4010709@gmail.com>
+Parent: <b29f917d0912240111q79768f38v37f483d5d52b91a5@mail.gmail.com>
+Date: Fri, 25 Dec 2009 00:04:47 +0100
+
+> So I agree that ad-hoc tagging is redundant, but not because of
+> full-text searches. It is made superfluous because of keywords.
+
+Yes, I forgot to point out this.
+
+> Three points in favor of ad-hoc tagging:
+> - tags are visible from the index and thread views, while the body,
+>   including any keywords or searchable content is not,
+> - tags are part of the e-mail subject, which means that they are
+>   "inherited" over to e-mail replies without paying extra attention to
+>   this,
+> - indices are (can be) still organized by tags; and full-text search
+>   is just not the same thing. If I write a post about something
+>   totally irrelevant, and mention a topic in a side-note or remark, I
+>   don't want the post to appear in the index for the side topic just
+>   because it contains a relevant word. Or if I talk about Monty Python
+>   and the Holy Grail, I don't want this post to appear among posts about
+>   Python programming.
+
+Fair points.
+
+>> Even if we kept ad-hoc tagging, I would not trust it as much as
+>> search... so it does not make sense to keep it.
+> 
+> I'd like to keep it for now. I like to see the change of topics in a
+> thread, and for this, the tags are great.
+
+OK.

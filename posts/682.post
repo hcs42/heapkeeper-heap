@@ -1,0 +1,11 @@
+Author: Csaba Hoch
+Subject: Meta to forbid downloading
+Tag: idea
+Message-Id: <4AD9EB9B.9000908@gmail.com>
+Parent: <b29f917d0910162335w381a3de3n9bbffd9dc2dcf6d3@mail.gmail.com>
+Date: Sat, 17 Oct 2009 18:06:51 +0200
+
+What you describe is a special case of interpreting the post and
+executing its orders when downloading it. It's OK for me to implement
+this special case first, and implement more later if we find it
+useful.

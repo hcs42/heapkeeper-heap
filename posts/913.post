@@ -1,0 +1,39 @@
+Author: Csaba Hoch
+Subject: The openness algorithm of the issue tracker
+Tag: discussion
+Message-Id: <4AFA4FB9.3080302@gmail.com>
+Parent: <4AFA43BE.4040409@gmail.com>
+Date: Wed, 11 Nov 2009 06:46:33 +0100
+
+> Does not seem to be sensible, but who knows:
+> 
+>     <1> Attis Talking in himself\[bug\]
+>     Bug A and B found.
+>     [open]
+>     [open]
+>     And they also have been solved.
+>     [close]
+>     [close]
+
+Yes it is! Just today, I had two situations like this:
+
+    <1> Csabi [prop]
+        I propose this.
+
+        <2> Attis [prop]
+            I like it, except that we should do...
+            
+            <3> Csabi [prop]
+                You are right, but we have to modify Hk to behave as
+                you propose.
+                [close] # The proposal
+                [open]  # The hk modification
+
+The "close" and "open" metas would be there to clarify what is to be
+done. They could have notes:
+
+            <3> Csabi [prop]
+                You are right, but we have to modify Hk to behave as
+                you propose.
+                [close The proposal]
+                [open Modifying Hk]

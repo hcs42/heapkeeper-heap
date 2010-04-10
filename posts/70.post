@@ -1,0 +1,80 @@
+Author: Attila Nagy
+Subject: Renaming the github repository to "heapmanipulator" (later "heapkeeper")
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0904050857w1a6bc8edw5c5133e57dbc75@mail.gmail.com>
+Parent: <49D8C63E.4070102@gmail.com>
+Date: Sun, 5 Apr 2009 17:57:16 +0200
+
+> I like the name Heapmanipulator more than Heap even for the project,
+> because it is unique. E.g. the domains heap.com and heap.org do exist.
+> It is practically impossible to find information about a program or
+> project called Heap.
+
+A strong point.
+
+> Maybe we should talk about the distinction between the project and the
+> program. What other things are in the project in your opinion? The
+> research? :) The web-Hm? I thought the web-Hm would also be called
+> Heapmanipulator. (But I don't have a strong opinion on this.)
+
+The web interface, as I see it, will be the kind of interface to a
+heap that doesn't exist today: a single interface to view and
+manipulate the heap. As long as the Heap is manipulated and viewed on
+separate interfaces, I find the name 'Heapmanipulator' for the former
+appropriate. But when the unification will have yielded the Grand
+Unified Web Interface to a heap, I think its name should be a broader
+term than just "Heapmanipulator".
+
+> Is it worth at all to draw any distinction between the program and the
+> project?
+
+Sometimes it is. Some projects build programs, like, say, Gimp. Others
+build suites of programs, like OpenOffice or Mozilla. (Of these, I
+think only the latter produces distinct binaries for the individual
+members of the suite.) I imagine our project, the name of which is
+being debated, will produce a suite consisting of:
+- a documented format for a mutable mailing list (called a heap)
+- a library for editing of said list (called Heapmanipulator)
+- a simple interactive interface for said library (called Heapia)
+- a Web-based interface for the same library (no name yet; Heapweb?)
+
+If we want to maintain clarity, the name of the suite should be
+identical to none of its constituents. (Mozilla used to violate this
+before its (now I think least used) umbrella product became
+SeaMonkey.) Yet, my idea of name usage had the same word for the
+project as the data structure on which it is built, namely "heap",
+albeit with different capitalization.
+
+Possible names for the project: (Warning: not all of this I consider a
+serious proposal; finding the ones worth of attention it is left as an
+exercise to the reader.)
+- Heap: only the capitalization makes it distinct from the name of the
+  data structure
+- Heap Project: a bit schoolish
+- Project Heap: a bit of post-industrial buzz, also military-lookalike-ish
+- HEAP Editable Archive of Posts: a bit of GNU insider humor, but
+  doesn't make us easier to find
+- Heap Suite: probably sensible at a later stage, but we need a name
+  now, and it would be pretty boastful right now
+- Heep: means nothing [1], and probably the best solution to the
+  findability problem; together with an appropriately-designed
+  pastel-rounded-reflect-fonted logo, its misspellinged cuteness makes
+  for a good name in the Web 2.0 naming epoch; other than that (ie.
+  for that) I hate it
+- Digger: a digger is something that builds a heap, isn't it? but
+  probably a very common word
+- Heapkeeper: I like this probably the most; it satisfies the
+  generality criterion, and Googlable, now has only 127 hits
+- Heepkeep: same, but even more Google-friendly at 2 hits
+
+Conclusion: I'm not really fond of any alternatives I could think of,
+but maybe you can add more. There is a workaround to be able to keep
+Heap as a name for the project: rename the data structure to something
+else (heapstore?). This doesn't solve the Google/findability issue,
+though.
+
+What do you think of my neologisms? (If none of them pleases you, I
+guess I'll submit to using Heapmanipulator.)
+
+[1] http://www.google.hu/search?q=heep+-uriah

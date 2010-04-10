@@ -1,0 +1,13 @@
+Author: Attila Nagy
+Subject: hkshell.enew: `author` and `parent` params (2009-09-12, 2e325eda)
+Tag: commit
+Message-Id: <b29f917d0910301916p6535ac69o1e7047b150f7ee1f@mail.gmail.com>
+Date: Sat, 31 Oct 2009 03:16:13 +0100
+
+I think you really should have mentioned the `enew` test case in the
+commit message, it's great! A fine example of how to construct test
+cases for those hard-to-test parts.
+
+(We've already discussed this topic before on the Hk heap [1].)
+
+[1] heap://hh/627

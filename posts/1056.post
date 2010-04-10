@@ -1,0 +1,22 @@
+Author: Attila Nagy
+Subject: Touching deleted posts: removing
+Tag: bug
+Message-Id: <20100128105642.a3be93fc.nagy.attila.1984@gmail.com>
+Parent: <4AFFBDE3.70902@gmail.com>
+Date: Thu, 28 Jan 2010 10:56:42 +0100
+
+> Workaround in hkshell:
+> 
+>     >>> p(<root>).touch()
+>     >>> gi()
+> 
+> <root> is a pre post, e.g. the heapid.
+> 
+> This will regenerate the thread page.
+
+[open]
+
+There is another, related issue: if the last post of a thread is deleted,
+the thread page is not eliminated. I think it should be deleted.
+
+Do you agree?

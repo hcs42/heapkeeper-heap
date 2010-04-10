@@ -1,0 +1,11 @@
+Author: Attila Nagy
+Subject: Workflow: what to do with old branches
+Tag: workflow
+Message-Id: <b29f917d0909070511x3aeff569gcc88f5f3b1ac42d3@mail.gmail.com>
+Date: Mon, 7 Sep 2009 14:11:57 +0200
+
+What do you think we should do with side branches that are produced in
+quantity with our new workflow? E.g. by the time the IMAP code got
+integrated into your master, a "fastdownload" and a "_fastdownload"
+branch have been created. "_review" is also useless now. Shall we
+remove these or leave them where they are?

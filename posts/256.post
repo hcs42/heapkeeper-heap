@@ -1,0 +1,30 @@
+Author: Csaba Hoch
+Subject: Connecting Hk with a mailing list management software
+Tag: idea
+Message-Id: <4A12D263.9010706@gmail.com>
+Parent: <20090519095448.fb4d3895.nagy.attila.1984@gmail.com>
+Date: Tue, 19 May 2009 17:38:11 +0200
+
+>> This is a very long-term idea.
+> 
+> And also a very important one.
+
+I'm glad to hear that :)
+
+> What would we need for it? I think we'd have to weld Hk together
+> with an SMTP server.
+
+I thought rather using a complete mailing list management tool rather
+than a simple SMTP server. Mailing list management programs have a lot
+of other functionality that our users want to have: spam filtering,
+archiving (maybe the users need the original archives),
+member administration, banning users, subscribing and unsubscribing
+people, etc. I don't want to reimplement all those features.
+
+BTW, POSS has a section on mailing list management, that gave me the
+idea.
+
+> If we can include this together with Hkweb, we'd have a marketable
+> product for sure.
+
+It seems so.

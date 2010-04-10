@@ -1,0 +1,13 @@
+Author: Attila Nagy
+Subject: "hklib: optimized IMAP downloading" (2009-08-17 e23aa8b83d)
+Tag: commit
+Message-Id: <b29f917d0908181112w2b9f1650lb4fe1a7aed6cd5a2@mail.gmail.com>
+Parent: <4ddb9e5b0908180842u381cb1as219dd6fcc99b6048@mail.gmail.com>
+Date: Tue, 18 Aug 2009 20:12:27 +0200
+
+> I would rather call it log or print_log. It is a bit misleading what
+> "dl(details=True)" does (downloads all the details?) What do you
+> think?
+
+OK. Or maybe detailed_log? Anyhow, I trust you with it :) Will you
+change it when you integrate my commit into your repo?

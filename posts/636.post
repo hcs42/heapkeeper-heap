@@ -1,0 +1,10 @@
+Author: Attila Nagy
+Subject: Number of characters in SHA-1 hashes
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0910061243v631f0f7fw8c5f88791a49ce40@mail.gmail.com>
+Date: Tue, 6 Oct 2009 21:43:37 +0200
+
+Earlier we've discussed using 5 or 10, but I suggest we use 7. 7 is
+the capacity of the short term memory for most people, so most of us
+can remember 7 characters in one block.

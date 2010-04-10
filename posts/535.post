@@ -1,0 +1,66 @@
+Author: Csaba Hoch
+Subject: Hk config file format, ini files
+Message-Id: <4A918D8B.1040607@gmail.com>
+Date: Sun, 23 Aug 2009 20:42:19 +0200
+
+[open]
+
+The ini file format is used as a Heapkeeper configuration file.
+
+The problem is that it cannot handle iterations. If you have a look at
+how nicknames are stored, you will see that it is very ugly:
+
+    [nicknames]
+    1=Attis nagy.attila.1984@gmail.com
+    2=Josh illesjosh@gmail.com
+    3=Csabi csaba.hoch@gmail.com
+    4=Csabi hoch@inf.elte.hu
+
+We should either find a better ini representation, or use another
+format.
+
+The following is an alternative ini format, conceived after looking at
+.git/config:
+
+    [nickname "Attis"]
+    email=nagy.attila.1984@gmail.com
+
+    [nickname "Josh"]
+    email=illesjosh@gmail.com
+
+    [nickname "Csabi 1"]
+    email=csaba.hoch@gmail.com
+    nick=Csabi
+
+    [nickname "Csabi 2"]
+    email=hoch@inf.elte.hu
+    nick=Csabi
+
+This format allows us to write things like this:
+
+    [nickname "Csabi"]
+    email_regexp=hoch@inf.elte.hu
+    nick=Csabi
+
+== Multiple heaps ==
+
+Do you think that the following representation is good enough for the
+multiple heaps?
+
+    [heap "UMS"]
+    host=imap.gmail.com
+    port=993
+    username=...
+    password=...
+    postdb_dir=...
+
+    [heap "hh"]
+    host=imap.gmail.com
+    port=993
+    username=...
+    password=...
+    postdb_dir=...
+
+== Conclusion ==
+
+It seems to me that the ini format is OK for us now.

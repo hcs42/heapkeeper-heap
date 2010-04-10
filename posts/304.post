@@ -1,0 +1,21 @@
+Author: Attila Nagy
+Subject: Web page hosting
+Message-Id: <b29f917d0905221329g3570b2f6i9d6d3655af1ae485@mail.gmail.com>
+Parent: <4A1704F7.7000705@gmail.com>
+Date: Fri, 22 May 2009 22:29:01 +0200
+
+> Do you know free web page hosting services that also make us easy to
+> buy a domain? (The domain will not be free of course.) I think of
+> the homepage of Hk. We have only static HTML pages, that could be
+> enough.
+
+Yes, I do. At newhosting.hu, hosting is free, and the domain costs
+about 2000 HUF / year. Also free of advertisements, and PHP and MySQL
+are included. Definitely worth looking.
+
+> I had a look at Google Apps on how easy it is to store static web
+> pages. I registered the "heapkeeper" Google App domain. Well, static
+> HTML pages can be copied and shown, but I haven't manage to do it
+> nicely: you have to write "/static/index.html" after the domain. [2]
+
+Can you use FTP to upload files?

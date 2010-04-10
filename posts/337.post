@@ -1,0 +1,53 @@
+Author: Attila Nagy
+Subject: Itemization
+Tag: post syntax
+Tag: prop
+Message-Id: <20090529080229.58149b6f.nagy.attila.1984@gmail.com>
+Parent: <4A1D8A6E.7000909@gmail.com>
+Date: Fri, 29 May 2009 08:02:29 +0200
+
+This example:
+
+>     Items:[-]
+>     a bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+>     b bla bla bla
+>     c bla bla bla bla bla bla bla bla bla bla bla bla bla bla there is
+>     a person outside
+
+is quite probably the one that hurts the most. The short form of the
+English indefinite article (which happens to be the same as the short
+form of the Hungarian definite article, just for added linguistic joy),
+is of course frequent enough to accidentally start a line. But
+luckily, both English and Hungarian typographical conventions dictate
+this to be written as:
+
+     Items:[-]
+     a. bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+     b. bla bla bla
+     c. bla bla bla bla bla bla bla bla bla bla bla bla bla bla there is
+     a person outside
+
+If we accept only letters and numbers followed by a period, comma or
+closing parentheses as numbering, we can solve this case, as long as
+"a" at the end of a grammatic structure is invalid. This is the case
+in Hungarian and English, but not in French, where this single letter
+word is the present tense singular 3rd person form of the verb "avoir",
+"to have". (Still pretty uncommon at the end of a sentence, but not
+impossible.)
+
+But what if one needs structures like this:
+
+    Head:[-]
+    a. Apple
+    aa. Green apple
+    ab. Red apple
+    b. Banana
+    ba. Green banana
+    bb. Yellow banana
+    bba. Yellow banana with brown spots
+
+Lawyers like to use this kind of multi-level itemization with
+multi-character letter marking.
+
+Other than this, I think we can live with a fixed set of itemization
+marks. A sensible set would be [-+*]. Do you think we need others?

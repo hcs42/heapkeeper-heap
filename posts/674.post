@@ -1,0 +1,15 @@
+Author: Attila Nagy
+Subject: Meta to forbid downloading
+Tag: idea
+Message-Id: <b29f917d0910162335w381a3de3n9bbffd9dc2dcf6d3@mail.gmail.com>
+Date: Sat, 17 Oct 2009 08:35:43 +0200
+
+Right now, if we write an e-mail that is only useful in e-mail form,
+and is not useful to keep it on the Heap, we add a "delpost" meta, and
+count on the heap maintainer to weed it out. But we could have a "very
+special meta", the only one that would be interpreted at download
+time. We could call it "email" or "noarchive". If the download_email()
+function finds this meta in the body of a post, it would not create a
+post, or, better yet, it would create a deleted post (to mark its
+Message-Id known). This would come handy for those "Thanks for
+posting" and "Interesting" messages.

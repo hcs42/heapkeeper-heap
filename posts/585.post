@@ -1,0 +1,29 @@
+Author: Attila Nagy
+Subject: "hkshell: enew accepts prefix" (2009-09-06 90b4c7d6)
+Tag: commit
+Message-Id: <b29f917d0909071241x4aaf503bl245e99a75d1ee3ed@mail.gmail.com>
+Parent: <4ddb9e5b0909071109h129cda9eobcbcd48f5e50c823@mail.gmail.com>
+Date: Mon, 7 Sep 2009 21:41:43 +0200
+
+> Another thought: you don't always have to state the module, you can
+> state a class or a method, too:
+>
+>    PostDB: much nicer
+>
+> or
+>
+>    PostDB.next_heapid: accepts prefix
+>
+> The main idea is to state the scope of the change before the colon.
+
+Good idea!
+
+> So maybe the best title is the following:
+>
+>    PostDB.next_heapid,hkshell.enew: accepting prefix
+>
+> (We can spare the space before the colon, too.)
+
+You mean the one after the comma. Probably, though I'd only do that as
+a last resort to cut down 51 chars to 50. My ties to typography are
+strong :)

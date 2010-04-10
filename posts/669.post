@@ -1,0 +1,13 @@
+Author: Attila Nagy
+Subject: CRLF issues
+Tag: hk0.3
+Tag: windows
+Message-Id: <b29f917d0910161019h56d16ce4gc96619e552b00c03@mail.gmail.com>
+Parent: <4A79428B.7040508@gmail.com>
+Date: Fri, 16 Oct 2009 19:19:21 +0200
+
+Since Python is cross-platform, it is very probable that this problem
+has a canonical solution. Do you know what it is? If not, we should
+seek contact with other programmers and/or have a look at other
+projects. (It is very likely that Python programs respect the system's
+EOL preferences.)

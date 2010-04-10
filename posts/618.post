@@ -1,0 +1,20 @@
+Author: Attila Nagy
+Subject: Wiki syntax: is the "wiki" bracket segment necessary?
+Tag: post syntax
+Tag: prop
+Message-Id: <20091002132810.fdbfce0a.nagy.attila.1984@gmail.com>
+Parent: <4A222701.3090700@gmail.com>
+Date: Fri, 2 Oct 2009 13:28:10 +0200
+
+> But what is wiki syntax? We want to handle itemization, raw blocks,
+> inline raw text, quotes, citations, etc. anyway. I think the only
+> thing we included in wiki and excluded from normal posts are the wiki
+> headers. But why not include them in normal posts? It is highly
+> unlikely that people start a normal line with `==` by accident, and it
+> is so unnecessary to write the `[wiki]` bracket segment all the time.
+
+Very tempting. And even if a "==" breaks to the beginning of the line
+(e.g. in an inline piece of code), it would only make it a wiki header
+if the line also ended with "==", which is highly unlikely. Other than
+that, I can't think of a situation where this can get dangerous. So I
+say OK.

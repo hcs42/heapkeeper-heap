@@ -1,0 +1,23 @@
+Author: Csaba Hoch
+Subject: Automatic links in post pages
+Tag: idea
+Message-Id: <4A222A41.7010104@gmail.com>
+Date: Sun, 31 May 2009 08:57:05 +0200
+
+Motivation: have you ever had the feeling on a mailing list that
+people use jargon that you don't understand? For example, Python
+developers often talk about "the GIL", and I didn't understand it. [1]
+
+I'm sure we will have our own jargon -- Hk, Hh, and I would like
+to use "bs" for "bracket segment". We could have a mechanism that
+finds these words in posts and converts them to links that point to
+their explanation. This way when people read any of our posts, it
+will be easy for them to understand what we are talking about. We
+could link words like "hkshell" and "hkrc", as well; so we could
+easily say to anyone that "put this in your hkrc" without further
+explanation.
+
+It could be implemented as a body parser plugin. (A "processor" in my
+terminology.)
+
+[1] Now I googled it up, and it is "Global Interpreter Lock".

@@ -1,0 +1,36 @@
+Author: Attila Nagy
+Subject: The need for trailing whitespaces in Heap posts
+Tag: issue
+Message-Id: <b29f917d1002070308g5c74d57ch24bcdbae725a195f@mail.gmail.com>
+Date: Sun, 7 Feb 2010 12:08:18 +0100
+
+Maybe you misunderstood my original problem. In Hk posts, the trailing
+whitespace should never be valid if it matches /[^ ]\s\+$/. (That is,
+the only acceptable situation is a line that is only whitespace, and
+nothing else.) See for example this:
+
+    #include <stdio>
+
+    int main() {}
+
+If I write this, if we ever do any syntax highlighting, this will show
+up as two distinct code blocks.
+
+There is an alternate solution: we could declare that adjacent code
+blocks are to be interpreted as continuous including any empty lines,
+but then we'd have to include a separator element, e.g. a special "no-op"
+meta. Like this:
+
+    Compare these two examples:<cr>
+    <cr>
+    <spc>print 'hello world'<cr>
+    [sep]<cr>
+    <spc>print('hello world')<cr>
+
+Here, the "sep" meta generates no output, but it prevents the output
+from containing a single code block with 3 lines, the one 2nd empty,
+as it would happen otherwise.
+
+Of course this meta doesn't do anything, so it could be called "nop",
+but then its purpose wouldn't be so evident. Maybe we could say that
+"nop" and "sep" are synonyms for the same meta.

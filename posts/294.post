@@ -1,0 +1,21 @@
+Author: Attila Nagy
+Subject: Terminology: editor vs maintainer
+Message-Id: <20090519230017.3ba762b3.nagy.attila.1984@gmail.com>
+Parent: <4A131A04.6070908@gmail.com>
+Date: Tue, 19 May 2009 23:00:17 +0200
+
+> Which would require us to implement a version control system...
+
+Don't really feel like... hope you can understand :)
+
+I think we will have to introduce some kind of lockout system anyway. My
+idea would be to lock the database for the time of creating a complete copy --
+a snapshot. Then, if it's complete, editing can resume, and the copy would be
+committed into the repository.
+
+This approach only makes sense if creating a full copy is much faster than
+committing into git right away, which I doubt.
+
+A more sophisticated approach would be to keep changes in memory for the time
+of a database freeze, and when the freeze is over (ie. the commit has
+completed), the changes would be transferred from memory to disk.

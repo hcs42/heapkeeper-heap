@@ -1,0 +1,33 @@
+Author: Csaba Hoch
+Subject: Testing on Windows
+Tag: hk0.3
+Message-Id: <4A77E2EF.7060306@gmail.com>
+Parent: <4ddb9e5b0908021155r52a68bb1m146fbb9e74aa0b07@mail.gmail.com>
+Date: Tue, 04 Aug 2009 09:27:43 +0200
+
+> - We should allow customizing the editor for `enew` and other commands
+> more easily, so that the follower of the tutorial can perform them
+> right at the beginning. Firstly, the followers on Windows probably
+> don't want to use gvim, and secondly, it does not work for some reason
+> [1]. The easier and the most conventional way is I guess to use the
+> EDITOR environment variable by default. We may even default to notepad
+> on Windows and vi to other systems if the environment variable is
+> empty, so it will "just work" for the majority of the readers. We
+> should mention setting EDITOR in the tutorial.
+
+Done.
+
+> - We have CRLF issues. It needs more discussion than the previous
+> topics, so I will open another thread for it.
+
+Done.
+
+> - This is not a Windows problem but it came out when testing Hk on
+> Windows. If the timezone is different from CEST, the automatic test
+> for hkshell.ls fails [2]. We should make the localtime function used
+> by Post.date_str customizable and use GMT as localtime in the tests.
+> That's how I did it in the hkcustomlib module, so it's not difficult.
+
+Done.
+
+I haven't pushed the fixes; I haven't tested them on Windows.

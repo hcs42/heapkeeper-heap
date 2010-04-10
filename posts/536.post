@@ -1,0 +1,104 @@
+Author: Csaba Hoch
+Subject: Managing several heaps in Heapkeeper
+Tag: prop
+Tag: reviewed
+Message-Id: <4A918DBC.6040009@gmail.com>
+Date: Sun, 23 Aug 2009 20:43:08 +0200
+
+This is a proposal on the design of supporting multiple heaps in
+Heapkeeper.
+
+== Idea ==
+
+The main idea is that we will have only one PostDB object for all
+posts, and the identifiers of the posts will have two components: the
+name of their heap and their identifier inside that heap.
+
+The name of the heap will be a string. The identifier of posts inside
+the heap would be similar to what we now call "heapid". I would rather
+call it "post name". "heapid" would confuse users, who would think
+that it identifies the heap. I would call the pair of heap name and
+post name "post id": that would be an unambiguous identifier of a
+post, even across heaps. If you know better name than "post name", I
+would be glad to hear it.
+
+== Example: moving a post ==
+
+This way moving the post will be easy:
+- The postdb.postid_to_post dictionary will be updated, so that the
+  post is assigned to the (newheap,newpostname) key. `newheap` is the
+  name of the heap where the post is moved to; `newpostname` is a post
+  name that is free on that heap. (This dictionary will play the role
+  that is played now by PostDB.heapid_to_post.)
+- The _postid data attributes of original post will be set to the new
+  values.
+- A new, deleted post should be created to occupy the old postid of
+  the post (in the old heap, of course).
+- All references in the other posts to post id of the moved post have
+  to be modified so that they point to the new post id. (The
+  references to its message id does not have to be changed.)
+
+When the user saves the post database, the followings will happen:
+- The new, deleted post will overwrite the old post file of the moved
+  post, as if the original post was deleted.
+- The original, moved post will create a new post file in the
+  directory of the "new" heap.
+
+== Current heap ==
+
+The only problem is the inconvenience of users who want to handle one
+heap and does not want to specify the name of the heap all the time.
+
+    >>> p(('ums', 0))    # the first post of UMS
+    >>> p(('hh', 0))     # the first post of Hh
+
+We should have a current heap:
+
+    >>> select('ums')
+    >>> p(0)             # the first post of UMS
+    >>> select('hh')
+    >>> p(0)             # the first post of Hh
+
+The only thing I don't know whether it should be better to have a
+current heap in hkshell or in PostDB. It seems to me that having it in
+hkshell would be architecturally cleaner, but having it in PostDB
+would be a bit easier. Maybe I'll try to implement it in hkshell, and
+if it turns out to be inconvenient, I'll go with having it in PostDB.
+Opinions?
+
+== Changes ==
+
+Things that would change in order to support multiple heaps:
+- Post:
+    - will have `_postid` data attribute and a heap() method instead
+      of `_heapid` and heapid()
+    - will have a move(heap) method
+    - `postfilename`, `htmlfilename`, etc. methods will be modified
+- PostDB:
+    - will read from several directories
+    - will use post id instead of heap id everywhere
+    - heaps (=sets of posts in one heap) will be lazy data attributes:
+      PostDB will have a heap(heapname) method
+- Server:
+    - the `dl` method will have an argument to specify which heap to
+      download emails from
+- Generator:
+    - It will write HTML files into one directory, but with heap names
+      as subdirectories. An example:
+
+        all.html
+        ums.html
+        hh_issues.html
+        hh_other.html
+        hh/1.post
+        hh/2.post
+        hh/3.post
+        ums/1.post
+        ums/2.post
+
+- hkshell:
+    - will have a "current heap"
+- hk.cfg:
+    - will have a section for each heap (see also in my other email)
+- post files:
+    - will use post ids instead of heap ids in the "Parent" attribute

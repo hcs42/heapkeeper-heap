@@ -1,0 +1,21 @@
+Author: Attila Nagy
+Subject: Issues: coloring
+Tag: hh-conventions
+Tag: prop
+Message-Id: <20100128111027.0b0bee3a.nagy.attila.1984@gmail.com>
+Parent: <4AFFC86C.4070202@gmail.com>
+Date: Thu, 28 Jan 2010 11:10:27 +0100
+
+> > Maybe issues (=threads with bug/feature/issue/prop tag) should be put
+> > into a different section in the issue tracker and should have
+> > different colors than other issues. Probably they should be marked
+> > with a very different color (I propose cyan :) )
+> 
+> I have implemented the "different color" part, so I'll push if you say
+> OK.
+
+OK.
+
+Regarding the choice of colors, you are entirely on your own. I seem
+to have a strange agnosia for color aesthetics, which may or may not be
+related to my color perception problem.

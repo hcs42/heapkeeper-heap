@@ -1,0 +1,14 @@
+Author: Attila Nagy
+Subject: Developing with vim
+Tag: ppc
+Tag: reviewed
+Tag: vim
+Message-Id: <49e2cb44.09c5660a.1595.fffffd1a@mx.google.com>
+Parent: hh/37
+Date: Mon, 13 Apr 2009 07:19:43 +0200
+
+Any progress in this field recently? I'm always on the look for new
+editor tips!
+
+Btw. I use ctags only through :Tlist (what is the real name for that
+plugin?), which I mapped to F8.

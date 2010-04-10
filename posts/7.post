@@ -1,0 +1,13 @@
+Author: Csaba Hoch
+Subject: Subjects should start with capital letter
+Tag: hh-conventions
+Tag: prop
+Tag: reviewed
+Message-Id: <49B2BD12.9020507@gmail.com>
+Date: Sat, 07 Mar 2009 19:29:38 +0100
+
+The subject tells everything.
+
+Of course if we have a good reason to use lowercase letters (e.g.
+the first word of the subject is the name of a Hm module), it
+should be written that way.

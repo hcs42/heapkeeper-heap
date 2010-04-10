@@ -1,0 +1,33 @@
+Author: Csaba Hoch
+Subject: Caching of next heapid
+Tag: discussion
+Message-Id: <4AEC1B32.1060604@gmail.com>
+Parent: <b29f917d0910310212y430d259ay11dade33a681ad27@mail.gmail.com>
+Date: Sat, 31 Oct 2009 12:10:42 +0100
+
+> Do you think it would be important to preserve `_next_heapid` across
+> a reload?
+
+No, I guess you are right.
+
+> So, my newest version:
+> 
+>    try:
+>        self._next_heapid = max(heapids) + 1
+>    except ValueError:
+>        self._next_heapid = 0
+
+I would still prefer if-else structure:
+
+    if heapids == []:
+        self._next_heapid = 0
+    else:
+        self._next_heapid = max(heapids) + 1
+
+Don't you think it is more readable?
+
+But of course either of these should be improved because we want to
+use the cache mechanism for all prefixes. (Where an empty string is
+just a concrete prefix.)
+
+[note: I have not read your commit on this subject yet.]

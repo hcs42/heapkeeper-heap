@@ -1,0 +1,21 @@
+Author: Csaba Hoch
+Subject: Commit threads
+Tag: prop
+Tag: reviewed
+Message-Id: <49C554BF.8050201@gmail.com>
+Date: Sat, 21 Mar 2009 21:57:35 +0100
+
+When talking about a specific commit (or commits), I suggest the
+following forms for the subject:
+    
+    [hh][commit] Description (date sha)
+    [hh][commit] Description (date1 sha1, date2 sha2...)
+
+- `date` is a date in yyyy-mm-dd format, as gitk displays it. Or is
+  mm-dd enough?
+- `sha` is the first 10 characters of the SHA1 ID. Or should it be
+  less?
+
+E.g.:
+
+    [hh][commit] Developer Guide (2007-03-16 f3865b0265, 2007-03-19 137486f2a0)

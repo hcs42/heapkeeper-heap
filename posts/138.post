@@ -1,0 +1,39 @@
+Author: Attila Nagy
+Subject: Assess what we need for a usable product
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0905020022x8644dcud2950d9a99dce1fa@mail.gmail.com>
+Date: Sat, 2 May 2009 09:22:13 +0200
+
+I propose to start making a list of those additions and new features
+that we need in order to make Heapkeeper a product ready to be used by
+others.
+
+My list of what we need:
+* a setup script
+* an up-to-date tutorial
+* a visitor-friendly web site...
+** ...which very strongly encourages interested visitors to get in
+(e-mail) contact with us
+* a public heap?
+
+== Do we need the interactive Web interface? ==
+
+The first and probably most important question is: should we market
+Heapkeeper as a usable product in this phase, or only when we have at
+least some form of interactive Web interface.
+
+I think having a Web interface is a nice way to go, but it's not
+everything. See for example MailMan [1]. Many projects use this
+mailing list manager, however it has only the kind of flat web
+interface Hk already supports (of course, since it has no way of
+altering history).
+
+There is a counter-argument: if we open too soon to the world, some
+may fail to recognize what we're building here. With an impressive
+interactive Web interface, a higher percentage of our visitors would
+be interested.
+
+Counter-counter-argument: "Release early, release often."
+
+[1] http://www.gnu.org/software/mailman/index.html

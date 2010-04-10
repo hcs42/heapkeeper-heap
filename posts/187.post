@@ -1,0 +1,33 @@
+Author: Attila Nagy
+Subject: Nice work, elif, same commits (2009-05-07 3b4f6d3677, 179f5cf18e, 4e32bdad1c)
+Tag: commit
+Message-Id: <b29f917d0905090049r7dd91263s6255ac516fff2032@mail.gmail.com>
+Parent: <4A034922.5070203@gmail.com>
+Date: Sat, 9 May 2009 09:49:54 +0200
+
+> == elif ==
+>
+> A small comment though: there is an "elif" statement in Python. So
+> please do not write
+>
+>    if a:
+>        b
+>    else:
+>        if c:
+>            d
+>        else:
+>            e
+
+Although git credits me with writing the code in question, I think it's a
+mistake. I merely renamed that function, and git thinks it's all new.
+
+I did a git blame in the master thread:
+    cfac9c01 heapmanip.py (Csaba Hoch  1993)  if isinstance(item, str):
+    cfac9c01 heapmanip.py (Csaba Hoch  1994)      strings.append(item)
+    cfac9c01 heapmanip.py (Csaba Hoch  1995)
+    cfac9c01 heapmanip.py (Csaba Hoch  1996)  else:
+    cfac9c01 heapmanip.py (Csaba Hoch  1997)      if item != None:
+    cfac9c01 heapmanip.py (Csaba Hoch  1998)          post = item
+
+(I removed the date column; timestamp was "2009-02-18 23:43:07 +0100" for all
+lines.

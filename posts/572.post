@@ -1,0 +1,16 @@
+Author: Attila Nagy
+Subject: SHA1 as post id
+Tag: discussion
+Message-Id: <b29f917d0909021258v661eaefaq55c858d927a9ca7e@mail.gmail.com>
+Parent: <4A9A2CF9.3090604@gmail.com>
+Date: Wed, 2 Sep 2009 21:58:51 +0200
+
+> Posts are not immutable, so they cannot have SHA1 ids. We could make
+> our model similar to git and have immutable posts. It would mean that
+> every tiny modification in a post would result in a different post.
+
+That pretty much explains it.
+
+But all we need is uniqueness. How about UUIDs as post ids? [1]
+
+[1] http://en.wikipedia.org/wiki/UUID#Python

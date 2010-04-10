@@ -1,0 +1,17 @@
+Author: Csaba Hoch
+Subject: Separate hh from ums
+Message-Id: <4A754903.3060702@gmail.com>
+Parent: <b29f917d0908020027w261147c0jdbe2dc3a4a85b0d9@mail.gmail.com>
+Date: Sun, 02 Aug 2009 10:06:27 +0200
+
+> I think we should also separate hh from ums by the time 0.3 is
+> launched.
+
+What we can do is set up a Google Group for Hh. That could be done by
+0.3, it takes only a few minutes.
+
+But I don't think we should separate the two heaps (i.e. post files
+and git repositories) yet. We don't have the infrastructure for that.
+That should be an aim for 0.4. I have already ideas about how to do
+that, and it will be easier than I first thought. (I'm just lazy to
+write emails about it upfront.)

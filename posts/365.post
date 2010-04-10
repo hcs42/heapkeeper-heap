@@ -1,0 +1,59 @@
+Author: Attila Nagy
+Subject: In-place replies in thread view
+Tag: idea
+Tag: reviewed
+Message-Id: <20090531210221.1e865263.nagy.attila.1984@gmail.com>
+Parent: <4A228DB8.1070007@gmail.com>
+Date: Sun, 31 May 2009 21:02:21 +0200
+
+>>> I often use `[...]` in quotes:
+>>> [...]
+>>> Afterwards (with a slightly backward incompatible solution) we may
+>>> introduce another behaviour, e.g. it could link to the original
+>>> paragraph. (We could have a setting about turning off the new
+>>> behaviour.)
+>> 
+>> OK, but how would you find the original paragraph?
+> 
+> In the example I would find the parent post and the "People I like"
+> text inside. This will often work.
+
+I like this idea. We could even extend it to merge a stream of replies
+into a single page, to simulate "in-place replies". An example:
+
+A writes:
+
+    We could create a meta to include images in a post. Not that I'd
+    particularly love to see such a feature in Hk, but who knows,
+    maybe there'll be people who absolutely need this feature.
+
+B replies:
+
+    > We could create a meta to include images in a post.
+
+    A good idea. Though I'd probably never use it myself, it's
+    unreasonable to lose potential users because a feature is missing
+    that'd be trivial to implement.
+
+A replies to B's reply:
+
+    > it's
+    > unreasonable to lose potential users because a feature is missing
+    > that'd be trivial to implement.
+
+    Very good point.
+
+When viewing thread with "in-place replies" enabled:
+
+    We could create a meta to include images in a post. Not that I'd
+    particularly love to see such a feature in Hk, but who knows,
+    maybe there'll be people who absolutely need this feature.
+
+        A good idea. Though I'd probably never use it myself, it's
+        unreasonable to lose potential users because a feature is missing
+        that'd be trivial to implement.
+
+            Very good point.
+
+What do you think? In my opinion, making sense of long
+reply-to-reply-to-reply threads would be _way_ more legible.

@@ -1,0 +1,48 @@
+Author: Csaba Hoch
+Subject: Roadmap for v0.4 and v0.5
+Tag: prop
+Tag: reviewed
+Tag: v0.4
+Tag: v0.5
+Message-Id: <4AF70251.5060803@gmail.com>
+Date: Sun, 08 Nov 2009 18:39:29 +0100
+
+I propose the following roadmap (which will not be set in stone of
+course).
+
+- New Generator:
+    - Reviewing/understanding the new Generator //Attis
+    - Discussing the new Generator //Attis & Csabi
+    - Extending or modifying during and after the discussion
+      //Attis & Csabi
+    - Remove the old Generator //Csabi (or Attis)
+- Releasing Hk v0.4 //Csabi
+- Implementing support for post references (required for separating
+  UMS and Hh) [1] //Csabi
+- Going through the heap and correct all post references so that Hk
+  understands them
+    - Hk-related posts (with or without "hh" tag): Csabi
+    - other posts: Attis
+- Implementing support for multiple heaps [2] //Csabi
+- Separating UMS and Hh with an automated process and check the result
+  carefully //Attis & Csabi
+- Making Hh public:
+    - setting up a public mailing list for Hh //Attis or Csabi
+    - setting up a github repo for Hh //Attis or Csabi
+    - setting up Shrek to make automatic commits of new posts //Attis
+- Releasing Hk v0.5 and announcing Hk to the world //Csabi
+
+We can implement smaller things on the way, of course, and during the
+cleanup we can do more then just correcting the post references. I
+want to refresh my memory and sort the Hk-related posts (we will see
+how that goes).
+
+You can work even on something bigger (hkweb for instance). Also, we
+may do things paralel and may have branches in the repository: maybe
+we will implement support for post references while still having
+discussions about the new Generator.
+
+Do you have ideas about what do you want to work on?
+
+[1] heap://hh/889
+[2] heap://hh/536

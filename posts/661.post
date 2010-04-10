@@ -1,0 +1,30 @@
+Author: Csaba Hoch
+Subject: Commit hooks
+Tag: git
+Tag: github
+Message-Id: <4ddb9e5b0910160238y7342273enf6f71e2c86003e97@mail.gmail.com>
+Date: Fri, 16 Oct 2009 11:38:45 +0200
+
+[open]
+[!todo break thread]
+
+>> If you have a look at the impact graph [1], you see that we made the
+>> same mistakes. We are not shown as two people, but four instead.
+>
+> We sorted this out by rewriting history.
+>
+> Of course we don't want to do so again, so we should pay attention to
+> our identities. (It's much easier now, actually, thanks to the
+> constantly moving _-threads.)
+
+Maybe we should use more commit hooks. A few days ago I sent a commit
+hook that checks that there are no trailing spaces. Other ideas I
+have:
+- checking that the author and commiter are elements of a predefined
+set of authors
+- checking that all tests pass
+
+Sometimes when I made a temporary commit, I don't want the tests to be
+checked. Probably we should make this a push hook instead of a commit
+hook. We could even do "fetch" hooks that would warn us if there is a
+problem with the other people's code.

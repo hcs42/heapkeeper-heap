@@ -1,0 +1,26 @@
+Author: Csaba Hoch
+Subject: Storing our post files on GitHub
+Tag: idea
+Message-Id: <4A186E47.2060502@gmail.com>
+Parent: <20090519074642.1509eb79.nagy.attila.1984@gmail.com>
+Date: Sat, 23 May 2009 23:44:39 +0200
+
+> Hh contains practically no personal information, so it's safe to
+> publish. Of course, we'll have to double-check before a push to
+> ensure there's really no sensitive information within. If it's
+> difficult to remove nasty revisions from Wikipedia's database, with
+> GitHub, it's even more painful.
+
+Apparently not so!
+
+  "Completely remove a file from all revisions  
+
+  Don't you hate when you can't remove that file full of cleartext
+  passwords from your github account? Even if you git rm it, it still
+  is accessible in previous versions of the tree. So, you need to
+  rewrite the entire tree. Fortunately, this is really easy with git." [1]
+
+The SHA ids of the modified commits will change of course. But the
+point is if we make a mistake, it will be reversible.
+
+[1] http://github.com/guides/completely-remove-a-file-from-all-revisions

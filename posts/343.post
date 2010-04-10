@@ -1,0 +1,34 @@
+Author: Csaba Hoch
+Subject: Tracking missing tests, documentation and other todos
+Tag: prop
+Tag: reviewed
+Message-Id: <4A2039AC.4010806@gmail.com>
+Date: Fri, 29 May 2009 21:38:20 +0200
+
+Previously I argued that all todos should be in our todo file.
+I changed my mind: I think we need to document each function
+separately and locally whether they have tests and documentation. This
+would be especially important for new developers: when they create a
+new function, they don't necessarily know their way around the test
+suite and documentation.
+
+I propose writing TODO-comments in the code:
+
+    # TODO test, document
+    def myfun():
+        pass
+
+    # TODO document
+    class MyClass:
+
+        # TODO test, document
+        def yourfun():
+            pass
+
+If you agree, I will write a small tool that extracts these todos:
+
+    $ scripts/list_todos
+    hkrc.py:
+        myfun: test, document
+        MyClass: test
+        MyClass.yourfun: test, document

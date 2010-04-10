@@ -1,0 +1,13 @@
+Author: Csaba Hoch
+Subject: assertEquals is removed from Python 2.7
+Tag: issue
+Message-Id: <4ddb9e5b1002281017v23e69386u2ed31bcd88f3ba82@mail.gmail.com>
+Date: Sun, 28 Feb 2010 19:17:51 +0100
+
+The unittest.assertEquals function has been removed from Python 2.7,
+and we should use assertEqual instead. Since we have been using
+assertEquals so far, we will have to change our code.
+
+[effort 1]
+
+[1] http://docs.python.org/dev/library/unittest.html

@@ -1,0 +1,20 @@
+Author: Csaba Hoch
+Subject: Hk tutorial
+Message-Id: <4A6FF536.9020506@gmail.com>
+Date: Wed, 29 Jul 2009 09:07:34 +0200
+
+Attis and Josh :)
+
+Could you read the tutorial [1] and comment on it? Maybe on the weekend?
+
+Only two things are to be done to the tutorial beside the
+modifications based on your comments:
+- describing creating a real heap and using it with IMAP
+- in the end, when everything is settled, I'll redo the screenshots so
+  that they will be consistent throughout the tutorial
+
+If you find mistakes, you may correct them in the git repo without
+communicating it in email (I'll ask if I don't understand why you made
+a change).
+
+[1] http://www.heapkeeper.org/tutorial.html

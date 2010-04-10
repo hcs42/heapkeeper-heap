@@ -1,0 +1,51 @@
+Author: Attila Nagy
+Subject: Git keeps the old remote branches
+Tag: workflow
+Message-Id: <b29f917d0909150219i4273db2ah7b0e8ec93bf4222@mail.gmail.com>
+Date: Tue, 15 Sep 2009 11:19:27 +0200
+
+> I don't have these branches! I removed them quite a while ago.
+
+> But you could remove your unnecessary remote branches: you seem to
+> have two fastdownload branches for example.
+
+>    $ git fetch origin
+>    $ git fetch attis
+>    $ git branch -a
+>    ...
+>      attis/_count
+>      attis/_dl-improved
+>      attis/_e
+>      attis/_fastdownload
+>      attis/_golem
+>      attis/_review
+>      attis/fastdownload
+>      attis/master
+
+I can say the same: I don't have these branches! I've already removed them.
+
+    $ git branch -a
+    * _count
+      _dl-improved
+      _e
+      _golem
+      master
+      ...
+      origin/HEAD
+      origin/_count
+      origin/_dl-improved
+      origin/_e
+      origin/master
+
+Git is playing these tricks with us. I think `git fetch` never removes
+any remote branches. So, to see how the remote actually looks like,
+you have to remove the remote, add it again then fetch, like this:
+
+    $ git remote rm hcs
+    $ git remote add hcs git://github.com/hcs42/heapkeeper_.git
+    $ git fetch hcs
+
+Only then will the branches that you've deleted actually go away from
+my repository.
+
+Do you know of a more simple solution?

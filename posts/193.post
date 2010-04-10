@@ -1,0 +1,18 @@
+Author: Csaba Hoch
+Subject: Threads/1 (2009-05-07 3b4f6d3677c)
+Tag: commit
+Message-Id: <4A069945.5010204@gmail.com>
+Parent: <b29f917d0905100153i72bd3d9m3653125f6986563a@mail.gmail.com>
+Date: Sun, 10 May 2009 11:07:17 +0200
+
+> Thanks for your comments. I've modified the code and pushed the
+> changes. Are we ready for the merge?
+
+I have not looked at the other commits yet. But if all the tests work,
+it is OK to merge.
+
+It is nice solution in my opinion to merge "master" _into_ "threads"
+until we say "threads" is OK. (I saw that is what you had done.) If
+you say though that "threads" is OK, and it would be more convenient
+for you to use Hk after merging it into "master", you are free to do
+it.

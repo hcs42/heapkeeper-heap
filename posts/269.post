@@ -1,0 +1,27 @@
+Author: Csaba Hoch
+Subject: Closing threads
+Tag: meta
+Tag: reviewed
+Message-Id: <4A12F191.5010608@gmail.com>
+Parent: <20090519093754.e1a0edd7.nagy.attila.1984@gmail.com>
+Date: Tue, 19 May 2009 19:51:13 +0200
+
+>> == Settings and options ==
+>>
+>> You may ask: what is the difference between settings and options?
+>> The shortest answer is that...
+>
+> So, options are local, while settings are global and acts as event
+> hooks. Am I correct?
+>
+> Generally I say OK to this proposal, but with the addition of my
+> argument for abbreviations.
+>
+> <<<close This thread is closed, but I opened a new one for
+> abbreviations.>>>
+
+Please, don't close a thread when you ask something! It is
+contradictory. If you would like to discuss closing threads in
+general, I have posted a general email about this [1].
+
+[1] heap://hh/268

@@ -1,0 +1,13 @@
+Author: Csaba Hoch
+Subject: Standardizing post references
+Tag: post references
+Tag: prop
+Message-Id: <4AFFBDF6.7010600@gmail.com>
+Parent: <4AF7022B.5000301@gmail.com>
+Date: Sun, 15 Nov 2009 09:38:14 +0100
+
+[open]
+
+Also, we should not forget about printing the values of the
+"Reference" tags of post files. The old Generator had this feature,
+the new does not have it yet.

@@ -1,0 +1,14 @@
+Author: Csaba Hoch
+Subject: Mapping for removing trailing whitespace
+Tag: vim
+Message-Id: <4B6E72FB.20703@gmail.com>
+Parent: <4ddb9e5b1002062358r31a692d4r530b7a8d7c7980fa@mail.gmail.com>
+Date: Sun, 07 Feb 2010 08:59:55 +0100
+
+> In my experience, Thunderbird will show the two lines as one line. I
+> will report back in a minute.
+
+GMail removed the trailing space. How about these:
+
+One line. 
+Another line.

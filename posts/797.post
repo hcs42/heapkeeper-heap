@@ -1,0 +1,12 @@
+Author: Attila Nagy
+Subject: Tidying comments
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0910290802q448a9123y724912e355839f76@mail.gmail.com>
+Parent: <4AE2DA02.4070005@gmail.com>
+Date: Thu, 29 Oct 2009 16:02:30 +0100
+
+OK, but let's give some examples of what should belong here. The only
+kind of uninteresting tidying that needs no comment are language
+(grammar and style) corrections. Do you want to include other kinds of
+commits in this proposal?

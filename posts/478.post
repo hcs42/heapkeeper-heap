@@ -1,0 +1,66 @@
+Author: Csaba Hoch
+Subject: Heapkeeper version 0.3
+Tag: prop
+Tag: reviewed
+Message-Id: <4A79427F.2040507@gmail.com>
+Parent: <b29f917d0908041415s7fe59976qcaa6a3309a26ce17@mail.gmail.com>
+Date: Wed, 05 Aug 2009 10:27:43 +0200
+
+> Almost did it... the problem was that the commit tagged as v0.2 is a
+> commit where two branches diverge.
+
+Cannot you do the following:
+- go back go the v0.2 tagged commit
+- do a soft reset to HEAD^, so that all modified files are in the index
+- modify README
+- commit everything BUT README with the old commit message
+  (git commit <filename1> <filename2> ...)
+- commit README with the commit message that describes the changes
+- put the branching that you said to cause problems on the top of this
+
+I'm not sure how to do the "put branching on the top of" something,
+but if we cannot do that, the whole history-rewriting sucks, I guess.
+
+== Commit messages ==
+
+BTW, I realized that we did not agree on what commit message should
+these tagged commits have. I propose that they should have these:
+
+------------------------------------------------------------
+Heapkeeper v0.1 released.
+
+This release is a propotype.
+
+Features:
+
+- Downloading emails over IMAP.
+- Storing posts in individual files.
+- Generating threaded index page that contains all posts.
+------------------------------------------------------------
+
+------------------------------------------------------------
+Heapkeeper v0.2 released.
+
+This release contains many new features, but lacks comprehensive documentation.
+
+Major new features:
+
+- Generating XHTML index page. The index pages may contain several sections.
+- Generating (XHTML) post pages.
+- Using CSS.
+- Deleting posts.
+- Nicknames.
+- Using ini files as configuration files.
+- :class:`hklib.PostSet` class added. It allows writing efficient queries about
+  the post database easily.
+- Dates are displayed in a convenient format.
+- Posts may have tags.
+- Handling cycles in the thread structure.
+- New command line interface: :mod:`hkshell`.
+
+Other major improvements:
+
+- Adding some unit tests.
+------------------------------------------------------------
+
+These are exactly the same texts that you find in download/doc.rst.

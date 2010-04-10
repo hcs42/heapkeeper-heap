@@ -1,0 +1,24 @@
+Author: Csaba Hoch
+Subject: Creating sections in the new generator, problems
+Tag: discussion
+Message-Id: <4ddb9e5b0911020051q62037c24gf912ab5168da3d13@mail.gmail.com>
+Parent: <b29f917d0911020033mcba2d07mcee59e410ab61a93@mail.gmail.com>
+Date: Mon, 2 Nov 2009 09:51:15 +0100
+
+> I hope I was right. I implemented the old functionality of sections in
+> a Generator subclass in my hkrc. I really think we should provide more
+> support for this, as my code is quite complicated.
+
+I'm happy to discuss things like this. I could not entirely anticipate
+what we will use the new Generator for. I wanted to make the new
+Generator both simple and extensible, but there may be ways in which
+it can be improved. (I had an idea just today in the morning, but I
+don't want to write it down, it's not that big a deal.)
+
+What I don't want is to provide nice and complicated support for very
+specific things that is useless when the user wants to do something
+differently. That was the kind of support the old Section/Index system
+provided: if you wanted to have indices and sections, then great, but
+if you wanted to do a tiny thing differently (e.g. an index that has
+something before each section) -- the whole system (Section, Index and
+Generator classes included) was basically useless.

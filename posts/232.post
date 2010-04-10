@@ -1,0 +1,576 @@
+Author: Attila Nagy
+Subject: Body parsing - the what - examples
+Tag: post syntax
+Tag: prop
+Message-Id: <20090518011928.99444ebf.nagy.attila.1984@gmail.com>
+Parent: <b29f917d0905021657p2cd16492p34c37a593d40776b@mail.gmail.com>
+Date: Mon, 18 May 2009 01:19:28 +0200
+
+The first parser module takes the plaintext body of the message, and turn it
+into a sequence of plaintext segments. Further modules then transform these
+segments, usually transforming some of them into other, more specific and
+interpreted segments. This process is shown here with examples.
+
+== Rendering URLs as links ==
+
+Plaintext body:
+
+    Hello everybody.
+
+    Look what I found:
+
+    http://www.url.com
+
+    For more details, see http://www.example.com too.
+
+Initial segmenting:
+
+    Plaintext [Hello everybody.]
+    Boundary  []
+    Plaintext [Look what I found.]
+    Boundary  []
+    Plaintext [http://www.url.com]
+    Boundary  []
+    Plaintext [For more details, see http://www.example.com too.]
+
+After URL interpretation:
+
+    Plaintext [Hello everybody.]
+    Boundary  []
+    Plaintext [Look what I found.]
+    Boundary  []
+    URL       [http://www.url.com]
+    Boundary  []
+    Plaintext [For more details, see]
+    URL       [http://www.example.com]
+    Plaintext [ too.]
+
+This is now rendered in HTML like this:
+
+    <p>
+        Hello everybody.
+    </p>
+    <p>
+        Look what I found.
+    </p>
+    <a href="http://www.url.com">
+        http://www.url.com
+    </a>
+    <p>
+        For more details, see
+        <a href="http://www.url.com">
+            http://www.url.com
+        </a>
+         too.
+    </p>
+
+=== Special protocols ===
+
+Some protocol specifiers, like "http", "https", "ftp" and "file", are passed on
+to the HTML output unchanged. Others' have meanings internal to Heapkeeper and
+make no sense to the browser; these exist as a convenience feature for
+referring to other posts on the heap.
+
+We have used the "heap" protocol to refer to other messages, as in:
+
+    In another post [1], you...
+
+    [1] heap://1234
+
+It may also be useful to refer to posts on different heaps in a similar
+fashion, like:
+
+    I've already discussed this at length on the internal heap [2].
+
+    [2] heap://internal/567
+
+Of course, we have to provide the URL of the mentioned internal heap
+for this to work.
+
+=== Link appearance ===
+
+There has been request for a mechanism to alter the way the inline links
+appear. No syntax has been agreed on for this; an example follows to illustrate
+the idea:
+
+Plaintext:
+
+    Please have a look at <<<link http://www.example.com this site>>>.
+
+HTML rendering:
+
+    <p>
+        Please have a look at
+        <a href="http://www.example.com">
+            this site
+        </a>
+        .
+    </p>
+
+== Render post metas as links ==
+
+"Post metas" are a mechanism to add links to other posts on the heap without
+using a cite.
+
+Plaintext body:
+
+    I've already written about this in <<<post 234>>>.
+
+Initial segmentation:
+
+    Plaintext [I've already written about this in <<<post 234>>>.]
+
+
+After processing post metas:
+
+    Plaintext [I've already written about this in ]
+    Postlink  [234]
+    Plaintext [.]
+
+A possible HTML rendering:
+
+    <p>
+        I've already written about this in
+        <a href="234.html">
+            <<<post 234>>>
+        </a>
+        .
+    </p>
+
+Note: this feature can be used to achieve the same results as with the "heap"
+protocol specifier.
+
+== Automatically add tags based on metas ==
+
+This was formerly part of the proposal, but now its usefulness has been
+doubted, as it breaks the principle of avoiding redundance in postfiles.
+
+== Cites ==
+
+Cites are a way to include details, explanation or external sources in the post
+without distracting the reader's attention unnecessarily. In the flowing text,
+cites appear as decimal numbers in brackets, while at the end of the post they
+are expanded (usually, but the expansions can be anywhere).
+
+Plaintext body:
+
+    This site [1] says that it's not important [2].
+
+    [1] http://www.boring.com
+    [2] At least that's what they say...
+
+After initial segmenting:
+
+    Plaintext [This site [1] says that it's not important. [2]]
+    Boundary  []
+    Plaintext [[1] http://www.boring.com\n[2] At least that's what they say...]
+
+After processing cites:
+
+    Paragraph [This site ]
+    Citehead  [1]
+    Paragraph [says that it's not important. ]
+    Citehead  [2]
+    CitebodyURL   [1 http://www.boring.com]
+    CitebodyText  [2 At least that's what they say...]
+
+HTML output:
+
+    <p>
+        This site
+        <a href="http://www.boring.com" class="external">
+            [1]
+        </a>
+        says that it's not important.
+        <a href="#cite-2" class="internal">
+            [2]
+        </a>
+    <p>
+    <p class="citebody" id="cite-1">
+        [1] http://www.boring.com
+    </p>
+    <p class="citebody" id="cite-2">
+        [2] At least that's what they say...
+    </p>
+
+The different classes for the link enable the CSS to visually distinguish links
+that'll move away from the page from links that'll only jump inside the page.
+
+== Automatic action on metas (a.k.a. !-metas) ==
+
+This feature allows the author of a post to prescribe actions to be executed
+from within hkshell. The range of these automatic commands has been discussed
+at length, due to the obvious security consequences of malicious (or even
+errorneous) usage.
+
+Therefore, our present plans do not contain a fully automatic execution of
+code coming from posts, but a semi-automatic scheme instead. Instructions
+in posts do not get executed right away, but only when the editor issues
+a special command in hkshell, the ``run()`` command. When this command
+is issued, commands embedded in metas are listed and for each of them,
+the editor is asked if it is safe to execute the command in question.
+
+The metas that prescribe some kind of command to be executed semi-automatically
+begin with an '!'. Hence, they are commonly called !-metas.
+
+The precise list of the !-metas is not yet final, some are presumably
+very close to their final forms. These are the most simple !-metas:
+their scope is only themselves or the post they contain.
+
+* <<<!deltext>>> - delete this meta
+** used to give throwaway hints to the
+* <<<!delpost>>> - delete this entire post
+** this is used to mark the post as being entirely for the eyes of the
+editor or a remark to e-mail readers only, with no historical interest
+* <<<!delthis>>> - an obsolete, ambiguous form
+
+An example in plaintext:
+
+    OK. I'll write more on the details this weekend.
+
+    <<<!delpost>>>
+
+Initial segmenting:
+
+    Plaintext [OK. I'll write more on the details this weekend.]
+
+    Separator []
+
+    Plaintext [<<<!delpost>>>]
+
+After processing !-metas:
+
+    Paragraph [OK. I'll write more on the details this weekend.]
+
+    Separator []
+
+    DelpostMeta []
+
+Which could be rendered in HTML as:
+
+    <p>
+        OK. I'll write more on the details this weekend.
+    </p>
+    <p class="warning">
+        The author of this post asked the editor to delete it.
+    </p>
+
+I think it's better to display these metas in the output to serve as
+an extra reminder to the editor to act on the !-meta: run it or remove
+it.
+
+Now if the editor sees this, and launches hkshell:
+
+    $ ./hkshell
+    Importing hkrc...
+    Importing hkrc OK
+    1 operation requested.
+    >>> run()
+    Post 234 requests: delete post
+    Do you comply [yn]? y
+    Post 234 deleted.
+    >>> s();ga();q()
+
+== Quotes ==
+
+Finding quotes is important for two reasons. Firstly, collecting quoted
+parts of the body into specific HTML elements allows for styling them
+via CSS, which may be more readily recognizable than quote introduction
+characters (>) alone.
+
+Secondly, the program can use the thread structure and quotation depth
+together to find the original author of the quoted lines. Quote
+introduction lines could be parsed and used in determining the authors
+or could simply be thrown away.
+
+This raises its own problems. When quoting, the author of the post
+may have quoted from other posts than the one xe is answering [1],
+or the thread structure could be modified on the Heap without updating
+the quote depths. Quote introduction lines of the form
+
+    Attis wrote:
+    > I have the strange feeling this line will get quoted.
+
+These have language issues, since some user agents include them
+automatically. Suppose I am on a holiday in France, and my addiction
+forces me to go into a netcafé and write to the Heap.
+
+    Csabi a écrit:
+    > Where are you now?
+
+    I'm in France.
+
+Of course, no-one can expect Hk to be able to parse these quote
+introduction in all languages of the world. (My example seems
+contrived, but anyone who has read international mailing lists know
+that this is an issue.)
+
+The other problem with these lines is that many of them have fallen prey
+to my zealous tidying efforts... of course, Git remembers, but it'd be
+a pretty daunting homework of necromancy to bring them all back.
+
+A more general example follows:
+
+Plaintext body:
+
+    >>> We should use Ratpoison.
+    >>
+    >> What is ratpoison?
+    >
+    > Ratpoison is a minimalistic window manager.
+
+    Why do you think we all should use it?
+
+Initial segmenting:
+
+    Plaintext [>>> We should use Ratpoison.\n
+    >>\n
+    >> What is ratpoison?\n
+    >\n
+    > Ratpoison is a minimalistic window manager.]
+
+    Boundary  []
+
+    Plaintext [Why do you think we all should use it?]
+
+After quote expansion, pass 1:
+
+    Quote     [
+
+        Quote   [>> We should use Ratpoison.\n
+                >\n
+                > What is ratpoison?\n]
+
+        Boundary    []
+
+        Paragraph   [Ratpoison is a minimalistic window manager.]
+        ]
+
+    Boundary  []
+
+    Paragraph [Why do you think we all should use it?]
+
+After quote expansion, pass 2:
+
+    Quote     [
+
+        Quote   [
+
+            Quote [We should use Ratpoison.]
+
+            Boundary    []
+
+            Plaintext [What is ratpoison?]
+            ]
+
+        Boundary    []
+
+        Plaintext   [Ratpoison is a minimalistic window manager.]
+        ]
+
+    Boundary  []
+
+    Plaintext [Why do you think we all should use it?]
+
+HTML output:
+
+    <p class="quote">
+        <p class="quoteauthor">
+            Attis
+        </p>
+        <p class="quote">
+            <p class="quoteauthor">
+                Csabi
+            </p>
+            <p class="quote">
+                <p class="quoteauthor">
+                    Attis
+                </p>
+                We should use Ratpoison.
+            </p>
+            <p>
+                What is Ratpoison?
+            </p>
+        </p>
+        <p>
+            Ratpoison is a minimalistic window manager.
+        </p>
+    </p>
+    <p>
+        Why do you think we all should use it?
+    </p>
+
+This means that once we have a Quote segment, the following actions
+shall take place:
+
+* Strip the leading >'s.
+* Launch the whole body parsing procedure on the contents of the Quote
+segment.
+* Add all resulting segments to the Quote segment as sub-segments.
+
+When processing Quote segments, all modules should use recursion if
+they are applicable to quoted text. For example, when finding URLs,
+the module should enumerate Quotes' contents recursively, and then find
+URLs inside segments contained within the Quote structure.
+
+== Note metas ==
+
+Note metas contain information that are mainly for historical
+reference, but are out of the context of the text. They are metatext
+of the purest sense of the word, and the source of the whole idea of
+metas.
+
+Plaintext:
+
+    This idea is most likely to serve as an inexhaustable source of
+    inspiration for many generations to come.
+
+    <<<note Watch the wording, I must have been high.>>>
+
+Initial segmentation:
+
+    Plaintext [This idea is most likely to serve as an inexhaustable
+    source of\ninspiration for many generations to come.]
+
+    Boundary  []
+
+    Plaintext [<<<note Watch the wording, I must have been high.>>>]
+
+After processing note metas:
+
+    Paragraph [This idea is most likely to serve as an inexhaustable
+    source of inspiration for many generations to come.]
+
+    Boundary  []
+
+    Note      [Watch the wording, I must have been high.]
+
+HTML output:
+
+    <p>
+        This idea is most likely to serve as an inexhaustable source
+        of inspiration for many generations to come.
+    </p>
+    <p class="note">
+        Watch the wording, I must have been high.]
+    </p>
+
+== Unknown metas ==
+
+I think unknown metas should be displayed specially, as they require
+attention from an editor.
+
+Plaintext:
+
+    This needs more explanation.
+
+    <<<!delpots>>>
+
+Initial segmenting:
+
+    Plaintext [This needs more explanation.]
+
+    Boundary  []
+
+    Plaintext [<<<!delpots>>>]
+
+After processing unknown metas:
+
+    Paragraph [This needs more explanation.]
+
+    Boundary  []
+
+    UnknownMeta[!delpots]
+
+HTML rendering:
+
+    <p>
+        This needs more explanation.
+    </p>
+    <p class="warning">
+        Unknown meta in post: "delpots".
+    </p>
+
+== Authors and signatures ==
+
+If a line matches entirely with an author's known and stored nickname,
+it should be ignored. But, regardless of whether a signature line
+is present, a signature should be added in the HTML rendering
+
+Plaintext:
+
+    Thank you for reading all this.
+
+    Attis
+
+Initial segmenting:
+
+    Plaintext [Thank you for reading all this.]
+
+    Boundary  []
+
+    Plaintext [Attis]
+
+After removing signatures:
+
+    Paragraph [Thank you for reading all this.]
+
+HTML output:
+
+    <p>
+        Thank you for reading all this.
+    </p>
+    <p class="signature">
+        Attis
+    </p>
+
+== Wiki-like headers ==
+
+The idea of MediaWiki-like syntax for headers has been proposed (and
+this post happens to follow this syntax :)). This feature is enabled
+only if the <<<wiki>>> meta is present.
+
+Plaintext:
+
+    <<<wiki>>>
+    == Bacteria ==
+
+    Bacteria are the most simple cellular organisms.
+
+Initial segmenting:
+
+    Plaintext [<<<wiki>>>\n== Bacteria ==]
+
+    Boundary  []
+
+    Plaintext [Bacteria are the most simple cellular organisms.]
+
+After header processing:
+
+    WikiMeta  []
+
+    Heading1  [Bacteria]
+
+    Boundary  []
+
+    Paragraph [Bacteria are the most simple cellular organisms.]
+
+HTML output:
+
+    <h1>
+        Bacteria
+    </h1>
+    <p>
+        Bacteria are the most simple cellular organisms.
+    </p>
+
+
+== TODO ==
+
+There are probably many other things that the body parser should do. I
+think none of these have a consequence that will change the
+architecture of body parsing. If you know of any, please post it here.
+
+
+[1] This is the kind of structure where singular they is simply too
+awkward.

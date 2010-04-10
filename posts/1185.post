@@ -1,0 +1,31 @@
+Author: Csaba Hoch
+Subject: Sphinx 0.6.5 released
+Tag: sphinx
+Message-Id: <4B93B107.803@gmail.com>
+Parent: <4B8C3D02.3090204@python.org>
+Date: Sun, 07 Mar 2010 14:58:31 +0100
+
+Georg Brandl wrote:
+> Hi all,
+>
+> I'm proud to announce the release of Sphinx 0.6.5, which is a
+> bugfix-only release in the 0.6 series.
+>
+> What is it?
+> ===========
+>
+> Sphinx is a tool that makes it easy to create intelligent and beautiful
+> documentation for Python projects (or other documents consisting of
+> multiple reStructuredText source files).
+>
+> Website: http://sphinx.pocoo.org/
+>
+> What's new in 0.6.5 (short version)?
+> ====================================
+>
+> Several major bugs and problems have been fixed.
+> The full list is at <http://sphinx.pocoo.org/changes.html>.
+>
+>
+> cheers,
+> Georg

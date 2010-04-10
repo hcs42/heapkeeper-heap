@@ -1,0 +1,15 @@
+Author: Attila Nagy
+Subject: Emails with attached files handled incorrectly
+Tag: bug
+Tag: reviewed
+Message-Id: <b29f917d0908200014h510e2c08lc1d04d4a16f88eba@mail.gmail.com>
+Parent: <b29f917d0908151201o5c9dca32r6ea99aa46f3ccd09@mail.gmail.com>
+Date: Thu, 20 Aug 2009 09:14:58 +0200
+
+> Previously, attached files were simply ignored.
+
+That is not the case. Previously, there were no messages with attached
+files, and that's why there were no problems! Now there are four of them
+(2197, 2322, 2375 and 2441), and they are all in error. These are
+manually corrected for now. Until this issue is resolved, please don't
+send attached files.

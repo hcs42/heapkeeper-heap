@@ -1,0 +1,12 @@
+Author: Attila Nagy
+Subject: Provide an option to turn on tracebacks
+Tag: feature
+Tag: reviewed
+Message-Id: <b29f917d0910240210h2ccbcf6at345f9cb3657a8af5@mail.gmail.com>
+Date: Sat, 24 Oct 2009 11:10:47 +0200
+
+Exception stack tracebacks should be disabled by default, and an
+option should be provided to enable them.
+
+[effort 0.5]
+[version 0.5]

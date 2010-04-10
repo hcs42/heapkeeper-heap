@@ -1,0 +1,22 @@
+Author: Attila Nagy
+Subject: Tag -> label
+Message-Id: <b29f917d0909142346v1c02ebc0s80e07c68ea89cac3@mail.gmail.com>
+Parent: <4AAC9683.5040807@gmail.com>
+Date: Tue, 15 Sep 2009 08:46:13 +0200
+
+> What do you say to rename "tag" to "label" in Hk?
+
+When I first saw the subject, I had no idea why this would be good for us...
+
+> Advantages:
+> - others (like Google) use the word "label" for that kind of things
+> - "label" has a decent Hungarian translation
+> - we could use the word "tag" for other things, e.g. for some special
+>  kind of meta text
+
+I'm starting to get convinced, especially by this last argument.
+
+> Of course it is quite a work, so I don't want to do it in the next
+> few days...
+
+OK. Would you have this happen in 0.3 or on the way towards 0.4?

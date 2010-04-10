@@ -1,0 +1,30 @@
+Author: Csaba Hoch
+Subject: Tracking missing tests, documentation and other todos
+Tag: prop
+Tag: reviewed
+Message-Id: <4ddb9e5b0906030911i16d9a060g911f95021c9a1e6a@mail.gmail.com>
+Parent: <20090603115359.c4e0cd36.nagy.attila.1984@gmail.com>
+Date: Wed, 3 Jun 2009 18:11:38 +0200
+
+> How about marking missing stuff only locally, and reserving the TODO
+> file to emphasize missing and important pieces of test and docs?
+
+My proposal was this:
+- marking missing documentation and tests locally
+- everything else goes into the issue tracker (now todo file, later
+  probably a heap)
+
+How is your suggestion different from this? Do you suggest placing
+notes about other minor missing things in the source code?
+
+I'm not sure how I feel about that. My problem with that is the
+following: in an issue tracking system, these issues can be discussed
+easily and it is easy to follow how many issues we have, and to
+categorize (tag) them. It is also harder to collect the todos from the
+source code if we allow their broader usage. On the other hand, the
+context of a note would be easier to grasp if it was placed in the
+source code. I also realize that the issue tracking system is more
+heavy-weigth than just writing a TODO-comment and developers don't
+feel like writing an email about a minor thing they should just do.
+
+We should think about pros and contras of the alternatives.

@@ -1,0 +1,31 @@
+Author: Csaba Hoch
+Subject: Heapkeeper version 0.3
+Tag: prop
+Tag: reviewed
+Message-Id: <4A77D509.2060905@gmail.com>
+Parent: <4ddb9e5b0907250931r54aeefasdc680c16e0119f6e@mail.gmail.com>
+Date: Tue, 04 Aug 2009 08:28:25 +0200
+
+> I think we are almost ready to release 0.3.
+> 
+> Things that still have to be done:
+> - tutorial: using a GoogleGroups+IMAP heap
+
+Done.
+
+> - better screenshots
+
+Done.
+
+> - try it out on Windows
+
+Done.
+
+> - try it out with Python 2.5
+
+Done.
+
+Current todo items:
+- items in posts "Testing on Windows" and "CRLF issues" //Csabi
+- rewriting git history //Attis
+- recreating the heapkeeper repo and pushing the new history //Csabi

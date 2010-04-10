@@ -1,0 +1,127 @@
+Author: Csaba Hoch
+Subject: Ownership of history is a delicate matter
+Tag: git
+Message-Id: <4A73DDB4.1020207@gmail.com>
+Parent: <20090731195116.2388ce47.nagy.attila.1984@gmail.com>
+Date: Sat, 01 Aug 2009 08:16:20 +0200
+
+> Was this you? [1]
+
+Yes.
+
+>> I'm not sure that we control in 100% what is on github. But it we do, than
+>> changing the past before 0.3 is OK. I want to put the news about 0.3 on
+>> freshmeat, send it to the Sphinx mailing list, tell about this to my
+>> colleagues, etc.
+>
+> Do you think we'll be ready for all that with 0.3?
+
+I don't want to do things like this after 0.3 is released. For me
+that's like going to public.
+
+> I remember some official github guide on history editing. I'll go and check
+> that one out.
+
+Do that. I haven't found anything, except for this: [2]
+
+I have also been playing around in a sandbox repo. In the sandbox, I
+tried to rewrite the history and push the new one [3]. 
+
+The conclusion is: it seems to me that we have no way of doing what we
+want to do except for deleting and re-creating the heapkeeper
+repository.
+
+== Heapkeeper-tidy ==
+
+I did exactly that with another sandbox. I pushed the repository you
+sent into my second sandbox repo on github [4]. Pushing all commits of
+the last 10 months was so fast that I thought something must be wrong.
+But as it turns out, it worked. The impact graph contains only two
+people, and everything else seems to work fine. The non-master
+branches are lost, but they could have been pushed just as easily if
+the tidied up repository contained them. We can also use patches to
+introduce them, see in the next section.
+
+The tags are also lost, which made me think that we should not just
+put them to the same place, because that would cause the descriptions
+on the download page look as ugly as they are now [5]. We could place
+new commits which would only change the README and whose commit
+message would say something like this:
+
+    Heapkeeper version 0.1
+
+    This release is a propotype.
+
+    Features:
+
+    - Downloading emails over IMAP.
+    - Storing posts in individual files.
+    - Generating threaded index page that contains all posts.
+
+What do you say?
+
+== Creating and applying patches ==
+
+Then I wanted to solve my problem of having worked on files yesterday,
+which were not of course in your repository tidied up. I had 5 commits
+in my own repo that I wanted to introduce into the new repository. It
+was surprisingly easy: I just had to create a bunch of patches in my
+old repository and apply them in the new one. The patches even contain
+log message and author information.
+
+In my current heapkeeper repository:
+
+    # Create patches for commits since origin/master:
+    $ git format-patch origin/master
+    0001-hklib-don-t-crash-if-nicknames-is-missing.patch
+    0002-CodConv-docstrings-for-functions-and-classes.patch
+    0003-heapindex.css-margin-narrowed.patch
+    0004-Tutorial-Using-a-mailing-list-added.patch
+    0005-Tutorial-screenshots-recreated.patch
+    $ ls | grep patch
+    0001-hklib-don-t-crash-if-nicknames-is-missing.patch
+    0002-CodConv-docstrings-for-functions-and-classes.patch
+    0003-heapindex.css-margin-narrowed.patch
+    0004-Tutorial-Using-a-mailing-list-added.patch
+    0005-Tutorial-screenshots-recreated.patch
+
+In the new heapkeeper repository ($Hk is the old repo; don't bother
+with the "whitespace error"):
+
+    # Applying patch 1
+    $ git am $Hk/0001-hklib-don-t-crash-if-nicknames-is-missing.patch
+    Applying: hklib: don't crash if 'nicknames' is missing
+
+    # Applying the other 4 patches
+    $ git am $Hk/0002-CodConv-docstrings-for-functions-and-classes.patch \
+    >        $Hk/0003-heapindex.css-margin-narrowed.patch \
+    >        $Hk/0004-Tutorial-Using-a-mailing-list-added.patch \
+    >        $Hk/0005-Tutorial-screenshots-recreated.patch
+    Applying: CodConv: docstrings for functions and classes
+    /a/cp/hk/hk-tidy/heapkeeper-tidy/.git/rebase-apply/patch:43: trailing whitespace.
+
+    warning: 1 line adds whitespace errors.
+    Applying: heapindex.css: margin narrowed
+    Applying: Tutorial: Using a mailing list added
+    Applying: Tutorial: screenshots recreated
+
+    # Pushing the new commits to github
+    $ git push
+    Counting objects: 35, done.
+    Compressing objects: 100% (23/23), done.
+    Writing objects: 100% (23/23), 340.32 KiB, done.
+    Total 23 (delta 12), reused 0 (delta 0)
+    To git@github.com:hcs42/sandbox2.git
+       cd4c703..00525f7  master -> master
+
+== Further changes ==
+
+- Adding tags in the way I described.
+- Do you want to do something with your 'bodyparsing' and 'minimal'
+  branches? Or let's just leave them for now and you can use the
+  patch-technique to introduce them at any time?
+
+[2] http://support.github.com/discussions/repos/36-rewriting-history
+[3] http://github.com/hcs42/sandbox/graphs/impact
+[4] http://github.com/hcs42/sandbox2/tree/master
+[5] http://github.com/hcs42/heapkeeper/downloads

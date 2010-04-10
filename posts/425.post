@@ -1,0 +1,33 @@
+Author: Attila Nagy
+Subject: Heapkeeper web page theme
+Tag: discussion
+Message-Id: <20090731185634.936d92fc.nagy.attila.1984@gmail.com>
+Parent: <4A18FD23.2080206@gmail.com>
+Date: Fri, 31 Jul 2009 18:56:34 +0200
+
+>> I examined the site of Glashammer [1]. Besides the interesting logo,
+>> it features a box where the topics of the latest posts to the mailing
+>> list are extracted. We should have something like this, what do you
+>> say?
+> 
+> Yes, the layout is awesome. Although I'd like to have different
+> colors. (I don't want a USSR theme.)
+
+To be politically correct, that is a hot dog theme.
+
+> What about having weaker colors? Like github.(I don't say "github's
+> colors" but "weak colours, like github").
+
+Recent design is all about unsaturated, pastel colors. github is a
+great example of this. But I am not convinced if using such colors
+represents an aesthetic choice that is objectively superior to
+saturated, lively colors. I think it is a current standing of common
+(or majority) taste. My respects go to those who feel themselves and
+what they do more stable and worthy than to be compelled to bow to the
+whims of fashion. See for example vim.org, ietf.org, gcc.gnu.org.
+These sites' designs change rarely, and they are simple and efficient
+at communicating information -- but maybe less effective at raising
+attention, as these large projects scarcely need it.
+
+However, nothing says "serious Python project" like using the default
+Sphinx theme :)

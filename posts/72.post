@@ -1,0 +1,21 @@
+Author: Attila Nagy
+Subject: Usability on pdas
+Message-Id: <b29f917d0904091413m7d45a4b8ybc76e003fd0c75ec@mail.gmail.com>
+Date: Thu, 9 Apr 2009 23:13:08 +0200
+
+I made some minor modifications, partly to my heapcustom, partly in a
+local branch. Their aim is to overcome the greatest obstacle to
+reading the Heap on a PDA, namely, too large index HTMLs. First, I
+modified the already present monthly sectioning in my heapcustom to
+add a separate index for every month. Then, I added a feature to
+include an arbitrary HTML header in the index HTML. I use this
+mechanism then to add a "Previous month" and a "Next month" link to
+the top of each monthly index.
+
+With this, I have indices of a more manageable size. Right now, I use
+only a single section in these monthly indices, but, of course, these
+can be arbitrarily sectioned just as the main index is.
+
+However, I have the gut feeling that this mechanism lacks the
+completeness, elegance or both to be the perfect solution for the
+problem of oversized indices on PDAs. Any other ideas?

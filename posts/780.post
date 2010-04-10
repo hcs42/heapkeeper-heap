@@ -1,0 +1,26 @@
+Author: Csaba Hoch
+Subject: Docstrings: ClassName vs. class name
+Message-Id: <4AE2E2B8.5060006@gmail.com>
+Parent: <b29f917d0910240333m12db637qd99e473a6b463b07@mail.gmail.com>
+Date: Sat, 24 Oct 2009 13:19:20 +0200
+
+> I suppose we rather name what the class represents then use the class name.
+> 
+> These are docstrings from `PostItem`:
+> 
+>     def copy(self):
+>         """Creates a shallow copy of the post item."""
+> 
+>     def __str__(self):
+>         """Returns the string representation of the PostItem."""
+> 
+> Why use "post item" in the first, and "PostItem" in the second?
+
+The second should be "post item", as well. I'll fix it.
+
+I use either "post item" or "PostItem object". I avoid using
+"PostItem" on its own to something else than the class.
+
+If I want to emphasize its type (because e.g. I'm writing a tutorial
+and I'm introducing the reader what a "post item" is) then I use the
+latter one, but otherwise I use the former one.

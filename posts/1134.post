@@ -1,0 +1,10 @@
+Author: Csaba Hoch
+Subject: Pylint
+Message-Id: <4ddb9e5b1002101034v1d7df30ax5745a6b521d2e8c@mail.gmail.com>
+Parent: <b29f917d1002100953n6a78cf30ie00b983a0963af15@mail.gmail.com>
+Date: Wed, 10 Feb 2010 19:34:23 +0100
+
+> The right way to look at static typing is as a tool of avoiding type
+> errors.
+
+And to document the code.

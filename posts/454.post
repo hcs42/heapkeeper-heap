@@ -1,0 +1,20 @@
+Author: Attila Nagy
+Subject: "Csaba Hoch" as author (5b60b95a32 2009-08-01)
+Tag: commit
+Message-Id: <b29f917d0908020013m12e25860k5148acc2a81897f2@mail.gmail.com>
+Parent: <4A753C1D.6000103@gmail.com>
+Date: Sun, 2 Aug 2009 09:13:58 +0200
+
+>> Why does 5b60b9 have you as the author?
+>
+> I don't know!
+>
+> The dates are even more interesting:
+>
+>    Author: Csaba Hoch <csaba.hoch@gmail.com>  2009-08-01 12:29:52
+>    Committer: Attila Nagy <nagy.attila.1984@gmail.com>  2009-08-01 22:35:19
+
+I stashed this edit away, then applied the stash. This must have
+something to do with this strange phenomenon.
+
+Do we know when can the author and the committer differ?

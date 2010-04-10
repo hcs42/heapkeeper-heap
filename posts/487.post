@@ -1,0 +1,8 @@
+Author: Csaba Hoch
+Subject: Separate Heapkeeper repos
+Message-Id: <4ddb9e5b0908091324q701b574sf82a6695ced0b191@mail.gmail.com>
+Date: Sun, 9 Aug 2009 22:24:45 +0200
+
+Maybe we should try to use separate Heapkeeper repos (forks) and use
+pull requests to put them together. What do you think? If it does not
+work out, we can still fall back to the current process.

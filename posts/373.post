@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: Tracking missing tests, documentation and other todos
+Tag: prop
+Tag: reviewed
+Message-Id: <4A277204.7000003@gmail.com>
+Parent: <20090604074744.a9b06b3f.nagy.attila.1984@gmail.com>
+Date: Thu, 04 Jun 2009 09:04:36 +0200
+
+OK then. We agree (if I didn't misunderstand you :) ) that all todo
+should be at exactly one place. If the todo is about missing docs or
+test cases, this place is the source code, otherwise it is the todo
+file (or later the issue tracker).

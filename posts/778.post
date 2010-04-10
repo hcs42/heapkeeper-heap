@@ -1,0 +1,18 @@
+Author: Csaba Hoch
+Subject: Tidying comments
+Tag: prop
+Tag: reviewed
+Message-Id: <4AE2DA02.4070005@gmail.com>
+Date: Sat, 24 Oct 2009 12:42:10 +0200
+
+I often make tidying commits that are quite uninteresting.
+
+I propose that we should write very simple comments about these:
+
+    Tidying
+
+    [tidying]
+
+I also propose that it should be encouraged to put unrelated tidying
+efforts into one common commit. This way they will be easier to be
+dealt with.

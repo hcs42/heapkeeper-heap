@@ -1,0 +1,52 @@
+Author: Attila Nagy
+Subject: "Star" appears in flat sections
+Tag: bug
+Tag: reviewed
+Message-Id: <b29f917d0910192228v66cd5016q47dde646cf5abee2@mail.gmail.com>
+Date: Tue, 20 Oct 2009 07:28:48 +0200
+
+"Stars" (now rendered as dashes to denote repeating subject or tags)
+should not be generated in flat sections, but some commit between
+"master" and current "_hcs" (which is now at 2009-10-18 'hkshell: "exc
+for non-existing posts" bug fixed') introduced this bug.
+
+I did a bisect and it revealed this commit to be 2009-09-13
+'Generator.section: uses the new `thread` method'. However, since this
+commit does nothing but enable code added in the previous commit, it
+is rather 2009-09-13 'Generator: postitem* methods added' that
+introduced the glitch.
+
+Code present in both `Generator.postitem_subject()` and
+`Generator.postitem_tags()` decide whether the "star" would be used
+instead of these fields. However, these latter functions do not care
+whether the PostItem is flat or not, which results in the generation
+of inappropriate stars.  The good thing is that they just as easily
+could care, since the PostItem object is propagated to them, together
+with the information on flatness. These functions already determine if
+they can use a star, this test just needs to be expanded to test for
+flat PostItems.
+
+This test:
+
+    if (postitem.pos != 'flat' and
+        options.shorttags and parent != None and
+        tags == parent.tags()):
+
+began to look to complicated, so it needed a comment, besides it was
+present in both `Generator.postitem_subject()` and
+`Generator.postitem_tags()`, so I created a new
+`Generator.postitem_star_needed()` to check whether a star is needed.
+It is written to be generic, so if someone wants to include authors in
+the "starring" process, it can be used for that, too.
+
+This new function takes an argument, `param`, as the name of the
+`Post` attribute to examine. Thus, if you choose to use it in
+`Generator.postitem_subject()`, you can automatically use the option
+`shortauthor` to enable or disable abbreviation of the author field.
+
+I committed this bugfix to the branch "_bugfix" on my heapkeeper repo.
+I also pushed a branch called "_hcs-bugfix", which is the rest of your
+"_hcs" branch rebased on this bugfix.
+
+A test case which checks if stars are generated in flat sections might
+be useful.

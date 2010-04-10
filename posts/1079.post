@@ -1,0 +1,23 @@
+Author: Attila Nagy
+Subject: Using super; "blog: added module for building a blog with Hk" (c24058f 2009-11-28)
+Tag: commit
+Message-Id: <20100206091127.0f5b8240.nagy.attila.1984@gmail.com>
+Parent: <4B3A53D9.6020109@gmail.com>
+Date: Sat, 6 Feb 2010 09:11:27 +0100
+
+> I don't think you are using `super` right.
+> 
+> super(`type`, object-or-type) returns "a proxy object that delegates
+> method calls to a parent or sibling class of `type`." [1] So the
+> correct expression is this:
+> 
+>     +         return super(Blog, self).print_postitem(postitem)
+
+Thanks for pointing this out, I'll fix it.
+
+> Before you ask: if your code works, I don't know why :)
+
+It'd be nice to understand it. Maybe once we will. There is a serious
+amount of Python internals behind inheritance. See for example:
+
+http://fuhm.net/super-harmful/

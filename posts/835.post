@@ -1,0 +1,22 @@
+Author: Attila Nagy
+Subject: Caching of next heapid
+Tag: discussion
+Message-Id: <b29f917d0910310449w6e36539agece0c6b4ccfb6ee9@mail.gmail.com>
+Parent: <4AEC1B32.1060604@gmail.com>
+Date: Sat, 31 Oct 2009 12:49:35 +0100
+
+> I would still prefer if-else structure:
+>
+>    if heapids == []:
+>        self._next_heapid = 0
+>    else:
+>        self._next_heapid = max(heapids) + 1
+>
+> Don't you think it is more readable?
+
+OK, I totally agree.
+
+> I have not read your commit on this subject yet.
+
+Don't hurry too much, I want to rewrite it to use this new code we've
+just agreed on.

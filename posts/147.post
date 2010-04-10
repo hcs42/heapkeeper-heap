@@ -1,0 +1,19 @@
+Author: Csaba Hoch
+Subject: Should the "reviewed" tag be part of the infrastructure?
+Tag: idea
+Tag: reviewed
+Message-Id: <49FC47E2.40702@gmail.com>
+Parent: <b29f917d0905020342x223bbe37k2d81c63124b0ab47@mail.gmail.com>
+Date: Sat, 02 May 2009 15:17:22 +0200
+
+Then I should step :)
+
+You said:
+
+>>> But I think it would make sense to display it more visually, eg.
+>>> as an icon, or a different text color in the index.
+
+If we implement the "custom post summary" feature (that I certainly
+want to implement at some point, I just have more important stuff like
+hkshell and docs), you could do this, as well. And you could be even
+more in step 2 :)

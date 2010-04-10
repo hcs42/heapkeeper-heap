@@ -1,0 +1,17 @@
+Author: Attila Nagy
+Subject: Removing Google Groups stuff: GG footer in separate part
+Tag: issue
+Message-Id: <20100211110828.9a57480c.nagy.attila.1984@gmail.com>
+Parent: <4ddb9e5b1002091037q35a39513s5c3dfb59748e3d45@mail.gmail.com>
+Date: Thu, 11 Feb 2010 11:08:28 +0100
+
+>> The interesting fact is that all such posts are from Csabi. Do you
+>> know what could have caused this?
+> 
+> I have no idea. I used Thunderbird and GMail web access just as
+> beforehand and afterwards.
+
+Could you please mail me the original of an affected post as it is in
+your Sent Mail folder? (Also gzip it please, so that it won't get
+changed during transfer.) I'd like to try sending it directly through
+SMTP to see if this strange behavior is still present.

@@ -1,0 +1,176 @@
+Author: Csaba Hoch
+Subject: Feature/setting system
+Tag: feature
+Tag: reviewed
+Message-Id: <4ddb9e5b0905180423x270e995fp86e4de9143201b46@mail.gmail.com>
+Date: Mon, 18 May 2009 13:23:18 +0200
+
+== Introduction ==
+
+In a previous thread we talked about the need of having a simpler
+customization system that does not require the user to know Python and
+that enables everybody to turn customization settings on and off very
+easily [1].
+
+An immature version of this has already been implemented in hkshell [2].
+Please read the corresponding documentation to understand what I am
+talking about now [3].
+
+The current implementation calls the customization items "features."
+I propose to improve the "feature" system. The word "feature" could
+also be renamed to "setting". ("Option" is already used in a different
+context.) Which name do you prefer? I will stick with "setting" for
+now.
+
+== Using the proposed setting system ==
+
+The improved setting system could be used like this:
+
+    >>> on('gen_indices')
+    >>> on('date_timedelta', days=3)
+
+Or we could have a hierarchical structure of settings as has
+Thunderbird, so that it will be easier to understand the system of
+settings:
+
+    >>> on('auto.gen_indices')
+    >>> on('gen.date.timedelta', days=3)
+    >>> on('gen.subject.same_as_parent')
+    >>> on('gen.subject.same_as_parent', symbol='&dash;')
+    >>> off('gen.subject.same_as_parent')
+
+We have a shorter version of all features now (e.g. on('gi') instead
+of on('gen_indices')), but I'm not sure we need that. It would make
+the system more complicated, both to implement and use. I don't think
+we change the settings as much as we give commands, and usually
+setting the settings will go into hkrc anyway.
+
+Anyone will be able to make new features, as anyone can make new
+commands and new event handlers as of now.
+
+== Implementing the proposed setting system ==
+
+=== hkshell.settings, value, state ===
+
+I envision a global dictionary in hkshell called `settings`, which
+contains the value and the state of all settings. The value of a
+setting is known and seen by the user (e.g. "on" and "off"). The state
+of a setting is an object that is interesting only for the setting
+itself. E.g. when the gen_indices setting is on, a listener object is
+placed in hkshell.listeners. (This listener object invokes the index
+generator function at the appropriate moments.) This listener object
+would be the state of the setting. The hkshell.settings dictionary
+would store both, but the user would care only about the values and
+not the states. By definition, the value is the part of the stored
+things that is interesting for the user. This is what the users will
+see when they ask the value of the setting, and this is what they have
+to give when asking Heapkeeper to set a new value for the setting.
+
+=== Setting functions ===
+
+Every setting would have a function that can set the value of that
+setting. The implementor of the setting would be helped by decorators.
+
+A listener function is used now in the implementation of the
+'gen_indices' feature. This function would be used unmodified in the
+new implementation. The listener function:
+
+    def gen_indices_listener(e):  # `e` is an Event object.
+        if (e.type == 'after' and # `e` was raised after the execution
+                                  # of a command.
+            len(modification_listener.touched_posts()) > 0): # at
+                                                             # least
+                                                             # one
+                                                             # post
+                                                             # changed
+            gen_indices() # generate index pages
+
+The setting function would look like this:
+
+    @setting('auto.gen_indices')
+    def setting_gen_indices(value, state, newvalue):
+        # - value: the current value of the setting (as given by the
+        #   user)
+        # - state: the current state of the setting (as set by the
+        #   previous invocation of this function)
+        # - newvalue: the new value of the setting (as given by the
+        #   user now)
+        listener = state # our state is the reference to the listener
+                         # function
+
+        # Removing the listener if exists
+        if listener != None:
+            assert(value == 'on')
+            remove_listener(listener)
+            listener = None
+        else:
+            assert(value == 'off')
+
+        # Adding the listener if the given new value is 'on'
+        if newvalue == 'on':
+            # gen_indices_listener is a function that I described
+            # above
+            listener = gen_indices_listener
+            append_listener(listener)
+
+        return listener # we return the new state
+
+Usage:
+
+    >>> on('auto.gen_indices')
+
+A more compact version:
+
+    @setting('auto.gen_indices')
+    def setting_gen_indices(value, listener, newvalue):
+
+        # Removing the listener if exists
+        if listener != None:
+            remove_listener(listener)
+            listener = None
+
+        # Adding the listener if the given new value is 'on'
+        if newvalue == 'on':
+            listener = gen_indices_listener
+            append_listener(listener)
+
+        return listener
+
+The same scheme works for e.g. gen.date.timedelta and
+gen.subject.same_as_parent. For those settings, I guess we need a
+global hkshell.GeneratorOptions that is modified by the setting functions.
+
+=== Deducing the name of the setting ==
+
+We could deduce the name of the setting from the name of the function:
+
+    @setting()
+    def setting__auto__gen_indices(value, listener, newvalue):
+        ...
+
+=== Default values for settings ===
+
+The decorator could also have the default value as argument:
+
+    @setting('auto.gen_indices', default='on')
+    def setting_gen_indices(value, listener, newvalue):
+        ...
+
+== Settings and options ==
+
+You may ask: what is the difference between settings and options?
+The shortest answer is that they are two abstraction levels, and
+settings will be build on the top of options. When option x is set to
+value y, the only thing that happens is that the dictionary of the
+option object instance will have a different value for key y. On the
+other hand, when a setting is changed, many things can happen: e.g.
+all the current settings (like 'gen_indices') create an event handler
+and insert it into hkshell.listeners when turned off. Another
+difference is that options are local: they are just object instances
+and many of them can exist at the same time. The setting system on the
+other hand would be one global dictionary. This way, using settings
+would be easier, but using options directly would be more flexible.
+
+[1] heap://hh/226
+[2] git://5971d43, 2009-04-04
+[3] git://doc/hkshell.rst and http://hste.uw.hu/heapkeeper/hkshell.html#hkshell-features

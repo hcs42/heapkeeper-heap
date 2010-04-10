@@ -1,0 +1,24 @@
+Author: Csaba Hoch
+Subject: Connecting Hk with a mailing list management software
+Tag: idea
+Message-Id: <4A12F323.8020903@gmail.com>
+Parent: <20090519191420.4e204eaa.nagy.attila.1984@gmail.com>
+Date: Tue, 19 May 2009 19:57:55 +0200
+
+>> Another merit of the idea: the delivered emails could contain the
+>> heapid of the post that is created from that email. This way
+>> referencing to posts would be much more convenient.
+> 
+> At least initially -- though heapids are of a very volatile nature -
+> this, of course, being the direct consequence of the editable archive.
+
+They should not be. That's the main reason why I'm hesitant about
+giving decent support for moving emails between heaps.
+
+The content of a heapid may change - but if someone bookmarked a post,
+it should remain there forever. Just like a page on Wikipedia. It may
+change a lot when you go back a year later - but it is still there.
+
+This is a very important principle, which is very strongly advised
+also in POSS. (He talks about mailing archives there, but a heap is
+basically a mailing archive.)

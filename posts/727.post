@@ -1,0 +1,26 @@
+Author: Attila Nagy
+Subject: Let's provide an option to turn off tracebacks!
+Tag: idea
+Message-Id: <b29f917d0910210258v47299037yc086712d5a6751a7@mail.gmail.com>
+Parent: <4ADECF3D.5080801@gmail.com>
+Date: Wed, 21 Oct 2009 11:58:29 +0200
+
+So, to sum up your opinion: you agree that tracebacks may, and
+probably would be seen is a sign of immaturity, but you find them
+useful, so you want to keep them.
+
+OK. But how about defaulting to no tracebacks, and provide an option
+for the developers to enable them? Then you, I and any other willing
+contributors who may find us could benefit from the detailed
+tracebacks at the expense of adding one line to our hkrc, which would
+always be customized, anyway.
+
+A Lem short story comes to my mind. A king asks Trurl, the great
+engineer, to build the perfect counselor. The king, when the robot
+counselor is presented to him, immediately criticizes it, because it
+doesn't obey the commands he was thinking. Then, the robot gives him a
+key which enables its telepathic capabilities, because, it explains,
+otherwise, the robot would trespass its master's thoughts without
+permission, which a perfect counselor won't do. (Similarly our project
+could start out with the potentially disturbing features switched
+off.)

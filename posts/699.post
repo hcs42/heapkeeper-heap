@@ -1,0 +1,8 @@
+Author: Csaba Hoch
+Subject: PostSet.expb and PostSet.expf should detect cycles
+Tag: issue
+Tag: reviewed
+Message-Id: <4ADAEC34.7080808@gmail.com>
+Date: Sun, 18 Oct 2009 12:21:40 +0200
+
+PostSet.expb and PostSet.expf should detect cycles.

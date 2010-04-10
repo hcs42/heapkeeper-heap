@@ -1,0 +1,24 @@
+Author: Csaba Hoch
+Subject: Hardwired vs. customization-added features
+Tag: idea
+Message-Id: <4ddb9e5b0905180425i16cbfce3q977465c3d18d369b@mail.gmail.com>
+Parent: <b29f917d0905140414t9cab436g63eef31dcde89576@mail.gmail.com>
+Date: Mon, 18 May 2009 13:25:46 +0200
+
+I mostly agree. However, I would like to clarify something.
+
+> if we want to offer a feature, we'll have to provide a hardcoded way
+> to make it possible.
+
+I agree, if by hardcoded, you don't mean "hardcoded in hklib" or
+"hardcoded in hkshell", but "hardcoded as a setting". We may have a
+very flexible and customizable Heapkeeper -- with many customization
+available in hkcustomlib, and a setting system that provides trivial
+ways turn on and off and customize the features. I will send a
+separate post about my proposal [1]. Both of us should be satisfied
+with that: we will reach your aim, but without having to make hklib
+ugly with a bunch of if-else constructs.
+
+Csabi
+
+[1] heap://hh/235

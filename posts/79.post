@@ -1,0 +1,15 @@
+Author: Csaba Hoch
+Subject: Linking commits
+Tag: idea
+Message-Id: <49E2C1F3.5060907@gmail.com>
+Parent: <49e26d52.0baa660a.687b.18b1@mx.google.com>
+Date: Mon, 13 Apr 2009 06:39:15 +0200
+
+> <<<note From PocketPC's built-in Messaging app.>>>
+
+And you don't have spaces after the '>' signs. The funny thing is that
+Thunderbird hides these funny things from me: it shows a space
+after the quote sign and it shows 'Re' instead of 'RE'. (Although it
+does not hide the lack of line breaks.)
+
+Maybe we should insert spaces after the '>' in order to unify the format?

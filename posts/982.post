@@ -1,0 +1,14 @@
+Author: Csaba Hoch
+Subject: Erlang/OTP on GitHub
+Tag: git
+Tag: workflow
+Message-Id: <4ddb9e5b0912031054q43187f64ga7327086744f7682@mail.gmail.com>
+Date: Thu, 3 Dec 2009 19:54:28 +0100
+
+The Erlang/OTP development moved party to GitHub. They still use
+ClearCase internally, but they maintain a GitHub repository. Their
+workflow [1] may be worth reading. They have a "pu" ("proposed
+updates") branch that is rebased all the time, and which merges all
+topic branches.
+
+[1] http://wiki.github.com/erlang/otp/branches

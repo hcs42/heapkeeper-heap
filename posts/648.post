@@ -1,0 +1,69 @@
+Author: Attila Nagy
+Subject: In-place replies in thread view
+Tag: idea
+Message-Id: <b29f917d0910140956o6bf06fbet21d1cf02efac093a@mail.gmail.com>
+Parent: <4A75E7D6.8050200@gmail.com>
+Date: Wed, 14 Oct 2009 18:56:57 +0200
+
+> == Wave ==
+>
+> When I first read your email, I thought you were going to suggest
+> this:
+>
+>    We could create a meta to include images in a post.
+>
+>        A good idea. Though I'd probably never use it myself, it's
+>        unreasonable to lose potential users because a feature is missing
+>        that'd be trivial to implement.
+>
+>            Very good point.
+>
+>    Not that I'd particularly love to see such a feature in Hk, but
+>    who knows, maybe there'll be people who absolutely need this
+>    feature.
+>
+> Which reminds me to Google Wave, because that can do it, too.
+> (Of course it does not automatically merges existing emails, but the
+> users have to click to the appropriate place and write their answer
+> there to make this happen.)
+
+[!todo This section has totally misled me. It would be nice to replace
+all of this with an example that is totally unrelated or nonsense.
+This thread is not, repeat, not about including images in heaps, but
+this is not so evident at first.]
+
+
+> == Attis ==
+>
+> As far as I see, your suggestion just copies the posts' bodies after
+> each other without quotes, and indents them. If we look at our index
+> page, it is basically just having the post's body in nothing else in
+> the post summary. Or if we look at the thread page, it is just having
+> the posts indented. Plus removing the quotes.
+>
+> I think your suggestion is much easier to implement than the Wave-like
+> idea, and I like it. We have two functionality out of the three that
+> you suggest:
+> - post bodies after each other are present in the thread page
+> - indentation is present in the index page
+> - quote hiding is not implemented
+>
+> I think we previously talked about inline posts in general. It would
+> mean that the index page generator would have an additional parameter:
+> the list of inline posts, i.e. the posts which should have their body
+> shown in the index page. The current thread view would be a special
+> case, where the posts are flat. Your current suggestion would be
+> another special case, where the posts are not flat, and the quotes are
+> removed from the body.
+>
+> A feature that I would like soon is the custom post summaries: it
+> would mean that a function is a parameter of the index generation, and
+> this function decides what summary to print for a post. This feature
+> would automatically make the "general inline posts" feature happen,
+> together with removing the comment from the body. So if we implement
+> this, which should be easy, we just have to write a small
+> customization function to implement your suggestion.
+>
+>
+> >
+>

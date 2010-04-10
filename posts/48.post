@@ -1,0 +1,116 @@
+Author: Attila Nagy
+Subject: Wiki-like heap, pseudo posts
+Tag: hh-conventions
+Tag: idea
+Tag: post syntax
+Tag: reviewed
+Message-Id: <b29f917d0903230937v7507b954v2c8e6b0e33343aa7@mail.gmail.com>
+Parent: <49C497E8.2010807@gmail.com>
+Date: Mon, 23 Mar 2009 17:37:36 +0100
+
+> In the answers we may create new topics and abandon others.
+
+This foreshadows a strange threads-within-threads structure idea,
+which I may actually like, I don't know yet. Expanding this idea could
+create chaos, but with a really simple and helpful interface (once
+we're in the Web UI phase) it could add a lot of usability. Imagine
+this as the output of a thread:
+
+    User A   Subj A [A] <1> 1970.01.01 00:01
+    --------------------------
+    Hello everyone!
+
+    This time I have two fantastic ideas.
+
+    == Idea One ==
+
+    We should eat pizza.
+
+    == Idea Two ==
+
+    We should drink beer.
+
+    A
+
+        User B   Subj A [A] <2> 1970.01.01 00:02
+        ---------------------------------
+        Hello all!
+
+        To comment on A's "fantastic" ideas:
+
+        == Idea One ==
+
+        > We should eat pizza.
+
+        In case you haven't realized, it's the middle of the night, so no
+        delivery now.
+
+        == Idea Two ==
+
+        > We should drink beer.
+
+        Much better. You still have a chance to find a pub open.
+
+        == Alternative idea ==
+
+        I think we should go to bed.
+
+        B
+
+How about adding some navigational links? Like opening/closing the
+Wiki-headings, and adding prev/next links? And maybe a Table of
+Contents?
+
+    User A   Subj A [A] <1> 1970.01.01 00:01
+    --------------------------
+    Contents:
+    * Idea One [next]
+    * Idea Two [next]
+
+    Hello everyone!
+
+    This time I have two fantastic ideas.
+
+    == Idea One == [close] [next reply]
+
+    We should eat pizza.
+
+    == Idea Two == [close] [next reply]
+
+    We should drink beer.
+
+    A
+
+        User B   Subj A [A] <2> 1970.01.01 00:02
+        ---------------------------------
+        Contents:
+        * Idea One [prev]
+        * Idea Two [prev]
+
+        Hello all!
+
+        To comment on A's "fantastic" ideas:
+
+        == Idea One == [close] [prev reply]
+
+        > We should eat pizza.
+
+        In case you haven't realized, it's the middle of the night, so no
+        delivery now.
+
+        == Idea Two == [close] [prev reply]
+
+        > We should drink beer.
+
+        Much better. You still have a chance to find a pub open.
+
+        == Alternative idea == [close]
+
+        I think we should go to bed.
+
+        B
+
+This threads-within-threads system is an experimental, underdeveloped
+idea, to the point that I'm not even sure if it would be useful at
+all. Still I post it, in case someone likes it or has a better idea
+based on this.

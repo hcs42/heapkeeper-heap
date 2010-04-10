@@ -1,0 +1,18 @@
+Author: Csaba Hoch
+Subject: EDITOR variable
+Tag: issue
+Tag: reviewed
+Message-Id: <4AC8DB14.40908@gmail.com>
+Parent: <4AC31445.5040604@gmail.com>
+Date: Sun, 04 Oct 2009 19:27:48 +0200
+
+No! We should use only backslashes to state that "this space is not a
+delimiter between arguments":
+
+    $ export EDITOR='gvim -c "setf\ mail"'
+
+or
+
+    $ export EDITOR="gvim -c 'setf\\ mail'"
+
+It would be much easier then to mess with single and double quotes.

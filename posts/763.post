@@ -1,0 +1,16 @@
+Author: Csaba Hoch
+Subject: Issues
+Tag: hh-conventions
+Tag: prop
+Tag: reviewed
+Message-Id: <4AE200AB.5060003@gmail.com>
+Parent: csabi_5
+Date: Fri, 23 Oct 2009 21:14:51 +0200
+
+I propose using the following tags for posts about issues:
+- bug: bugs
+- feature: new features or improving existing features
+- issue: everything else about concrete parts of Hk
+- prop: proposals that not about concrete parts of Hk, but about
+  coding conventions, procedures, repository usage, workflows, heap
+  usage

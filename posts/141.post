@@ -1,0 +1,25 @@
+Author: Attila Nagy
+Subject: None is also accepted as prepost (4b2977e9b7 2009-04-27)
+Tag: commit
+Message-Id: <b29f917d0905020200j74472206t4b02a3318af6cd23@mail.gmail.com>
+Parent: <b29f917d0905020123u56296762ubd68181209363748@mail.gmail.com>
+Date: Sat, 2 May 2009 11:00:49 +0200
+
+This solution is elegant and totally solves my problem:
+
+>   ps_singles = postdb.roots()
+>   for post in postdb.all():
+>       ps_singles -= [postdb.parent(post)] # when postdb.parent(post)
+>                                           # is None, nothing happens
+
+> But that's what I would write, which is more efficient and nicer in my eyes:
+
+>   ps_singles = \
+>       postdb.postset(postdb.roots()). \
+>       collect(lambda post: postdb.children(post) == [])
+
+Oh, I didn't realize there was a children() member function... now
+this changes everything! I think this is the most important part of
+the code: Post class and its members. I once started to explain the
+code while trying to understand it for myself, and now I think I
+should continue this effort.

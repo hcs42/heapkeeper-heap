@@ -1,0 +1,28 @@
+Author: Attila Nagy
+Subject: Sorting posts
+Tag: issue
+Tag: reviewed
+Message-Id: <b29f917d0910291045m2833d772sa623998278e82982@mail.gmail.com>
+Parent: <4ddb9e5b0910290946s665fa2e8v1caff69a542bc621@mail.gmail.com>
+Date: Thu, 29 Oct 2009 18:45:27 +0100
+
+> Do you have a use case when it would be useful?
+
+Not really, it was just an idea.
+
+> Using the heapid when the posts have no timestamps will cause the same
+> ordering on all systems that have the same heap. This is not true for
+> using timestamps _of_ the post files -- maybe we have the same heap,
+> but managed the files differently, so we have a different order.
+
+You are definitely right here.
+
+> Sorry, but I dislike this idea a lot. People can edit the post files,
+> and manage them in repositories -- the VCS would have complicated
+> effects on Hk's internal stuff (post order).
+
+I don't know how VCSs handle _creation_ time. But you are right, we
+cannot build on it, too volatile, besides, I think Windows has no such
+concept.
+
+OK then, let's stay at your suggestion.

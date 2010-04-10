@@ -1,0 +1,14 @@
+Author: Attila Nagy
+Subject: hkweb rewritten to start from hkshell and use new Generator
+Message-Id: <b29f917d0911081524p6805ce2dv3ed4aa06d01a08f@mail.gmail.com>
+Parent: <b29f917d0911081520j1e29e469sf4e71b36b6eccf3@mail.gmail.com>
+Date: Mon, 9 Nov 2009 00:24:08 +0100
+
+There's still an issue: no link leads from the thread pages to the root (index).
+
+Since this doesn't break the usability, I plan to fix this in another
+commit, and not amend it to the first hkweb commit. Maybe it'll be
+more understandable like this, with two smaller commits (or rather,
+one big and one small).
+
+[open]

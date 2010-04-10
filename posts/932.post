@@ -1,0 +1,27 @@
+Author: Csaba Hoch
+Subject: Lost threads
+Tag: cleanup
+Tag: issue
+Tag: reviewed
+Message-Id: <4AFFB236.1020907@gmail.com>
+Parent: <b29f917d0911081045v494356acl47a311985ba1d66b@mail.gmail.com>
+Date: Sun, 15 Nov 2009 08:48:06 +0100
+
+> Do you have any other ideas? Also, what do you think of my state
+> ideas?
+
+That's basically a bit more advanced system than the current issue
+system. But maybe you are right and improving the current issue system
+is the only way to deal with this.
+
+We talked about new role of the "idea" tag before [1], that seems to
+be the answer. So in hh, everything that may need action should be
+issue. If we are not sure that it needs an action or not sure about
+which action to take, the issue is an "idea".
+
+It's a different question to have something like this on UMS. But
+a modified version of hh's issue system will be fine there.
+
+Opinions?
+
+[1] heap://hh/772

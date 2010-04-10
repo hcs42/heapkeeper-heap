@@ -1,0 +1,11 @@
+Author: Attila Nagy
+Subject: Workflow: what to do with old branches
+Tag: workflow
+Message-Id: <b29f917d0909140322k65f9b9d5p8b3497bb7dcd67e6@mail.gmail.com>
+Parent: <4AACDD60.1080905@gmail.com>
+Date: Mon, 14 Sep 2009 12:22:31 +0200
+
+Please remove your _fastdownload and _bugfix as they are fully
+integrated into the master now, and the former keeps a sidetrack in my
+gitk display that is visually distracting. (It'd be nice to have a
+linear history up to the current master.)

@@ -1,0 +1,28 @@
+Author: Csaba Hoch
+Subject: Names of test classes and test functions
+Tag: convention
+Message-Id: <4AE349FD.2070809@gmail.com>
+Date: Sat, 24 Oct 2009 20:39:57 +0200
+
+I'm not sure whether I described my naming scheme regarding test
+classes and functions.
+
+It goes like this:
+
+    classes: Test[_<class under test>][__<other>]
+    functions: test[_<function under test>][__<other>]
+
+Example classes:
+
+    Test_MyClass: tests MyClass
+    Test_MyClass__Misc: tests miscellaneous parts of MyClass
+    Test__Misc: tests miscellaneous classes/functions of the module
+    Test__1: first set of tests for the module under test
+
+Example functions:
+
+    test_add: tests the "add" function
+    test_add__1: first set of tests for the add function
+    test__adder: tests the adder functions
+
+I haven't followed this convention from the start.

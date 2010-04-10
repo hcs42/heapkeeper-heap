@@ -1,0 +1,11 @@
+Author: Csaba Hoch
+Subject: Posts without message-id
+Message-Id: <4ddb9e5b0908100205m2bbfe38cm246c23ec8639a068@mail.gmail.com>
+Parent: <4ddb9e5b0908100204s3a90ff36g962522cfde520304@mail.gmail.com>
+Date: Mon, 10 Aug 2009 11:05:35 +0200
+
+"A post may have a message id, which is the Message-Id attribute in
+the header. The message id is the message id of the email from which
+the post was created. It is supposed to be unique." [1]
+
+[1] http://heapkeeper.org/hklib.html#hklib.Post

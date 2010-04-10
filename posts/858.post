@@ -1,0 +1,10 @@
+Author: Attila Nagy
+Subject: Managing several heaps in Heapkeeper
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0911011052g7177d705r835dd1894ee85f17@mail.gmail.com>
+Parent: <4AED5CD2.5020808@gmail.com>
+Date: Sun, 1 Nov 2009 19:52:06 +0100
+
+We discussed via IM that we can remove the old Generator once my hkrc
+no longer relies on it.

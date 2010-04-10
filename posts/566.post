@@ -1,0 +1,42 @@
+Author: Attila Nagy
+Subject: Workflow with separate repositories: example
+Message-Id: <b29f917d0908311514q5c580634g433af83dc3c2b751@mail.gmail.com>
+Date: Tue, 1 Sep 2009 00:14:11 +0200
+
+I'll use your "_e" branch as an example to see if I have understood
+the workflow correctly. It'll be a bit detailed, but I hope it can be
+understood easily.
+
+1. You've pushed this to "hcs42/heapkeeper_" [1], and mailed me a
+request to check this branch.
+
+2. Since I have added this repo as the remote called "hcs" to my local
+repo, I can say `git fetch hcs`, and I'll see the "_e" branch as
+"remotes/hcs/_e".
+
+3. Now I can view your commits and comment on them.
+
+4. If you think my comments are worthy, you alter the history of your
+"_e", and push again, then mail me a warning that "_e" has been
+rewritten according to my suggestions and I should check it again.
+
+5. Now I can reflect my approval by creating a "_e" branch in my
+local, moving it to "remotes/hcs/_e", and pushing, thus creating
+"remotes/origin/_e".
+
+(If I do not approve, steps 3-4. can be repeated)
+
+6. You see this at your next fetch, and feel that the feature added in
+"_e" is ready for integration. Now you move "master" to "_e" on your
+local and push.
+
+7. When I fetch, I'll see that "remotes/hcs/master" has moved to where
+"remotes/hcs/_e" stands (and also "_e" and "remotes/origin/_e").
+
+8. Now I move my master to "remotes/hcs/master" and push.
+
+9. When you fetch, you see that I have agreed your move of integrating
+"_e" into master.
+
+[1] The underscore will be removed if this workflow goes stable.
+[!todo Remove this and the underscores once this has happened.]

@@ -1,0 +1,53 @@
+Author: Attila Nagy
+Subject: Keep abbreviations for the most important settings
+Tag: prop
+Tag: reviewed
+Message-Id: <20090519085624.3b366f70.nagy.attila.1984@gmail.com>
+Parent: <4ddb9e5b0905180423x270e995fp86e4de9143201b46@mail.gmail.com>
+Date: Tue, 19 May 2009 08:56:24 +0200
+
+[open]
+
+> We have a shorter version of all features now (e.g. on('gi') instead
+> of on('gen_indices')), but I'm not sure we need that. It would make
+> the system more complicated, both to implement and use. I don't think
+> we change the settings as much as we give commands, and usually
+> setting the settings will go into hkrc anyway.
+
+I can feel myself slipping into an old groove, but I cannot help but argue on
+the various kinds of users, their expectations of us, and what we can expect of
+them in turn.
+
+First, we have developers, "one of us". They use whatever features we have,
+since it's they who write it. As long as we have only these, everything is
+fine.
+
+Second, we could have (and should have sooner or later) "high power users".
+These guys (or gals) don't themselves contribute to the code, but they are the
+fine code warriors, who indeed Read The Flaming Manuscript (TM) before asking
+any questions, and at the very same time (and this is our part in it) grasp the
+essence and greatness of the project well enough to keep up with the
+developers.
+
+Third, if our project ever manages to get any attention at all, we
+shall have "power users". For an ordinary project, the power user would
+represent a high class in terms of competence, but for us, it'll probably be
+the entry level, as it is very unlikely that your average Desktop Linux User
+(under the pseudonym of Sudo Synaptic) will ever take attention in our project.
+This group will most likely consist of poor system administrators, who have
+been charged with the task of setting up a mailing list for some newly created
+commitee at the firm. To make matters worse, it would have to be done overtime,
+and, just as the poor fellow enumerates his options (Majordomo, Mailman et
+al.), the Boss turns back to him, and adds almost casually "And it'd be great
+if the archive could be edited.", meaning, of course, it _has_ to be editable.
+This poor guy is looking for a solution that is as ready-to-run, off-the-self
+and add-water-and-stir as possible, and the time he can devote to each of the
+candidates is just enough for a quick download-install-try sequence. He'll
+simply skip to the next candidate if he is asked to read anything longer than
+your average README, and even that is pretty much the top of what can be
+expected of him. No offense; that's just how it works. 
+
+So, as a conclusion: I'm all for hierarchical settings, but they are too long
+for anyone not too deeply involved with the project to remember, and too
+tiresome to look up all the time. We have to have a usable set of settings
+available in abbreviated form at the power user's fingertips.

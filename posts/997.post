@@ -1,0 +1,78 @@
+Author: Csaba Hoch
+Subject: Free-text search
+Tag: feature
+Message-Id: <4B32849A.6060507@gmail.com>
+Date: Wed, 23 Dec 2009 21:59:06 +0100
+
+== Basic idea ==
+
+We should implement a search facility in Heapkeeper. The user would
+give a few words to Hk, and it would find posts that contain all of
+those words.
+
+== More specific specification ==
+
+I propose to use regular expressions. So if a user searches for the
+following word sequence:
+
+    word1 word2 word3
+
+the resulted postset would be equal to the result of the following
+program:
+    
+    def contains(word):
+        """Returns a function that can decide whether a given post
+        contains the given word."""
+        def f(post):
+            return (re.search(word, post.body()) or
+                    re.search(word, post.author())
+                    re.search(word, post.subject()) or
+                    re.search(word, ' '.join(post.tags())))
+        return f
+
+    postdb.all().collect(contains("word1")). \
+                 collect(contains("word2")). \
+                 collect(contains("word3"))
+
+(This is not the implementation, this is only the specification :) )
+
+The would could be regular expressions, if the user wants to use them.
+
+== Advanced features ==
+
+The following features are only ideas, I don't propose to implement
+them in the first go.
+
+=== Ranking ===
+
+We could implement ranking so that a post will be higher in the
+search results if the word is present as a tag/keyword/subject. Or a
+post will be lower in the results if the expression is present only in
+a quote.
+
+=== Thread search ===
+
+We could also implement "thread search", which would return only one
+post per thread.
+
+=== Generation output ===
+
+We should make a generator that would generate HTML pages with the
+search results, inlining the relevant posts, highlighting the found
+expressions, etc.
+
+=== Hkweb integration ===
+
+And of course we should have a textbox and a "Search" button on hkweb.
+
+=== Vim integration ===
+
+We could feed the results into Vim so that Vim could jump between the
+hits in its usual way (:cnext, :cprev, :clist).
+
+== Effort estimation ==
+
+This only concerns the basic features. We could spent an arbitrary
+amount of time with the advanced ones :)
+
+[effort 5]

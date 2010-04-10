@@ -1,0 +1,43 @@
+Author: Attila Nagy
+Subject: Optimized IMAP downloading
+Message-Id: <b29f917d0908162349ne8dcce4i7179b1fe7f8b1c92@mail.gmail.com>
+Date: Mon, 17 Aug 2009 08:49:08 +0200
+
+I have optimized the email downloading algorithm of hklib. The reason
+why the previous implementation was so slow is that it performed many
+queries. 3 server queries were performed for each new message, and 1
+query for each message already present. Now only two queries are
+performed:
+- download all Message-Ids
+- download all heads and bodies for new messages (if any)
+
+This of course speeds up the process enormously, and also has the
+advantage that we can tell the user the number of new messages before
+downloading (so she can decide if it's worth taking a coffee break).
+
+Downloading all the messages from the INBOX looks like this (with an
+empty mail directory):
+
+    >>> dl()
+    Reading settings...
+    Connecting...
+    Connected
+    Checking...
+    942 new messages found.
+    Downloading...
+    942 new messages downloaded.
+    dl: 41.591412 seconds.
+
+Checking for new messages is very fast:
+
+    >>> dl()
+    Reading settings...
+    Connecting...
+    Connected
+    Checking...
+    No new messages.
+    dl: 1.871119 seconds.
+
+This means we can un-archive all messages back into INBOX, so we won't
+have to explain ourselves to anyone who wants to download the whole
+heap into an empty mail directory.

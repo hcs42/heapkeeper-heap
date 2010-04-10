@@ -1,0 +1,14 @@
+Author: Attila Nagy
+Subject: margitka: improved gitk for the Hk-style workflow
+Tag: git
+Message-Id: <b29f917d0911171220v5441a992nb5ca13d3d8c56cfb@mail.gmail.com>
+Date: Tue, 17 Nov 2009 21:20:35 +0100
+
+I hacked a bit on gitk to create margitka, an improved version that
+displays the commit's topic in a separate column. This can be useful
+when looking at a long line of development to get an overall idea on
+the work done.
+
+You can get it at:
+
+http://github.com/attish/margitka

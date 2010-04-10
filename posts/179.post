@@ -1,0 +1,31 @@
+Author: Csaba Hoch
+Subject: Body parsing - the what
+Tag: post syntax
+Tag: prop
+Message-Id: <4A0463A1.6050700@gmail.com>
+Parent: <b29f917d0905021657p2cd16492p34c37a593d40776b@mail.gmail.com>
+Date: Fri, 08 May 2009 18:53:53 +0200
+
+> == The What ==
+
+It would be very nice to read the concepts of the "what". This is only
+a bunch of features that we want to implement.
+
+I mean concepts like this:
+- A meta text is something starting with "^<<<" and finishing with
+  ">>>$" or EOF.
+- The first word of the meta text special.
+  a. If it starts with an exclamation mark, it is a command. The
+     commands are executed under the supervision of a heap maintainer.
+     Examples:
+     - !delpost
+     - !delthis
+  b. If it does not start with an exclamation mark, it is the type of
+     the meta text. This specifies how the meta text should be
+     displayed.
+     - todo
+
+I'm tempted to write more, but I think it is your job :) I wrote an
+email about this to the UMS heap, but we need a more organized one
+now. I will spend my time improving something else on Hk (or on hh )
+instead.

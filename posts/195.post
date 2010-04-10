@@ -1,0 +1,84 @@
+Author: Csaba Hoch
+Subject: Simple scripts: documentation, grep (2009-05-10 b99f4dc212)
+Tag: commit
+Message-Id: <4A06B578.5090901@gmail.com>
+Date: Sun, 10 May 2009 13:07:36 +0200
+
+--------------------------------- scripts/stat ---------------------------------
+  +#!/bin/bash
+  +
+  +./hkshell 'on("t")' "for i in range($2): $1()" 'q()' | grep "^$1" | cut -d " " -f 2 | scripts/stat.py
+  
+  ------------------------------- scripts/stat.py -------------------------------
+  +#!/usr/bin/python
+  +
+  +import sys
+  +
+  +nums = []
+  +count = 0
+  +avg = 0
+  +sd = 0
+  +
+  +for x in sys.stdin:
+  +    x = float(x)
+  +    nums.append(x)
+  +    avg += x
+  +    count += 1
+  +
+  +avg /= count
+  +
+  +for x in nums:
+  +    d = x - avg
+  +    sd += d * d
+  +
+  +sd /= count - 1
+  +
+  +print "average: %f, SD: %f" % (avg, sd)
+
+== Documentation ==
+
+Could you provide a little info on how to use new scripts when you
+commit them? You don't need to write normal documentation, but you
+could have written a small example at least in the commit message.
+(Which could be copied in the documentation later.) Something like
+this would have been enough:
+
+  The scripts/stat script executes the given hkshell command given
+  times.
+
+  An example:
+
+    $ scripts/stat gp 5
+    average: 0.000153, SD: 0.000000
+
+  In the example, the gp() command is executed 5 times. Afterwards,
+  the the result of the measurement is printed: the average executing
+  time of the gp() commands was 0.000153 seconds, while the square
+  deviation was 0.000000.
+
+Don't be afraid that writing longer commit messages is a waste of
+time, I will read all them happily :) It takes you 1 minute to write a
+commit message like this, and it save me 5 minutes of thinking about
+what were you doing.
+
+Or it would be even better if the script printed a help text when
+invoked with "--help", like I did in scripts/pushdoc. (I have just
+corrected pushdoc -- I have just realized that its handling of
+"--help" was buggy :) )
+
+== Minor improvement idea ==
+
+  --------------------------------- scripts/stat ---------------------------------
+  +  #!/bin/bash
+  +  
+  +  ./hkshell 'on("t")' "for i in range($2): $1()" 'q()' | grep "^$1" | cut -d " " -f 2 | scripts/stat.py
+
+I would write
+
+    grep "^$1:"
+
+instead of
+
+    grep "^$1"
+
+You never know :)

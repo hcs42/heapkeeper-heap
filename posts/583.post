@@ -1,0 +1,32 @@
+Author: Attila Nagy
+Subject: "hkshell: enew accepts prefix" (2009-09-06 90b4c7d6)
+Tag: commit
+Message-Id: <b29f917d0909070601g584807acy7a9f6a0ae748cff6@mail.gmail.com>
+Date: Mon, 7 Sep 2009 15:01:02 +0200
+
+You made this commit on your "_e" branch:
+
+    commit 90b4c7d6b0e1a764179ab1324c337e7e983b6a82
+    Author: Csaba Hoch <csaba.hoch@gmail.com>
+    Date:   Sun Sep 6 18:13:58 2009 +0200
+
+       hkshell: enew accepts prefix
+
+       If you want to create a new post with heapid myname_<number>,
+just use this:
+
+           >>> enew('myname_')
+
+       PostDB.next_heapid has been extended to handle prefixes.
+
+Since this commit affects hklib.py as well, this should be mentioned
+in the summary, like this:
+
+   hklib, hkshell: PostDB.next_heapid, enew accepts prefix
+
+At least I think it's the more important of the changes you've made.
+But good thing you've done it, it'll be useful.
+
+We could even have a hook that checks which modules have changed, and
+pre-initializes the commit message with their names. Of course, you'd
+be free to delete them, if you don't want to use it.

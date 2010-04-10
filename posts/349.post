@@ -1,0 +1,19 @@
+Author: Attila Nagy
+Subject: Body parsing - the what - examples
+Tag: post syntax
+Tag: prop
+Message-Id: <20090530082020.7c8d43c6.nagy.attila.1984@gmail.com>
+Parent: <4A20531D.5020906@gmail.com>
+Date: Sat, 30 May 2009 08:20:20 +0200
+
+== Quotes ==
+  
+>>>>>> Here, you have a guarantee that the depth of the recursion will not
+>>>>>> exceed the depth of the quotation, which I'd like not to exceed 20 in
+>>>>>> any reasonable conversation.
+>>>>> You don't know how long discussions our users will have on their heaps.
+> Maybe someone will use a heap entirely differently from us. Maybe they
+> will have a thread to which all team members should report the result
+> of their daily work.
+
+All right. Flat structure, flat algorithm.

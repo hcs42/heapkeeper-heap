@@ -1,0 +1,14 @@
+Author: Csaba Hoch
+Subject: Running hk with different profiles: multiple heaps
+Message-Id: <4ddb9e5b1002080329i750885bdqd7ae226b7f4cfafc@mail.gmail.com>
+Parent: <20100208122318.14a6c8bd.nagy.attila.1984@gmail.com>
+Date: Mon, 8 Feb 2010 12:29:05 +0100
+
+> Have you updated it to work with the multiple heaps branch?
+
+It works with multiple heaps, but only because the "multiple heaps
+commits" config file format is compatible with the old format.
+
+> Also, do you use multiple sandbox heaps for testing multiple heaps?
+
+No, I have only one sandbox heap.

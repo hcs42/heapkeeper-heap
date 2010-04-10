@@ -1,0 +1,13 @@
+Author: Attila Nagy
+Subject: Pylint
+Message-Id: <20100210183040.f5842d0d.nagy.attila.1984@gmail.com>
+Parent: <4B5C3EF9.70800@gmail.com>
+Date: Wed, 10 Feb 2010 18:30:40 +0100
+
+> I tried out pylint [1], which is a static analyser tool for Python. It
+> can be installed by doing "apt-get install pylint".
+
+Thanks for this essay.
+
+Don't you have the impression that unit testing is far superior to
+what pylint does, and largely makes it unneeded?

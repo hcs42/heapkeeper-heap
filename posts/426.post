@@ -1,0 +1,50 @@
+Author: Attila Nagy
+Subject: Ownership of history is a delicate matter
+Tag: git
+Message-Id: <20090731195116.2388ce47.nagy.attila.1984@gmail.com>
+Parent: <4ddb9e5b0907310912v31559140pd8b7a4f5e986725@mail.gmail.com>
+Date: Fri, 31 Jul 2009 19:51:16 +0200
+
+>> However, if we choose to alter history now to sort out multiple
+>> personality issues may have a compelling effect for the future.
+> 
+> By "personality issues", do you mean having 4 committer on the impact graph
+> instead of 2?
+
+Exactly.
+
+>> If we get caught in a craving for a tidy repository, we'll sooner or later be
+>> inclined to clean up the "motorway sections" by rebasing them. Now we could
+>> do it.
+> 
+> It is not worth rebasing the past. Our efforts are much better spent on the
+> program and its documentation. The "personality issue" is a bit different,
+> because it will always make us look funny and a bit lame if we don't sort that
+> out. But I don't think that about the motorway. Watch out from now on, and
+> everything will be fine.
+
+OK. Correct authors, leave motorways. I agree.
+
+>> Once we have "followers" (either in the quoted or the
+>> literal sense), we can't.
+> 
+> We don't know for sure we don't have them now ;)
+
+Was this you? [1]
+
+>> By (hopefully) gaining attention with the launch of the homepage, we, so to
+>> say, 'set up us the bomb', so we had better 'make our time' (um, sorry; what
+>> I want to say is we should do all our history-changing now while we control
+>> all copies of the source tree).
+> 
+> I'm not sure that we control in 100% what is on github. But it we do, than
+> changing the past before 0.3 is OK. I want to put the news about 0.3 on
+> freshmeat, send it to the Sphinx mailing list, tell about this to my
+> colleagues, etc.
+
+Do you think we'll be ready for all that with 0.3?
+
+I remember some official github guide on history editing. I'll go and check
+that one out.
+
+[1] http://github.com/hcs42/heapkeeper/graphs/clones

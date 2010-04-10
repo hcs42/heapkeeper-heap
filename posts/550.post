@@ -1,0 +1,39 @@
+Author: Csaba Hoch
+Subject: Managing several heaps in Heapkeeper
+Tag: prop
+Tag: reviewed
+Message-Id: <4A9A2CFC.1030700@gmail.com>
+Parent: <b29f917d0908281251g10bdab8dv2ae8c46fe30ed6fe@mail.gmail.com>
+Date: Sun, 30 Aug 2009 09:40:44 +0200
+
+=== Terminology ===
+
+>>> The part before the "/" would be called "heapid",
+>>
+>> I would call it "heap name". Do you prefer "heapid"?
+> 
+> I prefer "id" because the other one would have to be "postid"
+> anyway, in order to avoid conflict with "post name".
+
+OK.
+
+> Of course, "heapid" is already used, but in another meaning, which
+> could be a problem. How about using "heap_id" to denote this new
+> meaning, ie. the first element of the tuple that is the "post name"?
+
+OK. Then we will have heap_id, post_id and post_name in code, and
+"heap id", "post id" and "post name" in text.
+
+== Example: moving a post ==
+
+>> I had the temptation to give all posts a message id... But it would
+>> not be right. (Or at least I have not find the way to do it right.)
+> 
+> We are both Git enthusiasts. I can't imagine you haven't had the
+> idea of using SHA-1 :)
+
+You are right, I though about it a few times. I started to write my
+reply, and when I reached a few paragraphs, I decided to do it in a
+separate email. [1]
+
+[1] post://2566

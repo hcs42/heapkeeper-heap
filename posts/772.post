@@ -1,0 +1,35 @@
+Author: Csaba Hoch
+Subject: Issues
+Tag: hh-conventions
+Tag: prop
+Tag: reviewed
+Message-Id: <4AE2CF95.6040601@gmail.com>
+Parent: <b29f917d0910240227v4e7f79dbt36d72a7ce6c8d366@mail.gmail.com>
+Date: Sat, 24 Oct 2009 11:57:41 +0200
+
+> Should ideas come here, too?
+
+Hm. Maybe being an "idea" is an orthogonal dimension to this. Being an
+"idea" means that the proposer is not sure about whether the
+feature/issue/proposal is useful/implementable.
+
+Maybe issues (=threads with bug/feature/issue/prop tag) should be put
+into a different section in the issue tracker and should have
+different colors than other issues. Probably they should be marked
+with a very different color (I propose cyan :) ) When we decide to
+talk about an idea as not just an idea, we could remove the "idea"
+tag.
+
+I know this is not the way we have been using the "idea" tag. In an
+earlier proposal of mine I wrote about using the "prop" and "idea"
+tags [1]. This is the relation between the old and new usages of the
+"idea" and "prop" tags:
+
+    old usage | new usage
+    ----------------------------------------------------------
+    prop      | feature/issue/prop, without an idea tag
+    idea      | feature/issue/prop, also having an idea tag
+
+What do you think?
+
+[1] post://1282

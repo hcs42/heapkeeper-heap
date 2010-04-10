@@ -1,0 +1,22 @@
+Author: Csaba Hoch
+Subject: Developing with Vim
+Tag: vim
+Message-Id: <4ddb9e5b0907310850r48a1a950iba5a31a15a3ba358@mail.gmail.com>
+Parent: <20090731131334.129cc74d.nagy.attila.1984@gmail.com>
+Date: Fri, 31 Jul 2009 17:50:13 +0200
+
+== hk/auto.vim ==
+
+>> This file is automatically sourced by my vimrc when starting Vim from hk.
+>
+> Does your .vimrc look for an auto.vim in whatever directory you launch
+> Vim from?
+
+Yes.
+
+>>   " FM:
+>>   "   Finds the definiton of a class or method in a Python buffer.
+>
+> Wouldn't it be nice to wire this to gD?
+
+Yes, it would be.

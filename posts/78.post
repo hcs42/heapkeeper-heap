@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: Linking commits
+Tag: idea
+Message-Id: <49E2C110.8050606@gmail.com>
+Parent: <49e26d52.0baa660a.687b.18b1@mx.google.com>
+Date: Mon, 13 Apr 2009 06:35:28 +0200
+
+> <<<note From PocketPC's built-in Messaging app.>>>
+
+Other notes:
+- You don't have line breaks.
+- The subject begins with "RE", which is not recognized. I'll fix this.

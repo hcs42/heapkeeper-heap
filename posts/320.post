@@ -1,0 +1,111 @@
+Author: Csaba Hoch
+Subject: Heapkeeper web page theme
+Tag: discussion
+Message-Id: <4A1843FF.5020808@gmail.com>
+Date: Sat, 23 May 2009 20:44:15 +0200
+
+The Sphinx project contains the list of project that use Sphinx [1]. I
+had a look at each of them and put them into categories based on their
+theme.
+
+The categories:
+
+- p = Python documentation theme
+- p* = slight modification to p
+- p** = much modification to p
+- s = Sphinx theme
+- s* = slight modification to s
+- xxx = own theme (that's interesting for us)
+
+The list:
+
+- p   APSW: http://apsw.googlecode.com/svn/publish/index.html
+- p   boostmpi: http://documen.tician.de/boostmpi/
+- p   Calibre: http://calibre.kovidgoyal.net/user_manual/
+- p*  Chaco: http://code.enthought.com/projects/chaco/docs/html/
+- p   CodePy: http://documen.tician.de/codepy/
+- p   Cython: http://docs.cython.org/
+- p   C\C++ Python language binding project: http://language-binding.net/index.html
+- p   Director: http://packages.python.org/director/
+- xxx Django: http://docs.djangoproject.com/
+- p   F2py: http://www.f2py.org/html/
+- p   GeoDjango: http://geodjango.org/docs/
+- xxx GeoServer: http://docs.geoserver.org/
+- xxx Glashammer: http://glashammer.org/
+- xxx Grok: http://grok.zope.org/doc/current/
+- p   Hedge: http://documen.tician.de/hedge/
+- p** IFM: http://fluffybunny.memebot.com/ifm-docs/index.html
+- xxx Jinja: http://jinja.pocoo.org/2/documentation/
+- s   MapServer: http://mapserver.org/
+- s   Matplotlib: http://matplotlib.sourceforge.net/
+- p*  Mayavi: http://code.enthought.com/projects/mayavi/docs/development/html/mayavi
+- p   MeshPy: http://documen.tician.de/meshpy/
+- ?   Mixin.com: http://dev.mixin.com/
+- p   mpmath: http://mpmath.googlecode.com/svn/trunk/doc/build/index.html
+- s*  MyHDL: http://www.myhdl.org/doc/0.6/
+- s   NetworkX: http://networkx.lanl.gov/
+- p*  NumPy: http://docs.scipy.org/doc/numpy/reference/
+- xxx ObjectListView: http://objectlistview.sourceforge.net/python
+- xxx OpenLayers: http://docs.openlayers.org/
+- p   openWNS: http://docs.openwns.org/
+- p   Paste: http://pythonpaste.org/script/
+- p   Paver: http://www.blueskyonmars.com/projects/paver/
+- p** Py on Windows: http://timgolden.me.uk/python-on-windows/
+- p   PyCuda: http://documen.tician.de/pycuda/
+- xxx PyEphem: http://rhodesmill.org/pyephem/
+- p   Pyevolve: http://pyevolve.sourceforge.net/
+- xxx PyLit: http://pylit.berlios.de/
+- p   Pylo: http://documen.tician.de/pylo/
+- xxx Pylons: http://docs.pylonshq.com/
+- xxx PyMOTW: http://www.doughellmann.com/PyMOTW/
+- p   PyPubSub: http://pubsub.sourceforge.net/
+- p   pyrticle: http://documen.tician.de/pyrticle/
+- s   Pysparse: http://pysparse.sourceforge.net/
+- p   Python: http://docs.python.org/
+- p   python-apt: http://people.debian.org/~jak/python-apt-doc/
+- p   PyUblas: http://documen.tician.de/pyublas/
+- p   Quex: http://quex.sourceforge.net/
+- s   Reteisi: http://docs.argolinux.org/reteisi/
+- xxx Roundup: http://www.roundup-tracker.org/
+- p   Sage: http://sagemath.org/doc/
+- p   Satchmo: http://www.satchmoproject.com/docs/svn/
+- p   Scapy: http://www.secdev.org/projects/scapy/doc/
+- xxx Self: http://selflanguage.org/
+- p   SimPy: http://simpy.sourceforge.net/
+- s   Sphinx: http://sphinx.pocoo.org/
+- p** Sprox: http://sprox.org/
+- xxx SQLAlchemy: http://www.sqlalchemy.org/docs/
+- s   Sqlkit: http://sqlkit.argolinux.org/
+- p   SymPy: http://docs.sympy.org/
+- xxx tinyTiM: http://tinytim.sourceforge.net/docs/2.0/
+- p   TurboGears: http://turbogears.org/2.0/docs/
+- p   VOR: http://www.vor-cycling.be/
+- xxx WFront: http://discorporate.us/projects/WFront/
+- p   WTForms: http://wtforms.simplecodes.com/docs/
+- p   Zope 3: e.g. http://docs.carduner.net/z3c-tutorial/
+- xxx zc.async: http://packages.python.org/zc.async/1.5.0/
+
+So the ones that are interesting for us are the followings:
+
+- Django: http://docs.djangoproject.com/
+- GeoServer: http://docs.geoserver.org/
+- Glashammer: http://glashammer.org/
+- Grok: http://grok.zope.org/doc/current/
+- Jinja: http://jinja.pocoo.org/2/documentation/
+- ObjectListView: http://objectlistview.sourceforge.net/python
+- OpenLayers: http://docs.openlayers.org/
+- PyEphem: http://rhodesmill.org/pyephem/
+- PyLit: http://pylit.berlios.de/
+- Pylons: http://docs.pylonshq.com/
+- PyMOTW: http://www.doughellmann.com/PyMOTW/
+- Roundup: http://www.roundup-tracker.org/
+- Self: http://selflanguage.org/
+- SQLAlchemy: http://www.sqlalchemy.org/docs/
+- tinyTiM: http://tinytim.sourceforge.net/docs/2.0/
+- WFront: http://discorporate.us/projects/WFront/
+- zc.async: http://packages.python.org/zc.async/1.5.0/
+
+Each one is nice, and almost all of them are awesome! We should not
+steal, but I would be happy if we did something as nice as these...
+
+[1] http://sphinx.pocoo.org/examples.html

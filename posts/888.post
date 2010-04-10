@@ -1,0 +1,32 @@
+Author: Csaba Hoch
+Subject: Standardizing post references
+Tag: post references
+Tag: prop
+Tag: reviewed
+Message-Id: <4AF7022B.5000301@gmail.com>
+Date: Sun, 08 Nov 2009 18:38:51 +0100
+
+We used several forms to point to a particular post. I have no strong
+preference, but I propose this form:
+
+    [1] hh/1234
+
+A more extended form would be the following:
+
+    [1] hh/1234 Any text here
+        Or even here
+
+(I'll explain how should I use this in a separate post. [1])
+
+Alternative forms:
+
+    [1] heap://hh/1234
+    [1] hh://1234
+
+After agreeing on a canonical form and before separating UMS and HH we
+should make every post use that form. (Otherwise the references will
+not be moved correctly.) When we do that, every post should be
+referred as being in the "ums" heap, because at that point that is the
+only heap that exists.
+
+[1] heap://3241

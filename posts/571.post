@@ -1,0 +1,16 @@
+Author: Csaba Hoch
+Subject: "hklib: optimized IMAP downloading" (2009-08-17 e23aa8b83d)
+Tag: commit
+Message-Id: <4A9D7A52.3080008@gmail.com>
+Parent: <b29f917d0908180352w10a20f9by576475d2019cf3cc@mail.gmail.com>
+Date: Tue, 01 Sep 2009 21:47:30 +0200
+
+>>> +        emails = [mail for mail in all_emails if int(mail) >= lower_value]
+>>
+>> Also, I would call the `mail` variable `email`.
+> 
+> No good, as it would hide the `email` module! So, instead I corrected
+> all "email"s to "mail", so that the naming will be consistent.
+
+It would not be a problem in Python 3, see my other email. I renamed
+the variable to `em`.

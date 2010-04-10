@@ -1,0 +1,24 @@
+Author: Attila Nagy
+Subject: Use comma as separators in keywords metas
+Tag: prop
+Message-Id: <20100127091634.c6ef616a.nagy.attila.1984@gmail.com>
+Date: Wed, 27 Jan 2010 09:16:34 +0100
+
+We should decide how to separate keywords.
+
+Current usage is mixed. I always use spaces, Csabi has a few posts
+where he uses commas.
+
+The current implementation doesn't care:
+
+    >>> p(3473).meta_dict()
+    {'keywords': 'git erlang perl capitalizing'}
+    >>> p(3352).meta_dict()
+    {'keywords': 'refactoring, PostItem, post item', 'effort': '1'}
+
+Commas seem to be superior as they can be used to separate expressions
+of multiple words. A good example would be "post item".
+
+So I suggest that we should use commas to separate keywords.
+
+[keywords metas, keywords, comma, separator, post syntax]

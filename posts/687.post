@@ -1,0 +1,14 @@
+Author: Attila Nagy
+Subject: Underscore use in identifiers formed by multiple words
+Tag: commit
+Message-Id: <b29f917d0910171024h4ff8b87mee3f2aecb1c6ff9@mail.gmail.com>
+Date: Sat, 17 Oct 2009 19:24:10 +0200
+
+> The problem is that I don't know a good rule of thumb. E.g. I don't
+> think html_thread_file_name would be the best name for that method.
+
+This adequately represents the underlying problem of the laxity of
+English grammar in this respect. Especially compared to Hungarian,
+which is perfectly rigid, albeit so complex that almost no native
+writers apply the rules correctly. (There have been several threads
+about this on UMS.)

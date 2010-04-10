@@ -1,0 +1,20 @@
+Author: Attila Nagy
+Subject: Concerns about the workflow
+Tag: workflow
+Message-Id: <b29f917d0912162351g3f4f460al64a836cc06733a20@mail.gmail.com>
+Date: Thu, 17 Dec 2009 08:51:24 +0100
+
+> And since we still don't have a satisfying workflow, I do
+> understand them.
+
+I see you have some concerns about our workflow. You've also voiced
+these doubts at the VigConf. I would love to hear the specifics, maybe
+we can find an easy answer, or, if not, at least we'll know better
+what we're looking for.
+
+I don't think that the original idea of pushing our branches to the
+point where we are with the reviewing process would be flawed. It
+would and should work -- only if we could devote more time to the
+project.
+
+So, maybe what we are looking for is a more "lazyness-tolerant" workflow?

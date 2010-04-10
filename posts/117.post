@@ -1,0 +1,19 @@
+Author: Csaba Hoch
+Subject: Wiki-like heap, pseudo posts
+Tag: hh-conventions
+Tag: idea
+Tag: post syntax
+Tag: reviewed
+Message-Id: <49EB35DB.8000807@gmail.com>
+Parent: <b29f917d0904190644m1d02244ek22bde9a5a2d5f002@mail.gmail.com>
+Date: Sun, 19 Apr 2009 16:31:55 +0200
+
+> What do we think of all this now that we chose Sphinx over Wiko?
+
+I think it would be better for us to use Sphinx instead of Wiko on Hh
+(and maybe on UMS Heap as well), because:
+- using one system is easier than using two systems,
+- it should be easy to move blocks of text between the docs and Hh.
+
+Of course calling the wiki compiler would be a callback function of
+Hk, so everybody may use whatever they want.

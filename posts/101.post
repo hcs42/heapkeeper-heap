@@ -1,0 +1,38 @@
+Author: Csaba Hoch
+Subject: heapia command for re-reading mail database or splitting posts
+Tag: idea
+Tag: reviewed
+Message-Id: <49E9C1B5.5040302@gmail.com>
+Parent: <b29f917d0904180212t51558511nac47d06f20bacb0c@mail.gmail.com>
+Date: Sat, 18 Apr 2009 14:04:05 +0200
+
+> What's the editor to do? The situation is not as simple as before.
+> Making the first "kitten-only" post a new thread could be done, but
+> then, the mutant monster would seemingly drop out of nowhere. The
+> mixed post must be separated, and the relevant paragraph of this mixed
+> post should be the first post in the cat thread. This, of course, can
+> be done -- but not from within heapia. You could do an "e(123)", and
+> strip the irrelevant paragraph out of the mostly nuke-oriented post,
+> but if you now create a new post file, say, x42.mail, it will not be
+> read into the MailDB. And, if you make the mistake of staying in
+> heapia, and do an "e(124)" to change the In-Reply-To: header to x42,
+> you'll get a nasty exception when attempting to generate HTML output.
+
+Why would you say e(124)? Why would you get a nasty exception?
+
+> So I think we need either:
+> - a command to re-read the mail database (simple and less foolproof),
+> - a command to facilitate the splitting of a post.
+> 
+> Such a splitting command could work like this:
+> 
+>     >>> sp(123)
+> 
+>     (behind the scenes:) vim -O mail/123.mail mail/x42.mail
+
+Yes, this feature would be nice, I would have used it, as well. You
+can put it onto the todo list, if you want to.
+
+> This would also spare the editor the burden of keeping track of the x-numbers.
+
+I don't understand this.

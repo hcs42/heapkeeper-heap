@@ -1,0 +1,20 @@
+Author: Attila Nagy
+Subject: Separate Heapkeeper repos
+Message-Id: <b29f917d0908100034x29e0525cx878d959e044ff371@mail.gmail.com>
+Parent: <4ddb9e5b0908091324q701b574sf82a6695ced0b191@mail.gmail.com>
+Date: Mon, 10 Aug 2009 09:34:10 +0200
+
+> Maybe we should try to use separate Heapkeeper repos (forks) and use
+> pull requests to put them together. What do you think? If it does not
+> work out, we can still fall back to the current process.
+
+What would be the advantages of this approach for a developer
+community of such a limited size?
+
+I know that in the past I've committed many atrocities against the
+sanity of the repository, but recently I've learnt much about Git. So
+if your primary motive is to keep your repository clean, I can promise
+I won't disturb that.
+
+But I have no objections to adopting such a workflow either. So I'm
+neutral to the idea, which means that I can be convinced easily :)

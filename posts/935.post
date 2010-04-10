@@ -1,0 +1,15 @@
+Author: Csaba Hoch
+Subject: Issues
+Tag: hh-conventions
+Tag: prop
+Message-Id: <4AFFC86C.4070202@gmail.com>
+Parent: <4AE2CF95.6040601@gmail.com>
+Date: Sun, 15 Nov 2009 10:22:52 +0100
+
+> Maybe issues (=threads with bug/feature/issue/prop tag) should be put
+> into a different section in the issue tracker and should have
+> different colors than other issues. Probably they should be marked
+> with a very different color (I propose cyan :) )
+
+I have implemented the "different color" part, so I'll push if you say
+OK.

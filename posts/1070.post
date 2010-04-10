@@ -1,0 +1,85 @@
+Author: Csaba Hoch
+Subject: Lost threads: semantics of the asleep state
+Tag: idea
+Tag: issue
+Message-Id: <4B63F920.6030801@gmail.com>
+Parent: <4B631665.1060609@gmail.com>
+Date: Sat, 30 Jan 2010 10:17:20 +0100
+
+[im]
+
+- Saturday January 30 2010, 09:19 -
+hcs42: hi
+attis: hello
+attis: I think we should clarify our ideas on the threads-falling-asleep feature.
+attis: especially how it'd be related to the issue tracker
+attis: I imagine that the "asleep-tracking" would be below, and it would affect all threads
+attis: but the asleep state would be off for threads marked as "non-sleepy" and for issues
+attis: if we do so, we could use the same system on both heaps
+attis: you argued that issues shouldn't fall asleep
+hcs42: do you mean that we would use the asleep-system on the posts that are _not_ handled by the issue tracker?
+hcs42: or do you think that it could be used for "idea" threads?
+attis: I'm not so sure now
+attis: because it all depends on what we use the asleep state for
+attis: if we define the meaning of "asleep" as a warning
+attis: like "pay attention, this thread may need attention!"
+attis: then it's perfectly OK to use it even for issues
+hcs42: (that's the opposite of what I thought asleep threads would be used for)
+attis: we mentioned e-mail starring in the first place
+attis: and starring means "pay attention to this later"
+attis: (there is really no sense in using the asleep state to make threads "go away", they'd default to that, and we want to avoid it)
+hcs42: (it may make sense to make old ideas go away from the issue tracker)
+hcs42: so
+attis: (but then they should be closed appropriately, I think)
+hcs42: you did not say it explicitely, but you suggest that a main index page (not necessarily the default index page) that displays all posts should display asleep threads differently
+attis: yes, but not that differently; maybe a different color would be enough
+hcs42: ok, I got it now
+attis: or, we may choose to handle sleeping threads as a kind of "meta-issue" that is to be resolved ASAP to keep the heap and our thoughts clean
+hcs42: would the threads be sleepy by default?
+attish: 'would the threads be sleepy by default?' -- I guess so
+hcs42: I don't like that
+attish: why?
+hcs42: certainly not on UMS
+hcs42: I send a lot of posts that I don't want you to answer
+hcs42: I mean... don't expect you to answer
+hcs42: like posting news items, humorous pages, interesting thoughts
+hcs42: I don't want them to pop out later just because noone commented on them
+attish: true
+hcs42: on hh, maybe this kind of post is not that common, but the "idea" threads are similar
+hcs42: I don't expect anyone to comment idea threads
+attish: but that could be handled by posting with a close meta
+hcs42: do you propose that when we post e.g. a humorous page, we should include a "close" meta?
+hcs42: that seems quite awkward
+hcs42: and unintuitive
+attish: it does...
+attish: how about closing manually such threads?
+hcs42: UMS is a mailing list primarily, not an issue tracker
+hcs42: even worse
+hcs42: I don't want the maintainers to spend time on these posts
+hcs42: I just post something funny, you watch it, and that's all
+attish: what would you suggest?
+hcs42: if you want to find it later, you can -- that's the point of the heap; but I don't have having such overheads
+hcs42: do we want to talk about using this on hh, UMS or both?
+attish: interesting threads falling asleep bother me
+hcs42: because I have different approaches to those heaps
+hcs42: hm, that's the source of the problem
+hcs42: it does not bother me
+attish: ahh
+hcs42: so should we concentrate on UMS then?
+hcs42: I guess when you say "interesting threads" you mean mostly threads on UMS
+attish: yes
+attish: it'd be more important on UMS
+hcs42: could you give a few examples?
+hcs42: to make sure we mean the same thing on "interesting thread"
+attish: ok, just a minute
+attish: umm
+attish: this is strange
+attish: almost all the threads I marked as starred are no longer relevant...
+attish: my suggestion:
+attish: we suspend this discussion
+attish: until I've looked through my starred threads
+hcs42: ok
+attish: and assess how many of those would need resurrection
+attish: and then, we'll reconsider if this feature would be useful
+hcs42: ok
+hcs42: to sum up: when I wrote my root post about "Lost threads", I wanted to address a different problem than you do

@@ -1,0 +1,21 @@
+Author: Attila Nagy
+Subject: GitHub's integrater issue tracker
+Tag: github
+Message-Id: <b29f917d0905012323x273ea16ck25cee4d59aee9c9d@mail.gmail.com>
+Parent: <49F93C8C.7000009@gmail.com>
+Date: Sat, 2 May 2009 08:23:45 +0200
+
+> It has an open interface that can be used e.g. with curl or people can
+> write own web pages which have posts that interact with github. [2]
+
+> Someone even created a Python command line interface [3].
+
+This open nature and, of course, the Python interface is very
+commendable. Now we'd have to decide if we choose to use them, or
+continue to use our 'todo' mechanism. I must admit I like the todo
+file better. It can be shaped more precisely to our needs, and can be
+version-controlled along with the rest of the changes.
+
+Using an issue tracker outside the project's repository would only
+make sense when others start using Heapkeeper. Which could/should/may
+happen any minute now.

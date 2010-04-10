@@ -1,0 +1,17 @@
+Author: Attila Nagy
+Subject: The reality log
+Tag: workflow
+Message-Id: <b29f917d1002130017g151193e9gfbaa1cda5788cd9a@mail.gmail.com>
+Parent: <4ddb9e5b1002121411j477b8964w4ef33f9d00b2c5d5@mail.gmail.com>
+Date: Sat, 13 Feb 2010 09:17:42 +0100
+
+>> What would such a log look like exactly?
+>
+> Like an IM conversation about what we are rebasing. But it does not
+> have to be real time, thanks to wave.
+>
+> Just imagine that there is an IRC room where we only talk about
+> rewriting git history. The log of that room would be the reality log.
+> Nothing formal.
+
+OK, this sounds usable.

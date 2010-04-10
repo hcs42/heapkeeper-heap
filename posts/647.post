@@ -1,0 +1,15 @@
+Author: Attila Nagy
+Subject: Sphinx install: status?
+Message-Id: <b29f917d0910140951u5edfaf9cs95cde6f33456d2d8@mail.gmail.com>
+Date: Wed, 14 Oct 2009 18:51:42 +0200
+
+> I added a section in the Development page [1][2] that describes how to
+> install Sphinx. We use a specific revision of their Mercurial
+> repository. The reason is that there are often bugs fixed and
+> introduced, so we cannot say either "we use the latest stable release"
+> or "we use the latest revision from the master branch". We will
+> periodically check the commits in the Sphinx repository and shift the
+> revision we use if we find that the latest revision works on our
+> documentation.
+
+Do we still need a specific version of Sphinx to compile our docs?

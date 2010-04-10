@@ -1,0 +1,24 @@
+Author: Csaba Hoch
+Subject: Sphinx install
+Message-Id: <4A5D949F.7060805@gmail.com>
+Parent: <4A223C94.4030504@gmail.com>
+Date: Wed, 15 Jul 2009 10:34:39 +0200
+
+I added a section in the Development page [1][2] that describes how to
+install Sphinx. We use a specific revision of their Mercurial
+repository. The reason is that there are often bugs fixed and
+introduced, so we cannot say either "we use the latest stable release"
+or "we use the latest revision from the master branch". We will
+periodically check the commits in the Sphinx repository and shift the
+revision we use if we find that the latest revision works on our
+documentation.
+
+The documentation can be built in the following way:
+
+    $ cd <heapkeeper>
+    $ cd doc
+    $ make html
+    <Open <heapkeeper>/doc/_build/html/index.html>
+
+[1] http://heapkeeper.org/development.html
+[2] 2009-07-15 582ab62f12

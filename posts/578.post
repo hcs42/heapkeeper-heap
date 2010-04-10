@@ -1,0 +1,15 @@
+Author: Csaba Hoch
+Subject: Return value of `dl()` in hkshell
+Message-Id: <4AA4ABF6.4020804@gmail.com>
+Parent: <b29f917d0909021527mc67a49cob82a376b392a1779@mail.gmail.com>
+Date: Mon, 07 Sep 2009 08:45:10 +0200
+
+> Such an output is unexpected and looks horrible if there are
+> hundreds of new posts downloaded, so it can't stay like this.
+
+Fair enough.
+
+> Which one do we prefer?
+
+The second one, having a parameter specifying what the `dl` should
+return.

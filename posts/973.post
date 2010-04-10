@@ -1,0 +1,11 @@
+Author: Csaba Hoch
+Subject: Removing Post.html*
+Tag: issue
+Message-Id: <4B115E6C.8050904@gmail.com>
+Parent: <4B115E1D.1050601@gmail.com>
+Date: Sat, 28 Nov 2009 18:31:24 +0100
+
+> The first two will not use used at all, the other two should be moved
+> into hkgen.Generator.
+
+Correction: all are used, so all should be moved to hkgen.Generator.

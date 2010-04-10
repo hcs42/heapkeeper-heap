@@ -1,0 +1,46 @@
+Author: Csaba Hoch
+Subject: Wiki-like heap, pseudo posts
+Tag: hh-conventions
+Tag: idea
+Tag: post syntax
+Tag: reviewed
+Message-Id: <49C497E8.2010807@gmail.com>
+Parent: <b29f917d0903190628x1c555f1fg7ccbd35ae727e6a4@mail.gmail.com>
+Date: Sat, 21 Mar 2009 08:31:52 +0100
+
+> Though you didn't mention the question of syntax directly in your
+> proposal, I guess from your other posts that you propose to use a
+> MediaWiki/Wiko-like syntax. But for numbered lists, you used numbers
+> in your post instead of the #'s demanded by the syntax.
+
+Sometimes I use wiki-like syntax for parts of a post. E.g:
+
+    == First topic ==
+
+    1. something
+    2. other thing
+
+
+    == Second topic ==
+
+    blabla
+
+In this case the wiki syntax should not be processed, it is just for
+us, humans. I think this style is easier to read then this style:
+
+    1. First topic
+    --------------
+
+    1. something
+    2. other thing
+
+
+    2. Second topic
+    ---------------
+
+    blabla
+
+Especially if you consider answering to the post. In the answers we may
+create new topics and abandon others. Use numbering for topics,
+that would be much more confusing than in the case of using wiki
+syntax.

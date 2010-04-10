@@ -1,0 +1,29 @@
+Author: Csaba Hoch
+Subject: Heapkeeper version 0.3
+Tag: discussion
+Tag: prop
+Tag: reviewed
+Message-Id: <4ddb9e5b0908310547o275cc307u7576c243dc714b23@mail.gmail.com>
+Parent: <b29f917d0908301356o549a243ds7168cf4b3c5d1169@mail.gmail.com>
+Date: Mon, 31 Aug 2009 14:47:51 +0200
+
+> > You said we should go public only when our workflow is stable. It is
+> > definitely not stable yet.
+>
+> Good point.
+>
+> But I have faith in what we are trying to do.
+
+What exactly do you mean by "what we are trying to do"? You should
+consider stating your opinion about the proposal in the (currently)
+last email of the "Workflow with separate repositories" thread.
+Without that, I don't even know if we agree on the workflow.
+
+> It gives me a sense of "officiality" or "seriousness" about the
+> project, which is good, as it leads to cleaner code and, hopefully,
+> more pure design. But I still have concerns that it might slow
+> things down.
+
+It does slows things down in the short run -- just as rst
+documentation, docstrings, tests, emailing about ideas... But in the
+medium/long run, they are all very useful.

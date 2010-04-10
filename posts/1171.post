@@ -1,0 +1,22 @@
+Author: Csaba Hoch
+Subject: Monospace font for post body in generated HTML
+Tag: prop
+Message-Id: <4B781A98.4090607@gmail.com>
+Date: Sun, 14 Feb 2010 16:45:28 +0100
+
+I'd like to use a monospace font for post bodies in the generated
+HTML. This would mean the following modification to heapindex.css:
+
+
+    @@ -200,7 +200,7 @@
+         background-color: #fff;
+         border: 1px solid #080;
+         color: #000;
+    -    font-family: Courier, sans-serif;
+    +    font-family: Courier, monospace;
+
+         padding-left: 0.5em;
+         padding-top: 0.5em;
+
+The reason is that some of our posts make the assumption that they are
+displayed with a fixed font.

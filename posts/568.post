@@ -1,0 +1,46 @@
+Author: Csaba Hoch
+Subject: Workflow with separate repositories: example
+Message-Id: <4ddb9e5b0909010942x6f88f1a5hde90b28bd933cf63@mail.gmail.com>
+Parent: <b29f917d0908311514q5c580634g433af83dc3c2b751@mail.gmail.com>
+Date: Tue, 1 Sep 2009 18:42:15 +0200
+
+Exactly.
+
+Maybe I'll try out something new soon. To stick with the example, at
+step 3, you could comment on my changes by making new commits.
+
+Let's suppose these are my commits (oldest at the top):
+
+   something nice
+   something funny
+   something good
+
+You could create a branch like this as remotes/attis/_e:
+
+   something nice
+   corrections to "something nice"
+   something funny
+   something good
+   corrections to "something good"
+
+You would describe the necessary things in the commits messages of the
+correction commits. It is easy to make this tree from the original one
+by using git cherry-pick. (You cherry-pick my first commit, and commit
+your corrections to it. Then you pick my second commit, etc.)
+
+Then you push. Then I fetch.
+
+If I agree with all of your corrections, I make an interactive rebase
+by squasing the corrections into the original commits:
+
+   p something nice
+   s corrections to "something nice"
+   p something funny
+   p something good
+   s corrections to "something good"
+
+It would be a bit faster to store your changes in git then writing
+diffs in email. (Especially when there are several commits.) On the
+other hand, the conversation about the modifications is harder. So
+probably this method is applicable only for fixing trivial mistakes,
+making the code to conform conventions, and improving style.

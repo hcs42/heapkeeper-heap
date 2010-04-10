@@ -1,0 +1,11 @@
+Author: Attila Nagy
+Subject: Post hook for whitespace
+Tag: git
+Tag: repo
+Message-Id: <b29f917d0910181050k72df38a9q6463491d12285e0c@mail.gmail.com>
+Parent: <4ADB3B47.1060504@gmail.com>
+Date: Sun, 18 Oct 2009 19:50:37 +0200
+
+> Updated version that also finds lines longer than 79 in Python code:
+
+Great! I'll use this.

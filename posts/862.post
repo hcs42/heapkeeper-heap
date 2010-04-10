@@ -1,0 +1,22 @@
+Author: Attila Nagy
+Subject: Creating sections in the new generator, problems
+Tag: discussion
+Message-Id: <b29f917d0911020033mcba2d07mcee59e410ab61a93@mail.gmail.com>
+Date: Mon, 2 Nov 2009 09:33:34 +0100
+
+> If I think right, the way to add sections in `hkgen.Generator` is to
+> subclass and override `print_main_index_page`. Am I right?
+
+I hope I was right. I implemented the old functionality of sections in
+a Generator subclass in my hkrc. I really think we should provide more
+support for this, as my code is quite complicated.
+
+But there are some problems:
+- why is almost all the text red? Is this intended, or error in CSS
+coding? (Only on the index is affected, the thread pages are OK, so I
+think this might be a bug.)
+- using my index, one flat index ("Cipősdoboz") is badly laid out, the
+column for tags is too wide, the column for dates is too narrow
+
+I'll look into these issues, as they seem to be closer to my expertise
+(HTML/CSS).

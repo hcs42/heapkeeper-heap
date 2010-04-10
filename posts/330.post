@@ -1,0 +1,240 @@
+Author: Attila Nagy
+Subject: Body parsing - the what - examples
+Tag: post syntax
+Tag: prop
+Message-Id: <b29f917d0905241315n5ef45cf2v1308cf7286967713@mail.gmail.com>
+Parent: <4A172469.8000901@gmail.com>
+Date: Sun, 24 May 2009 22:15:18 +0200
+
+== Basic principle of post syntax and semantics ==
+
+=== Example of the principle working ===
+
+> Of course while there are just the two and a half of us, we can cheat.
+> By cheating I mean being not backward compatible and modify old posts
+> to conform the new syntax. But I think it is a good practice to cheat
+> as little as possible. I would like to make the foundation of the
+> syntax/semantics so robust, that we won't ever have to cheat. If we
+> don't cheat now, we can be safe that we won't have to cheat later.
+
+I mostly agree, but I would like to remind you that this time while there
+are so few of us is precious in that we can still drastically change the
+syntax, so that maintaining backwards compatibility won't but that much
+of a burden on us in case of old and truly outdated syntax.
+
+In other words: our syntax is not yet frozen, and we should make use
+of this fact.
+
+=== Example of the principle not working ===
+
+> But we can't go back without cheating, because we said this was a
+> syntactically/semantically correct text already!
+>
+> We have to put a lot of effort now into avoiding these kind of
+> problems in the future.
+
+Simply put: we can only expand the syntax, never shrink or alter.
+This means that the space of "incorrect" posts is very valuable to us,
+since it is this space that we can use to introduce new syntax. But,
+we must take great care not to run out of this precious resource, or
+we strip ourself of the possibility to introduce new elements.
+
+This brings up an exercise of maintaining delicate balance. So, if you
+introduce a new syntactic element, it has to make a sufficiently large
+set of invalid posts valid, but not too much, to keep the way open for
+retreat if the idea turns out to be a mistake.
+
+== My proposal ==
+
+> - 690 of the remaining lines contained '^[^\]\[]*\[\d\][^][]*$',
+
+<<<!todo Correct and remove this.>>>
+
+In this regexp, you use two different sequences to denote the same
+pattern:
+
+    ^ - start of line
+    [^\]\[] - anything but '[' or ']'
+    * - 0 or more of these
+    \[ - a '['
+    \d - a digit
+    \] - a ']'
+    [^][] - anything but '[' or ']'
+    *
+    $ - end of line
+
+
+Since '[^][]' is easier to read, I think we should use that.
+
+> - 50 of the remaining lines should have been start with whitespace.
+
+<<<!todo should have been started>>>
+
+Your results are interesting!
+
+> - I propose escaping a '[' by writing '\['. ']' can live without
+
+<<<!todo Rather "do without">>>
+
+A remark: we should pay attention to eliminating the "multiple quote
+heads" we used earlier; these look like \[3,4].
+
+== Cites ==
+
+[!todo We should change "cite" to "footnote".]
+
+> There are two possibilities to solve the "two links for one footnote"
+> problem that you describe:
+>
+> a. The text of the footnote points somewhere and there is an image
+>   next to it that points somewhere else.
+> b. The tooltip of the link shows the text of the footnote body.
+>
+> I prefer the second one, but YMMV.
+
+The second one is a great idea!
+
+== Quotes ==
+
+> The HTML probably will have the same recursive structure as the quotes
+> in the segment list in your proposal. That's why I think it is easier
+> to write the HTML generator if it can be recursive. (Although I don't
+> want to see recursive functions in Hk if I don't have a guarantee
+> about the length of the recursion.)
+
+Here, you have a guarantee that the depth of the recursion will not
+exceed the depth of the quotation, which I'd like not to exceed 20 in
+any reasonable conversation.
+
+> All the other body processors that want to do something with quotes
+> will be more complicated if they have to walk through the recursive
+> structure of quote segments. Otherwise they can just do a loop on
+> all segments.
+
+Just as long as we don't want to do any complicated processing inside
+the quotes. For example, if we want to interpret footnote headers
+inside cites, that would be easier if the representation were
+hierarchical.
+
+But since we probably don't want to do this, I'm being swayed towards
+flat representation. Simple representation is probably better than
+simple algorithm, at least that's what Heapkeeper's evolution has been
+about so far.
+
+== Authors and signatures ==
+
+> Why should we generate signature?
+
+Ummm...
+
+> Maybe we should not sign our emails at all and should not generate
+> signatures in posts.
+
+But since it wouldn't be hard, why not make it possible? Of course,
+not as a first priority.
+
+=== Itemization ===
+
+[!todo Should be second-level header.]
+
+I like your solution. It really is elegant, although at first I wanted
+to argue against it, since it is somewhat arteficial, ie. the post
+author must pay attention.
+
+An addition: itemizations look neat with the non-first lines of an
+item being indented by 2. Emacs or Vim can create these automatically,
+but we should nonetheless recognize multiline items even if the
+non-first lines are not indented, as it would make the life of those
+using more simplistic editors unconfortable.
+
+So I think this would also have to be valid:
+
+   My favourite book writers:[-]
+   - Isaac Asimov: he was born in the Soviet Union, but his family
+   emigrated to the US when he was 3.
+   - Richard Dawkins: he was born in Kenya as a son of British
+   parents. They returned to England when he was 8.
+
+== Raw text ==
+
+>        print 2
+>
+>    Isn't it nice?
+>
+> Although the line between "print 1" and "print 2" is totally empty, it
+> should be part of the raw text, i.e. as if it started with whitespace.
+
+Yes.
+
+> But we should not handle the blank line after "print 2" as raw text...
+
+== Quotes again ==
+
+> I realized we do want to handle quotes as just "quote blocks". For
+> example they can have raw text inside them. They also may have
+> itemizations inside them. They may contain links.
+
+[!todo I realized we do not want to...]
+
+> I propose that we parse everything in quotes. (I suggested the exact
+> opposite so far, but I think I was wrong. The concrete examples we had
+> (meta text, cites) would not make too much sense to parse in quotes;
+> but in general, there is a point in parsing them, and as we talk now,
+> new and new text objects come up that must be parsed inside quotes.)
+
+I am happy you came to this conclusion. But don't you think it
+justifies hierarchical storing of quotes? If we parse a quote just
+like a body, it should be stored the same way.
+
+== Modularity, parser steps (was: Wiki-like headers) ==
+
+> > Maybe the Dissector could
+> > be customized: by default, it'd create all the text object you've
+> > mentioned, but they could be turned off individually.
+>
+> We don't have to be _that_ modular. If Dissector creates these blocks,
+> we can say Dissector is one module. It should not be more then one
+> screen of "real" code -- why should we modularize that?
+
+OK by me. But what would we do if the Dissector creates Quote segments,
+and the Parser stack contains no module to process them?
+
+> Well, my latest proposal is a bit different from what I said here...
+> But I don't think that makes a difference in efficiency.
+
+Of course, efficiency will still remain a top priority, but with the
+new proposal, we'll have to pay more attention, as the metas no longer
+need be at the start of the line.
+
+> These I the steps I propose now:
+
+[!todo These are the steps...]
+
+> Each line of this table could be an object of a Segment class. This
+> class could have an integer `quote_level` data attribute, an enum
+> `type` attribute and a string `text` attribute. (There is no enum type
+> in Python, but we can use integer constants instead.) Segments may
+> have additional attributes later.
+
+I like the simplicity of this model.
+
+== Posts we have ==
+
+> We do have a lot of meta text now. If/when we all agreed that the
+> body parsing should be done according to my proposal and implemented it
+> that way, I suggest replacing all '^<<<' with '[' and all '.>>>$' with
+> ']' in the posts.
+
+I think we should do this change only manually. Sounds too drastic to
+do in one move.
+
+[!delthis On the UMS heap, my maintaining effort covered no more than
+about 150-200 posts, the rest are yet untouched, or, at least, not
+marked as reviewed. So, not very much work has to be done twice.]
+
+== Conclusion ==
+
+My conclusion: we made a rational choice when choosing the "<<< >>>"
+syntax for metas. It was a careful choice made on no practical
+experience. Now we have the experience to make the move to a more
+simple solution.

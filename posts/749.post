@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: Name of post pages
+Tag: prop
+Tag: reviewed
+Message-Id: <4AE01B66.1020002@gmail.com>
+Date: Thu, 22 Oct 2009 10:44:22 +0200
+
+[effort 1]
+[priority low]
+
+The post pages should be named "post_<heapid>.html" and not
+"<heapid>.html".

@@ -1,0 +1,20 @@
+Author: Attila Nagy
+Subject: Docstring internal order
+Tag: convention
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0910251304s30614b0ah26fbec80caf697f6@mail.gmail.com>
+Parent: <4AE41381.4020104@gmail.com>
+Date: Sun, 25 Oct 2009 21:04:52 +0100
+
+> My proposal (which I did not always follow):
+>
+>    one-line description
+>    verbose description
+>    arguments
+>    return value
+>    example
+
+I like this, but I think "one-line" should be replaced with "short".
+Only one line is often meaningless, or not more descriptive than the
+name of the function in itself.

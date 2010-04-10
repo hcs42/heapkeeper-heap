@@ -1,0 +1,18 @@
+Author: Csaba Hoch
+Subject: Docstring internal order
+Tag: convention
+Tag: prop
+Tag: reviewed
+Message-Id: <4AE41381.4020104@gmail.com>
+Date: Sun, 25 Oct 2009 09:59:45 +0100
+
+What do you think which should be the internal order in the
+docstrings?
+
+My proposal (which I did not always follow):
+
+    one-line description
+    verbose description
+    arguments
+    return value
+    example

@@ -1,0 +1,48 @@
+Author: Csaba Hoch
+Subject: Renaming tag-manipulator commands
+Tag: prop
+Tag: reviewed
+Message-Id: <4ddb9e5b0907190820p53ce02t80af608034f7134e@mail.gmail.com>
+Date: Sun, 19 Jul 2009 17:20:23 +0200
+
+Current situation:
+- Tag manipulator commands:
+    - pt
+    - at
+    - atr
+    - rt
+    - rtr
+    - st
+    - str_
+- Subject manipulator commands:
+    - pS
+    - sS
+    - sSr
+    - cS
+    - cSr
+
+Proposal:
+- Tag manipulator commands:
+    - pT
+    - aT
+    - aTr
+    - rT
+    - rTr
+    - sT
+    - sTr
+- Subject manipulator commands: // same as before
+    - pS
+    - sS
+    - sSr
+    - cS
+    - cSr
+
+Pro:
+- "str_" would not be an exception among other tag-manipulator commands (now it
+  has to have the underscore because of the built-in `str` type)
+- unified code for "Tag" and "Subject"; both are abbreviated by their uppercase
+  front letter
+
+Contra:
+- new tag commands have a funny outfit
+- they are slower to type

@@ -1,0 +1,113 @@
+Author: Csaba Hoch
+Subject: Embedded itemization
+Tag: post syntax
+Tag: prop
+Message-Id: <4A205125.6080108@gmail.com>
+Parent: <20090529103206.8fc6a32f.nagy.attila.1984@gmail.com>
+Date: Fri, 29 May 2009 23:18:29 +0200
+
+To sum up, we want to support both itemization formats:
+
+    My favourite things:[-]
+    - Authors:
+        - Asimov
+        - Dawkins
+    - Sitcoms:
+        - Two and a half men
+        - Friends
+
+    My favourite things:[-]
+    * entertainment
+    ** reading
+    ** films
+    * programming
+    ** C
+    ** Python
+
+>> I'm confident we can define indentation-based itemizations without
+>> having to write more than one `[-]`.
+>
+> [...]
+>
+> So, your use of indentation in all lines after the first is becoming
+> increasingly attractive.
+
+If we want to allow your markup, indentation is not enough, of course,
+`[-]` have to know about what is `*` and `**`.
+
+I have been thinking about my embedded itemization structure, as well.
+We can do it on a purely indentation-based style only if the poster
+uses different indentation levels for embedded items and for
+continuation of items.
+
+For example we can't handle the following:
+
+    My favourite things:[-]
+    - Authors: they are my favourite book writers. Both of them are
+      just brilliant.
+      - Asimov
+      - Dawkins
+    - Sitcoms:
+      - Two and a half men
+      - Friends
+
+The poster should write either this:
+
+    My favourite things:[-]
+    - Authors: they are my favourite book writers. Both of them are
+        just brilliant.
+      - Asimov
+      - Dawkins
+    - Sitcoms:
+      - Two and a half men
+      - Friends
+
+Or this:
+
+    My favourite things:[-]
+    - Authors: they are my favourite book writers. Both of them are
+      just brilliant.
+        - Asimov
+        - Dawkins
+    - Sitcoms:
+        - Two and a half men
+        - Friends
+
+The problem is that the first one looks the best.
+
+Sphinx (and rst) solves this problem by requiring empty lines before
+and after embedded itemizations:
+
+    My favourite things:
+
+    - Authors: they are my favourite book writers. Both of them are
+      just brilliant.
+
+      - Asimov
+      - Dawkins
+
+    - Sitcoms:
+
+      - Two and a half men
+      - Friends
+
+I definitely don't want to do this.
+
+So I guess I have to accept that some character sequences will be
+handled as itemization marks (`[-+*]\+\|\d\+\.`) and other will not
+be. I don't think we should care about Roman numerals. [1]
+
+>>> Other than this, I think we can live with a fixed set of itemization
+>>> marks. A sensible set would be [-+*]. Do you think we need others?
+>> I would also like to have numbers.
+>
+> Good thing you mentioned that. Now ordinary decimal numbers written in
+> Arabic numerals are easy to filter out, but it's much more than that.
+> First, you have multiple number systems, and even in purely
+> Latin-letter cultures, you have Roman numerals, which are not that
+> easy to filter out.
+
+Considering the problem of embedded itemizations that I described
+above, I don't think we can do anything about these now.
+
+[1] See heap://2079

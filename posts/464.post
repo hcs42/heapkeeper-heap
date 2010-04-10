@@ -1,0 +1,38 @@
+Author: Csaba Hoch
+Subject: "Csaba Hoch" as author (5b60b95a32 2009-08-01)
+Tag: commit
+Message-Id: <4A7555EF.2030408@gmail.com>
+Parent: <b29f917d0908020013m12e25860k5148acc2a81897f2@mail.gmail.com>
+Date: Sun, 02 Aug 2009 11:01:35 +0200
+
+>>> Why does 5b60b9 have you as the author?
+>> I don't know!
+>>
+>> The dates are even more interesting:
+>>
+>>    Author: Csaba Hoch <csaba.hoch@gmail.com>  2009-08-01 12:29:52
+>>    Committer: Attila Nagy <nagy.attila.1984@gmail.com>  2009-08-01 22:35:19
+> 
+> I stashed this edit away, then applied the stash. This must have
+> something to do with this strange phenomenon.
+> 
+> Do we know when can the author and the committer differ?
+
+It seems that if I rebase something that you commited, you will remain
+the author, but I will be the commiter. Since being the author is the
+bigger deal, and that's shown by gitk, this is all right.
+
+The funny thing is that your commit looks like _I_ commited the change
+first and then _you_ rebased it -- which is of course not true.
+
+If you have a look the commit at github [1], it shows the same thing
+as gitk: that I created the commit at 2009-08-01 12:59, which is the
+same as the time for commit e07aced437 ('Doc: sidebar removed, favicon
+added'). And than you rebased it or did something like that on
+2009-08-01 22:35:19. Can you figure out what happened from this
+information now? You may also try to use your bash_history :) But I'll
+think about it, too.
+
+[!deltext I won't be doing anything on hh until late afternoon, or maybe evening.]
+
+[1] http://github.com/hcs42/heapkeeper/commit/5b60b95a32b09675998a2e7ad5eab4b9359c5c9f

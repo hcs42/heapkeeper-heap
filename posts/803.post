@@ -1,0 +1,18 @@
+Author: Csaba Hoch
+Subject: `enew` command should add the current date
+Tag: issue
+Tag: reviewed
+Message-Id: <4ddb9e5b0910290939l3776f19i2580b9e82d21d614@mail.gmail.com>
+Parent: <b29f917d0910290818yc0628d0i470dc4e1b8e6d096@mail.gmail.com>
+Date: Thu, 29 Oct 2009 17:39:34 +0100
+
+[effort 2]
+[priority normal]
+
+I don't know whether to write 1 or 2 hours. I wrote 2 because it is
+not trivial to test features like this (we can't use the system time
+when doing the test), and because we have to find out which method of
+datetime should we use to create the desired format.
+
+Priority is somewhere between "normal" and "high", I would choose
+normal.

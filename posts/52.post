@@ -1,0 +1,39 @@
+Author: Csaba Hoch
+Subject: Wiki-like heap, pseudo posts
+Tag: hh-conventions
+Tag: idea
+Tag: post syntax
+Tag: reviewed
+Message-Id: <49C7FDDA.3030302@gmail.com>
+Parent: <b29f917d0903230937v7507b954v2c8e6b0e33343aa7@mail.gmail.com>
+Date: Mon, 23 Mar 2009 22:23:38 +0100
+
+>> In the answers we may create new topics and abandon others.
+>
+> This foreshadows a strange threads-within-threads structure idea,
+> which I may actually like, I don't know yet. Expanding this idea could
+> create chaos, but with a really simple and helpful interface (once
+> we're in the Web UI phase) it could add a lot of usability. Imagine
+> this as the output of a thread:
+>
+> [...]
+
+Basically we already used this post structure, but without organizing
+it well. It was painful to separate it into subthreads.
+
+> How about adding some navigational links? Like opening/closing the
+> Wiki-headings, and adding prev/next links? And maybe a Table of
+> Contents?
+> [...]
+>
+> This threads-within-threads system is an experimental, underdeveloped
+> idea, to the point that I'm not even sure if it would be useful at
+> all. Still I post it, in case someone likes it or has a better idea
+> based on this.
+
+Nice idea, maybe we will use it at some point :)
+
+My intention was to help human reader and help the maintainer if (s)he
+decides to separate the thread into subthreads. But the main thing is
+that we agree on using this style in the posts; and we will figure out
+later how exactly is it useful.

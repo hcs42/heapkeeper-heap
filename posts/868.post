@@ -1,0 +1,13 @@
+Author: Csaba Hoch
+Subject: Repo topic name
+Tag: git
+Message-Id: <4AF3BFF6.6050202@gmail.com>
+Date: Fri, 06 Nov 2009 07:19:34 +0100
+
+The topic (not branch) in the repo is called "[new generation page
+generation]", not "[new generation post generation]". I made a mistake
+quite a few times, but usually I caught it before commit. I know there
+is one commit in the repo now in the _hcs branch that does have the
+wrong topic, but I hope all the others are OK. I'm writing this
+because you made the same mistake in the commit message of
+hkrc-attis-newgen.

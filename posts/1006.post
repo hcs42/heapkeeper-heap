@@ -1,0 +1,25 @@
+Author: Csaba Hoch
+Subject: Removing Google Groups stuff
+Tag: issue
+Message-Id: <4B3A5402.6020104@gmail.com>
+Date: Tue, 29 Dec 2009 20:09:54 +0100
+
+The following message is appended after each posts since post 3462
+(2009-11-26):
+
+    You received this message because you are subscribed to the Google Groups "UMS Heap" group.
+    To post to this group, send email to ums-heap@googlegroups.com.
+    To unsubscribe from this group, send email to ums-heap+unsubscribe@googlegroups.com.
+    For more options, visit this group at http://groups.google.com/group/ums-heap?hl=en.
+
+There are a few older messages as well that contain this text:
+
+    1668
+    1743
+    2561
+
+Post.remove_google_stuff should be improved to remove this text as
+well; and we should not forget to remove the boilerplate from the
+posts that are already affected.
+
+[effort 2]

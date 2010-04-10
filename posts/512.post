@@ -1,0 +1,14 @@
+Author: Attila Nagy
+Subject: Emails with attached files handled incorrectly
+Tag: bug
+Tag: reviewed
+Message-Id: <b29f917d0908151201o5c9dca32r6ea99aa46f3ccd09@mail.gmail.com>
+Date: Sat, 15 Aug 2009 21:01:36 +0200
+
+Previously, attached files were simply ignored. But now there's been a
+case when a mail with an attached message resulted in a malformed
+post. The post contains the body and the attachment in encoded form
+(quoted-printable and base64, respectively) complete with headers.
+
+The ID of the affected post is
+<b29f917d0908051523y64e413eby8ebad8d562157a12@mail.gmail.com>.

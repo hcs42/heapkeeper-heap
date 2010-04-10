@@ -1,0 +1,14 @@
+Author: Csaba Hoch
+Subject: Test cases helping understanding the code
+Message-Id: <4AE433A5.9020303@gmail.com>
+Date: Sun, 25 Oct 2009 12:16:53 +0100
+
+In a previous post [1] you described that you tried to understand how
+a certain piece of Hk code works.
+
+I'm wondering whether test cases may help you to understand what a
+function actually does. I don't have experience in understanding code
+by looking at test cases that other people wrote, but I'm curious if
+it helps you.
+
+[1] heap://hh/788

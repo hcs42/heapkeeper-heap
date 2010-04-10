@@ -1,0 +1,18 @@
+Author: Csaba Hoch
+Subject: The need for trailing whitespaces in Heap posts
+Tag: issue
+Message-Id: <4ddb9e5b1002080256v9dc27fdwb4219fd090a23302@mail.gmail.com>
+Parent: <20100208115322.2dfb08a3.nagy.attila.1984@gmail.com>
+Date: Mon, 8 Feb 2010 11:56:48 +0100
+
+>> But we can say that we will add a separator later if we seem to need it.
+>
+> ...but this seemed to comfort me. After all, a Heap free of trailing
+> whitespace is not an insignificant gain.
+
+Especially if you consider that git warns about trailing white spaces
+when merging patches by default.
+
+> So I agree.
+
+Good :)

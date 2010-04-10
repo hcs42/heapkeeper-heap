@@ -1,0 +1,15 @@
+Author: Attila Nagy
+Subject: "Csaba Hoch" as author (5b60b95a32 2009-08-01)
+Tag: commit
+Message-Id: <b29f917d0908020232mfea30b8ub0e9fac25d703686@mail.gmail.com>
+Parent: <4A7555EF.2030408@gmail.com>
+Date: Sun, 2 Aug 2009 11:32:18 +0200
+
+> Can you figure out what happened from this
+> information now? You may also try to use your bash_history :) But I'll
+> think about it, too.
+
+The bash_history does not contain dates, but the repository alone
+should be enough to solve the mystery. You can see how refs stood at
+various points in the past using the @{}-style specifiers, but I can't
+seem to find where this is properly documented.

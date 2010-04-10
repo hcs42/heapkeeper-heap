@@ -1,0 +1,11 @@
+Author: Csaba Hoch
+Subject: Code coverage
+Message-Id: <4ddb9e5b1001231408k120f2374g94aa70ac9e8ab44b@mail.gmail.com>
+Parent: <4ddb9e5b1001230945n5b19d521k16ed450d6697e3bb@mail.gmail.com>
+Date: Sat, 23 Jan 2010 23:08:52 +0100
+
+See the coverage of the new code here:
+http://heapkeeper.org/tmp/coverage/
+
+You can click on the module names. The green lines were executed
+during the test, the red lines were not.

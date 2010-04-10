@@ -1,0 +1,21 @@
+Author: Attila Nagy
+Subject: Free-text search
+Tag: feature
+Message-Id: <b29f917d1002110112y64c118f4md4ef0b43beb7d67e@mail.gmail.com>
+Parent: <4ddb9e5b1002060723r60c7711q250168b6ba82857c@mail.gmail.com>
+Date: Thu, 11 Feb 2010 10:12:03 +0100
+
+>    grep('dead trees').expf().collect.is_root()
+
+I like how you totally disregard how something works as long as it
+does the work. No, I'm not sarcastic: I really like it. I think it is
+the mathematician within you. Like how the mathematician makes tea. :) [1]
+
+I think this one is incorrect. It should do `expb()` instead of `expf()`
+
+>    grep("master branch", grep("hh"))
+
+I like this one a lot. But is it faster or slower than looking for all
+the strings simultaneously?
+
+[1] heap://hh/827

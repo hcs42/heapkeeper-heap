@@ -1,0 +1,40 @@
+Author: Csaba Hoch
+Subject: Body parsing - the what - cites
+Tag: post syntax
+Tag: prop
+Message-Id: <4A12F132.9080103@gmail.com>
+Parent: <20090518011928.99444ebf.nagy.attila.1984@gmail.com>
+Date: Tue, 19 May 2009 19:49:38 +0200
+
+<<<wiki>>>
+
+== Footnotes ==
+
+> == Cites ==
+
+=== Wording ===
+
+We agreed to use the word "footnote" instead of "cite". We also agreed
+on using the word "footnote-body". We may use also "footnote head" if
+you think so. Another think: maybe "footnote body" would be better
+without a hyphen.
+
+=== Multi-line footnotes ===
+
+Do we allow multi-line footnotes? I'm very much in favour of them.
+
+=== Exact definition of footnote-body ===
+
+However, we have to think about how to define what a footnote-body is.
+Consider this text:
+
+    Someone told me that Isaac Asimov was a very good book writer
+    [1]. Thus I bought all his books.
+
+    Arthur
+
+    [1] http://verygoodbooks.org
+
+Csabi
+
+[1] heap://hh/5

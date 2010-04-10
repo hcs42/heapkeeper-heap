@@ -1,0 +1,11 @@
+Author: Csaba Hoch
+Subject: Optimized IMAP downloading
+Message-Id: <4ddb9e5b0908172342vc05088o2a6c2b1b129e04ab@mail.gmail.com>
+Parent: <b29f917d0908172309x1b472a87r70c906fc63e5a049@mail.gmail.com>
+Date: Tue, 18 Aug 2009 08:42:43 +0200
+
+No, that's not what I thought of. There was something like if the
+inbox had more than 300 emails, something did not work. Then we
+archived all old messages, and it was fine again.
+
+Never mind, if there is a problem indeed, we will realize it at some point :)

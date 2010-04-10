@@ -1,0 +1,49 @@
+Author: Attila Nagy
+Subject: hkshell.e raises ugly exception when called on a non-existing post
+Tag: bug
+Tag: reviewed
+Message-Id: <b29f917d0910172322l6a59b163i4ff15a092d289f7c@mail.gmail.com>
+Parent: <4AD9ED53.3060202@gmail.com>
+Date: Sun, 18 Oct 2009 08:22:33 +0200
+
+> No it's not, the latest Hk still does that.
+
+Now that's strange...
+
+You did this:
+
+    >>> e(11111)
+
+I did this on your "_v0.3" branch, and I got this:
+
+    >>> e(11111)
+    Post not found.
+
+Now, instead of bisecting, I searched for the commit that added the
+string "Post not found".
+
+Please have a look at the commit called "A command to edit posts with
+an external editor.", on 2009-02-04. This is so old that it doesn't
+work flawlessly. But it does this:
+
+    $ python -i ./heapia.py
+    Customization module found (name: heapcustom).
+    edit custom function: not found, using the default.
+    sections custom function: not found, using the default.
+    gen_index_html custom function: not found, using the default.
+    >>> e(11111)
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+      File "./heapia.py", line 330, in e
+        log('Post not found.')
+    NameError: global name 'log' is not defined
+
+Logging doesn't work (would probably require assistance from
+heapcustom.py which I created as a placeholder only), but the message
+would be right.
+
+Also, the first commit on 2009-08-01 (totally unrelated, but this is a
+"modern" version, after the grand refactoring) does exactly what it
+should.
+
+So my guess is that there might be some problem specific to your installation.

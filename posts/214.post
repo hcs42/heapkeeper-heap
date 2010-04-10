@@ -1,0 +1,21 @@
+Author: Csaba Hoch
+Subject: Should the "reviewed" tag be part of the infrastructure?
+Tag: idea
+Tag: reviewed
+Message-Id: <4ddb9e5b0905110707g1b41c038xe5cf9c19854eaba4@mail.gmail.com>
+Parent: <b29f917d0905110555w391c2cc7w36513146a1b2fb4d@mail.gmail.com>
+Date: Mon, 11 May 2009 16:07:26 +0200
+
+No, I don't want "todo" to be a flag either. It _will be_ a meta
+attribute; why should it be something else, too? Why isn't it enough,
+if it is _only_ meta attribute? Hk is (or will be with the "custom
+post summary feature") flexible enough so that we don't need to
+convert a meta attribute into anything else in order to display it in
+the required way.
+
+Every information that belongs to a post should be described only in
+one place in a post file. We may generate any number of lazy data
+attributes for the Post from them, but the core information should be
+as redundancy-free, as possible. If we had the "todo" tag both as a
+meta attribute (with the attached meta text) and a flag or tag, the
+post would be unnecessarily redundant.

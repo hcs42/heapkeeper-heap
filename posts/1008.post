@@ -1,0 +1,17 @@
+Author: Attila Nagy
+Subject: hkweb: no web.py; state of hkweb
+Tag: issue
+Message-Id: <b29f917d0912291255s1286f272na15d84b692b6625d@mail.gmail.com>
+Parent: <4B3A541B.7080409@gmail.com>
+Date: Tue, 29 Dec 2009 21:55:28 +0100
+
+> Now I cannot use hkweb because I don't have web.py. We have two
+> choices:
+> - add web.py to the Heapkeeper repository
+> - describe how to get web.py and where should the user put it
+>[...]
+> Otherwise is hkweb usable?
+
+I'd prefer the first, but I'm sorry to say that hkweb is broken. I'll
+look into the issue as soon as possible, and I'll also add web.py to
+the repo in the process.

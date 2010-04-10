@@ -1,0 +1,16 @@
+Author: Csaba Hoch
+Subject: Post syntax matched to user needs
+Tag: post syntax
+Tag: prop
+Message-Id: <4A239E6C.2060500@gmail.com>
+Parent: <20090601084722.70751767.nagy.attila.1984@gmail.com>
+Date: Mon, 01 Jun 2009 11:25:00 +0200
+
+>> What do you think should be the default behaviour? Parsing turned off
+>> or on? That's also important from the tutorial's point of view. (Not
+>> the current tutorial of course.)
+> 
+> Maybe we should default to on, to show the world the best we can do,
+> while keeping it strongly emphasized that it can be turned off.
+
+OK.

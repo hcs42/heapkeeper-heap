@@ -1,0 +1,69 @@
+Author: Attila Nagy
+Subject: Splitting threads with multiple topics per post
+Tag: idea
+Message-Id: <b29f917d0908300853o7d771e16yba3e3c14abb9ad1b@mail.gmail.com>
+Parent: <4A9A948C.4040608@gmail.com>
+Date: Sun, 30 Aug 2009 17:53:44 +0200
+
+>> What we need to have this working:
+>> - mechanism to track the subthread specified
+>
+> Do you mean expanding (105,107) to [105,106,107]?
+
+Yes.
+
+> I once described that PostDB.expf() and PostDB.exp() should have an
+> optional "stop" argument. (It's not implemented yet.) The following
+> example expands the post set that contains only post 105, but it stops
+> when it reaches 108:
+>
+>    >>> ps(105).expf(stop=[108])
+
+Yes, I remember this discussion. [1]
+
+> Generally, `stop` could be any post set.
+>
+> Currently there is a not so difficult workaround:
+>
+>    >>> ps(105).expf() - ps(108).expf()
+
+This does not do what we want. Suppose the thread looks like this:
+
+
+   <105>
+     <106>
+       <107>
+         <108>
+         <109>
+           <110>
+               <111>
+     <112>
+   <113>
+     <114>
+
+In this case, you could select "105..107" only as:
+
+    ps(105).expf() - ps(108).expf() - ps(112) - ps(113).expf()
+
+My solution:
+
+    def straight(start, end):
+        now = p(end)
+        while True:
+            yield now
+            now = postdb().parent(now)
+            if now == p(start):
+                yield now
+                break
+
+This generates a straight line, so you don't have to care about
+branches.
+
+I think mixed topic problems typically occur along a straight line; if
+someone answers a post that already has one child, they won't answer
+mixed topics, they typically have something to say about one of the
+topics. This observation is presented without proof or explanation, it
+is merely my impression based on tidying the UMS Heap. And believe me,
+it has been a mess in the first few hundred posts... :)
+
+[1] heap://1100

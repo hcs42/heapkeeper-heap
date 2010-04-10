@@ -1,0 +1,48 @@
+Author: Attila Nagy
+Subject: Email parsing problem
+Tag: issue
+Message-Id: <20100209112053.0821c6e0.nagy.attila.1984@gmail.com>
+Parent: <4ddb9e5b1001151620j3172ac73rda047327f85f01b4@mail.gmail.com>
+Date: Tue, 9 Feb 2010 11:20:53 +0100
+
+> I have solved the problem [1][2]. See more information in the commit message.
+
+Great!
+
+I think the list of understood encodings is incomplete. I did a small
+research. Sylpheed keeps downloaded messages in a format equivalent to
+the original MIME format in one file per message. So it was as easy as
+`grep | sort | uniq` to compile this list of encodings I've
+encountered so far:
+
+    Content-Transfer-Encoding: 7bit
+    Content-Transfer-Encoding: 8Bit
+    Content-Transfer-Encoding: 8bit
+    Content-Transfer-Encoding: BASE64
+    Content-Transfer-Encoding: Base64
+    Content-Transfer-Encoding: QUOTED-PRINTABLE
+    Content-Transfer-Encoding: Quoted-Printable
+    Content-Transfer-Encoding: base64
+    Content-Transfer-Encoding: binary
+    Content-Transfer-Encoding: quoted-printable
+    Content-Transfer-Encoding: x-uuencode
+    Content-Transfer-Encoding:quoted-printable
+
+The current implementation handles for `base64` and
+`quoted-printable`, and it recognizes these in both upper- and
+lowercase. So these remain:
+
+    Content-Transfer-Encoding: 7bit
+    Content-Transfer-Encoding: 8bit
+    Content-Transfer-Encoding: binary
+    Content-Transfer-Encoding: x-uuencode
+
+`7bit` is the default. Despite this, sometimes it is specified. Such
+cases would now yield a warning, but the emails are correctly parsed.
+
+I think `8bit` and `binary` don't have to be decoded either, but they
+shouldn't give a warning.
+
+The last one, `x-uuencode` is a strange one, it can be found in only
+one out of the 5532 messages examined. It is used for the encoding of
+an attachment, so it is probably safe to ignore it.

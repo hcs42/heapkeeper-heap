@@ -1,0 +1,16 @@
+Author: Attila Nagy
+Subject: Single-use lists vs. tuples
+Tag: python
+Message-Id: <b29f917d0910240327jcb4daf7rfabb2d8a2bbda9a6@mail.gmail.com>
+Date: Sat, 24 Oct 2009 12:27:44 +0200
+
+I noticed that you consequently use lists instead of tuples even if
+they are never altered. E.g.
+
+    assert(pos in ['begin', 'end'])
+
+Why is it better than
+
+    assert(pos in ('begin', 'end'))
+
+? Isn't the second one quicker? If not, why use tuples at all?

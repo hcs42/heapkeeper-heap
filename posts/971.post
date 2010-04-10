@@ -1,0 +1,11 @@
+Author: Csaba Hoch
+Subject: Pre-commit-hook
+Tag: hk-dev-utils
+Message-Id: <4B114D88.90309@gmail.com>
+Date: Sat, 28 Nov 2009 17:19:20 +0100
+
+I pushed the pre-commit hook to hk-dev-utils [1].
+
+Please use it.
+
+[1] http://github.com/hcs42/hk-dev-utils

@@ -1,0 +1,14 @@
+Author: Csaba Hoch
+Subject: Mysterious comment about underscore usage
+Tag: commit
+Message-Id: <4AC71D0E.5000001@gmail.com>
+Parent: <20091002155635.7ef33956.nagy.attila.1984@gmail.com>
+Date: Sat, 03 Oct 2009 11:44:46 +0200
+
+You are right. Unfortunately the standard Python library itself is a
+bit lax on this subject.
+
+An even stranger example from Hk's code is htmlthreadfilename :)
+
+The problem is that I don't know a good rule of thumb. E.g. I don't
+think html_thread_file_name would be the best name for that method.

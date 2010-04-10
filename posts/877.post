@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: X for iterator
+Tag: prop
+Tag: reviewed
+Message-Id: <4ddb9e5b0911060449y4d0537e2k87ea819c8ea4aa90@mail.gmail.com>
+Parent: <b29f917d0911060356l7dc49482h9458480b69e4722c@mail.gmail.com>
+Date: Fri, 6 Nov 2009 13:49:51 +0100
+
+> Have you changed all the iterators to reflect this? Or do you intend to?
+
+I haven't really used iterators previously. If there are iterators
+that does not have an `x` prefix, I recommend fixing them.

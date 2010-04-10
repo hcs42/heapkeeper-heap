@@ -1,0 +1,39 @@
+Author: Csaba Hoch
+Subject: Splitting threads with multiple topics per post
+Tag: idea
+Message-Id: <4A9A948C.4040608@gmail.com>
+Parent: <b29f917d0908300548k5b267405s27a2eea84428c2d1@mail.gmail.com>
+Date: Sun, 30 Aug 2009 17:02:36 +0200
+
+Very nice idea!
+
+> What we need to have this working:
+> - mechanism to track the subthread specified
+
+Do you mean expanding (105,107) to [105,106,107]?
+
+I once described that PostDB.expf() and PostDB.exp() should have an
+optional "stop" argument. (It's not implemented yet.) The following
+example expands the post set that contains only post 105, but it stops
+when it reaches 108:
+
+    >>> ps(105).expf(stop=[108])
+
+Generally, `stop` could be any post set.
+
+Currently there is a not so difficult workaround:
+
+    >>> ps(105).expf() - ps(108).expf()
+
+> - Vim sorcery to throw up this complicated window setup
+
+This will be a joy to do :)
+
+> - mechanism to find the next free filename
+
+Piece of cake.
+
+I have already done something like this, but I haven't pushed it yet.
+I think we should have a hkshell option 'post_id_prefix' that stores
+the prefix to be used. It would be "attis_" for you and "csabi_" for
+me, set in our hkrc files.

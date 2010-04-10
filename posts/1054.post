@@ -1,0 +1,58 @@
+Author: Attila Nagy
+Subject: Lost threads: semantics of the asleep state
+Tag: idea
+Tag: issue
+Message-Id: <20100128104123.28859e8e.nagy.attila.1984@gmail.com>
+Parent: <4AFFB236.1020907@gmail.com>
+Date: Thu, 28 Jan 2010 10:41:23 +0100
+
+> Opinions?
+
+I think the comparison to the "star system" of e-mail clients is
+useful. There is one difference, though. Stars, folders and such are
+unilateral. I star a mail, and it will be starred only for me, the
+other party will have no idea if I consider that thread closed.
+
+> That's basically a bit more advanced system than the current issue
+> system. But maybe you are right and improving the current issue system
+> is the only way to deal with this.
+
+But only a bit, as there is one new state, "asleep". This state can be
+thought of as an alternate version of "close": the effect is the same,
+but threads ending with "close" and "asleep" should be displayed
+differently.
+
+There is but one problem with this: if someone "wakes up" a sleeping
+thread by posting to it, xe must add an "open" tag, otherwise, it'll
+remain in the "asleep" state. And since the maintainer of the heap
+adds this tag to the Heap post, it will not be visible in the
+answerer's e-mail client.
+
+This means that the "asleep" state should have special semantics. A
+thread is in "asleep" state iff:
+- the thread is not closed AND
+- either:
+    - the newest post is older than a given age, OR
+    - all the "endpoints" of the thread have the "asleep" tag or meta
+
+(By "endpoints" I mean posts that have no children.)
+
+> We talked about new role of the "idea" tag before [1], that seems to
+> be the answer. So in hh, everything that may need action should be
+> issue. If we are not sure that it needs an action or not sure about
+> which action to take, the issue is an "idea".
+
+To sum up [1] here: you propose that "idea" should not be an issue
+type by itself, but rather a flag that expresses the author is not
+convinced about the usefulness or feasibility of the proposal.
+
+I don't see how this would be related to the problem of old threads
+falling asleep. (Though I have a strange reflection [2].)
+
+> It's a different question to have something like this on UMS. But
+> a modified version of hh's issue system will be fine there.
+
+What do you think about this idea?
+
+[1] heap://hh/772
+[2] heap://3939

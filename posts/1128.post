@@ -1,0 +1,59 @@
+Author: Attila Nagy
+Subject: Managing several heaps in Heapkeeper
+Tag: prop
+Message-Id: <20100210165514.3871cfe7.nagy.attila.1984@gmail.com>
+Parent: <4A98290A.2080002@gmail.com>
+Date: Wed, 10 Feb 2010 16:55:14 +0100
+
+>>> == Example: moving a post ==
+>>>
+>>> This way moving the post will be easy:
+>>
+>> Moving a single post will be easy, but if you move just one, its
+>> connections to other posts will break.
+>
+> No, they won't. In my previous post I described what steps should we
+> perform to prevent breaking connections. Among them I wrote:
+>
+>>> - All references in the other posts to post id of the moved post
+>>>   have to be modified so that they point to the new post id. (The
+>>>   references to its message id does not have to be changed.)
+
+It's more than that. We can't take it granted that all users will have
+access to all the heaps a thread may span across.
+
+We've already discussed a similar matter in Hungarian [1]. Then,
+we decided that if there's a public and a private heap, posts on the
+private heap could have public parents, but not the other way around.
+
+Moving a post from a public heap to a private one will break the thread
+for those who don't have access to the private heap. We should consider if
+this is a mistake or not. An example: let's say that USR has two heaps,
+one which is public, the other one is private.  Sensitive matters will
+be discussed on the private heap, but if the subject wanders off to
+safe topics, those parts of the threads will be made public. It could
+go like this:
+
+    <pub/1> Susan   New positronic brain announced!
+        <pub/2> PR      Public reception of new positronic brain
+            <priv/1> Susan  Robot misbehaves during press conference
+                <priv/2> Eng.Dept.  Fix released
+                    <pub/5> Susan       Robot is safe, error fixed
+
+For anyone seeing only the "pub" heap, this will look like:
+
+    <pub/1> Susan   New positronic brain announced!
+        <pub/2> PR  Public reception of new positronic brain
+    <pub/5> Susan   Robot is safe, error fixed
+
+Just the way it should. But what if someone takes the time to check
+the headers of pub/5? They'll see that it has a parent post. Even worse,
+email Message-IDs are formed like email addresses. This means that
+readers of the public heap will know that this post is the child of an
+invisible post that has been written by someone at
+"@engineering.usrobot.com", which is the leakage of sensitive
+information. This is just one problem, but I think many such
+subtleties may be out there if threads contain posts from multiple
+heaps.
+
+[1] heap://3737

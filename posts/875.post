@@ -1,0 +1,14 @@
+Author: Attila Nagy
+Subject: X for iterator
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0911060356l7dc49482h9458480b69e4722c@mail.gmail.com>
+Parent: <4AF3C5A6.1010700@gmail.com>
+Date: Fri, 6 Nov 2009 12:56:36 +0100
+
+> I use the prefix `x` to denote that a variable is an iterator (e.g.
+> "xpostitems").
+
+Thanks for noting this, I thought the `x` denoted the augmented post items.
+
+Have you changed all the iterators to reflect this? Or do you intend to?

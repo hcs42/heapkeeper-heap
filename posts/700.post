@@ -1,0 +1,13 @@
+Author: Csaba Hoch
+Subject: Docstring tracking tool
+Tag: idea
+Message-Id: <4ADB3963.5010907@gmail.com>
+Parent: <b29f917d0910172328i53058c0bw974bcda82c42ccab@mail.gmail.com>
+Date: Sun, 18 Oct 2009 17:50:59 +0200
+
+> I think we should fill this up from the bottom, i.e. it is more
+> important to document everything than to improve existing
+> documentation. Do you agree?
+
+We should definitely document everything new. But we (I) should still
+update the remaining parts of `hklib` at some point.

@@ -1,0 +1,125 @@
+Author: Csaba Hoch
+Subject: Commit "Post.create_header: minor docstring improvement" (b738ba6, 2009-08-27)
+Message-Id: <4AE41384.6000703@gmail.com>
+Parent: <b29f917d0910241448l24a76161k3bc6d37309626258@mail.gmail.com>
+Date: Sun, 25 Oct 2009 09:59:48 +0100
+
+> You did a docstring update here:
+>
+>      @staticmethod
+>      def create_header(d):
+> -        """Transforms the dict(str, [str]) returned by the parse_header
+> -        function to a str->(str | [str]) dictionary.
+> +        """Transforms the {str: [str])} returned by the parse_header
+> +        function to a {str: (str | [str])} dictionary.
+
+The first modified line should not have that extra ')' in '{str: [str])}'.
+
+> I think neither the old, nor the new ones are the best. I had to read
+> the source to understand what it does.
+
+You are right in that the docstring does not describe what the
+function actually does.
+
+> Warning: the function `copy_one` is jedi code. I was reading it while
+> watching TV -- it took about two hours to begin to understand what it
+> does, then I had to do experiments in Python, because I couldn't
+> believe that it does what it should. But it does -- the function is
+> thoroughly tested, breaking it makes 70 tests fail.
+
+:)))
+
+> I would rewrite its docstring like this (of course later complete with
+> proper arguments and returns sections):
+
+Which would be this:
+
+    **Argument:**
+
+    - `d` ({str: [str]}) -- ...
+
+    **Returns:** ({str: (str | [str])})
+
+If you have a better name for `d`, I'm listening...
+
+I hope you don't have a problem with the {key: value} and [items]
+notation. I stole that from the Erlang documentation conventions.
+
+> """Creates a dictionary of headers from the dictionary returned by the
+> `parse_header` function. This dictionary contains only keys of
+
+The word "This" is ambiguous here.
+
+> existing header names, and if the source dictionary contains any other
+> keys, an exception will be raised.
+
+Not true. A warning is printed in this case:
+
+hklib.py, line 782:
+
+        # Adding additional keys to the _header and print warning about them
+        for attr in d.keys():
+            log('WARNING: Additional keys: "%s".' % d)
+            copy_list(attr)
+        return h
+
+See commit 1932903 (Post: "forward compatible" post file parsing,
+2009-08-27) for why we should not raise an exception in this case.
+
+> Some headers can have an
+> alternative name, which allows for parsing legacy post files.
+>
+> Two kinds of headers exist, one is which can have multiple values.
+
+"one of which"?
+
+> The values for these keys are lists of string values both in the
+> received and the returned dictionaries. Such are 'Tag' and 'Flag'
+> headers.
+>
+> For the other headers, only a single value is accepted. It is received
+> as a list with one string element in the source dictionary. If it has
+> more than one element, an exception is raised.
+>
+> ** Example: ** ::
+>
+>     >>> Post.create_header({'Author':['Someone'],'Subject':['topic'],'Tag':['one','two']})
+>     {'Parent': '', 'Author': 'Someone', 'Flag': [], 'Tag': ['one',
+> 'two'], 'Date': '', 'Message-Id': '', 'Subject': 'topic'}
+> """
+
+Having examples for these kinds of functions is very good, lately I
+got used to writing them. (If we write a nice test case, basically we
+get the example for free.)
+
+Whitespace corrections:
+
+    **Example:** ::
+
+        >>> Post.create_header({'Author':['Someone'],
+        ...                     'Subject':['topic'],
+        ...                     'Tag':['one','two']})
+        {'Parent': '', 'Author': 'Someone', 'Flag': [],
+        'Tag': ['one', 'two'], 'Date': '', 'Message-Id': '',
+        'Subject': 'topic'}
+
+I think we can allow ourselves to put linebreaks into the output
+dictionary in places that are convenient to the reader. Maybe we could
+even introduce other white spaces:
+
+        >>> Post.create_header({'Author':['Someone'],
+        ...                     'Subject':['topic'],
+        ...                     'Tag':['one','two']})
+        {'Parent': '',
+         'Author': 'Someone',
+         'Flag': [],
+         'Tag': ['one', 'two'],
+         'Date': '',
+         'Message-Id': '',
+         'Subject': 'topic'}
+
+What do you think?
+
+> Do you think this would be more helpful than the original?
+
+Definitely, thanks!

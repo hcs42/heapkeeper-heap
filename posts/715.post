@@ -1,0 +1,47 @@
+Author: Csaba Hoch
+Subject: "Star" appears in flat sections
+Tag: bug
+Tag: reviewed
+Message-Id: <4ddb9e5b0910200009p43286d45m60f538d7d16cd002@mail.gmail.com>
+Parent: <b29f917d0910192228v66cd5016q47dde646cf5abee2@mail.gmail.com>
+Date: Tue, 20 Oct 2009 09:09:36 +0200
+
+Very well done! Indeed, I forgot about this case. You implemented
+exactly the same solution that I would have implemented if I had
+realized this problem.
+
+I'll try not to forget to incorporate this change into the new generator.
+
+Yes, we should write tests about this. These functions are a bit
+different in the old and new generators, so I think it is enough if we
+promise that we will write test cases for the new Generator :)
+
+A few notes:
+
+1. I would rename postitem_star_needed to postitem_is_star_needed. I
+like the convention that the names of boolean functions contain the
+word "is".
+
+2. According to our docstring conventions (which are not written down
+anywhere...),
+
+    - *postitem* (:class:`PostItem`) - the PostItem being examined
+    - *param* (`str`) - the name of the parameter to examine,
+
+would become
+
+    - `postitem` (|PostItem|) - the post item being examined
+    - `param` (str) - the name of the parameter to examine,
+
+3. The itemization after "We can use a star if the following
+conditions are all met:" is incorrect, because Sphinx needs an empty
+line before the itemization. So it should be like this:
+
+        We can use a star if the following conditions are all met:
+
+        - using stars is enabled (`shortsubject`, `shorttags` options),
+        - PostItem is not flat,
+        - the post described has a parent,
+        - the property being examined is the same as that of the parent.
+
+That's why we put an empty line after "**Arguments:**"

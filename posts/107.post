@@ -1,0 +1,29 @@
+Author: Attila Nagy
+Subject: Renamings
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0904181138t5e2a503bk800a79ac1a9dc19c@mail.gmail.com>
+Parent: <49EA0A6C.1080308@gmail.com>
+Date: Sat, 18 Apr 2009 20:38:24 +0200
+
+> What do you say to perform the following renamings:
+> - MailDB -> PostDB
+> - In general: heap*.py -> hk*.py
+> - heapmanip -> hklib
+> - heaplib -> hkutils
+> - heapia -> hkshell
+> - heapcustomlib -> hkcustomlib (better name?)
+> - heapcustom (not in the repo) -> hkrc
+
+OK.
+
+> BTW, do you now what is "rc" in .vimrc, .kderc, etc?
+
+http://en.wikipedia.org/wiki/Run_Commands
+
+> And to moving the following code:
+> - heapmanip.Html -> current heaplib, proposed hkutils
+> I think we should move Section, Index and Generator in the future
+
+Seems to me a major refactoring is in order. What do you propose as
+the main ordering principle of classes into modules?

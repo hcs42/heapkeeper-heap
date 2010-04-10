@@ -1,0 +1,17 @@
+Author: Attila Nagy
+Subject: Terminology: editor vs maintainer
+Message-Id: <20090519221845.bfd0177b.nagy.attila.1984@gmail.com>
+Parent: <4A130BFB.2010009@gmail.com>
+Date: Tue, 19 May 2009 22:18:45 +0200
+
+> I guess many maintainer would be allowed commit their changes into the
+> local repository, but only the upper cast could push them e.g. to the
+> repository on GitHub.
+
+There is a problem with this. If an upper-caste maintainer would reject
+a commit made by a lower-caste maintainer, the process of removing the
+commit before the push would be nontrivial.
+
+I thought the outer party would make the changes, and the inner party
+would commit them. That, of course causes synchronization problems once
+the heap has a decent amount of traffic.

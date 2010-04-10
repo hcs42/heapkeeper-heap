@@ -1,0 +1,59 @@
+Author: Attila Nagy
+Subject: Bug: single and double quotes in heapids
+Message-Id: <b29f917d0909150445p74facf99paf026aed37b15d6b@mail.gmail.com>
+Date: Tue, 15 Sep 2009 13:45:27 +0200
+
+Csabi has already identified this problem, and took some measures to solve
+it. In his commit entitled "$EDITOR may contain spaces", he did this:
+
+    -    subprocess.call(editor.split() + files)
+    +    quoted_files = [ ("'%s'" % file) for file in files ]
+    +    subprocess.call(editor + ' ' + ' '.join(files), shell=True)
+
+This, however, has two problems. First, the actual subprocess call
+doesn't use the result of the list comprehension. It should read:
+
+    quoted_files = [ ("'%s'" % file) for file in files ]
+    subprocess.call(editor + ' ' + ' '.join(quoted_files), shell=True)
+
+But this is still not OK. In Python, single and double quotes are created
+equal. In the shell, they are not. In bash, the single quote means "raw",
+ie. no substitution and no escaping occurs inside them. E.g.:
+
+    $ echo "$term"
+    xterm
+    $ echo '$term'
+    $TERM
+
+And also this:
+
+    $ echo "\""
+    "
+
+is valid, and works, while this:
+
+    $ echo '\''
+
+will result in an unterminated line.
+
+To correctly handle both kinds of quotes in file names, neither quote
+type will suffice, we'll have to use escaping, like this:
+
+    quoted_files = [ ('"%s"' % file.replace('"', r'\"'))
+                     for file in files ]
+    subprocess.call(editor + ' ' + ' '.join(quoted_files), shell=True)
+
+That is, we pass double-quoted filenames to the shell, with escaping
+any double quotes in the filename.
+
+Sadly, this is not everything. Links pointing to URLs containing
+double quotes won't work. This is because a link pointing to the HTML
+generated from a post called "''".post (I know I'm a pervert) looks
+like this:
+
+    <a href=""''".html">
+
+Of course this derails the HTML parser in Firefox. This can be
+corrected by HTML-escaping the double quotes, like this:
+
+    <a href="%22''%22.html">

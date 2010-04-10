@@ -1,0 +1,14 @@
+Author: Attila Nagy
+Subject: Use getter method instead of augmentation
+Tag: issue
+Tag: reviewed
+Message-Id: <b29f917d0911100953k31f07dd7kc1b48e0817f8e04e@mail.gmail.com>
+Parent: hh/902
+Date: Tue, 10 Nov 2009 18:53:54 +0100
+
+The way Generator currently modifies post items to add a printing
+function is ugly and inefficient. We have decided to use a getter
+method.
+
+[effort 2]
+[assign Attis]

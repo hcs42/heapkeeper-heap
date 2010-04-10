@@ -1,0 +1,101 @@
+Author: Csaba Hoch
+Subject: Augmentation in hkgen.Generator
+Tag: discussion
+Tag: issue
+Tag: reviewed
+Message-Id: <4AF70A21.2080005@gmail.com>
+Parent: <b29f917d0911070054q3a876a69hd47cf342d2b89f7@mail.gmail.com>
+Date: Sun, 08 Nov 2009 19:12:49 +0100
+
+> Augmentation wouldn't really change it in any way relevant to
+> `PostDB.walk_thread`. 
+
+The users of the augmented post item can do whatever they want with
+it. Maybe it will be useful to change its "level" attribute for some
+HTML page.
+
+> But I still argue against the whole concept of augmentation. My main
+> problem is that it spends "real" CPU time (copying and modifying
+> objects) to achieve conceptual clarity (so that we can be sure that
+> the `PostItem`s have a `print_fun` attribute).
+
+OK, I understand your concerns, and I also think that the augmentation
+is ugly.
+
+There are two separate actions done by the augmentation:
+1. Copying the post item
+2. Adding the print_fun method to the post item
+
+The ways we can deal with these are quite different.
+
+== Copying the post item ==
+
+I still think the best way to deal with this is what I described in
+the my previous post:
+
+    walk_thread should copy the post items that it stores
+    and than augment_postitem will not have to copy it.
+
+This way we will minimize copying. We do need copying in that case,
+because the caller of walk_thread can modify the post items. (As I
+described above.)
+
+== Adding the print_fun method to the post item ==
+
+> I can still see alternatives to the current method:
+> - adding a getter function to Generator that defaults to
+>   `Generator.print_postitem`; then any "post item modifier functions"
+>   could use this function
+
+Hm. Just for making sure that we are on the same page, the following
+changes would be done for example to hkgen.Generator.enclose_posts.
+(Which is not a post item modifier function, but I have just realized
+that I don't have a post item modifier that actually uses print_fun,
+they all use library functions like `enclose_posts` to deal with that
+dirty part.)
+
+    def enclose_posts(self, class_, posts):
+        """Returns a function that encloses the summaries of the given posts
+        into the given HTML class.
+
+        **Argument:**
+
+        - `class_` (|HtmlText|)
+        - `posts` (|PostSet|)
+
+        **Returns:** |PostItemModifierFun|
+        """
+
+        def enclose(postitem):
+            post = postitem.post
+            if post in posts:
+                heapid = post.heapid()
+  -             old_print_fun = postitem.print_fun
+  +             old_print_fun = self.get_print_fun(postitem)
+                if postitem.pos == 'main':
+                    postitem.print_fun = \
+                        lambda postitem:\
+                            self.enclose(
+                                class_,
+                                old_print_fun(postitem),
+                                newlines=True,
+                                comment=('post ', heapid),
+                                closing_comment=True)
+            return postitem
+        return enclose
+
+Generator.get_print_fun itself would be a trivial function.
+
+I like this idea! Shall we open this thread as a ticket? (I would
+estimate the effort to be "2"). You may implement it, but I am
+happy to do it, as well.
+
+> - adding a `__getattr__` method to `PostItem` that returns
+>   `Generator.print_postitem` whenever `print_fun` is read
+
+This is not good because that would _always_ use
+hkgen.Generator.print_postitem as the default printer function, while
+in the current system if override MyGenerator.print_postitem, the
+augmented postitems created (and augmented) in MyGenerator will have
+MyGenerator.print_postitem as the default printer function. I think
+the current behaviour is the desirable one.

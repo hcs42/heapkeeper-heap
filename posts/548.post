@@ -1,0 +1,34 @@
+Author: Csaba Hoch
+Subject: Using `` in docstring for variables
+Tag: prop
+Tag: reviewed
+Message-Id: <4A998891.60407@gmail.com>
+Parent: <4A0B1936.40601@gmail.com>
+Date: Sat, 29 Aug 2009 21:59:13 +0200
+
+[close]
+
+No, we should use `l`, that turned out to be the Sphinx convention.
+Double backquote (``l``) should be used for inline code, for example
+in the following text:
+
+    In Python, the expression ``1 + 1`` evaluates to ``2``.
+
+But:
+
+    def add(a, b):
+        """Adds `b` to `a`.
+
+        The more lengthy description can go here.
+
+        **Arguments:**
+
+        - `a` (int) -- The first number to add.
+        - `b` (int) -- The second number to add. This is added to `a`.
+
+        **Returns:** int
+
+        Note: this is a very complicated function. Use it with care.
+        """
+
+        return a + b

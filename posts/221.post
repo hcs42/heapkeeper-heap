@@ -1,0 +1,12 @@
+Author: Attila Nagy
+Subject: Section is_flat refactoring
+Message-Id: <b29f917d0905130101y73e00fa7x58a870940dfea51a@mail.gmail.com>
+Parent: <4A0A6353.4090207@gmail.com>
+Date: Wed, 13 May 2009 10:01:47 +0200
+
+OK, I pushed it. But there was a problem: I made my changes to master,
+then committed them to the new branch (minimal), then pushed both
+master and minimal, without pulling master first. (At least that's
+what I think.)
+
+Doesn't really matter, the result is again a labyrinth. Sorry for that.

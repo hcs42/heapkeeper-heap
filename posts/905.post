@@ -1,0 +1,57 @@
+Author: Csaba Hoch
+Subject: Effort
+Tag: hh-conventions
+Tag: prop
+Tag: reviewed
+Message-Id: <4ddb9e5b0911101012o164c6e7y8defc0b2e8efd421@mail.gmail.com>
+Parent: <b29f917d0911100908k760368f2x86bed7b8057c8623@mail.gmail.com>
+Date: Tue, 10 Nov 2009 19:12:49 +0100
+
+I haven't realized I'm writing a colon and we talked about not writing
+them. You are right about the contradiction.
+
+Meta text are handled incorrectly, not the way we agreed on. Currently
+a dictionary of metas will be created. I'll just write examples and
+you will get the idea:
+
+    Post body:
+        [effort: 1]
+        [important]
+
+    Meta dict:
+        {'effort': 1,
+         'important': ''}
+
+This seems to be all right. Problems:
+
+    Post:
+        [effort: 1]
+        [effort: 2]
+        [important]
+        [!todo many things]
+        [!todo this]
+    Meta dict:
+        {'effort': 2,
+         'important': '',
+         '!todo many things':'',
+         '!todo this': ''}
+
+I propose to generate a dictionary like this for the post similar to
+the latter post:
+
+    Post:
+        [effort 1]     # no colons
+        [effort 2]
+        [important]
+        [!todo many things]
+        [!todo this]
+    Meta dict:
+        {'effort', [1, 2],
+         'important': [''],
+         '!todo': ['many things', 'this']}
+
+So a non-empty list of strings will be assigned to each meta that is
+present in the post body.
+
+If you don't get the idea of what's wrong with the current dictionary
+and how should the new work, ask.

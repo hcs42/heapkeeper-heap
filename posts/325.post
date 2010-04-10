@@ -1,0 +1,44 @@
+Author: Csaba Hoch
+Subject: Footnotes in cites
+Tag: post syntax
+Tag: prop
+Message-Id: <4A18F860.4070907@gmail.com>
+Parent: <4A172469.8000901@gmail.com>
+Date: Sun, 24 May 2009 09:33:52 +0200
+
+> I realized we do want to handle quotes as just "quote blocks". For
+> example they can have raw text inside them. They also may have
+> itemizations inside them. They may contain links.
+> 
+> I propose that we parse everything in quotes. (I suggested the exact
+> opposite so far, but I think I was wrong. The concrete examples we
+> had (meta text, cites) would not make too much sense to parse in
+> quotes; but in general, there is a point in parsing them, and as we
+> talk now, new and new text objects come up that must be parsed
+> inside quotes.)
+
+Now I realized another thing: parsing and processing the footnotes in
+quotes are two different things. If I look at this way, it is obvious
+how we should handle footnote-heads in quotes:
+1. We should definitely parse them.
+2. They should point to the place where they should point.
+
+The latter sentence seems silly, and still, it catches nicely what I
+want to say.
+
+Example:
+
+First email:
+
+    Nice place: [1]
+
+    [1] http://nice.place
+
+Answer:
+
+    > Nice place: [1]
+
+    Indeed!
+
+How should we display "[1]" be on the post page of the second post?
+Of course it should be a link to http://nice.place!

@@ -1,0 +1,11 @@
+Author: Attila Nagy
+Subject: heapid mismatch bug
+Message-Id: <b29f917d0908120034l6114c911ne4481b5a33a5734d@mail.gmail.com>
+Parent: <4ddb9e5b0908101240n28c2415ey63b4433ef854309f@mail.gmail.com>
+Date: Wed, 12 Aug 2009 09:34:31 +0200
+
+> There seems to be some posts like post 1793. I introduced an additional newline
+> into the subject of these posts in commit a3f92; I don't know, how and why.
+
+See commit ec2390 in the mail repo. Message: "now how did that newline
+get there?". Probably unrelated to the current issue, though.

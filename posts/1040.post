@@ -1,0 +1,15 @@
+Author: Csaba Hoch
+Subject: Not generating post pages
+Tag: prop
+Message-Id: <4ddb9e5b1001240930i6822da82y4da88f52eb0641e9@mail.gmail.com>
+Parent: <b29f917d1001240643t25214baci1f76ddee90a916d6@mail.gmail.com>
+Date: Sun, 24 Jan 2010 18:30:12 +0100
+
+My proposal is about removing the invocation of post page generation
+from Generator.write_all. As far as I understand, modifying write_all
+does not have any consequence on hkweb, since hkweb calls
+Generator.print_post_page directly, which I would not touch.
+
+I'm not sure about hkweb.  We can discuss whether we should link to
+post pages or thread pages in hkweb, but that does not have too much
+to do with the current proposal.

@@ -1,0 +1,34 @@
+Author: Csaba Hoch
+Subject: Sphinx versions
+Tag: prop
+Tag: reviewed
+Message-Id: <49FCA5FB.8020707@gmail.com>
+Date: Sat, 02 May 2009 21:58:51 +0200
+
+Have you installed Sphinx? A bug was corrected in it a few days
+ago, which is important to me, so I'd like to use the newest Sphinx
+version (got from their Mercurial repository). The current official
+release won't be able to compile the Heapkeeper documentation, if we
+agree on using the new, fixed version (which is not an official
+release yet). So if you want to use Sphinx, get a Mercurial and then
+get Sphinx.
+
+I think soon there will be Sphinx 1.0, but there may be other times
+when we want a more fresh version. On the other hand, I don't want to
+say everybody "use the latest version from the Sphinx repository",
+because that may have new bugs (as happens to Heapkeeper sometimes after a
+new commit...) Maybe I even want to improve Sphinx a but, who knows :)
+
+Sphinx is hosted by bitbucket [1], which is just like GitHub, but it
+uses Mercurial. A simple solution would be to state that "Heapkeeper
+uses the X revision of Sphinx that can be downloaded from the Sphinx
+repo". If there is a bugfix or a feature important to us in Sphinx, we
+would recommend using a newer revision.
+
+Sphinx has 11 forks there (fork means of course that the original
+project call pull from them). Another elegant solution to our problem
+is to create another fork and state that Heapkeeper always uses our
+fork of Sphinx. That would allow me to hack Sphinx :) But until I get
+serious about this, I propose to use my first solution.
+
+[1] http://bitbucket.org/birkenfeld/sphinx/

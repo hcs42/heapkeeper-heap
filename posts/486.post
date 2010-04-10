@@ -1,0 +1,19 @@
+Author: Csaba Hoch
+Subject: Tidy repository
+Message-Id: <4ddb9e5b0908091315p32a21ae0k3612a43ae852922e@mail.gmail.com>
+Date: Sun, 9 Aug 2009 22:15:34 +0200
+
+== Check ==
+
+I uploaded the tidy repo to a sandbox:
+
+    http://github.com/hcs42/sandbox
+
+Do you think everything is OK?
+
+== Tag ==
+
+I saw that tag v0.1 has the comment "Heapmanipulator v0.1 released.". I guess
+it would be wrong to say "Heapkeeper v0.1 released"...
+
+[todo ref: "Heapkeeper version 0.3"]

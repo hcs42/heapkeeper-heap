@@ -1,0 +1,20 @@
+Author: Attila Nagy
+Subject: Terminology: editor vs maintainer
+Message-Id: <20090519222341.bf9136f3.nagy.attila.1984@gmail.com>
+Parent: <4A130BFB.2010009@gmail.com>
+Date: Tue, 19 May 2009 22:23:41 +0200
+
+> Another (more sensible) two-cast system is to have many maintainer who
+> are allowed to change the posts via the web interface, but only a
+> limited number of people who are allowed to work via hkshell.
+
+I don't see how that would solve anything. Basically the same tasks could be
+done via through hkshell as via hkweb, only some kinds of complex
+operations could be done much more efficiently via the former.
+
+Plus, if we want to do a commit, we'd have to temporarily lock the web
+interface.
+
+And, yet another point: current hkshell can't accomodate more than one users
+editing the heap at the same time. This minor inconvenience would turn into a
+huge problem with hkweb.

@@ -1,0 +1,12 @@
+Author: Attila Nagy
+Subject: Commit threads
+Tag: prop
+Tag: reviewed
+Message-Id: <b29f917d0904042341g260213fayabf7f9c1d3646c6@mail.gmail.com>
+Parent: <49C7FD7D.90805@gmail.com>
+Date: Sat, 4 Apr 2009 23:41:27 -0700
+
+> Why do you take 16 as a base? A SHA character can be either a
+> lowercase letter, an uppercase letter or a digit
+
+Are you sure? I keep seeing only hex digits, and absolutely no uppercase.

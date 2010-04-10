@@ -1,0 +1,22 @@
+Author: Attila Nagy
+Subject: Workflow: should we change the others' new changes?
+Message-Id: <b29f917d0908241434m5548d1bej397e15b2c41ff966@mail.gmail.com>
+Parent: <4A91ABD2.6010004@gmail.com>
+Date: Mon, 24 Aug 2009 23:34:07 +0200
+
+> I think I will restrict myself from modifying other's commits, unless
+> necessary. I have a few reasons:
+>
+> - It may happen very often that I think that other committers made a
+>  mistake, when they don't, I just don't understand their reasons.
+> - They may have other things that they want to change after I tell
+>  them to change something.
+> - They tested their modifications, so they can retest it easily. I
+>  don't want to test all commits made by other people. (For example I
+>  don't want to test the new download feature manually.)
+
+These are all about code. You can alter commits though: for example
+you can join separate commits that belong together (eg. adf3980 and
+e23aa8b (both IMAP), baf5227 and 9c73e08 (both plural)) . You could
+use interactive rebase, and mark such commits for "squish". Since the
+code itself doesn't change, you can do this without redoing the tests.

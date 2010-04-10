@@ -1,0 +1,32 @@
+Author: Csaba Hoch
+Subject: Quote
+Tag: post syntax
+Message-Id: <4A19AD65.3080708@gmail.com>
+Date: Sun, 24 May 2009 22:26:13 +0200
+
+We should have some kind of method for quoting sources.
+
+For example, how should we write if we want to quote Asimov? Is this OK?
+
+    Asimov said once:
+
+        "I don't believe in an afterlife, so I don't have to spend my
+        whole life fearing hell, or fearing heaven even more. For
+        whatever the tortures of hell, I think the boredom of heaven
+        would be even worse."
+
+Solution 1: Let's say if a "raw text" starts with quotation mark, than
+it is not raw text but a quote.
+
+Solution 2: Let's have a marker that indicates that the following "raw
+text" is a quote:
+
+    Asimov said once: [quote]
+
+        "I don't believe in an afterlife, so I don't have to spend my
+        whole life fearing hell, or fearing heaven even more. For
+        whatever the tortures of hell, I think the boredom of heaven
+        would be even worse."
+
+This is an important issue if we don't want to see quotes between
+<pre> and </pre>. I don't want to.

@@ -1,0 +1,17 @@
+Author: Csaba Hoch
+Subject: Subjects should start with capital letter
+Tag: hh-conventions
+Tag: prop
+Tag: reviewed
+Message-Id: <49C3E343.2090809@gmail.com>
+Parent: <b29f917d0903191129w3b774b86u1abe719903820d1c@mail.gmail.com>
+Date: Fri, 20 Mar 2009 19:41:07 +0100
+
+Just like the git commit messages. For me it's much more natural to
+start the subject with an uppercase letter -- that's the start of a
+new thought. But I definitely don't want to finish the subject with a
+period :D
+
+Actually, it's interesting for me that you wanted a capital letter and
+a period for commit messages and you don't want either of those for
+subjects. Subjects and commit messages are kinda similar things to me.

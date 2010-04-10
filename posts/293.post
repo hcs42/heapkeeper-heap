@@ -1,0 +1,36 @@
+Author: Csaba Hoch
+Subject: Terminology: editor vs maintainer
+Message-Id: <4A131B8A.9030904@gmail.com>
+Parent: <20090519222341.bf9136f3.nagy.attila.1984@gmail.com>
+Date: Tue, 19 May 2009 22:50:18 +0200
+
+Nagy Attila wrote:
+>> Another (more sensible) two-cast system is to have many maintainer who
+>> are allowed to change the posts via the web interface, but only a
+>> limited number of people who are allowed to work via hkshell.
+> 
+> I don't see how that would solve anything.
+
+It has nothing to do with the problem we talked in the thread. But you
+asked me about caste systems...
+
+> Basically the same tasks could be done via through hkshell as via
+> hkweb, only some kinds of complex operations could be done much more
+> efficiently via the former.
+
+That is exactly what it would solve: being able to perform complex
+operations that require hkshell without having to grant full access to
+a heap server to everybody who wants to be an editor.
+
+> Plus, if we want to do a commit, we'd have to temporarily lock the web
+> interface.
+
+I'm not sure about this. We do need synchronization between commits of
+course.
+
+> And, yet another point: current hkshell can't accomodate more than one users
+> editing the heap at the same time. This minor inconvenience would turn into a
+> huge problem with hkweb.
+
+Yes, I have thought about this before. It should be the topic of
+another thread though.

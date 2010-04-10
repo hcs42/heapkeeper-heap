@@ -1,0 +1,30 @@
+Author: Attila Nagy
+Subject: Docstrings: ClassName vs. class name
+Message-Id: <b29f917d0910240333m12db637qd99e473a6b463b07@mail.gmail.com>
+Date: Sat, 24 Oct 2009 12:33:14 +0200
+
+> 2. According to our docstring conventions (which are not written down
+> anywhere...),
+>
+>    - *postitem* (:class:`PostItem`) - the PostItem being examined
+>    - *param* (`str`) - the name of the parameter to examine,
+>
+> would become
+>
+>    - `postitem` (|PostItem|) - the post item being examined
+>    - `param` (str) - the name of the parameter to examine,
+
+I suppose we rather name what the class represents then use the class name.
+
+These are docstrings from `PostItem`:
+
+    def copy(self):
+        """Creates a shallow copy of the post item."""
+
+    def __str__(self):
+        """Returns the string representation of the PostItem."""
+
+Why use "post item" in the first, and "PostItem" in the second?
+
+I think we should have a written guideline on good docstrings before
+setting out to improve them.

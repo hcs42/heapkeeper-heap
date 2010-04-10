@@ -1,0 +1,18 @@
+Author: Csaba Hoch
+Subject: heapia command for re-reading mail database or splitting posts
+Tag: idea
+Tag: reviewed
+Message-Id: <49E9A8DE.6000606@gmail.com>
+Parent: <b29f917d0904180212t51558511nac47d06f20bacb0c@mail.gmail.com>
+Date: Sat, 18 Apr 2009 12:18:06 +0200
+
+I don't have time to read now, just a quick answer:
+
+> - a command to re-read the mail database (simple and less foolproof),
+
+The rl command in heapia does that.
+
+> - a command to facilitate the splitting of a post.
+
+I have though about this, as well. I'll write a more detailed answer
+when I have the time to read your whole post.

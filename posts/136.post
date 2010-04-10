@@ -1,0 +1,65 @@
+Author: Csaba Hoch
+Subject: GitHub's integrater issue tracker
+Tag: github
+Message-Id: <49F93C8C.7000009@gmail.com>
+Date: Thu, 30 Apr 2009 07:52:12 +0200
+
+== Issue tracker ==
+
+GitHub announced that they now have an integrated issue tracker
+system. The announcement page [1] also contains a list of features and
+a 4-minute video.
+
+== Developer interface ==
+
+It has an open interface that can be used e.g. with curl or people can
+write own web pages which have posts that interact with github. [2]
+
+Example:
+
+  $ curl http://github.com/api/v2/yaml/issues/list/schacon/simplegit/open
+  --- 
+  issues: 
+  - number: 1
+    votes: 0
+    created_at: 2009-04-17 14:55:33 -07:00
+    body: my sweet, sweet issue
+    title: new issue
+    updated_at: 2009-04-17 14:55:33 -07:00
+    user: schacon
+    state: open
+  - number: 2
+    votes: 0
+    created_at: 2009-04-17 15:16:47 -07:00
+    body: the body of a second issue
+    title: another issue
+    updated_at: 2009-04-17 15:16:47 -07:00
+    user: schacon
+    state: open
+
+== Python commands line interface ==
+
+Someone even created a Python command line interface [3].
+
+A few examples (there any many more examples in [3]):
+
+ghi list [-s open|closed|all]         # show open, closed or all
+                                      # issues (default: open)
+
+ghi [-s o|c|a] -v                     # same as above, but with issue
+                                      # details
+
+ghi open                              # create a new issue (with
+                                      # $EDITOR)
+
+ghi label add <label> <nr>            # add <label> to issue <nr>
+
+ghi search <term> [-s open|closed]    # search for <term> in open or
+                                      # closed issues (default: open)
+
+
+Csabi
+
+[1] http://github.com/blog/411-github-issue-tracker
+[2] http://develop.github.com/p/issues.html
+[3] http://mail.python.org/pipermail/python-list/2009-April/711350.html

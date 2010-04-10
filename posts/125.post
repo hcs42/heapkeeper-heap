@@ -1,0 +1,23 @@
+Author: Attila Nagy
+Subject: __repr__ function (2009-04-19 f9b1451718)
+Tag: commit
+Message-Id: <b29f917d0904270921n4cffe035o466b6c4e6127a295@mail.gmail.com>
+Parent: <49F0BD26.2090804@gmail.com>
+Date: Mon, 27 Apr 2009 18:21:57 +0200
+
+> I see that it would be more convenient for us if it was shorter,
+> but this verbosity is very helpful for our future users and not that
+> inconvenient for us.
+
+Yes, the way it is solved right now is far from perfect. I ran into
+this just now:
+
+    >>> postdb().roots()[0]
+    183
+
+Not exactly the expected answer. How about:
+
+    >>> postdb().roots()[0]
+    <post '183'>
+
+I'll change the __repr__ to return this.

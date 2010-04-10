@@ -1,0 +1,18 @@
+Author: Attila Nagy
+Subject: Single-use lists vs. tuples
+Tag: python
+Message-Id: <b29f917d0910240456k33778196x73a017b43f4febc5@mail.gmail.com>
+Parent: <4AE2DCC1.3080604@gmail.com>
+Date: Sat, 24 Oct 2009 13:56:56 +0200
+
+> Long ago I tried something like this:
+>
+>    pos in 'begin', 'end'
+
+It really must be a long time ago you tried this :)
+
+I mentioned in another thread (maybe one on timestat) that our Python
+knowledge has matured along with Hk, so dated parts of Hk code may be
+subpar.
+
+[!todo link here]

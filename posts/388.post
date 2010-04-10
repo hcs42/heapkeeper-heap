@@ -1,0 +1,30 @@
+Author: Attila Nagy
+Subject: "is not None" versus "!= None" (2009-05-07 179f5cf18e)
+Tag: commit
+Tag: prop
+Tag: reviewed
+Message-Id: <20090708083227.c0f86b5c.nagy.attila.1984@gmail.com>
+Parent: <4A53A9AA.8070108@gmail.com>
+Date: Wed, 8 Jul 2009 08:32:27 +0200
+
+> Do you agree to use "is not None" from now on? I guess we should also
+> replace the existing "!= None"-s with "is not None".
+
+I prefer to keep my code as readable as possible. I have the
+impression that even if we like to think that we are quite fluent in
+programming languages, a piece of code is most comprehensible if it is
+as close to English as possible (or maybe it's just me and Python...)
+
+But even if I know no Python, this:
+
+    if recipient is None:
+
+is still easily understood.
+
+That's why I use it. Now that you propose it, I of course say OK.
+
+As a side note, I googled a bit to find out if there is any semantic
+difference between '==' and 'is' in this case. I found this noteworthy
+piece:
+
+http://stackoverflow.com/questions/306313/python-is-operator-behaves-unexpectedly-with-integers

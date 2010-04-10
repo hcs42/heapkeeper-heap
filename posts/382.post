@@ -1,0 +1,16 @@
+Author: Attila Nagy
+Subject: 779f05bff7 (2009-06-28) Post.parse_header: more liberal on blank line
+Tag: commit
+Message-Id: <b29f917d0906290004h1acf6d55k24b9657336679872@mail.gmail.com>
+Date: Mon, 29 Jun 2009 09:04:38 +0200
+
+> Post.parse_header: more liberal on blank line
+>
+> The header is post files is terminated by a blank line. Previously this line
+> had to be totally empty. Now it is allowed to put white spaces into the blank
+> line and it will still terminate the header.
+
+Isn't this a bit in conflict with your earlier aim [1] to make the
+syntax of post files as rigid as possible?
+
+[1] heap://ums/12

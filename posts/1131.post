@@ -1,0 +1,16 @@
+Author: Csaba Hoch
+Subject: Pylint
+Message-Id: <4ddb9e5b1002100935o509b1a83j88df4a1fc9872b42@mail.gmail.com>
+Parent: <20100210183040.f5842d0d.nagy.attila.1984@gmail.com>
+Date: Wed, 10 Feb 2010 18:35:21 +0100
+
+> Don't you have the impression that unit testing is far superior to
+> what pylint does, and largely makes it unneeded?
+
+Largely, but not completely. I like that pylint tries to force coding
+conventions, because it is better to say to fellow developers that
+"write it this way because pylint says so" that "write it this way
+because I say so". However, it can backfire, if someone wants to do
+something because pylint says so and I don't...
+
+Some people think unit tests makes static typing unneeded.

@@ -1,0 +1,19 @@
+Author: Attila Nagy
+Subject: Managing several heaps in Heapkeeper
+Tag: prop
+Message-Id: <b29f917d1002150937q5cbfcc24s8c8dffcca3ab58a1@mail.gmail.com>
+Parent: <4B76739D.8060508@gmail.com>
+Date: Mon, 15 Feb 2010 18:37:55 +0100
+
+> I'm not sure whether you wanted to make a point in this post beside
+> spelling out this principle and the reason behind it.
+
+Umm... OK, I have to admit I'm not really sure what was on my mind
+when I wrote this post. Maybe I thought if an organization doesn't
+have this rule, this and similar problems could arise. Which is why we
+have it.
+
+Let's see it as what you said: an explanation of an important reason
+behind this principle.
+
+(Maybe I'll edit the Heap to look as if this were my original intention...)

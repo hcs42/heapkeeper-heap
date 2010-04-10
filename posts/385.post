@@ -1,0 +1,36 @@
+Author: Csaba Hoch
+Subject: Filename operations of Post (2009-05-07 179f5cf18e, 2009-06-20 f51636edd1)
+Tag: commit
+Message-Id: <4A53A9D3.6060802@gmail.com>
+Date: Tue, 07 Jul 2009 22:02:27 +0200
+
+Commit 179f5cf18e (2009-05-07) contained this modification:
+
+     class Post:
+
+         [...]
+
+    +    def htmlthreadbasename(self):
+    +        """The name of the HTML file that can be generated from the thread."""
+    +        assert(self._postdb.parent(self) == None)
+    +        return os.path.join('thread_' + self._heapid + '.html')
+    +
+         def htmlthreadfilename(self):
+             """The name of the HTML file that can be generated from the thread."""
+             assert(self._postdb.parent(self) == None)
+             return os.path.join(self._postdb.html_dir(),
+                                 'thread_' + self._heapid + '.html')
+
+The documentation of htmlthreadbasename is incorrect, it should be
+"The base name of the HTML file...". The implementation of
+htmlthreadfilename can also be improved:
+
+    def htmlthreadfilename(self):
+        """The name of the HTML file that can be generated from the thread."""
+        return os.path.join(self._postdb.html_dir(), self.htmlthreadbasename())
+
+Since this implementation invoked htmlthreadbasename which executes
+the assertion, it can be removed from htmlthreadbasename.
+
+I commited these changes in f51636edd1 (2009-06-20). The commit also
+contains test code for the filename operations of Post.

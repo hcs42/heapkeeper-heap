@@ -1,0 +1,42 @@
+Author: Attila Nagy
+Subject: Workflow with separate repositories
+Message-Id: <b29f917d0908180440m3dd5ea73kc49574d0fa4d030c@mail.gmail.com>
+Date: Tue, 18 Aug 2009 13:40:39 +0200
+
+[!todo Add references to other threads on the separate repo topic, and
+break this thread.]
+
+> == git branches ==
+>
+> What do you think, which branch should I pull your commit into, when
+> I think it's "perfect"? It seems that master should be used for this.
+> Do you agree?
+
+I imagine a three-stage approach:
+
+You first pull my commit into a temporary branch on heapkeeper_. You
+look what it does, comment on it, then I correct my code in further
+commits. You pull those, comment back etc. until it's ready for the
+next step.
+
+Then, you integrate it into heapkeeper_/master, the base commit and
+all improvement commits squished together, with the same commit
+message that'll appear in the stable "heapkeeper" tree. This means
+that I'll get back this commit in my heapkeeper_/master's "origin", so
+I'll pull it back, and I'll base my further ideas upon it.
+
+Then, if the commit "seems stable", ie. it has endured a given trial
+time, and no new bugs have surfaced, the commit can be transferred to
+the `heapkeeper` repository, which is the stable.
+
+This approach is modeled after Debian's stable/testing/unstable
+workflow, which is secure and stable, but also slow. We'd use it not
+for stability, but rather to keep our "official" history clean. But
+new features should appear in the "public" repo with an acceptable
+turnaround time.
+
+> I think I will make another branch, which you can review before I
+> merge them into master. Shall it be named "experimental", "exp",
+> "slave", "hcs", or something else?
+
+Maybe "review". What do you think?

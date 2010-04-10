@@ -1,0 +1,25 @@
+Author: Attila Nagy
+Subject: Quote
+Tag: post syntax
+Message-Id: <20090531214122.757d6f4b.nagy.attila.1984@gmail.com>
+Parent: <4A19AD65.3080708@gmail.com>
+Date: Sun, 31 May 2009 21:41:22 +0200
+
+> We should have some kind of method for quoting sources.
+
+> Solution 1: Let's say if a "raw text" starts with quotation mark, than
+> it is not raw text but a quote.
+
+No. This would totally invalidate the usefulness of a raw segment.
+
+> Solution 2: Let's have a marker that indicates that the following "raw
+> text" is a quote:
+> 
+>     Asimov said once: [quote]
+> 
+>         "I don't believe in an afterlife, so I don't have to spend my
+>         whole life fearing hell, or fearing heaven even more. For
+>         whatever the tortures of hell, I think the boredom of heaven
+>         would be even worse."
+
+I like this solution. Keeps both the email and the HTML nice and readable.

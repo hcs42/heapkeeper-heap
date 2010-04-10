@@ -1,0 +1,32 @@
+Author: Csaba Hoch
+Subject: Keywords
+Tag: feature
+Tag: idea
+Tag: reviewed
+Message-Id: <4AFA4B23.9070905@gmail.com>
+Date: Wed, 11 Nov 2009 06:26:59 +0100
+
+Sometimes it is hard to find a post you are looking for even with
+grep, because the post just does not contains the word you want in the
+form you want.
+
+For example yesterday I was looking at the snmpget man page and
+looking for how to set how many times it should retry a request, and
+searched for "retry", with no results. I had to read through the
+manual when it turned out it was written as "retries" in the text, in
+plural.
+
+(In GMail, it is even more annoying, because it searches only for
+whole words, which is quite inconvenient is you are Hungarian.)
+
+So we could have keywords in our email to make it easier to find them.
+Tags are similar things, but more general. I will not add a "GMail",
+"grep", "snmp", etc. tag to this post, which I may want to add these
+keywords.
+
+This could be a Hk feature but first it does not have to be. First
+what about just writing them inside a meta: [keywords GMail grep snmp]
+That way we could use grep to find them. Nobody has to write keywords,
+it is only for making your own life easier when you think you will
+look for this post in the future and you know that the keywords will
+help you to find it.

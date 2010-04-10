@@ -1,0 +1,19 @@
+Author: Attila Nagy
+Subject: Images and intro page (5b60b95a32 2009-08-01)
+Tag: commit
+Tag: sphinx
+Message-Id: <b29f917d0908012348j6b4158dche29103a4bc6da83@mail.gmail.com>
+Parent: <4A74AF26.2050709@gmail.com>
+Date: Sun, 2 Aug 2009 08:48:47 +0200
+
+> You basically renamed index.rst to index-main.rst. Why did you leave
+> part of it commented out in the new index.rst? I don't think that has
+> too much use.
+
+Definitely not (except for emphasizing that I didn't write it from scratch :))
+
+I removed the comments in a new commit. Maybe when rewriting the
+repository, we could pull these three commits together (699cfa,
+0c75b1 and 5b60b9.)
+
+Why does 5b60b9 have you as the author?

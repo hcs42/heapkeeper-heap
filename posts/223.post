@@ -1,0 +1,11 @@
+Author: Csaba Hoch
+Subject: Using `` in docstring for variables
+Tag: prop
+Tag: reviewed
+Message-Id: <4A0B1936.40601@gmail.com>
+Parent: <49B2BC67.1030603@gmail.com>
+Date: Wed, 13 May 2009 21:02:14 +0200
+
+[open]
+
+Since we use Sphinx, we should use ``l`` instead.

@@ -1,0 +1,16 @@
+Author: Csaba Hoch
+Subject: hkshell.ga falls into endless loop when there is a cycle in the thread structure
+Tag: bug
+Tag: reviewed
+Message-Id: <4AACE319.2080104@gmail.com>
+Parent: <4AAC9C72.4040304@gmail.com>
+Date: Sun, 13 Sep 2009 14:18:33 +0200
+
+[close]
+
+I implemented cycle detection in hklib.PostDB.root. I also modified
+hklib.Generator.thread to raise an AssertionError.
+
+Commits:
+- 5bf76c872e PostDB.root: cycle detection implemented
+- 2273026b9e Generator.thread: detects cycles

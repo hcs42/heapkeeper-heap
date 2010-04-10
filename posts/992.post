@@ -1,0 +1,103 @@
+Author: Attila Nagy
+Subject: Commit "Post.create_header: minor docstring improvement" (b738ba6, 2009-08-27)
+Message-Id: <b29f917d0912201301u37bd8b03n8bf86dcbabf1f059@mail.gmail.com>
+Parent: <4AE41384.6000703@gmail.com>
+Date: Sun, 20 Dec 2009 22:01:12 +0100
+
+>> Warning: the function `copy_one` is jedi code. I was reading it while
+>> watching TV -- it took about two hours to begin to understand what it
+>> does, then I had to do experiments in Python, because I couldn't
+>> believe that it does what it should. But it does -- the function is
+>> thoroughly tested, breaking it makes 70 tests fail.
+>
+> :)))
+
+Jedi code is OK -- it shows off our skills, it is educative to
+understand, but it should always be adequately documented.
+
+>> I would rewrite its docstring like this (of course later complete with
+>> proper arguments and returns sections):
+>
+> Which would be this:
+
+Thanks!
+
+> If you have a better name for `d`, I'm listening...
+
+Well, `dictionary_to_be_rewritten` would be too long, `old_dict` is
+cryptic, so let's stay with `d` for now.
+
+> I hope you don't have a problem with the {key: value} and [items]
+> notation. I stole that from the Erlang documentation conventions.
+
+It's perfectly OK with me.
+
+>> """Creates a dictionary of headers from the dictionary returned by the
+>> `parse_header` function. This dictionary contains only keys of
+>
+> The word "This" is ambiguous here.
+
+Yes it is, thanks.
+
+>> existing header names, and if the source dictionary contains any other
+>> keys, an exception will be raised.
+>
+> Not true. A warning is printed in this case:
+
+Yes, but it was true at the point when this docstring was added :)
+
+>> Two kinds of headers exist, one is which can have multiple values.
+>
+> "one of which"?
+
+Umm, a grammatical question. Let's simplify:
+
+    There are 10 kinds of people. One is which can read binary.
+
+vs.
+
+    There are 10 kinds of people. One of which can read binary.
+
+I think the latter form is better when the two sentences are run together:
+
+    There are 10 kinds of people, one of which can read binary.
+
+This is only gut feeling, please don't ask me to explain it any
+further, because I won't be able to. But this experiment shows that my
+gut feeling is the same as yours: in this case, "one of which" would
+be better.
+
+> Having examples for these kinds of functions is very good, lately I
+> got used to writing them. (If we write a nice test case, basically we
+> get the example for free.)
+
+I agree,
+
+> I think we can allow ourselves to put linebreaks into the output
+> dictionary in places that are convenient to the reader. Maybe we could
+> even introduce other white spaces:
+>
+>        >>> Post.create_header({'Author':['Someone'],
+>        ...                     'Subject':['topic'],
+>        ...                     'Tag':['one','two']})
+>        {'Parent': '',
+>         'Author': 'Someone',
+>         'Flag': [],
+>         'Tag': ['one', 'two'],
+>         'Date': '',
+>         'Message-Id': '',
+>         'Subject': 'topic'}
+>
+> What do you think?
+
+This will kill our naive KLOC values, but everything for the reader.
+
+We could add a "non-naive" KLOC script to our scripts/ directory that
+skips comments, docstrings and whitespace.
+
+>> Do you think this would be more helpful than the original?
+>
+> Definitely, thanks!
+
+OK, I'll incorporate it into the set of docstring improvements I'm
+planning to do in the next few days. Really!

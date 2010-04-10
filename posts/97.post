@@ -1,0 +1,19 @@
+Author: Attila Nagy
+Subject: Should the "reviewed" tag be part of the infrastructure?
+Tag: "reviewed" tag
+Tag: idea
+Tag: reviewed
+Message-Id: <b29f917d0904170944o69310b0di9fbc88bd7b4a4398@mail.gmail.com>
+Date: Fri, 17 Apr 2009 18:44:56 +0200
+
+We already mentioned that the [r]/[revised]/[reviewed] tag is a
+special one, as it makes sense on all heaps, regardless of the topic.
+Therefore, I think it might make sense to give it special behavior.
+(Possibly use it as a new header type like "Reviewed: true"?)
+
+Right now, this feature is just another tag, and displayed as a tag.
+But I think it would make sense to display it more visually, eg. as an
+icon, or a different text color in the index. Reviewed tags could
+have, for example, a small green circle with a tick in it. Then, the
+editors would be able to quickly spot which messages lack final
+approval.

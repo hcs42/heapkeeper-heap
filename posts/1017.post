@@ -1,0 +1,9 @@
+Author: Attila Nagy
+Subject: Mapping for removing trailing whitespace
+Tag: vim
+Message-Id: <b29f917d1001020556u4918f68av70e4fc4f72c1f0c5@mail.gmail.com>
+Parent: <4B3F4958.2090502@gmail.com>
+Date: Sat, 2 Jan 2010 14:56:27 +0100
+
+Is there a way in Vim to attach a hook to saving, so that trailing
+whitespaces get cleaned up automatically on saving?

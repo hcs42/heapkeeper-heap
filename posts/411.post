@@ -1,0 +1,32 @@
+Author: Csaba Hoch
+Subject: Heapkeeper's version number in the documentation
+Message-Id: <4A6A8E84.2080304@gmail.com>
+Parent: <20090721211033.93fe64fc.nagy.attila.1984@gmail.com>
+Date: Sat, 25 Jul 2009 06:48:04 +0200
+
+> In the documentation output, Heapkeeper's version is incorrectly
+> marked as v1.0. This could be changed to 0.2, or 0.3 once it is
+> reached,
+
+Fixed; has been changed to 0.3uc.
+
+The version number is stored in doc/conf.py:
+
+   # The short X.Y version.
+   version = '0.3uc'
+   # The full version, including alpha/beta/rc tags.
+   release = '0.3uc'
+
+Maybe we should write a script (and put it under the "scripts"
+directory) that modifies the release number in all places. Currently
+there are two such places:
+- hklib.py
+- conf.py
+
+> but I think it'd be better to remove the version number from the
+> name of the documentation root altogether.
+
+What do you mean by "documentation root"?
+
+We should talk in a separate thread about how are releases and URLs
+will work together.

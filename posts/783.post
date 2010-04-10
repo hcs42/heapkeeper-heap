@@ -1,0 +1,11 @@
+Author: Attila Nagy
+Subject: Docstrings: ClassName vs. class name
+Message-Id: <b29f917d0910240503o7ee1b294pdcbce896066b9bc1@mail.gmail.com>
+Parent: <4AE2E2B8.5060006@gmail.com>
+Date: Sat, 24 Oct 2009 14:03:56 +0200
+
+> If I want to emphasize its type (because e.g. I'm writing a tutorial
+> and I'm introducing the reader what a "post item" is) then I use the
+> latter one, but otherwise I use the former one.
+
+OK. I like that, too, so let's call it a convention.

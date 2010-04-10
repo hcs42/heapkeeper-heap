@@ -1,0 +1,13 @@
+Author: Csaba Hoch
+Subject: Ideas sleeping in the heap
+Tag: cleanup
+Tag: meta
+Message-Id: <4B61D3D6.8020706@gmail.com>
+Parent: <20100127083802.b3e265ff.nagy.attila.1984@gmail.com>
+Date: Thu, 28 Jan 2010 19:13:42 +0100
+
+> We decided to add keywords to posts [1]. When we are cleaning up the heap,
+> we should add keywords to existing posts.
+
+OK, but I won't overdo it. I won't add a word to the keywords if it is
+present in the text.

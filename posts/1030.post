@@ -1,0 +1,101 @@
+Author: Csaba Hoch
+Subject: Running hk with different profiles
+Message-Id: <4B5178FF.8070509@gmail.com>
+Date: Sat, 16 Jan 2010 09:29:51 +0100
+
+I use a script called 'hk' for invoking Hk with different profiles.
+
+By reading different config files and hkrcs, the script makes it
+easier to try that I did not break anything for other users when
+committed a change to Hk.
+
+For example:
+
+Starting Hk without reading any hkrcs:
+
+    $ hk ums-pure
+    Importing hkrc...
+    Module not found: "hkrc"
+
+    >>>
+
+Starting hkrc as Attis uses it:
+
+    $ hk ums-attis
+    Importing hkrc_attis...
+    Importing hkrc_attis OK
+
+    >>>
+
+Starting my usual hkrc:
+
+    $ hk ums
+    Importing hkrc_csabahoch...
+    Importing hkrc_csabahoch OK
+    Importing local...
+    Importing local OK
+
+    >>>
+
+Starting my sandbox (this is not UMS but a sandbox heap):
+
+    $ hk sb-pure
+    Importing hkrc...
+    Module not found: "hkrc"
+
+    >>>
+
+The script itself follows:
+
+    #!/bin/bash
+
+    function print_help
+    {
+        cat <<EOF
+    Usage:
+        hk <profile> [args]
+
+    Profiles:
+        ums
+        ums-csabahoch
+        ums-attis
+        ums-pure
+        sb
+        sb-pure
+    EOF
+    }
+
+    cd $Hk  # go into Hk's directory
+    export HEAPKEEPER_EDITOR="gvim -f -c :set\\ ft=mail"
+
+    case "$1" in
+        -h|--help|'')
+            print_help
+            exit
+            ;;
+        ums)
+            args="--configfile=ums.cfg --hkrc=hkrc_csabahoch --hkrc=local"
+            ;;
+        ums-csabahoch)
+            args="--configfile=ums.cfg --hkrc=hkrc_csabahoch"
+            ;;
+        ums-attis)
+            args="--configfile=ums.cfg --hkrc=hkrc_attis"
+            ;;
+        ums-pure)
+            args="--configfile=ums.cfg"
+            ;;
+        sb)
+            args="--configfile=sandbox.cfg --hkrc=hkrc_csabahoch --hkrc=local"
+            ;;
+        sb-pure)
+            args="--configfile=sandbox.cfg"
+            ;;
+        *)
+            echo "Unknown profile: $1"
+            exit 1
+            ;;
+    esac
+
+    shift
+    python hk.py $args "$@"

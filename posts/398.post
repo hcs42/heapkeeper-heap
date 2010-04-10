@@ -1,0 +1,10 @@
+Author: Csaba Hoch
+Subject: Renaming tag-manipulator commands
+Tag: prop
+Tag: reviewed
+Message-Id: <4ddb9e5b0907191118p4b05cf64re3a100499958f209@mail.gmail.com>
+Parent: <b29f917d0907190827w4109a3cbp2d27c88f7d7f41b5@mail.gmail.com>
+Date: Sun, 19 Jul 2009 20:18:32 +0200
+
+Because otherwise "propagate subject" (now pS) would have collided
+with the ps() command. which creates a PostSet object.
