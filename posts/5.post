@@ -13,5 +13,6 @@ would not imply the convention that a footnote should contain one
 reference.
 
 So to sum up the proposal:
-cite -> footnote
-cite-definition -> footnote-body
+
+- cite -> footnote
+- cite-definition -> footnote-body
