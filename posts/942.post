@@ -8,7 +8,7 @@ Date: Sun, 15 Nov 2009 11:53:52 +0100
 
 >>> I think the test case `Test_PostSet__threads.test_sorted_list` is a no-op.
 >> What do you mean by no-op?
-> 
+>
 > It doesn't depend on the sorting that it claims to be testing. If the
 > sorting does nothing, it still passes, at least that's what I think.
 

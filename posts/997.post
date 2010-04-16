@@ -19,7 +19,7 @@ following word sequence:
 
 the resulted postset would be equal to the result of the following
 program:
-    
+
     def contains(word):
         """Returns a function that can decide whether a given post
         contains the given word."""

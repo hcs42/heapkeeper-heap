@@ -9,7 +9,7 @@ Date: Sun, 31 May 2009 09:00:40 +0200
 >> So I guess I have to accept that some character sequences will be
 >> handled as itemization marks (`[-+*]\+\|\d\+\.`) and other will not
 >> be. I don't think we should care about Roman numerals. [1]
-> 
+>
 > I think this is the rational consensus between trying to provide a
 > generic support for itemizations and trying to keep it realizable.
 
@@ -25,7 +25,7 @@ OK.
 >>> easy to filter out.
 >> Considering the problem of embedded itemizations that I described
 >> above, I don't think we can do anything about these now.
-> 
+>
 > Yes, I also see the problem. But we should keep the option open for
 > the demanding user.
 
@@ -34,7 +34,7 @@ demand", that's an open option, too :)
 
 > How about a special meta for nonregular itemization marks? This
 > could be "*", for example.
-> 
+>
 >     Good:[-]
 >     [* a.] Authors:
 >     [* aa.] Asimov

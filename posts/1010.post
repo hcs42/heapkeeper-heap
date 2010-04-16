@@ -10,7 +10,7 @@ Date: Thu, 31 Dec 2009 20:41:20 +0100
 >> - add web.py to the Heapkeeper repository
 >> - describe how to get web.py and where should the user put it
 >> [...]
-> 
+>
 > I'd prefer the first, [...]
 
 web.py is on github [1]. It is not just one file but quite a few ones.

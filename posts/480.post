@@ -17,7 +17,7 @@ Date: Wed, 05 Aug 2009 10:27:55 +0200
 > preferred way of doing things. The installer of the non-cygwin Windows
 > version of git [1] asks which EOL behaviour to use; using CRLF is the
 > default.
-> 
+>
 > So I guess we should go with (d). Actually, that is also the easiest
 > for us to handle; we just have to write a wrapper around os.write. Or
 > we may even get away without it -- it is very probable that someone

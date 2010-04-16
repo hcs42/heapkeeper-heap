@@ -8,7 +8,7 @@ Date: Sun, 10 May 2009 13:07:36 +0200
   +#!/bin/bash
   +
   +./hkshell 'on("t")' "for i in range($2): $1()" 'q()' | grep "^$1" | cut -d " " -f 2 | scripts/stat.py
-  
+
   ------------------------------- scripts/stat.py -------------------------------
   +#!/usr/bin/python
   +
@@ -70,7 +70,7 @@ corrected pushdoc -- I have just realized that its handling of
 
   --------------------------------- scripts/stat ---------------------------------
   +  #!/bin/bash
-  +  
+  +
   +  ./hkshell 'on("t")' "for i in range($2): $1()" 'q()' | grep "^$1" | cut -d " " -f 2 | scripts/stat.py
 
 I would write

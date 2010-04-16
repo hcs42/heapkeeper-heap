@@ -7,7 +7,7 @@ Date: Sat, 31 Oct 2009 11:13:36 +0100
 
 > `PostSet._to_set` is where the work is done. No surprise here, a loop
 > and a chain-if:
-> 
+>
 >     for prepost in prepostset:
 >         # calculating the post for prepost
 >         if isinstance(prepost, str) or isinstance(prepost, int):
@@ -17,7 +17,7 @@ Date: Sat, 31 Oct 2009 11:13:36 +0100
 >             post = prepost
 >         elif prepost == None: # prepost is None
 >             continue
-> 
+>
 > This of course does the job, but it would have been conceptually
 > cleaner to have this chain-if in a separate function, and call that
 > from the loop and `hkshell.p`, too.

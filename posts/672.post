@@ -23,7 +23,7 @@ Example:
       File "/a/cp/hk/hk/test_hklib.py", line 2190, in assertTextStructsAreEqual
         hkutils.textstruct_to_str(text2))
     AssertionError: The following strings should be equal but they are not:
-    
+
      <html>
        <head>
          <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
@@ -32,7 +32,7 @@ Example:
        </head>
        <body>
          <h1 id="header">Heap index</h1>
-     
+
      <div class="postbox">
      <span class="postsummary"><span class="author"><a href="0.html">author0</a></span>
      <span class="subject"><a href="0.html">subject0</a></span>
@@ -54,14 +54,14 @@ Example:
     +</span><div class="postbox">
      </span></div>
     +</div>
-     
+
        </body>
      </html>
-    
-    
+
+
     ----------------------------------------------------------------------
     Ran 108 tests in 0.240s
-    
+
     FAILED (failures=1)
 
 Together with the commit hooks and my Vim customization for the

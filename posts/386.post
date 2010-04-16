@@ -8,7 +8,7 @@ From hklib.Generator.full_thread:
 
   for curr_post in thread._postdb.iter_thread(thread):
       l.append(Html.thread_post_header(curr_post.htmlfilebasename(),
-                                       Html.escape(curr_post.author()), 
+                                       Html.escape(curr_post.author()),
                                        Html.escape(curr_post.subject()),
                                        curr_post.tags(),
                                        curr_post.heapid(),
@@ -24,7 +24,7 @@ What do you think about using this formatting instead:
       l.append(
           Html.thread_post_header(
               curr_post.htmlfilebasename(),
-              Html.escape(curr_post.author()), 
+              Html.escape(curr_post.author()),
               Html.escape(curr_post.subject()),
               curr_post.tags(),
               curr_post.heapid(),

@@ -10,7 +10,7 @@ Date: Sun, 12 Apr 2009 16:11:04 +0200
 
 >> - `sha` is the first 10 characters of the SHA1 ID. Or should it be
 >>  less?
-> 
+>
 > With 5 digits, you have 16^5 = 2^20 = 1048576 different hashes. With
 > 10000 non-colliding hashes, the chance of collision is about 1:100
 > with each new hash added. (Correct me on that if I'm wrong,

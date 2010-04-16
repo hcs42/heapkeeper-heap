@@ -6,7 +6,7 @@ Date: Tue, 28 Apr 2009 23:02:29 +0200
 
 I think I this case it is better to use "" instead of '' so we save
 the backslashes:
- 
+
      def __repr__(self):
 -        return self._heapid
 +        return '<post \'' + self._heapid + '\'>'

@@ -7,13 +7,13 @@ Date: Sat, 24 Oct 2009 12:53:53 +0200
 
 > I noticed that you consequently use lists instead of tuples even if
 > they are never altered. E.g.
-> 
+>
 >     assert(pos in ['begin', 'end'])
-> 
+>
 > Why is it better than
-> 
+>
 >     assert(pos in ('begin', 'end'))
-> 
+>
 > ?
 
 It's not.

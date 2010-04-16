@@ -6,7 +6,7 @@ Parent: <b29f917d0908180352w10a20f9by576475d2019cf3cc@mail.gmail.com>
 Date: Wed, 19 Aug 2009 20:01:46 +0200
 
 >> Also, I would call the `mail` variable `email`.
-> 
+>
 > No good, as it would hide the `email` module! So, instead I corrected
 > all "email"s to "mail", so that the naming will be consistent.
 

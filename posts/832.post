@@ -11,7 +11,7 @@ Date: Sat, 31 Oct 2009 12:10:42 +0100
 No, I guess you are right.
 
 > So, my newest version:
-> 
+>
 >    try:
 >        self._next_heapid = max(heapids) + 1
 >    except ValueError:

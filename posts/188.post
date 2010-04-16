@@ -48,7 +48,7 @@ This is the commit in question (179f5cf18e):
 
     @@ -2092,10 +2120,13 @@ class Generator(object):
              date_str = options.date_fun(post, options)
-     
+
              section = options.section
     -        if section.posts == CYCLES:
     +        if options.always_active:
@@ -59,7 +59,7 @@ This is the commit in question (179f5cf18e):
     +                active = True
     +            else:
     +                active = post in section.posts
-     
+
              if options.locallinks:
                  link = '#' + post.heapid()
 

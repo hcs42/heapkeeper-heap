@@ -8,28 +8,28 @@ Parent: <4AA4ABFD.2060201@gmail.com>
 Date: Wed, 30 Sep 2009 10:18:13 +0200
 
 > I have a problem with the EDITOR environment variable.
-> 
+>
 > In the _e branch I have a commit, which is not the perfect solution.
-> 
+>
 > == Before ==
-> 
+>
 > Before the commit, we just do this:
-> 
+>
 >  subprocess.call(editor.split() + files)
-> 
+>
 > This has a problem for example with this EDITOR variable:
-> 
+>
 >  $ export EDITOR="gvim -c 'setf mail'"
-> 
+>
 > Because `editor.split()` is this:
-> 
+>
 >  ["gvim", "-c", "'setf", "mail'"]
-> 
+>
 > So this is what we called if we had 2 files:
-> 
+>
 >  subprocess.call(["gvim", "-c", "'setf", "mail'", file1, file2])
-> 
-> Btw, "git commit" has the same problem, it does not work with 
+>
+> Btw, "git commit" has the same problem, it does not work with
 > EDITOR="gvim -c 'setf mail'". But I want Hk to handle this better,
 > git's incapability should not be an excuse.
 

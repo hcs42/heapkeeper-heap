@@ -25,7 +25,7 @@ that's like going to public.
 Do that. I haven't found anything, except for this: [2]
 
 I have also been playing around in a sandbox repo. In the sandbox, I
-tried to rewrite the history and push the new one [3]. 
+tried to rewrite the history and push the new one [3].
 
 The conclusion is: it seems to me that we have no way of doing what we
 want to do except for deleting and re-creating the heapkeeper

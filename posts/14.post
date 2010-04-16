@@ -12,7 +12,7 @@ This commit is definitely a nice solution:
     +            raise (HeapException,
     +                  'Error parsing message file "%s"'
     +                    % getattr(f, name, ""))
- 
+
 But I have two comments.
 
 == % and tuples ==

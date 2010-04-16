@@ -27,7 +27,7 @@ line only open as long as possible, ie. forever.
 > representation: the current mail file format, XML or YAML.
 
 I like this idea. Still, a heap will be a documented format, one of a
-set of possibilities: mailfiles, XML, YAML, SQL... 
+set of possibilities: mailfiles, XML, YAML, SQL...
 
 A possible roadmap:
 1. Mailfile-based Hk with static HTML output (nearing completion, only

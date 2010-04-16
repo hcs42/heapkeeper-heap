@@ -9,9 +9,9 @@ Date: Wed, 19 Aug 2009 08:48:31 +0200
 >> What do you think, which branch should I pull your commit into, when
 >> I think it's "perfect"? It seems that master should be used for this.
 >> Do you agree?
-> 
+>
 > I imagine a three-stage approach:
-> 
+>
 > You first pull my commit into a temporary branch on heapkeeper_. You
 > look what it does, comment on it, then I correct my code in further
 > commits. You pull those, comment back etc. until it's ready for the
@@ -226,7 +226,7 @@ advise you to forget it.
 >> I think I will make another branch, which you can review before I
 >> merge them into master. Shall it be named "experimental", "exp",
 >> "slave", "hcs", or something else?
-> 
+>
 > Maybe "review". What do you think?
 
 OK, good idea! Or if we accept the idea of private repos, it could be

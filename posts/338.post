@@ -24,7 +24,7 @@ Just to annoy you:
       f. I think though g is better.
 
 > But what if one needs structures like this:
-> 
+>
 >     Head:[-]
 >     a. Apple
 >     aa. Green apple
@@ -33,7 +33,7 @@ Just to annoy you:
 >     ba. Green banana
 >     bb. Yellow banana
 >     bba. Yellow banana with brown spots
-> 
+>
 > Lawyers like to use this kind of multi-level itemization with
 > multi-character letter marking.
 

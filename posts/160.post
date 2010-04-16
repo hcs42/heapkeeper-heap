@@ -12,16 +12,16 @@ character-graphical program that would perform the setup.
 
 >>> My list of what we need:
 >>> * a setup script
-> 
+>
 >> Really? What do you mean by a setup script? A script that for example
 >> creates hk.cfg?
-> 
+>
 > Yes.
-> 
+>
 >> I'm not a fan of the idea. I think it is easier to
 >> edit a config file based on the tutorial than answering question. As
 >> least I hate answering questions for a script, because:
-> 
+>
 > You don't have any kind of psychological restraints from diving into
 > using the program right away, of course, but don't forget that it's
 > you who wrote it. I think in the world of open source, when a
@@ -49,7 +49,7 @@ I don't :)
 
 >> - I don't see the full picture (e.g. all questions) when answering a
 >>  particular one.
-> 
+>
 > You are right, but just think of .git/config. It's neither long nor
 > overly complicated, and it could perfectly be written by hand; still
 > it's a huge gain you don't have to do it every time you set up a new
@@ -63,7 +63,7 @@ init", I would rather copy and modify an existing config file.
 
 >> - You have to became familiar with the config file itself anyway if
 >>  you want to change a setting.
-> 
+>
 > Probably not if all you want to do is change something later, e.g. if
 > the e-mail password changes.
 
@@ -71,7 +71,7 @@ True.
 
 >> - It is usually impossible to go back if you later realize you give an
 >>  incorrect answer before; you can only redo the whole thing.
-> 
+>
 > Of course a setup script doesn't have to be dumb. It takes love, care
 > and patience to do it, but using Dialog or Whiptale [1], you can do
 > things like elegant ncurses-based setup scripts with 'back' and 'next'

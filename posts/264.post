@@ -12,7 +12,7 @@ really. So, sorry for all the misunderstandings.>>>
 >> a mailing list that exists purely to create documentation for the
 >> project hosted at GitHub, hence, the mailing list archive is purely
 >> documentation.
-> 
+>
 > I thought we would communicate with our users and other developers via Hh.
 
 No, you've misunderstood me, though I can't really blame you for it. Of
@@ -28,7 +28,7 @@ documentation: they are either plans or howtos.
 >> ensure there's really no sensitive information within. If it's
 >> difficult to remove nasty revisions from Wikipedia's database, with
 >> GitHub, it's even more painful.
-> 
+>
 > I understand that you wrote this to prove that we should not have any
 > concerns, but as I read it, and started to have some...
 
@@ -42,7 +42,7 @@ voicing my concerns.
 > that pushes new posts to the repository in real time. That's how
 > mailing lists work -- if you post something, it is in the web archive
 > a few minutes later.
-> 
+>
 > What you describe is not that. You say that every post has to go to
 > GitHub via a heap maintainer.
 
@@ -58,13 +58,13 @@ This discussion showed me how important it will be to clarify the data model
 prior to moving on to the Hkweb stage.
 
 > To conclude:
-> 
+>
 > The advantages of using GitHub (with human repository updates):
 > - We would not have to pull from each other's PC.
 > - Anybody could download Hh any play around with it.
 > - Anybody could make an Hh-clone, make modifications and we could pull
 >   from them.
-> 
+>
 > Main disadvantage:
 > - If someone goes there, it will remain there forever.
 

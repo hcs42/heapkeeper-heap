@@ -8,27 +8,27 @@ Date: Tue, 01 Sep 2009 20:51:43 +0200
 >>> What we need to have this working:
 >>> - mechanism to track the subthread specified
 >> Do you mean expanding (105,107) to [105,106,107]?
-> 
+>
 > Yes.
-> 
+>
 >> I once described that PostDB.expf() and PostDB.exp() should have an
 >> optional "stop" argument. (It's not implemented yet.) The following
 >> example expands the post set that contains only post 105, but it stops
 >> when it reaches 108:
 >>
 >>    >>> ps(105).expf(stop=[108])
-> 
+>
 > Yes, I remember this discussion. [1]
-> 
+>
 >> Generally, `stop` could be any post set.
 >>
 >> Currently there is a not so difficult workaround:
 >>
 >>    >>> ps(105).expf() - ps(108).expf()
-> 
+>
 > This does not do what we want. Suppose the thread looks like this:
-> 
-> 
+>
+>
 >    <105>
 >      <106>
 >        <107>
@@ -39,9 +39,9 @@ Date: Tue, 01 Sep 2009 20:51:43 +0200
 >      <112>
 >    <113>
 >      <114>
-> 
+>
 > In this case, you could select "105..107" only as:
-> 
+>
 >     ps(105).expf() - ps(108).expf() - ps(112) - ps(113).expf()
 
 OK.
@@ -54,7 +54,7 @@ This would be a job for expb then:
 result".
 
 > My solution:
-> 
+>
 >     def straight(start, end):
 >         now = p(end)
 >         while True:
@@ -63,7 +63,7 @@ result".
 >             if now == p(start):
 >                 yield now
 >                 break
-> 
+>
 > This generates a straight line, so you don't have to care about
 > branches.
 

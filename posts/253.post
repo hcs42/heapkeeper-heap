@@ -9,7 +9,7 @@ Date: Tue, 19 May 2009 17:22:33 +0200
 >> Usually it is a very bad idea to modify the heapids of existing posts.
 >> In Hh's case, on the other hand, I think it would be rather desirable.
 >> Hh's index page otherwise would look weird for new people.
-> 
+>
 > Do you have any idea for this mass-renaming? We'd have to take care of
 > any in-body references as well as heapids in In-Reply-To: headers. No
 > simple task, especially the latter. Maybe we should add a feature for
@@ -43,16 +43,16 @@ fall back onto the second or third option.
 >>     >>> hh = hh_heap.postdb()
 >>     >>> p = ums.post('123')
 >>     >>> p.move(hh)
-> 
+>
 > Nice examples! Of course, we'd have to take great care when moving,
 > since heapids are heap-specific, so if a parent message is specified
 > via its heapid, it will break when moved. Basically the same issue as
 > with renumbering the split-off heap.
-> 
+>
 >> Posts can reference to each other, so probably it will not be this
 >> simple. (Or the implementation has to be smart in some way to make it
 >> simple.)
-> 
+>
 > Which is also manageable as long as the format is precisely specified,
 > as with headers. It is the body that makes me worried.
 

@@ -28,7 +28,7 @@ So this is what we called if we had 2 files:
 
     subprocess.call(["gvim", "-c", "'setf", "mail'", file1, file2])
 
-Btw, "git commit" has the same problem, it does not work with 
+Btw, "git commit" has the same problem, it does not work with
 EDITOR="gvim -c 'setf mail'". But I want Hk to handle this better,
 git's incapability should not be an excuse.
 

@@ -51,11 +51,11 @@ Very true. A mailing list...?
 Also very true.
 
 > == Do we need the interactive Web interface? ==
-> 
+>
 > The first and probably most important question is: should we market
 > Heapkeeper as a usable product in this phase, or only when we have at
 > least some form of interactive Web interface.
-> 
+>
 > I think having a Web interface is a nice way to go, but it's not
 > everything. See for example MailMan [1]. Many projects use this
 > mailing list manager, however it has only the kind of flat web
@@ -73,7 +73,7 @@ True.
 
 > Counter-counter-argument: "Release early, release often."
 
-POSS says about "Development Status" [1]: 
+POSS says about "Development Status" [1]:
 
   People always want to know how a project is doing. For new projects,
   they want to know the gap between the project's promise and current
@@ -102,7 +102,7 @@ POSS says about "Development Status" [1]:
   stable than the user expected than less, and pleasant surprises
   produce the best kind of word-of-mouth.
 
-I'm not sure what to make out of this in our case. 
+I'm not sure what to make out of this in our case.
 
 To answer to your "first and probably most important question": we
 should just say the truth. The index pages now says this:

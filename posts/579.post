@@ -6,9 +6,9 @@ Parent: <b29f917d0909021719y6ec820b5w9084db622db88392@mail.gmail.com>
 Date: Mon, 07 Sep 2009 08:45:14 +0200
 
 > == Current branches of development ==
-> 
+>
 > === _e ===
-> 
+>
 > I've accepted your commits, but I think these two commits should be
 > joined, so I joined them in my _e. (I feel they fall into the same
 > category as the "corrections" commits.)
@@ -32,7 +32,7 @@ edited with $EDITOR, which is used by e(). That worked previously, as
 well.
 
 > == Summary ==
-> 
+>
 > My repository is now filled with many branches. But since one of Git's
 > strongest points is the very cheap creation of branches, and branches
 > can be freely created and deleted on the remote (i.e. GitHub), I think

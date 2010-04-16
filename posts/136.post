@@ -18,8 +18,8 @@ write own web pages which have posts that interact with github. [2]
 Example:
 
   $ curl http://github.com/api/v2/yaml/issues/list/schacon/simplegit/open
-  --- 
-  issues: 
+  ---
+  issues:
   - number: 1
     votes: 0
     created_at: 2009-04-17 14:55:33 -07:00

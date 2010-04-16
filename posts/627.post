@@ -7,7 +7,7 @@ Date: Sat, 03 Oct 2009 09:58:40 +0200
 
 >> Do you agree that we should aim for a test suite and a documentation
 >> that covers _all_ source code?
-> 
+>
 > Yes, that would be optimal. Documentation can cover everything, but
 > some pieces of the code are not trivially tested. Take the downloading
 > code, for example. To test this, we could create an email account just
@@ -60,21 +60,21 @@ real IMAP server:
     -def __init__(self, postdb, config):
     +def __init__(self, postdb, config, imap_server_creator=IMAP4_SSL):
          """Constructor.
- 
+
          Arguments:
          postdb: Initialises self._postdb.
          config: Initialises self._config.
          """
- 
+
          super(EmailDownloader, self).__init__()
          self._postdb = postdb
          self._config = config
          self._server = None
     +    self._imap_server_creator = imap_server
- 
+
      def connect(self):
          """Connects to the IMAP server."""
- 
+
          log('Reading settings...')
          host = self._config.get('server', 'host')
          port = int(self._config.get('server', 'port'))
@@ -100,7 +100,7 @@ can be tested this way:
         self.assertEquals(host, 'mytesthost')
         self.assertEquals(port, '1234')
         return MyImapServer()
-    
+
     # we set up a ConfigParser variable so that it contains the
     # following attributes:
     #     server.host -> 'myhost'

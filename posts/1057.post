@@ -7,7 +7,7 @@ Parent: <4AFFBDF6.7010600@gmail.com>
 Date: Thu, 28 Jan 2010 11:03:06 +0100
 
 > [open]
-> 
+>
 > Also, we should not forget about printing the values of the
 > "Reference" tags of post files. The old Generator had this feature,
 > the new does not have it yet.

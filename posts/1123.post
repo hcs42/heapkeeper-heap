@@ -8,7 +8,7 @@ Date: Wed, 10 Feb 2010 16:07:21 +0100
 >> Now I propose a third version:
 >>
 >>    heap_id + post_index = post_id
-> 
+>
 > I implemented this version of supporting several heaps and pushed it.
 
 Thanks for sorting this out. I'm reading this thread now, and I

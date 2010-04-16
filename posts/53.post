@@ -10,7 +10,7 @@ Date: Tue, 24 Mar 2009 06:39:14 +0100
 > with 40, but I haven't had the patience to wait for the result
 > (maybe tomorrow). But you can extrapolate from the number of 9-s in
 > the numbers:
-> 
+>
 > number: nines
 >     6: 1
 >     6: 3
@@ -20,7 +20,7 @@ Date: Tue, 24 Mar 2009 06:39:14 +0100
 >    10: 10
 >    ...
 >    40: 50
-> 
+>
 > So it should be around:
 >    40: 99.999999999999999999999999999999999999999999999999%
 

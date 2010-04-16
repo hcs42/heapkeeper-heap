@@ -8,7 +8,7 @@ Parent: <b29f917d0911070054q3a876a69hd47cf342d2b89f7@mail.gmail.com>
 Date: Sun, 08 Nov 2009 19:12:49 +0100
 
 > Augmentation wouldn't really change it in any way relevant to
-> `PostDB.walk_thread`. 
+> `PostDB.walk_thread`.
 
 The users of the augmented post item can do whatever they want with
 it. Maybe it will be useful to change its "level" attribute for some

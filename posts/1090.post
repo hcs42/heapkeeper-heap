@@ -6,9 +6,9 @@ Parent: <4B3F8D74.9040807@gmail.com>
 Date: Sun, 7 Feb 2010 08:54:29 +0100
 
 > This is better:
-> 
+>
 >     :au BufWritePre * :silent! %s/ \+$//
-> 
+>
 > This way we can avoid the error message when there was no trailing
 > whitespace to be removed.
 

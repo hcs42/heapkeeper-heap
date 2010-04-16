@@ -8,7 +8,7 @@ Date: Mon, 1 Jun 2009 08:57:36 +0200
 
 >> How about a special meta for nonregular itemization marks? This
 >> could be "*", for example.
->> 
+>>
 >>     Good:[-]
 >>     [* a.] Authors:
 >>     [* aa.] Asimov
@@ -16,7 +16,7 @@ Date: Mon, 1 Jun 2009 08:57:36 +0200
 >>     [* b.] Drinks:
 >>     [* ba.] Coffee
 >>     [* bb.] Tea
-> 
+>
 > And what HTML would you generate from that?
 
 This can be done using nothing but HTML and CSS. See the example in the CSS

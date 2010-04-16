@@ -8,12 +8,12 @@ Date: Thu, 4 Jun 2009 07:47:44 +0200
 
 >> How about marking missing stuff only locally, and reserving the TODO
 >> file to emphasize missing and important pieces of test and docs?
-> 
+>
 > My proposal was this:[-]
 > - marking missing documentation and tests locally
 > - everything else goes into the issue tracker (now todo file, later
 > probably a heap)
-> 
+>
 > How is your suggestion different from this? Do you suggest placing
 > notes about other minor missing things in the source code?
 

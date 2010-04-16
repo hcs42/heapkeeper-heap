@@ -8,9 +8,9 @@ Date: Sat, 02 May 2009 10:34:32 +0200
 Nagy Attila wrote:
 >> It has an open interface that can be used e.g. with curl or people can
 >> write own web pages which have posts that interact with github. [2]
-> 
+>
 >> Someone even created a Python command line interface [3].
-> 
+>
 > This open nature and, of course, the Python interface is very
 > commendable. Now we'd have to decide if we choose to use them, or
 > continue to use our 'todo' mechanism. I must admit I like the todo

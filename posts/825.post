@@ -6,14 +6,14 @@ Parent: <b29f917d0910301857i2c017a86qfa96c0832a313335@mail.gmail.com>
 Date: Sat, 31 Oct 2009 10:10:19 +0100
 
 > "hkshell.p did not work when the argument was a real Post object."
-> 
+>
 > You solved it like this:
-> 
+>
 >     -    return postdb().post(pp)
 >     +    # PostSet is better in making post from a prepost...
 >     +    postset = postdb().postset(pp)
 >     +    return postset.pop()
-> 
+>
 > I always thought that joke about the mathematician and the teapot was
 > only a joke :)
 

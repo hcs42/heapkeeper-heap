@@ -8,7 +8,7 @@ Date: Mon, 23 Mar 2009 22:22:05 +0100
 
 >> - `sha` is the first 10 characters of the SHA1 ID. Or should it be
 >>  less?
-> 
+>
 > With 5 digits, you have 16^5 = 2^20 = 1048576 different hashes.
 
 Why do you take 16 as a base? A SHA character can be either a

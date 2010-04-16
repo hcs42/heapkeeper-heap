@@ -11,7 +11,7 @@ Date: Tue, 19 May 2009 09:37:54 +0200
 > also be renamed to "setting".
 
 I think "setting" is the best option. No pun intended [1].
- 
+
 > Or we could have a hierarchical structure of settings as has
 > Thunderbird, so that it will be easier to understand the system of
 > settings:
@@ -39,7 +39,7 @@ To cut a long story short: I'm all for hierarchical settings, but they are
 too long for anyone not too deeply involved with the project to remember,
 and too tiresome to look up all the time. We have to have a usable set
 of settings available in abbreviated form at the power user's fingertips.
- 
+
 >             len(modification_listener.touched_posts()) > 0): # at
 >                                                              # least
 >                                                              # one
@@ -57,7 +57,7 @@ complexity will find its use when handling more complicated settings. So
 I say OK.
 
 > Usage:
-> 
+>
 >     >>> on('auto.gen_indices')
 
 It is a good thing the old syntax is retained.
@@ -76,7 +76,7 @@ GeneratorOptions for a while now.
 I like these ideas a lot.
 
 > == Settings and options ==
-> 
+>
 > You may ask: what is the difference between settings and options?
 > The shortest answer is that...
 
@@ -85,5 +85,5 @@ correct?
 
 Generally I say OK to this proposal, but with the addition of my argument for
 abbreviations.
- 
+
 [1] http://xkcd.com/559/

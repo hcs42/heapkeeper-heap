@@ -12,10 +12,10 @@ Date: Sun, 02 Aug 2009 11:01:35 +0200
 >>
 >>    Author: Csaba Hoch <csaba.hoch@gmail.com>  2009-08-01 12:29:52
 >>    Committer: Attila Nagy <nagy.attila.1984@gmail.com>  2009-08-01 22:35:19
-> 
+>
 > I stashed this edit away, then applied the stash. This must have
 > something to do with this strange phenomenon.
-> 
+>
 > Do we know when can the author and the committer differ?
 
 It seems that if I rebase something that you commited, you will remain

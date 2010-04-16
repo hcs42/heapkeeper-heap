@@ -14,7 +14,7 @@ Date: Tue, 19 May 2009 20:38:03 +0200
 >>
 >> What you describe is not that. You say that every post has to go to
 >> GitHub via a heap maintainer.
-> 
+>
 > You definitely have a point there. But how about retaining the Git
 > repository behind Hkweb? How about providing a feature for editors
 > to commit a known good state to the repository?
@@ -28,14 +28,14 @@ OK. That would be basically a "push".
 Yes, if we assume there are two casts of maintainers.
 
 >> - If someone goes there, it will remain there forever.
-> 
+>
 > <<<todo Something?>>>
 
 <<<todo Yes.>>>
 
 >> I lean towards accepting GitHub as a temporary solution. With noting
 >> that we will revisit the problem when we have Hkweb.
-> 
+>
 > I'm not that sure we'd have any need for Hh until we reach at least some
 > maturity of Hkweb, and not so sure if we'll have it even after that.
 > Pessimistic, I know. But I'm not into marketing, and don't know how to make a
@@ -49,7 +49,7 @@ than in another project -- Hh is our proof that our system is usable.
 Relevant quotes:
 
   "Communications Channels
-  
+
   Visitors usually want to know how to reach the human beings involved
   with the project. Provide the addresses of mailing lists, chat
   rooms, and IRC channels, and any other forums where others involved
@@ -61,7 +61,7 @@ Relevant quotes:
   long run, most users will probably never join the forums anyway, but
   they will be comforted to know that they could if they ever needed
   to.
-  
+
   In the early stages of a project, there's no need to have separate
   user and developer forums. It's much better to have everyone
   involved with the software talking together, in one "room." Among

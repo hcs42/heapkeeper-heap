@@ -5,13 +5,13 @@ Parent: <b29f917d0905100608i4ac706d8yde6011c49cbd49a4@mail.gmail.com>
 Date: Sun, 10 May 2009 17:16:39 +0200
 
 > You wrote this meta:
-> 
+>
 >> <<<todo merge this email with its parent>>>
-> 
+>
 > This'd have to be !todo, because we'd like the body parsing to add a
 > todo tag. Do you agree?
 
-No. 
+No.
 
 1. "todo" is not a command for me, but an attribute of the post.
 

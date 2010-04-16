@@ -9,7 +9,7 @@ Date: Mon, 01 Jun 2009 11:25:00 +0200
 >> What do you think should be the default behaviour? Parsing turned off
 >> or on? That's also important from the tutorial's point of view. (Not
 >> the current tutorial of course.)
-> 
+>
 > Maybe we should default to on, to show the world the best we can do,
 > while keeping it strongly emphasized that it can be turned off.
 

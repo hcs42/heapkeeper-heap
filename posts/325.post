@@ -9,7 +9,7 @@ Date: Sun, 24 May 2009 09:33:52 +0200
 > I realized we do want to handle quotes as just "quote blocks". For
 > example they can have raw text inside them. They also may have
 > itemizations inside them. They may contain links.
-> 
+>
 > I propose that we parse everything in quotes. (I suggested the exact
 > opposite so far, but I think I was wrong. The concrete examples we
 > had (meta text, cites) would not make too much sense to parse in

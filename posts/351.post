@@ -8,7 +8,7 @@ Date: Sat, 30 May 2009 13:07:57 +0200
 
 >> Hkweb could have a service that does this: you paste the body of post
 >> into a textarea and it shows you a preview of the post page.
-> 
+>
 > How would you do this in hkshell?
 
 Do you mean "how would a user use it" or "how would implement it"?

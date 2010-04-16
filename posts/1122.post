@@ -6,7 +6,7 @@ Date: Wed, 10 Feb 2010 14:39:32 +0100
 
 > See the coverage of the new code here:
 > http://heapkeeper.org/tmp/coverage/
-> 
+>
 > You can click on the module names. The green lines were executed
 > during the test, the red lines were not.
 

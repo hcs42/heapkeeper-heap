@@ -17,7 +17,7 @@ generic support for itemizations and trying to keep it realizable.
 >>>> marks. A sensible set would be [-+*]. Do you think we need others?
 >>>
 >>> I would also like to have numbers.
->> 
+>>
 >> Good thing you mentioned that. Now ordinary decimal numbers written in
 >> Arabic numerals are easy to filter out, but it's much more than that.
 >> First, you have multiple number systems, and even in purely

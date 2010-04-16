@@ -7,12 +7,12 @@ Parent: <b29f917d0905241315n5ef45cf2v1308cf7286967713@mail.gmail.com>
 Date: Mon, 25 May 2009 22:30:00 +0200
 
 > <<<!todo Rather "do without">>>
-> 
+>
 > A remark: we should pay attention to eliminating the "multiple quote
 > heads" we used earlier; these look like \[3,4].
-> 
+>
 > == Cites ==
-> 
+>
 > [!todo We should change "cite" to "footnote".]
 
 I guess this was the point where you were convinced to use brackets
@@ -26,7 +26,7 @@ meta syntax, here you use a bracket segment.
 >> to write the HTML generator if it can be recursive. (Although I don't
 >> want to see recursive functions in Hk if I don't have a guarantee
 >> about the length of the recursion.)
-> 
+>
 > Here, you have a guarantee that the depth of the recursion will not
 > exceed the depth of the quotation, which I'd like not to exceed 20 in
 > any reasonable conversation.
@@ -37,7 +37,7 @@ You don't know how long discussions our users will have on their heaps.
 >> will be more complicated if they have to walk through the recursive
 >> structure of quote segments. Otherwise they can just do a loop on
 >> all segments.
-> 
+>
 > Just as long as we don't want to do any complicated processing inside
 > the quotes. For example, if we want to interpret footnote headers
 > inside cites, that would be easier if the representation were
@@ -48,7 +48,7 @@ No, it would not be!
 An example:
 
     >> Watch this: [1]
-    
+
     > Or this: [1]
 
     No, this: [1]
@@ -83,7 +83,7 @@ After the footnote-processor (which may or may not be a different go):
     0            footnote-head  '1'
     ...
 
-A function that creates HTML from given footnote head of given post: 
+A function that creates HTML from given footnote head of given post:
 (post.ancestor(n) returns the nth ancestor of a post. post.footnotes()
 returns the dictionary of footnotes, where indices are the keys and
 footnote bodies are the values.)
@@ -111,12 +111,12 @@ case, however, simple representation means simple algorithm.
 == Authors and signatures ==
 
 >> Why should we generate signature?
-> 
+>
 > Ummm...
-> 
+>
 >> Maybe we should not sign our emails at all and should not generate
 >> signatures in posts.
-> 
+>
 > But since it wouldn't be hard, why not make it possible?
 
 Because it is not useful? :D
@@ -129,15 +129,15 @@ said previously.
 > I like your solution. It really is elegant, although at first I wanted
 > to argue against it, since it is somewhat arteficial, ie. the post
 > author must pay attention.
-> 
+>
 > An addition: itemizations look neat with the non-first lines of an
 > item being indented by 2. Emacs or Vim can create these automatically,
 > but we should nonetheless recognize multiline items even if the
 > non-first lines are not indented, as it would make the life of those
 > using more simplistic editors unconfortable.
-> 
+>
 > So I think this would also have to be valid:
-> 
+>
 >    My favourite book writers:[-]
 >    - Isaac Asimov: he was born in the Soviet Union, but his family
 >    emigrated to the US when he was 3.
@@ -153,7 +153,7 @@ OK.
 >> (meta text, cites) would not make too much sense to parse in quotes;
 >> but in general, there is a point in parsing them, and as we talk now,
 >> new and new text objects come up that must be parsed inside quotes.)
-> 
+>
 > I am happy you came to this conclusion. But don't you think it
 > justifies hierarchical storing of quotes? If we parse a quote just
 > like a body, it should be stored the same way.
@@ -173,7 +173,7 @@ I explain how would I actually store quotes.)
 >> We don't have to be _that_ modular. If Dissector creates these blocks,
 >> we can say Dissector is one module. It should not be more then one
 >> screen of "real" code -- why should we modularize that?
-> 
+>
 > OK by me. But what would we do if the Dissector creates Quote segments,
 > and the Parser stack contains no module to process them?
 
@@ -186,7 +186,7 @@ proposal on what segments do I envision.
 >> body parsing should be done according to my proposal and implemented it
 >> that way, I suggest replacing all '^<<<' with '[' and all '.>>>$' with
 >> ']' in the posts.
-> 
+>
 > I think we should do this change only manually. Sounds too drastic to
 > do in one move.
 

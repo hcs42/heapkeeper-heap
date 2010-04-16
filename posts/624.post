@@ -6,27 +6,27 @@ Parent: <4A53A9E7.6050104@gmail.com>
 Date: Fri, 2 Oct 2009 16:05:10 +0200
 
 > What do you think about using this formatting instead:
-> 
+>
 >   for curr_post in thread._postdb.iter_thread(thread):
 >       l.append(
 >           Html.thread_post_header(
 >               curr_post.htmlfilebasename(),
->               Html.escape(curr_post.author()), 
+>               Html.escape(curr_post.author()),
 >               Html.escape(curr_post.subject()),
 >               curr_post.tags(),
 >               curr_post.heapid(),
 >               options.date_fun(curr_post, options)))
-> 
+>
 >       l.append(
 >         Html.enclose(
 >             'postbody',
 >             Html.escape(curr_post.body()), tag='pre'))
-> 
+>
 > I think it is more readable and more robust. By roboust I mean that
 > if you have to indent a paragraph that you made using the first
 > formatting method, you have a much higher change of having to insert
 > newlines, as you did in 179f5cf18e (2009-05-17).
-> 
+>
 > If you agree, would you change the code?
 
 It loooks better... but I think the Python coding conventions dictate

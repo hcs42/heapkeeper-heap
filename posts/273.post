@@ -8,7 +8,7 @@ Date: Tue, 19 May 2009 19:57:55 +0200
 >> Another merit of the idea: the delivered emails could contain the
 >> heapid of the post that is created from that email. This way
 >> referencing to posts would be much more convenient.
-> 
+>
 > At least initially -- though heapids are of a very volatile nature -
 > this, of course, being the direct consequence of the editable archive.
 

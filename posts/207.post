@@ -5,7 +5,7 @@ Parent: <b29f917d0905100758h307ee656m1267c13dc8b053b2@mail.gmail.com>
 Date: Sun, 10 May 2009 18:35:38 +0200
 
 > There is a minor glitch. Not even sure if it's a bug.
-> 
+>
 > If you edit a post, it gets outdated, and will be regenerated. But if
 > its headers are altered, and the thread representation in post HTMLs
 > is turned on (in the hkrc), the representation of the changed post

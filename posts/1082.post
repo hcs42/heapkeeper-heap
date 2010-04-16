@@ -11,12 +11,12 @@ Date: Sat, 6 Feb 2010 09:48:26 +0100
 
 > I propose to use regular expressions. So if a user searches for the
 > following word sequence:
-> 
+>
 >     word1 word2 word3
-> 
+>
 > the resulted postset would be equal to the result of the following
 > program:
->     
+>
 >     def contains(word):
 >         """Returns a function that can decide whether a given post
 >         contains the given word."""
@@ -26,11 +26,11 @@ Date: Sat, 6 Feb 2010 09:48:26 +0100
 >                     re.search(word, post.subject()) or
 >                     re.search(word, ' '.join(post.tags())))
 >         return f
-> 
+>
 >     postdb.all().collect(contains("word1")). \
 >                  collect(contains("word2")). \
 >                  collect(contains("word3"))
-> 
+>
 > (This is not the implementation, this is only the specification :) )
 
 I like this, but it doesn't work like this yet, so I'll do it.
@@ -42,12 +42,12 @@ I like this, but it doesn't work like this yet, so I'll do it.
 [!todo correct: They could]
 
 > == Advanced features ==
-> 
+>
 > The following features are only ideas, I don't propose to implement
 > them in the first go.
-> 
+>
 > === Ranking ===
-> 
+>
 > We could implement ranking so that a post will be higher in the
 > search results if the word is present as a tag/keyword/subject. Or a
 > post will be lower in the results if the expression is present only in
@@ -57,7 +57,7 @@ Looks useful! Would you give the tag, keyword and subject matches an
 equal weight?
 
 > === Thread search ===
-> 
+>
 > We could also implement "thread search", which would return only one
 > post per thread.
 
@@ -77,7 +77,7 @@ or
     grep('dead trees').root()
 
 > === Generation output ===
-> 
+>
 > We should make a generator that would generate HTML pages with the
 > search results, inlining the relevant posts, highlighting the found
 > expressions, etc.
@@ -86,14 +86,14 @@ Nice -- but sounds like an awful lot of work. It sounds like this
 would be needed for your next idea, however.
 
 > === Hkweb integration ===
-> 
+>
 > And of course we should have a textbox and a "Search" button on hkweb.
 
 Definitely. Together with all the highlighting you mentioned in the
 previous idea.
 
 > === Vim integration ===
-> 
+>
 > We could feed the results into Vim so that Vim could jump between the
 > hits in its usual way (:cnext, :cprev, :clist).
 
@@ -102,7 +102,7 @@ Wow. That'd be awesome!
 I have to admit I've never used this functions, though.
 
 > == Effort estimation ==
-> 
+>
 > This only concerns the basic features. We could spent an arbitrary
 > amount of time with the advanced ones :)
 

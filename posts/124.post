@@ -9,12 +9,12 @@ Diff:
     @@ -521,6 +521,9 @@ class Post(object):
              else:
                  return False
-     
+
     +    def __repr__(self):
     +        return self._heapid
     +
          # Misc
-     
+
          def remove_google_stuff(self):
 
 From the Python documentation of the Python Data Model [1]:

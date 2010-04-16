@@ -7,12 +7,12 @@ Parent: <20090529073451.8b24cad7.nagy.attila.1984@gmail.com>
 Date: Fri, 29 May 2009 08:29:00 +0200
 
 == Quotes ==
- 
+
 >>> Here, you have a guarantee that the depth of the recursion will not
 >>> exceed the depth of the quotation, which I'd like not to exceed 20 in
 >>> any reasonable conversation.
 >> You don't know how long discussions our users will have on their heaps.
-> 
+>
 > That's why the wording was so careful.
 
 And that's why your statement means nothing...
@@ -23,13 +23,13 @@ And that's why your statement means nothing...
 >>> and the Parser stack contains no module to process them?
 >> *Sigh*. There are no "quote segments". See again above and in my
 >> proposal on what segments do I envision.
-> 
+>
 > I guess you may be right about my not reading your whole post before
 > replying. My bad.
-> 
+>
 > On the other hand, it was just an example. The question in a generic
 > form:
-> 
+>
 > But what would we do if the Dissector creates Xyz segments, and the
 > Parser stack contains no module to process them?
 

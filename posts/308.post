@@ -374,35 +374,35 @@ If we want to put blank lines between the items, I suggest using
 another bracket segment indicator for that. Something like this:
 
     My favourite book writers: [items]
-  
+
     - Isaac Asimov: he was born in the Soviet Union, but his family
       emigrated to the US when he was 3.
-  
+
     - Richard Dawkins: he was born in Kenya as a child of British
       parents. They returned to England when he was 8.
-  
+
     [/items]
 
 Combining items and raw lines is easy: items end with a blank line.
 
     Hello world in different languages: [items]
-  
+
     - C++: a very complicated language, developed by Bjarne
       Stroustrup at Bell Labs.
-  
+
       #include <iostream>
-  
+
       int main()
       {
           std::cout<<"Hello world!"<<std::endl;
       }
-  
+
     - Python: a beautiful language, developed by Guido van Rossum.
-  
+
       import sys;
-  
+
       sys.stdout.write('Hello world!\n')
-  
+
     [/items]
 
 == Quotes again ==
@@ -512,14 +512,14 @@ A possible layout:
     > Items:[-]
     > - item 1
     > - item 2
-  
+
     Yes.
-  
+
     Watch [http://that that].
-  
+
     In my opinion:
       print "hi"
-  
+
     My items:[-]
     a. item 1
     b. item 2

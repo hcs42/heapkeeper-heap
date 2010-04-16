@@ -9,7 +9,7 @@ Date: Fri, 29 May 2009 07:34:51 +0200
 >> <<<!todo Rather "do without">>>
 >> ...
 >> [!todo We should change "cite" to "footnote".]
-> 
+>
 > I guess this was the point where you were convinced to use brackets
 > instead of the old meta syntax :) Seven lines earlier you used the old
 > meta syntax, here you use a bracket segment.
@@ -17,20 +17,20 @@ Date: Fri, 29 May 2009 07:34:51 +0200
 I couldn't wait for our dog food to be ready. :)
 
 == Quotes ==
- 
+
 >> Here, you have a guarantee that the depth of the recursion will not
 >> exceed the depth of the quotation, which I'd like not to exceed 20 in
 >> any reasonable conversation.
-> 
+>
 > You don't know how long discussions our users will have on their heaps.
 
 That's why the wording was so careful.
 
 > How much simpler can it get? It would be more difficult if we used
 > hierarchical quotes.
-> 
+>
 >> But since we probably don't want to do this,
-> 
+>
 > I do :)
 
 OK :)
@@ -38,32 +38,32 @@ OK :)
 >> I'm being swayed towards flat representation. Simple representation
 >> is probably better than simple algorithm, at least that's what
 >> Heapkeeper's evolution has been about so far.
-> 
+>
 > True, that could be one of our design principle. In this particular
 > case, however, simple representation means simple algorithm.
 
 Flat it is, then.
 
 == Authors and signatures ==
- 
+
 >>> Why should we generate signature?
->> 
+>>
 >> Ummm...
->> 
+>>
 >>> Maybe we should not sign our emails at all and should not generate
 >>> signatures in posts.
->> 
+>>
 >> But since it wouldn't be hard, why not make it possible?
-> 
+>
 > Because it is not useful? :D
-> 
+>
 > Joke aside, if you would like to see this feature, go for it, as I
 > said previously.
 
 I guess I will, but with a low priority.
 
 == Quotes again ==
- 
+
 > (I have a feeling that you argued in your mail for hierarchical
 > storing of quotes _before_ you actually read the end of my email where
 > I explain how would I actually store quotes.)
@@ -76,7 +76,7 @@ being addicted to it) is to blame :)
 
 >> OK by me. But what would we do if the Dissector creates Quote segments,
 >> and the Parser stack contains no module to process them?
-> 
+>
 > *Sigh*. There are no "quote segments". See again above and in my
 > proposal on what segments do I envision.
 

@@ -5,15 +5,15 @@ Parent: <b29f917d0910240333m12db637qd99e473a6b463b07@mail.gmail.com>
 Date: Sat, 24 Oct 2009 13:19:20 +0200
 
 > I suppose we rather name what the class represents then use the class name.
-> 
+>
 > These are docstrings from `PostItem`:
-> 
+>
 >     def copy(self):
 >         """Creates a shallow copy of the post item."""
-> 
+>
 >     def __str__(self):
 >         """Returns the string representation of the PostItem."""
-> 
+>
 > Why use "post item" in the first, and "PostItem" in the second?
 
 The second should be "post item", as well. I'll fix it.

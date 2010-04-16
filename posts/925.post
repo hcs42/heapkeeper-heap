@@ -18,12 +18,12 @@ our function names will be more sensible (e.g. print_postsummary_inner
 instead of print_postsummary_main).
 
 Example thread structure:
-    
+
     0 <- 1 <- 2
       <- 3
-    
+
 Post items yielded now:
-    
+
     <begin 0>
     <main 0>
       <begin 1>
@@ -38,7 +38,7 @@ Post items yielded now:
     <end 0>
 
 Post items yielded according to this proposal:
-    
+
     <begin 0>
     <inner 0>
       <begin 1>

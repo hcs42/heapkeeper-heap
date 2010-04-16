@@ -6,14 +6,14 @@ Date: Sat, 18 Apr 2009 22:01:48 +0200
 
 >> I thought you mean using the colors of Vim itself. That would not be a
 >> bad idea, either...
-> 
+>
 > We can give it a try :)
 
 You can have a look at the Vim colors at :h group-name.
 
 >> But do you mean grabbing the CSS files or grabbing only the
 >> colors?
-> 
+>
 > Only the colors.
 
 That's not stealing, I think. We can mention somewhere in the doc

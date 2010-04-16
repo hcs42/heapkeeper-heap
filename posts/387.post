@@ -10,7 +10,7 @@ Csaba Hoch wrote:
 >             """Options that are used by the Generator.
 >             This class follows the Options pattern.
 >        +    TODO: standardize underscore usage.
-> 
+>
 > What do you mean by this?
 
 [todo The subject is wrong. It should be corrected.]

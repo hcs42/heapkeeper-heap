@@ -8,7 +8,7 @@ Date: Fri, 06 Nov 2009 07:32:00 +0100
 >> I implemented the old functionality of sections in
 >> a Generator subclass in my hkrc. I really think we should provide more
 >> support for this, as my code is quite complicated.
-> 
+>
 > If you show the code, I'll have a look at it in the evening (19-20
 > o'clock) and see if we can make it smaller/simpler/more elegant.
 
@@ -163,16 +163,16 @@ Now section_posts looks a bit complicated, but:
 
        def section_posts(self, title, posts, is_flat):
            id = lowercase_and_escape(title) % e.g. 'nyitott_javaslatok'
-           
+
            if is_flat:
                postitems = self.walk_flat_posts(posts)
            else:
                postitems = self.walk_exp_posts(posts)
            postitems = self.walk_postitems(postitems)
-   
+
            # new line:
            postitems = self.reverse_threads(postitems)
-   
+
            content = self.print_postitems(postitems)
            return self.section(id, title, content, flat=is_flat)
 

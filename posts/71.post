@@ -8,7 +8,7 @@ Date: Wed, 08 Apr 2009 07:27:49 +0200
 
 >> Is it worth at all to draw any distinction between the program and the
 >> project?
-> 
+>
 > Sometimes it is. Some projects build programs, like, say, Gimp. Others
 > build suites of programs, like OpenOffice or Mozilla. (Of these, I
 > think only the latter produces distinct binaries for the individual

@@ -7,7 +7,7 @@ Parent: <b29f917d0904181138t5e2a503bk800a79ac1a9dc19c@mail.gmail.com>
 Date: Sat, 18 Apr 2009 21:59:24 +0200
 
 >> BTW, do you now what is "rc" in .vimrc, .kderc, etc?
-> 
+>
 > http://en.wikipedia.org/wiki/Run_Commands
 
 Thanks!
@@ -15,7 +15,7 @@ Thanks!
 >> And to moving the following code:
 >> - heapmanip.Html -> current heaplib, proposed hkutils
 >> I think we should move Section, Index and Generator in the future
-> 
+>
 > Seems to me a major refactoring is in order. What do you propose as
 > the main ordering principle of classes into modules?
 

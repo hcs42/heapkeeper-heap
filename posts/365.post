@@ -12,9 +12,9 @@ Date: Sun, 31 May 2009 21:02:21 +0200
 >>> introduce another behaviour, e.g. it could link to the original
 >>> paragraph. (We could have a setting about turning off the new
 >>> behaviour.)
->> 
+>>
 >> OK, but how would you find the original paragraph?
-> 
+>
 > In the example I would find the parent post and the "People I like"
 > text inside. This will often work.
 

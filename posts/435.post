@@ -13,7 +13,7 @@ That's a question for another thread I think.
 >> The conclusion is: it seems to me that we have no way of doing what we
 >> want to do except for deleting and re-creating the heapkeeper
 >> repository.
-> 
+>
 > Yes, it seems so. Not that bad solution, though. But do you think it
 > is a limitation of github or git? I mean, that we can't just push a
 > totally rewritten repository.
@@ -37,7 +37,7 @@ I think it's git.
 >>    - Generating threaded index page that contains all posts.
 >>
 >> What do you say?
-> 
+>
 > OK. So, we'd hard-reset, edit README, commit, tag and rebase for both
 > 0.1 and 0.2, if I understand correctly.
 
@@ -52,7 +52,7 @@ the motorway.
 >> was surprisingly easy: I just had to create a bunch of patches in my
 >> old repository and apply them in the new one. The patches even contain
 >> log message and author information.
-> 
+>
 > I guess then that these are not your average diff-patches, but
 > something Git-specific.
 
@@ -64,7 +64,7 @@ Your guess is correct.
 >> - Do you want to do something with your 'bodyparsing' and 'minimal'
 >>  branches? Or let's just leave them for now and you can use the
 >>  patch-technique to introduce them at any time?
-> 
+>
 > Do you consider them mature enough for inclusion into the "public"
 > repo? I think minimal is mature, and also useful.
 

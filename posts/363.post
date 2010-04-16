@@ -8,13 +8,13 @@ Parent: <4A227F85.3090001@gmail.com>
 Date: Sun, 31 May 2009 15:22:45 +0200
 
 > I often use `[...]` in quotes:
-> 
+>
 >     > People I like:
 >     > [...]
 >     > - Asimov
-> 
+>
 >     Yes, I like Asimov, too.
-> 
+>
 > I think `[...]` should be a special bracket segment. I don't know
 > though what we should do with it. Maybe it could be converted to
 > simple text for now.

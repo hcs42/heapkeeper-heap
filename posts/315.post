@@ -11,7 +11,7 @@ Date: Sat, 23 May 2009 08:44:25 +0200
 >>    Free Default Quota / Maximum rate: 7400 requests (123 req/sec)
 >>
 >> Do you understand it?
-> 
+>
 > I think I do. It says you cannot do more than 1300000 requests a day,
 > that is, the average rate of requests can't exceed 15 Hz over a full
 > day. But, during peaks you can have more than that, up to 123 Hz. I

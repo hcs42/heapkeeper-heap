@@ -9,7 +9,7 @@ Date: Thu, 11 Feb 2010 11:51:55 +0100
 >>> without explicit mention. What do you think about that?
 >>
 >> OK, I think that'd be useful.
-> 
+>
 > Is it OK if the timeout is one week? Or would you prefer another time span?
 
 Let's say that the implicit timeout is always one week, and if a

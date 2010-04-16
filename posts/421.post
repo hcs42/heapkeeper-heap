@@ -17,7 +17,7 @@ When I designed this, I had no idea about rst, but now I see that rst
 is what really makes it useful.
 
 > == hk/auto.vim ==
-> 
+>
 > This file is automatically sourced by my vimrc when starting Vim from hk.
 
 Does your .vimrc look for an auto.vim in whatever directory you launch
@@ -46,7 +46,7 @@ thing I do...
 I had problems spotting small differences in asserts where both sides
 of the `!=` were longer than 5 screen lines. But I think it would
 have to be sorted out manually even with this.
- 
+
 >   " PD:
 >   "   Shows the modifications that were made to a file in one commit in a new
 >   "   window. The diff context is 9999, so basically the whole file will be

@@ -6,7 +6,7 @@ Parent: <4A53A9BF.5010803@gmail.com>
 Date: Fri, 2 Oct 2009 15:56:35 +0200
 
 >     +    TODO: standardize underscore usage.
-> 
+>
 > What do you mean by this?
 
 If you have a look at tha data attributes of GeneratorOptions, you see

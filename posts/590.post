@@ -5,7 +5,7 @@ Parent: <4AAB79B5.1030508@gmail.com>
 Date: Sat, 12 Sep 2009 15:58:36 +0200
 
 > === Advice 3: don't test feature combinations ===
-> 
+>
 > When testing several related features, first test what happens when
 > every feature is off, then test what happens when you turn on one.
 > This way we will have n+1 test cases for n features.

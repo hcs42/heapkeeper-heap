@@ -12,7 +12,7 @@ Date: Sat, 30 May 2009 11:06:40 +0200
 > without touching the mail database.
 
 Yes. With the post syntax getting more complex, this starts to make sense.
- 
+
 > Hkweb could have a service that does this: you paste the body of post
 > into a textarea and it shows you a preview of the post page.
 

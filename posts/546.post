@@ -10,11 +10,11 @@ Date: Fri, 28 Aug 2009 20:59:22 +0200
 
 > What you propose is a very simple and powerful approach, and I like
 > it. However, it seems a step away from OO.
-> 
+>
 > When I studied Java, a book I read had ideas on good OO design. One of
 > them was "if you can think about it as an entity, make it an object;
 > if you can think about it as a kind of entity, make it a class".
-> 
+>
 > A "heap" seems to be a kind of entity, so it should have its
 > corresponding class. Of course, you can create a `Heap` class acting
 > as an adaptor to this scheme. This class would be useful as a natural
@@ -36,7 +36,7 @@ structures, etc. harder.
 >> post name "post id": that would be an unambiguous identifier of a
 >> post, even across heaps. If you know better name than "post name", I
 >> would be glad to hear it.
-> 
+>
 > An example: for the post created from "<postdir>/ums/1234.post", the
 > "post name" could be "ums/1234".
 
@@ -64,7 +64,7 @@ The separator of my proposal is the "/" character :)
 == Example: moving a post ==
 
 >> This way moving the post will be easy:
-> 
+>
 > Moving a single post will be easy, but if you move just one, its
 > connections to other posts will break.
 
@@ -123,7 +123,7 @@ I would rather write `select('')` for that purpose :)
 
 >> The only thing I don't know whether it should be better to have a
 >> current heap in hkshell or in PostDB. [...] Opinions?
-> 
+>
 > I'd implement it in hkshell. hklib should only see the tuples.
 
 OK.

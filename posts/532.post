@@ -12,7 +12,7 @@ Date: Wed, 19 Aug 2009 22:53:06 +0200
 >> sense that "these are two mails"). You could call it "em" or "email_"
 >> in the list comprehension, and you could use the emails_* variables in
 >> all other places.
-> 
+>
 > Of course, but really, does that matter? I mean the uncountable plural
 > problem. I'm not native English, I am entitled to use bad grammar :)
 
@@ -24,7 +24,7 @@ It hurts my eyes :)
 >>    import email as email_mod
 >>
 >> Then you could have "email" variables.
-> 
+>
 > Is this not bad practice in terms of code maintainability? If you do
 > such a thing at the beginning of the code, readers of the function
 > will wonder where that strange name came from.
@@ -36,7 +36,7 @@ You are probably right.
 >> Because its plural sounds just unnatural. (Later I realized that
 >> "post" sounds better from the of the Google Wave philosophy's point of
 >> view .)
-> 
+>
 > I think the new terminology's real usefulness comes from emphasizing
 > the difference between an e-mail, that exists on an IMAP server, and a
 > post, that lives in the mail directory and Hk's memory.

@@ -75,8 +75,8 @@ have to explain me anyway, and why not do it in the docstings.
 hklib.Generator.summarize_thread:
 
          return ''.join(l)
-  + 
-  + 
+  +
+  +
   +  def summarize_thread(self, post, options):
 
 PEP 8 says about blank lines:
@@ -141,7 +141,7 @@ hklib.Generator.full_thread:
   +
   +      - *thread* (:class:`Post`)
   +      - *options* (:class:`GeneratorOptions`)
-  +      
+  +
   +      **Returns:** ``HtmlStr``
   +
   +      **Notes:**
@@ -153,14 +153,14 @@ what the *thread* argument is for:
 
      def full_thread(self, thread, options):
          """Converts the whole thread into HTML.
-   
+
          **Arguments:**
-   
+
   -      - *thread* (:class:`Post`)
   +      - *thread* (:class:`Post`) -- The thread to be converted,
   +        represented by its root post.
          - *options* (:class:`GeneratorOptions`)
-         
+
          **Returns:** ``HtmlStr``
   -
   -      **Notes:**

@@ -8,7 +8,7 @@ Date: Tue, 19 May 2009 17:31:29 +0200
 >> I don't know how this could happen. Do you have an idea? If not,
 >> please, be aware next time when you merge branches, and try to find
 >> the root of the problem. (I'm very curious.)
-> 
+>
 > I must admit I made a mess of the threads,
 
 <<<todo You mean branch.>>>
@@ -16,7 +16,7 @@ Date: Tue, 19 May 2009 17:31:29 +0200
 > and I had many conflicts that day. Still, I don't know how I did an
 > empty commit.
 
-I have to admit I have no idea what was going on. But as far as I see, 
+I have to admit I have no idea what was going on. But as far as I see,
 that was not an empty commit, but a commit with a funny commit
 message.
 

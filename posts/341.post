@@ -7,7 +7,7 @@ Parent: <4A1F7F98.5010907@gmail.com>
 Date: Fri, 29 May 2009 10:32:06 +0200
 
 > Just to annoy you:
-> 
+>
 >       Items:[-]
 > ...
 >       e. I wanted to write a Python function. A good friend of mine told
@@ -19,7 +19,7 @@ we ask the user to be careful, and put things like that within single
 or double quotes.
 
 >> But what if one needs structures like this:
->> 
+>>
 >>     Head:[-]
 >>     a. Apple
 >>     aa. Green apple
@@ -28,13 +28,13 @@ or double quotes.
 >>     ba. Green banana
 >>     bb. Yellow banana
 >>     bba. Yellow banana with brown spots
->> 
+>>
 >> Lawyers like to use this kind of multi-level itemization with
 >> multi-character letter marking.
-> 
+>
 > Oh, I haven't thought about multiple levels. It would be very
 > convenient to write stuff like this:
-> 
+>
 >     My favourite things:[-]
 >     - Authors:
 >         - Asimov
@@ -56,7 +56,7 @@ habit.
  ** Python
 
 > A possible solution, which I very much dislike:
-> 
+>
 >     My favourite things:[-]
 >     - Authors:[-]
 >         - Asimov
@@ -69,10 +69,10 @@ Me too.
 
 > I'm confident we can define indentation-based itemizations without
 > having to write more than one `[-]`.
-> 
+>
 >> Other than this, I think we can live with a fixed set of itemization
 >> marks. A sensible set would be [-+*]. Do you think we need others?
-> 
+>
 > I would also like to have numbers.
 
 Good thing you mentioned that. Now ordinary decimal numbers written in

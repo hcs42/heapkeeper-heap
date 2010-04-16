@@ -9,7 +9,7 @@ Date: Tue, 19 May 2009 20:04:08 +0200
 >> people will trust the "real" mail archive more. Not without reason:
 >> heap maintainers could of course manipulate the "original" post, even
 >> if we don't give them hkshell commands for that.
-> 
+>
 > I'm pretty sure no archive is ever tamper-proof. Even if it's stored on
 > IMAP, it's changed easily in a download-edit-delete-upload sequence. If
 > the user doesn't trust those with access to the server, it's all futile.

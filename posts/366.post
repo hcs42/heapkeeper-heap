@@ -14,9 +14,9 @@ No. This would totally invalidate the usefulness of a raw segment.
 
 > Solution 2: Let's have a marker that indicates that the following "raw
 > text" is a quote:
-> 
+>
 >     Asimov said once: [quote]
-> 
+>
 >         "I don't believe in an afterlife, so I don't have to spend my
 >         whole life fearing hell, or fearing heaven even more. For
 >         whatever the tortures of hell, I think the boredom of heaven

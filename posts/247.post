@@ -11,13 +11,13 @@ The last line of the commit message of the specified commit is weird:
   Merge: b996200... 102f5fd...
   Author: Attila Nagy <nagy.attila.1984@gmail.com>
   Date:   Fri May 15 09:48:32 2009 +0200
-  
+
       Merge branch 'master' of git@github.com:hcs42/heapkeeper
-  
+
       Conflicts:
-  
+
           hkrc_attis.py
-  
+
       nothing added to commit but untracked files present (use "git
       add" to track)
 

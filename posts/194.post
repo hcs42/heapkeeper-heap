@@ -9,7 +9,7 @@ hkshell.PostPageListener.outdated_posts_from_disk:
      def outdated_posts_from_disk(self):
           """Returns the posts that are outdated, based on the timestamp of the
   -       post files and the post pages.
-  -       
+  -
   -       This function is not yet implemented, it returns all posts; this way
   -       the system will think at startup that all post pages are outdated.
   -       """

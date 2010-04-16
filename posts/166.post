@@ -33,7 +33,7 @@ writing nice messages.
 >> at some point:
 >>
 >>    Generator: new methods gen_thread and thread added
-> 
+>
 > You've misunderstood me here. What I wanted to say is unlikely that
 > commit messages will ever be machine-processed.
 

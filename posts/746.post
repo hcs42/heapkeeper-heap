@@ -20,26 +20,26 @@ variable. If a file did not change (its old content is the same as its
 new content), it is unnecessary to call its `touch` method.
 
 > == Generating indices ==
-> 
+>
 > It seems like you generate the indices twice (three times, actually,
 > but the third is for the generator). You have this:
-> 
+>
 > def gen_indices(postdb):
-> 
+>
 >     hkcustomlib.gen_indices(postdb)
 >     # Date options
 >     date_options = hkcustomlib.date_defopts()
 >     ...
 >     genopts.shorttags = True
 >     genopts.date_fun = date_fun
-> 
+>
 >     # Generating my index
 >     hklib.Generator(postdb).gen_indices(genopts)
-> 
+>
 >     # Generator the issue tracker index
 >     generator = issue_tracker.create_generator(genopts)
 >     generator.gen_indices(genopts)
-> 
+>
 > So, first you do the default index generation, then the customized
 > one. Is this necessary?
 
@@ -61,12 +61,12 @@ Thanks.
 == Collecting posts matching any of a set of tags ==
 
 > In `index0()`, where you collect posts based on tags, you wrote this:
-> 
+>
 >     python_tags = ['python', 'Python']
 >     ps_python = ps_all.collect(has_tag(python_tags))
-> 
+>
 > which uses:
-> 
+>
 > def has_tag(tags):
 >     def has_tag_fun(post):
 >         for tag in tags:
@@ -74,11 +74,11 @@ Thanks.
 >                 return True
 >         return False
 >     return has_tag_fun
-> 
+>
 > In my hkrc, this reads:
-> 
+>
 >     ps_py = ps_all.collect.has_tag_from(('python', 'Python'))
-> 
+>
 > You introduced your solution on 2009-03-21, I did mine on 2009-05-09.
 > We did basically the same thing (albeit yours has a brilliant
 > functional style ;)).
@@ -89,7 +89,7 @@ canonical form (e.g. "Python" -> "python"). Maybe we should not use
 uppercase letters at all in tags.
 
 > What do you think about this new implementation of `Post.has_tag`?
-> 
+>
 >     def has_tag(self, tagset):
 >         assert(isinstance(tagset, str) or hasattr(tagset, '__iter__'))
 >         if isinstance(tagset, str):
@@ -98,11 +98,11 @@ uppercase letters at all in tags.
 >             if tag in self._header['Tag']:
 >                 return True
 >         return False
-> 
+>
 > Then we could have
-> 
+>
 >     ps_python = ps_all.collect.has_tag(['python', 'Python'])
-> 
+>
 > which is cleaner and more simple than our previous solutions.
 
 Nice! Go ahead.
@@ -112,7 +112,7 @@ for efficiency reasons. But that can wait. I'll file an issue about
 it.
 
 > == Dead code ==
-> 
+>
 > Your `sections1()` seems to be dead code. (Also, why 1204?)
 
 I think I made `sections1` for a very specific purpose; probably

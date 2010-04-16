@@ -20,7 +20,7 @@ instead. I think the latter is nicer.
     + index_set = hklib.PostSet(postdb, filter(is_blog_index, postdb.all()))
 
 This is better:
-    
+
     + index_set = postdb.all().collect(is_blog_index)
 
 == Returning text structure ==

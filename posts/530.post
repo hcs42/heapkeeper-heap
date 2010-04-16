@@ -8,7 +8,7 @@ Date: Wed, 19 Aug 2009 20:23:07 +0200
 >> I would rather call it log or print_log. It is a bit misleading wht
 >> "dl(details=True)" does (downloads all the details?) What do you
 >> think?
-> 
+>
 > OK. Or maybe detailed_log?
 
 Be my guest :)

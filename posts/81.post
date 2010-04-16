@@ -104,7 +104,7 @@ So my proposal is having only these concepts that require a name:
 
 >> - Heapkeeper: I like this probably the most; it satisfies the
 >> generality criterion, and Googlable, now has only 127 hits
-> 
+>
 > I like it. First I didn't, because it reminds me to "Bitkeeper".
 > I think our whole program (web and console interface, parser,
 > everything included) should be named Heapkeeper.

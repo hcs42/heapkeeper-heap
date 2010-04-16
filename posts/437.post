@@ -9,7 +9,7 @@ Date: Sat, 01 Aug 2009 10:13:09 +0200
 >>> 0.1 and 0.2, if I understand correctly.
 >> Yes, that is what I thought, but it does not seem to work because of
 >> the motorway.
-> 
+>
 > Umm... both the 0.1 and 0.2 tags are on "single sections". Will that
 > still cause a problem with motorways coming after the tag? I think
 > I'll go and experiment with it.

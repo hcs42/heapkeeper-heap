@@ -18,7 +18,7 @@ into several categories:
 - feature (`feature`): threads about the addition of new features to
   Hk
 - issue (`issue`): a thread that is about a concrete part of Hk, but
-  doesn't fall into any of the 
+  doesn't fall into any of the
 - proposal (`prop`): threads marked as proposals present plans for the
   future, not about concrete parts of Hk, but rather the
   "infrastructure": coding conventions, repository etc.

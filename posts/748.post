@@ -62,7 +62,7 @@ extra comments compared to the expected result".
 
 The order does not really have a significance when reading non-diff
 test results:
-    
+
     AssertionError: ['a', 'b'] != ['a']
 
 == Idea ==

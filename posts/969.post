@@ -8,7 +8,7 @@ Date: Sun, 22 Nov 2009 08:52:19 +0100
 >> PostDB.walk_thread walks over a given thread and yields non-flat post
 >> items. PostDB.walk_cycle walks over the posts in cycles and yields
 >> flat post items.
-> 
+>
 > How about having one common `walk_postset` with having flat or
 > non-flat as a parameter? The only difference in the current
 > implementation is augmentation, which we agreed to phase out.

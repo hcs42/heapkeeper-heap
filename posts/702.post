@@ -9,10 +9,10 @@ Date: Sun, 18 Oct 2009 17:59:03 +0200
 Updated version that also finds lines longer than 79 in Python code:
 
     #!/bin/bash
-    
+
     tmp=`tempfile`
     pythonfiles=`git-ls-files | grep py`
-    
+
     grep -n " $" *.py doc/*.{rst,py,hrst} > "$tmp"
     if [ "`cat $tmp`" != "" ]
     then
@@ -22,7 +22,7 @@ Updated version that also finds lines longer than 79 in Python code:
         cat "$tmp"
         exit 1
     fi
-    
+
     grep -n ".\{80\}" $pythonfiles | grep -v 'http://' > "$tmp"
     if [ "`cat $tmp`" != "" ]
     then
@@ -32,5 +32,5 @@ Updated version that also finds lines longer than 79 in Python code:
         cat "$tmp"
         exit 1
     fi
-    
+
     rm "$tmp"

@@ -19,7 +19,7 @@ I like it! Shall I register a domain name and an account?
 >> pages. I registered the "heapkeeper" Google App domain. Well, static
 >> HTML pages can be copied and shown, but I haven't manage to do it
 >> nicely: you have to write "/static/index.html" after the domain. [2]
-> 
+>
 > Can you use FTP to upload files?
 
 No. I was looking for it and someone explicitly stated this. The

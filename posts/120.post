@@ -9,7 +9,7 @@ Date: Sun, 19 Apr 2009 16:54:36 +0200
 >>> This would also spare the editor the burden of keeping track of
 >>> the x-numbers.
 >> I don't understand this.
-> 
+>
 > Now, when we split a post, we give the new post file an ID, which is
 > the letter 'x' followed by a number. If one wants to create a new
 > post file, they have to look at the mail directory listing to find

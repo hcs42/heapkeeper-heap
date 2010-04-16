@@ -37,7 +37,7 @@ puller:
 
     # the following has to be done only at the first time:
     $ git remote add committer git://github.com/committer/heapkeeper.git
-    
+
     $ git fetch committer    # gets the changes but does not apply them
     examines the commits and sends a message to the committer
     about the things that should be done differently

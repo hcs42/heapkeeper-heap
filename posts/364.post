@@ -14,12 +14,12 @@ Date: Sun, 31 May 2009 16:01:28 +0200
 >>     > - Asimov
 >>
 >>     Yes, I like Asimov, too.
->> 
+>>
 >> Afterwards (with a slightly backward incompatible solution) we may
 >> introduce another behaviour, e.g. it could link to the original
 >> paragraph. (We could have a setting about turning off the new
 >> behaviour.)
-> 
+>
 > OK, but how would you find the original paragraph?
 
 In the example I would find the parent post and the "People I like"

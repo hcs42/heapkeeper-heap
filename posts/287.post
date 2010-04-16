@@ -5,7 +5,7 @@ Parent: <20090519212701.7b91714e.nagy.attila.1984@gmail.com>
 Date: Tue, 19 May 2009 21:43:55 +0200
 
 >> Do you think they mean the same, or do you use them in different context?
-> 
+>
 > No, I use them interchangeably. But you've mentioned two castes of people
 > working on the heap; I guess to the likeness of editors and admins on
 > Wikipedia. Am I right?
@@ -19,7 +19,7 @@ said:
 
     On the Hungarian Wikipedia, a new revision patrolling system has
     been instantiated. This is pretty similar to how I fancy using a
-    Git repo as a backend for the Web interface. 
+    Git repo as a backend for the Web interface.
 
 I guess many maintainer would be allowed commit their changes into the
 local repository, but only the upper cast could push them e.g. to the

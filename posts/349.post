@@ -7,7 +7,7 @@ Parent: <4A20531D.5020906@gmail.com>
 Date: Sat, 30 May 2009 08:20:20 +0200
 
 == Quotes ==
-  
+
 >>>>>> Here, you have a guarantee that the depth of the recursion will not
 >>>>>> exceed the depth of the quotation, which I'd like not to exceed 20 in
 >>>>>> any reasonable conversation.

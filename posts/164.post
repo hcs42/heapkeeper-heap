@@ -35,9 +35,9 @@ topic -- it is aimed at human readers, but they don't capitalize
 variables' name. That would be simply confusing.
 
 > Thus, a message like:
-> 
+>
 >     Hklib: corrected bugs
-> 
+>
 > won't make anybody go and grep for a code element called 'Hklib' with capital H.
 
 Why not? How does a reader know whether it is a class or a module? We

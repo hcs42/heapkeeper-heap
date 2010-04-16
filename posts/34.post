@@ -7,7 +7,7 @@ Date: Sat, 21 Mar 2009 21:57:35 +0100
 
 When talking about a specific commit (or commits), I suggest the
 following forms for the subject:
-    
+
     [hh][commit] Description (date sha)
     [hh][commit] Description (date1 sha1, date2 sha2...)
 

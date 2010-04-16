@@ -19,7 +19,7 @@ emails that already have been downloaded.
 I think let's stick with our current terminology in this thread.)
 
 >> Do we want to allow shortening UUIDs, as far as they are unique?
-> 
+>
 > I think we discussed this on Skype. If I remember correctly, we
 > dismissed the whole idea of using any kind of hash or UUID as postids,
 > on the basis that the IDs used by mailing agents are pretty random
@@ -55,7 +55,7 @@ We do use them optionally now. If the "Parent" attribute of a post is
 "3", Hk will find post 3 as its parent.
 
 > So I guess things are pretty OK. Anyone for Scrabble later? [1]
-> 
+>
 > [1] http://xkcd.com/470/
 
 :)))

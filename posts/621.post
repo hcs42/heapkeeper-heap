@@ -21,17 +21,17 @@ Date: Fri, 2 Oct 2009 14:22:17 +0200
 Well said. Let's call this the "principle of expanding syntax".
 
 > === Example of the principle not working ===
-> 
+>
 > I'll give an example that does not respect the principle.
-> 
+>
 > Consider we convert [http://link text] (\[http://.\{-}\]) into an
 > HTML link, but we accept anything else as normal text. We release a
 > version of Hk that works this way. Then we realize sometimes we want
 > to write lines like this:
-> 
+>
 >     My favourite author is [http://en.wikipedia.org/wiki/Isaac_Asimov
 >     Isaac Asimov, the genius.]
-> 
+>
 > But we can't go back without cheating, because we said this was a
 > syntactically/semantically correct text already!
 

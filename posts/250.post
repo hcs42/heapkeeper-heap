@@ -9,9 +9,9 @@ Date: Tue, 19 May 2009 09:48:41 +0200
 > separate them.
 
 Absolutely.
- 
+
 > == Reorganizing Hh heapids ==
-> 
+>
 > Usually it is a very bad idea to modify the heapids of existing posts.
 > In Hh's case, on the other hand, I think it would be rather desirable.
 > Hh's index page otherwise would look weird for new people.
@@ -23,10 +23,10 @@ this to hklib? Then, anyone facing this problem later would have a
 readily usable solution.
 
 > == Heapkeeper support for managing several heaps ==
-> 
+>
 > Hk should have a good support for managing both heaps at the same
 > time. We want to be able to write commands like this:
-> 
+>
 >     >>> ums_heap = heap('~/documents/heaps/ums')
 >     >>> hh_heap = heap('~/documents/heaps/hh')
 >     >>> ums = ums_heap.postdb()
