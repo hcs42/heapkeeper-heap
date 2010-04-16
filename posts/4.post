@@ -19,11 +19,11 @@ the whole heap, and it could have references to the real posts.
 
 Ideas for wiki-like pages:
 - Hh conventions
-- Glossary about expressions related to using Hh ("Hm", "Hh")
-- Glossary about using Hm ("heap", "post", "thread", "index",
+- Glossary about expressions related to using HH ("Hk", "HH")
+- Glossary about using Heapkeeper ("heap", "post", "thread", "index",
   "Heapmanipulator", "heapid"); maybe this should be in the User
   Manual and not here.
-- Glossay about developing Hm: maybe this also should be in the User
+- Glossay about developing Heapkeeper: maybe this also should be in the User
   Manual rather than in Hh.
 
 If it works, we can think about making it possible to use a heap in a

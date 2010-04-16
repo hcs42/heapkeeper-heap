@@ -61,7 +61,7 @@ Cycle:
     in a cycle. Those posts are not present in any thread. A post is
     in a cycle if you can go up via the 'parent' relation infinitely
     long and you will never reach a root. The cycles are handled by
-    Hm, but the maintainer of the heap should remove the cycles.
+    Heapkeeper, but the maintainer of the heap should remove the cycles.
 
     See also: MailDB.has_cycle, MailDB.cycles
 

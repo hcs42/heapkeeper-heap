@@ -20,10 +20,11 @@ Date: Mon, 13 Apr 2009 09:26:45 +0200
 :)
 
 >>>> - a documented format for a mutable mailing list (called a heap)
->
+
 >> Well... I'm not sure that the current format with many-many small
 >> files is our final choice. We might even use database tables to store
->> the posts. Especially in the web-Hm. Maybe we will have two formats:
+>> the posts. Especially in the web-Heapmanipulator. Maybe we will have
+>> two formats:
 >> - internal, efficient representation: database tables
 >> - external, human-readable, easy-to-parse, exportable and importable
 >> representation: the current mail file format, XML or YAML.
@@ -32,17 +33,19 @@ Date: Mon, 13 Apr 2009 09:26:45 +0200
 > a set of possibilities: mailfiles, XML, YAML, SQL...
 >
 > A possible roadmap:
-> 1. Mailfile-based Hk with static HTML output (nearing completion, only lacking body parsing, as I see it)
+> 1. Mailfile-based Hk with static HTML output (nearing completion, only
+> lacking body parsing, as I see it)
 
 Nearing, especially if we decide to satisfy your needs that aren't
 implemented yet within the web interface instead of the static web
 interface.
 
 > 2. Mailfile-based Hk with Web interface
-> - at this point, we'll very probably need a single server (back to Shrek?)
-> - this will probably be the end of the distributed Git two-way
-> pulling storage mechanism (not necessarily, though, we could have a
-> discussion on this)
+> - at this point, we'll very probably need a single server (back to
+>   Shrek?)
+> - this will probably be the end of the distributed Git two-way pulling
+>   storage mechanism (not necessarily, though, we could have a
+>   discussion on this)
 
 I think we should discuss this in a separate thread (or even
 thread-set), when we are ready. Do you think we are? Or should we
@@ -62,7 +65,7 @@ concentrate on the body parsing first?
 > Thus, we have two things called 'heap':
 > - the idea of an editable mailing list and the associated terminology
 > - the syntax and semantics of header elements which I think will be
-> independent of the storage mechanism
+>   independent of the storage mechanism
 >
 > Should we distinguish these?
 
@@ -72,16 +75,16 @@ separate mail.
 
 >> - a library for editing of said list (called Heapmanipulator)
 >> - a simple interactive interface for said library (called Heapia)
->
->> I don't think of these as separate programs. Maybe when the web-Hm is
->> ready, we will have to think of them as separate entities. On the
->> other hand, we don't want to confuse users by telling them about a
->> bunch of different names when actually what now exists is just one
->> traditional software program and nothing else
->
->> Similarly, we could say we have a program called Hm, which has a
+
+>> I don't think of these as separate programs. Maybe when the
+>> web-Heapmanipulator is ready, we will have to think of them as
+>> separate entities. On the other hand, we don't want to confuse users
+>> by telling them about a bunch of different names when actually what
+>> now exists is just one traditional software program and nothing else
+
+>> Similarly, we could say we have a program called Heapmanipulator, which has a
 >> console and a web interface, end of story.
->
+
 > For that, the name 'Heapkeeper' (abbr. Hk) would be best.
 
 True. (At this point of the mail Hk has not been settled yet :) )
@@ -165,7 +168,7 @@ git command.
 > OK.
 >
 >> Shall we call our program Heapkeeper then? Of course it will be
->> abbreviated as Hk. (Which is better than Hm.)
+>> abbreviated as Hk. (Which is better than Heapmanipulator.)
 >
 > Hmm. This takes us back to the suit/non-suit problem above. What
 > binary(ies) or command(s) exactly do you propose to be called
@@ -184,6 +187,6 @@ Did I answer your question?
 >
 > The project name should be changed. What do you want to use these
 > new addresses for? Is this the new name for the place we want to
-> migrate the hh-part of the present-day Heap?
+> migrate the HH-part of the present-day Heap?
 
 Yes.

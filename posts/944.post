@@ -5,7 +5,7 @@ Message-Id: <4B01AA49.4000300@gmail.com>
 Parent: <b29f917d0911161108r75c89da8ne23bfe8d5faccc0f@mail.gmail.com>
 Date: Mon, 16 Nov 2009 20:38:49 +0100
 
-Hm. It would not make too much sense to put sets and dictionaries into
+Heapkeeper. It would not make too much sense to put sets and dictionaries into
 text structures... But I can't help thinking that we may find
 something else than lists and tuples that may be useful. Of course if
 we now say that we accept only lists and tuples, we can still extend

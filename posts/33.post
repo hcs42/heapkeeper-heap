@@ -21,9 +21,9 @@ compilation now.
 When we have the time and motivation, and we translated all pages to
 use Wiko's syntax, we will start using Wiko, compile all documentation
 and correct the errors. Then we also have to write documentation on
-how to configure and use Wiko for Hm. Maybe we will put Wiko in our
-git repo; that is subject to further discussion, since it may have
-serious implications (e.g. licences).
+how to configure and use Wiko for Heapkeeper. Maybe we will put Wiko
+in our git repo; that is subject to further discussion, since it may
+have serious implications (e.g. licences).
 
 [1] http://www.iua.upf.edu/~dgarcia/wiko/index.html
 [2] http://www.iua.upf.edu/~dgarcia/wiko/Sample.wiki

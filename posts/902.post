@@ -12,7 +12,7 @@ Date: Tue, 10 Nov 2009 17:54:39 +0100
 >>   `Generator.print_postitem`; then any "post item modifier functions"
 >>   could use this function
 >
-> Hm. Just for making sure that we are on the same page, the following
+> Heapkeeper. Just for making sure that we are on the same page, the following
 > changes would be done for example to hkgen.Generator.enclose_posts.
 > [...]
 >  -             old_print_fun = postitem.print_fun

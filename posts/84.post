@@ -21,10 +21,11 @@ line only open as long as possible, ie. forever.
 
 > Well... I'm not sure that the current format with many-many small
 > files is our final choice. We might even use database tables to store
-> the posts. Especially in the web-Hm. Maybe we will have two formats:
+> the posts. Especially in the web-Heapmanipulator. Maybe we will have
+> two formats:
 > - internal, efficient representation: database tables
 > - external, human-readable, easy-to-parse, exportable and importable
-> representation: the current mail file format, XML or YAML.
+>   representation: the current mail file format, XML or YAML.
 
 I like this idea. Still, a heap will be a documented format, one of a
 set of possibilities: mailfiles, XML, YAML, SQL...
@@ -59,22 +60,21 @@ Should we distinguish these?
 > - a library for editing of said list (called Heapmanipulator)
 > - a simple interactive interface for said library (called Heapia)
 
-> I don't think of these as separate programs. Maybe when the web-Hm
-> is ready, we will have to think of them as separate entities. On the
-> other hand, we don't want to confuse users by telling them about a
-> bunch of different names when actually what now exists is just one
-> traditional software program and nothing else
+> I don't think of these as separate programs. Maybe when the
+> web-Heapmanipulator is ready, we will have to think of them as
+> separate entities. On the other hand, we don't want to confuse users
+> by telling them about a bunch of different names when actually what
+> now exists is just one traditional software program and nothing else
 
-> Similarly, we could say we have a program called Hm, which has a
-> console and a web interface, end of story.
+> Similarly, we could say we have a program called Heapmanipulator,
+> which has a console and a web interface, end of story.
 
 For that, the name 'Heapkeeper' (abbr. Hk) would be best.
 
 > I think the users would be most happy with that solution.
 
 We are not yet at the point where we'd have 'ordinary' users ignoring
-implementation details. Though, of course, it is our goal to have them
-:)
+implementation details. Though, of course, it is our goal to have them :)
 
 > Now the philosophy is that git is one program with many subcommands
 > (e.g. "git commit", "git checkout"), and invoking "git-commit" is
@@ -113,8 +113,8 @@ Agreed then.
 
 OK.
 
->Shall we call our program Heapkeeper then? Of course it will be
->abbreviated as Hk. (Which is better than Hm.)
+> Shall we call our program Heapkeeper then? Of course it will be
+> abbreviated as Hk. (Which is better than Heapmanipulator.)
 
 Hmm. This takes us back to the suit/non-suit problem above. What
 binary(ies) or command(s) exactly do you propose to be called
@@ -122,9 +122,9 @@ Heapkeeper?
 
 > If yes, then I will rename the github repository to "heapkeeper".
 > I'll create a heapkeeper.heap GMail account and a heapkeeper-heap
-> Google Group (although I think we won't use it until Hk supports
-> managing multiple heaps.)
+> Google Group (although I think we won't use it until Heapkeeper
+> supports managing multiple heaps.)
 
 The project name should be changed. What do you want to use these new
 addresses for? Is this the new name for the place we want to migrate
-the hh-part of the present-day Heap?
+the HH-part of the present-day Heap?

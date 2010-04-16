@@ -8,8 +8,9 @@ Date: Mon, 13 Apr 2009 07:13:43 +0200
 
 >>> Maybe we should talk about the distinction between the project and the
 >>> program. What other things are in the project in your opinion? The
->>> research? :) The web-Hm? I thought the web-Hm would also be called
->>> Heapmanipulator. (But I don't have a strong opinion on this.)
+>>> research? :) The web-Heapmanipulator? I thought the
+>>> web-Heapmanipulator would also be called Heapmanipulator. (But I
+>>> don't have a strong opinion on this.)
 
 >> The web interface, as I see it, will be the kind of interface to a
 >> heap that doesn't exist today: a single interface to view and
@@ -22,12 +23,13 @@ the first step into that direction.
 >> produce a suite consisting of:
 >> - a documented format for a mutable mailing list (called a heap)
 
-Well... I'm not sure that the current format with many-many small
-files is our final choice. We might even use database tables to store
-the posts. Especially in the web-Hm. Maybe we will have two formats:
+Well... I'm not sure that the current format with many-many small files
+is our final choice. We might even use database tables to store the
+posts. Especially in the web-Heapmanipulator. Maybe we will have two
+formats:
 - internal, efficient representation: database tables
 - external, human-readable, easy-to-parse, exportable and importable
-representation: the current mail file format, XML or YAML.
+  representation: the current mail file format, XML or YAML.
 
 Now the internal format is in the memory in the form of a MailDB
 object. Maybe that is the right choice, not a traditional database.
@@ -45,21 +47,21 @@ shall be stored: they are just abstract concepts.
 > - a library for editing of said list (called Heapmanipulator)
 > - a simple interactive interface for said library (called Heapia)
 
-I don't think of these as separate programs. Maybe when the web-Hm is
-ready, we will have to think of them as separate entities. On the
-other hand, we don't want to confuse users by telling them about a
-bunch of different names when actually what now exists is just one
-traditional software program and nothing else. E.g. Sphinx does have
-different generators (HTML, LaTeX, etc.), a common parser (which is
-from another project called reStructuredText), an extension system,
-and some extensions that it ships with (e.g. one called autodoc that
-extracts doctrings from Python modules). Yet, they don't confuse
-users: the project and the program are both called Sphinx, end of
-story. (OK, I admit, they mention reStructuredText, but that's all.)
+I don't think of these as separate programs. Maybe when the
+web-Heapmanipulator is ready, we will have to think of them as separate
+entities. On the other hand, we don't want to confuse users by telling
+them about a bunch of different names when actually what now exists is
+just one traditional software program and nothing else. E.g. Sphinx does
+have different generators (HTML, LaTeX, etc.), a common parser (which is
+from another project called reStructuredText), an extension system, and
+some extensions that it ships with (e.g. one called autodoc that
+extracts doctrings from Python modules). Yet, they don't confuse users:
+the project and the program are both called Sphinx, end of story. (OK, I
+admit, they mention reStructuredText, but that's all.)
 
-Similarly, we could say we have a program called Hm, which has a
-console and a web interface, end of story. I think the users would be
-most happy with that solution. They don't care about the modules
+Similarly, we could say we have a program called Heapmanipulator, which
+has a console and a web interface, end of story. I think the users would
+be most happy with that solution. They don't care about the modules
 structure and things like that.
 
 Another example is git. Linus's philosophy was that it is a set of
@@ -114,7 +116,7 @@ suggests a program that stores and manages the data, maintaining its
 consistency and correctness.
 
 Shall we call our program Heapkeeper then? Of course it will be
-abbreviated as Hk. (Which is better than Hm.)
+abbreviated as Hk. (Which is better than Heapmanipulator.)
 
 If yes, then I will rename the github repository to "heapkeeper".
 I'll create a heapkeeper.heap GMail account and a heapkeeper-heap
