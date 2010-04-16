@@ -12,9 +12,9 @@ Date: Tue, 19 May 2009 19:06:39 +0200
 > project hosted at GitHub, hence, the mailing list archive is purely
 > documentation.
 
-I thought we would communicate with our users and other developers via Hh.
+I thought we would communicate with our users and other developers via HH.
 
-> Hh contains practically no personal information, so it's safe to
+> HH contains practically no personal information, so it's safe to
 > publish. Of course, we'll have to double-check before a push to
 > ensure there's really no sensitive information within. If it's
 > difficult to remove nasty revisions from Wikipedia's database, with
@@ -41,8 +41,8 @@ To conclude:
 
 The advantages of using GitHub (with human repository updates):
 - We would not have to pull from each other's PC.
-- Anybody could download Hh any play around with it.
-- Anybody could make an Hh-clone, make modifications and we could pull
+- Anybody could download HH any play around with it.
+- Anybody could make an HH-clone, make modifications and we could pull
   from them.
 
 Main disadvantage:

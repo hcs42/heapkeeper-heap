@@ -80,14 +80,14 @@ instead of a tuple where a postname is required, this special heapid
 could be assumed.
 
 >    >>> p(('ums', 0))    # the first post of UMS
->    >>> p(('hh', 0))     # the first post of Hh
+>    >>> p(('hh', 0))     # the first post of HH
 >
 > We should have a current heap:
 >
 >    >>> select('ums')
 >    >>> p(0)             # the first post of UMS
 >    >>> select('hh')
->    >>> p(0)             # the first post of Hh
+>    >>> p(0)             # the first post of HH
 
 We could have a current heap if you'd like to. This could even be used
 with the previous "unnamed heap" idea: after a `select('hh')` call, a

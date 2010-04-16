@@ -7,15 +7,15 @@ Date: Mon, 15 Mar 2010 18:19:30 +0100
 In parallel to implementing the "several heaps" feature [1], I
 prepared our heap for the separation. I also wrote a small Python
 function that performs the separation and placed it in
-hkrc_csabahoch.py. I uploaded the page generated from the separated Hh
+hkrc_csabahoch.py. I uploaded the page generated from the separated HH
 here [2] so that you can check it out. You can also check out how the
 post bodies are displayed: the meta text and quotes are highlighted,
 and the web and heap references are real links.
 
-We should set up a Google Groups account for Hh and send the new
-emails there. We should create a GitHub repository for Hh and we
-should push the new Hh posts there, so that will be the primary Hh
-repository. We should push the HTML pages generated from Hh to
+We should set up a Google Groups account for HH and send the new
+emails there. We should create a GitHub repository for HH and we
+should push the new HH posts there, so that will be the primary HH
+repository. We should push the HTML pages generated from HH to
 heapkeeper.org.
 
 If you say OK, I will try to do these next weekend. If you don't say

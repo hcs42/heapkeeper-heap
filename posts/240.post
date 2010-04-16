@@ -7,11 +7,11 @@ Heapkeeper heap and UMS heap have been living as one entity until now.
 I think it is worth to start to think and talk about how should we
 separate them.
 
-== Reorganizing Hh heapids ==
+== Reorganizing HH heapids ==
 
 Usually it is a very bad idea to modify the heapids of existing posts.
-In Hh's case, on the other hand, I think it would be rather desirable.
-Hh's index page otherwise would look weird for new people.
+In HH's case, on the other hand, I think it would be rather desirable.
+HH's index page otherwise would look weird for new people.
 
 == Heapkeeper support for managing several heaps ==
 

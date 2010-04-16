@@ -10,10 +10,10 @@ Date: Sun, 19 Apr 2009 16:31:55 +0200
 
 > What do we think of all this now that we chose Sphinx over Wiko?
 
-I think it would be better for us to use Sphinx instead of Wiko on Hh
+I think it would be better for us to use Sphinx instead of Wiko on HH
 (and maybe on UMS Heap as well), because:
 - using one system is easier than using two systems,
-- it should be easy to move blocks of text between the docs and Hh.
+- it should be easy to move blocks of text between the docs and HH.
 
 Of course calling the wiki compiler would be a callback function of
 Hk, so everybody may use whatever they want.

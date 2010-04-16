@@ -14,7 +14,7 @@ rest.
 
 Probably questions about conventions or concrete problems will arise.
 (The first one: [1]) The questions about conventions should be posted
-with "heap-conventions" tag to Hh. If they are specifically about Hh,
+with "heap-conventions" tag to HH. If they are specifically about HH,
 they should be posted with "hh-conventions" tag. If they are about a
 specific set of posts and not about general rules that could be
 applied in the future, they should be tagged with "meta". We could

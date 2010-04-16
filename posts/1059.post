@@ -8,7 +8,7 @@ Date: Thu, 28 Jan 2010 18:07:14 +0100
 
 Some summarization, to see if I got the idea:
 
-Some Hh threads are special, in that we want to track them using a
+Some HH threads are special, in that we want to track them using a
 specialized Hk module, called the issue tracker. These threads fall
 into several categories:
 

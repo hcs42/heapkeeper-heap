@@ -13,7 +13,7 @@ settings along with your wishes.
 A side note though (you don't have to answer): Vim newbies often
 complain that experts use the short names of commands on the mailing
 list without explaining them. In our case they are the third category
-of users: they will be intimidated by reading "on('gi')" on Hh and
+of users: they will be intimidated by reading "on('gi')" on HH and
 will be reluctant to look it up. Thus the setting shortcuts will help
 only the first two categories of people. And not much: they can write
 better shortcuts in their hkrc just as easily (e.g. "t()" instead of

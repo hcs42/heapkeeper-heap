@@ -13,7 +13,7 @@ really. So, sorry for all the misunderstandings.>>>
 >> project hosted at GitHub, hence, the mailing list archive is purely
 >> documentation.
 >
-> I thought we would communicate with our users and other developers via Hh.
+> I thought we would communicate with our users and other developers via HH.
 
 No, you've misunderstood me, though I can't really blame you for it. Of
 course a mailing list exists to provide a means of communication among
@@ -23,7 +23,7 @@ the development, or questions and answers regarding the use of the
 project. The result of both of these communication forms qualify as
 documentation: they are either plans or howtos.
 
->> Hh contains practically no personal information, so it's safe to
+>> HH contains practically no personal information, so it's safe to
 >> publish. Of course, we'll have to double-check before a push to
 >> ensure there's really no sensitive information within. If it's
 >> difficult to remove nasty revisions from Wikipedia's database, with
@@ -32,7 +32,7 @@ documentation: they are either plans or howtos.
 > I understand that you wrote this to prove that we should not have any
 > concerns, but as I read it, and started to have some...
 
-Again, misunderstanding. I wasn't advocating putting Hh on GitHub, I was
+Again, misunderstanding. I wasn't advocating putting HH on GitHub, I was
 voicing my concerns.
 
 > I thought that
@@ -61,8 +61,8 @@ prior to moving on to the Hkweb stage.
 >
 > The advantages of using GitHub (with human repository updates):
 > - We would not have to pull from each other's PC.
-> - Anybody could download Hh any play around with it.
-> - Anybody could make an Hh-clone, make modifications and we could pull
+> - Anybody could download HH any play around with it.
+> - Anybody could make an HH-clone, make modifications and we could pull
 >   from them.
 >
 > Main disadvantage:
@@ -73,7 +73,7 @@ prior to moving on to the Hkweb stage.
 > I lean towards accepting GitHub as a temporary solution. With noting
 > that we will revisit the problem when we have Hkweb.
 
-I'm not that sure we'd have any need for Hh until we reach at least some
+I'm not that sure we'd have any need for HH until we reach at least some
 maturity of Hkweb, and not so sure if we'll have it even after that.
 Pessimistic, I know. But I'm not into marketing, and don't know how to make a
 brilliant new project widely known. But, I think you have an excellent book on

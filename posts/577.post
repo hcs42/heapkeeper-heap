@@ -17,4 +17,4 @@ that. Have a look at almost any thread that discusses the commits.
 It would not only be inconvenient not to paste the relevant parts of
 the diff into the email, but it would make following the conversation
 for someone else difficult, because we rebase and rewrite commits when
-we talk about them on Hh.
+we talk about them on HH.

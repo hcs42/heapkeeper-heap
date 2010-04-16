@@ -4,11 +4,11 @@ Message-Id: <4A12CEB9.9000902@gmail.com>
 Parent: <20090519094841.2067be8f.nagy.attila.1984@gmail.com>
 Date: Tue, 19 May 2009 17:22:33 +0200
 
->> == Reorganizing Hh heapids ==
+>> == Reorganizing HH heapids ==
 >>
 >> Usually it is a very bad idea to modify the heapids of existing posts.
->> In Hh's case, on the other hand, I think it would be rather desirable.
->> Hh's index page otherwise would look weird for new people.
+>> In HH's case, on the other hand, I think it would be rather desirable.
+>> HH's index page otherwise would look weird for new people.
 >
 > Do you have any idea for this mass-renaming? We'd have to take care of
 > any in-body references as well as heapids in In-Reply-To: headers. No

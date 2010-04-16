@@ -36,7 +36,7 @@ Yes, if we assume there are two casts of maintainers.
 >> I lean towards accepting GitHub as a temporary solution. With noting
 >> that we will revisit the problem when we have Hkweb.
 >
-> I'm not that sure we'd have any need for Hh until we reach at least some
+> I'm not that sure we'd have any need for HH until we reach at least some
 > maturity of Hkweb, and not so sure if we'll have it even after that.
 > Pessimistic, I know. But I'm not into marketing, and don't know how to make a
 > brilliant new project widely known. But, I think you have an excellent book on
@@ -44,7 +44,7 @@ Yes, if we assume there are two casts of maintainers.
 
 It says create a public mailing list and make all communication via
 that. In our case, it is even more important to follow this advice
-than in another project -- Hh is our proof that our system is usable.
+than in another project -- HH is our proof that our system is usable.
 
 Relevant quotes:
 

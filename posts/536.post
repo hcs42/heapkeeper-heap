@@ -50,14 +50,14 @@ The only problem is the inconvenience of users who want to handle one
 heap and does not want to specify the name of the heap all the time.
 
     >>> p(('ums', 0))    # the first post of UMS
-    >>> p(('hh', 0))     # the first post of Hh
+    >>> p(('hh', 0))     # the first post of HH
 
 We should have a current heap:
 
     >>> select('ums')
     >>> p(0)             # the first post of UMS
     >>> select('hh')
-    >>> p(0)             # the first post of Hh
+    >>> p(0)             # the first post of HH
 
 The only thing I don't know whether it should be better to have a
 current heap in hkshell or in PostDB. It seems to me that having it in

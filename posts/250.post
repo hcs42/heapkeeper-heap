@@ -10,11 +10,11 @@ Date: Tue, 19 May 2009 09:48:41 +0200
 
 Absolutely.
 
-> == Reorganizing Hh heapids ==
+> == Reorganizing HH heapids ==
 >
 > Usually it is a very bad idea to modify the heapids of existing posts.
-> In Hh's case, on the other hand, I think it would be rather desirable.
-> Hh's index page otherwise would look weird for new people.
+> In HH's case, on the other hand, I think it would be rather desirable.
+> HH's index page otherwise would look weird for new people.
 
 Do you have any idea for this mass-renaming? We'd have to take care of
 any in-body references as well as heapids in In-Reply-To: headers. No
