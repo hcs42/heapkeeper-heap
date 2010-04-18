@@ -8,9 +8,10 @@ Date: Sun, 08 Mar 2009 17:48:53 +0100
 The HTML files generated from indices, the HTML files generated from
 threads, and HTML files generated from posts should be totally
 independent from each other and any other generated HTML file.
-This could be one of the Key Design Principles of Hk.
+This could be one of the Key Design Principles of Heapkeeper.
 
-Hk would become complicated if we wired those kind of dependencies.
+Heapkeeper would become complicated if we wired those kind of
+dependencies.
 
 But I have another, stronger argument. Generating the HTML pages for
 all posts takes 4 seconds now. It will be longer in the future, due to
