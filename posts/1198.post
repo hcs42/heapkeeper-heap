@@ -1,0 +1,38 @@
+Author: Csaba Hoch
+Subject: Automatic update of copyright notices
+Tag: vim
+Message-Id: <o2u4ddb9e5b1004180714tb53260bbr9e3eaedfe4fb0173@mail.gmail.com>
+Date: Sun, 18 Apr 2010 16:14:51 +0200
+
+I wrote a Vim snippet that automatically updates copyright notices in
+Heapkeeper source files:
+
+    " UpdateMyCopyright:
+    "   Automatically update copyright notice with current year
+    " Based on:
+    "   http://vim.wikia.com/wiki/Automatically_Update_Copyright_Notice_in_Files
+    function! UpdateMyCopyright()
+        let myname = "Csaba Hoch"
+        if &modified
+            exe "silent! g#".
+                \ "\\cCopyright (C) " .
+                \ "\\(" . strftime("%Y") . "\\)\\@![0-9]\\{4\\}" .
+                \ "\\(-" . strftime("%Y") . "\\)\\@!\\(-[0-9]\\{4\\}\\)\\?" .
+                \ " " . myname . "#" .
+                \ "s#\\([0-9]\\{4\\}\\)\\(-[0-9]\\{4\\}\\)\\?#\\1-" .
+strftime("%Y") . "#e"
+        endif
+    endfunction
+
+    autocmd BufWritePre * call UpdateMyCopyright()
+
+It makes the following substitutions:
+
+    - Copyright (C) 2009 My Name
+    + Copyright (C) 2009-2010 My Name
+
+    - Copyright (C) 2008-2009 My Name
+    + Copyright (C) 2008-2010 My Name
+
+Don't forget to change the myname variable to your name. If there is no
+copyright notice in the file or the file was not modified, nothing happens.

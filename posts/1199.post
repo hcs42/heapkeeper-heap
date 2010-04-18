@@ -1,0 +1,19 @@
+Author: Attila Nagy
+Subject: Automatic update of copyright notices
+Tag: vim
+Message-Id: <y2kb29f917d1004180927v5cb5ac24h3c254d24da617f64@mail.gmail.com>
+Parent: <o2u4ddb9e5b1004180714tb53260bbr9e3eaedfe4fb0173@mail.gmail.com>
+Date: Sun, 18 Apr 2010 18:27:07 +0200
+
+> It makes the following substitutions:
+>
+>    - Copyright (C) 2009 My Name
+>    + Copyright (C) 2009-2010 My Name
+>
+>    - Copyright (C) 2008-2009 My Name
+>    + Copyright (C) 2008-2010 My Name
+
+I never really understood this. Why is it important to specify a year?
+Or, even if it is important to specify a year, what is the meaning of
+giving more than one? Is it used when deciding the expiration of the
+copyright? Then only the latest date would be meaningful.

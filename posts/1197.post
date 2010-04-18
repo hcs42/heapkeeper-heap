@@ -1,0 +1,42 @@
+Author: Csaba Hoch
+Subject: Heapkeeper v0.5 to be released
+Tag: prop
+Message-Id: <n2j4ddb9e5b1004130149sedc91bd6ucf95bab706ca9239@mail.gmail.com>
+Parent: <j2jb29f917d1004130104m8f01d1c0x83f3f75ea5e0a244@mail.gmail.com>
+Date: Tue, 13 Apr 2010 10:49:58 +0200
+
+>> So I propose merging the _several_heaps and _docs branches into the
+>> master, testing the release candidate branch for two weeks, and
+>> finally releasing Heapkeeper v0.5. I would be glad if Attis also
+>> tested Heapkeeper's newest version during this period.
+>
+> If you have the RC branch, I'll gladly help with the testing.
+
+Basically _several_heaps is the RC branch. The _docs branch contains
+improvements about the development process (how to use pylint for
+example). After some testing of _several_heaps, they should be merged
+and the merged branch will be the real RC branch.
+
+>> I don't know whether we should announce Heapkeeper on Freshmeat or
+>> we should wait another release.
+>
+> Do you have any set of features or goals that would have to be
+> fulfilled to consider the project mature enough to go public?
+
+The only such feature was supporting several heaps :)
+
+And we are public in some ways (homepage, public repository), so
+appearing in Freshmeat is not that huge a step.
+
+> I have a constant fear that no-one will understand what we wanted to
+> build unless we can provide a Web interface and database storage.
+
+You are right in saying that Heapkeeper will be easier to understand
+if we support those. But my fear in that if we wait for those, we
+won't go to Freshmeat in 2010. (Bear in mind, we started the project
+in October 2008.)
+
+> But we can release nonetheless -- who knows, maybe someone will
+> volunteer to do it for us :)
+
+OK then :)

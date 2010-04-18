@@ -1,0 +1,20 @@
+Author: Csaba Hoch
+Subject: Heapkeeper v0.5 to be released
+Tag: prop
+Message-Id: <t2x4ddb9e5b1004101515qf5664e98yef4dad044f8e5026@mail.gmail.com>
+Date: Sun, 11 Apr 2010 00:15:56 +0200
+
+Post heap://890 describes the roadmap that we planned for v0.4 and
+v0.5. Everything is done that we planned for v0.5 except for setting
+up a server to make automatic commits of new posts, but I don't feel
+that as an urgent task.
+
+So I propose merging the _several_heaps and _docs branches into the
+master, testing the release candidate branch for two weeks, and
+finally releasing Heapkeeper v0.5. I would be glad if Attis also
+tested Heapkeeper's newest version during this period.
+
+I don't know whether we should announce Heapkeeper on Freshmeat or
+we should wait another release.
+
+Opinions?

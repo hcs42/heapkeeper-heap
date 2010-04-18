@@ -1,0 +1,24 @@
+Author: Csaba Hoch
+Subject: Managing several heaps in Heapkeeper
+Tag: prop
+Message-Id: <n2v4ddb9e5b1004101459t6bf34673jafc96c116610f8f6@mail.gmail.com>
+Parent: <4ddb9e5b1003151019o12ec0d12l6bf669e0019ba652@mail.gmail.com>
+Date: Sat, 10 Apr 2010 23:59:06 +0200
+
+On Mon, Mar 15, 2010 at 7:19 PM, Csaba Hoch <csaba.hoch@gmail.com> wrote:
+> The only missing feature from Hk regarding handling several heaps is
+> that one Hk config file can contain only one IMAP account. So I'm
+> considering using another config file format, because this one does
+> not seem to be optimal for our purposes.
+
+I implemented and pushed this. I kept the ini configuration format,
+but I introduced (sub)subsections, so e.g. instead of "[server]" now
+we can write "[heaps/hh/server]". Heapkeeper also accepts the old
+configuration formats. See the tutorial for examples.
+
+So the "several heaps" feature can be considered as implemented. (Of
+course there may be place for minor tweaks.) The tutorial is fully
+updated.
+
+[!todo]
+Parent: heap://1188

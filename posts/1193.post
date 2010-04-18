@@ -1,0 +1,28 @@
+Author: Csaba Hoch
+Subject: Separating Heapkeeper heap and UMS heap
+Tag: hh
+Message-Id: <o2n4ddb9e5b1004101449u50c2da17w8c1d9fc79c95e4cc@mail.gmail.com>
+Parent: <4ddb9e5b1003151019u54b8069fi87aeebe96a3f7e54@mail.gmail.com>
+Date: Sat, 10 Apr 2010 23:49:01 +0200
+
+On Mon, Mar 15, 2010 at 7:19 PM, Csaba Hoch <csaba.hoch@gmail.com> wrote:
+> We should set up a Google Groups account for Hh and send the new
+> emails there.
+
+Done: http://groups.google.com/group/heapkeeper-heap
+
+> We should create a GitHub repository for Hh and we should push the
+> new Hh posts there, so that will be the primary Hh repository.
+
+Done: http://github.com/hcs42/heapkeeper-heap
+
+> We should push the HTML pages generated from Hh to heapkeeper.org.
+
+Done: http://heapkeeper-heap.github.com
+
+I decided to use GitHub instead of heapkeeper.org, because
+heapkeeper.org has only ftp, which would require us to push each file
+all the time. (It seems that there is no good sync-tool for ftp.)
+
+[!todo]
+Parent: heap://1189

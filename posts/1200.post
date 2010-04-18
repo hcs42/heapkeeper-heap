@@ -1,0 +1,36 @@
+Author: Csaba Hoch
+Subject: Automatic update of copyright notices
+Tag: vim
+Message-Id: <h2r4ddb9e5b1004181039vd564c268w44f805837fedf1f6@mail.gmail.com>
+Parent: <y2kb29f917d1004180927v5cb5ac24h3c254d24da617f64@mail.gmail.com>
+Date: Sun, 18 Apr 2010 19:39:27 +0200
+
+> Why is it important to specify a year? [...] Is it used when deciding the
+> expiration of the copyright? Then only the latest date would be meaningful.
+
+Yes, I think that was the original concept. But there are also derivative
+works, and the question arises: what date should you write into the copyright
+notice of a derivative work?
+
+The answer is (in the US at least) that you should write the date when the
+derivative work was published [1][2]:
+
+    If the work is a derivative work or a compilation incorporating previously
+    published material, the year date of first publication of the derivative
+    work or compilation is sufficient.
+
+But how should we apply it to a source file? Is a newer version of a file the
+same work as its previous version, or is it a derivative work? I don't know the
+answer, and if we write both dates, we will be fine either way.
+
+The Free Software Foundation goes even further: they say [3] that "it is best
+to spell out each year, in full, without using ranges or abbreviations", like
+in "Copyright 1998, 1999 Terry Jones".
+
+I forgot about this and started using ranges today, an just remembered this
+recommendation when I was composing this post. If you think we should follow
+the FSF's recommendation, we can do so, but the ranges are OK for me.
+
+[1] http://www.copyright.gov/circs/circ1.pdf
+[2] http://www.contentious.com/2007/01/07/copyright-notice-is-the-year-really-necessary/
+[3] http://www.gnu.org/licenses/gpl-howto.html
