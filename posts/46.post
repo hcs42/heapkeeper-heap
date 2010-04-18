@@ -1,18 +1,12 @@
 Author: Csaba Hoch
-Subject: "r" tag for revised posts
+Subject: "r" tag for reviewed posts
+Tag: "reviewed" tag
 Tag: hh-conventions
 Tag: prop
 Tag: reviewed
 Message-Id: <4ddb9e5b0903230908q577ad9fx141779ce6ef9da0c@mail.gmail.com>
 Parent: <b29f917d0903230903x5dc5ed32xa7113ba8f032cc11@mail.gmail.com>
 Date: Mon, 23 Mar 2009 17:08:37 +0100
-
-> Then a better idea would be a header entry, which could also contain a
-> date, like:
->
->    Last-Revised: 2009-03-23 17:03
->
-> The [r] doesn't say anything on when was the post deemed acceptable.
 
 I don't think you see in what way I want to use the [r] tag. I don't
 care about when the post was reviewed. I only care about the fact that

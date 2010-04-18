@@ -1,12 +1,4 @@
-Author: Csaba Hoch
-Subject: "r" tag for revised posts
-Tag: hh-conventions
-Tag: prop
-Tag: reviewed
 Message-Id: <49C3DFF8.7090302@gmail.com>
-Parent: <b29f917d0903191126r5d18a587t2ca8bc80b8f45826@mail.gmail.com>
-Date: Fri, 20 Mar 2009 19:27:04 +0100
+Flag: deleted
 
-When a human maintainer of the heap reads (revises) the post and makes
-the changes that should be done, the post can be considered as
-revised. Maybe "review" is a better word?
+
