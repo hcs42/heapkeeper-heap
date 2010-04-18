@@ -1,5 +1,6 @@
 Author: Attila Nagy
 Subject: Using the "reviewed" tag
+Tag: "reviewed" tag
 Tag: prop
 Tag: reviewed
 Message-Id: <b29f917d0904170940s4d643d30o538d7f1b798702ad@mail.gmail.com>
@@ -18,6 +19,7 @@ editor the same way it entered the heap.
 Then, I looked into the matter, and saw that Csabi already tagged some
 posts with the "revised" tag.
 
-So, I propose the replacement of both [r] and [revised] tags with [reviewed].
+So, I propose the replacement of both [r] and [revised] tags with
+[reviewed].
 
 [1] heap://hh/9
