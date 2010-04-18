@@ -1,11 +1,12 @@
 Author: Attila Nagy
-Subject: Should the "reviewed" tag be part of the infrastructure?
+Subject: Customizability vs built-in features; the role of flags
+Tag: "reviewed" tag
 Tag: idea
 Tag: reviewed
 Message-Id: <b29f917d0905120755l241a5b68h991ccb5e6e63f301@mail.gmail.com>
 Parent: <4A090663.6090505@gmail.com>
 Date: Tue, 12 May 2009 16:55:29 +0200
 
-No, my concern is the feature set of Hk. Can we call something a
-feature if it's only provided by personal customization, and not the
+No, my concern is the feature set of Heapkeeper. Can we call something
+a feature if it's only provided by personal customization, and not the
 core software?

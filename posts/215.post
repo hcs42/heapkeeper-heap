@@ -1,5 +1,6 @@
 Author: Csaba Hoch
-Subject: Should the "reviewed" tag be part of the infrastructure?
+Subject: Customizability vs built-in features; the role of flags
+Tag: "reviewed" tag
 Tag: idea
 Tag: reviewed
 Message-Id: <4A090663.6090505@gmail.com>
@@ -19,5 +20,5 @@ I also have been thinking about why do you insist on having a flag for
 I realized you may have another concern: performance. You don't want
 to parse all posts all the time when only generating an index. I have
 to assure you, though, that having a "todo" flag is not the right
-solution to this performance issue: there are much better and much
+solution to this performance issue: there are much better and much more
 generic solutions. (I'll talk about one if you are curious.)

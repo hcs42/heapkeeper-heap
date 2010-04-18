@@ -1,5 +1,6 @@
 Author: Csaba Hoch
-Subject: Should the "reviewed" tag be part of the infrastructure?
+Subject: Customizability vs built-in features; the role of flags
+Tag: "reviewed" tag
 Tag: idea
 Tag: reviewed
 Message-Id: <4A0A6C06.7030402@gmail.com>
@@ -7,20 +8,21 @@ Parent: <b29f917d0905120755l241a5b68h991ccb5e6e63f301@mail.gmail.com>
 Date: Wed, 13 May 2009 08:43:18 +0200
 
 OK. We have three orthogonal questions:
+
 1. Should "todo" be a flag or only a meta attribute?
 2. Do we want to display "todo" specially?
 3. Should we hardcode special things like this, or should we just
    allow customization? If the second one, how should it be done?
 
-1. This subthread (starting at 2009-05-11) was about the first
-question, which has been answered thoroughly.
+1. This subthread (starting at 2009-05-11) was about the first question,
+   which has been answered thoroughly.
 
 2. Maybe we should open another thread about the second question on
-HH -- maybe you can also point me to an old thread on the UMS heap?
-I don't have a strong opinion on the question.
+   HH -- maybe you can also point me to an old thread on the UMS Heap? I
+   don't have a strong opinion on the question.
 
 3. Now you said this is your concern. I agree that it is a very
-important issue, but this is a much deeper question than how to handle
-"todo". We can open another thread if we want to deal with it or talk
-about is now, or we can wait until we have more experience in Hk
-customization.
+   important issue, but this is a much deeper question than how to
+   handle "todo". We can open another thread if we want to deal with it
+   or talk about is now, or we can wait until we have more experience in
+   Heapkeeper customization.
