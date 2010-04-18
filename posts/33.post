@@ -8,6 +8,8 @@ Date: Sat, 21 Mar 2009 10:24:40 +0100
 We agreed on using a "wiki compiler" called Wiko [1][2][3] for our
 documentation.
 
+[note Later we decided to use Sphinx instead.]
+
 I think after the merge today evening we should do the followings:
 1. Create a directory called "doc".
 2. Move all documentation there. Commit.
