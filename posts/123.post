@@ -8,9 +8,6 @@ Message-Id: <4ddb9e5b0904200845w4aaac625u1c883e0b5b828af2@mail.gmail.com>
 Parent: <b29f917d0904200816o608b8e80t3481e4b6d20c72be@mail.gmail.com>
 Date: Mon, 20 Apr 2009 17:45:00 +0200
 
-> Perhaps you've gained an insight into Sphinx. Do you think the
-> integration can be done with reasonable amount of work?
-
 Well, the integration would be a considerable amount of work, because
 Sphinx does not handle pure HTML pages, but a document (like Python
 documentation) as a whole.
