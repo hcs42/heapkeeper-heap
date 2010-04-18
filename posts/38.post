@@ -94,6 +94,7 @@ Pros:
   have to care about it.
 
 Cons:
+
 - Your mediawiki Vim syntax file won't work. Of course I'll find or
   write a Vim syntax file for this; but I'm not gonna work with adding
   folding support. (You can do that, though.) Speaking of syntax
@@ -107,7 +108,7 @@ Sphinx. What do you say?
 
 == All the wikis ==
 
-Just a tought: this wiki thing gets more and more complicated. Now we
+Just a thought: this wiki thing gets more and more complicated. Now we
 have at least 4 different things where we want to use wiki syntax:
 - documentation files
 - documentation strings in Python code
