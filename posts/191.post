@@ -44,10 +44,10 @@ How about this:
 We also have to move these definitions below the definition of
 "ancestor" and "descendant".
 
-There is a newer version of this glossary in the documentatation. You
+There is a newer version of this glossary in the documentation. You
 can find it on the web [1] or on your hard disk [2].
 
 Csabi
 
-[1] http://hste.uw.hu/heapkeeper/glossary.html#relation-between-the-posts - currently unavailable
+[1] http://heapkeeper.org/glossary.html
 [2] hk://doc/glossary.rst
