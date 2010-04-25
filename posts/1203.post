@@ -1,0 +1,31 @@
+Author: Attila Nagy
+Subject: Unhelpful error messages in dl()
+Tag: issue
+Message-Id: <h2qb29f917d1004241432ia53f2a82lc4e2d33b3c069946@mail.gmail.com>
+Date: Sat, 24 Apr 2010 23:32:03 +0200
+
+When I first tested downloading (`dl()`) in the current _v0.5 branch
+(8dee3e5), its behavior was not what I would have expected.
+I launch Hk and issued a `dl()` command after specifying several heaps
+in the config file. This is what I got:
+
+    >>> dl()
+    Posts cannot be downloaded: no heap specified.
+
+My first reaction was something like "OK, I haven't specified which
+heap to download; then why not download all of them?" But now that
+I've thought about it for a while, maybe this is what should happen,
+but the message could be made more helpful. How about this?
+
+    >>> dl()
+    No default heap specified. Select a heap using 'sh()'.
+
+It is a special case when there is only a single heap specified in the
+config file. The software's ability to handle multiple heaps should
+not hinder those users who don't need it. This could be accomplished
+most easily by examining if there's only one heap, and if yes, make it
+default.
+
+I don't really like the term "heap id hint". Why not call it "default
+heap" or "current heap"? I think it is quite similar to the well-known
+"current directory" concept of modern operating systems.
