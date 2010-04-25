@@ -1,0 +1,27 @@
+Author: Csaba Hoch
+Subject: Unhelpful error messages in dl()
+Tag: issue
+Message-Id: <n2z4ddb9e5b1004250017k82435b5dnc8d729247d214567@mail.gmail.com>
+Parent: <h2qb29f917d1004241432ia53f2a82lc4e2d33b3c069946@mail.gmail.com>
+Date: Sun, 25 Apr 2010 09:17:43 +0200
+
+> How about this?
+>
+>    >>> dl()
+>    No default heap specified. Select a heap using 'sh()'.
+
+You are right. I have fixed this. See branch _hh/1203.
+
+> It is a special case when there is only a single heap specified in the
+> config file. The software's ability to handle multiple heaps should
+> not hinder those users who don't need it. This could be accomplished
+> most easily by examining if there's only one heap, and if yes, make it
+> default.
+
+You are right. I have fixed this. See branch _hh/1203.
+
+> I don't really like the term "heap id hint". Why not call it "default
+> heap" or "current heap"? I think it is quite similar to the well-known
+> "current directory" concept of modern operating systems.
+
+You are right. Let's call it the "default heap". See branch _hh/1203.

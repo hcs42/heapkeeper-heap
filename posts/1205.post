@@ -1,0 +1,14 @@
+Author: Attila Nagy
+Subject: Display with one line per issue would be more useful for the issue tracker
+Tag: issue
+Tag: idea
+Message-Id: <l2xb29f917d1004250222l1272c1b1zc05f1a92673c8395@mail.gmail.com>
+Date: Sun, 25 Apr 2010 11:22:56 +0200
+
+Issue trackers I know usually have a "main view" where you can browse
+the list of all issues in a table with one row per line. If you click
+or otherwise select an issue, you see its details in another view.
+
+This model could be implemented in our issue tracker using table-based
+sections. I think this would improve the usability of the issue
+tracker.

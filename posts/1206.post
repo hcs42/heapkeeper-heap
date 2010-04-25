@@ -1,0 +1,18 @@
+Author: Csaba Hoch
+Subject: Heapkeeper v0.5 released
+Tag: release
+Tag: v0.5
+Message-Id: <r2y4ddb9e5b1004250321qd821b399t1b7a6eec740e1505@mail.gmail.com>
+Date: Sun, 25 Apr 2010 12:21:17 +0200
+
+I'm happy to announce that Heapkeeper v0.5 has been released.
+
+The main improvement of this release is supporting several heaps.
+
+Major new features:
+
+- Heapkeeper now supports several heaps.
+- The term "heapid" was abandoned as the identifiers of posts. The new terms
+  are: post index, heap id, and post id.
+
+The new release can be downloaded from http://heapkeeper.org/download.html
