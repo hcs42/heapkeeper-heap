@@ -1,0 +1,26 @@
+Author: Attila Nagy
+Subject: Non-breaking space (character 160)
+Tag: issue
+Message-Id: <g2xb29f917d1005020513x57229c49h1b7a4eec33e51fe7@mail.gmail.com>
+Parent: <o2n4ddb9e5b1005020235u62bfea55v50fb23569de7353a@mail.gmail.com>
+Date: Sun, 2 May 2010 14:13:06 +0200
+
+> We have a few possibilities to resolve this issue:
+>
+> 1. Convert the non-breaking spaces to normal spaces in all post files
+>   in the repositories, and modify Heapkeeper to do this conversion
+>   when downloading new emails.
+> 2. Don't modify the repositories, but modify Heapkeeper to convert the
+>   non-breaking spaces to normal spaces when parsing the post files.
+>   This way the post files will contain the non-breaking spaces, but
+>   the post objects will contain only normal spaces.
+> 3. Let the post objects contain non-breaking spaces. I should write
+>   post body parsing in a way that it accepts both non-breaking and
+>   normal spaces.
+
+We agreed on option 1 in an IM discussion. We considered how useful
+having nbsp-s in post files would be. This may be important when
+writing more serious documents in French, when you use an nbsp before
+colons and semicolons, but we found out that in these positions, the
+Unicode code point "NARROW NO-BREAK SPACE" (U+202F) has to be used,
+which is absolutely permitted and supported.

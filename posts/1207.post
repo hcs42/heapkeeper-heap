@@ -1,0 +1,49 @@
+Author: Csaba Hoch
+Subject: Non-breaking space (character 160)
+Tag: issue
+Message-Id: <o2n4ddb9e5b1005020235u62bfea55v50fb23569de7353a@mail.gmail.com>
+Date: Sun, 2 May 2010 11:35:50 +0200
+
+There are 43 posts in Heapkeeper Heap that contain character 160,
+which is "non-breaking whitespace" [1]. 8 of them are from me, the
+others are from Attis.
+
+Usually these characters are after quote signs, for example [2]:
+
+    > It makes the following substitutions:
+    >
+    > \d160 \d160- Copyright (C) 2009 My Name
+    > \d160 \d160+ Copyright (C) 2009-2010 My Name
+
+(I denoted the non-breaking space with "\d160".)
+
+I suspect that the web interface of GMail inserts these characters,
+and I have less non-breaking spaces than Attis because I use the
+GMail web interface less.
+
+I'm working on post parsing, and the raw blocks don't work correctly
+because they assume that all spaces are normal spaces.
+
+We have a few possibilities to resolve this issue:
+
+1. Convert the non-breaking spaces to normal spaces in all post files
+   in the repositories, and modify Heapkeeper to do this conversion
+   when downloading new emails.
+2. Don't modify the repositories, but modify Heapkeeper to convert the
+   non-breaking spaces to normal spaces when parsing the post files.
+   This way the post files will contain the non-breaking spaces, but
+   the post objects will contain only normal spaces.
+3. Let the post objects contain non-breaking spaces. I should write
+   post body parsing in a way that it accepts both non-breaking and
+   normal spaces.
+
+I dislike (3) because then everyone later working with post bodies
+should be aware of the issue of non-breaking spaces and handle them
+explicitly. (1) has the advantage over (2) that command line tools
+like grep and sed will work fine with post files without the user
+having to worry about non-breaking spaces. Also, I think that text
+files in general should not contain non-breaking spaces, and post
+files are text files.
+
+[1] http://en.wikipedia.org/wiki/Non-breaking_space
+[2] heap://1199
