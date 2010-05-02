@@ -7,7 +7,7 @@ Date: Sat, 21 Nov 2009 21:16:25 +0100
 
 > For example it is used in hkgen.Generator.print_post_page:
 >[...]
->        # We create a thread structure that contains only out post.
->        threadst = {None: [post.heapid()]}
+>        # We create a thread structure that contains only out post.
+>        threadst = {None: [post.heapid()]}
 
 OK, I see.

@@ -8,15 +8,15 @@ Date: Sun, 2 May 2010 14:13:06 +0200
 > We have a few possibilities to resolve this issue:
 >
 > 1. Convert the non-breaking spaces to normal spaces in all post files
->   in the repositories, and modify Heapkeeper to do this conversion
->   when downloading new emails.
+>   in the repositories, and modify Heapkeeper to do this conversion
+>   when downloading new emails.
 > 2. Don't modify the repositories, but modify Heapkeeper to convert the
->   non-breaking spaces to normal spaces when parsing the post files.
->   This way the post files will contain the non-breaking spaces, but
->   the post objects will contain only normal spaces.
+>   non-breaking spaces to normal spaces when parsing the post files.
+>   This way the post files will contain the non-breaking spaces, but
+>   the post objects will contain only normal spaces.
 > 3. Let the post objects contain non-breaking spaces. I should write
->   post body parsing in a way that it accepts both non-breaking and
->   normal spaces.
+>   post body parsing in a way that it accepts both non-breaking and
+>   normal spaces.
 
 We agreed on option 1 in an IM discussion. We considered how useful
 having nbsp-s in post files would be. This may be important when

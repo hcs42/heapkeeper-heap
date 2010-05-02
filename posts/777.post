@@ -6,13 +6,13 @@ Date: Sat, 24 Oct 2009 12:33:14 +0200
 > 2. According to our docstring conventions (which are not written down
 > anywhere...),
 >
->    - *postitem* (:class:`PostItem`) - the PostItem being examined
->    - *param* (`str`) - the name of the parameter to examine,
+>    - *postitem* (:class:`PostItem`) - the PostItem being examined
+>    - *param* (`str`) - the name of the parameter to examine,
 >
 > would become
 >
->    - `postitem` (|PostItem|) - the post item being examined
->    - `param` (str) - the name of the parameter to examine,
+>    - `postitem` (|PostItem|) - the post item being examined
+>    - `param` (str) - the name of the parameter to examine,
 
 I suppose we rather name what the class represents then use the class name.
 

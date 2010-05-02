@@ -14,9 +14,9 @@ Not really :)
 > the only acceptable situation is a line that is only whitespace, and
 > nothing else.) See for example this:
 >
->    #include <stdio>
+>    #include <stdio>
 >
->    int main() {}
+>    int main() {}
 >
 > If I write this, if we ever do any syntax highlighting, this will show
 > up as two distinct code blocks.
@@ -30,24 +30,24 @@ think about it.)
 > but then we'd have to include a separator element, e.g. a special "no-op"
 > meta. Like this:
 >
->    Compare these two examples:<cr>
->    <cr>
->    <spc>print 'hello world'<cr>
->    [sep]<cr>
->    <spc>print('hello world')<cr>
+>    Compare these two examples:<cr>
+>    <cr>
+>    <spc>print 'hello world'<cr>
+>    [sep]<cr>
+>    <spc>print('hello world')<cr>
 
 We would have to include it if we wanted to be able to express
 everything, including your example. I don't think it it important to
 be able to express that. For example, in Sphinx, you would put the two
 code examples into an itemization:
 
-    Compare these two examples:
+    Compare these two examples:
 
-    - ::
+    - ::
 
         print 'hello world'<cr>
 
-    - ::
+    - ::
 
         print('hello world')<cr>
 

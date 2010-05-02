@@ -23,7 +23,7 @@ problem. I'm not native English, I am entitled to use bad grammar :)
 > If we used the word "email" more often, I would even say importing
 > email with another name:
 >
->    import email as email_mod
+>    import email as email_mod
 >
 > Then you could have "email" variables.
 

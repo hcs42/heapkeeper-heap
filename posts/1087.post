@@ -31,11 +31,11 @@ I guess.
 >
 > Then we could have this feature like this:
 >
->    root(grep('dead trees'))
+>    root(grep('dead trees'))
 >
 > or
 >
->    grep('dead trees').root()
+>    grep('dead trees').root()
 
 grep('dead trees').expf().collect.is_root()
 

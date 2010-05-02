@@ -40,8 +40,8 @@ That's OK.
 >> I think these are the biggest problems, and that's what I think
 >> we could do about it:
 >> 1. Find a better way to describe the state of the tree. Either inside
->>    our outside of Wave, I don't know. The goal is to be very tidy, and
->>    maybe Wave does not force us to have a discipline.
+>>    our outside of Wave, I don't know. The goal is to be very tidy, and
+>>    maybe Wave does not force us to have a discipline.
 >
 > I love `gitk`. And in git, tags are cheap. How about having tags like
 > "waiting-for-attis-review-start" and "waiting-for-attis-review-end"?
@@ -70,7 +70,7 @@ reality log. These posts would explain how and why certain rebases
 happened.
 
 >> 3. Have a one week timeout for proposals. I.e. if there is no
->>    discussion nor agreement for one week, the proposer can go ahead.
+>>    discussion nor agreement for one week, the proposer can go ahead.
 >
 > I think this is already in effect, and it works.
 

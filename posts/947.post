@@ -6,7 +6,7 @@ Date: Thu, 19 Nov 2009 08:46:33 +0100
 
 >> Then we could have
 >>
->>     ps_python = ps_all.collect.has_tag(['python', 'Python'])
+>>     ps_python = ps_all.collect.has_tag(['python', 'Python'])
 >>
 >> which is cleaner and more simple than our previous solutions.
 >

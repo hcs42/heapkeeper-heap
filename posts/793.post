@@ -9,11 +9,11 @@ Date: Sun, 25 Oct 2009 21:04:52 +0100
 
 > My proposal (which I did not always follow):
 >
->    one-line description
->    verbose description
->    arguments
->    return value
->    example
+>    one-line description
+>    verbose description
+>    arguments
+>    return value
+>    example
 
 I like this, but I think "one-line" should be replaced with "short".
 Only one line is often meaningless, or not more descriptive than the

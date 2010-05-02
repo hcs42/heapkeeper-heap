@@ -7,10 +7,10 @@ Parent: <4ddb9e5b0907190820p53ce02t80af608034f7134e@mail.gmail.com>
 Date: Sun, 19 Jul 2009 17:27:02 +0200
 
 > - Subject manipulator commands:
->    - pS
->    - sS
->    - sSr
->    - cS
->    - cSr
+>    - pS
+>    - sS
+>    - sSr
+>    - cS
+>    - cSr
 
 Can you remember why we decided to capitalize the letter S in these?

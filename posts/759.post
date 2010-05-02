@@ -9,7 +9,7 @@ Date: Fri, 23 Oct 2009 15:33:45 +0200
 
 > So far I have been writing list comprehensions this way:
 >
->    [ x for y in z ]
+>    [ x for y in z ]
 
 Me, too. It seems that our conventions differ from that of the general
 Python community. But they are conventions nonetheless. So we should

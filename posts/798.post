@@ -7,10 +7,10 @@ Message-Id: <b29f917d0910290806j3e132f83ydb6b951a6e9fc257@mail.gmail.com>
 Parent: <4ADF4A46.3030304@gmail.com>
 Date: Thu, 29 Oct 2009 16:06:39 +0100
 
->    def log(s):
->        sys.stdout.write(s)
->        sys.stdout.flush()  # I don't whether it is necessary in
->                            # Python. I know it is necessary in C/C++.
+>    def log(s):
+>        sys.stdout.write(s)
+>        sys.stdout.flush()  # I don't whether it is necessary in
+>                            # Python. I know it is necessary in C/C++.
 
 It is very probably necessary, though I haven't tested. I think it is
 not intrinsic to C/C++, but rather to libc.

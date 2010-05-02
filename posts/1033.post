@@ -4,7 +4,7 @@ Message-Id: <4ddb9e5b1001231351y328024b1i43a8a85fcb31bdc9@mail.gmail.com>
 Parent: <4ddb9e5b1001230945n5b19d521k16ed450d6697e3bb@mail.gmail.com>
 Date: Sat, 23 Jan 2010 22:51:36 +0100
 
->    $ sudo apt-get install python-coverage
+>    $ sudo apt-get install python-coverage
 
 This method installs coverage.py 2.85 on Ubuntu 9.10. Version 3.2 has
 a different command-line interface. Since 3.2 is described on the home

@@ -8,12 +8,12 @@ Date: Mon, 24 Aug 2009 23:34:07 +0200
 > necessary. I have a few reasons:
 >
 > - It may happen very often that I think that other committers made a
->  mistake, when they don't, I just don't understand their reasons.
+>  mistake, when they don't, I just don't understand their reasons.
 > - They may have other things that they want to change after I tell
->  them to change something.
+>  them to change something.
 > - They tested their modifications, so they can retest it easily. I
->  don't want to test all commits made by other people. (For example I
->  don't want to test the new download feature manually.)
+>  don't want to test all commits made by other people. (For example I
+>  don't want to test the new download feature manually.)
 
 These are all about code. You can alter commits though: for example
 you can join separate commits that belong together (eg. adf3980 and

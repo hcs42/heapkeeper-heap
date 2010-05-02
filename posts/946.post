@@ -9,16 +9,16 @@ Date: Thu, 19 Nov 2009 08:19:20 +0100
 > I propose to generate a dictionary like this for the post similar to
 > the latter post:
 >
->    Post:
->        [effort 1]     # no colons
->        [effort 2]
->        [important]
->        [!todo many things]
->        [!todo this]
->    Meta dict:
->        {'effort', [1, 2],
->         'important': [''],
->         '!todo': ['many things', 'this']}
+>    Post:
+>        [effort 1]     # no colons
+>        [effort 2]
+>        [important]
+>        [!todo many things]
+>        [!todo this]
+>    Meta dict:
+>        {'effort', [1, 2],
+>         'important': [''],
+>         '!todo': ['many things', 'this']}
 >
 > So a non-empty list of strings will be assigned to each meta that is
 > present in the post body.

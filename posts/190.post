@@ -7,11 +7,11 @@ Parent: <49B3F6F9.8080101@gmail.com>
 Date: Sun, 10 May 2009 01:42:33 +0200
 
 > Thread:
->    A thread is a set of mails that have the same root. A thread
->    contains exactly one post that has no parent, which is the root of
->    the thread. (The third meaning of 'root' :) ) Obviously, the root
->    of the thread is a root; and it is the root of all posts in the
->    thread. (And it is not a root of any other post.)
+>    A thread is a set of mails that have the same root. A thread
+>    contains exactly one post that has no parent, which is the root of
+>    the thread. (The third meaning of 'root' :) ) Obviously, the root
+>    of the thread is a root; and it is the root of all posts in the
+>    thread. (And it is not a root of any other post.)
 
 I think a thread should be the set of all descendants of a root (in
 the 2nd sense, that is, a post with no parent). What is defined here

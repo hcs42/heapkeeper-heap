@@ -5,12 +5,12 @@ Message-Id: <b29f917d0906040936r23c15f08j168068d8b4589be5@mail.gmail.com>
 Parent: <4A186E47.2060502@gmail.com>
 Date: Thu, 4 Jun 2009 18:36:46 +0200
 
->  "Completely remove a file from all revisions
+>  "Completely remove a file from all revisions
 >
->  Don't you hate when you can't remove that file full of cleartext
->  passwords from your github account? Even if you git rm it, it still
->  is accessible in previous versions of the tree. So, you need to
->  rewrite the entire tree. Fortunately, this is really easy with git." [1]
+>  Don't you hate when you can't remove that file full of cleartext
+>  passwords from your github account? Even if you git rm it, it still
+>  is accessible in previous versions of the tree. So, you need to
+>  rewrite the entire tree. Fortunately, this is really easy with git." [1]
 
 Good to know, thanks!
 

@@ -9,7 +9,7 @@ Date: Sat, 1 Aug 2009 11:07:52 +0200
 > 1. Do the linearization.
 > 2. Try another mechanism, e.g. git filter.
 > 3. Put back v0.1 and v0.2 tags as they were and do work that actually
->   matters :)
+>   matters :)
 
 Option 3 is of course attractive, but learning Git is fun _and_
 matters, so I think I'll try and read about rebasing with preserving

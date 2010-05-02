@@ -19,15 +19,15 @@ with the example.
 >
 > First email:
 >
->    Nice place: [1]
+>    Nice place: [1]
 >
->    [1] http://nice.place
+>    [1] http://nice.place
 >
 > Answer:
 >
->    > Nice place: [1]
+>    > Nice place: [1]
 >
->    Indeed!
+>    Indeed!
 >
 > How should we display "[1]" be on the post page of the second post?
 > Of course it should be a link to http://nice.place!

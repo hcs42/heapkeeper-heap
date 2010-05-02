@@ -8,11 +8,11 @@ Date: Mon, 7 Sep 2009 21:41:43 +0200
 > Another thought: you don't always have to state the module, you can
 > state a class or a method, too:
 >
->    PostDB: much nicer
+>    PostDB: much nicer
 >
 > or
 >
->    PostDB.next_heapid: accepts prefix
+>    PostDB.next_heapid: accepts prefix
 >
 > The main idea is to state the scope of the change before the colon.
 
@@ -20,7 +20,7 @@ Good idea!
 
 > So maybe the best title is the following:
 >
->    PostDB.next_heapid,hkshell.enew: accepting prefix
+>    PostDB.next_heapid,hkshell.enew: accepting prefix
 >
 > (We can spare the space before the colon, too.)
 

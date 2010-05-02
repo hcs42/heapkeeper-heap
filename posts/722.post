@@ -5,7 +5,7 @@ Parent: <4AD8DFE6.4020103@gmail.com>
 Date: Wed, 21 Oct 2009 09:06:01 +0200
 
 > 2. When two strings should be equal but they are not, print a diff
->   instead of just printing them as Python expressions.
+>   instead of just printing them as Python expressions.
 
 This is a life-saver!
 

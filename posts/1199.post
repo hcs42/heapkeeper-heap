@@ -7,11 +7,11 @@ Date: Sun, 18 Apr 2010 18:27:07 +0200
 
 > It makes the following substitutions:
 >
->    - Copyright (C) 2009 My Name
->    + Copyright (C) 2009-2010 My Name
+>    - Copyright (C) 2009 My Name
+>    + Copyright (C) 2009-2010 My Name
 >
->    - Copyright (C) 2008-2009 My Name
->    + Copyright (C) 2008-2010 My Name
+>    - Copyright (C) 2008-2009 My Name
+>    + Copyright (C) 2008-2010 My Name
 
 I never really understood this. Why is it important to specify a year?
 Or, even if it is important to specify a year, what is the meaning of

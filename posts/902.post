@@ -9,14 +9,14 @@ Date: Tue, 10 Nov 2009 17:54:39 +0100
 
 >> I can still see alternatives to the current method:
 >> - adding a getter function to Generator that defaults to
->>   `Generator.print_postitem`; then any "post item modifier functions"
->>   could use this function
+>>   `Generator.print_postitem`; then any "post item modifier functions"
+>>   could use this function
 >
 > Heapkeeper. Just for making sure that we are on the same page, the following
 > changes would be done for example to hkgen.Generator.enclose_posts.
 > [...]
->  -             old_print_fun = postitem.print_fun
->  +             old_print_fun = self.get_print_fun(postitem)
+>  -             old_print_fun = postitem.print_fun
+>  +             old_print_fun = self.get_print_fun(postitem)
 > [...]
 > Generator.get_print_fun itself would be a trivial function.
 
@@ -29,7 +29,7 @@ We are definitely on the same page :)
 OK, I will, but not tonight [1].
 
 >> - adding a `__getattr__` method to `PostItem` that returns
->>   `Generator.print_postitem` whenever `print_fun` is read
+>>   `Generator.print_postitem` whenever `print_fun` is read
 >
 > This is not good because that would _always_ use
 > hkgen.Generator.print_postitem as the default printer function, while

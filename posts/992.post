@@ -77,16 +77,16 @@ I agree,
 > dictionary in places that are convenient to the reader. Maybe we could
 > even introduce other white spaces:
 >
->        >>> Post.create_header({'Author':['Someone'],
->        ...                     'Subject':['topic'],
->        ...                     'Tag':['one','two']})
->        {'Parent': '',
->         'Author': 'Someone',
->         'Flag': [],
->         'Tag': ['one', 'two'],
->         'Date': '',
->         'Message-Id': '',
->         'Subject': 'topic'}
+>        >>> Post.create_header({'Author':['Someone'],
+>        ...                     'Subject':['topic'],
+>        ...                     'Tag':['one','two']})
+>        {'Parent': '',
+>         'Author': 'Someone',
+>         'Flag': [],
+>         'Tag': ['one', 'two'],
+>         'Date': '',
+>         'Message-Id': '',
+>         'Subject': 'topic'}
 >
 > What do you think?
 
