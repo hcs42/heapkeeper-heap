@@ -1,0 +1,17 @@
+Author: Csaba Hoch
+Subject: Heapkeeper attempts SSL connection to plain IMAP servers
+Tag: bug
+Message-Id: <4BE3A2EC.5030800@gmail.com>
+Parent: <j2tb29f917d1005050924tbcfc166eveb00f065afaa25ba@mail.gmail.com>
+Date: Fri, 07 May 2010 07:19:40 +0200
+
+> I think this should work like this:
+> - have an IMAP/IMAPS option,
+> - if this is omitted, default to IMAPS for port 993, and IMAP for port 143
+> - for any other ports, issue a warning, or maybe silently default to IMAP.
+
+OK.
+
+> This should be caught and displayed as a more meaningful message
+
+OK.

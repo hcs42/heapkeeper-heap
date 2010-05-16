@@ -1,0 +1,15 @@
+Author: Csaba Hoch
+Subject: Encoding errors are fatal to IMAP downloading
+Tag: bug
+Message-Id: <4BE6A392.105@gmail.com>
+Parent: <j2jb29f917d1005081218ocf269e07n60dce6bca193899d@mail.gmail.com>
+Date: Sun, 09 May 2010 13:59:14 +0200
+
+> "Wrong charset" also means unknown charsets.
+
+I see.
+
+>>> I think we should catch decode error exceptions in
+>>> `hkutils.utf8()`, and return the string unmodified.
+
+OK, but we should print a warning in these cases.

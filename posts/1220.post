@@ -1,0 +1,23 @@
+Author: Attila Nagy
+Subject: Speeding up downloads by deleting posts from IMAP
+Tag: idea
+Message-Id: <h2lb29f917d1005081125qa34dc335j6d3b379134c5571b@mail.gmail.com>
+Date: Sat, 8 May 2010 20:25:25 +0200
+
+If only one Hk installation is used to download from a given IMAP
+account, we could just as well delete posts from the IMAP as soon as
+they are downloaded.
+
+To avoid losing posts due to any kind of error between downloading and
+saving, we should do a `dl()` like this:
+- check new messages,
+- compile list of new messages,
+- download new messages,
+- generate new posts,
+- save post database,
+- remove the newly downloaded messages.
+
+As an alternative, we could do what Gmail calls "archiving" the
+messages: move them to a different mail directory, e.g. "Downloaded"
+or "Archived". This way, downloading would remain quick even for
+high-volume lists.

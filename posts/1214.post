@@ -1,0 +1,25 @@
+Author: Attila Nagy
+Subject: Encoding errors are fatal to IMAP downloading
+Tag: bug
+Message-Id: <p2gb29f917d1005060539o8202bd03jddc47f5149ed5322@mail.gmail.com>
+Date: Thu, 6 May 2010 14:39:45 +0200
+
+This bug is closely related to [1].
+
+Right now, every message is converted to UTF-8 like this:
+
+    charset = message.get_content_charset()
+    text = hkutils.utf8(text, charset)
+
+If a buggy client supplies a wrong charset, the `decode()` function
+inside `hkutils.utf8` will fail with an exception that stops
+downloading at the affected post.
+
+I think we should catch decode error exceptions in `hkutils.utf8()`,
+and return the string unmodified. Due to how UTF-8 works, this will
+not cause problems for English, at least. Other than that, I don't
+know what we could do to correct errorneous encodings -- maybe try
+auto-detecting?
+
+[1] heap://todo
+Subject: IMAP downloading fails when parsing a message without author

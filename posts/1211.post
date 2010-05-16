@@ -1,0 +1,42 @@
+Author: Attila Nagy
+Subject: IMAP downloading generates too long commands
+Tag: bug
+Message-Id: <j2ib29f917d1005050956m6145f8d3o3366c403ab686211@mail.gmail.com>
+Date: Wed, 5 May 2010 18:56:28 +0200
+
+IMAP downloading currently works like this:
+- get a list of all vaild message numbers,
+- compile a list of message numbers above the lower limit
+  (``lower_limit`` parameter),
+- fetch the headers of all messages in this list,
+- compile a list of all new messages,
+- download all new messages in one command.
+
+This has a serious flaw. Thus spoke RFC 2683:
+
+	A client should limit the length of the command lines it generates to
+	approximately 1000 octets (including all quoted strings but not
+ 	including literals).  If the client is unable to group things into
+    ranges so that the command line is within that length, it should
+    split the request into multiple commands.  The client should use
+    literals instead of long quoted strings, in order to keep the command
+    length down.
+
+We are _way_ above this limit, and this is not good. Gmail has been
+gracious so far to cooperate with our long commands, but not all IMAP
+servers are so kind. I've been playing with Dovecot on localhost, and
+I've received this error:
+
+	error: FETCH command error: BAD ['Error in IMAP command FETCH: Too
+long argument.']
+
+The solution would be:
+- assemble the list as we do now,
+- in the first pass, remove individual IDs and replace with ranges
+  whenever possible (e.g. remove all numbers from 1 to 1234, and add
+  "1:1234"),
+- then cut this to chunks that can be sent safely, and send them as
+  individual commands,
+- and finally, unify the results.
+
+Since we do this twice, it may be nice to implement it as a separate function.

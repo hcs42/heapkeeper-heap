@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: Encoding errors are fatal to IMAP downloading
+Tag: bug
+Message-Id: <4BE3A33C.7010200@gmail.com>
+Parent: <p2gb29f917d1005060539o8202bd03jddc47f5149ed5322@mail.gmail.com>
+Date: Fri, 07 May 2010 07:21:00 +0200
+
+> If a buggy client supplies a wrong charset, the `decode()` function
+> inside `hkutils.utf8` will fail with an exception that stops
+> downloading at the affected post.
+
+Could you give an example when hkutils.utf8() fails?

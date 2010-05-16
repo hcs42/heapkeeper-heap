@@ -1,0 +1,9 @@
+Author: Csaba Hoch
+Subject: __hkweb branch
+Message-Id: <AANLkTilLQLaE1KjILq2igNnXTd42ojzeeft0Q_v3tqhi@mail.gmail.com>
+Date: Sun, 9 May 2010 19:51:26 +0200
+
+I pushed a temporary branch to my GitHub repository called __hkweb. I
+took Attis's hkweb commit, adapted it to the several heap
+infrastructure, and fixed a few things. I would like to squash all
+commits whose commit message starts with "xx" into Attis's commit.

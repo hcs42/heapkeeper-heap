@@ -1,0 +1,19 @@
+Author: Csaba Hoch
+Subject: Non-breaking space (character 160)
+Tag: issue
+Message-Id: <4BDD9297.5090403@gmail.com>
+Parent: <g2xb29f917d1005020513x57229c49h1b7a4eec33e51fe7@mail.gmail.com>
+Date: Sun, 02 May 2010 16:56:23 +0200
+
+>> We have a few possibilities to resolve this issue:
+>>
+>> 1. Convert the non-breaking spaces to normal spaces in all post files
+>>    in the repositories, and modify Heapkeeper to do this conversion
+>>    when downloading new emails.
+
+I converted the non-breaking space in the Heapkeeper Heap repository
+in commit 72cc683a62.
+
+I modified Heapkeeper as described above in commit a0533e2f10.
+
+[close]

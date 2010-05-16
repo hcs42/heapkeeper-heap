@@ -1,0 +1,16 @@
+Author: Attila Nagy
+Subject: Too many lines of output for encoding warnings
+Tag: issue
+Message-Id: <g2vb29f917d1005060527r1dd7c46ble98a87deca1ef128@mail.gmail.com>
+Date: Thu, 6 May 2010 14:27:35 +0200
+
+Since there are many, many email clients out there which specify wrong
+encodings, feeding a real-life mailing list archive to Heapkeeper
+generates a lot of encoding warnings. Right now, these include the
+whole raw text of the message. This results in unnecessarily long and
+unhelpful output when doing `dl()`.
+
+Possible solutions:
+- print nothing,
+- print only the relevant part,
+- add an option that selects what to do.

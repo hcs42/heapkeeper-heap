@@ -1,0 +1,21 @@
+Author: Csaba Hoch
+Subject: IMAP downloading generates too long commands
+Tag: bug
+Message-Id: <4BE3A303.2050406@gmail.com>
+Parent: <j2ib29f917d1005050956m6145f8d3o3366c403ab686211@mail.gmail.com>
+Date: Fri, 07 May 2010 07:20:03 +0200
+
+> The solution would be:
+> - assemble the list as we do now,
+> - in the first pass, remove individual IDs and replace with ranges
+>   whenever possible (e.g. remove all numbers from 1 to 1234, and add
+>   "1:1234"),
+> - then cut this to chunks that can be sent safely, and send them as
+>   individual commands,
+> - and finally, unify the results.
+
+OK.
+
+> Since we do this twice, it may be nice to implement it as a separate function.
+
+Why do we do this twice?

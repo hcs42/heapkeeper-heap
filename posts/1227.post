@@ -1,0 +1,62 @@
+Author: Attila Nagy
+Subject: Encoding errors are fatal to IMAP downloading
+Tag: bug
+Message-Id: <v2pb29f917d1005101342s8a4692eer21b7b05724d07c2a@mail.gmail.com>
+Parent: <4BE3A33C.7010200@gmail.com>
+Date: Mon, 10 May 2010 22:42:20 +0200
+
+>> If a buggy client supplies a wrong charset, the `decode()` function
+>> inside `hkutils.utf8` will fail with an exception that stops
+>> downloading at the affected post.
+>
+> Could you give an example when hkutils.utf8() fails?
+
+Sure. Parsing an e-mail which has these headers:
+
+    Content-Type: TEXT/PLAIN; charset=utf-8
+    Content-Transfer-Encoding: QUOTED-PRINTABLE
+
+and there is a line in the body that looks like this:
+
+    > On Thu, Nov 11, 2004 at 06:37:39PM +0100, Christian Bj=E4levik wrote:
+
+Now, =E4 translates to byte 0xe4, which would start a 3-byte sequence.
+The following characters are basic Latin letters (i.e. letters of the
+English alphabet). Without looking up their codes, we know this places
+them in the range 0x00..0x7f. Therefore, they cannot be continuation
+bytes, which are in the range 0x80..0xbf.
+
+How did this happen? The first occurence of this name was as an
+author, in a "From:" field, like this:
+
+    From: =?ISO-8859-1?Q?Christian_Bj=E4levik?= <xyz@xyz.se>
+
+He sent this using Thunderbird 0.8 in 8bit transfer-encoding, using
+iso-8859-1. No problems so far.
+
+The next message in the thread quotes him like this:
+
+    On Thu, Nov 11, 2004 at 06:37:39PM +0100, Christian Bjälevik wrote:
+
+This is still a 0xe4 character, and the message is transfer-encoded in
+8bit and character-encoded in iso-8859-1, this time by Mutt 1.5.6. No
+problems so far...
+
+The next one in the thread quotes this quote-introduction line as I have
+shown above. The message is transfer-encoded in quoted-printable, and
+character-encoding is marked as UTF-8, yet the mailing program failed
+to convert that 1-byte character into a Unicode character and encode
+it properly in UTF-8 (it would have been 0xc3 0xa4).  Unfortunately,
+the buggy program has not identified itself -- the relevant header is
+not present.
+
+Some other problems:
+- messages encoded in "us-ascii" (didn't even know that's legal) but
+  containing German national characters in the advertisement appended
+  by the mail service provider; Yahoo does this, too, but the
+  character here is 0x96 -- n dash. Typographically correct, but
+  messes up the encoding.
+- a message encoded in utf-8, but in reality double-encoded.
+
+But the majority of problems is simply marking ISO-8859-x encoded
+messages as being in UTF-8.
