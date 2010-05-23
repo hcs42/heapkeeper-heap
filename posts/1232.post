@@ -1,0 +1,12 @@
+Author: Attila Nagy
+Subject: Cookbook
+Tag: hh
+Message-Id: <AANLkTil3WmbpTDHeJCnBDBwv3_5xsLDSPcKeztKnlMqE@mail.gmail.com>
+Parent: <4ddb9e5b1002182348o512c0b4du2e38121f877ee1e5@mail.gmail.com>
+Date: Wed, 19 May 2010 14:47:38 +0200
+
+> I agree, a cookbook would be a good idea. But we have to keep it
+> up-to-date, otherwise it is useless.
+
+An idea: implement the cookbook as additional test cases! Additional
+tests are always good, plus they are guaranteed to remain up-to-date.

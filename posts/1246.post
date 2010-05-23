@@ -1,0 +1,28 @@
+Author: Csaba Hoch
+Subject: Distributed/offline issue tracking
+Tag: hh
+Tag: discussion
+Message-Id: <4BF83E92.1060000@gmail.com>
+Parent: <AANLkTiktCWumuLLZNNws8esq1NgP_iV5otLbf9QI7TR3@mail.gmail.com>
+Date: Sat, 22 May 2010 22:29:06 +0200
+
+> Now, almost exactly a year later, do you use a distributed issue
+> tracker?
+
+I use only Heapkeeper's issue tracker. I haven't tried the ones I
+wrote about.
+
+> Side question: has Hk's issue_tracker become the tool you had in
+> mind?
+
+Yes.
+
+> If not, what does it lack?
+
+It would be good to add new posts from the web interface.
+
+Also, sometimes the table format where one issue is one row would be
+easier to read. It is also good to add information like the
+implementors of the issues as a column of this table. I know that you
+made steps in this direction and implemented this table; but I haven't
+used it yet.

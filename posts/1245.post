@@ -1,0 +1,20 @@
+Author: Attila Nagy
+Subject: Development policies, pylint works OK on all Heapkeeper code
+Tag: hh
+Tag: proposal
+Message-Id: <AANLkTimdPWiXoBtfR3jqRdH5q3IRuY0EB60iTJeR_Ett@mail.gmail.com>
+Parent: <t2x4ddb9e5b1004050616rce88928fnba5cac6998c386de@mail.gmail.com>
+Date: Fri, 21 May 2010 14:36:38 +0200
+
+OK.
+
+As a side note: I never imagined pylint would be such a CPU-intensive task!
+
+   $ time ../hk-dev-utils/hk_pylint
+
+   real    0m8.322s
+   user    0m8.109s
+   sys     0m0.128s
+
+I have a relatively fast machine, and it takes 8 secs at 100% CPU
+utilization! The test suite takes only ~280 ms.

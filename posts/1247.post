@@ -1,0 +1,39 @@
+Author: Csaba Hoch
+Subject: Management of the online web image of Heapkeeper Heap
+Tag: hh
+Tag: discussion
+Message-Id: <4BF84228.2010307@gmail.com>
+Parent: <AANLkTilKyOWfhjG0tr5fr89TbHz9Y_o-ZxGk4bhF1hIz@mail.gmail.com>
+Date: Sat, 22 May 2010 22:44:24 +0200
+
+> Csabi, how do you manage the web archive of this heap? I mean how
+> often do you download,
+
+Once a week would be the goal.
+
+> do you have a script to automate the procedure
+
+Yes, but it is semi-automatic. The script downloads the new stuff,
+generates the HTML files and commits the changes to my local
+repositories. Then I read through the changes quickly and push them to
+GitHub if they are OK. Also, it is important to note that I use the
+_bugfix branch of Heapkeeper for this procedure.
+
+> Maybe we could make it a cron job on a permanently running machine?
+
+Maybe we should do that.
+
+I'm more comfortable having a look at the emails before pushing them,
+but if we can rewrite the history in case of a problem, it is OK to do
+the commits and pushes automatically.
+
+As far as I know, "master" branches are unrewritable once pushed to
+GitHub, so in the HH repo [1], we should use another branch, to which
+"master" would be manually fast forwarded.
+
+In the repository of the HH HTML web page [2], we have to use the
+"master" branch, because the web page is generated from that. But I'm
+not that keen on a very clean history there, so it is not a problem.
+
+[1] http://github.com/hcs42/heapkeeper-heap
+[2] http://heapkeeper-heap.github.com/index/index.html

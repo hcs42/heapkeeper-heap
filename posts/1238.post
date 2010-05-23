@@ -1,0 +1,18 @@
+Author: Attila Nagy
+Subject: Email parsing problem
+Tag: issue
+Message-Id: <AANLkTinbvUUaThv_fKGQr-58IlTHtynawfJFvMhY7MAg@mail.gmail.com>
+Parent: <4ddb9e5b1002200412u39e63e5bx587aee9da5c657b4@mail.gmail.com>
+Date: Thu, 20 May 2010 17:37:39 +0200
+
+>> I think `8bit` and `binary` don't have to be decoded either, but they
+>> shouldn't give a warning.
+>
+> [open] Warnings should be removed then.
+
+I plan to correct this when I fix the email decoding part (see related
+issues and bugs [1][2][3]).
+
+[1] heap://hh/1212
+[2] heap://hh/1213
+[3] heap://hh/1214

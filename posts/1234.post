@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: Human sorting of posts
+Tag: feature
+Message-Id: <AANLkTimhjvx7yCz4gnGtbPSul1EeV8tMgdoYFRsmTyOa@mail.gmail.com>
+Date: Wed, 19 May 2010 20:24:58 +0200
+
+We could use human sorting [1] to sort post indices. Otherwise e.g.
+'10' will be before '2'.
+
+http://nedbatchelder.com/blog/200712/human_sorting.html
+
+[effort 1]

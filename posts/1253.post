@@ -1,0 +1,18 @@
+Author: Attila Nagy
+Subject: Management of the online web image of Heapkeeper Heap
+Tag: hh
+Tag: discussion
+Message-Id: <AANLkTimXtzIc0pT51ubEOdFH_wMsHlB4oGJQyqve9Cld@mail.gmail.com>
+Parent: <4BF84228.2010307@gmail.com>
+Date: Sun, 23 May 2010 07:32:53 +0200
+
+> As far as I know, "master" branches are unrewritable once pushed to
+> GitHub,
+
+They aren't, you just have to be aggressive about it:
+
+    $ git push --force origin master
+
+Found here (and tested on an experimental GitHub repo):
+
+http://help.github.com/removing-sensitive-data/

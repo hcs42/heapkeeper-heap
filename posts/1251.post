@@ -1,0 +1,26 @@
+Author: Attila Nagy
+Subject: Distributed/offline issue tracking
+Tag: hh
+Tag: discussion
+Message-Id: <AANLkTina4fZrsTVqvd9uTuxvOr7raruSovna3o5z76uU@mail.gmail.com>
+Parent: <4BF83E92.1060000@gmail.com>
+Date: Sun, 23 May 2010 07:18:05 +0200
+
+>> If not, what does it lack?
+>
+> It would be good to add new posts from the web interface.
+
+This applies to all of Hk, of course :)
+
+> Also, sometimes the table format where one issue is one row would be
+> easier to read. It is also good to add information like the
+> implementors of the issues as a column of this table. I know that you
+> made steps in this direction and implemented this table; but I haven't
+> used it yet.
+
+Yes, and it is usable and looks good, but I'm hotlinking the icons
+from Canonical's Launchpad, which is a bad, bad thing to do. This
+should be resolved, e.g. by taking the appropriate icons and gluing
+together to form a new icon set, containing only those that we need.
+Also, I'm not sure those icons are free to use. (But Launchpad is an
+open source project, so we can reasonably expect.)
