@@ -98,18 +98,18 @@ Agreed then.
 
 > So my proposal is having only these concepts that require a name:
 > - "heap": the abstract structure and the database that stores it
-> (regardless of the method of storage).
+>   (regardless of the method of storage).
 > - "Heapkeeper": the name of the whole program, the name of the
->  project, the name of the website, the name of the repository, the
->  name of the mailing list -- sorry, the name of the heap :D
+>   project, the name of the website, the name of the repository, the
+>   name of the mailing list -- sorry, the name of the heap :D
 > - "heapia" or "interactive console interface": the console interface
->  of Heapkeeper. The user will think it is the "./heapia" shell script
->  (or heapia.bat for windows users...), or it is at least started by
->  that script.
+>   of Heapkeeper. The user will think it is the "./heapia" shell script
+>   (or heapia.bat for windows users...), or it is at least started by
+>   that script.
 > - "heapweb" or "web interface": modules that allow using Heapkeeper
->  via the web. Since we don't know how we will do this, we don't know
->  if this will be one module like heapia, or many modules, or even
->  some XML files, or something else.
+>   via the web. Since we don't know how we will do this, we don't know
+>   if this will be one module like heapia, or many modules, or even
+>   some XML files, or something else.
 
 OK.
 

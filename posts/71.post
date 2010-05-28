@@ -26,13 +26,13 @@ program as different modules -- some of them API, some of them console
 interface, some of them dynamic web interface.
 
 > - Digger: a digger is something that builds a heap, isn't it? but
-> probably a very common word
+>   probably a very common word
 
 I think it makes a hole as its main task; the heap is just a
 side effect.
 
 > - Heapkeeper: I like this probably the most; it satisfies the
-> generality criterion, and Googlable, now has only 127 hits
+>   generality criterion, and Googlable, now has only 127 hits
 
 I like it. First I didn't, because it reminds me to "Bitkeeper".
 I think our whole program (web and console interface, parser,
