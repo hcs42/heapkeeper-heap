@@ -1,45 +1,49 @@
 Author: Csaba Hoch
 Subject: Usability on pdas
+Tag: reviewed
 Message-Id: <4ddb9e5b0904102339h6abfb663vf741d868274fb05@mail.gmail.com>
 Parent: <b29f917d0904091413m7d45a4b8ybc76e003fd0c75ec@mail.gmail.com>
 Date: Sat, 11 Apr 2009 08:39:06 +0200
 
-> I made some minor modifications, partly to my heapcustom, partly in a
-> local branch.
+> I made some minor modifications, partly to my heapcustom, partly in
+> a local branch.
 
 I'll have a look at them on Monday.
 
-> Their aim is to overcome the greatest obstacle to
-> reading the Heap on a PDA, namely, too large index HTMLs.
+> Their aim is to overcome the greatest obstacle to reading the Heap
+> on a PDA, namely, too large index HTMLs.
+>
 > [...]
+>
 > However, I have the gut feeling that this mechanism lacks the
 > completeness, elegance or both to be the perfect solution for the
 > problem of oversized indices on PDAs. Any other ideas?
 
-I guess the problem is that the size of post summaries of one month just happens
-to be around the managable size, and if it wasn't (in another heap
-maybe it won't), then this solution is not the best.
+I guess the problem is that the size of post summaries of one month
+just happens to be around the manageable size, and if it wasn't (in
+another heap maybe it won't), then this solution is not the best.
 
-A few ideas; I haven't really thought about which one is easy to implement:
+A few ideas; I haven't really thought about which one is easy to
+implement:
 - Using the classic method to display a lost of messages: one HTML
-page contains only a fixed number of messages, and the user can use
-the Next and Previous links to jump between them. The problem is, do
-we want to break the threads?
-- This idea is a kind of solution to the problem arosen by the
-previous one. We could print only one line to represent a thread in
-the index. That would decrease the size of an index dramatically. The
-problem is that there are nested threads. By "nested thread" I mean
-that at some point in the thread we changed the subject, and the
-subthread whose root is the post with the modified subject is the
-nested thread. Probably in this short index we want to display all the
-different subjects in the thread, but we don't want to display any
-subject twice.
+  page contains only a fixed number of messages, and the user can use
+  the Next and Previous links to jump between them. The problem is, do
+  we want to break the threads?
+- This idea is a kind of solution to the problem arisen by the
+  previous one. We could print only one line to represent a thread in
+  the index. That would decrease the size of an index dramatically.
+  The problem is that there are nested threads. By "nested thread" I
+  mean that at some point in the thread we changed the subject, and
+  the subthread whose root is the post with the modified subject is
+  the nested thread. Probably in this short index we want to display
+  all the different subjects in the thread, but we don't want to
+  display any subject twice.
 - You could print "..." at the end of long subjects. This is easy, but
-first we have to implement printing the subject via a subject_fun
-(just as we print the date via a date_fun). If this is important for
-you, I will set it to high priority.
+  first we have to implement printing the subject via a subject_fun
+  (just as we print the date via a date_fun). If this is important for
+  you, I will set it to high priority.
 - Can you run an apache web server on your PDA? We could use apache to
-run the web interface; maybe first only or displaying the content of
-the mail database. I feel more and more when I listen to your needs
-that instead of improving the static HTML we should generate the
-content dynamically, which would make us much freer.
+  run the web interface; maybe first only or displaying the content of
+  the mail database. I feel more and more when I listen to your needs
+  that instead of improving the static HTML we should generate the
+  content dynamically, which would make us much freer.
