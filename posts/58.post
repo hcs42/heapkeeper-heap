@@ -1,11 +1,10 @@
 Author: Csaba Hoch
 Subject: Documentation is accessible on the web
+Tag: reviewed
 Message-Id: <49D6FB9E.2090209@gmail.com>
 Date: Sat, 04 Apr 2009 08:18:06 +0200
 
-Hi,
-
-you can find Heapkeeper's documentation here: .../html/index.html
+You can find Heapkeeper's documentation here: .../html/index.html
 
 I wrote a script (and pushed it to github) that copies the locally
 generated documentation here.
