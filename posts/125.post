@@ -1,6 +1,7 @@
 Author: Attila Nagy
 Subject: __repr__ function (2009-04-19 f9b1451718)
 Tag: commit
+Tag: reviewed
 Message-Id: <b29f917d0904270921n4cffe035o466b6c4e6127a295@mail.gmail.com>
 Parent: <49F0BD26.2090804@gmail.com>
 Date: Mon, 27 Apr 2009 18:21:57 +0200

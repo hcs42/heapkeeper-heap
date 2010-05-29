@@ -1,21 +1,9 @@
 Author: Csaba Hoch
 Subject: __repr__ function (2009-04-19 f9b1451718)
 Tag: commit
+Tag: reviewed
 Message-Id: <49F5F02F.4020909@gmail.com>
 Parent: <b29f917d0904270921n4cffe035o466b6c4e6127a295@mail.gmail.com>
 Date: Mon, 27 Apr 2009 19:49:35 +0200
-
-> Yes, the way it is solved right now is far from perfect. I ran into
-> this just now:
->
->     >>> postdb().roots()[0]
->     183
->
-> Not exactly the expected answer. How about:
->
->     >>> postdb().roots()[0]
->     <post '183'>
->
-> I'll change the __repr__ to return this.
 
 OK.

@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: __repr__ function (2009-04-19 f9b1451718)
 Tag: commit
+Tag: reviewed
 Message-Id: <49F0BD26.2090804@gmail.com>
 Date: Thu, 23 Apr 2009 21:10:30 +0200
 
@@ -58,7 +59,5 @@ I think this would be a nice repr function:
 I see that it would be more convenient for us if it was shorter,
 but this verbosity is very helpful for our future users and not that
 inconvenient for us.
-
-Csabi
 
 [1] http://docs.python.org/reference/datamodel.html
