@@ -1,12 +1,13 @@
 Author: Csaba Hoch
-Subject: Quotation marks (f6a0b7f619 2009-04-27)
+Subject: Quotation marks (2009-04-27 dda29c0a83)
 Tag: commit
+Tag: reviewed
 Message-Id: <49F76EE5.2000103@gmail.com>
 Date: Tue, 28 Apr 2009 23:02:29 +0200
 
-I think I this case it is better to use "" instead of '' so we save
+I think in this case it is better to use "" instead of '' so we save
 the backslashes:
 
-     def __repr__(self):
--        return self._heapid
-+        return '<post \'' + self._heapid + '\'>'
+        def __repr__(self):
+    -       return self._heapid
+    +       return '<post \'' + self._heapid + '\'>'
