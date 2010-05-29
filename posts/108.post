@@ -6,12 +6,6 @@ Message-Id: <49EA311C.90809@gmail.com>
 Parent: <b29f917d0904181138t5e2a503bk800a79ac1a9dc19c@mail.gmail.com>
 Date: Sat, 18 Apr 2009 21:59:24 +0200
 
->> BTW, do you now what is "rc" in .vimrc, .kderc, etc?
->
-> http://en.wikipedia.org/wiki/Run_Commands
-
-Thanks!
-
 >> And to moving the following code:
 >> - heapmanip.Html -> current heaplib, proposed hkutils
 >> I think we should move Section, Index and Generator in the future
@@ -21,17 +15,17 @@ Thanks!
 
 From the Architecture page which is under construction:
 
-:mod:`hkutils`
-   Contains general library classes and functions.
-:mod:`hklib`
-   The database and business logic of Heapkeeper. Its classes can
-   download, store, and modify posts and generate HTML from them.
-:mod:`hkshell`
-   The interactive interface of Heapkeeper.
-:mod:`hkcustomlib`
-   Contains functions and classes that are useful for the
-   parametrization of functions in other modules (especially functions
-   of :mod:`heapmanip` and :mod:`heapia`).
+    :mod:`hkutils`
+       Contains general library classes and functions.
+    :mod:`hklib`
+       The database and business logic of Heapkeeper. Its classes can
+       download, store, and modify posts and generate HTML from them.
+    :mod:`hkshell`
+       The interactive interface of Heapkeeper.
+    :mod:`hkcustomlib`
+       Contains functions and classes that are useful for the
+       parametrization of functions in other modules (especially functions
+       of :mod:`heapmanip` and :mod:`heapia`).
 
 Does it give an adequate answer to your question? The HTML generation
 should not necessarily be in hklib by the system's logic, as I said.
