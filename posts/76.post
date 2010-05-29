@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: Linking commits
 Tag: idea
+Tag: reviewed
 Message-Id: <49E241B4.8020208@gmail.com>
 Date: Sun, 12 Apr 2009 21:32:04 +0200
 
@@ -8,9 +9,11 @@ When a post contains a commit id, the HTML page of that post could
 link to the github page of the specified commit.
 
 Post:
+
     I have looked at commit 83d64452be, and
 
 Post page:
+
     I have looked at commit
     <a href="http://github.com/hcs42/heap/commit/83d64452be5b273d8386ca6ef374adfec739ca56">
     83d64452be</a>, and
@@ -19,7 +22,7 @@ Maybe we should have something that tells the parser to parse that
 word as a commit id. We could use a "commit" meta text to indicate
 that the next line contains an SHA-id:
 
-    <<<commit>>>
+    [commit]
     I have looked at commit 83d64452be, and
 
 Probably we should look for an extendable solution, because anyone

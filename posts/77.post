@@ -1,11 +1,12 @@
 Author: Attila Nagy
 Subject: Linking commits
 Tag: idea
+Tag: reviewed
 Message-Id: <49e26d52.0baa660a.687b.18b1@mx.google.com>
 Parent: hh/76
 Date: Sun, 12 Apr 2009 22:00:00 +0200
 
-<<<note From PocketPC's built-in Messaging app.>>>
+[note From PocketPC's built-in Messaging app.]
 
 > Probably we should look for an extendable solution, because anyone
 > should be able to have their own syntax thingies.
@@ -29,5 +30,3 @@ It should be easy to specify which repo to link to, perhaps w.r.t.
 tags. E.g. with any of the Heap tags present, commit IDs could link to
 the Heap repo, while commit IDs in posts tagged "linux" could link to
 relevant commits in the Linux repo.
-
-Attis

@@ -2,6 +2,7 @@ Author: Csaba Hoch
 Subject: Linking commits
 Tag: idea
 Tag: ppc
+Tag: reviewed
 Message-Id: <49E2D79B.1020500@gmail.com>
 Parent: <49e2cc71.09c5660a.1595.ffffffaa@mx.google.com>
 Date: Mon, 13 Apr 2009 08:11:39 +0200
@@ -11,7 +12,7 @@ Date: Mon, 13 Apr 2009 08:11:39 +0200
 > I use this method for now. Always check the subject and remove
 > inaccurate ppc tags, preferably before posting.
 
-Maybe it would be better to use meta-text <<<ppc>>> as the first line
+Maybe it would be better to use meta-text "[ppc]" as the first line
 instead of a tag? Of course it's not a problem in either way: if we
 write a line-break function, we can say "break the lines in the posts
 with [ppc] tag from Attis and remove all [ppc] tags".

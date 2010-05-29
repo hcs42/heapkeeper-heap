@@ -1,11 +1,12 @@
 Author: Csaba Hoch
 Subject: Linking commits
 Tag: idea
+Tag: reviewed
 Message-Id: <49E2C1F3.5060907@gmail.com>
 Parent: <49e26d52.0baa660a.687b.18b1@mx.google.com>
 Date: Mon, 13 Apr 2009 06:39:15 +0200
 
-> <<<note From PocketPC's built-in Messaging app.>>>
+> [note From PocketPC's built-in Messaging app.]
 
 And you don't have spaces after the '>' signs. The funny thing is that
 Thunderbird hides these funny things from me: it shows a space

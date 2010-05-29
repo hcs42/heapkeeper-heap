@@ -2,11 +2,15 @@ Author: Attila Nagy
 Subject: Linking commits
 Tag: idea
 Tag: ppc
+Tag: reviewed
 Message-Id: <49e2c698.15185e0a.7e30.ffff9946@mx.google.com>
 Parent: hh/79
 Date: Mon, 13 Apr 2009 06:59:47 +0200
 
 > And you don't have spaces after the '>' signs.
+>
+> [...]
+>
 > Maybe we should insert spaces after the '>' in order to unify the format?
 
 I hate this idiotic e-mail client of the PocketPC! It simply sucks.
