@@ -1,16 +1,11 @@
 Author: Csaba Hoch
-Subject: GitHub's integrater issue tracker
+Subject: GitHub's integrated issue tracker
 Tag: github
+Tag: reviewed
 Message-Id: <49FC0598.6060607@gmail.com>
 Parent: <b29f917d0905012323x273ea16ck25cee4d59aee9c9d@mail.gmail.com>
 Date: Sat, 02 May 2009 10:34:32 +0200
 
-Nagy Attila wrote:
->> It has an open interface that can be used e.g. with curl or people can
->> write own web pages which have posts that interact with github. [2]
->
->> Someone even created a Python command line interface [3].
->
 > This open nature and, of course, the Python interface is very
 > commendable. Now we'd have to decide if we choose to use them, or
 > continue to use our 'todo' mechanism. I must admit I like the todo
@@ -27,46 +22,45 @@ What do you say to using GitHub's tracker for small bugs that should
 be fixed, and the todo file for everything else (features,
 refactorings, conceptual problems)? Just to try out.
 
-Producing Open Source Software says about bug and issue tracking: [1]
+Producing Open Source Software says about bug and issue tracking [1]:
 
-  The importance of a bug tracking system lies not only in its
-  usefulness to developers, but in what it signifies for project
-  observers. For many people, an accessible bug database is one of the
-  strongest signs that a project should be taken seriously.
-  Furthermore, the higher the number of bugs in the database, the
-  better the project looks. This might seem counterintuitive, but
-  remember that the number of bugs recorded really depends on three
-  things: the absolute number of bugs present in the software, the
-  number of users using the software, and the convenience with which
-  those users can register new bugs. Of these three factors, the
-  latter two are more significant than the first. Any software of
-  sufficient size and complexity has an essentially arbitrary number
-  of bugs waiting to be discovered. The real question is, how well
-  will the project do at recording and prioritizing those bugs? A
-  project with a large and well-maintained bug database (meaning bugs
-  are responded to promptly, duplicate bugs are unified, etc.)
-  therefore makes a better impression than a project with no bug
-  database, or a nearly empty database.
+    The importance of a bug tracking system lies not only in its
+    usefulness to developers, but in what it signifies for project
+    observers. For many people, an accessible bug database is one of
+    the strongest signs that a project should be taken seriously.
+    Furthermore, the higher the number of bugs in the database, the
+    better the project looks. This might seem counterintuitive, but
+    remember that the number of bugs recorded really depends on three
+    things: the absolute number of bugs present in the software, the
+    number of users using the software, and the convenience with which
+    those users can register new bugs. Of these three factors, the
+    latter two are more significant than the first. Any software of
+    sufficient size and complexity has an essentially arbitrary number
+    of bugs waiting to be discovered. The real question is, how well
+    will the project do at recording and prioritizing those bugs? A
+    project with a large and well-maintained bug database (meaning
+    bugs are responded to promptly, duplicate bugs are unified, etc.)
+    therefore makes a better impression than a project with no bug
+    database, or a nearly empty database.
 
-  Of course, if your project is just getting started, then the bug
-  database will contain very few bugs, and there's not much you can do
-  about that. But if the status page emphasizes the project's youth,
-  and if people looking at the bug database can see that most filings
-  have taken place recently, they can extrapolate from that that the
-  project still has a healthy rate of filings, and they will not be
-  unduly alarmed by the low absolute number of bugs recorded.
+    Of course, if your project is just getting started, then the bug
+    database will contain very few bugs, and there's not much you can
+    do about that. But if the status page emphasizes the project's
+    youth, and if people looking at the bug database can see that most
+    filings have taken place recently, they can extrapolate from that
+    that the project still has a healthy rate of filings, and they
+    will not be unduly alarmed by the low absolute number of bugs
+    recorded.
 
-  Note that bug trackers are often used to track not only software
-  bugs, but enhancement requests, documentation changes, pending
-  tasks, and more. The details of running a bug tracker are covered in
-  the section called “Bug Tracker” in Chapter 3, Technical
-  Infrastructure, so I won't go into them here. The important thing
-  from a presentation point of view is just to have a bug tracker, and
-  to make sure that fact is visible from the front page of the
-  project."
+    Note that bug trackers are often used to track not only software
+    bugs, but enhancement requests, documentation changes, pending
+    tasks, and more. The details of running a bug tracker are covered
+    in the section called “Bug Tracker” in Chapter 3, Technical
+    Infrastructure, so I won't go into them here. The important thing
+    from a presentation point of view is just to have a bug tracker,
+    and to make sure that fact is visible from the front page of the
+    project."
 
 I'm starting to handle this book as a Bible...
-
-Csabi
 
 [1] http://producingoss.com/en/producingoss.html#vc-and-bug-tracker-access
