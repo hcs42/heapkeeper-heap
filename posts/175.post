@@ -1,14 +1,13 @@
 Author: Csaba Hoch
 Subject: iPython
+Tag: reviewed
 Message-Id: <4ddb9e5b0905080604l6ed8b2f9vd1b83e57d5e19c0d@mail.gmail.com>
 Date: Fri, 8 May 2009 15:04:55 +0200
 
-It is worth to have a look at:
+It is worth to have a look at [1]:
 
-"[iPython's goal is to] serve as an embeddable, ready to use interpreter for
-your own programs." [1]
-
-Csabi
+    [iPython's goal is to] serve as an embeddable, ready to use
+    interpreter for your own programs.
 
 [1] http://ipython.scipy.org/doc/nightly/html/overview.html#enhanced-interactive-python-shell
 [2] http://ipython.scipy.org/screenshots/index.html - screenshots
