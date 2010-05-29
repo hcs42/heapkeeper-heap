@@ -1,5 +1,5 @@
 Author: Attila Nagy
-Subject: heapia command for re-reading mail database or splitting posts
+Subject: hkshell command for re-reading post database or splitting posts
 Tag: idea
 Tag: reviewed
 Message-Id: <b29f917d0904180212t51558511nac47d06f20bacb0c@mail.gmail.com>
@@ -9,11 +9,11 @@ When a thread's topic silently diverges, the thread has to be broken
 by the editors to match the topic shift.
 
 The situation is easy when the topic change happens precisely at post
-boundaries. Eg. post 123 is about cats, and post 124, the reply to
+boundaries. E.g. post 123 is about cats, and post 124, the reply to
 123, suddenly changes the topic to nuclear warfare. While on post 125
 and onwards continue the peaceful discussion about furry felines. The
-way we use Heapkeeper now, the editor edits 124, removes the
-In-Reply-To, and marks the post as referencing to 123, and all is
+way we use Heapkeeper now, the editor edits 124, removes the "Parent"
+header attribute, and marks the post as referencing to 123, and all is
 well.
 
 The complicated situation arises when someone writes a post about
@@ -22,28 +22,32 @@ way, I've seen a cat with 19 claws." Then, on one subthread, the
 discussion proceeds into single- and double-chain DNA damages caused
 by cobalt bombs, while on the other, the conversation will revolve
 around the 19-clawed kittie (who, to the best of my knowledge, is dead
-by now, but brobably not because of radiation poisoning).
+by now, but probably not because of radiation poisoning).
 
 What's the editor to do? The situation is not as simple as before.
 Making the first "kitten-only" post a new thread could be done, but
 then, the mutant monster would seemingly drop out of nowhere. The
 mixed post must be separated, and the relevant paragraph of this mixed
 post should be the first post in the cat thread. This, of course, can
-be done -- but not from within heapia. You could do an "e(123)", and
+be done -- but not from within hkshell. You could do an "e(123)", and
 strip the irrelevant paragraph out of the mostly nuke-oriented post,
-but if you now create a new post file, say, x42.mail, it will not be
-read into the MailDB. And, if you make the mistake of staying in
-heapia, and do an "e(124)" to change the In-Reply-To: header to x42,
-you'll get a nasty exception when attempting to generate HTML output.
+but if you now create a new post file, say, x42.post, it will not be
+read into the post database. And, if you make the mistake of staying in
+hkshell, and do an "e(124)" to change the "Parent" header attribute to
+x42, you'll get a nasty exception when attempting to generate HTML
+output.
 
 So I think we need either:
-- a command to re-read the mail database (simple and less foolproof),
+- a command to re-read the post database (simple and less foolproof),
 - a command to facilitate the splitting of a post.
 
 Such a splitting command could work like this:
 
     >>> sp(123)
 
-    (behind the scenes:) vim -O mail/123.mail mail/x42.mail
+    (behind the scenes:) vim -O posts/123.post posts/x42.post
 
-This would also spare the editor the burden of keeping track of the x-numbers.
+This would also spare the editor [1] the burden of keeping track of the
+x-numbers.
+
+[1] The person, not the tool.

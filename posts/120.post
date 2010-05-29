@@ -1,5 +1,5 @@
 Author: Csaba Hoch
-Subject: heapia command for re-reading mail database or splitting posts
+Subject: hkshell command for re-reading post database or splitting posts
 Tag: idea
 Tag: reviewed
 Message-Id: <49EB3B2C.20404@gmail.com>
@@ -8,13 +8,14 @@ Date: Sun, 19 Apr 2009 16:54:36 +0200
 
 >>> This would also spare the editor the burden of keeping track of
 >>> the x-numbers.
+>>
 >> I don't understand this.
 >
 > Now, when we split a post, we give the new post file an ID, which is
 > the letter 'x' followed by a number. If one wants to create a new
-> post file, they have to look at the mail directory listing to find
-> the highest number after the 'x' in mail files already present. This
-> cannot be done from within heapia as of now. This is one part of the
+> post file, they have to look at the post directory listing to find
+> the highest number after the 'x' in post files already present. This
+> cannot be done from within hkshell as of now. This is one part of the
 > problem I aim to solve.
 
 True!
