@@ -1,13 +1,14 @@
 Author: Csaba Hoch
-Subject: heapmanip notes (2007-03-16 f3865b0265, 2007-03-19 137486f2a0)
+Subject: Improved Developers' Guide (2007-03-16 7c8039783e, 2007-03-19 74b2a84176)
 Tag: commit
+Tag: reviewed
 Message-Id: <49E9ECFA.2080403@gmail.com>
 Date: Sat, 18 Apr 2009 17:08:42 +0200
 
 (You may copy-paste any of my comments into the documentation or
 modify them as you wish.)
 
-Attis commited:
+Attis committed:
 > _posts is the first of these cached data structures. It gets generated
 > by _recalc_posts(), and cleared by touch(), of course. _recalc_posts()
 > generates this list simply via a list comprehension that excludes deleted
@@ -31,11 +32,11 @@ No, it is not important. I deleted this sentence.
 
 "Answer: they are different types." ? I haven't corrected it.
 
-> While _posts
-> stores a list, _all is of a PostSet type. PostSet is not merely a set
-> of posts; it also serves as a building unit of Heap -- the level above
-> Post. For example, you would use a PostSet to specify the posts to be
-> included in a section of the resulting HTML. More on PostSet later.
+> While _posts stores a list, _all is of a PostSet type. PostSet is
+> not merely a set of posts; it also serves as a building unit of Heap
+> -- the level above Post. For example, you would use a PostSet to
+> specify the posts to be included in a section of the resulting HTML.
+> More on PostSet later.
 >
 > The relationship between heapid_to_post.values(), _post is that each
 > serves as a basis for the generation of the next. However, one may ask
@@ -68,11 +69,11 @@ anomalies.
 >
 > The following rules govern the structure of the posts in a MailDB:
 >
-> * Post 'A' is said to be the parent of post 'B' iff the header of 'A' contains
->   a particular type of reference to 'B'. (For the sake of clarity, this is the
->   "In-Reply-To:" reference, the taken directly from the terminology of e-mail,
->   but the reference here is via a heapid rather than a Message-ID. More on this
->   later.)
+> * Post 'A' is said to be the parent of post 'B' iff the header of
+>   'A' contains a particular type of reference to 'B'. (For the sake
+>   of clarity, this is the "In-Reply-To:" reference, the taken
+>   directly from the terminology of e-mail, but the reference here is
+>   via a heapid rather than a Message-ID. More on this later.)
 
 It is not true: a post can reference to another post either by the
 heapid or the Message-ID of that post. Actually, the messid has a
@@ -83,8 +84,9 @@ implementation of MailDB.prev().
 
 > * Every post may have zero or one parent.
 > * Every post may have any number of children.
-> * A post is in the same thread as its parent and its children. (Posts that are
->   connected through parent/child relations form a thread.)
+> * A post is in the same thread as its parent and its children.
+>   (Posts that are connected through parent/child relations form a
+>   thread.)
 >
 > TODO Sync this with Csabi's recent hh-post on the revised nomenclature of
 > thread relations.
@@ -153,18 +155,17 @@ to use on a heap with cycles.
 
 See above.
 
-> Such a situation can
-> be caused by:
+> Such a situation can be caused by:
 > * Hash collision on the IMAP server when generating Message-ID's. Highly
-> unlikely; in the case of GMail, it would also probably require a date
-> wraparound. Beware Y10K!
+>   unlikely; in the case of GMail, it would also probably require a date
+>   wraparound. Beware Y10K!
 > * Error in the IMAP server when generating Message-ID's. More likely,
-> still not common.
+>   still not common.
 > * Error in Heapkeeper during the parsing, storing or matching of
-> Message-ID's. A fearsome possibility.
+>   Message-ID's. A fearsome possibility.
 > * Corruption of mail files. Since mail files are very often edited by
-> hand, this is the most probable reason why anyone will ever encounter
-> a cycle.
+>   hand, this is the most probable reason why anyone will ever encounter
+>   a cycle.
 >
 > (TODO Ask Csabi if he introduced cycle detection code "just in case"
 > or he actually found cycles during development.)
@@ -238,9 +239,8 @@ Again, I would say "anomalies".
 I disagree. I would be happy to recover the messages. But it's not
 easy and I don't have the motivation to do it.
 
-> There's really not
-> much point in easing the symptoms that would urge the user to
-> resolve the underlying problem.
+> There's really not much point in easing the symptoms that would urge
+> the user to resolve the underlying problem.
 
 I strongly disagree. We should not urge the maintainers to remove
 cycles: if they want to talk a week about it, that's fine.
@@ -256,10 +256,10 @@ It this what you think is peculiar:
     A post is in a cycle if you can go up via the ‘parent’ relation
     infinitely long and you will never reach a root.
 
-> _recalc_cycles() starts out from the list
-> of all posts, then eliminating all posts reachable via iter_thread(). In
-> the end, only posts unreachable from the roots remain, and these are by
-> our definition the posts that are in cycles.
+> _recalc_cycles() starts out from the list of all posts, then
+> eliminating all posts reachable via iter_thread(). In the end, only
+> posts unreachable from the roots remain, and these are by our
+> definition the posts that are in cycles.
 >
 > (Those familiar to git may find some similarities in concepts
 > and terminologies here.
@@ -267,12 +267,11 @@ It this what you think is peculiar:
 I don' find any. The only similarity I see is the content of the
 database of either programs is worth to visualize as a graph.
 
-> Just watch the pattern: posts form threads
-> according to a parent relationship, with some posts getting unreachable
-> at times. Beware, though: git repositories are represented by DAG's,
-> while heaps form multiple trees. The most obvious consequence of this
-> distinction is that threads on a heap never merge the way git branches
-> do.)
+> Just watch the pattern: posts form threads according to a parent
+> relationship, with some posts getting unreachable at times. Beware,
+> though: git repositories are represented by DAG's, while heaps form
+> multiple trees. The most obvious consequence of this distinction is
+> that threads on a heap never merge the way git branches do.)
 >
 > TODO Ask Csabi if the previous paragraph is actually helpful or only
 > confusing.
@@ -292,12 +291,12 @@ document a nightmare to maintain.
 I don't understand what do you mean by the last three sentences; could
 you clarify?
 
-> It is perfectly safe to use root()
-> even if there are cycled loops present, provided the post being examined
-> is itself root-reachable. I propose an alternative: keep a list (set?) of
-> posts touched during the search, and if a post is reached that is already
-> present in the set, return None. (I like to think of this approach as
-> the snake-game rule: the snake that hits itself dies.)
+> It is perfectly safe to use root() even if there are cycled loops
+> present, provided the post being examined is itself root-reachable.
+> I propose an alternative: keep a list (set?) of posts touched during
+> the search, and if a post is reached that is already present in the
+> set, return None. (I like to think of this approach as the
+> snake-game rule: the snake that hits itself dies.)
 >
 > TODO Consider the time saved by eliminating this data structure.
 
