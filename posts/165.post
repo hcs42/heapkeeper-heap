@@ -16,7 +16,8 @@ Sorry.
 >>
 >>     Hklib: corrected bugs
 >>
->> won't make anybody go and grep for a code element called 'Hklib' with capital H.
+>> won't make anybody go and grep for a code element called 'Hklib'
+>> with capital H.
 >
 > Why not? How does a reader know whether it is a class or a module? We
 > don't have a rule that the first word is a module. Maybe we will write
