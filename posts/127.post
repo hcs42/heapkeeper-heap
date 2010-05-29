@@ -1,6 +1,7 @@
 Author: Attila Nagy
 Subject: Setting up a new installation with an existing heap
 Tag: bug
+Tag: reviewed
 Message-Id: <b29f917d0904280852m6232bdcfq98a2c0e771a56c04@mail.gmail.com>
 Date: Tue, 28 Apr 2009 17:52:36 +0200
 
@@ -11,7 +12,7 @@ No problems so far. Then, I did a 'dl()'. OK, some messages were downloaded.
 Then, a 'ga()' resulted in an exception complaining no sections were provided.
 
 This hints an error in the hkcustomlib, which I later found and corrected
-(commit e1bd606, 2009-04-28 16:15).
+(commit e1bd606b7c, 2009-04-28 16:15).
 
 The cautious reader might have wondered why the cautious wording in the above:
 "some messages were downloaded". This is the bigger problem. Right now, we
