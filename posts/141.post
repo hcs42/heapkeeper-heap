@@ -1,8 +1,9 @@
 Author: Attila Nagy
 Subject: None is also accepted as prepost (4b2977e9b7 2009-04-27)
 Tag: commit
+Tag: reviewed
 Message-Id: <b29f917d0905020200j74472206t4b02a3318af6cd23@mail.gmail.com>
-Parent: <b29f917d0905020123u56296762ubd68181209363748@mail.gmail.com>
+Parent: 135
 Date: Sat, 2 May 2009 11:00:49 +0200
 
 This solution is elegant and totally solves my problem:
@@ -13,7 +14,7 @@ This solution is elegant and totally solves my problem:
 >                                           # is None, nothing happens
 
 > But that's what I would write, which is more efficient and nicer in my eyes:
-
+>
 >   ps_singles = \
 >       postdb.postset(postdb.roots()). \
 >       collect(lambda post: postdb.children(post) == [])
