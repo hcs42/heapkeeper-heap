@@ -2,55 +2,19 @@ Author: Csaba Hoch
 Subject: Body parsing - the what - examples
 Tag: post syntax
 Tag: prop
+Tag: reviewed
 Message-Id: <4A125AFB.1060406@gmail.com>
 Parent: <20090518011928.99444ebf.nagy.attila.1984@gmail.com>
 Date: Tue, 19 May 2009 09:08:43 +0200
 
 This page should be a wiki page on the heap. (See this thread [1]
-about wiki pages on the heap.) Thus I've posted a todo about every
-typo. I agree with everything I haven't commented.
-
-> The first parser module takes the plaintext body of the message, and
-> turn it
-
-<<<todo: turn -> turns>>>
-
-> into a sequence of plaintext segments.
-
-> Initial segmenting:
->
->    Plaintext [Hello everybody.]
->    Boundary  []
->    Plaintext [Look what I found.]
->    Boundary  []
->    Plaintext [http://www.url.com]
->    Boundary  []
->    Plaintext [For more details, see http://www.example.com too.]
->
-> After URL interpretation:
->
->    Plaintext [Hello everybody.]
->    Boundary  []
->    Plaintext [Look what I found.]
->    Boundary  []
->    URL       [http://www.url.com]
->    Boundary  []
->    Plaintext [For more details, see]
-
-<<<todo: "see]" -> "see ]", right? I guess it will not matter in the
-later stages, but still.>>>
-
-> === Special protocols ===
->
-> Some protocol specifiers, like "http", "https", "ftp" and "file",
-> are passed on to the HTML output unchanged. Others' have meanings
-
-<<<todo Is the apostrophe at the "Others'" an error?>>>
+about wiki pages on the heap.) I agree with everything I haven't
+commented.
 
 == Place of meta text ==
 
-> === Link appearance ===
->
+=== Link appearance ===
+
 > [...]
 >
 > Plaintext:
@@ -63,70 +27,12 @@ this?
 
 == Cites ==
 
-> Cites are a way to include details, explanation or external sources
-> in the post without distracting the reader's attention
-> unnecessarily. In the flowing text, cites appear as decimal numbers
-> in brackets, while at the end of the post they are expanded
-> (usually, but the expansions can be anywhere).
->
-> Plaintext body:
->
->    This site [1] says that it's not important [2].
->
->    [1] http://www.boring.com
->    [2] At least that's what they say...
->
-> After initial segmenting:
->
->    Plaintext [This site [1] says that it's not important. [2]]
->    Boundary  []
->    Plaintext [[1] http://www.boring.com\n[2] At least that's what they say...]
->
-> After processing cites:
->
->    Paragraph [This site ]
->    Citehead  [1]
->    Paragraph [says that it's not important. ]
->    Citehead  [2]
->    CitebodyURL   [1 http://www.boring.com]
->    CitebodyText  [2 At least that's what they say...]
->
-> HTML output:
->
->    <p>
->        This site
->        <a href="http://www.boring.com" class="external">
->            [1]
->        </a>
->        says that it's not important.
->        <a href="#cite-2" class="internal">
->            [2]
->        </a>
->    <p>
->    <p class="citebody" id="cite-1">
->        [1] http://www.boring.com
->    </p>
->    <p class="citebody" id="cite-2">
->        [2] At least that's what they say...
->    </p>
->
-> The different classes for the link enable the CSS to visually
-> distinguish links that'll move away from the page from links that'll
-> only jump inside the page.
-
 I would also like to write emails like this:
 
    Our website [1] should be improved according to them [2].
 
    [1] Currently http://hste.uw.hu/heapkeeper/index.html
    [2] http://www.boring.org, section "Heapkeeper is boring"
-
-== Automatic action on metas (a.k.a. !-metas) ==
-
-> * <<<!deltext>>> - delete this meta
-> ** used to give throwaway hints to the
-
-<<<todo I think this sentence is unfinished.>>>
 
 == Quotes ==
 
@@ -178,12 +84,6 @@ amount of work. From the HTML presentation's point of view, yours is
 probably easier. From the point of view of all the other processors,
 though, I think my approach is simpler.
 
->    <p class="note">
->        Watch the wording, I must have been high.]
->    </p>
-
-<<<todo Remove the ] from the last but one line.>>>
-
 == Unknown metas ==
 
 > I think unknown metas should be displayed specially, as they require
@@ -199,9 +99,7 @@ I agree.
 Why?
 
 > But, regardless of whether a signature line is present, a signature
-> should be added in the HTML rendering
-
-<<<todo Period is missing>>>
+> should be added in the HTML rendering.
 
 OK. I don't see the use of this, but if you like it, go ahead.
 
@@ -277,8 +175,6 @@ these:
     2. stop
 
 We have to find a way to render these. (I haven't found yet.)
-
-Csabi
 
 [1] heap://hh/4
 [2] heap://ums/1176

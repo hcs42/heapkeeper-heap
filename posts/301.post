@@ -2,26 +2,17 @@ Author: Attila Nagy
 Subject: Body parsing - the what - examples
 Tag: post syntax
 Tag: prop
+Tag: reviewed
 Message-Id: <b29f917d0905211025k7e03b34dt6dcb792e12100d8e@mail.gmail.com>
 Parent: <4A125AFB.1060406@gmail.com>
 Date: Thu, 21 May 2009 19:25:10 +0200
 
 > This page should be a wiki page on the heap. (See this thread [1]
-> about wiki pages on the heap.) Thus I've posted a todo about every
-> typo. I agree with everything I haven't commented.
+> about wiki pages on the heap.) I agree with everything I haven't
+> commented.
 
 OK. Here, I'll comment on those comments that are questions or the
 ones I don't agree. I accept all the others.
-
-=== Special protocols ===
-
->> Some protocol specifiers, like "http", "https", "ftp" and "file",
->> are passed on to the HTML output unchanged. Others' have meanings
->
-> <<<todo Is the apostrophe at the "Others'" an error?>>>
-
-Yes.
-
 
 == Place of meta text ==
 
@@ -67,17 +58,6 @@ contain both an URL and a textual comment. The question is, of course,
 how should we handle these? Would the head link to the body, or right
 to the URL contained in the body (assuming, of course, that there's
 only one URI in the body!)
-
-== Automatic action on metas (a.k.a. !-metas) ==
-
->> * <<<!deltext>>> - delete this meta
->> ** used to give throwaway hints to the
->
-> <<<todo I think this sentence is unfinished.>>>
-
-It should be "used to give throwaway hints to the maintainer of the
-heap or pass information that is only important to the readers of the
-original e-mail".
 
 == Quotes ==
 

@@ -2,19 +2,10 @@ Author: Attila Nagy
 Subject: Body parsing - the what - examples
 Tag: post syntax
 Tag: prop
+Tag: reviewed
 Message-Id: <20090529073451.8b24cad7.nagy.attila.1984@gmail.com>
 Parent: <4A1AFFC8.40609@gmail.com>
 Date: Fri, 29 May 2009 07:34:51 +0200
-
->> <<<!todo Rather "do without">>>
->> ...
->> [!todo We should change "cite" to "footnote".]
->
-> I guess this was the point where you were convinced to use brackets
-> instead of the old meta syntax :) Seven lines earlier you used the old
-> meta syntax, here you use a bracket segment.
-
-I couldn't wait for our dog food to be ready. :)
 
 == Quotes ==
 

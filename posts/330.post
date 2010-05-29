@@ -2,6 +2,7 @@ Author: Attila Nagy
 Subject: Body parsing - the what - examples
 Tag: post syntax
 Tag: prop
+Tag: reviewed
 Message-Id: <b29f917d0905241315n5ef45cf2v1308cf7286967713@mail.gmail.com>
 Parent: <4A172469.8000901@gmail.com>
 Date: Sun, 24 May 2009 22:15:18 +0200
@@ -66,15 +67,11 @@ pattern:
 
 Since '[^][]' is easier to read, I think we should use that.
 
-> - 50 of the remaining lines should have been start with whitespace.
-
-<<<!todo should have been started>>>
+> - 50 of the remaining lines should have been started with whitespace.
 
 Your results are interesting!
 
-> - I propose escaping a '[' by writing '\['. ']' can live without
-
-<<<!todo Rather "do without">>>
+> - I propose escaping a '[' by writing '\['.
 
 A remark: we should pay attention to eliminating the "multiple quote
 heads" we used earlier; these look like \[3,4].
@@ -170,12 +167,6 @@ Yes.
 
 == Quotes again ==
 
-> I realized we do want to handle quotes as just "quote blocks". For
-> example they can have raw text inside them. They also may have
-> itemizations inside them. They may contain links.
-
-[!todo I realized we do not want to...]
-
 > I propose that we parse everything in quotes. (I suggested the exact
 > opposite so far, but I think I was wrong. The concrete examples we had
 > (meta text, cites) would not make too much sense to parse in quotes;
@@ -206,10 +197,6 @@ Of course, efficiency will still remain a top priority, but with the
 new proposal, we'll have to pay more attention, as the metas no longer
 need be at the start of the line.
 
-> These I the steps I propose now:
-
-[!todo These are the steps...]
-
 > Each line of this table could be an object of a Segment class. This
 > class could have an integer `quote_level` data attribute, an enum
 > `type` attribute and a string `text` attribute. (There is no enum type
@@ -227,10 +214,6 @@ I like the simplicity of this model.
 
 I think we should do this change only manually. Sounds too drastic to
 do in one move.
-
-[!delthis On the UMS heap, my maintaining effort covered no more than
-about 150-200 posts, the rest are yet untouched, or, at least, not
-marked as reviewed. So, not very much work has to be done twice.]
 
 == Conclusion ==
 

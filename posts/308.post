@@ -2,6 +2,7 @@ Author: Csaba Hoch
 Subject: Body parsing - the what - examples
 Tag: post syntax
 Tag: prop
+Tag: reviewed
 Message-Id: <4A172469.8000901@gmail.com>
 Parent: <b29f917d0905211025k7e03b34dt6dcb792e12100d8e@mail.gmail.com>
 Date: Sat, 23 May 2009 00:17:13 +0200
@@ -160,13 +161,13 @@ looked at our posts. (You are free to ignore my regexps again :) )
   but no other '[' and ']'.
 - in 126 of the remaining lines we talked about tags (e.g. "I like the
   [hh] tag"). We could use quotation signs in these cases.
-- 50 of the remaining lines should have been start with whitespace.
+- 50 of the remaining lines should have been started with whitespace.
 - 88 lines remained. This is a tiny number compared the number of
   total lines. So if we go with []-s as meta text and everything, 22
   post in average would contain one '[' that should be escaped.
 
 Back to the proposal:
-- I propose escaping a '[' by writing '\['. ']' can live without
+- I propose escaping a '[' by writing '\['. ']' can do without
   escaping. We also may have `` for inline raw text, in which [ would
   not be interpreted.
 - We could retain the meta text model: the first word should indicate
@@ -407,7 +408,7 @@ Combining items and raw lines is easy: items end with a blank line.
 
 == Quotes again ==
 
-I realized we do want to handle quotes as just "quote blocks". For
+I realized we do not want to handle quotes as just "quote blocks". For
 example they can have raw text inside them. They also may have
 itemizations inside them. They may contain links.
 
@@ -485,7 +486,7 @@ screen of "real" code -- why should we modularize that?
 Well, my latest proposal is a bit different from what I said here...
 But I don't think that makes a difference in efficiency.
 
-These I the steps I propose now:
+These are the steps I propose now:
 
 First go:
 - quote segments

@@ -2,6 +2,7 @@ Author: Csaba Hoch
 Subject: Embedded itemization
 Tag: post syntax
 Tag: prop
+Tag: reviewed
 Message-Id: <4A205125.6080108@gmail.com>
 Parent: <20090529103206.8fc6a32f.nagy.attila.1984@gmail.com>
 Date: Fri, 29 May 2009 23:18:29 +0200
@@ -110,4 +111,4 @@ be. I don't think we should care about Roman numerals. [1]
 Considering the problem of embedded itemizations that I described
 above, I don't think we can do anything about these now.
 
-[1] See heap://2079
+[1] See heap://345

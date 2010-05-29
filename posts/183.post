@@ -2,6 +2,7 @@ Author: Attila Nagy
 Subject: Body parsing - the how
 Tag: post syntax
 Tag: prop
+Tag: reviewed
 Message-Id: <b29f917d0905081230h18f7ab16yfb4b8a34471ee0e9@mail.gmail.com>
 Parent: <4A0463BB.2010007@gmail.com>
 Date: Fri, 8 May 2009 21:30:20 +0200
@@ -52,7 +53,7 @@ one go, but in multiple passes.
 
 Pass 1: add the author's name before each quote.
 Pass 2: decorate mentioned names
-Pass 2: escape HTML and finish
+Pass 3: escape HTML and finish
 
 Before pass 1:
 
@@ -62,21 +63,21 @@ Before pass 1:
 
 Before pass 2:
 
-    <div id="quoteheader">Attis wrote:</div>
+    <div id="quoteheader">Josh wrote:</div>
     > I think Attis is right on this.
 
     Josh, what do you say?
 
 Before pass 3:
 
-    <div id="quoteheader">Attis wrote:</div>
+    <div id="quoteheader">Josh wrote:</div>
     > I think @Attis@ is right on this.
 
     @Josh@, what do you say?
 
 After pass 3:
 
-    <div id="quoteheader">Attis wrote:</div>
+    <div id="quoteheader">Josh wrote:</div>
     &gt; I think @Attis@ is right on this.
 
     @Josh@, what do you say?

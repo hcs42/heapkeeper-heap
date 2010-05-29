@@ -2,6 +2,7 @@ Author: Csaba Hoch
 Subject: What the users need
 Tag: discussion
 Tag: post syntax
+Tag: reviewed
 Message-Id: <4A205129.4000405@gmail.com>
 Parent: <20090529103206.8fc6a32f.nagy.attila.1984@gmail.com>
 Date: Fri, 29 May 2009 23:18:33 +0200
@@ -69,8 +70,8 @@ supports the itemizations we use. It others want to use Hk, they can
 use those. The alternative would be even worse: everybody can use the
 itemizations they like and hope that Hk will process it well.
 
-[1] heap://2080
-[2] heap://2081
+[1] heap://346
+[2] heap://347
 [3] I dislike MS Office, OpenOffice and Google Docs. They all try to
     find out what I want to do and they all fail and make horrible
     things when I for example hit "backspace" in the beginning of a

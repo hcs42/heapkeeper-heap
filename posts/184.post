@@ -2,61 +2,15 @@ Author: Csaba Hoch
 Subject: Body parsing - the how
 Tag: post syntax
 Tag: prop
+Tag: reviewed
 Message-Id: <4A0519EB.1020403@gmail.com>
 Parent: <b29f917d0905081230h18f7ab16yfb4b8a34471ee0e9@mail.gmail.com>
 Date: Sat, 09 May 2009 07:51:39 +0200
 
->>> * the separation of already processed (HTML) and still unprocessed
->>> (raw) parts of the body have to be distinguished
->> I don't really understand why. But you don't have to answer it now if
->> it is just a feeling that we will need that.
->
-> I think I can explain. Suppose we want to decorate all occurences of
-> authors' names in a special manner, e.g. surround them with @'s, but
-> only in the original text of the posts, not in the generated output.
-> Now we'll have to somehow keep track of the already processed or
-> unprocessed parts of a partly composed body, since we don't process in
-> one go, but in multiple passes.
->
-> Pass 1: add the author's name before each quote.
-> Pass 2: decorate mentioned names
-> Pass 2: escape HTML and finish
-
-<<<todo: correct this to Pass 3>>>
-
-> Before pass 1:
->
->     > I think Attis is right on this.
->
->     Josh, what do you say?
->
-> Before pass 2:
->
 >     <div id="quoteheader">Attis wrote:</div>
->     > I think Attis is right on this.
->
->     Josh, what do you say?
-
-<<<todo: correct the example>>>
-
-Why does Attis wrote "I think Attis is right on this."? :D
 
 Why do you use "div id", why not "div class"?
 
-> Before pass 3:
->
->     <div id="quoteheader">Attis wrote:</div>
->     > I think @Attis@ is right on this.
->
->     @Josh@, what do you say?
->
-> After pass 3:
->
->     <div id="quoteheader">Attis wrote:</div>
->     &gt; I think @Attis@ is right on this.
->
->     @Josh@, what do you say?
->
 > This is what we want to happen. First, we don't want to decorate the
 > name inside the div. Secondly, and this is much more important: we
 > have to HTML-escape the quote introduction, but we mustn't escape the
@@ -68,7 +22,7 @@ I got your model, but I think it has a flaw.
 
 Let's say we have another "processor" that creates div-blocks from quotes:
 
-     <div class="quoteheader">Attis wrote:</div>
+     <div class="quoteheader">Josh wrote:</div>
      <div class="quote"> I think Attis is right on this.</div>
 
      Josh, what do you say?
@@ -87,9 +41,9 @@ structure is so simple - but otherwise their idea seems more feasible
 to me than a pure processed/notprocessed flag.
 
 >> - The current "body" attribute of the post should remain as it is, the
->>  list of segments and the HTML representation would be other
->>  objects (either data attributes (=data members) or local variables
->>  of some function)
+>>   list of segments and the HTML representation would be other
+>>   objects (either data attributes (=data members) or local variables
+>>   of some function)
 >
 > This is a very important question. I think it is directly related to a
 > broader one: when should the processing happen? Also, it brings up the

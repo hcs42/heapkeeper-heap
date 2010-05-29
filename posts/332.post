@@ -2,22 +2,10 @@ Author: Csaba Hoch
 Subject: Body parsing - the what - examples
 Tag: post syntax
 Tag: prop
+Tag: reviewed
 Message-Id: <4A1AFFC8.40609@gmail.com>
 Parent: <b29f917d0905241315n5ef45cf2v1308cf7286967713@mail.gmail.com>
 Date: Mon, 25 May 2009 22:30:00 +0200
-
-> <<<!todo Rather "do without">>>
->
-> A remark: we should pay attention to eliminating the "multiple quote
-> heads" we used earlier; these look like \[3,4].
->
-> == Cites ==
->
-> [!todo We should change "cite" to "footnote".]
-
-I guess this was the point where you were convinced to use brackets
-instead of the old meta syntax :) Seven lines earlier you used the old
-meta syntax, here you use a bracket segment.
 
 == Quotes ==
 

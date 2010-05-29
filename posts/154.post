@@ -1,7 +1,7 @@
 Author: Attila Nagy
 Subject: Body parsing - the what and the how
 Tag: post syntax
-Tag: prop
+Tag: reviewed
 Message-Id: <b29f917d0905021634v6061bb81tfd944513c9299c40@mail.gmail.com>
 Date: Sun, 3 May 2009 01:34:00 +0200
 
@@ -10,5 +10,5 @@ first, what do we want the body parser to do, second, how do we want
 to implement it to be elegant, flexible and make it fit well together
 with the rest of the code.
 
-<<<note I write this proposal in multiple posts, which is a new idea,
-and may or may not prove useful.>>>
+[note I write this proposal in multiple posts, which is a new idea,
+and may or may not prove useful.]

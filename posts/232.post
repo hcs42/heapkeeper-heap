@@ -2,11 +2,12 @@ Author: Attila Nagy
 Subject: Body parsing - the what - examples
 Tag: post syntax
 Tag: prop
+Tag: reviewed
 Message-Id: <20090518011928.99444ebf.nagy.attila.1984@gmail.com>
 Parent: <b29f917d0905021657p2cd16492p34c37a593d40776b@mail.gmail.com>
 Date: Mon, 18 May 2009 01:19:28 +0200
 
-The first parser module takes the plaintext body of the message, and turn it
+The first parser module takes the plaintext body of the message, and turns it
 into a sequence of plaintext segments. Further modules then transform these
 segments, usually transforming some of them into other, more specific and
 interpreted segments. This process is shown here with examples.
@@ -41,7 +42,7 @@ After URL interpretation:
     Boundary  []
     URL       [http://www.url.com]
     Boundary  []
-    Plaintext [For more details, see]
+    Plaintext [For more details, see ]
     URL       [http://www.example.com]
     Plaintext [ too.]
 
@@ -67,7 +68,7 @@ This is now rendered in HTML like this:
 === Special protocols ===
 
 Some protocol specifiers, like "http", "https", "ftp" and "file", are passed on
-to the HTML output unchanged. Others' have meanings internal to Heapkeeper and
+to the HTML output unchanged. Others have meanings internal to Heapkeeper and
 make no sense to the browser; these exist as a convenience feature for
 referring to other posts on the heap.
 
@@ -218,7 +219,8 @@ very close to their final forms. These are the most simple !-metas:
 their scope is only themselves or the post they contain.
 
 * <<<!deltext>>> - delete this meta
-** used to give throwaway hints to the
+** used to give throwaway hints to the maintainer of the heap or pass
+information that is only important to the readers of the original e-mail
 * <<<!delpost>>> - delete this entire post
 ** this is used to mark the post as being entirely for the eyes of the
 editor or a remark to e-mail readers only, with no historical interest
@@ -452,7 +454,7 @@ HTML output:
         of inspiration for many generations to come.
     </p>
     <p class="note">
-        Watch the wording, I must have been high.]
+        Watch the wording, I must have been high.
     </p>
 
 == Unknown metas ==
@@ -495,7 +497,7 @@ HTML rendering:
 
 If a line matches entirely with an author's known and stored nickname,
 it should be ignored. But, regardless of whether a signature line
-is present, a signature should be added in the HTML rendering
+is present, a signature should be added in the HTML rendering.
 
 Plaintext:
 
