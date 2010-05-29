@@ -1,11 +1,10 @@
 Author: Csaba Hoch
 Subject: uwrid - Python console
+Tag: reviewed
 Message-Id: <4ddb9e5b0905080615n2b35972cn4771bef6bfe154a6@mail.gmail.com>
 Date: Fri, 8 May 2009 15:15:19 +0200
 
 Uwrid [1] is a Console User Interface Library for Python. I don't
 think we need it; but it is good to know about it.
-
-Csabi
 
 [1] http://excess.org/urwid/
