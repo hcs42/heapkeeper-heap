@@ -1,7 +1,9 @@
 Author: Attila Nagy
 Subject: amend + merge =chaos (2009-05-07 3b4f6d3677, 179f5cf18e, 4e32bdad1c)
 Tag: commit
+Tag: reviewed
 Message-Id: <b29f917d0905081139v19c82815s95f12d480c17ad91@mail.gmail.com>
+Parent: hh/173
 Date: Fri, 8 May 2009 20:39:58 +0200
 
 >> What happened to 179f5cf18e and 4e32bdad1c, why do they both seem the

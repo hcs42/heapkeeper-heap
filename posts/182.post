@@ -1,18 +1,11 @@
 Author: Csaba Hoch
 Subject: amend + merge =chaos (2009-05-07 3b4f6d3677, 179f5cf18e, 4e32bdad1c)
 Tag: commit
+Tag: reviewed
 Message-Id: <4A0480BB.7000104@gmail.com>
 Parent: <b29f917d0905081139v19c82815s95f12d480c17ad91@mail.gmail.com>
 Date: Fri, 08 May 2009 20:58:03 +0200
 
->>> What happened to 179f5cf18e and 4e32bdad1c, why do they both seem the
->>> same? Have you used "git amend" after push, or was it something else?
->
->> Yes, I've used "git amend".
->
-> And it seems that I also merged two repos, one amended, the other not.
-> At least that's what I think I did.
->
 > Is there any way we can clean up this mess?
 
 I don't think so. This is history now :) Don't worry about it
