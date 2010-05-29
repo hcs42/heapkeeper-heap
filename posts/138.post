@@ -10,12 +10,12 @@ that we need in order to make Heapkeeper a product ready to be used by
 others.
 
 My list of what we need:
-* a setup script
-* an up-to-date tutorial
-* a visitor-friendly web site...
-** ...which very strongly encourages interested visitors to get in
-(e-mail) contact with us
-* a public heap?
+- a setup script
+- an up-to-date tutorial
+- a visitor-friendly web site...
+    -  ...which very strongly encourages interested visitors to get in
+       (e-mail) contact with us
+- a public heap?
 
 == Do we need the interactive Web interface? ==
 

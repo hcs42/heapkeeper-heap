@@ -11,8 +11,8 @@ realized only at the end of your email that you mean a complete
 character-graphical program that would perform the setup.
 
 >>> My list of what we need:
->>> * a setup script
->
+>>> - a setup script
+>>
 >> Really? What do you mean by a setup script? A script that for example
 >> creates hk.cfg?
 >
@@ -62,7 +62,7 @@ questions. If I had to answer to every question that goes into "git
 init", I would rather copy and modify an existing config file.
 
 >> - You have to became familiar with the config file itself anyway if
->>  you want to change a setting.
+>>   you want to change a setting.
 >
 > Probably not if all you want to do is change something later, e.g. if
 > the e-mail password changes.
@@ -70,7 +70,7 @@ init", I would rather copy and modify an existing config file.
 True.
 
 >> - It is usually impossible to go back if you later realize you give an
->>  incorrect answer before; you can only redo the whole thing.
+>>   incorrect answer before; you can only redo the whole thing.
 >
 > Of course a setup script doesn't have to be dumb. It takes love, care
 > and patience to do it, but using Dialog or Whiptale [1], you can do
