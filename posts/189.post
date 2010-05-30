@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: Threads/1 (2009-05-07 3b4f6d3677c)
 Tag: commit
+Tag: reviewed
 Message-Id: <4A05FF98.3060803@gmail.com>
 Date: Sun, 10 May 2009 00:11:36 +0200
 
@@ -244,7 +245,5 @@ hklib.Generator.gen_threads:
 What do you say to not leaving any whitespace at the end of a file?
 (Except for the last newline character that is not shown by Vim
 explicitly.)
-
-Csabi
 
 [1] http://hste.uw.hu/heapkeeper/hkshell.html#hkshell-prepost
