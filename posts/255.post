@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: "nothing added..." in commit message (2009-05-15 ac1803f877)
 Tag: commit
+Tag: reviewed
 Message-Id: <4A12D0D1.9080502@gmail.com>
 Parent: <20090519094239.70fe5fdb.nagy.attila.1984@gmail.com>
 Date: Tue, 19 May 2009 17:31:29 +0200
@@ -9,12 +10,8 @@ Date: Tue, 19 May 2009 17:31:29 +0200
 >> please, be aware next time when you merge branches, and try to find
 >> the root of the problem. (I'm very curious.)
 >
-> I must admit I made a mess of the threads,
-
-<<<todo You mean branch.>>>
-
-> and I had many conflicts that day. Still, I don't know how I did an
-> empty commit.
+> I must admit I made a mess of the branches and I had many conflicts
+> that day. Still, I don't know how I did an empty commit.
 
 I have to admit I have no idea what was going on. But as far as I see,
 that was not an empty commit, but a commit with a funny commit
