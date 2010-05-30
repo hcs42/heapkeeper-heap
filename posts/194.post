@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: hkshell: outdated posts recognized at startup (2009-05-10 0c52914207)
 Tag: commit
+Tag: reviewed
 Message-Id: <4A06AE85.3050106@gmail.com>
 Date: Sun, 10 May 2009 12:37:57 +0200
 
@@ -30,3 +31,14 @@ hkshell.PostPageListener.outdated_posts_from_disk:
 
 Very nice job! It would have taken some Googling and documentation
 reading for me to figure out os.stat.
+
+To quote Eric S. Raymond [1] (this quote was also acknowledged by
+Producing Open Source Software):
+
+    Every good work of software starts by scratching a developer's
+    personal itch.
+
+Here, you were very fast to implement this feature probably because it
+scratched your itch :)
+
+[1] http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/ar01s02.html
