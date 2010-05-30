@@ -1,12 +1,10 @@
 Author: Attila Nagy
 Subject: Tag proposal: "post syntax"
 Tag: meta
+Tag: prop
+Tag: reviewed
 Message-Id: <20090519184814.c2829c05.nagy.attila.1984@gmail.com>
 Parent: <4A12BFC7.4000205@gmail.com>
 Date: Tue, 19 May 2009 18:48:14 +0200
-
-> I propose using "post syntax" as a tag for posts that talk about the
-> syntax of posts and emails we send. This includes for example body
-> parsing and wiki like posts.
 
 Would it be literally [post syntax]? Existing tags use hyphenated forms.
