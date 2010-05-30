@@ -1,14 +1,9 @@
 Author: Csaba Hoch
 Subject: Web-interactive Heap on GAE
 Tag: idea
+Tag: reviewed
 Message-Id: <4ddb9e5b0905260145m10dc792et50e368a299009e09@mail.gmail.com>
 Parent: <b29f917d0905260106p23f50786iae60a3a14064a538@mail.gmail.com>
 Date: Tue, 26 May 2009 10:45:41 +0200
-
->>>>>>>    Time per request = 30 sec
->
-> This means to me that any request must terminate in 30 seconds, so
-> that is the maximum allowed time for any single request to finish. In
-> PHP, this would be the allowed maximum running time for the program.
 
 Thanks for clearing that up, now I understand.

@@ -1,22 +1,10 @@
 Author: Csaba Hoch
 Subject: Web-interactive Heap on GAE
 Tag: idea
+Tag: reviewed
 Message-Id: <4A179B49.1030501@gmail.com>
 Parent: <b29f917d0905222330u46f8eb2buc36aef5a9b8f9ca5@mail.gmail.com>
 Date: Sat, 23 May 2009 08:44:25 +0200
-
->> But Google says this [1]:
->>
->>    Free Default Quota / Daily Limit: 1300000 requests (15 req/sec)
->>    Free Default Quota / Maximum rate: 7400 requests (123 req/sec)
->>
->> Do you understand it?
->
-> I think I do. It says you cannot do more than 1300000 requests a day,
-> that is, the average rate of requests can't exceed 15 Hz over a full
-> day. But, during peaks you can have more than that, up to 123 Hz. I
-> think this latter limit is implemented as not letting you do more than
-> 7400 requests in any single minute.
 
 No, I mean do you understand why it is that the Wikipedia has totally
 different numbers...
