@@ -7,10 +7,10 @@ Parent: <4ddb9e5b0907250931r54aeefasdc680c16e0119f6e@mail.gmail.com>
 Date: Sat, 25 Jul 2009 18:39:36 +0200
 
 > Things that still have to be done:
->    * tutorial: using a GoogleGroups+IMAP heap
->    * better screenshots
->    * try it out on Windows
->    * try it out with Python 2.5
+> - tutorial: using a GoogleGroups+IMAP heap
+> - better screenshots
+> - try it out on Windows
+> - try it out with Python 2.5
 >
 > Do you agree that we can release after doing these?
 
@@ -22,7 +22,7 @@ Yes, but one step less. On my laptop, I use Python 2.5.2.
 It works perfectly.
 
 > Things should be done soon after the release:
->    * register to freshmeat
->    * write to Sphinx that we use Sphinx
+> - register to freshmeat
+> - write to Sphinx that we use Sphinx
 
 OK.

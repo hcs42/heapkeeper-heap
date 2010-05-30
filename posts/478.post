@@ -26,41 +26,41 @@ but if we cannot do that, the whole history-rewriting sucks, I guess.
 BTW, I realized that we did not agree on what commit message should
 these tagged commits have. I propose that they should have these:
 
-------------------------------------------------------------
-Heapkeeper v0.1 released.
+    ------------------------------------------------------------
+    Heapkeeper v0.1 released.
 
-This release is a propotype.
+    This release is a propotype.
 
-Features:
+    Features:
 
-- Downloading emails over IMAP.
-- Storing posts in individual files.
-- Generating threaded index page that contains all posts.
-------------------------------------------------------------
+    - Downloading emails over IMAP.
+    - Storing posts in individual files.
+    - Generating threaded index page that contains all posts.
+    ------------------------------------------------------------
 
-------------------------------------------------------------
-Heapkeeper v0.2 released.
+    ------------------------------------------------------------
+    Heapkeeper v0.2 released.
 
-This release contains many new features, but lacks comprehensive documentation.
+    This release contains many new features, but lacks comprehensive documentation.
 
-Major new features:
+    Major new features:
 
-- Generating XHTML index page. The index pages may contain several sections.
-- Generating (XHTML) post pages.
-- Using CSS.
-- Deleting posts.
-- Nicknames.
-- Using ini files as configuration files.
-- :class:`hklib.PostSet` class added. It allows writing efficient queries about
-  the post database easily.
-- Dates are displayed in a convenient format.
-- Posts may have tags.
-- Handling cycles in the thread structure.
-- New command line interface: :mod:`hkshell`.
+    - Generating XHTML index page. The index pages may contain several sections.
+    - Generating (XHTML) post pages.
+    - Using CSS.
+    - Deleting posts.
+    - Nicknames.
+    - Using ini files as configuration files.
+    - :class:`hklib.PostSet` class added. It allows writing efficient queries about
+      the post database easily.
+    - Dates are displayed in a convenient format.
+    - Posts may have tags.
+    - Handling cycles in the thread structure.
+    - New command line interface: :mod:`hkshell`.
 
-Other major improvements:
+    Other major improvements:
 
-- Adding some unit tests.
-------------------------------------------------------------
+    - Adding some unit tests.
+    ------------------------------------------------------------
 
 These are exactly the same texts that you find in download/doc.rst.
