@@ -15,18 +15,18 @@ of course three. The reasons are that it is easier to write two angle
 brackets, and if I use three opening angle-brackets in the beginning
 of a line by accident, it will become meta text.)
 
-Let's have two meta attributes: <<open>> and <<close>>. If a post
-has an <<open>> attribute, it opens the thread, which means that there
-are questions in that thread that have to be answered or settled. If
-the original poster is satisfied with the answer, he/she posts a post
-that contains a <<close>> attribute, which means of course that the
-thread is closed. It would also be useful to reopen threads, and of
-course close them again. This could be done by posting <<open>> and
-<<close>> attributes again.
+Let's have two meta attributes: [open] and [close]. If a post has an
+[open] attribute, it opens the thread, which means that there are
+questions in that thread that have to be answered or settled. If the
+original poster is satisfied with the answer, he/she posts a post that
+contains a [close] attribute, which means of course that the thread is
+closed. It would also be useful to reopen threads, and of course close
+them again. This could be done by posting [open] and [close]
+attributes again.
 
 The algorithm that determines the state of a thread:
-- o is the number of posts in the thread with <<open>> attribute
-- c is the number of posts in the thread with <<close>> attribute
+- o is the number of posts in the thread with [open] attribute
+- c is the number of posts in the thread with [close] attribute
 1. if o==c==0, the thread is normal.
 2. if o>c, the thread is open.
 3. if o=c, the thread is closed.
