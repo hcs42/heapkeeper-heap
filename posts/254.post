@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: Wiki-like posts and quotes
 Tag: post syntax
+Tag: reviewed
 Message-Id: <4A12CED4.9060504@gmail.com>
 Date: Tue, 19 May 2009 17:23:00 +0200
 
@@ -11,6 +12,8 @@ Consider someone writing this:
     == Topic ==
 
     Something.
+
+[note Later we stopped using the "<<<wiki>>>" notation.]
 
 What do you think, how should the reply format the headers?
 
@@ -37,7 +40,7 @@ Option 2:
 Although option 2 is more work for the person who writes the answer,
 I think that is the correct solution. This way the answerer can
 reorganize the topics if xe wants. Just like I did in the mail about
-body parsing [1], where I wrote this:
+body parsing, where I wrote this:
 
     == Place of meta text ==
 
@@ -56,6 +59,3 @@ body parsing [1], where I wrote this:
 In one sentence: option 2 gives us more power.
 
 Csabi
-
-<<<todo>>>
-[1] citation needed
