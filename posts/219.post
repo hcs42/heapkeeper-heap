@@ -1,10 +1,10 @@
 Author: Csaba Hoch
 Subject: Section is_flat refactoring
+Tag: reviewed
 Message-Id: <4A0A6353.4090207@gmail.com>
 Parent: <b29f917d0905121210n47a4ee22n25e14aae475c9c38@mail.gmail.com>
 Date: Wed, 13 May 2009 08:06:11 +0200
 
-Nagy Attila wrote:
 > I have changed Section's is_flat option. Previously, a section could
 > be either threaded or flat for the values False and True,
 > respectively. Now there are three types: threaded (the default), flat
@@ -14,10 +14,7 @@ Nagy Attila wrote:
 Sounds cool!
 
 > Question is: where should I put it? I don't want to push it to master
-> right away, and somehow I don't really feel like creating a thread --
-
-<<<todo you mean "branch" I guess>>>
-
+> right away, and somehow I don't really feel like creating a branch --
 > this change doesn't seem significant enough for that.
 
 If you don't want to push it to the master, I think it is OK to create
@@ -25,6 +22,3 @@ a new branch. Although you can make an "experimental" branch, where
 you put all the small changes in which you are uncertain, and when I
 review them and we talk through them, we can make the modifications in
 the "experimental" branch and merge it into "master".
-
-<<<!delthis
-Note: I won't have time to review the commit until Sunday.>>>

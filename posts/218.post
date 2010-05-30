@@ -1,5 +1,6 @@
 Author: Attila Nagy
 Subject: Section is_flat refactoring
+Tag: reviewed
 Message-Id: <b29f917d0905121210n47a4ee22n25e14aae475c9c38@mail.gmail.com>
 Date: Tue, 12 May 2009 21:10:45 +0200
 
@@ -10,5 +11,5 @@ and a new type, minimal. A minimal section only displays the root of
 each thread that has at least one post in the section.
 
 Question is: where should I put it? I don't want to push it to master
-right away, and somehow I don't really feel like creating a thread --
+right away, and somehow I don't really feel like creating a branch --
 this change doesn't seem significant enough for that.
