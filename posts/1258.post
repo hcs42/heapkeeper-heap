@@ -1,0 +1,11 @@
+Author: Csaba Hoch
+Subject: "chunked" Transfer-Encoding
+Message-Id: <4BFCBD6B.4080205@gmail.com>
+Date: Wed, 26 May 2010 08:19:23 +0200
+
+hkweb.py contains the following lines:
+
+     webpy.header('Content-type','text/html')
+     webpy.header('Transfer-Encoding','chunked')
+
+Could you explain me what "chunked" means and why do we use it?

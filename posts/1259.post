@@ -1,0 +1,21 @@
+Author: Attila Nagy
+Subject: "chunked" Transfer-Encoding
+Message-Id: <AANLkTin2OQpUFRz4WwtooMvA8Lr_5wdbesdKsjk3GR_3@mail.gmail.com>
+Parent: <4BFCBD6B.4080205@gmail.com>
+Date: Wed, 26 May 2010 08:48:02 +0200
+
+>    webpy.header('Transfer-Encoding','chunked')
+>
+> Could you explain me what "chunked" means and why do we use it?
+
+
+We serve some really long pages. Chunked encoding allows such
+responses to be sent in several smaller parts. I've read it somewhere
+that this allows the browser to display the beginning of the content
+while downloading the rest of it is still in progress. This may or may
+not be true [1], but turning it on seemed a good idea nonetheless.
+Maybe we should test hkweb with this line commented out over a slower
+connection.
+
+[1] WP does not seem to confirm it:
+http://en.wikipedia.org/wiki/Chunked_transfer_encoding

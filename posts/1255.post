@@ -1,0 +1,17 @@
+Author: Attila Nagy
+Subject: IMAP downloading generates too long commands
+Tag: bug
+Message-Id: <AANLkTik6KG00_oCn1NErSXsh10at4l2hDfAYi1LVTf9N@mail.gmail.com>
+Parent: <j2ib29f917d1005050956m6145f8d3o3366c403ab686211@mail.gmail.com>
+Date: Mon, 24 May 2010 09:05:45 +0200
+
+A side note: we've used this trick to get the raw Message-ID of an email:
+
+    message_id = email.message_from_string(header)['Message-Id']
+
+This was added on 2008-10-22, and we've been using this ever since
+without problems. But I'm a bit concerned this may be a time bomb. We
+use a facility built to parse complete and well-formed emails to parse
+nothing more than a single header line. If we encounter odd warnings
+or errors during downloads with later Python versions, this may be a
+possible cause.

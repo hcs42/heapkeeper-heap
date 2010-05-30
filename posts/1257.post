@@ -1,0 +1,35 @@
+Author: Attila Nagy
+Subject: IMAP downloading generates too long commands
+Tag: bug
+Message-Id: <AANLkTikRCgeEFIrmmjTxBPVkYLL8CAoIbeIPMtv9wSsB@mail.gmail.com>
+Parent: <4BE3A303.2050406@gmail.com>
+Date: Mon, 24 May 2010 22:35:45 +0200
+
+>> The solution would be:
+>> - assemble the list as we do now,
+>> - in the first pass, remove individual IDs and replace with ranges
+>>  whenever possible (e.g. remove all numbers from 1 to 1234, and add
+>>  "1:1234"),
+>> - then cut this to chunks that can be sent safely, and send them as
+>>  individual commands,
+>> - and finally, unify the results.
+>
+> OK.
+
+I pushed a fix that works like this.
+
+A note to the commit message: a situation when fragmenting the command
+is needed might arise in case of a filesystem disaster. Suppose we
+have a million messages in IMAP. Now if we do a dl(), we first send
+FETCH a parameter of "ALL" -- not a long command. We find out that
+there are 3 new messages; then we FETCH the full headers and bodies by
+specifying them as "1000001:1000003". No need for fragmenting there.
+
+But let's say that due to the FS crash, half of the post files are
+lost randomly. Then a `dl()` first does a FETCH with "ALL", checks the
+Message-IDs and finds out that the list of messages we want to
+download looks like this: "1:3, 7:8, 10, 12:14 ..." and so on; this
+would be a very long command which will surely break the downloading
+process, as no server can be expected to accept this. So we need the
+command fragmenting feature to be safe no matter what happens to the
+mail directory.

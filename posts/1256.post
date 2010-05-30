@@ -1,0 +1,15 @@
+Author: Attila Nagy
+Subject: IMAP downloading generates too long commands
+Tag: bug
+Message-Id: <AANLkTinLyjtfmrn6gkZZ97LKPFGAPW-4eYZ43qXRxmXT@mail.gmail.com>
+Parent: <4BE3A303.2050406@gmail.com>
+Date: Mon, 24 May 2010 22:25:49 +0200
+
+>> Since we do this twice, it may be nice to implement it as a separate
+>> function.
+>
+> Why do we do this twice?
+
+We do this twice because we pass a list of message numbers to the
+server twice: once when we query the Message-Ids only, then later when
+we query the whole messages.
