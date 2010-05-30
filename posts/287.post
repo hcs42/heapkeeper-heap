@@ -1,11 +1,10 @@
 Author: Csaba Hoch
 Subject: Terminology: editor vs maintainer
+Tag: reviewed
 Message-Id: <4A130BFB.2010009@gmail.com>
 Parent: <20090519212701.7b91714e.nagy.attila.1984@gmail.com>
 Date: Tue, 19 May 2009 21:43:55 +0200
 
->> Do you think they mean the same, or do you use them in different context?
->
 > No, I use them interchangeably. But you've mentioned two castes of people
 > working on the heap; I guess to the likeness of editors and admins on
 > Wikipedia. Am I right?
@@ -21,9 +20,9 @@ said:
     been instantiated. This is pretty similar to how I fancy using a
     Git repo as a backend for the Web interface.
 
-I guess many maintainer would be allowed commit their changes into the
-local repository, but only the upper cast could push them e.g. to the
-repository on GitHub. I don't fancy this idea very much, the heap
+I guess many maintainer would be allowed to commit their changes into
+the local repository, but only the upper cast could push them e.g. to
+the repository on GitHub. I don't fancy this idea very much, the heap
 would lose its dynamics in my opinion. It also would not make too much
 sense, since if we have a git repository on Hkweb, we don't need
 GitHub at all.
