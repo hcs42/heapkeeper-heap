@@ -1,5 +1,6 @@
 Author: Csaba Hoch
-Subject: Separating Heapkeeper heap and UMS heap
+Subject:  Separating Heapkeeper Heap and UMS Heap
+Tag: reviewed
 Message-Id: <4A11A86F.9050601@gmail.com>
 Date: Mon, 18 May 2009 20:26:55 +0200
 
@@ -28,7 +29,3 @@ time. We want to be able to write commands like this:
 Posts can reference to each other, so probably it will not be this
 simple. (Or the implementation has to be smart in some way to make it
 simple.)
-
-Csabi
-
-<<<wiki>>>
