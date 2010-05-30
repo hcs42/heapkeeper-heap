@@ -1,6 +1,6 @@
 Author: Attila Nagy
 Subject: Feature/setting system
-Tag: prop
+Tag: feature
 Tag: reviewed
 Message-Id: <20090519093754.e1a0edd7.nagy.attila.1984@gmail.com>
 Parent: <4ddb9e5b0905180423x270e995fp86e4de9143201b46@mail.gmail.com>
@@ -30,10 +30,10 @@ Good Thing. But how about letting the user bring their own set of
 abbreviations? And providing a simple set of abbrevs for the most common
 settings in hkcustomlib?
 
-<<<note I've written a lengthy argument on why I think it's important to
+[note I've written a lengthy argument on why I think it's important to
 retain abbreviations for at least the most important options. I don't
 want to include it here, since there was little new in it compared to
-my earlier essay on the topic.>>>
+my earlier essay on the topic.]
 
 To cut a long story short: I'm all for hierarchical settings, but they are
 too long for anyone not too deeply involved with the project to remember,
