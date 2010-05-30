@@ -1,12 +1,14 @@
 Author: Csaba Hoch
 Subject: Connecting Hk with a mailing list management software
 Tag: idea
+Tag: reviewed
 Message-Id: <4A179AE7.5040208@gmail.com>
 Parent: <b29f917d0905222326t5a14a3f7pf4f5115a96ddbfd9@mail.gmail.com>
 Date: Sat, 23 May 2009 08:42:47 +0200
 
 >>> At least initially -- though heapids are of a very volatile nature -
 >>> this, of course, being the direct consequence of the editable archive.
+>>
 >> They should not be. That's the main reason why I'm hesitant about
 >> giving decent support for moving emails between heaps.
 >

@@ -1,14 +1,11 @@
 Author: Csaba Hoch
 Subject: Connecting Hk with a mailing list management software
 Tag: idea
+Tag: reviewed
 Message-Id: <4A12F323.8020903@gmail.com>
 Parent: <20090519191420.4e204eaa.nagy.attila.1984@gmail.com>
 Date: Tue, 19 May 2009 19:57:55 +0200
 
->> Another merit of the idea: the delivered emails could contain the
->> heapid of the post that is created from that email. This way
->> referencing to posts would be much more convenient.
->
 > At least initially -- though heapids are of a very volatile nature -
 > this, of course, being the direct consequence of the editable archive.
 

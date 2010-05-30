@@ -1,6 +1,7 @@
 Author: Attila Nagy
 Subject: Connecting Hk with a mailing list management software
 Tag: idea
+Tag: reviewed
 Message-Id: <20090519195206.a8013465.nagy.attila.1984@gmail.com>
 Parent: <4A12E9B9.1050408@gmail.com>
 Date: Tue, 19 May 2009 19:52:06 +0200
@@ -22,8 +23,8 @@ and I have next to absolutely no knowledge on such things. But I do
 remember hearing about such situations from you. :)
 
 > [1] I'm not sure if I have mentioned this piece of terminology before.
-> Email is an immutable object that has been sent by someone and is
-> stored in mailboxes; post is a mutable object usually created from an
-> email that can be modified and has a history like a wiki page.
+>     Email is an immutable object that has been sent by someone and is
+>     stored in mailboxes; post is a mutable object usually created from an
+>     email that can be modified and has a history like a wiki page.
 
 OK.
