@@ -1,15 +1,11 @@
 Author: Attila Nagy
 Subject: Editable and distributed mailing list archive
 Tag: idea
+Tag: reviewed
 Message-Id: <b29f917d0910010857i1b60fe3fy3d9e206993b6fb7b@mail.gmail.com>
 Parent: <4A194C1F.6090609@gmail.com>
 Date: Thu, 1 Oct 2009 17:57:03 +0200
 
-[!delthis You mention the idea of using Hk as an issue tracker. This
-has been implemented since.]
-
-[!todo Make contact between this thread and the thread where the issue
-tracker is announced].
-
 [open]
+
 The problem of sending emails from within Hk is still unresolved.

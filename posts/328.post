@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: Editable and distributed mailing list archive
 Tag: idea
+Tag: reviewed
 Message-Id: <4A194C1F.6090609@gmail.com>
 Date: Sun, 24 May 2009 15:31:11 +0200
 
@@ -20,20 +21,20 @@ Google results (all written between in quotes):
 
 I know "archive" is not the best word here. "Distributed mailing list"
 in itself has a different meaning, that's why I'm hesitant to use that
-here.
+here [1].
 
-  "Cypherpunks is a distributed mailing list. A subscriber can
-  subscribe to one node of the list and thereby participate on the
-  full list. Each node (called a Cypherpunks Distributed Remailer
-  [CDR], although they are not related to anonymous remailers)
-  exchanges messages with the other nodes in addition to sending
-  messages to its subscribers. A message posted to one node will be
-  received by the list subscribers on the other nodes, and
-  vice-versa." [1]
+    "Cypherpunks is a distributed mailing list. A subscriber can
+    subscribe to one node of the list and thereby participate on the
+    full list. Each node (called a Cypherpunks Distributed Remailer
+    [CDR], although they are not related to anonymous remailers)
+    exchanges messages with the other nodes in addition to sending
+    messages to its subscribers. A message posted to one node will be
+    received by the list subscribers on the other nodes, and
+    vice-versa."
 
 === Motivation ===
 
-There is a big hype nowadays around "distributed" management tools.
+There is a big hype nowadays around "distributed" management tools [2].
 Distributed version control is widely used, and I sent an email a few
 days ago about distributed issue tracking.
 
@@ -48,7 +49,7 @@ Hk.
 
 So I was thinking about using Hk as its own issue tracker. The obvious
 advantage would be that if someone files an issue, it means that xe
-sends an email to HH with a special meta note (e.g. <<<issue>>>).
+sends an email to HH with a special meta note (e.g. [issue]).
 
 But then I was editing our Todo file. I realized that a lot of times
 I want to add small issues and I don't want to write one-line emails
@@ -143,3 +144,4 @@ Another, even worse problem is that people won't be able to "reply" in
 their email client to posts created this way.
 
 [1] https://www.cypherpunks.to/list/
+[2] heap://hh/298
