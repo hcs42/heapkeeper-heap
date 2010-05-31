@@ -1,10 +1,9 @@
 Author: Csaba Hoch
 Subject: Source code, test suite, documentation
 Tag: discussion
+Tag: reviewed
 Message-Id: <4A203897.1060508@gmail.com>
 Date: Fri, 29 May 2009 21:33:43 +0200
-
-[deltext Before answering, please read my next email.]
 
 Probably the most important product of a software project is the
 source code. However, the test suite and documentation are almost as

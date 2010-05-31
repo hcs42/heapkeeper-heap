@@ -1,20 +1,10 @@
 Author: Csaba Hoch
 Subject: Hard to test pieces of the code
 Tag: discussion
+Tag: reviewed
 Message-Id: <4AC70430.2000201@gmail.com>
 Parent: <20091002134643.7fc712b2.nagy.attila.1984@gmail.com>
 Date: Sat, 03 Oct 2009 09:58:40 +0200
-
->> Do you agree that we should aim for a test suite and a documentation
->> that covers _all_ source code?
->
-> Yes, that would be optimal. Documentation can cover everything, but
-> some pieces of the code are not trivially tested. Take the downloading
-> code, for example. To test this, we could create an email account just
-> for this purpose. And of course if others wanted to test this part,
-> they would have to bring their own. (We can't give them the password of
-> the testing box -- and even the address would have to remain a secret,
-> since the box must contain exactly the messages we put in there.)
 
 First you say "yes", then you explain why "not" :)
 
