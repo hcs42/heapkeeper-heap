@@ -7,14 +7,6 @@ Message-Id: <4A228DB8.1070007@gmail.com>
 Parent: <20090531152245.f23c0b96.nagy.attila.1984@gmail.com>
 Date: Sun, 31 May 2009 16:01:28 +0200
 
->> I often use `[...]` in quotes:
->>
->>     > People I like:
->>     > [...]
->>     > - Asimov
->>
->>     Yes, I like Asimov, too.
->>
 >> Afterwards (with a slightly backward incompatible solution) we may
 >> introduce another behaviour, e.g. it could link to the original
 >> paragraph. (We could have a setting about turning off the new

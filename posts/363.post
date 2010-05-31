@@ -21,9 +21,9 @@ Date: Sun, 31 May 2009 15:22:45 +0200
 
 I also use this notation, so it's a good idea.
 
-> Afterwards (with a slightly backward incompatible
-> solution) we may introduce another behaviour, e.g. it could link to
-> the original paragraph. (We could have a setting about turning off the
-> new behaviour.)
+> Afterwards (with a slightly backward incompatible solution) we may
+> introduce another behaviour, e.g. it could link to the original
+> paragraph. (We could have a setting about turning off the new
+> behaviour.)
 
 OK, but how would you find the original paragraph?
