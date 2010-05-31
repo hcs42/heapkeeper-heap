@@ -2,6 +2,7 @@ Author: Csaba Hoch
 Subject: Preview
 Tag: post syntax
 Tag: prop
+Tag: reviewed
 Message-Id: <4A21138D.2000105@gmail.com>
 Parent: <20090530110640.9c61e4c9.nagy.attila.1984@gmail.com>
 Date: Sat, 30 May 2009 13:07:57 +0200
@@ -16,14 +17,14 @@ I will answer the first question, I guess that was what you meant.
 
 The following example is the answer:
 
-  $ gvim new_mail
-  <composing the email>
-  $ ./hkshell --configfile NONE \
-              --command "gen_preview('new_mail', 'result.html'); q()"
-  <opening the created web page in a browser>
-  <modifying the email if necessary; regenerating the preview; etc.>
+    $ gvim new_mail
+    <composing the email>
+    $ ./hkshell --configfile NONE \
+                --command "gen_preview('new_mail', 'result.html'); q()"
+    <opening the created web page in a browser>
+    <modifying the email if necessary; regenerating the preview; etc.>
 
-Notes:[-]
+Notes:
 - I haven't used a config file because I did not want the post
   database to be loaded.
 - Of course we would use helper scripts so that the user does not have
