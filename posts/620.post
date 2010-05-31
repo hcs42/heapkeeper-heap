@@ -1,6 +1,7 @@
 Author: Attila Nagy
 Subject: Automatic links in post pages; the importance of body parsing
 Tag: idea
+Tag: reviewed
 Message-Id: <20091002134912.57469b8c.nagy.attila.1984@gmail.com>
 Parent: <4A222A41.7010104@gmail.com>
 Date: Fri, 2 Oct 2009 13:49:12 +0200
@@ -9,7 +10,9 @@ Date: Fri, 2 Oct 2009 13:49:12 +0200
 > to use "bs" for "bracket segment". We could have a mechanism that
 > finds these words in posts and converts them to links that point to
 > their explanation.
->[...]
+>
+> [...]
+>
 > It could be implemented as a body parser plugin. (A "processor" in my
 > terminology.)
 
