@@ -1,5 +1,6 @@
 Author: Csaba Hoch
 Subject: Web page hosting
+Tag: reviewed
 Message-Id: <4A1704F7.7000705@gmail.com>
 Date: Fri, 22 May 2009 22:03:03 +0200
 
@@ -16,8 +17,6 @@ I had a look at Google Apps on how easy it is to store static web
 pages. I registered the "heapkeeper" Google App domain. Well, static
 HTML pages can be copied and shown, but I haven't manage to do it
 nicely: you have to write "/static/index.html" after the domain. [2]
-
-Csabi
 
 [1] http://www.ultraweb.hu/domainreg.jsp (Hungarian)
 [2] http://heapkeeper.appspot.com/static/index.html
