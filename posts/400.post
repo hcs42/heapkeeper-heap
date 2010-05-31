@@ -1,14 +1,15 @@
 Author: Attila Nagy
 Subject: Sphinx install
+Tag: reviewed
 Message-Id: <20090721172703.b81d6882.nagy.attila.1984@gmail.com>
 Parent: <4A5D949F.7060805@gmail.com>
 Date: Tue, 21 Jul 2009 17:27:03 +0200
 
-> The reason is that there are often bugs fixed and
-> introduced, so we cannot say either "we use the latest stable release"
-> or "we use the latest revision from the master branch". We will
-> periodically check the commits in the Sphinx repository and shift the
-> revision we use if we find that the latest revision works on our
-> documentation.
+> The reason is that there are often bugs fixed and introduced, so we
+> cannot say either "we use the latest stable release" or "we use the
+> latest revision from the master branch". We will periodically check
+> the commits in the Sphinx repository and shift the revision we use
+> if we find that the latest revision works on our documentation.
 
-This explanation should be copied to the Development page, too. I think it looks strange that we demand a specific revision of Sphinx.
+This explanation should be copied to the Development page, too. I
+think it looks strange that we demand a specific revision of Sphinx.
