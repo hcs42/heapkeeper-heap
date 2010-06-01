@@ -1,0 +1,24 @@
+Author: Attila Nagy
+Subject: Text width: 70 characters for normal lines
+Tag: prop
+Tag: hh-conventions
+Message-Id: <AANLkTikEqO1nI5C7yO2v2wn5Rmhic1sAV4PfZJaojBtd@mail.gmail.com>
+Parent: <AANLkTimwUz8UuZZKVlI_jMAYxhE0Kvpi1cBtYmqJNPpX@mail.gmail.com>
+Date: Sun, 30 May 2010 20:24:03 +0200
+
+OK. I use Gmail almost all the time, so this should not be so
+difficult for me to keep.
+
+On 5/30/10, Csaba Hoch <csaba.hoch@gmail.com> wrote:
+> I propose that our posts sent to Heapkeeper Heap should be formatted
+> so that "normal" text lines are broken at 70 characters. This does not
+> apply to source code copy-pasted for example from commits.
+>
+> Quoted text does not have to be reformatted, so first-level quote
+> lines will have a limit of 72 characters (because they begin with
+> "> "); second level quote lines will have a limit of 73 characters
+> (because they begin with ">> "); etc.
+>
+> 72 would be as good as 70, but I have been using 70 so far, and
+> GMail's web interface uses 70; that's why I propose 70.
+>
