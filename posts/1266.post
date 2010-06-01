@@ -1,0 +1,35 @@
+Author: Csaba Hoch
+Subject: Heapkeeper v0.6 released
+Tag: release
+Tag: v0.6
+Message-Id: <AANLkTinN9ie1FjsnHs0meVNKFuuoat1bQ3aztDZFqVl6@mail.gmail.com>
+Date: Tue, 1 Jun 2010 19:48:43 +0200
+
+I'm happy to announce that Heapkeeper v0.6 has been released.
+
+The main improvement of this release is introducing Heapkeeper's web
+interface.
+
+Major new features:
+
+- Heapkeeper has a web interface called hkweb that displays posts and
+  allows editing them. Editing can be done either on the post bodies
+  or on the raw post text that includes the header attributes. hkweb
+  supports folding (hiding and showing the body of individual posts).
+- The enew() hkshell command adds dates to the created post
+  automatically.
+- Raw blocks are recognized within post bodies and are shown in gray
+  in the HTML pages.
+- Links are parsed within meta text.
+- The title of the HTML thread page is now the subject of the root of
+  the thread.
+- Links to children are displayed in the HTML pages.
+- The generated HTML pages are valid XHTML pages.
+
+Major bugfixes:
+
+- Non-breakable space is converted to normal space in downloaded
+  emails.
+- Leading whitespace is preserved in post bodies.
+
+The new release can be downloaded from http://heapkeeper.org/download.html
