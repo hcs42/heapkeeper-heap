@@ -1,21 +1,26 @@
 Author: Attila Nagy
 Subject: Code formatting (2009-05-07 3b4f6d36 179f5cf18e)
 Tag: commit
+Tag: reviewed
 Message-Id: <b29f917d0910170232ga299f5ehb73a5858d3f552e2@mail.gmail.com>
 Parent: <4ddb9e5b0910021011s5a34ca6bga0d5885573487ba6@mail.gmail.com>
 Date: Sat, 17 Oct 2009 11:32:12 +0200
 
->> It loooks better... but I think the Python coding conventions dictate
->> that if a function's argument list is broken, the continuation lines
->> should be indented to where the first argument starts. Can we
->> disregard this rule?
->
-> I don't like that rule.
-
 Well, I didn't either on first look. Then I noticed how most of the
-time it produces good-looking and comprehensible code, but there are
-many exceptions, and they are strong ones, especially when the produced
-code would look like this:
+time it produces good-looking and comprehensible code. As an example,
+this:
+
+    actions = [ action for action in actions
+                if action.between(options.since, options.until) ]
+
+looks much better than this:
+
+    actions = [ action for action in actions
+        if action.between(options.since, options.until) ]
+
+
+But there are many exceptions, and they are strong ones, especially
+when the produced code would look like this:
 
     val = function(another_function_with_a_very_very_long_name(first,
                                                                second,
