@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: "python -i" + "sys.exit(0) in hkshell.py" raises an exception, prints stack trace, and does not quit
 Tag: python
+Tag: reviewed
 Message-Id: <4ddb9e5b0907171424k46fc11b5re1565ca71baecb5c@mail.gmail.com>
 Date: Fri, 17 Jul 2009 23:24:19 +0200
 
