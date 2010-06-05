@@ -1,11 +1,14 @@
 Author: Attila Nagy
 Subject: Python won't start in the "scripts" directory
+Tag: reviewed
 Message-Id: <b29f917d0907270233g14ec82b0v2d58b31609ea8bbb@mail.gmail.com>
 Parent: <4A6A8E79.6080804@gmail.com>
 Date: Mon, 27 Jul 2009 11:33:15 +0200
 
 > If I go into the "scripts" directory, python hangs. With -v:
+>
 > [...]
+>
 > It seems that Python needs a "stat" package, and it tries to use the
 > "stat" package of Attis. Would you rename "stat.py" to something else
 > in order to avoid this collision?
