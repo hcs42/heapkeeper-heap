@@ -1,10 +1,11 @@
 Author: Csaba Hoch
-Subject: Filename operations of Post (2009-05-07 179f5cf18e)
+Subject: Mysterious comment about underscore usage (2009-05-07 23b7e840cc)
 Tag: commit
+Tag: reviewed
 Message-Id: <4A53A9BF.5010803@gmail.com>
 Date: Tue, 07 Jul 2009 22:02:07 +0200
 
-class GeneratorOptions(object):
+    @@ -1760,10 +1775,13 @@ class GeneratorOptions(object):
 
          """Options that are used by the Generator.
 
