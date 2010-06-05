@@ -1,6 +1,7 @@
 Author: Attila Nagy
-Subject: 779f05bff7 (2009-06-28) Post.parse_header: more liberal on blank line
+Subject: Post.parse_header: more liberal on blank line (2009-06-28 779f05bff7)
 Tag: commit
+Tag: reviewed
 Message-Id: <20091006202332.ba91c48e.nagy.attila.1984@gmail.com>
 Parent: <4ddb9e5b0907161025q7abe513fn506f49b67da9f2b9@mail.gmail.com>
 Date: Tue, 6 Oct 2009 20:23:32 +0200

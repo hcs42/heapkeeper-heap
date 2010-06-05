@@ -1,6 +1,7 @@
 Author: Csaba Hoch
-Subject: 779f05bff7 (2009-06-28) Post.parse_header: more liberal on blank line
+Subject: Post.parse_header: more liberal on blank line (2009-06-28 779f05bff7)
 Tag: commit
+Tag: reviewed
 Message-Id: <4ddb9e5b0907161025q7abe513fn506f49b67da9f2b9@mail.gmail.com>
 Parent: <b29f917d0906290004h1acf6d55k24b9657336679872@mail.gmail.com>
 Date: Thu, 16 Jul 2009 19:25:38 +0200
