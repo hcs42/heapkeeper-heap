@@ -1,12 +1,13 @@
 Author: Attila Nagy
 Subject: "Csaba Hoch" as author (5b60b95a32 2009-08-01)
 Tag: commit
+Tag: reviewed
 Message-Id: <b29f917d0908020232mfea30b8ub0e9fac25d703686@mail.gmail.com>
 Parent: <4A7555EF.2030408@gmail.com>
 Date: Sun, 2 Aug 2009 11:32:18 +0200
 
-> Can you figure out what happened from this
-> information now? You may also try to use your bash_history :) But I'll
+> Can you figure out what happened from this information now? You may
+> also try to use your bash_history :) But I'll
 > think about it, too.
 
 The bash_history does not contain dates, but the repository alone

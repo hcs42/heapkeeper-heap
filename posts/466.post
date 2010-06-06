@@ -1,14 +1,13 @@
 Author: Csaba Hoch
 Subject: "Csaba Hoch" as author (5b60b95a32 2009-08-01)
 Tag: commit
+Tag: reviewed
 Message-Id: <4ddb9e5b0908020241h73bbdb35ld00212f6e9dd73f@mail.gmail.com>
 Parent: <b29f917d0908020232mfea30b8ub0e9fac25d703686@mail.gmail.com>
 Date: Sun, 2 Aug 2009 11:41:55 +0200
 
-> You can see how refs stood at
-> various points in the past using the @{}-style specifiers,
+> You can see how refs stood at various points in the past using the
+> @{}-style specifiers,
 
 I don't know about these specifiers. Could you write a few words, or
 give a link?
-
-> but I can't seem to find where this is properly documented.

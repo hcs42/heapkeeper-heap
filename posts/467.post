@@ -1,15 +1,10 @@
 Author: Attila Nagy
 Subject: "Csaba Hoch" as author (5b60b95a32 2009-08-01)
 Tag: commit
+Tag: reviewed
 Message-Id: <b29f917d0908020548i7fc2faaep2846f9da3512e9c6@mail.gmail.com>
 Parent: <4ddb9e5b0908020241h73bbdb35ld00212f6e9dd73f@mail.gmail.com>
 Date: Sun, 2 Aug 2009 14:48:04 +0200
-
->> You can see how refs stood at
->> various points in the past using the @{}-style specifiers,
->
-> I don't know about these specifiers. Could you write a few words, or
-> give a link?
 
 I think I figured out.
 
@@ -30,6 +25,7 @@ on the Hk repo, do:
 
     git show ":/first commit"
 
-Using this, I'll try to check out how and when the rebase (or whatever) occured.
+Using this, I'll try to check out how and when the rebase (or
+whatever) occured.
 
 Git is addictive. (But it helped me come off my gaming addiction...)
