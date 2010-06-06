@@ -1,22 +1,22 @@
 Author: Attila Nagy
 Subject: Ownership of history is a delicate matter
 Tag: git
+Tag: reviewed
 Message-Id: <b29f917d0908010108m2cbc6482y3e75210ef1d1ed69@mail.gmail.com>
 Parent: <4A73EF8A.5020900@gmail.com>
 Date: Sat, 1 Aug 2009 10:08:03 +0200
 
->> My question is: once you show all those people what we have, will they
->> see what it is good for?
+>> My question is: once you show all those people what we have, will
+>> they see what it is good for?
 >
 > That's a question for another thread I think.
 
 I'm never afraid to start a thread in another one... though it is
-laborous to separate them later, especially if the two have been
+laborious to separate them later, especially if the two have been
 running in parallel in several posts. But in another thread, then.
 
->> But do you think it
->> is a limitation of github or git? I mean, that we can't just push a
->> totally rewritten repository.
+>> But do you think it is a limitation of github or git? I mean, that
+>> we can't just push a totally rewritten repository.
 >
 > I think it's git.
 
@@ -32,7 +32,7 @@ Umm... both the 0.1 and 0.2 tags are on "single sections". Will that
 still cause a problem with motorways coming after the tag? I think
 I'll go and experiment with it.
 
->>> == Further changes ==
+== Further changes ==
 
 > Why isn't minimal merged into master?
 

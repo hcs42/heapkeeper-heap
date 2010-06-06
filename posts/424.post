@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: Ownership of history is a delicate matter
 Tag: git
+Tag: reviewed
 Message-Id: <4ddb9e5b0907310912v31559140pd8b7a4f5e986725@mail.gmail.com>
 Parent: <b29f917d0907300825ld1398ffmf52ec2b3d9fb769d@mail.gmail.com>
 Date: Fri, 31 Jul 2009 18:12:54 +0200
@@ -8,9 +9,9 @@ Date: Fri, 31 Jul 2009 18:12:54 +0200
 > My thoughts on this:
 > [...]
 > - if one has bad thoughts about altering the purity of the past (not
->  out of considering adverse effects, but simply out of knowing it to
->  be a Bad Thing to Do (TM)), interest in using or developing Heapkeeper
->  is to be reconsidered
+>   out of considering adverse effects, but simply out of knowing it
+>   to be a Bad Thing to Do (TM)), interest in using or developing
+>   Heapkeeper is to be reconsidered
 
 :)))))))))))
 
@@ -20,34 +21,35 @@ Date: Fri, 31 Jul 2009 18:12:54 +0200
 By "personality issues", do you mean having 4 committer on the impact graph
 instead of 2?
 
-> If we get caught in a craving for a tidy repository, we'll sooner or later be
-> inclined to clean up the "motorway sections" by rebasing them. Now we could
+> If we get caught in a craving for a tidy repository, we'll sooner or
+> later be inclined to clean up the "motorway sections" by rebasing
+> them. Now we could
 > do it.
 
-It is not worth rebasing the past. Our efforts are much better spent on the
-program and its documentation. The "personality issue" is a bit different,
-because it will always make us look funny and a bit lame if we don't sort that
-out. But I don't think that about the motorway. Watch out from now on, and
-everything will be fine.
+It is not worth rebasing the past. Our efforts are much better spent
+on the program and its documentation. The "personality issue" is a bit
+different, because it will always make us look funny and a bit lame if
+we don't sort that out. But I don't think that about the motorway.
+Watch out from now on, and everything will be fine.
 
-> Once we have "followers" (either in the quoted or the
-> literal sense), we can't.
+> Once we have "followers" (either in the quoted or the literal
+> sense), we can't.
 
 We don't know for sure we don't have them now ;)
 
-> By (hopefully) gaining attention with the launch of the homepage, we, so to
-> say, 'set up us the bomb', so we had better 'make our time' (um, sorry; what
-> I want to say is we should do all our history-changing now while we control
-> all copies of the source tree).
+> By (hopefully) gaining attention with the launch of the homepage,
+> we, so to say, 'set up us the bomb', so we had better 'make our
+> time' (um, sorry; what I want to say is we should do all our
+> history-changing now while we control all copies of the source
+> tree).
 
-I'm not sure that we control in 100% what is on github. But it we do, than
-changing the past before 0.3 is OK. I want to put the news about 0.3 on
-freshmeat, send it to the Sphinx mailing list, tell about this to my
-colleagues, etc.
+I'm not sure that we control in 100% what is on github. But it we do,
+than changing the past before 0.3 is OK. I want to put the news about
+0.3 on freshmeat, send it to the Sphinx mailing list, tell about this
+to my colleagues, etc.
 
->
-> `git rebase -i`, that is, interactive rebase, seems very powerful. Have you
-> ever used it?
+> `git rebase -i`, that is, interactive rebase, seems very powerful.
+> Have you ever used it?
 
 This is awesome! (For people who don't know what this is about: [1])
 

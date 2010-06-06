@@ -1,17 +1,18 @@
 Author: Csaba Hoch
 Subject: Ownership of history is a delicate matter
 Tag: git
+Tag: reviewed
 Message-Id: <4A73EF8A.5020900@gmail.com>
 Parent: <b29f917d0907312354v2bce15bcg3fd2814d5896aebc@mail.gmail.com>
 Date: Sat, 01 Aug 2009 09:32:26 +0200
 
-> My question is: once you show all those people what we have, will they
-> see what it is good for?
+> My question is: once you show all those people what we have, will
+> they see what it is good for?
 
 That's a question for another thread I think.
 
->> The conclusion is: it seems to me that we have no way of doing what we
->> want to do except for deleting and re-creating the heapkeeper
+>> The conclusion is: it seems to me that we have no way of doing what
+>> we want to do except for deleting and re-creating the heapkeeper
 >> repository.
 >
 > Yes, it seems so. Not that bad solution, though. But do you think it
@@ -21,10 +22,10 @@ That's a question for another thread I think.
 I think it's git.
 
 >> The tags are also lost, which made me think that we should not just
->> put them to the same place, because that would cause the descriptions
->> on the download page look as ugly as they are now [5]. We could place
->> new commits which would only change the README and whose commit
->> message would say something like this:
+>> put them to the same place, because that would cause the
+>> descriptions on the download page look as ugly as they are now [5].
+>> We could place new commits which would only change the README and
+>> whose commit message would say something like this:
 >>
 >>    Heapkeeper version 0.1
 >>
@@ -38,14 +39,14 @@ I think it's git.
 >>
 >> What do you say?
 >
-> OK. So, we'd hard-reset, edit README, commit, tag and rebase for both
-> 0.1 and 0.2, if I understand correctly.
+> OK. So, we'd hard-reset, edit README, commit, tag and rebase for
+> both 0.1 and 0.2, if I understand correctly.
 
 Yes, that is what I thought, but it does not seem to work because of
 the motorway.
 
->> == Creating and applying patches ==
->>
+== Creating and applying patches ==
+
 >> Then I wanted to solve my problem of having worked on files yesterday,
 >> which were not of course in your repository tidied up. I had 5 commits
 >> in my own repo that I wanted to introduce into the new repository. It
@@ -58,12 +59,12 @@ the motorway.
 
 Your guess is correct.
 
->> == Further changes ==
->>
+== Further changes ==
+
 >> - Adding tags in the way I described.
 >> - Do you want to do something with your 'bodyparsing' and 'minimal'
->>  branches? Or let's just leave them for now and you can use the
->>  patch-technique to introduce them at any time?
+>>   branches? Or let's just leave them for now and you can use the
+>>   patch-technique to introduce them at any time?
 >
 > Do you consider them mature enough for inclusion into the "public"
 > repo? I think minimal is mature, and also useful.

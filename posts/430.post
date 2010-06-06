@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: Ownership of history is a delicate matter
 Tag: git
+Tag: reviewed
 Message-Id: <4A73DDB4.1020207@gmail.com>
 Parent: <20090731195116.2388ce47.nagy.attila.1984@gmail.com>
 Date: Sat, 01 Aug 2009 08:16:20 +0200
@@ -9,18 +10,18 @@ Date: Sat, 01 Aug 2009 08:16:20 +0200
 
 Yes.
 
->> I'm not sure that we control in 100% what is on github. But it we do, than
->> changing the past before 0.3 is OK. I want to put the news about 0.3 on
->> freshmeat, send it to the Sphinx mailing list, tell about this to my
->> colleagues, etc.
+>> I'm not sure that we control in 100% what is on github. But it we
+>> do, than changing the past before 0.3 is OK. I want to put the news
+>> about 0.3 on freshmeat, send it to the Sphinx mailing list, tell
+>> about this to my colleagues, etc.
 >
 > Do you think we'll be ready for all that with 0.3?
 
 I don't want to do things like this after 0.3 is released. For me
 that's like going to public.
 
-> I remember some official github guide on history editing. I'll go and check
-> that one out.
+> I remember some official github guide on history editing. I'll go
+> and check that one out.
 
 Do that. I haven't found anything, except for this: [2]
 

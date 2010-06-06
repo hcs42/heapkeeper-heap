@@ -1,13 +1,10 @@
 Author: Attila Nagy
 Subject: Rewriting history affects our posts
 Tag: git
+Tag: reviewed
 Message-Id: <b29f917d0908012338k8490871p39ab4128b330bef6@mail.gmail.com>
 Parent: <4A74AFAD.4070009@gmail.com>
 Date: Sun, 2 Aug 2009 08:38:10 +0200
-
-> I have just realized something. If we rewrite the git history, all our
-> posts in which we discuss a commit should be rewritten, since all SHA
-> id-s would be changed.
 
 Yes, it can be a problem.
 

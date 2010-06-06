@@ -1,14 +1,16 @@
 Author: Csaba Hoch
 Subject: Ownership of history is a delicate matter
 Tag: git
+Tag: reviewed
 Message-Id: <4A73F915.5050403@gmail.com>
 Parent: <b29f917d0908010108m2cbc6482y3e75210ef1d1ed69@mail.gmail.com>
 Date: Sat, 01 Aug 2009 10:13:09 +0200
 
 >>> So, we'd hard-reset, edit README, commit, tag and rebase for both
 >>> 0.1 and 0.2, if I understand correctly.
->> Yes, that is what I thought, but it does not seem to work because of
->> the motorway.
+>>
+>> Yes, that is what I thought, but it does not seem to work because
+>> of the motorway.
 >
 > Umm... both the 0.1 and 0.2 tags are on "single sections". Will that
 > still cause a problem with motorways coming after the tag? I think

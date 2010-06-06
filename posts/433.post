@@ -1,14 +1,15 @@
 Author: Attila Nagy
 Subject: Ownership of history is a delicate matter
 Tag: git
+Tag: reviewed
 Message-Id: <b29f917d0907312354v2bce15bcg3fd2814d5896aebc@mail.gmail.com>
 Parent: <4A73DDB4.1020207@gmail.com>
 Date: Sat, 1 Aug 2009 08:54:48 +0200
 
->>> I'm not sure that we control in 100% what is on github. But it we do, than
->>> changing the past before 0.3 is OK. I want to put the news about 0.3 on
->>> freshmeat, send it to the Sphinx mailing list, tell about this to my
->>> colleagues, etc.
+>>> I'm not sure that we control in 100% what is on github. But it we
+>>> do, than changing the past before 0.3 is OK. I want to put the
+>>> news about 0.3 on freshmeat, send it to the Sphinx mailing list,
+>>> tell about this to my colleagues, etc.
 >>
 >> Do you think we'll be ready for all that with 0.3?
 >
@@ -26,24 +27,24 @@ Yes, it seems so. Not that bad solution, though. But do you think it
 is a limitation of github or git? I mean, that we can't just push a
 totally rewritten repository.
 
-> == Heapkeeper-tidy ==
->
+== Heapkeeper-tidy ==
+
 > I did exactly that with another sandbox. I pushed the repository you
-> sent into my second sandbox repo on github [4]. Pushing all commits of
-> the last 10 months was so fast that I thought something must be wrong.
-> But as it turns out, it worked. The impact graph contains only two
-> people, and everything else seems to work fine. The non-master
-> branches are lost, but they could have been pushed just as easily if
-> the tidied up repository contained them. We can also use patches to
-> introduce them, see in the next section.
+> sent into my second sandbox repo on github [4]. Pushing all commits
+> of the last 10 months was so fast that I thought something must be
+> wrong. But as it turns out, it worked. The impact graph contains
+> only two people, and everything else seems to work fine. The
+> non-master branches are lost, but they could have been pushed just
+> as easily if the tidied up repository contained them. We can also
+> use patches to introduce them, see in the next section.
 
 Git rules :)
 
 > The tags are also lost, which made me think that we should not just
-> put them to the same place, because that would cause the descriptions
-> on the download page look as ugly as they are now [5]. We could place
-> new commits which would only change the README and whose commit
-> message would say something like this:
+> put them to the same place, because that would cause the
+> descriptions on the download page look as ugly as they are now [5].
+> We could place new commits which would only change the README and
+> whose commit message would say something like this:
 >
 >    Heapkeeper version 0.1
 >
@@ -60,14 +61,14 @@ Git rules :)
 OK. So, we'd hard-reset, edit README, commit, tag and rebase for both
 0.1 and 0.2, if I understand correctly.
 
-> == Creating and applying patches ==
->
-> Then I wanted to solve my problem of having worked on files yesterday,
-> which were not of course in your repository tidied up. I had 5 commits
-> in my own repo that I wanted to introduce into the new repository. It
-> was surprisingly easy: I just had to create a bunch of patches in my
-> old repository and apply them in the new one. The patches even contain
-> log message and author information.
+== Creating and applying patches ==
+
+> Then I wanted to solve my problem of having worked on files
+> yesterday, which were not of course in your repository tidied up. I
+> had 5 commits in my own repo that I wanted to introduce into the new
+> repository. It was surprisingly easy: I just had to create a bunch
+> of patches in my old repository and apply them in the new one. The
+> patches even contain log message and author information.
 
 I guess then that these are not your average diff-patches, but
 something Git-specific.
@@ -88,11 +89,11 @@ example? :) )
 >
 > - Adding tags in the way I described.
 > - Do you want to do something with your 'bodyparsing' and 'minimal'
->  branches? Or let's just leave them for now and you can use the
->  patch-technique to introduce them at any time?
+>   branches? Or let's just leave them for now and you can use the
+>   patch-technique to introduce them at any time?
 
 Do you consider them mature enough for inclusion into the "public"
-repo? I think minimal is mature, and also useful. Bodyparsing is
-in early stages, and very probably it'll work quite differently, so if
+repo? I think minimal is mature, and also useful. Bodyparsing is in
+early stages, and very probably it'll work quite differently, so if
 you say so, I'll be happy to exclude it until we take on the task more
 seriously.
