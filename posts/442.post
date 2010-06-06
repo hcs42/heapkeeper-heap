@@ -1,5 +1,6 @@
 Author: Attila Nagy
 Subject: "Last updated" feature
+Tag: reviewed
 Tag: sphinx
 Message-Id: <b29f917d0908010509v3571e71ctfc3afc14064db4a9@mail.gmail.com>
 Parent: <4ddb9e5b0908010457l6bb9c321s688be2e01c5c407d@mail.gmail.com>
@@ -11,16 +12,8 @@ Date: Sat, 1 Aug 2009 14:09:33 +0200
 
 Umm... which one? :)
 
->> However, if we both slack off, it'll also show that very clearly.
->
-> True. But we won't really care about gaining developers and users
-
-> than.
-
-[!todo then]
-
-> (How would you feel is someone interested in hispciv shown up?
-> :) My feelings would certainly be ambivalent.)
+> (How would you feel is someone interested in hispciv shown
+> up? :) My feelings would certainly be ambivalent.)
 
 I love C, Lua and turn-based games, so I'd love to have an excuse to
 get back to it. Really.
