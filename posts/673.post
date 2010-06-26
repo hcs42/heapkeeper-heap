@@ -6,7 +6,4 @@ Message-Id: <b29f917d0910162330q3cb92893w6fdb600f4bd5373e@mail.gmail.com>
 Parent: <4A79428F.4010906@gmail.com>
 Date: Sat, 17 Oct 2009 08:30:17 +0200
 
-> It may be also wise to upload the "source" files of our images
-> (svg files probably).
-
 OK. I pushed a _logo branch, in which it is located in the doc/images directory.
