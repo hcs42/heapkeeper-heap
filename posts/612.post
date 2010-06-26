@@ -7,10 +7,6 @@ Message-Id: <4AC31445.5040604@gmail.com>
 Parent: <4AA4ABFD.2060201@gmail.com>
 Date: Wed, 30 Sep 2009 10:18:13 +0200
 
-> I have a problem with the EDITOR environment variable.
->
-> In the _e branch I have a commit, which is not the perfect solution.
->
 > == Before ==
 >
 > Before the commit, we just do this:
