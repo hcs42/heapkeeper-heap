@@ -1,11 +1,8 @@
 Author: Csaba Hoch
 Subject: Writing tests
+Tag: reviewed
 Message-Id: <4AAB79B5.1030508@gmail.com>
 Date: Sat, 12 Sep 2009 12:36:37 +0200
-
-[deltext I reviewed the "_count" branch and pushed my corrections. I
-will write about my thoughts and the reason for those corrections
-here.]
 
 == Advice ==
 
