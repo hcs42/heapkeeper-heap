@@ -1,13 +1,10 @@
 Author: Csaba Hoch
 Subject: Separate Heapkeeper repos
+Tag: reviewed
 Message-Id: <4ddb9e5b0908100623w6b3e251ctee6654158356f54c@mail.gmail.com>
 Parent: <b29f917d0908100034x29e0525cx878d959e044ff371@mail.gmail.com>
 Date: Mon, 10 Aug 2009 15:23:03 +0200
 
->> Maybe we should try to use separate Heapkeeper repos (forks) and use
->> pull requests to put them together. What do you think? If it does not
->> work out, we can still fall back to the current process.
->
 > What would be the advantages of this approach for a developer
 > community of such a limited size?
 

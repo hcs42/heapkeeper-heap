@@ -1,5 +1,6 @@
 Author: Attila Nagy
 Subject: Separate Heapkeeper repos
+Tag: reviewed
 Message-Id: <b29f917d0908111041v46d77214p9c9bddac7e19f670@mail.gmail.com>
 Parent: <4ddb9e5b0908110013w4f21b779nda72a8c724870d1a@mail.gmail.com>
 Date: Tue, 11 Aug 2009 19:41:20 +0200
@@ -8,6 +9,4 @@ Date: Tue, 11 Aug 2009 19:41:20 +0200
 > work it as I am the owner (stupid rule, eh?) So I think I will create
 > another account, just to play around with forking and pulling.
 
-OK, I did it. Here is mine:
-
-    http://github.com/attish/heapkeeper_
+OK, I did it. Here is mine: http://github.com/attish/heapkeeper_
