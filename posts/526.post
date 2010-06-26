@@ -1,10 +1,9 @@
 Author: Attila Nagy
 Subject: Workflow with separate repositories
+Tag: reviewed
 Message-Id: <b29f917d0908181224q165a836asfd8d03549cf70a73@mail.gmail.com>
 Parent: <4A8AFA6E.7030304@gmail.com>
 Date: Tue, 18 Aug 2009 21:24:30 +0200
-
-> http://osteele.com/archives/2008/05/commit-policies
 
 For this to work like this, you would have to see my local repo. I use
 attish/heapkeeper_ instead of a local repo, which makes our situation

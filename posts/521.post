@@ -1,13 +1,11 @@
 Author: Attila Nagy
 Subject: Workflow with separate repositories
+Tag: reviewed
 Message-Id: <b29f917d0908180440m3dd5ea73kc49574d0fa4d030c@mail.gmail.com>
 Date: Tue, 18 Aug 2009 13:40:39 +0200
 
-[!todo Add references to other threads on the separate repo topic, and
-break this thread.]
+== git branches ==
 
-> == git branches ==
->
 > What do you think, which branch should I pull your commit into, when
 > I think it's "perfect"? It seems that master should be used for this.
 > Do you agree?
@@ -40,3 +38,5 @@ turnaround time.
 > "slave", "hcs", or something else?
 
 Maybe "review". What do you think?
+
+[note Original parent: heap://hh/514]

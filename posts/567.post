@@ -1,5 +1,6 @@
 Author: Csaba Hoch
 Subject: Workflow with separate repositories
+Tag: reviewed
 Message-Id: <4ddb9e5b0909010929pc3bb7a6t6c5dbc990514750a@mail.gmail.com>
 Parent: <b29f917d0908311451n7b63ca64x4174571d2cc47197@mail.gmail.com>
 Date: Tue, 1 Sep 2009 18:29:30 +0200
@@ -19,9 +20,3 @@ it is OK even for "ordinary users" to see those branches.
 
 This is exactly the idea that I have in my mind. Maybe I didn't
 express is perfectly.
-
-> During a feature freeze, it would still be OK to implement new
-> features in private remote branches, but during this interval, they
-> wouldn't be integrated into the master. This means that those who
-> track and use the master branch could find bugs, fix them and these
-> fixes would be integrated into the master.
