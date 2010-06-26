@@ -1,5 +1,6 @@
 Author: Csaba Hoch
 Subject: heapid mismatch bug
+Tag: reviewed
 Message-Id: <4ddb9e5b0908101240n28c2415ey63b4433ef854309f@mail.gmail.com>
 Parent: <b29f917d0908091244m2da017ev4781414041c88e3b@mail.gmail.com>
 Date: Mon, 10 Aug 2009 21:40:53 +0200
@@ -30,7 +31,7 @@ But git does not lie:
      Date: Sun, 10 May 2009 19:16:18 +0200
 
      > Uppercase? Somehow deep in my heart I wished this to come out
-to lowercase...
+     to lowercase...
 
 The original subject was:
 
@@ -74,4 +75,4 @@ be fixed with its duplicate posts. I advise you to do the following:
 As far as I saw, you did not edit newly downloaded posts, which would make us
 much harder to merge our repos and fix the problems.
 
-[todo] [1] ref needed
+[1] heap://hh/382
