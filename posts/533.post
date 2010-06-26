@@ -1,13 +1,9 @@
 Author: Attila Nagy
 Subject: Workflow: should we change the others' new changes?
+Tag: reviewed
 Message-Id: <b29f917d0908200009i3c18d8d7pf1c7e8f50b54275f@mail.gmail.com>
 Parent: <4A8C4305.4080400@gmail.com>
 Date: Thu, 20 Aug 2009 09:09:06 +0200
-
-> Should I temper with your commits, and you will ask if you don't
-> understand the reason of a change, or should I write you all the time
-> in email if I think something should be done in a better way? Or is it
-> OK for me to do either of these things?
 
 I think if it's important (e.g. you warn me about bad style), write an
 e-mail, if not, I'll ask why you changed it.

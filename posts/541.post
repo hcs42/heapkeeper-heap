@@ -1,5 +1,6 @@
 Author: Csaba Hoch
 Subject: Workflow: should we change the others' new changes?
+Tag: reviewed
 Message-Id: <4ddb9e5b0908242258g36425740j41b71c1029c959c6@mail.gmail.com>
 Parent: <b29f917d0908241434m5548d1bej397e15b2c41ff966@mail.gmail.com>
 Date: Tue, 25 Aug 2009 07:58:39 +0200
@@ -11,7 +12,8 @@ Date: Tue, 25 Aug 2009 07:58:39 +0200
 
 I have been using this all the time for a few weeks for my own commits :)
 
-> Since the code itself doesn't change, you can do this without redoing the tests.
+> Since the code itself doesn't change, you can do this without
+> redoing the tests.
 
 In this very special case when I squish two commits next to each other
 into one, probably it is OK. (Not counting the problem that I have to
@@ -22,8 +24,10 @@ Even worse, sometimes there is no conflict, but some intermediate
 commits does not work properly. So when I rebased my own commits
 (interactively), I executed the tests for all commits:
 
-$ git checkout <head of my working branch>
-$ for i in `seq 1 10`; do ./test.py; rm *.pyc; git checkout HEAD^; done
+    $ git checkout <head of my working branch>
+    $ for i in `seq 1 10`; do \
+          ./test.py; rm *.pyc; git checkout HEAD^; \
+      done
 
 (You have to do either "rm *.pyc" or "sleep 1" after the test, because
 otherwise the pyc may not be recompiled, since the timestamp (using
