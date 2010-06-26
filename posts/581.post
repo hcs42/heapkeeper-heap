@@ -1,13 +1,12 @@
 Author: Csaba Hoch
 Subject: SHA1 as post id
 Tag: discussion
+Tag: reviewed
 Message-Id: <4AA4AC00.8020402@gmail.com>
 Parent: <b29f917d0909021258v661eaefaq55c858d927a9ca7e@mail.gmail.com>
 Date: Mon, 07 Sep 2009 08:45:20 +0200
 
-> But all we need is uniqueness. How about UUIDs as post ids? [1]
->
-> [1] http://en.wikipedia.org/wiki/UUID#Python
+> But all we need is uniqueness. How about UUIDs as post ids?
 
 I like it, but I have to think about all the implications.
 
