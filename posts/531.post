@@ -1,12 +1,11 @@
 Author: Attila Nagy
 Subject: "email" vs "mail"
 Tag: commit
+Tag: reviewed
 Message-Id: <b29f917d0908191300v7fd7685ft3e188b82dab580df@mail.gmail.com>
 Parent: <4A8C3E0A.10904@gmail.com>
 Date: Wed, 19 Aug 2009 22:00:33 +0200
 
-On Wed, Aug 19, 2009 at 8:01 PM, Csaba Hoch<csaba.hoch@gmail.com> wrote:
->
 >>> Also, I would call the `mail` variable `email`.
 >>
 >> No good, as it would hide the `email` module! So, instead I corrected

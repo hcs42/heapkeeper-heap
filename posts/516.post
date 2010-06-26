@@ -1,5 +1,6 @@
 Author: Attila Nagy
 Subject: Optimized IMAP downloading
+Tag: reviewed
 Message-Id: <b29f917d0908172309x1b472a87r70c906fc63e5a049@mail.gmail.com>
 Parent: <4A8A3F66.1040809@gmail.com>
 Date: Tue, 18 Aug 2009 08:09:39 +0200
@@ -14,15 +15,17 @@ Date: Tue, 18 Aug 2009 08:09:39 +0200
 
 I wrote about it, indeed:
 
-> I cloned our git repository into a fresh directory, added our config file, but nothing
-> else, and started hkshell. No problems so far. Then, I did a 'dl()'. OK, some
-> messages were downloaded.
->[...]
-> The cautious reader might have wondered why the cautious wording in the above:
-> "some messages were downloaded". This is the bigger problem. Right now, we
-> occasionally log into the heap's GMail account, and archive old messages so
-> that they are no longer checked for when downloading (as only Inbox is
-> checked).
+> I cloned our git repository into a fresh directory, added our config
+> file, but nothing else, and started hkshell. No problems so far.
+> Then, I did a 'dl()'. OK, some messages were downloaded.
+>
+> [...]
+>
+> The cautious reader might have wondered why the cautious wording in
+> the above: "some messages were downloaded". This is the bigger
+> problem. Right now, we occasionally log into the heap's GMail
+> account, and archive old messages so that they are no longer checked
+> for when downloading (as only Inbox is checked).
 
 But a hard limit? Why? I always thought it was done just to save time.
 

@@ -1,13 +1,16 @@
 Author: Csaba Hoch
 Subject: "email" vs "mail"
 Tag: commit
+Tag: reviewed
 Message-Id: <4A8C6632.30709@gmail.com>
 Parent: <b29f917d0908191300v7fd7685ft3e188b82dab580df@mail.gmail.com>
 Date: Wed, 19 Aug 2009 22:53:06 +0200
 
 >>>> Also, I would call the `mail` variable `email`.
+>>>
 >>> No good, as it would hide the `email` module! So, instead I corrected
 >>> all "email"s to "mail", so that the naming will be consistent.
+>>
 >> I think the word "mail" does not have a plural form. (At least in the
 >> sense that "these are two mails"). You could call it "em" or "email_"
 >> in the list comprehension, and you could use the emails_* variables in

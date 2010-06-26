@@ -1,11 +1,12 @@
 Author: Attila Nagy
 Subject: "hklib: optimized IMAP downloading" (2009-08-17 e23aa8b83d)
 Tag: commit
+Tag: reviewed
 Message-Id: <b29f917d0908180352w10a20f9by576475d2019cf3cc@mail.gmail.com>
 Parent: <4A8A3F19.3040300@gmail.com>
 Date: Tue, 18 Aug 2009 12:52:40 +0200
 
-> == If `emails` is "", don't do anything ==
+== If `emails` is "", don't do anything ==
 
 > Please, fix the bug. (Or prove that the code is not buggy :) ) I leave
 > it to you to decide whether you examine the result of `strip` or you
@@ -14,7 +15,7 @@ Date: Tue, 18 Aug 2009 12:52:40 +0200
 It is buggy, and I fixed the bug. I simulated the empty mailbox with
 replacing "(ALL)" with "(FROM nobody)", and it works OK now.
 
-> == Other ==
+== Other ==
 
 > Could you put spaces around brackets that mark list generators?
 
@@ -49,12 +50,12 @@ Corrected.
 Yes, I was looking for this (and I found filter() instead, which
 distracted me). Thanks!
 
->> +            post = self._postdb.post_by_messid(messid)
->> +            if post == None:
->> +                download_list.append(index)
->> +#            else:
->> +#                log('Post #%s (#%s in INBOX) found.' %
->> +#                    (post.heapid(), int(index) + lower_value))
+>     +       post = self._postdb.post_by_messid(messid)
+>     +       if post == None:
+>     +           download_list.append(index)
+>     +   #    else:
+>     +   #        log('Post #%s (#%s in INBOX) found.' %
+>     +   #            (post.heapid(), int(index) + lower_value))
 >
 > You can delete the `else` branch.
 
@@ -84,8 +85,8 @@ At least we can be sure that zero is plural (which is kind of
 nonsense). Plurality of fractions is even more insane. (Just think
 about it: 0.999... is singular ;))
 
-> == parse_email ==
->
+== parse_email ==
+
 > What do you say to creating a static Post.from_email method, which
 > would contain much of the code of EmailDownloader.parse_email?
 
@@ -101,8 +102,8 @@ responsibilites.
 > current commit, I will pull from you, and later you may do this
 > refactoring.
 
-> == return value of dl() ==
->
+== return value of dl() ==
+
 > What do you say to having dl() return the set of downloaded posts?
 > It would be nice for example from the tutorial reader's point of view
 > to see what are the messages downloaded.

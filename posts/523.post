@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: "hklib: optimized IMAP downloading" (2009-08-17 e23aa8b83d)
 Tag: commit
+Tag: reviewed
 Message-Id: <4ddb9e5b0908180842u381cb1as219dd6fcc99b6048@mail.gmail.com>
 Parent: <b29f917d0908180745h68114414w51194aa3e8502b40@mail.gmail.com>
 Date: Tue, 18 Aug 2009 17:42:55 +0200
