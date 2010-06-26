@@ -1,14 +1,15 @@
 Author: Csaba Hoch
 Subject: Reviewed branches
 Tag: repo
+Tag: reviewed
 Message-Id: <4AA4ABFA.9090801@gmail.com>
 Parent: <b29f917d0909021719y6ec820b5w9084db622db88392@mail.gmail.com>
 Date: Mon, 07 Sep 2009 08:45:14 +0200
 
-> == Current branches of development ==
->
-> === _e ===
->
+== Current branches of development ==
+
+=== _e ===
+
 > I've accepted your commits, but I think these two commits should be
 > joined, so I joined them in my _e. (I feel they fall into the same
 > category as the "corrections" commits.)
@@ -18,12 +19,13 @@ is kinda bugfix, that's true; but it does not fix a problem in the
 first commit. It fixes a totally different problem. For me, that would
 be the criterion to join them.
 
-The second commit fixes problems when there are spaces _in the EDITOR_
+The second commit fixes problems when there are spaces *in the EDITOR*
 variable which are not argument separators. For example if EDITOR was
 set in the following way:
 
-  $ export EDITOR="gvim -f -c 'set ft=mail'"
-                                  ^
+    $ export EDITOR="gvim -f -c 'set ft=mail'"
+                                    ^
+
 Then this space meant a problem for Hk before the commit. I will write
 about this commit in a separate thread.
 
@@ -31,8 +33,8 @@ So the second commit has nothing to do with having multiple files
 edited with $EDITOR, which is used by e(). That worked previously, as
 well.
 
-> == Summary ==
->
+== Summary ==
+
 > My repository is now filled with many branches. But since one of Git's
 > strongest points is the very cheap creation of branches, and branches
 > can be freely created and deleted on the remote (i.e. GitHub), I think
