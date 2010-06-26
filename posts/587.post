@@ -1,19 +1,10 @@
 Author: Csaba Hoch
 Subject: Workflow: what to do with old branches
+Tag: reviewed
 Tag: workflow
 Message-Id: <4ddb9e5b0909110237u66ede9dau6fb42ca0fe0d6bb3@mail.gmail.com>
 Parent: <b29f917d0909070511x3aeff569gcc88f5f3b1ac42d3@mail.gmail.com>
 Date: Fri, 11 Sep 2009 11:37:32 +0200
-
-> What do you think we should do with side branches that are produced in
-> quantity with our new workflow? E.g. by the time the IMAP code got
-> integrated into your master, a "fastdownload" and a "_fastdownload"
-> branch have been created. "_review" is also useless now. Shall we
-> remove these or leave them where they are?
-
-[note For some reason, I remember that I answered this question, or
-something very similar. Maybe it is at home is my Draft folder? Hm.
-But I'll answer this now anyway.]
 
 We should delete those branches instantly. It is difficult to
 comprehend the contents of the repository when there at many branches.
