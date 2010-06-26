@@ -1,5 +1,6 @@
 Author: Attila Nagy
 Subject: Workflow with separate repositories: example
+Tag: reviewed
 Message-Id: <b29f917d0908311514q5c580634g433af83dc3c2b751@mail.gmail.com>
 Date: Tue, 1 Sep 2009 00:14:11 +0200
 
@@ -7,7 +8,7 @@ I'll use your "_e" branch as an example to see if I have understood
 the workflow correctly. It'll be a bit detailed, but I hope it can be
 understood easily.
 
-1. You've pushed this to "hcs42/heapkeeper_" [1], and mailed me a
+1. You've pushed this to "hcs42/heapkeeper", and mailed me a
 request to check this branch.
 
 2. Since I have added this repo as the remote called "hcs" to my local
@@ -37,6 +38,3 @@ local and push.
 
 9. When you fetch, you see that I have agreed your move of integrating
 "_e" into master.
-
-[1] The underscore will be removed if this workflow goes stable.
-[!todo Remove this and the underscores once this has happened.]
