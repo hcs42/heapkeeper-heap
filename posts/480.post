@@ -1,26 +1,10 @@
 Author: Csaba Hoch
 Subject: CRLF issues
 Tag: hk0.3
+Tag: reviewed
 Tag: windows
 Message-Id: <4A79428B.7040508@gmail.com>
 Parent: <4ddb9e5b0908021155p25e4cecfrccbc1928f22b0a06@mail.gmail.com>
 Date: Wed, 05 Aug 2009 10:27:55 +0200
-
-> I'm not even 100% sure what is the right solution.
-> a) If we use LF all the time, it won't work for Windows users, who
-> will put CRLF-s when editing the post files anyway.
-> b) If we use CRLF all the time, that will be hard to handle on Unix.
-> c) We haven't even mentioned OS X which uses only CR.
-> d) If we use the native EOL on all systems, the syncronization of the
-> posts will be messy. Although version control systems are used to this
-> situation, and can handle it; using native EOLs is even their
-> preferred way of doing things. The installer of the non-cygwin Windows
-> version of git [1] asks which EOL behaviour to use; using CRLF is the
-> default.
->
-> So I guess we should go with (d). Actually, that is also the easiest
-> for us to handle; we just have to write a wrapper around os.write. Or
-> we may even get away without it -- it is very probable that someone
-> else already wrote it for us.
 
 I chose (d).
