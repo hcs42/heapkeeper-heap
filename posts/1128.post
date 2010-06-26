@@ -1,12 +1,13 @@
 Author: Attila Nagy
 Subject: Managing several heaps in Heapkeeper
 Tag: prop
+Tag: reviewed
 Message-Id: <20100210165514.3871cfe7.nagy.attila.1984@gmail.com>
 Parent: <4A98290A.2080002@gmail.com>
 Date: Wed, 10 Feb 2010 16:55:14 +0100
 
->>> == Example: moving a post ==
->>>
+== Example: moving a post ==
+
 >>> This way moving the post will be easy:
 >>
 >> Moving a single post will be easy, but if you move just one, its
@@ -56,4 +57,4 @@ information. This is just one problem, but I think many such
 subtleties may be out there if threads contain posts from multiple
 heaps.
 
-[1] heap://3737
+[1] heap://ums/3737

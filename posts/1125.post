@@ -1,11 +1,9 @@
 Author: Attila Nagy
 Subject: Managing several heaps in Heapkeeper
 Tag: prop
+Tag: reviewed
 Message-Id: <20100210160938.86028c8b.nagy.attila.1984@gmail.com>
 Parent: <4AEDDF04.60608@gmail.com>
 Date: Wed, 10 Feb 2010 16:09:38 +0100
-
-> Also, hkshell and hkcustomlib has to be modified to use the new
-> Generator.
 
 This has also been done.

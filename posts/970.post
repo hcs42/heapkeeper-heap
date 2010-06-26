@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: Managing several heaps in Heapkeeper
 Tag: prop
+Tag: reviewed
 Message-Id: <4B114642.90201@gmail.com>
 Parent: <b29f917d0908281251g10bdab8dv2ae8c46fe30ed6fe@mail.gmail.com>
 Date: Sat, 28 Nov 2009 16:48:18 +0100
@@ -9,21 +10,24 @@ Date: Sat, 28 Nov 2009 16:48:18 +0100
 
 >>> An example: for the post created from "<postdir>/ums/1234.post", the
 >>> "post name" could be "ums/1234".
+>>
 >> Well, it would rather be a tuple: ("ums", "1234"). It's easier to
 >> handle tuples than manipulate strings.
 >
 > OK.
 >
 >>> The part before the "/" would be called "heapid",
+>>>
 >> I would call it "heap name". Do you prefer "heapid"?
 >
-> I prefer "id" before the other one would have to be "postid" anyway,
+> I prefer "id" because the other one would have to be "postid" anyway,
 > in order to avoid conflict with "post name". Of course, "heapid" is
 > already used, but in another meaning, which could be a problem. How
 > about using "heap_id" to denote this new meaning, ie. the first
 > element of the tuple that is the "post name"?
 >
 >>> the part after it would be "postid".
+>>
 >> Is it "post id" or "postid"?
 >
 > I think either should be acceptable in text. In code, we should of

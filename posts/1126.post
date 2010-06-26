@@ -1,19 +1,10 @@
 Author: Attila Nagy
 Subject: Managing several heaps in Heapkeeper
 Tag: prop
+Tag: reviewed
 Message-Id: <20100210161224.c729645f.nagy.attila.1984@gmail.com>
 Parent: <4A9A2CFC.1030700@gmail.com>
 Date: Wed, 10 Feb 2010 16:12:24 +0100
-
->>>> The part before the "/" would be called "heapid",
->>> I would call it "heap name". Do you prefer "heapid"?
->>
->> I prefer "id" before
->
-> [todo]
-> "because"?
-
-Umm... probably :)
 
 >> Of course, "heapid" is already used, but in another meaning, which
 >> could be a problem. How about using "heap_id" to denote this new
