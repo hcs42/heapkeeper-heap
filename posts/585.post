@@ -1,6 +1,7 @@
 Author: Attila Nagy
-Subject: "hkshell: enew accepts prefix" (2009-09-06 90b4c7d6)
+Subject: "hkshell: enew accepts prefix" (2009-09-06 90b4c7d6b0)
 Tag: commit
+Tag: reviewed
 Message-Id: <b29f917d0909071241x4aaf503bl245e99a75d1ee3ed@mail.gmail.com>
 Parent: <4ddb9e5b0909071109h129cda9eobcbcd48f5e50c823@mail.gmail.com>
 Date: Mon, 7 Sep 2009 21:41:43 +0200
@@ -22,8 +23,7 @@ Good idea!
 >
 >    PostDB.next_heapid,hkshell.enew: accepting prefix
 >
-> (We can spare the space before the colon, too.)
+> (We can spare the space after the comma, too.)
 
-You mean the one after the comma. Probably, though I'd only do that as
-a last resort to cut down 51 chars to 50. My ties to typography are
-strong :)
+Probably, though I'd only do that as a last resort to cut down 51
+chars to 50. My ties to typography are strong :)

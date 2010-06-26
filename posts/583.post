@@ -1,6 +1,7 @@
 Author: Attila Nagy
-Subject: "hkshell: enew accepts prefix" (2009-09-06 90b4c7d6)
+Subject: "hkshell: enew accepts prefix" (2009-09-06 90b4c7d6b0)
 Tag: commit
+Tag: reviewed
 Message-Id: <b29f917d0909070601g584807acy7a9f6a0ae748cff6@mail.gmail.com>
 Date: Mon, 7 Sep 2009 15:01:02 +0200
 
@@ -13,7 +14,7 @@ You made this commit on your "_e" branch:
        hkshell: enew accepts prefix
 
        If you want to create a new post with heapid myname_<number>,
-just use this:
+       just use this:
 
            >>> enew('myname_')
 

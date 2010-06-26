@@ -1,6 +1,7 @@
 Author: Csaba Hoch
-Subject: "hkshell: enew accepts prefix" (2009-09-06 90b4c7d6)
+Subject: "hkshell: enew accepts prefix" (2009-09-06 90b4c7d6b0)
 Tag: commit
+Tag: reviewed
 Message-Id: <4ddb9e5b0909071109h129cda9eobcbcd48f5e50c823@mail.gmail.com>
 Parent: <b29f917d0909070601g584807acy7a9f6a0ae748cff6@mail.gmail.com>
 Date: Mon, 7 Sep 2009 20:09:37 +0200
@@ -34,4 +35,4 @@ So maybe the best title is the following:
 
     PostDB.next_heapid,hkshell.enew: accepting prefix
 
-(We can spare the space before the colon, too.)
+(We can spare the space after the comma, too.)
