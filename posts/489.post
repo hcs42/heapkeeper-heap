@@ -1,14 +1,13 @@
 Author: Attila Nagy
 Subject: Tidy repository
+Tag: reviewed
 Message-Id: <b29f917d0908100031u26b55501xb123346793f02b69@mail.gmail.com>
 Parent: <4ddb9e5b0908091315p32a21ae0k3612a43ae852922e@mail.gmail.com>
 Date: Mon, 10 Aug 2009 09:31:25 +0200
 
-> == Check ==
->
-> I uploaded the tidy repo to a sandbox:
->
->    http://github.com/hcs42/sandbox
+== Check ==
+
+> I uploaded the tidy repo to a sandbox: http://github.com/hcs42/sandbox
 >
 > Do you think everything is OK?
 
