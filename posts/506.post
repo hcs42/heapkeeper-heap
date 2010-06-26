@@ -1,10 +1,9 @@
 Author: Attila Nagy
 Subject: Posts without message-id, duplicate message-ids
+Tag: reviewed
 Message-Id: <b29f917d0908110922l47fb0c30v24f0849a0e699aa0@mail.gmail.com>
 Parent: <4ddb9e5b0908102335v7f4c3600xdfd2f33d60f912f4@mail.gmail.com>
 Date: Tue, 11 Aug 2009 18:22:48 +0200
-
-> I don't understand what you mean by "sanitation".
 
 I mean failing or warning on incorrect input. In this case, the
 program should warn if there are duplicate Message-Ids.

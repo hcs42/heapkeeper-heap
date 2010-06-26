@@ -1,5 +1,6 @@
 Author: Attila Nagy
 Subject: Posts without message-id, duplicate message-ids
+Tag: reviewed
 Message-Id: <b29f917d0908100209p62d0a69eq78940751c6e6039@mail.gmail.com>
 Date: Mon, 10 Aug 2009 11:09:43 +0200
 
@@ -11,3 +12,5 @@ I understand 'may', but what does 'supposed to be unique' mean? When
 is it a problem when two messages have the same Message-Id?
 
 > [1] http://heapkeeper.org/hklib.html#hklib.Post
+
+[Original parent: heap://hh/493]
