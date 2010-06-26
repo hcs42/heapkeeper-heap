@@ -1,12 +1,14 @@
 Author: Csaba Hoch
 Subject: Splitting threads with multiple topics per post
 Tag: idea
+Tag: reviewed
 Message-Id: <4A9D6D3F.2080206@gmail.com>
 Parent: <b29f917d0908300853o7d771e16yba3e3c14abb9ad1b@mail.gmail.com>
 Date: Tue, 01 Sep 2009 20:51:43 +0200
 
 >>> What we need to have this working:
 >>> - mechanism to track the subthread specified
+>>
 >> Do you mean expanding (105,107) to [105,106,107]?
 >
 > Yes.
