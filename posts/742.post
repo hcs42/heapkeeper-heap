@@ -1,5 +1,6 @@
 Author: Attila Nagy
 Subject: Tidying up my hkrc
+Tag: reviewed
 Message-Id: <b29f917d0910212341y31d7baawb4269c7b3e26b6c0@mail.gmail.com>
 Date: Thu, 22 Oct 2009 08:41:41 +0200
 
@@ -51,13 +52,13 @@ In `index0()`, where you collect posts based on tags, you wrote this:
 
 which uses:
 
-def has_tag(tags):
-    def has_tag_fun(post):
-        for tag in tags:
-            if post.has_tag(tag):
-                return True
-        return False
-    return has_tag_fun
+    def has_tag(tags):
+        def has_tag_fun(post):
+            for tag in tags:
+                if post.has_tag(tag):
+                    return True
+            return False
+        return has_tag_fun
 
 In my hkrc, this reads:
 

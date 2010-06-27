@@ -1,5 +1,6 @@
 Author: Csaba Hoch
 Subject: Tidying up my hkrc
+Tag: reviewed
 Message-Id: <4AE00978.1070009@gmail.com>
 Parent: <b29f917d0910212341y31d7baawb4269c7b3e26b6c0@mail.gmail.com>
 Date: Thu, 22 Oct 2009 09:27:52 +0200
@@ -19,8 +20,8 @@ For the same thing hkcustomlib.edit_files uses the `old_content`
 variable. If a file did not change (its old content is the same as its
 new content), it is unnecessary to call its `touch` method.
 
-> == Generating indices ==
->
+== Generating indices ==
+
 > It seems like you generate the indices twice (three times, actually,
 > but the third is for the generator). You have this:
 >
@@ -67,13 +68,13 @@ Thanks.
 >
 > which uses:
 >
-> def has_tag(tags):
->     def has_tag_fun(post):
->         for tag in tags:
->             if post.has_tag(tag):
->                 return True
->         return False
->     return has_tag_fun
+>     def has_tag(tags):
+>         def has_tag_fun(post):
+>             for tag in tags:
+>                 if post.has_tag(tag):
+>                     return True
+>             return False
+>         return has_tag_fun
 >
 > In my hkrc, this reads:
 >
@@ -111,8 +112,8 @@ Note: Later I want to make self._header['Tag'] a set instead of a list
 for efficiency reasons. But that can wait. I'll file an issue about
 it.
 
-> == Dead code ==
->
+== Dead code ==
+
 > Your `sections1()` seems to be dead code. (Also, why 1204?)
 
 I think I made `sections1` for a very specific purpose; probably
