@@ -1,13 +1,12 @@
 Author: Csaba Hoch
 Subject: Sphinx install: status?
+Tag: reviewed
 Message-Id: <4B9C0DED.9000903@gmail.com>
 Parent: <4B767F34.7090707@gmail.com>
 Date: Sat, 13 Mar 2010 23:13:01 +0100
 
-> Modify the developer documentation that it is OK to use sphinx 0.6.3.
+[close]
 
 Since we started this thread, sphinx 0.6.5 has been released. So I
 modified the documentation that sphinx 0.6.5 is to be used and
 described how to install it.
-
-[close]
