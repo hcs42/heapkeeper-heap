@@ -9,5 +9,6 @@ Date: Thu, 29 Oct 2009 16:30:53 +0100
 We have another source of time information: the filesystem. We could
 have this rule:
 - If both of them have a timestamp and these are not equal, the post
- with the later timestamp is greater.
-- Otherwise the greater post is the one whose filesystem creation date is later.
+  with the later timestamp is greater.
+- Otherwise the greater post is the one whose filesystem creation date
+  is later.

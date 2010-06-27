@@ -11,7 +11,7 @@ Date: Wed, 21 Oct 2009 19:11:34 +0200
 The following method should be used to decide whether post1 or post2
 is greater:
 - If both of them have a timestamp and these are not equal, the post
- with the later timestamp is greater.
+  with the later timestamp is greater.
 - Otherwise the post with the greater heapid is the greater.
 
 This should be implemented in the Post class, and PostSet.sorted_list
