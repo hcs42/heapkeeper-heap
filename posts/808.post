@@ -2,13 +2,10 @@ Author: Attila Nagy
 Subject: State of the project
 Tag: docs
 Tag: homepage
+Tag: reviewed
 Message-Id: <b29f917d0910291622t54d3751u592493cbad7a7fcd@mail.gmail.com>
 Parent: <b29f917d0910231437h1b8c9c77we8ee2e966de2aca0@mail.gmail.com>
 Date: Fri, 30 Oct 2009 00:22:48 +0100
-
->> Would you make this change to the documentation?
->
-> It is done and pushed to _status.
 
 If you accept it, I suggest you rebase it on your _hcs. This way you
 won't have to rebase ~70 commits.
