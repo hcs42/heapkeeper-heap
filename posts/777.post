@@ -1,5 +1,6 @@
 Author: Attila Nagy
 Subject: Docstrings: ClassName vs. class name
+Tag: reviewed
 Message-Id: <b29f917d0910240333m12db637qd99e473a6b463b07@mail.gmail.com>
 Date: Sat, 24 Oct 2009 12:33:14 +0200
 
@@ -28,3 +29,5 @@ Why use "post item" in the first, and "PostItem" in the second?
 
 I think we should have a written guideline on good docstrings before
 setting out to improve them.
+
+[note Original parent: heap://hh/715]
