@@ -1,7 +1,9 @@
 Author: Attila Nagy
 Subject: Underscore use in identifiers formed by multiple words
 Tag: commit
+Tag: reviewed
 Message-Id: <b29f917d0910171024h4ff8b87mee3f2aecb1c6ff9@mail.gmail.com>
+Parent: 628
 Date: Sat, 17 Oct 2009 19:24:10 +0200
 
 > The problem is that I don't know a good rule of thumb. E.g. I don't
