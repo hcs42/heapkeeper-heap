@@ -7,10 +7,10 @@ Message-Id: <b29f917d0910181055k357ac16au38c9d83cb80f3f68@mail.gmail.com>
 Parent: <4ADB55AE.50003@gmail.com>
 Date: Sun, 18 Oct 2009 19:55:24 +0200
 
-OK, I accept. This would speed things up, and result in a smaller output.
+OK, I accept. This would speed things up, and result in a smaller
+output.
 
-> The posts that are in a cycle would have a post page
-> though.
+> The posts that are in a cycle would have a post page though.
 
 Cycles are an interesting story. To the best of my knowledge, we've
 never seen them, but we have put quite a bit of effort in trying to
