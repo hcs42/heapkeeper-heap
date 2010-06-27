@@ -1,18 +1,10 @@
 Author: Csaba Hoch
 Subject: Release process
 Tag: 0.3
+Tag: reviewed
 Message-Id: <4AE00B1C.1030106@gmail.com>
 Parent: <b29f917d0910182148u11f35978vf423c1cc785d4523@mail.gmail.com>
 Date: Thu, 22 Oct 2009 09:34:52 +0200
-
->> I finished releasing Heapkeeper v0.3 on the weekend. I started to use
->> the "heapkeeper" repository again.
->>
->> The only thing I did not do was that I did not create a v0.3 tag, so
->> that if you find something, we can rewrite the history.
->
-> I guess this means it's still not too late for me to review the
-> commits up to _v0.3...
 
 Please tell me when you reviewed the changed and I can add the tag.
 
