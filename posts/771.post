@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: _bugfix and _hcs-bugfix branches
 Tag: git
+Tag: reviewed
 Tag: workflow
 Message-Id: <4AE2CCD2.4010001@gmail.com>
 Date: Sat, 24 Oct 2009 11:45:54 +0200
@@ -62,4 +63,4 @@ conclusion.
     master".
 [2] heap://hh/714
 [3] heap://hh/765
-[4] heap://3035
+[4] http://www.mail-archive.com/dri-devel@lists.sourceforge.net/msg39091.html
