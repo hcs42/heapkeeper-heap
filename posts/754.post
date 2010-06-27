@@ -2,12 +2,13 @@ Author: Attila Nagy
 Subject: Script to check a rebased line
 Tag: git
 Tag: idea
+Tag: reviewed
 Message-Id: <b29f917d0910220953k5398521ckab4874591888bca9@mail.gmail.com>
 Date: Thu, 22 Oct 2009 18:53:45 +0200
 
 > I often do this before pushing:
 >
-> $ for i in `seq 1 10`; do rm *.pyc; ./test.py; git checkout HEAD^; done
+>     $ for i in `seq 1 10`; do rm *.pyc; ./test.py; git checkout HEAD^; done
 >
 > and watch the result.
 
@@ -18,3 +19,5 @@ Hey, this is nice! Maybe we could improve on the idea:
 - while there are more commits:
 - run tests,
 - if all OK, advance the branch to the next commit.
+
+[note Original parent: heap://hh/721]
