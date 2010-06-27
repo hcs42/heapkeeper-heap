@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: Profiling
 Tag: idea
+Tag: reviewed
 Message-Id: <4ddb9e5b0911190330g3377bd39ua395fbbcc6a71561@mail.gmail.com>
 Parent: <b29f917d0911182353j62b4e57ewf70de5358781b010@mail.gmail.com>
 Date: Thu, 19 Nov 2009 12:30:23 +0100
@@ -13,4 +14,4 @@ I'm as well curious about the bottlenecks.
 I had a few thoughts about optimization, but I described those in a
 separate post. [1]
 
-[1] heap://3415
+[1] heap://hh/950
