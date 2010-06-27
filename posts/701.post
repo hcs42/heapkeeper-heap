@@ -1,13 +1,10 @@
 Author: Csaba Hoch
 Subject: Tests or docs?
 Tag: discussion
+Tag: reviewed
 Message-Id: <4ADB3AC7.8030703@gmail.com>
 Parent: <b29f917d0910171020j47615e9q817007e76e38a6ff@mail.gmail.com>
 Date: Sun, 18 Oct 2009 17:56:55 +0200
-
-> Sounds like a lot of work, but it could be done, of course. It may
-> be worthy, but I think we should prefer good documentation over full
-> test coverage. Do you agree?
 
 I don't want to say that one is more desirable than the other, because
 that may serve as an excuse not to do that.
