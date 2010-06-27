@@ -1,5 +1,6 @@
 Author: Attila Nagy
 Subject: Grammatical error in _-branches
+Tag: reviewed
 Tag: workflow
 Message-Id: <b29f917d0909140206g4b97f89fvb7c0f6e8b342c5d5@mail.gmail.com>
 Date: Mon, 14 Sep 2009 11:06:40 +0200
@@ -7,10 +8,8 @@ Date: Mon, 14 Sep 2009 11:06:40 +0200
 Regarding _e: on my _e, I have a commit called "Correction". It
 corrected a grammatical error:
 
-    -        # probably find all existing heapids that has the given
-prefix before
-    +        # probably find all existing heapids that have the given
-prefix before
+    -   # probably find all existing heapids that has the given prefix before
+    +   # probably find all existing heapids that have the given prefix before
 
 You didn't integrate this commit into your _e, so all other branches
 that are based on your _e still have this wrong.
