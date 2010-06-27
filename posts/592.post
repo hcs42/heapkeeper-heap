@@ -5,7 +5,7 @@ Tag: reviewed
 Message-Id: <4AAC9BA6.9020605@gmail.com>
 Date: Sun, 13 Sep 2009 09:13:42 +0200
 
->>> e(11111)
+    >>> e(11111)
     Traceback (most recent call last):
       File "<console>", line 1, in <module>
       File "/a/cp/hk/hk/hkshell.py", line 621, in inner
