@@ -1,5 +1,6 @@
 Author: Attila Nagy
 Subject: Tag -> label
+Tag: reviewed
 Message-Id: <b29f917d0909142346v1c02ebc0s80e07c68ea89cac3@mail.gmail.com>
 Parent: <4AAC9683.5040807@gmail.com>
 Date: Tue, 15 Sep 2009 08:46:13 +0200
@@ -12,7 +13,7 @@ When I first saw the subject, I had no idea why this would be good for us...
 > - others (like Google) use the word "label" for that kind of things
 > - "label" has a decent Hungarian translation
 > - we could use the word "tag" for other things, e.g. for some special
->  kind of meta text
+>   kind of meta text
 
 I'm starting to get convinced, especially by this last argument.
 
