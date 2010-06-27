@@ -40,4 +40,4 @@ interface, and when more complicated operations are needed, for example a
 mass search&replace, authorized administrators could log into the system
 and do the work via hkshell.
 
-Original parent of the post: heap://hh/220
+[note Original parent: heap://hh/220]

@@ -1,12 +1,13 @@
 Author: Attila Nagy
 Subject: Let's provide an option to turn off tracebacks!
 Tag: idea
+Tag: reviewed
 Message-Id: <b29f917d0910200930o71c14142k3b3759d37552b8dd@mail.gmail.com>
 Date: Tue, 20 Oct 2009 18:30:57 +0200
 
->> I've never ever seen a mature product that you customize in the same
->> language that the product is written in. This is a powerful approach --
->> but might also strike others as a sign of inmaturity of the project.
+> I've never ever seen a mature product that you customize in the same
+> language that the product is written in. This is a powerful approach --
+> but might also strike others as a sign of inmaturity of the project.
 
 There is one more thing that might strike others as a strong sign of
 immaturity: exceptions. Due to the way we implemented an interactive
@@ -19,3 +20,5 @@ A page I found [1] says to turn off tracebacks, just set
 `sys.tracebacklimit` to 0.
 
 [1] http://effbot.org/pyref/sys.tracebacklimit.htm
+
+[note Original parent: heap://hh/226]
