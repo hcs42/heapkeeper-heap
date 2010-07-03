@@ -1,0 +1,23 @@
+Author: Csaba Hoch
+Subject: features() function does not return status of event_printer_listener
+Tag: hkshell
+Tag: idea
+Message-Id: <AANLkTikuPiawtZnQvlDYVG_3uZKQXgE_lxJVRzTzdKCI@mail.gmail.com>
+Parent: <AANLkTil0bXSQ80Lh0U0dswUUWjDHYTUmlVv_P5qtIv9n@mail.gmail.com>
+Date: Wed, 30 Jun 2010 18:45:16 +0100
+
+> The list of features and the names of the matching listeners can be
+> found both in `hkshell.set_feature()` and `hkshell.features()`. I
+> think it would be cleaner to store these in a dict instead of
+> hard-coding them (especially hard-coding them in two functions).
+
+You are right, this system could be better; that's why we decided to
+implement a new system instead of the current system of features [1].
+I think that would solve the problem you raised.
+
+> Also, the hkshell.features() function does not return status of the
+> "event_printer" listener. Is this intended?
+
+No, it must be a mistake.
+
+[1] heap://hh/235

@@ -1,0 +1,67 @@
+Author: Attila Nagy
+Subject: Purpose of callbacks, abolising callbacks
+Tag: idea
+Message-Id: <AANLkTim1lrwxwaYb7UeuQuMNK8QAbK9w0fawvHHcI0iM@mail.gmail.com>
+Date: Fri, 25 Jun 2010 23:40:24 +0200
+
+I've been studying the code of `hkshell`, and I've noticed several
+customization frameworks, namely:
+- options/features,
+- events and listeners,
+- callbacks.
+
+I understand that the options-features system and the events-listeners
+systems represent a higher and a lower level of customizability,
+respectively, where features are actually implemented as event
+listeners. That much I understand, and I also very much like the idea.
+
+What I don't understand is how callbacks fit into this picture. After
+some studying, it seems to me that callbacks serve as hook points that
+enable `hkrc` code to more easily tell `hkshell` what to do.
+
+While this may be the only usable way in a more rigid language,
+Python is much more flexible than that. Say, that we, the developers
+recognize that many users need to personalize the generation of
+indices. Fine, let's help them by making it a callback, which means
+that `hkshell` provides a space where `hkrc` code can freely express
+its opinion on how this operation needs to be performed.
+
+First of all, I would like to ask for confirmation if this really is
+what Csabi had in mind when designing the callbacks feature.
+
+If I got it right so far, here is my concern: I feel that it is
+somewhat pointless to provide hook points for `hkrc` to customize
+`hkshell`. Due to the fact that `hkrc`s are Python modules that are
+imported after `hkshell`, they are free to do whatever they please
+with the `hkshell` module.  As an example, my `hkrc` wraps a `hkshell`
+global variable to enhance its functionality. It would be just as easy
+and efficient to specify one's own `gen_indices()` function like this:
+
+    import hkshell
+
+    def my_gen_indices():
+        # do really wild stuff
+        ...
+
+    hkshell.gen_indices = my_gen_indices
+
+One might argue that this is not very nice to other modules. We may
+load more than one "hkrc" module, and if each works like this, only
+the last will have its way. But the way callbacks are implemented
+right now also doesn't solve this -- but it could with not much
+additional effort, all we'd have to do is store callback functions in
+a list and call them sequentially.
+
+But then, this system becomes enormously similar to events. The
+`gen_indices` callback would become a `gen_indices` event, and any
+number of listeners may subscribe to this event, and do their job one
+after another.
+
+Another problem with callbacks is that they require providence from
+the core developers to allow for customization. Using the "overloading"
+technique I presented before, it is possible to perform customizations
+the need for which the core developers never would have imagined.
+
+Therefore, I am arguing for the abolishment of callbacks in favor of
+event handlers or direct manipulation of the `hkshell` module object
+by `hkrc` code. Csabi, what do you think?

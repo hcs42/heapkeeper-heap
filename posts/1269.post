@@ -1,0 +1,12 @@
+Author: Attila Nagy
+Subject: Editing an ordinary mailing list
+Message-Id: <AANLkTilTd4ZLUEaS2O15B0GGk5HhvyXWees3-x1aU7B-@mail.gmail.com>
+Date: Fri, 25 Jun 2010 05:43:13 +0200
+
+I found this Wiki page recently. It describes two possible ways of
+editing an ordinary mailing list archive.
+
+http://wiki.list.org/pages/viewpage.action?pageId=7602232
+
+Note that they are both officially unsupported ways, and require
+manually editing Mailman's input or output files.

@@ -1,0 +1,72 @@
+Author: Attila Nagy
+Subject: Hack to avoid quotes around post IDs
+Message-Id: <AANLkTinS4mV1NYzafUxrj_AMEm05urZ4ug93wXf3UAFc@mail.gmail.com>
+Date: Fri, 25 Jun 2010 09:00:30 +0200
+
+If a post's postid is an integer, we can spare two quotes when
+referring to the post, but when the id is a string that cannot be
+expressed as an integer, we have to use the quotes. E.g.:
+
+    >>> e(123)        # this is OK
+    >>> e(attis123)   # not OK, NameError (no such variable)
+    >>> e('attis123') # this is OK
+
+A while ago, I had an idea to make posts with non-integer IDs
+addressable without quotes. I wasn't able to do it back then, but
+Csabi said he didn't like the idea anyway.
+
+Now, almost accidentally, I managed to do it. The idea is simple: the
+interpreter is opened into the context defined by the `hkshell_commands` dict.
+If we patch this dict to return the index as a string when there is no matching
+item, we get what we want.
+
+Just replace this line:
+
+    hkshell_commands = {}
+
+with this code:
+
+    class DefaultingDict(dict):
+        def __missing__(self, index):
+            return index
+
+    hkshell_commands = DefaultingDict()
+
+Neat, isn't it? But I took it one step further:
+
+    class DefaultingDict(dict):
+        def __missing__(self, index):
+            return DivisableString(index)
+
+    class DivisableString(str):
+        def __div__(self, other):
+            return "%s/%s" % (self, str(other))
+
+    hkshell_commands = DefaultingDict()
+
+This means that we can do this:
+
+    >>> e(ums/123)  # this is OK, too
+
+This can also be done in the hkrc with just a little extra effort:
+
+    class DivisableString(str):
+        def __div__(self, other):
+            return "%s/%s" % (self, str(other))
+
+    class DefaultingWrapper(dict):
+        def __getitem__(self, index):
+            return self._inner_dict.get(index, DivisableString(str(index)))
+
+        def __init__(self, inner_dict):
+            self._inner_dict = inner_dict
+
+    hkshell.hkshell_commands = DefaultingWrapper(hkshell.hkshell_commands)
+
+I think I'll use this, to see if it has any serious side-effects, and, more
+generally, whether it really is a good idea after all, or not.
+
+There is one issue: we can only spare the quote if the ID is a valid
+identifier. For example, this won't work:
+
+    >>> e(123post)  # will not work
