@@ -54,7 +54,7 @@ Alternatives:
         a footnote
 
 - when its indentation level is equal to or greater than that of the
- perfect indentation:
+  perfect indentation:
 
     [1] This is
           still a footnote
