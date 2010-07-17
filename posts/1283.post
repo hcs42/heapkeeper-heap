@@ -1,0 +1,22 @@
+Author: Attila Nagy
+Subject: Status of the repository
+Message-Id: <AANLkTil45AthPKanjD0VtRWUMpnhsbCxFdKBpZbD82bJ@mail.gmail.com>
+Date: Fri, 16 Jul 2010 13:24:53 +0200
+
+As of now, the repository contains 4 branches which are stuck at an
+earlier phase. I want to bring these up to the current master, so that
+they have a chance to be included in the next release (0.7).
+
+The affected branches:
+- _hkrc_attis: stuck just before 0.4. It contains several improvements
+  I want to use in my heap maintaining work, plus it's simple code
+  I'll begin with this.
+- _blog: this is stuck just after 0.4. I'd like to use this to power a
+  personal blog, so I'll bring it up-to-date.
+- _imap: I think this is the most important to be included in the next
+  release. It is needed to use Hk reliably on IMAP servers which are
+  more limited than Google's; it still needs some attention.
+- _issue_tracker: this branch needs the most attention; I embarked on
+  a venture to make the issue tracker more beautiful, but it can't be
+  included in a release like this -- it hotlinks to Canonical's forum
+  icons, which is not a nice thing to do (and even worse to deploy!)

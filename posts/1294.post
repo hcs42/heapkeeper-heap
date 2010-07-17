@@ -1,0 +1,65 @@
+Author: Csaba Hoch
+Subject: Skype+VNC meeting of 2010-07-10
+Message-Id: <AANLkTilKZn3DPMm-h_1W8_ZhmCqqLE4OTHKifjZ9Qyb4@mail.gmail.com>
+Parent: <AANLkTinoWP9byu5jvQPfcjOAFALLur-rHLxb2mWwPogv@mail.gmail.com>
+Date: Sat, 17 Jul 2010 09:26:28 +0100
+
+I propose adding a "minutes" tag to the thread [1].
+
+> I find this ugly, but it is conceptually cleaner to have all py
+> files in one place. I also raised concerns that these are not
+> exactly those source files that one has e.g. in C.
+
+I think that when we write meeting minutes [1], we should not use
+first person singular. You should say "Attis finds this ugly", even if
+you are Attis.
+
+== UTF-8 vs. Unicode ==
+
+> We now use UTF-8 strings everywhere, even in hkweb, even though the
+> web input (query parameters) come in Unicode objects.
+>
+> We will probably keep it this way until we go to Python 3.0, because
+> that handles Unicode differently so the Unicode handing of Hk has to
+> be revisited when we change to Python 3.0 anyway.
+
+We forgot to mention here what is the real problem with UTF-8. I
+propose appending the following sentences to the first paragraph:
+
+    A more serious problem with UTF-8 strings is that they are indexed
+    differently than unicode objects. For example the regular
+    experssion "sof.r" will match the "sof?r" unicode object, but will
+    not match the "sof?r" UTF-8 encoded string, since the latter one
+    handles "?" as two characters instead of one.
+
+== Simplification of architecture ==
+
+> [...] of hkshell.g() default_editor() could go to hkshell entirely.
+> exception IncorrectEditorException goes to hkshell.
+
+"exception" should begin with capital "E".
+
+== Analysis of file editing mechanism ==
+
+> hkcustomlib.edit_files if the entry point of this mechanism;
+
+"if" -> "is"
+
+> In these cases, we escape such spaces with a backslash, so Hk is
+> launched like this:
+>
+>    EDITOR="gvim -c setf\ mail" src/hk.py
+
+I think one of these would be better:
+
+    EDITOR='gvim -c setf\ mail' src/hk.py
+    EDITOR="gvim -c setf\\ mail" src/hk.py
+
+The one you wrote will probably work, too, but it is conceptually not
+very nice to give "\ " to the shell, since the backslash character in
+Unix shells should be followed by a character to be escaped. (And in
+"normal" programming languages, it "must be followed" instead of
+"should be followed".) Here nothing will be escaped on the shell
+level, the shell will just give a backslash and a space to Heapkeeper.
+
+[1] http://en.wikipedia.org/wiki/Minutes

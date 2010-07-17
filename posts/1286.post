@@ -1,0 +1,23 @@
+Author: Csaba Hoch
+Subject: Missing mail directory causes both warning and exception
+Tag: bug
+Message-Id: <AANLkTimp2uLuwYZoLzs_hFyTpZf9QixEYYZmBW1yfNoe@mail.gmail.com>
+Parent: <AANLkTimYH3CBY0JW8dlJy_lirfeWFJj_weSW6IVJUzwR@mail.gmail.com>
+Date: Fri, 16 Jul 2010 14:03:28 +0100
+
+Heapkeeper thinks that the post directory and HTML directory you
+specified in the config file should be there, but if it is not there,
+it will only issue a warning and then create it. The rationale behind
+this is that this is probably what you want, but maybe you made a typo
+in the config file and wanted to use an existing directory, so the
+warning will warn you.
+
+The exception you show can be considered a bug though. I think it is
+because Heapkeeper just does an "mkdir" instead of "mkdir -p" when it
+tries to create the post directory and the HTML directory, so if the
+parent directories of those don't exist, the exception will be thrown.
+
+What do you think would be the best behaviour? Don't ever create the
+directory on the user's behalf and issue always an error message, or
+create it with "-p", or try to create without "-p" and issue an error
+only when that fails?

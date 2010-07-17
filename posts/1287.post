@@ -1,0 +1,83 @@
+Author: Attila Nagy
+Subject: Missing mail directory causes both warning and exception
+Tag: bug
+Message-Id: <AANLkTimAjli_p1mKwhRUkPFagnkKPza4yW3swZdCDr04@mail.gmail.com>
+Parent: <AANLkTimp2uLuwYZoLzs_hFyTpZf9QixEYYZmBW1yfNoe@mail.gmail.com>
+Date: Fri, 16 Jul 2010 15:50:36 +0200
+
+> Heapkeeper thinks that the post directory and HTML directory you
+> specified in the config file should be there, but if it is not there,
+> it will only issue a warning and then create it. The rationale behind
+> this is that this is probably what you want, but maybe you made a typo
+> in the config file and wanted to use an existing directory, so the
+> warning will warn you.
+
+I see.
+
+> The exception you show can be considered a bug though. I think it is
+> because Heapkeeper just does an "mkdir" instead of "mkdir -p" when it
+> tries to create the post directory and the HTML directory, so if the
+> parent directories of those don't exist, the exception will be thrown.
+
+That's a likely explanation.
+
+> What do you think would be the best behaviour? Don't ever create the
+> directory on the user's behalf and issue always an error message, or
+> create it with "-p", or try to create without "-p" and issue an error
+> only when that fails?
+
+Let's see the gains and losses in the two cases. User A wants to use a
+directory that is not yet there, e.g. after doing a clean install and creating
+a hk.cfg without creating the necessary directories by hand. This may be the
+case of someone who follows the tutorial improperly and skips the step where
+the directory is created. User B, on the other hand wants to use a directory
+which is already there, but made a typo.
+
+With auto-creation on:
+- User A: feels happy when finds out the directory has been created; thinks
+  it's a mature product to handle unexpected situations so gracefully; starts
+  using the program as if nothing happened,
+- User B: finds out that she made a mistake, and notices that the program tried
+  to act intelligently, though this will cost her extra effort; she does a
+  'q()', removes the directory, corrects the hk.cfg, and launches Hk again.
+
+With auto-creation off:
+- User A: finds out that the directory is missing; though admits she made a
+  mistake, she secretly wished the program would take the initiative and create
+  the directory anyway; since the program exited anyway, the only thing she has
+  to to is to create the directory, and launch again,
+- User B: notices the mistake and corrects it, then launches Hk again; may even
+  cross her mind that the program saved her a bit of effort by not creating the
+  directory (though not very likely).
+
+So, by enabling auto-creation, User A gets spared a small effort (an "mkdir"),
+while User B does to do an extra "rm -r"; this is about the same effort.
+However, User A might be a newcomer, someone who just gives the tutorial a try.
+I think we should pay attention to favoring her particular group, since if they
+give up early, we will never have any users.
+
+So considering this I would be in favor of creating the directory...
+
+The problem with "mkdir -p" is that Python doesn't support it out of the box!
+Though it wouldn't be that difficult to implement it -- thinking something like
+splitting at slashes, then for each part, add current to path_so_far then
+create path_so_far. This is a single loop, but it can fail on systems where
+there's a limit on maximum directory depth.
+
+And there's always the 3rd option: ask the user. Do we want to do it?
+
+    $ mkdir heap-pots
+    $ src/hk.py
+    Post directory "heap-pots" does not exist. Create it [y/n]?
+
+We do this at only one place, when the user does a <C-d> at the prompt. This
+could indeed be a slippery slope, at the bottom of which we end up asking the
+user about everything. The real threat, however, is that such questions may
+make scripts break. This is why tools include a "silent mode", which, in our
+case, could be invoked by the "--noshell" switch. However, this could lead to
+more code, more opportunity for things to break etc.
+
+...but most Unix tools would just fail with an error message and do nothing.
+
+Maybe I'll take the lazy approach here (which is very often the same as the
+KISS principle), and vote against auto-creating directories.

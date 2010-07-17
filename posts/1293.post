@@ -1,0 +1,15 @@
+Author: Attila Nagy
+Subject: Missing mail directory causes both warning and exception
+Tag: bug
+Message-Id: <AANLkTimGka_aGClMmoPc_2lp45p1w1Ytt8JKT2WU74U8@mail.gmail.com>
+Parent: <AANLkTilpPF5VdWIsv8A3zyz-r20UJvptlmHJBKlvU9Vb@mail.gmail.com>
+Date: Fri, 16 Jul 2010 17:33:00 +0200
+
+>>> Maybe I'll take the lazy approach here (which is very often the same as the
+>>> KISS principle), and vote against auto-creating directories.
+>> I will think about this.
+>
+> OK, let's do this.
+
+[assign Attis]
+[effort 1]

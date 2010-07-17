@@ -1,0 +1,20 @@
+Author: Attila Nagy
+Subject: Missing mail directory causes both warning and exception
+Tag: bug
+Message-Id: <AANLkTimYH3CBY0JW8dlJy_lirfeWFJj_weSW6IVJUzwR@mail.gmail.com>
+Parent: <AANLkTink72t9NMTYUyxcCDQt84YVt4zzdTRdsqhhZnbk@mail.gmail.com>
+Date: Fri, 16 Jul 2010 14:22:45 +0200
+
+To add some weirdness to this bug, if you create the missing directory:
+
+    $ mkdir -p hh-mail/posts
+    $ src/hk.py
+    Warning: post directory does not exists: "xyz-mail"
+    Post directory has been created.
+    Warning: HTML directory does not exists: "html"
+    HTML directory has been created.
+
+    >>>
+
+the post directory for the other heap specified in the hk.cfg file gets created
+and the program starts.

@@ -1,0 +1,30 @@
+Author: Attila Nagy
+Subject: Missing mail directory causes both warning and exception
+Tag: bug
+Message-Id: <AANLkTink72t9NMTYUyxcCDQt84YVt4zzdTRdsqhhZnbk@mail.gmail.com>
+Date: Fri, 16 Jul 2010 14:19:23 +0200
+
+Steps to reproduce:
+- clone a repository at the current _master
+  (d8012d74c6c9973a4f600009df4bc17f44c8b224)
+- add a hk.cfg
+- start Hk
+
+    $ src/hk.py
+    Warning: post directory does not exists: "hh-mail/posts"
+    Traceback (most recent call last):
+      File "src/hk.py", line 39, in <module>
+        hkshell.main(cmdl_options, args)
+      File "/data/lab/hk/hk-dirbug/src/hkshell.py", line 1818, in main
+        options.config, options.postdb = read_postdb(cmdl_options.configfile)
+      File "/data/lab/hk/hk-dirbug/src/hkshell.py", line 1706, in read_postdb
+        postdb.read_config(configdict)
+      File "/data/lab/hk/hk-dirbug/src/hklib.py", line 1699, in read_config
+        self.add_heap(heap_id, heap_dir)
+      File "/data/lab/hk/hk-dirbug/src/hklib.py", line 1648, in add_heap
+        os.mkdir(heap_dir)
+    OSError: [Errno 2] No such file or directory: 'hh-mail/posts'
+    $
+
+The lack of the first post directory gets reported first as a warning, then as
+an exception. After this, the program exits.

@@ -1,0 +1,13 @@
+Author: Csaba Hoch
+Subject: Missing mail directory causes both warning and exception
+Tag: bug
+Message-Id: <AANLkTilpPF5VdWIsv8A3zyz-r20UJvptlmHJBKlvU9Vb@mail.gmail.com>
+Parent: <AANLkTilOsMFhQxCFaXStsZAsPZ-Hkmp1-IzUuI4OS3XZ@mail.gmail.com>
+Date: Fri, 16 Jul 2010 16:03:35 +0100
+
+>> Maybe I'll take the lazy approach here (which is very often the same as the
+>> KISS principle), and vote against auto-creating directories.
+>
+> I will think about this.
+
+OK, let's do this.

@@ -1,0 +1,38 @@
+Author: Csaba Hoch
+Subject: Missing mail directory causes both warning and exception
+Tag: bug
+Message-Id: <AANLkTilOsMFhQxCFaXStsZAsPZ-Hkmp1-IzUuI4OS3XZ@mail.gmail.com>
+Parent: <AANLkTimAjli_p1mKwhRUkPFagnkKPza4yW3swZdCDr04@mail.gmail.com>
+Date: Fri, 16 Jul 2010 15:20:21 +0100
+
+> The problem with "mkdir -p" is that Python doesn't support it out of the box!
+
+Not true [1]:
+
+    os.makedirs(path[, mode]):
+
+        Recursive directory creation function. Like mkdir(), but makes
+        all intermediate-level directories needed to contain the leaf
+        directory.
+
+> And there's always the 3rd option: ask the user.
+
+Good point, I haven't thought about this possibility.
+
+> We do this at only one place, when the user does a <C-d> at the prompt. This
+> could indeed be a slippery slope, at the bottom of which we end up asking the
+> user about everything. The real threat, however, is that such questions may
+> make scripts break. This is why tools include a "silent mode", which, in our
+> case, could be invoked by the "--noshell" switch. However, this could lead to
+> more code, more opportunity for things to break etc.
+
+Also a good point.
+
+> ...but most Unix tools would just fail with an error message and do nothing.
+>
+> Maybe I'll take the lazy approach here (which is very often the same as the
+> KISS principle), and vote against auto-creating directories.
+
+I will think about this.
+
+[1] http://docs.python.org/library/os.html

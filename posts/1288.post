@@ -1,0 +1,64 @@
+Author: Attila Nagy
+Subject: hkrc.py is not imported
+Tag: bug
+Message-Id: <AANLkTikTlrQCq87lXwQ-MIHwjVqaprEsnypWQXTL-lVy@mail.gmail.com>
+Date: Fri, 16 Jul 2010 16:02:35 +0200
+
+Commit "hkshell: no warning if there is no hkrc" (2010-06-01, 85656ea) added
+code to check if the default hkrc really exists before adding it to
+the list of modules to be imported. This would be useful, but it's
+bugged in two ways.
+
+First, it checks for a file named "hkrc", and not "hkrc.py".
+
+Second, it looks for the file in the current directory, and not in the
+directory where the code lives. This may or may not be intended, but
+nonetheless, it behaves strangely.
+
+Suppose we have the following setup:
+- the first bug is already corrected, so hkshell looks for "hkrc.py"
+  and not for "hkrc"
+- my home is /home/attis
+- Hk lives at /home/attis/hk
+- the hkrc.py I want to use is /home/attis/hk/src/hkrc.py
+- I have a separate heaps directory at /home/attis/heaps, where the
+  post and HTML directories live
+- to see what's happening, I add a line to /home/attis/hk/src/hkrc.py
+  to identify the script, something like
+
+    print 'I am the real hkrc'
+
+First, I cd to the heaps directory:
+
+    $ cd /home/attis/heaps
+
+Then I launch Hk:
+
+    $ ~/hk/src/hk.py
+
+    >>>
+
+The script's message doesn't show!
+
+Now I create a dummy "hkrc.py" file in the heaps directory:
+
+    $ cat > hkrc.py << "EOF"
+    print 'I am a dummy hkrc'
+    $ src/hkrc.py
+    I am the real hkrc
+
+    >>>
+
+Interesting, isn't it? This is because os.exists() always look in the
+current working dir, while importing has a well-defined search order,
+"sys.path", which begins with the directory of the script, in this
+case, /home/attis/hk/src
+
+I think since importing is so complicated, I wouldn't bother looking
+if the file exists. I'd do it like this:
+
+- do we have any "-r" options?
+- if yes, and it's not NONE, import them, and report error if unsuccessful
+- if no, try to import "hkrc.py", and keep silent even if it fails
+
+Opinions?
