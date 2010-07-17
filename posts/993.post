@@ -1,5 +1,6 @@
 Author: Attila Nagy
 Subject: Test cases helping understanding the code
+Tag: reviewed
 Message-Id: <b29f917d0912201336n1c5d5d6r104c4bc014c32bf4@mail.gmail.com>
 Parent: <4AE433A5.9020303@gmail.com>
 Date: Sun, 20 Dec 2009 22:36:35 +0100
@@ -8,14 +9,14 @@ Date: Sun, 20 Dec 2009 22:36:35 +0100
 > a certain piece of Hk code works.
 
 I think I initially wanted to use this approach, but I couldn't find
-the test for this function. I think your convention on test cases will
-help those who are looking for the right test case when looking for
+the test for this function. I think your convention on test cases [1]
+will help those who are looking for the right test case when looking for
 examples.
-
-[!todo link here]
 
 > I don't have experience in understanding code
 > by looking at test cases that other people wrote, but I'm curious if
 > it helps you.
 
 I'll keep this in mind, and post if I find this method useful.
+
+[1] heap://hh/785
