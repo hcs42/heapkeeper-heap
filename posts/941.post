@@ -1,25 +1,11 @@
 Author: Attila Nagy
 Subject: Test case for sorted_list may be insufficient
 Tag: issue
+Tag: reviewed
 Tag: test
 Message-Id: <b29f917d0911150246p631edc8ah565f2e539665ed72@mail.gmail.com>
 Parent: <4AFFDAC2.5080109@gmail.com>
 Date: Sun, 15 Nov 2009 11:46:49 +0100
-
->> [!todo break thread]
->
-> It is broken for me...
-
-GMail again...
-
-> But since we want a reference for the former
-> parent, could you write it down?
-
-It is the post where I said I implemented post sorting.
-
->> I think the test case `Test_PostSet__threads.test_sorted_list` is a no-op.
->
-> What do you mean by no-op?
 
 It doesn't depend on the sorting that it claims to be testing. If the
 sorting does nothing, it still passes, at least that's what I think.

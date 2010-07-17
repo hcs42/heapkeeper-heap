@@ -1,16 +1,11 @@
 Author: Csaba Hoch
 Subject: Test case for sorted_list may be insufficient
 Tag: issue
+Tag: reviewed
 Tag: test
 Message-Id: <4AFFDDC0.2080909@gmail.com>
 Parent: <b29f917d0911150246p631edc8ah565f2e539665ed72@mail.gmail.com>
 Date: Sun, 15 Nov 2009 11:53:52 +0100
-
->>> I think the test case `Test_PostSet__threads.test_sorted_list` is a no-op.
->> What do you mean by no-op?
->
-> It doesn't depend on the sorting that it claims to be testing. If the
-> sorting does nothing, it still passes, at least that's what I think.
 
 It tests that if you sort an already sorted list (self._posts), the
 resulted list will be the same as the original list.
