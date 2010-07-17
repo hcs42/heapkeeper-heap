@@ -1,10 +1,9 @@
 Author: Attila Nagy
 Subject: New master
 Tag: repo
+Tag: reviewed
 Message-Id: <b29f917d0911010207x6304e36bl6a55390d72537ec4@mail.gmail.com>
 Parent: <4AED567D.1090200@gmail.com>
 Date: Sun, 1 Nov 2009 11:07:35 +0100
-
-> I don't see _next_heapid and _has_tags to be rebased on your _hcs.
 
 I pushed them now.

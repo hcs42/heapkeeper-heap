@@ -1,15 +1,10 @@
 Author: Attila Nagy
 Subject: New master
 Tag: repo
+Tag: reviewed
 Message-Id: <b29f917d0911010107i2133d9d4vf0743d90ded3ca90@mail.gmail.com>
 Parent: <b29f917d0911010127g34894d68q83606279a1a3d63c@mail.gmail.com>
 Date: Sun, 1 Nov 2009 10:07:45 +0100
-
-> I would suggest that you integrate it into your master, then rebase
-> _hcs on top of it, so that we would have fewer long branches.
->
-> If you don't feel like doing it, I can do it for you. I will have to
-> integrate the _star-flat-bugfix into it
 
 I've pushed the rebased branches. It now looks like this (in gitk, so
 top is recent):
