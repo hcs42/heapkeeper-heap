@@ -1,6 +1,7 @@
 Author: Attila Nagy
 Subject: hkshell commands fall into endless recursion
 Tag: bug
+Tag: reviewed
 Message-Id: <20100128081307.60347ea6.nagy.attila.1984@gmail.com>
 Parent: <4AFEFD97.6000401@gmail.com>
 Date: Thu, 28 Jan 2010 08:13:07 +0100
