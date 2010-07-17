@@ -7,3 +7,8 @@ Parent: <AANLkTiko5OSm9kEONovNCvfvO3D5A1y3p1B9RgvULdF_@mail.gmail.com>
 Date: Fri, 21 May 2010 12:19:55 +0200
 
 [close]
+
+Refactoring threads:
+
+- After v0.6: heap://hh/1223
+- After v0.7: heap://hh/1295
