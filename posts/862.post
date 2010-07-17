@@ -2,6 +2,7 @@ Author: Attila Nagy
 Subject: Creating sections in the new generator, problems
 Tag: discussion
 Message-Id: <b29f917d0911020033mcba2d07mcee59e410ab61a93@mail.gmail.com>
+Parent: hh/860
 Date: Mon, 2 Nov 2009 09:33:34 +0100
 
 > If I think right, the way to add sections in `hkgen.Generator` is to

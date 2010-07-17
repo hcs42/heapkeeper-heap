@@ -5,13 +5,6 @@ Message-Id: <4AF3C2E0.2040306@gmail.com>
 Parent: <4ddb9e5b0911020052h1835a651p4ef18800c5975b84@mail.gmail.com>
 Date: Fri, 06 Nov 2009 07:32:00 +0100
 
->> I implemented the old functionality of sections in
->> a Generator subclass in my hkrc. I really think we should provide more
->> support for this, as my code is quite complicated.
->
-> If you show the code, I'll have a look at it in the evening (19-20
-> o'clock) and see if we can make it smaller/simpler/more elegant.
-
 I did not realize that you committed the code... I had a look at it
 now, and it is not that bad :)
 
