@@ -2,7 +2,6 @@ Author: Csaba Hoch
 Subject: Threads moving between hh and ums
 Tag: reviewed
 Message-Id: <4AEC1BF3.1000500@gmail.com>
-Parent: <b29f917d0910310219t522c261dj410c37022e940774@mail.gmail.com>
 Date: Sat, 31 Oct 2009 12:13:55 +0100
 
 > This thread shows that there should be an easy way to move things
@@ -16,3 +15,5 @@ There will be :)
 I'm not sure. I made a deliberate choice of not removing the "hh" tag.
 If you make a funny comment on hh that people don't understand, it
 should be explained on hh.
+
+[note Original parent: heap://hh/827]
