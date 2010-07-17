@@ -1,16 +1,10 @@
 Author: Attila Nagy
 Subject: Command-line argument completion in bash
 Tag: feature
+Tag: reviewed
 Message-Id: <20100127093126.555d47d0.nagy.attila.1984@gmail.com>
 Parent: <4ddb9e5b0911130122y5bbb3d21oedcd79b9ceafcce4@mail.gmail.com>
 Date: Wed, 27 Jan 2010 09:31:26 +0100
-
->
-> [effort 2]
-> [priority low]
->
-> Command-line argument completion in bash for hk.py. Since it's not
-> only for developers, it should be placed in the heapkeeper repository.
 
 Good idea. I'll want to familiarize myself with bash completion, so
 I'll do it.
