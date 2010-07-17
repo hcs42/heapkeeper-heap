@@ -1,5 +1,6 @@
 Author: Attila Nagy
-Subject: Commit "Post.create_header: minor docstring improvement" (b738ba6, 2009-08-27)
+Subject: "Post.create_header: minor docstring improvement" (2009-08-27 b738ba6ffc)
+Tag: reviewed
 Message-Id: <b29f917d0912201301u37bd8b03n8bf86dcbabf1f059@mail.gmail.com>
 Parent: <4AE41384.6000703@gmail.com>
 Date: Sun, 20 Dec 2009 22:01:12 +0100
