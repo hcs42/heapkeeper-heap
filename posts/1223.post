@@ -4,15 +4,18 @@ Tag: issue
 Message-Id: <4BE69B85.3010308@gmail.com>
 Date: Sun, 09 May 2010 13:24:53 +0200
 
+As we agreed in heap://hh/1222, we shall perform perform larger
+refactorings very soon after releasing a new Heapkeeper version.
+
 I propose the following refactorings after releasing v0.6:
 
 1. Creating an "src" directory and moving all Python source files
-    there. This would also have the side effect that *.pyc files would
-    be placed in the src directory. The main directory would be much
-    cleaner.
+   there. This would also have the side effect that *.pyc files would
+   be placed in the src directory. The main directory would be much
+   cleaner.
 2. Creating a "static_html" directory and moving css files and
-    thread.png there.
+   thread.png there.
 3. Renaming "issue_tracker" to "hk_issue_tracker".
 4. Creating a hkemail module and moving hklib.EmailDownloader there.
-    (See also: heap://1027)
+   (See also: heap://1027)
 5. Renaming "main" to "inner" in post items. (See also: heap://925)
