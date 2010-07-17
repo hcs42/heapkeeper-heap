@@ -3,6 +3,7 @@ Subject: Opening existing threads as issues
 Tag: conventions
 Tag: discussion
 Tag: issue tracker
+Tag: reviewed
 Message-Id: <4ddb9e5b0911101219v55ba812bx90057aad78151065@mail.gmail.com>
 Date: Tue, 10 Nov 2009 21:19:51 +0100
 
@@ -14,4 +15,4 @@ This could be a kind of workflow: someone ask something like "why does
 X in Hk works the way it does", and if we agree that it should work
 differently, we qualify the thread as an issue.
 
-Reference: heap://hh/866
+[note Original parent: heap://hh/866]
