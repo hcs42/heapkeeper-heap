@@ -8,7 +8,7 @@ Date: Sat, 31 Oct 2009 02:05:46 +0100
 
 > Thus, we can have two aims:
 > - make the definition of "next heapid" consistent for non-prefixed and
->  prefixed use,
+>   prefixed use,
 > - enable caching for non-empty prefixes.
 
 I have solved these in two distinct commits on the `_next_heapid`
