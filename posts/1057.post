@@ -2,15 +2,10 @@ Author: Attila Nagy
 Subject: Standardizing post references
 Tag: post references
 Tag: prop
+Tag: reviewed
 Message-Id: <20100128110306.e0255aa6.nagy.attila.1984@gmail.com>
 Parent: <4AFFBDF6.7010600@gmail.com>
 Date: Thu, 28 Jan 2010 11:03:06 +0100
-
-> [open]
->
-> Also, we should not forget about printing the values of the
-> "Reference" tags of post files. The old Generator had this feature,
-> the new does not have it yet.
 
 It seems that the `Reference` header field is still not printed in the
 current top-of-the-tree branches (`hcs/_v0.4` and
