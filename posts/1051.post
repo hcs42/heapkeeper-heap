@@ -2,11 +2,9 @@ Author: Attila Nagy
 Subject: Dependency on old Generator in hkcustomlib
 Tag: bug
 Tag: meta
+Tag: reviewed
 Message-Id: <20100128081911.8ed03301.nagy.attila.1984@gmail.com>
 Parent: <4AFFAA6F.8060209@gmail.com>
 Date: Thu, 28 Jan 2010 08:19:11 +0100
-
-> I'll change the subject to "Removing the old Generator" and change the
-> tag to "issue" instead of "bug", if there is no objection.
 
 OK.

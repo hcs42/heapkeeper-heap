@@ -1,14 +1,10 @@
 Author: Csaba Hoch
 Subject: Dependency on old Generator in hkcustomlib
 Tag: bug
+Tag: reviewed
 Message-Id: <4ddb9e5b1001272357r7c061fcdr2ad9ad3081478b04@mail.gmail.com>
 Parent: <20100128082142.8646de99.nagy.attila.1984@gmail.com>
 Date: Thu, 28 Jan 2010 08:57:53 +0100
-
->> Currently both hkshell and hkcustomlib use hklib.Generator. The reason
->> is that it haven't been tested and accepted by you :)
->
-> OK, I'll shut up and get back to reviewing. :)
 
 Since I pushed a branch about the removal of the old Generator, this
 issue can be closed.

@@ -2,6 +2,7 @@ Author: Csaba Hoch
 Subject: Dependency on old Generator in hkcustomlib
 Tag: bug
 Tag: meta
+Tag: reviewed
 Message-Id: <4AFFAA6F.8060209@gmail.com>
 Parent: <4AFA4861.7090706@gmail.com>
 Date: Sun, 15 Nov 2009 08:14:55 +0100
