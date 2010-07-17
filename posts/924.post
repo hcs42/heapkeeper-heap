@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: "if l" versus "if l != []"
 Tag: efficiency
+Tag: reviewed
 Message-Id: <4AFE6B3F.40505@gmail.com>
 Date: Sat, 14 Nov 2009 09:33:03 +0100
 

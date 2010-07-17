@@ -1,6 +1,7 @@
 Author: Attila Nagy
 Subject: "if l" versus "if l != []"
 Tag: efficiency
+Tag: reviewed
 Message-Id: <20100128075402.e48144e6.nagy.attila.1984@gmail.com>
 Parent: <4AFE6B3F.40505@gmail.com>
 Date: Thu, 28 Jan 2010 07:54:02 +0100
