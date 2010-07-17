@@ -1,11 +1,12 @@
 Author: Csaba Hoch
 Subject: The openness algorithm of the issue tracker
 Tag: discussion
+Tag: reviewed
 Message-Id: <4AFA43BE.4040409@gmail.com>
 Parent: <b29f917d0911071114scb4ce93j7c7adfe000f1488f@mail.gmail.com>
 Date: Wed, 11 Nov 2009 05:55:26 +0100
 
-> [!note I think we've already had a discussion on this, but I don't
+> [note I think we've already had a discussion on this, but I don't
 > remember any details.]
 
 See heap://hh/222
@@ -36,8 +37,8 @@ This is the current code (_hcs branch, issue_tracker.py:363):
                 openness -= 1
         return openness > 0
 
-> == #4: One issue split and one part resolved ==
->
+== #4: One issue split and one part resolved ==
+
 >     <1> Attis Bug found \[bug\]
 >     Doing X causes errors during index generation.
 >     \[open\]
@@ -84,14 +85,14 @@ If the author of post <7> wanted to reopen the ticket (or make it more
 open if he composed it before receiving <6>), then he should have
 write an "open" tag into it.
 
-         <7> Attis Bug B \[bug\]
+    <7> Attis Bug B \[bug\]
 
-         [open]
+    [open]
 
-         Bug A _also_ affects module N.
+    Bug A _also_ affects module N.
 
-> == #4: Proposal with "open" tag ==
->
+== #4: Proposal with "open" tag ==
+
 > A user who is not familiar with this algorithm may add an "open" tag
 > to a proposal, resulting in a double-open state that has to be closed
 > twice, like this:
@@ -116,18 +117,18 @@ guess that's what you propose.
 
 It's not difficult to do if we want it:
 
-    def is_thread_open(self, root):
-        openness = 0
-        if (root.has_tag('prop') or root.has_tag('issue') or
-            root.has_tag('bug') or root.has_tag('feature')):
-            openness += 1
-        for post in self._postdb.postset(root).expf():
- -          if 'open' in post.meta_dict():
- +          if 'open' in post.meta_dict() and post != root:
+        def is_thread_open(self, root):
+            openness = 0
+            if (root.has_tag('prop') or root.has_tag('issue') or
+                root.has_tag('bug') or root.has_tag('feature')):
                 openness += 1
-            elif 'close' in post.meta_dict():
-                openness -= 1
-        return openness > 0
+            for post in self._postdb.postset(root).expf():
+    -           if 'open' in post.meta_dict():
+    +           if 'open' in post.meta_dict() and post != root:
+                    openness += 1
+                elif 'close' in post.meta_dict():
+                    openness -= 1
+            return openness > 0
 
 If that's your proposal, I support it because maybe some threads have
 for example a 'problem' tag that's not handled as an issue, but later

@@ -1,10 +1,11 @@
 Author: Attila Nagy
 Subject: The openness algorithm of the issue tracker
 Tag: discussion
+Tag: reviewed
 Message-Id: <b29f917d0911071114scb4ce93j7c7adfe000f1488f@mail.gmail.com>
 Date: Sat, 7 Nov 2009 20:14:38 +0100
 
-[!note I think we've already had a discussion on this, but I don't
+[note I think we've already had a discussion on this, but I don't
 remember any details.]
 
     def is_open(root):
