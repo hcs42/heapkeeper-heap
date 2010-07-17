@@ -1,5 +1,6 @@
 Author: Attila Nagy
 Subject: hkweb rewritten to start from hkshell and use new Generator
+Tag: reviewed
 Message-Id: <b29f917d0911081524p6805ce2dv3ed4aa06d01a08f@mail.gmail.com>
 Parent: <b29f917d0911081520j1e29e469sf4e71b36b6eccf3@mail.gmail.com>
 Date: Mon, 9 Nov 2009 00:24:08 +0100
