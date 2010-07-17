@@ -2,6 +2,7 @@ Author: Attila Nagy
 Subject: Lost threads: semantics of the asleep state
 Tag: idea
 Tag: issue
+Tag: reviewed
 Message-Id: <20100128104123.28859e8e.nagy.attila.1984@gmail.com>
 Parent: <4AFFB236.1020907@gmail.com>
 Date: Thu, 28 Jan 2010 10:41:23 +0100
@@ -55,4 +56,4 @@ falling asleep. (Though I have a strange reflection [2].)
 What do you think about this idea?
 
 [1] heap://hh/772
-[2] heap://3939
+[2] heap://hh/1055
