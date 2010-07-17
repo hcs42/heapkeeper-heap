@@ -1,0 +1,23 @@
+Author: Csaba Hoch
+Subject: Refactorings after v0.7
+Tag: issue
+Message-Id: <AANLkTinvV-21-2dvjmUHKXJmSBMZHO62V5CmPgEJ5nEy@mail.gmail.com>
+Date: Sat, 17 Jul 2010 10:37:10 +0100
+
+As we agreed in heap://hh/1222, we shall perform perform larger
+refactorings very soon after releasing a new Heapkeeper version.
+
+The current plans for refactoring after releasing v0.7 are the
+following:
+
+1. Creating a hkemail module and moving hklib.EmailDownloader there.
+   (See also: heap://hh/1027; left over from heap://hh/1223.)
+2. Moving all code from hkcustomlib to hkshell and removing
+   hkcustomlib. (See also: heap://hh/1282)
+3. Moving hklib.GeneratorOptions into hkgen. (See also: heap://hh/1282)
+4. Splitting hkgen.Generator into a superclass and a subclass. The
+   superclass would know "only what is common in static and hkweb
+   output"; the rest would go into the subclass. (See also:
+   heap://hh/1282)
+5. Creating a hkconfig module and moving the functions that handle the
+   configuration dictionary from hklib here.
