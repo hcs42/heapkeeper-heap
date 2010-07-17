@@ -3,19 +3,10 @@ Subject: Keeping track of known tags for a heap in a file
 Tag: cleanup
 Tag: feature
 Tag: idea
+Tag: reviewed
 Message-Id: <20091228074322.f0b16c01.nagy.attila.1984@gmail.com>
 Parent: <4AF7026D.5010404@gmail.com>
 Date: Mon, 28 Dec 2009 07:43:22 +0100
-
-> [effort: 5]
->
-> It is getting harder to keep track of all the tags we use.
->
-> We could store all accepted tags in a file in the heap's directory
-> (e.g. "known_tags"), and the Generator could highlight the tags that
-> are not present in this file. Then the maintainer could decide either
-> to correct the tag (e.g. correct "Python" to "python"), or to add the
-> tag to the known_tags file.
 
 Great idea! I'd love to do it.
 
