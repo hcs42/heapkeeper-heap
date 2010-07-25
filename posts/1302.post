@@ -1,0 +1,38 @@
+Author: Csaba Hoch
+Subject: Savings posts with loaded with warnings in a list or dict
+Tag: feature
+Tag: idea
+Message-Id: <AANLkTimoIsoUoet52u9GaZx3GfTk56gXmvDqRm3hBjWU@mail.gmail.com>
+Parent: <AANLkTik0Cao2Qc5n9D9TUJb7Jb8m5W0yl5JABX0s7IrX@mail.gmail.com>
+Date: Mon, 19 Jul 2010 10:10:11 +0100
+
+> Do you think this would be helpful?
+
+Probably yes.
+
+Although there is an easy workaround: copy-paste all warnings on the
+terminal into an advanced editor, and with a few keystrokes you will
+be able to make something like this:
+
+    e = ps([
+        'hh/123',
+        'hh/456',
+        'hh/567',
+    ])
+
+which you can just paste into the terminal and got the list.
+
+If you have so many error messages that copy-paste is not convenient,
+you can of course do something like
+
+    python src/hk.py 'q()' 2>&1 1>errors.txt
+
+and edit errors.txt.
+
+> If yes, which form do you prefer?
+
+The latter form. If we implement the former, I think we will soon want
+to distinguish between the error types. Also, the above workaround
+does not really work if we want to make this distinction; so the
+desire to have this distinction is a good reason for implementing this
+feature within Heapkeeper.

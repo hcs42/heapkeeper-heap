@@ -1,0 +1,21 @@
+Author: Attila Nagy
+Subject: Using hkweb and hkshell in parallel: reasons to switch back to terminal
+Message-Id: <AANLkTimqE6DIf_ODrBJtqBhQ1DtFaeliQEGasNn7w9PW@mail.gmail.com>
+Date: Fri, 23 Jul 2010 17:54:55 +0200
+
+I have been using hkweb to maintain our private heap for a while now,
+and it is a great help - it makes the task much more "visual".
+However, until we can do everything from within hkweb, it remains a
+nuisance to have to switch between the terminal and the web browser.
+
+Your reasons for having switching to the terminal vary with your
+editing style; for me, these are the most common causes, roughly in
+this order:
+- splitting posts,
+- adding tags recursively,
+- propagating subjects,
+- deleting posts.
+
+It may be worthy to implement a way of accessing these functions
+right in hkweb, so that the time lost changing to hkshell and back
+could be minimal.

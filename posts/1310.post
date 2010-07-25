@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: Links become static style links after a save in hkweb until page is reloaded
+Tag: bug
+Message-Id: <AANLkTil06EvqAc5aG9g0tk9xXzqfHg-mxOknsa1Fq0iU@mail.gmail.com>
+Parent: <AANLkTikwIqNGb8BujONy6UtDA4-cQhUZBs7hT6cr1Y2c@mail.gmail.com>
+Date: Thu, 22 Jul 2010 09:38:42 +0100
+
+I think this bug was already fixed by commit b459700a69 (2010-07-07):
+
+http://github.com/hcs42/heapkeeper/commit/b459700a69066ec28db380f546b91239c8904177
+
+Could you check this?

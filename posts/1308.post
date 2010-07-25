@@ -1,0 +1,17 @@
+Author: Attila Nagy
+Subject: Empty tags are supported
+Tag: bug
+Tag: idea
+Message-Id: <AANLkTilqinMxSZQ1Qt4OxE4FQbvhEPRlKABGnvPPJ-54@mail.gmail.com>
+Parent: <AANLkTimUOz4Ekkeuxldvzw_jGqmavmTwc15a5E0htUgB@mail.gmail.com>
+Date: Tue, 20 Jul 2010 18:20:20 +0200
+
+> Do you say that the rTr command added an empty tag to a post without
+> the root having the empty tag?
+
+All I know is that the empty tag was added after an rTr command, but
+now that you mention it, the root probably didn't receive the empty
+tag, but all the children did.
+
+I really should have preserved the state of the heap after the
+operation, maybe it could have been helpful.

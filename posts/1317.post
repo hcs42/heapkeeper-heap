@@ -1,0 +1,29 @@
+Author: Attila Nagy
+Subject: "on the heap" or "in the heap"
+Message-Id: <20100723183416.39f58f21.nagy.attila.1984@gmail.com>
+Parent: <AANLkTind1uHR2AW-vx+jop6rZ1926JS8Oz26w-FGizv2@mail.gmail.com>
+Date: Fri, 23 Jul 2010 18:34:16 +0200
+
+> Which one do you think is correct:
+> - There are two posts on the heap.
+> - There are two posts in the heap.
+
+I think this is a conflict between the original meaning of the word
+and the new one that we created.
+
+And it's not even that simple. A real-world heap behaves a bit like a
+stack. You can only put things "on" it, but things might be "on" it
+(if it's not yet covered by other items), or "in" it (if it is).
+
+Talking about stacks, the data structures, we can also say that
+something is "on the stack", which, at least to me, seems to suggest
+that it's been recently pushed, or we can say that something is
+"stored in the stack", which suggests that it may be anywhere, not
+necessarily near the top.
+
+I don't think we need to make this distinction with heaps. Heaps are
+mailing list archives. Things are *in* an archive, not *on* them. But
+I think we should say that both forms are correct, with "in the heap"
+being the preferred form.
+
+What do you think?

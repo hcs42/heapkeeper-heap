@@ -1,0 +1,18 @@
+Author: Csaba Hoch
+Subject: Implementing deleting posts
+Tag: feature
+Tag: idea
+Message-Id: <AANLkTikcqvO_n9D9Dj5kPooEJK-jgO9fTQtm2gSy=g2Y@mail.gmail.com>
+Parent: <AANLkTimmNbiEP1IYQauP9T1-_9vh-aPRPWn-I4kF85rd@mail.gmail.com>
+Date: Fri, 23 Jul 2010 18:04:52 +0200
+
+> The question is, should we implement it as a plugin, or as a core
+> feature? I would say core, since it is such an elementary operation.
+
+Definitely core.
+
+> Some form of protection might be useful, however, like popping up an
+> "Are you sure?" box in JS. What do you think?
+
+OK for me. I don't delete posts so often that a confirmation request
+in a popup message would be annoying.

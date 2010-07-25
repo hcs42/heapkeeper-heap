@@ -1,0 +1,26 @@
+Author: Attila Nagy
+Subject: "Stars" not updated when first subject changes via hkweb
+Tag: bug
+Message-Id: <AANLkTiljlqN0J0eZX-WnPsGnfVmGLoGVoBLvUv74TNLK@mail.gmail.com>
+Date: Mon, 19 Jul 2010 17:19:35 +0200
+
+Suppose we have this thread in hkweb:
+
+    Attis   Lorem ipsum  <test/1>
+        Attis   -           <test/2>
+            Attis   -           <test/3>
+
+The "-" stands for that em dash character that substitutes for the
+subject iff it is the same as that of the parent. (This is called
+"star" in the source, as it used to be an asterisk in the output.)
+
+Now if we edit <test/1> via Hkweb's "Edit raw post" feature, and
+change the subject to something else, then save it, the "-" characters
+remain there, suggesting that those posts' subjects also changed, but
+this is not true, which is clear once the page is reloaded.
+
+A possible solution: stars could be removed, and a new element could
+be introduced, which contains an invisible em dash and a visible
+subject. Then, Javascript would be used to hide the subject and show
+the dash when the subject is identical to that of the parent. This
+would be re-checked for every child after every editing a post.

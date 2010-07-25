@@ -1,0 +1,15 @@
+Author: Attila Nagy
+Subject: Links become static style links after a save in hkweb until page is reloaded
+Tag: bug
+Message-Id: <AANLkTikwIqNGb8BujONy6UtDA4-cQhUZBs7hT6cr1Y2c@mail.gmail.com>
+Date: Wed, 21 Jul 2010 23:36:44 +0200
+
+When editing a post through hkweb, if the post contains a heap-link
+(i.e. a link with the protocol identifier "heap"), saving the post
+will cause the link to be changed to the static form, i.e. something
+like "thread_123.html#post-summary-heap-123".
+
+It is very probable that the Generator that sends back the rendered
+body of the new post is the culprit: it is not configured to generate
+hkweb-style links, whereas the default Generator of hkweb (the one
+that serves the whole page) is.

@@ -1,0 +1,26 @@
+Author: Csaba Hoch
+Subject: Creating a hkconfig module
+Tag: issue
+Message-Id: <AANLkTin5kNekuAGpKxZN0lYNVG5kZ_kccYfHAfx0qiGY@mail.gmail.com>
+Date: Sun, 18 Jul 2010 21:39:25 +0100
+
+>> 5. Creating a hkconfig module and moving the functions that handle the
+>>    configuration dictionary from hklib here.
+
+> OK. Point 5 is a bit broad though, maybe we should discuss the specifics.
+
+I meant moving the functions that convert the config dictionary
+created from the config files by ConfigParser into our unified config
+dictionary format:
+
+- unify_config
+- unify_format_1
+- convert_nicknames_f12_to_f3
+- convert_heaps_f2_to_f3
+- unify_format_2
+- unify_nicknames
+- unify_server
+- unify_format_3
+
+The methods that read values from the configuration dictionary would
+stay as they are now.

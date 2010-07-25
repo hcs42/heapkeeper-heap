@@ -1,0 +1,16 @@
+Author: Csaba Hoch
+Subject: Renaming the "main" post item position to "inner"
+Tag: hh
+Tag: issue
+Message-Id: <AANLkTil6NDDnEyz8n208rB7HO9hVxejdspWMcxTlKjI2@mail.gmail.com>
+Parent: <4B61D30A.3010702@gmail.com>
+Date: Sat, 17 Jul 2010 17:38:15 +0100
+
+[!todo Parent: heap://hh/1061;
+http://heapkeeper-heap.github.com/hh/thread_925.html#post-summary-hh-1061
+]
+
+I have renamed the "main" post item position to "inner" in commit
+b696b4f60c (2010-06-05).
+
+[close]

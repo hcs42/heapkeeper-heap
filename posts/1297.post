@@ -1,0 +1,13 @@
+Author: Csaba Hoch
+Subject: Status of the repository
+Message-Id: <AANLkTimpFC85v0K6RQRJ9KBMVU613EJDCbJpNfyJpois@mail.gmail.com>
+Parent: <AANLkTil45AthPKanjD0VtRWUMpnhsbCxFdKBpZbD82bJ@mail.gmail.com>
+Date: Sat, 17 Jul 2010 13:52:42 +0100
+
+> - _issue_tracker: this branch needs the most attention; I embarked on
+>  a venture to make the issue tracker more beautiful, but it can't be
+>  included in a release like this -- it hotlinks to Canonical's forum
+>  icons, which is not a nice thing to do (and even worse to deploy!)
+
+I want to create an issue tracker plugin, and I will use this branch
+too. So I'll take care of this.

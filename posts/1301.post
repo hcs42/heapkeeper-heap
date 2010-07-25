@@ -1,0 +1,34 @@
+Author: Attila Nagy
+Subject: Savings posts with loaded with warnings in a list or dict
+Tag: feature
+Tag: idea
+Message-Id: <AANLkTik0Cao2Qc5n9D9TUJb7Jb8m5W0yl5JABX0s7IrX@mail.gmail.com>
+Date: Mon, 19 Jul 2010 07:03:17 +0200
+
+I rebased an earlier set of tidying modifications on our current head
+of the repository. This contains posts with the obsolete "References:"
+header. When the post database is loaded, this generates a series of
+warnings.
+
+However, when I want to tidy these posts up, I have to scroll back to
+these warnings and type the IDs of the posts manually in order to edit
+them, which is a boring and error-prone task.
+
+It would be much nicer if the list of posts causing loading errors
+would be retained in a list, so tidying up all the offensive posts
+would be as simple as
+
+    >>> e(import_error)
+
+or something similar.
+
+A possible improvement: instead of a list, we could have a dict that
+would assign the offending posts to the names of the errors they
+contain, so "import_error" would look like this:
+
+    {
+        'unknown_header': [<hh/123>, <hh/456>],
+        'encoding_error': [<hh/789>]
+    }
+
+Do you think this would be helpful? If yes, which form do you prefer?

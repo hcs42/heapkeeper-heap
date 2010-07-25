@@ -1,0 +1,16 @@
+Author: Attila Nagy
+Subject: Implementing deleting posts
+Tag: feature
+Tag: idea
+Message-Id: <AANLkTilAmTCCTjmWYJlJ1Y83Gtqw1TdA62vww6a29IsH@mail.gmail.com>
+Parent: <AANLkTimmNbiEP1IYQauP9T1-_9vh-aPRPWn-I4kF85rd@mail.gmail.com>
+Date: Fri, 23 Jul 2010 18:10:42 +0200
+
+> Implementing post deletion from hkweb would be a "low-hanging fruit"
+> in this collection.
+
+[todo The "in this collection" part refers to the root of the thread
+"Using hkweb and hkshell in parallel: reasons to switch back to
+terminal"; it should be marked as this post's parent, or at least a
+reference]
+[delpost]

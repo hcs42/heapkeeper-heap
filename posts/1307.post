@@ -1,0 +1,10 @@
+Author: Csaba Hoch
+Subject: Empty tags are supported
+Tag: bug
+Tag: idea
+Message-Id: <AANLkTimUOz4Ekkeuxldvzw_jGqmavmTwc15a5E0htUgB@mail.gmail.com>
+Parent: <AANLkTimnFDAvSSNB4wFOZ4mVECHyZvxapKfSkYC3nsLS@mail.gmail.com>
+Date: Tue, 20 Jul 2010 18:18:03 +0200
+
+Do you say that the rTr command added an empty tag to a post without
+the root having the empty tag?

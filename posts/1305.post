@@ -1,0 +1,31 @@
+Author: Csaba Hoch
+Subject: Empty tags are supported
+Tag: bug
+Tag: idea
+Message-Id: <AANLkTimV5Nh5I4mtNY24RqEdONJZh_XcuQb31DOlmPf1@mail.gmail.com>
+Parent: <AANLkTikUK-RJTL2mHhttK1fBPUqkr361IBUYcRREnvI1@mail.gmail.com>
+Date: Tue, 20 Jul 2010 18:08:22 +0200
+
+> Empty tags are supported.
+
+Do you mean that we support the empty string being used as a tag?
+
+> The only problem with this is that a post with a single empty tag is
+> indistinguishable from one with no tags in the HTML output.
+
+I don't think people should use the empty tag. Although you may have
+the concern that a post file may get an empty tag by accident, which
+will not be apparent for the maintainer who uses the hkweb. (The
+problem reminds me to the situation when for example "Makefile"
+becomes "MAKEFILE" when worked on by a Windows user, but the problem
+will be apparent only when a Unix user gets a copy of the source
+code and tries to work on it.)
+
+I see the following options:
+1. Show the empty tag specially in the HTML output.
+2. Don't allow the empty tag. This means throwing an exception or a
+   warning when parsing a post file with an empty tag, and/or
+   modifying Post.set_tags to check for this.
+3. Do nothing.
+
+I don't really like either of these.
