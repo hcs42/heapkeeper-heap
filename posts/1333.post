@@ -1,0 +1,80 @@
+Author: Attila Nagy
+Subject: Removing the Reference attribute
+Tag: prop
+Message-Id: <AANLkTi=r_1dUUO_G4gSagu4oGABGBxXRg65FAHncg8PV@mail.gmail.com>
+Parent: <AANLkTimvqV0QSyepvGzP+qvEzFZ8g1LhQ=wAf0dRfFUt@mail.gmail.com>
+Date: Sun, 25 Jul 2010 23:33:06 +0200
+
+> I would like to modify my opinion. Now I think that it would be useful
+> to have an "Original-parent" header attribute.
+
+I agree.
+
+However, what you are planning would work only if the maintainer of
+the heap never adds or removes posts to/from a subthread. A situation
+where automatic identification of original authors may be a problem:
+
+<1> Alfred: Chess?
+
+        Anyone for chess tomorrow night?
+
+    <2> Peter: Party tomorrow
+
+            Please don't forget that the annual USR Party will be held
+            tomorrow evening.
+
+        <3> Peter: Party tomorrow
+
+                [note Almost forgot...]
+
+                > Please don't forget that the annual USR Party will be held
+                > tomorrow evening.
+
+                Appropriate attire required!
+
+                [todo join this to parent]
+
+            <4> Susan: Party tomorrow
+
+                    >> Please don't forget that the annual USR Party
+will be held
+                    >> tomorrow evening.
+
+                    Oh, almost forgot.
+
+                    > Appropriate attire required!
+
+                    What do you mean?
+
+Now if the maintainer obeys what Peter asks in post 3, xe will also
+have to modify the quote depth in post 4, otherwise the first quote
+will be attributed to Alfred, while the real author is Peter.
+
+To handle this semi-automatically, we should introduce the concept of
+a valid quote. A valid n-depth quote contains lines which can be found
+in the nth ancestor of the post unquoted. We could check quotes, and
+warn if a change introduces new invalid quotes. So, if the maintainer
+copies text from post 3 to post 2, nothing happens; but when xe
+changes post 4's parent to 2, the first quote in post 4 becomes
+invalid.
+
+When maintaining, I never reflow quotes. So, if someone sends a post
+like this:
+
+    > Unnecessary sentence. This is
+    > what we really want to
+    > quote. This is not needed.
+
+    This is my reply.
+
+and I want to make the post more readable by decreasing the amount of
+quotes, I do this:
+
+    > This is
+    > what we really want to
+    > quote.
+
+    This is my reply.
+
+If the maintainer does this, deciding if a quote is valid is easy.
+Otherwise, we will have to pay attention to whitespace issues.

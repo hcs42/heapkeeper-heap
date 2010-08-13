@@ -1,0 +1,17 @@
+Author: Csaba Hoch
+Subject: Replying to posts not in the Heapkeeper Heap
+Tag: prop
+Message-Id: <AANLkTikDLcjHzyMM8eQvGCSA_i-F6+GsrPjZW4ykJ2BL@mail.gmail.com>
+Parent: <AANLkTi=d3hiQQY9yt_MiP07jBcO+BQi-0d8iRTaRpJ3q@mail.gmail.com>
+Date: Wed, 4 Aug 2010 20:56:34 +0200
+
+Instead of this:
+
+    [note Parent post: http://github.com/]
+
+I wanted to write this:
+
+    [note Parent post:
+http://heapkeeper-heap.github.com/hh/thread_12340.html#post-summary-hh-12345]
+
+[todo Fix the parent and delete this post.]

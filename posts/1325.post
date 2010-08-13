@@ -1,0 +1,24 @@
+Author: Attila Nagy
+Subject: "idea" tag
+Tag: meta
+Message-Id: <AANLkTinpC0hVGq-Wo72idNbf7+Fw_1qSoT733ahnnUH4@mail.gmail.com>
+Parent: <AANLkTi=caia68WdwJ13+=b50KseybGGESFRw4yvH44t=@mail.gmail.com>
+Date: Sun, 25 Jul 2010 19:55:33 +0200
+
+> This thread is about a bug that is certainly a bug. Its fix is both
+> useful and implementable.
+
+I wasn't at all certain that it is a bug. If it is OK in JS to do
+this, then it's not a bug.
+
+> In general, it is very rare that a thread
+> should have both a "bug" and an "idea" tag.
+
+I used the "unsureness" present in the meaning of "idea" to express
+that I'm not sure if it is a bug. But now that you point it out, the
+more precise concepts of "feasibility" or "usefulness" do not seem to
+apply to bugs at all, so I will not use the "bug" and "idea" tags
+together.
+
+Do you think we should have a special way to denote potential bugs, or
+we should simply use the "bug" tag for these?

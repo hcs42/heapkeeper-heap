@@ -1,0 +1,24 @@
+Author: Attila Nagy
+Subject: "idea" tag
+Tag: meta
+Message-Id: <AANLkTikSSunAZ1X1c0TOBEQ28X+TRB-a9+Rw15NBWyC+@mail.gmail.com>
+Parent: <AANLkTi=caia68WdwJ13+=b50KseybGGESFRw4yvH44t=@mail.gmail.com>
+Date: Sun, 25 Jul 2010 20:01:52 +0200
+
+> You seem to use the "idea" tag too much recently. The "Implementing
+> deleting posts" thread [1] should not have an idea tag.
+
+I believe I can explain myself here: I wasn't sure we wanted this. A
+"Delete" button with no undo feature in place could result in
+accidental deletion of posts. It seems nice to have to change to
+hkshell to delete a post as a safeguard against accidental use.
+
+> I would not
+> have given it to the "Implementing post splitting" thread [2] either,
+> but I'm not so sure about that one.
+
+This is different. I need this feature, so no usefulness question
+here. Of course it is feasible, but the difficulty of implementation
+was a question; though now that I'm halfway there, it doesn't seem
+that difficult. I added the "idea" tag there because I wasn't sure it
+was worth the effort.

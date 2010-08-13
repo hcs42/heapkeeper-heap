@@ -1,0 +1,45 @@
+Author: Csaba Hoch
+Subject: IM meeting 2010-07-25
+Tag: minutes
+Message-Id: <AANLkTi=DJtpkYAHqxE__Xb3LtivouJHCDUL-9xrb9z6E@mail.gmail.com>
+Date: Sun, 25 Jul 2010 22:49:55 +0200
+
+Present:
+- Attila Nagy
+- Csaba Hoch
+
+== Link on the index page to the search page ==
+
+Heapkeeper has a Google-like search page that contains almost only a
+search bar (localhost:8080/search). Csabi will place the search bar on
+the top of the hkweb index page, which Attis likes too. Csabi also
+wanted to put a link to the search page onto the index page so that
+the search page will not be a hidden feature. He saw two alternatives:
+
+a) Putting the link next to the search bar:
+
+    [input form] [Search button] [Link to search page]
+
+b) Creating a new section after the search bar for links like the
+   search page, Heapkeeper homepage, later a help page etc. Specific
+   heaps could extend this list, e.g. HH could link to its issue
+   tracker page (that does not exist yet).
+
+Attis's opinion on option "b" was that a customizable section would be
+useful where one can put e.g. useful links, but he did not really
+understand the purpose of the separate search page. Csabi said that
+the separate page would be useful because it would load much faster
+then the index page. Attis said that the solution to this would be to
+have the index page show only the n newest threads. Csabi accepted
+this solution.
+
+We agreed that in the short term, we would add a link section to the
+current page, which would not include the search page. Later we would
+show only the newest threads on the index page, and would have a link
+for the whole post database (which is the current index page).
+
+Csabi mentioned that the "n newest threads" is not as trivial as it
+sounds, because the "newest thread" in Heapkeeper means "the one with
+the newest root", and the index page should not display the n newest
+threads in this sense; but it should display n threads that contain
+the newest posts.

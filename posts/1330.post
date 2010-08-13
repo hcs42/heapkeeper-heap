@@ -1,0 +1,71 @@
+Author: Csaba Hoch
+Subject: Implementing adding posts in hkweb
+Tag: feature
+Message-Id: <AANLkTikxFv8YVF25nzjZ7NJ3ABMrXkb4QNQC4piLvHMM@mail.gmail.com>
+Date: Sun, 25 Jul 2010 21:35:23 +0200
+
+We should have an "add child" button next to each post in hkweb that
+creates a child post.
+
+== Implementation remarks ==
+
+The `hkshell.enew` function does the same in hkshell, so most of its
+code should be used here. Of course the best thing would be to
+refactor the general part into e.g. a hklib function, and use that in
+both hkshell.enew and hkweb.
+
+== Add siblings ==
+
+Attis mentioned in [1] that we could also have an "add sibling"
+button:
+
+> A side note: we should add an "add sibling" function beside an "add
+> child". If "1" has another child, or more of them, which all come after
+> "2" in the thread view, after using "add new child" on post "1", the new
+> post will be placed after all of them, adding to the visual separation. If
+> we use "add sibling" on post "2", the program can be smart enough to
+> put the new post after the children of "2", and before any other child
+> of "1", with a probably much smaller visual separation between the old
+> and new post. (This function does not even need its own button: it
+> could be added to the button of "add child", but accessed while
+> pressing Shift; the availability of this function could be indicated
+> in mouseover text.)
+
+Currently the siblings are sorted in a well-defined way: if both posts
+have dates which are not equal, then the earlier post will be the
+first to show; otherwise the one with the alphabetically smaller post
+id will be the first to show. I think we should keep this ordering
+when creating new posts in hkweb, which means that "add sibling"
+functionality would always be equivalent to the "add child"
+functionality of the parent. The new post would get the current
+date&time, which means that (unless there are posts from the future)
+it would always be the last one among its siblings.
+
+Although I have two notes to add:
+
+=== Reordering ===
+
+When the date of a post is modified, the posts are currently not
+reordered so the order may become incorrect. It would be a fun
+challenge to solve this by resorting the posts dynamically, but now we
+just print an alert saying the following:
+
+    A major change was made on the post that may have affected the
+    thread structure. To see the most current thread structure,
+    please reload the page.
+
+I think this behavior is fine for now.
+
+=== Benefits and costs of the "add sibling" button ===
+
+The "add sibling" button would be still useful in a way because the
+user will not have to scroll to find the parent and its "add child"
+button. But the cost of this button (occupied space next to each post)
+outweighs the previously mentioned benefits. Although later we should
+have a drop-down menu button next to each post that would contain the
+less frequently used features, and that could include an "add sibling"
+button.
+
+[todo
+[1] Reference to the original parent of this post, which is root of
+    the "[feature][idea] Implementing post splitting" thread.]

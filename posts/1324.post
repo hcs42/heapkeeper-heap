@@ -1,0 +1,14 @@
+Author: Csaba Hoch
+Subject: Command line JavaScript
+Message-Id: <AANLkTi=0NZ2RqN1a3FtXwcurKxKMkCL_xAxkDg+tzYiN@mail.gmail.com>
+Date: Sun, 25 Jul 2010 16:59:08 +0200
+
+"Rhino is an open-source implementation of JavaScript written entirely
+in Java." [1]
+
+We could use this to automate JavaScript unit testing [2] and
+JavaScript code quality control [3].
+
+[1] http://www.jslint.com/rhino/index.html
+[2] heap://hh/1281
+[3] http://www.jslint.com/

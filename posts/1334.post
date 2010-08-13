@@ -1,0 +1,69 @@
+Author: Csaba Hoch
+Subject: Replying to posts not in the Heapkeeper Heap
+Tag: prop
+Message-Id: <AANLkTi=d3hiQQY9yt_MiP07jBcO+BQi-0d8iRTaRpJ3q@mail.gmail.com>
+Date: Wed, 4 Aug 2010 20:54:16 +0200
+
+Since we separated the UMS heap and the Heapkeeper Heap, I often want
+to reply to a HH post that is not present in the mailing list behind
+HH, only on HH.  This could also occur in cases when the post does not
+even have an email counterpart because it was originally created in
+the heap.
+
+I propose that the reply post should be created in one of the
+following ways.
+
+== Without GMail web interface ==
+
+If you can use an email client other than GMail web interface, and the
+parent is an email in our inbox, choose this method.
+
+1. Reply to the parent email and remove the "[hh]" part from the
+   subject. This way the new email will be recognized by other mail
+   clients (except for GMail web interface) and by Heapkeeper as a
+   children of the parent email (because the sender email client will
+   put the message id of the parent email into the In-Reply-To field
+   of the email header of the new email).
+
+2. Put a reference into the email that refers to the HH GitHub page of
+   the parent post, e.g.:
+
+       [note Parent post: http://github.com/]
+
+   This way it will be easy for the reader of the mailing list to have
+   a look at the parent and the thread.
+
+Point (2) means that we have to support this link format of the
+generated thread pages forever, but I don't have a problem with that.
+Maybe we will regard it as a legacy format some day; then we can have
+an option to turn it on.
+
+== With GMail web interface ==
+
+Since the subject has to be changed (the "[hh]" part has to be
+removed), GMail web interface will not put the message id of the
+parent email into the In-Reply-To field of the header of the new
+email. This means that the new post has to be joined with the parent
+in the heap by a heap maintainer, so a "todo" tag should be used as
+well:
+
+   [todo Parent: heap://12345]
+
+== Summary ==
+
+Do the followings when replying to a post not present on HH:
+
+1. Change the subject by removing the "hh" tag.
+
+2. If you use a non-web-GMail interface and reply to the parent email,
+   append this to the email:
+
+       [note Parent post: http://github.com/]
+
+   otherwise add this:
+
+       [note Parent post: http://github.com/]
+       [todo Parent: heap://12345]
+
+This method (point 1 only if necessary) could be the preferred method
+for any heap, not only for HH.

@@ -1,0 +1,59 @@
+Author: Csaba Hoch
+Subject: Removing the Reference attribute
+Tag: prop
+Message-Id: <AANLkTimvqV0QSyepvGzP+qvEzFZ8g1LhQ=wAf0dRfFUt@mail.gmail.com>
+Date: Sun, 25 Jul 2010 22:51:20 +0200
+
+[todo The original parent of this post is heap://hh/1190, which can be
+viewed currently at:
+http://heapkeeper-heap.github.com/hh/thread_1190.html#post-summary-hh-1190 ]
+
+I already removed the Reference attribute in Heapkeeper v0.5 (commit
+5a7e03e573), but I haven't closed this thread because I know Attis has
+objections.
+
+I would like to modify my opinion. Now I think that it would be useful
+to have an "Original-parent" header attribute. The reason is that with
+normal threads, Heapkeeper would be able to determine which quote
+belongs to whom. For example if we have the following thread:
+
+    <1> Susan: Nice robot
+
+        Your robot is so nice that I could just take it and run away!
+
+      <2> Peter: Nice robot
+
+          > Your robot is so nice that I could just take it and run
+          > away!
+
+          Thanks!
+
+        <3> Alfred: Nice robot
+
+            >> Your robot is so nice that I could just take it and run
+            >> away!
+
+            I don't think it is that nice...
+
+then Heapkeeper would be able to determine that the quote in post 3
+originated from post 1. E.g. it could have a feature to add the
+author's name before each quote, which could even be a link to the
+original post:
+
+    <3> Alfred: Nice robot
+
+        [Susan <usr/1>]
+        >> Your robot is so nice that I could just take it and run
+        >> away!
+
+        I don't think it is that nice...
+
+This could work until post 2 is marked as the parent of post 3. But
+sometimes we break threads because the topic changes significantly
+between a parent and a child, and we want the thread view of
+Heapkeeper to show them as separate threads. It would be good even in
+those cases to provide Heapkeeper with the information that the quotes
+in post 3 are originated from post 2.
+
+So now I propose adding an "Original-parent" header attribute. But I
+still don't propose having a "Reference" attribute.
