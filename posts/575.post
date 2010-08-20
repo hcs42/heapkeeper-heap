@@ -1,5 +1,6 @@
 Author: Attila Nagy
 Subject: Return value of `dl()` in hkshell
+Tag: reviewed
 Message-Id: <b29f917d0909021527mc67a49cob82a376b392a1779@mail.gmail.com>
 Date: Thu, 3 Sep 2009 00:27:13 +0200
 
@@ -86,3 +87,5 @@ Simple and unobtrusive, but not very elegant.
     3
 
 Which one do we prefer?
+
+[note Original parent: heap://hh/514]

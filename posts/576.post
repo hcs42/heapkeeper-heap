@@ -35,7 +35,7 @@ branches to your ones.
 
 I've implemented the improved functionality of `dl()` so that it can
 now return the new posts in a  `PostSet`. I have my doubts, though...
-see the thread on "Return value of `dl()`".
+see the thread on "Return value of `dl()`" [1].
 
 === _golem ===
 
@@ -55,3 +55,5 @@ this is not a problem. Also since all of these are
 underscore-branches, a.k.a. public remotes, no-one should complain
 about these moving around constantly as the review process takes
 place.
+
+[1] heap://hh/575
