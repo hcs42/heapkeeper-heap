@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: Replying to posts not in the Heapkeeper Heap
 Tag: prop
+Tag: reviewed
 Message-Id: <AANLkTi=d3hiQQY9yt_MiP07jBcO+BQi-0d8iRTaRpJ3q@mail.gmail.com>
 Date: Wed, 4 Aug 2010 20:54:16 +0200
 
@@ -28,7 +29,7 @@ parent is an email in our inbox, choose this method.
 2. Put a reference into the email that refers to the HH GitHub page of
    the parent post, e.g.:
 
-       [note Parent post: http://github.com/]
+       [note Parent post: http://heapkeeper-heap.github.com/hh/thread_12340.html#post-summary-hh-12345]
 
    This way it will be easy for the reader of the mailing list to have
    a look at the parent and the thread.
@@ -58,11 +59,11 @@ Do the followings when replying to a post not present on HH:
 2. If you use a non-web-GMail interface and reply to the parent email,
    append this to the email:
 
-       [note Parent post: http://github.com/]
+       [note Parent post: http://heapkeeper-heap.github.com/hh/thread_12340.html#post-summary-hh-12345]
 
    otherwise add this:
 
-       [note Parent post: http://github.com/]
+       [note Parent post: http://heapkeeper-heap.github.com/hh/thread_12340.html#post-summary-hh-12345]
        [todo Parent: heap://12345]
 
 This method (point 1 only if necessary) could be the preferred method
