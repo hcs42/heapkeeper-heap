@@ -1,0 +1,36 @@
+Author: Csaba Hoch
+Subject: Heapkeeper v0.7 released
+Tag: release
+Tag: v0.7
+Message-Id: <AANLkTinei-rvviEcFFPchHjLk1hqCXtmAY=ostGCckyk@mail.gmail.com>
+Date: Fri, 20 Aug 2010 21:49:44 +0200
+
+I'm happy to announce that Heapkeeper v0.7 has been released.
+
+The main improvement of this release are creating a plugin
+infrastructure and adding search functionality to hkweb.
+
+Major new features:
+
+- Creating a plugin infrastructure. Three plugins have been created so
+  far: the "Review" plugin, which can set posts to reviewed; the
+  "Custom Heap Server" plugin, which shows only posts in a specified
+  heap; and the "Issue Tracker" plugin, which displays the heap as a
+  list of issues.
+- Searches can be performed via hkweb.
+- When editing a post in hkweb, pressing shift-enter will save the
+  post.
+- Supporting IMAP without SSL.
+
+Major refactorings:
+
+- Moving the Python source code into the "src" subdirectory and moving
+  the CSS/JavaScript/PNG files into the "static" subdirectory.
+
+Other major improvements:
+
+- JavaScript unit tests were added.
+- IMAP queries are more efficient and comply with RFC 2683 / 3.2.1.5.
+  (Long Command Lines).
+
+The new release can be downloaded from http://heapkeeper.org/download.html

@@ -1,0 +1,57 @@
+Author: Csaba Hoch
+Subject: Meeting 2010-08-14
+Tag: minutes
+Tag: issue
+Message-Id: <4C67E7E8.7010807@gmail.com>
+Date: Sun, 15 Aug 2010 15:13:12 +0200
+
+Attis and I had a meeting today.
+
+We agreed on the following actions:
+
+1. Solve the problem of paths: most importantly, the program should
+   work independently of the current working directory. Beyond that,
+   we aim to support two modes of operation: an installed mode, where
+   the program and its belongings (e.g. CSS, JS files) reside in a
+   central location, while config files reside under users' home
+   directories, and a non-installed mode, which means the user just
+   extracts Heapkeeper somewhere, and uses it from there, without
+   separating the code from the user's data files. A possible
+   solution: during initialization, we should check for a
+   user-specific config directory (e.g. ~/.heapkeeper), and if it
+   exists, look for config files there, otherwise look for them where
+   the program resides.
+
+2. Some function names, variable names and other identifiers in
+   hkgen.py contain the word "link", but they actually mean "URL".
+   These identifiers should be modify to contain the word "url".
+
+3. Vim's gitcommit syntax highlight should be modified to use error
+   colors when the commit message does not contain a commit topic.
+   (Commit topic is an expression in the third line written between
+   brackets that states the topic of the commit.)
+
+4. Some buttons of hkweb ("Show", "Hide", maybe also "Back to index")
+   should be moved to the hkgen, so that these buttons will be present
+   in both the static HTML pages created by hkgen and the dynamic HTML
+   pages created by hkweb.
+
+5. We should create a @deprecated decorator for functions. It shall be
+   placed in hkutils. It would make the decorated function print a
+   warning when it is used the first time.
+
+6. We should create a "Wikipage" plugin. The idea behind it is
+   described in heap://hh/4.
+
+7. The server that we use to store the git repository of the UMS Heap
+   should perform the following actions in every 5 or 10 minutes:
+   `dl()`, `s()`, `git commit`. If it works, we could do that even for
+   the Heapkeeper Heap, which would also do a `g()` and a `git push`
+   for both the Heapkeeper Heap post repository and the Heapkeeper
+   Heap HTML repository (both of which are on GitHub).
+
+8. hkweb could serve every request (except for the first one) without
+   reloading the whole page. E.g. when the user clicks to another
+   post, the new post could be loaded and the URL could be changed
+   without loading the whole web page again. This would work like the
+   normal GMail web interface.
