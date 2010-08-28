@@ -101,7 +101,7 @@ Cons:
   files: imagine having the docstrings in the Python source code
   syntax highlighted with wiki syntax!
 
-I know we made a deal the we will use Wiko, which you liked, and the
+I know we made a deal the we will use Wiko [6], which you liked, and the
 git commit message format that I liked. Here is a new deal (or New
 Deal): we start the subjects with lowercase letters, and we use
 Sphinx. What do you say?
@@ -120,3 +120,4 @@ have at least 4 different things where we want to use wiki syntax:
 [3] http://sphinx.pocoo.org/rest.html
 [4] http://people.inf.elte.hu/hoch/mappa/wiki.txt
 [5] http://sphinx.pocoo.org/markup/index.html
+[6] heap://hh/33
