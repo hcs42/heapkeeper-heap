@@ -1,14 +1,9 @@
 Author: Attila Nagy
 Subject: Code coverage
+Tag: reviewed
 Message-Id: <20100210143932.5a42b479.nagy.attila.1984@gmail.com>
 Parent: <4ddb9e5b1001231408k120f2374g94aa70ac9e8ab44b@mail.gmail.com>
 Date: Wed, 10 Feb 2010 14:39:32 +0100
-
-> See the coverage of the new code here:
-> http://heapkeeper.org/tmp/coverage/
->
-> You can click on the module names. The green lines were executed
-> during the test, the red lines were not.
 
 This is great!
 

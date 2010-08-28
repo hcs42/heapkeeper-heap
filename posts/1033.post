@@ -1,5 +1,6 @@
 Author: Csaba Hoch
 Subject: Code coverage
+Tag: reviewed
 Message-Id: <4ddb9e5b1001231351y328024b1i43a8a85fcb31bdc9@mail.gmail.com>
 Parent: <4ddb9e5b1001230945n5b19d521k16ed450d6697e3bb@mail.gmail.com>
 Date: Sat, 23 Jan 2010 22:51:36 +0100
@@ -12,7 +13,7 @@ page [1], I guess that would be the "official" coverage.py that we
 should use. You can installing it in the following way:
 
     $ sudo apg-get remove python-coverage # if you already installed
-coverage.py using apt-get
+                                          # coverage.py using apt-get
     $ sudo apt-get install python-dev python-setuptools
     $ sudo easy_install coverage
 
