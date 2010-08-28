@@ -1,11 +1,11 @@
 Author: Csaba Hoch
 Subject: Removing Post.html*
 Tag: issue
+Tag: reviewed
 Message-Id: <4B115E1D.1050601@gmail.com>
 Date: Sat, 28 Nov 2009 18:30:05 +0100
 
 [assign Csabi]
-[related 2520 (Managing several heaps in Heapkeeper)]
 
 I propose removing the following methods from hklib.Post:
 
@@ -17,3 +17,5 @@ I propose removing the following methods from hklib.Post:
 These things (names of HTML files) should be handled by the generator.
 The first two will not use used at all, the other two should be moved
 into hkgen.Generator.
+
+[1] Related post: heap://hh/536
