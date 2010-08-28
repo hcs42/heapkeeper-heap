@@ -1,12 +1,10 @@
 Author: Attila Nagy
 Subject: hkweb: no web.py; state of hkweb
 Tag: issue
+Tag: reviewed
 Message-Id: <20100206100825.01f2feff.nagy.attila.1984@gmail.com>
 Parent: <4ddb9e5b0912311252i420272fch5dae7dff7deb2d4b@mail.gmail.com>
 Date: Sat, 6 Feb 2010 10:08:25 +0100
-
-> Ubuntu 9.10 contains version 0.32 as far as I see. The current web.py
-> version is 0.33.
 
 Yes, and hkweb does work with the one included in Ubuntu 9.10. But
 there is a bug, and thread pages throw an exception. I'll fix this
