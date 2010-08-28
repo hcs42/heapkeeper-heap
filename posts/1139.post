@@ -1,13 +1,8 @@
 Author: Attila Nagy
 Subject: Pylint
+Tag: reviewed
 Message-Id: <b29f917d1002101148w550433c0v484f8020968a44d7@mail.gmail.com>
 Parent: <4ddb9e5b1002101142t79aaf73ei627976a6e567353a@mail.gmail.com>
 Date: Wed, 10 Feb 2010 20:48:49 +0100
-
->> But, of course, good docstrings are at least as useful -- the only
->> difference is that docstrings are optional.
->
-> Optional and not checked by any automatic mechanism, so a docstring
-> may be obsolete.
 
 But it wouldn't be impossible to extend pylint to do such checking.
