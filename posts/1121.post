@@ -1,6 +1,7 @@
 Author: Attila Nagy
 Subject: Email parsing problem
 Tag: issue
+Tag: reviewed
 Message-Id: <b29f917d1002091448o5423cf17m5f2bbaf7f3803631@mail.gmail.com>
 Parent: <4ddb9e5b1002091025u73da7c4dte199d86a7097102c@mail.gmail.com>
 Date: Tue, 9 Feb 2010 23:48:53 +0100
@@ -127,7 +128,7 @@ Now I'll try to answer your questions:
 > warning?
 
 They should not give warnings because they are perfectly legal. See
-e.g. the original of heap://173 or heap://1984.
+e.g. the original of heap://ums/173 or heap://ums/1984.
 
 > If something has 8bit encoding, is it latin1?
 
@@ -136,15 +137,14 @@ respect the charset declatation of the `Content-Type` header, if it's
 present; but I don't know what it defaults to when it isn't.
 
 To see how `8bit` can be used to "encode" both Latin-2 and UTF-8,
-compare the originals of the previously mentioned heap://173 and
-heap://1984.
+compare the originals of the previously mentioned heap://ums/173 and
+heap://ums/1984.
 
 > Shouldn't we convert that into UTF-8?
 
 It would be reasonable to convert text in any other charset to
 UTF-8: the heap posts have no way of specifying charset, and frankly,
 I am happy it doesn't. UTF-8 is optimal for our purposes.
-
 
 [1] With some bias, of course.
 [2] This roughly means the first 64k code points of Unicode.  Unicode is

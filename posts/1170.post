@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: Email parsing problem
 Tag: issue
+Tag: reviewed
 Message-Id: <4B780F68.8030505@gmail.com>
 Parent: <b29f917d1002091448o5423cf17m5f2bbaf7f3803631@mail.gmail.com>
 Date: Sun, 14 Feb 2010 15:57:44 +0100
@@ -15,7 +16,7 @@ Thanks, you managed to clear up a few things.
 >> warning?
 >
 > They should not give warnings because they are perfectly legal. See
-> e.g. the original of heap://173 or heap://1984 .
+> e.g. the original of heap://ums/173 or heap://ums/1984 .
 
 OK, this is implied by your explanation.
 
