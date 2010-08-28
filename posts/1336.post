@@ -1,13 +1,10 @@
 Author: Attila Nagy
 Subject: "Star" appears in flat sections
 Tag: bug
+Tag: reviewed
 Message-Id: <AANLkTins69h+oynxu5tcEVkuLaJorxxu_gWdRTcqxAoC@mail.gmail.com>
 Parent: <4AE0247D.9070004@gmail.com>
 Date: Fri, 13 Aug 2010 16:51:10 +0200
-
-[note Parent post:
-http://heapkeeper-heap.github.com/hh/thread_714.html#post-summary-hh-750]
-[todo Parent: heap://hh/750]
 
 The solution has been moved to the new Generator in commit 35cfbd6 (2009-10-24).
 
