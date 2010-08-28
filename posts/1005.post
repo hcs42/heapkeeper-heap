@@ -1,10 +1,11 @@
 Author: Csaba Hoch
-Subject: Using super; "blog: added module for building a blog with Hk" (c24058f 2009-11-28)
+Subject: Using super; "blog: added module for building a blog with Hk" (2009-11-28 c24058f)
 Tag: commit
+Tag: reviewed
 Message-Id: <4B3A53D9.6020109@gmail.com>
 Date: Tue, 29 Dec 2009 20:09:13 +0100
 
-+ def print_postitem(self, postitem):
+    + def print_postitem(self, postitem):
     +     if postitem.pos == 'flat':
     +         return self.print_postitem_flat_blog(postitem)
     +     else:
