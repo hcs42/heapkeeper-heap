@@ -5,8 +5,6 @@ Message-Id: <b29f917d0910231502k48d1d296m927b2769fb4a565d@mail.gmail.com>
 Parent: <4AE038EB.9040609@gmail.com>
 Date: Sat, 24 Oct 2009 00:02:27 +0200
 
-> I pushed the clean version of the new generator to my github repo.
-
 Is it stable enough so that I can start re-implementing hkweb on top
 of it? The present _hkweb is based off a version from before 0.3.
 
