@@ -1,11 +1,10 @@
 Author: Attila Nagy
 Subject: Use comma as separators in keywords metas
 Tag: prop
+Tag: reviewed
 Message-Id: <20100210203607.da67ab94.nagy.attila.1984@gmail.com>
 Parent: <4B61D40A.6030005@gmail.com>
 Date: Wed, 10 Feb 2010 20:36:07 +0100
-
-> Oh and warn me when I forget about commas :)
 
 I think I won't since it'd just create unnecessary posts. It would be
 easier to grep for posts containing keyword metas with multiple words
