@@ -51,3 +51,5 @@ Only then will the branches that you've deleted actually go away from
 my repository.
 
 Do you know of a more simple solution?
+
+[note Later we found out that "git remote prune" is the solution.]
