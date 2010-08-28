@@ -1,18 +1,10 @@
 Author: Csaba Hoch
 Subject: testhtml: Testing that generated HTMLs change only as intended
 Tag: hk-dev-utils
+Tag: reviewed
 Message-Id: <4ddb9e5b1002110015p2be597aes98c0c040097272c0@mail.gmail.com>
 Parent: <b29f917d1002110005w36699e38y7a54538a922d2b63@mail.gmail.com>
 Date: Thu, 11 Feb 2010 09:15:08 +0100
-
->>> Sounds like a lot of work. Wouldn't it suffice to compare only with
->>> the previous commit?
->>
->> I don't understand what you are saying. I compare every commit to its parent.
->
-> I noted this because you demonstrated comparing 3 commits. Maybe the
-> script could have been simpler if it only compared two. But since you
-> already implemented it, it doesn't matter :)
 
 I think you don't understand what the script does. It is designed to
 compare a *sequence* of commits. Each commit in the sequence should be
