@@ -1,5 +1,6 @@
 Author: Attila Nagy
 Subject: Miraculous automatic reloading of hkrc
+Tag: reviewed
 Message-Id: <b29f917d1001100323k4c417f0fm490af6e03897f95e@mail.gmail.com>
 Date: Sun, 10 Jan 2010 12:23:23 +0100
 
@@ -16,7 +17,7 @@ I'll try to present a reproducible case here.
 First, check out `_hkweb` (07b992c as of 2010-01-10). Launch Hk with
 `hkrc.py` being a symlink to `hkrc_attis.py`. Now navigate to
 `http://localhost:8080/` . OK, you see my tidying index, with one
-section called 'Takarítani', Hungarian for tidying. Now open
+section called 'TakarÃ­tani', Hungarian for tidying. Now open
 `hkrc_attis.py`, and go to line 101, where this string can be found.
 Change it to 'Tidying' and save. Now reload the page in your browser.
 And behold, the title has changed!
@@ -34,17 +35,13 @@ seen:
         self.run()
       File "/data/lab/hk/heapkeeper/hkweb.py", line 100, in run
         WebApp.run()
-      File "/usr/lib/python2.5/site-packages/web.py-0.32-py2.5.egg/web/application.py",
-line 313, in run
+      File "/usr/lib/python2.5/site-packages/web.py-0.32-py2.5.egg/web/application.py", line 313, in run
         return wsgi.runwsgi(self.wsgifunc(*middleware))
-      File "/usr/lib/python2.5/site-packages/web.py-0.32-py2.5.egg/web/wsgi.py",
-line 54, in runwsgi
+      File "/usr/lib/python2.5/site-packages/web.py-0.32-py2.5.egg/web/wsgi.py", line 54, in runwsgi
         return httpserver.runsimple(func, validip(listget(sys.argv, 1, '')))
-      File "/usr/lib/python2.5/site-packages/web.py-0.32-py2.5.egg/web/httpserver.py",
-line 223, in runsimple
+      File "/usr/lib/python2.5/site-packages/web.py-0.32-py2.5.egg/web/httpserver.py", line 223, in runsimple
         server.start()
-      File "/usr/lib/python2.5/site-packages/web.py-0.32-py2.5.egg/web/wsgiserver/__init__.py",
-line 1596, in start
+      File "/usr/lib/python2.5/site-packages/web.py-0.32-py2.5.egg/web/wsgiserver/__init__.py", line 1596, in start
         raise socket.error, msg
     error: (98, 'Address already in use')
 
@@ -69,17 +66,13 @@ Maybe the stack trace will be useful.
 And indeed it is. See:
 
     Traceback (most recent call last):
-      File "/usr/lib/python2.5/site-packages/web.py-0.32-py2.5.egg/web/application.py",
-line 240, in process
+      File "/usr/lib/python2.5/site-packages/web.py-0.32-py2.5.egg/web/application.py", line 240, in process
         return p(lambda: process(processors))
-      File "/usr/lib/python2.5/site-packages/web.py-0.32-py2.5.egg/web/application.py",
-line 557, in processor
+      File "/usr/lib/python2.5/site-packages/web.py-0.32-py2.5.egg/web/application.py", line 557, in processor
         h()
-      File "/usr/lib/python2.5/site-packages/web.py-0.32-py2.5.egg/web/application.py",
-line 646, in __call__
+      File "/usr/lib/python2.5/site-packages/web.py-0.32-py2.5.egg/web/application.py", line 646, in __call__
         self.check(mod)
-      File "/usr/lib/python2.5/site-packages/web.py-0.32-py2.5.egg/web/application.py",
-line 660, in check
+      File "/usr/lib/python2.5/site-packages/web.py-0.32-py2.5.egg/web/application.py", line 660, in check
         reload(mod)
       File "/data/lab/hk/heapkeeper/hkrc.py", line 286, in <module>
         raise Exception
@@ -89,5 +82,5 @@ So web.py does it for us. I wonder how they handle those problems
 we've discussed related to objects, namely that on reloading modules,
 objects retain their membership to the old versions of the classes.
 
-[1] heap://1431
-[2] heap://3607
+[1] heap://ums/1431
+[2] heap://ums/3607
