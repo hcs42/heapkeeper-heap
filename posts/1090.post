@@ -1,16 +1,10 @@
 Author: Attila Nagy
 Subject: Mapping for removing trailing whitespace
+Tag: reviewed
 Tag: vim
 Message-Id: <20100207085429.c4060ab2.nagy.attila.1984@gmail.com>
 Parent: <4B3F8D74.9040807@gmail.com>
 Date: Sun, 7 Feb 2010 08:54:29 +0100
-
-> This is better:
->
->     :au BufWritePre * :silent! %s/ \+$//
->
-> This way we can avoid the error message when there was no trailing
-> whitespace to be removed.
 
 But beware! Only apply this for files where trailing whitespace is an
 error. E.g. Python files. Trailing whitespace is important in some
