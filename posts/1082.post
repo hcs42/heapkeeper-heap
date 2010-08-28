@@ -1,11 +1,12 @@
 Author: Attila Nagy
 Subject: Free-text search
 Tag: feature
+Tag: reviewed
 Message-Id: <20100206094826.854e58e8.nagy.attila.1984@gmail.com>
 Parent: <4B32849A.6060507@gmail.com>
 Date: Sat, 6 Feb 2010 09:48:26 +0100
 
-> == More specific specification ==
+== More specific specification ==
 
 [note :))))]
 
@@ -37,17 +38,13 @@ I like this, but it doesn't work like this yet, so I'll do it.
 
 [assign Attis]
 
-> The would could be regular expressions, if the user wants to use them.
+== Advanced features ==
 
-[!todo correct: They could]
-
-> == Advanced features ==
->
 > The following features are only ideas, I don't propose to implement
 > them in the first go.
->
-> === Ranking ===
->
+
+=== Ranking ===
+
 > We could implement ranking so that a post will be higher in the
 > search results if the word is present as a tag/keyword/subject. Or a
 > post will be lower in the results if the expression is present only in
@@ -56,8 +53,8 @@ I like this, but it doesn't work like this yet, so I'll do it.
 Looks useful! Would you give the tag, keyword and subject matches an
 equal weight?
 
-> === Thread search ===
->
+=== Thread search ===
+
 > We could also implement "thread search", which would return only one
 > post per thread.
 
@@ -76,8 +73,8 @@ or
 
     grep('dead trees').root()
 
-> === Generation output ===
->
+=== Generation output ===
+
 > We should make a generator that would generate HTML pages with the
 > search results, inlining the relevant posts, highlighting the found
 > expressions, etc.
@@ -85,15 +82,15 @@ or
 Nice -- but sounds like an awful lot of work. It sounds like this
 would be needed for your next idea, however.
 
-> === Hkweb integration ===
->
+=== Hkweb integration ===
+
 > And of course we should have a textbox and a "Search" button on hkweb.
 
 Definitely. Together with all the highlighting you mentioned in the
 previous idea.
 
-> === Vim integration ===
->
+=== Vim integration ===
+
 > We could feed the results into Vim so that Vim could jump between the
 > hits in its usual way (:cnext, :cprev, :clist).
 
@@ -101,8 +98,8 @@ Wow. That'd be awesome!
 
 I have to admit I've never used this functions, though.
 
-> == Effort estimation ==
->
+== Effort estimation ==
+
 > This only concerns the basic features. We could spent an arbitrary
 > amount of time with the advanced ones :)
 

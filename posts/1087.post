@@ -1,12 +1,13 @@
 Author: Csaba Hoch
 Subject: Free-text search
 Tag: feature
+Tag: reviewed
 Message-Id: <4ddb9e5b1002060723r60c7711q250168b6ba82857c@mail.gmail.com>
 Parent: <20100206094826.854e58e8.nagy.attila.1984@gmail.com>
 Date: Sat, 6 Feb 2010 16:23:29 +0100
 
->> === Ranking ===
->>
+=== Ranking ===
+
 >> We could implement ranking so that a post will be higher in the
 >> search results if the word is present as a tag/keyword/subject. Or a
 >> post will be lower in the results if the expression is present only in
@@ -17,8 +18,8 @@ Date: Sat, 6 Feb 2010 16:23:29 +0100
 
 I guess.
 
->> === Thread search ===
->>
+=== Thread search ===
+
 >> We could also implement "thread search", which would return only one
 >> post per thread.
 >
@@ -37,12 +38,12 @@ I guess.
 >
 >    grep('dead trees').root()
 
-grep('dead trees').expf().collect.is_root()
+    grep('dead trees').expf().collect.is_root()
 
 We can introcude a function it gets used very often.
 
->> === Generation output ===
->>
+=== Generation output ===
+
 >> We should make a generator that would generate HTML pages with the
 >> search results, inlining the relevant posts, highlighting the found
 >> expressions, etc.
@@ -52,8 +53,8 @@ We can introcude a function it gets used very often.
 
 It is work, but I don't think it's awful lot.
 
->> === Vim integration ===
->>
+=== Vim integration ===
+
 >> We could feed the results into Vim so that Vim could jump between the
 >> hits in its usual way (:cnext, :cprev, :clist).
 >

@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: Free-text search
 Tag: feature
+Tag: reviewed
 Message-Id: <4B32849A.6060507@gmail.com>
 Date: Wed, 23 Dec 2009 21:59:06 +0100
 
@@ -36,7 +37,7 @@ program:
 
 (This is not the implementation, this is only the specification :) )
 
-The would could be regular expressions, if the user wants to use them.
+The could be regular expressions, if the user wants to use them.
 
 == Advanced features ==
 
