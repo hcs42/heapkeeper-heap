@@ -1,14 +1,11 @@
 Author: Csaba Hoch
 Subject: Pre-commit-hook
 Tag: hk-dev-utils
+Tag: reviewed
 Message-Id: <4ddb9e5b0911290947p6a69fa93y6b99f83df2f97494@mail.gmail.com>
 Parent: <b29f917d0911290936x62003369n2e90452caa2c6f85@mail.gmail.com>
 Date: Sun, 29 Nov 2009 18:47:59 +0100
 
->> Please use it.
->
-> OK, I included them to my .git. Sorry for late adopting.
->
 > Have you considered automatically running the test suite in the hook?
 
 Yes, we should do that.

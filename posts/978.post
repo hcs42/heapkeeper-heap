@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: Pre-commit-hook
 Tag: hk-dev-utils
+Tag: reviewed
 Message-Id: <4ddb9e5b0911291129j3c4e9dfci9e35db1a86a9b5d9@mail.gmail.com>
 Parent: <b29f917d0911290951l605eaed8k9936fc1b4f74a1d3@mail.gmail.com>
 Date: Sun, 29 Nov 2009 20:29:10 +0100
@@ -10,6 +11,7 @@ Date: Sun, 29 Nov 2009 20:29:10 +0100
 Yes, the hook is called "update" [1].
 
 > And preferably fires for each commit to be pushed...
+>
 > This would be beautiful, but I doubt Git supports it. Maybe we should
 > consider adding it, it would be a nice feature.
 

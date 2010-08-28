@@ -1,12 +1,10 @@
 Author: Attila Nagy
 Subject: Pre-commit-hook
 Tag: hk-dev-utils
+Tag: reviewed
 Message-Id: <b29f917d0911290951l605eaed8k9936fc1b4f74a1d3@mail.gmail.com>
 Parent: <4ddb9e5b0911290947p6a69fa93y6b99f83df2f97494@mail.gmail.com>
 Date: Sun, 29 Nov 2009 18:51:56 +0100
-
->> Have you considered automatically running the test suite in the hook?
-> Yes, we should do that.
 
 Is there a hook that fires when you push? And preferably fires for
 each commit to be pushed...
