@@ -6,12 +6,12 @@ Date: Sat, 24 Oct 2009 23:48:54 +0200
 
 You did a docstring update here:
 
-     @staticmethod
-     def create_header(d):
--        """Transforms the dict(str, [str]) returned by the parse_header
--        function to a str->(str | [str]) dictionary.
-+        """Transforms the {str: [str])} returned by the parse_header
-+        function to a {str: (str | [str])} dictionary.
+      @staticmethod
+      def create_header(d):
+ -        """Transforms the dict(str, [str]) returned by the parse_header
+ -        function to a str->(str | [str]) dictionary.
+ +        """Transforms the {str: [str])} returned by the parse_header
+ +        function to a {str: (str | [str])} dictionary.
 
 I think neither the old, nor the new ones are the best. I had to read
 the source to understand what it does.
@@ -25,26 +25,26 @@ thoroughly tested, breaking it makes 70 tests fail.
 I would rewrite its docstring like this (of course later complete with
 proper arguments and returns sections):
 
-"""Creates a dictionary of headers from the dictionary returned by the
-`parse_header` function. This dictionary contains only keys of
-existing header names, and if the source dictionary contains any other
-keys, an exception will be raised. Some headers can have an
-alternative name, which allows for parsing legacy post files.
+ """Creates a dictionary of headers from the dictionary returned by the
+ `parse_header` function. This dictionary contains only keys of
+ existing header names, and if the source dictionary contains any other
+ keys, an exception will be raised. Some headers can have an
+ alternative name, which allows for parsing legacy post files.
 
-Two kinds of headers exist, one is which can have multiple values.
-The values for these keys are lists of string values both in the
-received and the returned dictionaries. Such are 'Tag' and 'Flag'
-headers.
+ Two kinds of headers exist, one is which can have multiple values.
+ The values for these keys are lists of string values both in the
+ received and the returned dictionaries. Such are 'Tag' and 'Flag'
+ headers.
 
-For the other headers, only a single value is accepted. It is received
-as a list with one string element in the source dictionary. If it has
-more than one element, an exception is raised.
+ For the other headers, only a single value is accepted. It is received
+ as a list with one string element in the source dictionary. If it has
+ more than one element, an exception is raised.
 
-** Example: ** ::
+ ** Example: ** ::
 
-    >>> Post.create_header({'Author':['Someone'],'Subject':['topic'],'Tag':['one','two']})
-    {'Parent': '', 'Author': 'Someone', 'Flag': [], 'Tag': ['one',
-'two'], 'Date': '', 'Message-Id': '', 'Subject': 'topic'}
-"""
+     >>> Post.create_header({'Author':['Someone'],'Subject':['topic'],'Tag':['one','two']})
+     {'Parent': '', 'Author': 'Someone', 'Flag': [], 'Tag': ['one',
+ 'two'], 'Date': '', 'Message-Id': '', 'Subject': 'topic'}
+ """
 
 Do you think this would be more helpful than the original?

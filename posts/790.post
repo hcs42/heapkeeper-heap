@@ -7,12 +7,12 @@ Date: Sun, 25 Oct 2009 09:59:48 +0100
 
 > You did a docstring update here:
 >
->      @staticmethod
->      def create_header(d):
-> -        """Transforms the dict(str, [str]) returned by the parse_header
-> -        function to a str->(str | [str]) dictionary.
-> +        """Transforms the {str: [str])} returned by the parse_header
-> +        function to a {str: (str | [str])} dictionary.
+>       @staticmethod
+>       def create_header(d):
+>  -        """Transforms the dict(str, [str]) returned by the parse_header
+>  -        function to a str->(str | [str]) dictionary.
+>  +        """Transforms the {str: [str])} returned by the parse_header
+>  +        function to a {str: (str | [str])} dictionary.
 
 The first modified line should not have that extra ')' in '{str: [str])}'.
 
@@ -46,13 +46,13 @@ If you have a better name for `d`, I'm listening...
 I hope you don't have a problem with the {key: value} and [items]
 notation. I stole that from the Erlang documentation conventions.
 
-> """Creates a dictionary of headers from the dictionary returned by the
-> `parse_header` function. This dictionary contains only keys of
+>  """Creates a dictionary of headers from the dictionary returned by the
+>  `parse_header` function. This dictionary contains only keys of
 
 The word "This" is ambiguous here.
 
-> existing header names, and if the source dictionary contains any other
-> keys, an exception will be raised.
+>  existing header names, and if the source dictionary contains any other
+>  keys, an exception will be raised.
 
 Not true. A warning is printed in this case:
 
@@ -67,25 +67,25 @@ hklib.py, line 782:
 See commit 1932903 (Post: "forward compatible" post file parsing,
 2009-08-27) for why we should not raise an exception in this case.
 
-> Some headers can have an
-> alternative name, which allows for parsing legacy post files.
+>  Some headers can have an alternative name, which allows for parsing
+>  legacy post files.
 >
-> Two kinds of headers exist, one is which can have multiple values.
+>  Two kinds of headers exist, one is which can have multiple values.
 
 "one of which"?
 
-> The values for these keys are lists of string values both in the
-> received and the returned dictionaries. Such are 'Tag' and 'Flag'
-> headers.
+>  The values for these keys are lists of string values both in the
+>  received and the returned dictionaries. Such are 'Tag' and 'Flag'
+>  headers.
 >
-> For the other headers, only a single value is accepted. It is received
-> as a list with one string element in the source dictionary. If it has
-> more than one element, an exception is raised.
+>  For the other headers, only a single value is accepted. It is received
+>  as a list with one string element in the source dictionary. If it has
+>  more than one element, an exception is raised.
 >
-> ** Example: ** ::
+>  ** Example: ** ::
 >
->     >>> Post.create_header({'Author':['Someone'],'Subject':['topic'],'Tag':['one','two']})
->     {'Parent': '', 'Author': 'Someone', 'Flag': [], 'Tag': ['one',
+>      >>> Post.create_header({'Author':['Someone'],'Subject':['topic'],'Tag':['one','two']})
+>      {'Parent': '', 'Author': 'Someone', 'Flag': [], 'Tag': ['one',
 > 'two'], 'Date': '', 'Message-Id': '', 'Subject': 'topic'}
 > """
 

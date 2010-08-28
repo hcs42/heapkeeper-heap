@@ -33,21 +33,21 @@ cryptic, so let's stay with `d` for now.
 
 It's perfectly OK with me.
 
->> """Creates a dictionary of headers from the dictionary returned by the
->> `parse_header` function. This dictionary contains only keys of
+>>  """Creates a dictionary of headers from the dictionary returned by the
+>>  `parse_header` function. This dictionary contains only keys of
 >
 > The word "This" is ambiguous here.
 
 Yes it is, thanks.
 
->> existing header names, and if the source dictionary contains any other
->> keys, an exception will be raised.
+>>  existing header names, and if the source dictionary contains any other
+>>  keys, an exception will be raised.
 >
 > Not true. A warning is printed in this case:
 
 Yes, but it was true at the point when this docstring was added :)
 
->> Two kinds of headers exist, one is which can have multiple values.
+>>  Two kinds of headers exist, one is which can have multiple values.
 >
 > "one of which"?
 
