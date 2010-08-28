@@ -1,6 +1,7 @@
 Author: Attila Nagy
 Subject: hkcustomlib: args of $EDITOR may contain spaces (2009-10-11 4fbb5c5)
 Tag: commit
+Tag: reviewed
 Message-Id: <b29f917d0911190853j4a847d72ma1ba367ebe7dd41a@mail.gmail.com>
 Date: Thu, 19 Nov 2009 17:53:31 +0100
 
