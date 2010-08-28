@@ -8,6 +8,4 @@ Date: Sun, 15 Nov 2009 11:33:14 +0100
 
 I think the test case `Test_PostSet__threads.test_sorted_list` is a no-op.
 
-[open]
-
 [note Original parent: heap://hh/938]
