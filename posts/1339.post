@@ -1,5 +1,6 @@
 Author: Csaba Hoch
 Subject: Tag -> label
+Tag: reviewed
 Message-Id: <4C6E2534.5000409@gmail.com>
 Parent: <4AAC9683.5040807@gmail.com>
 Date: Fri, 20 Aug 2010 08:48:20 +0200
@@ -8,5 +9,3 @@ Date: Fri, 20 Aug 2010 08:48:20 +0200
 
 Now I think we should keep the "tag" name. Stack Overflow and
 Thunderbird uses this word too.
-
-[note Parent post: http://heapkeeper-heap.github.com/hh/thread_591.html#post-summary-hh-591]
