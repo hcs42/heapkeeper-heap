@@ -1,5 +1,6 @@
 Author: Csaba Hoch
 Subject: Modifying the subject
+Tag: reviewed
 Message-Id: <4ddb9e5b1002080327i4b7ee740l42abba9fa275fb47@mail.gmail.com>
 Date: Mon, 8 Feb 2010 12:27:59 +0100
 
@@ -7,3 +8,5 @@ Date: Mon, 8 Feb 2010 12:27:59 +0100
 
 Would you quote something when you change the subject? Changing the
 subject makes the thread to break on GMail's web interface.
+
+[note Original parent: heap://hh/1106]

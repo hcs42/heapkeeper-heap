@@ -1,5 +1,6 @@
 Author: Attila Nagy
 Subject: Modifying the subject
+Tag: reviewed
 Message-Id: <b29f917d1002080530t20651a19v8f3920ae595ce108@mail.gmail.com>
 Parent: <b29f917d1002080457h5b15af5buf97ac47f947c54c6@mail.gmail.com>
 Date: Mon, 8 Feb 2010 14:30:10 +0100
@@ -11,52 +12,51 @@ subject doesn't change:
 
 http://www.google.com/support/forum/p/gmail/thread?tid=2c3a7bdcd247a2e4&hl=en
 
-A blogger has commented on this while Gmail was young:
+A blogger has commented on this while Gmail was young [1]:
 
-http://www.bladam.com/main/entry/gmail-revolutionizing-mail
+    "- Greater sensitivity to the subject line
 
-"- Greater sensitivity to the subject line
-On one hand, I think people may be reluctant to change the subject
-line in an ongoing conversation for fear of 'breaking' the
-conversation (I actually got hollered at by a friend for doing just
-that).
+    On one hand, I think people may be reluctant to change the subject
+    line in an ongoing conversation for fear of 'breaking' the
+    conversation (I actually got hollered at by a friend for doing
+    just that).
 
-But on the other hand, I believe folks may perhaps become more
-sensitive to the realities of both personal and public (discussion
-list) conversations floating to wildly different topics... and feel
-compelled to change the subject to split the conversation. Of course,
-Google's implementation (or not) of conversation joining/splitting
-tools will certainly have an effect on all of this as well."
+    But on the other hand, I believe folks may perhaps become more
+    sensitive to the realities of both personal and public (discussion
+    list) conversations floating to wildly different topics... and
+    feel compelled to change the subject to split the conversation. Of
+    course, Google's implementation (or not) of conversation
+    joining/splitting tools will certainly have an effect on all of
+    this as well."
 
 Gmail sucks because it wants to correct others' mistakes. For example
-this guy complains that editing the subject line is not easy:
+this guy complains that editing the subject line is not easy [2]:
 
-"There's a few problems with this. First is order-of-operation
-problems. A common way for me (and a lot of other users) to compose a
-new message is by replying to a message from the person I want to
-mail, and change the subject line. I do it this way because it's the
-fastest way to send an email to someone who's not in the address book.
-But with gmail hiding the subject line behind a hard-to-spot link,
-this common scenerio gets tossed into the food processor."
-
-http://hanfordlemoore.com/v/gmail-arrow-of-mystery-and-subject-line
+    "There's a few problems with this. First is order-of-operation
+    problems. A common way for me (and a lot of other users) to
+    compose a new message is by replying to a message from the person
+    I want to mail, and change the subject line. I do it this way
+    because it's the fastest way to send an email to someone who's not
+    in the address book. But with gmail hiding the subject line behind
+    a hard-to-spot link, this common scenerio gets tossed into the
+    food processor."
 
 I guess scrapping this way of sending mail is what they wanted to achieve!
 
 Another interesting point among the comments:
 
-'I did a test and checked the headers. Gmail removes the "in-reply-to"
-tag if I change the subject line in a reply. Even if there's quoted
-text from the old message. I'm not doing anything wrong by using
-"reply" to start a new email.
+'I did a test and checked the headers. Gmail removes the
+"in-reply-to" tag if I change the subject line in a reply. Even if
+there's quoted text from the old message. I'm not doing anything
+wrong by using "reply" to start a new email.
 
-I think this is the right move. The whole concept of the "thread" as a
-property independent of "Subject" is just too abstract for it to
-matter to everyday users. It's hidden, and it's irrelevant. To the
-majority of email users the Subject is the thread (give of take "re:"s
-and "fwd:"s) , and when the subject changes, the thread should too. I
-have a hunch that if Gmail supported to threading the way Enno
-describes it, the masses would have a fit.'
+I think this is the right move. The whole concept of the "thread"
+as a property independent of "Subject" is just too abstract for it
+to matter to everyday users. It's hidden, and it's irrelevant. To
+the majority of email users the Subject is the thread (give of
+take "re:"s and "fwd:"s) , and when the subject changes, the
+thread should too. I have a hunch that if Gmail supported to
+threading the way Enno describes it, the masses would have a fit.'
 
 1. We should also do these tests.
 2. Masses should be empowered by the knowledge of proper e-mail threading.
@@ -64,3 +64,8 @@ describes it, the masses would have a fit.'
 
 All this may result in my keeping Gmail as an e-mail provider, but
 drifting away from their (otherwise great) UI.
+
+[todo Where is the end of this quote?]
+
+[1] http://www.bladam.com/main/entry/gmail-revolutionizing-mail
+[2] http://hanfordlemoore.com/v/gmail-arrow-of-mystery-and-subject-line
