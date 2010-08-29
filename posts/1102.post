@@ -1,5 +1,6 @@
 Author: Attila Nagy
 Subject: Deprecation status of g(), ga() and gi()
+Tag: reviewed
 Message-Id: <b29f917d1002080205k7f66b9edw4355099e34a87f21@mail.gmail.com>
 Date: Mon, 8 Feb 2010 11:05:25 +0100
 
@@ -15,7 +16,7 @@ finally managed).
 
 One of the results is where you present the addition of an interactive
 tool for the Heapmanipulator (the old name of our project). This is
-heap://996. There, Csabi presents the original set of "g-commands":
+heap://ums/996. There, Csabi presents the original set of "g-commands":
 
   g()                - generate index.html
   ga()               - generate all html
