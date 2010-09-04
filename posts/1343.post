@@ -1,0 +1,16 @@
+Author: Attila Nagy
+Subject: HTTP basic authentication in hkweb, further ideas
+Tag: commit
+Tag: idea
+Message-Id: <AANLkTik8P__=TCWzmAL-NgkCiF+kTjKNzkLsqC2g=o6p@mail.gmail.com>
+Date: Fri, 27 Aug 2010 02:46:53 +0200
+
+I pushed a commit (_auth branch, commit 5806b75, 2010-08-27) where
+basic authentication is working, but only with a hardcoded
+username/password pair for now. (For the curious, both are 'hk'.)
+
+Later, I'm planning to extend the format of the 'hk.cfg' file to
+assign passwords to user nicknames (similarly to how nicknames are
+assigned to emails now), and use these to authenticate the users. If
+we want, we can even add access control (e.g. setting
+none/read-only/read-write access per user per heap).

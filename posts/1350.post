@@ -1,0 +1,21 @@
+Author: Attila Nagy
+Subject: Tutorial rewrite: more hkweb
+Tag: issue
+Message-Id: <AANLkTi=-WH=fs=mDpYfN-N7CisrNxK_ar6t_0jdvBJbk@mail.gmail.com>
+Parent: <4C796034.7070408@gmail.com>
+Date: Mon, 30 Aug 2010 20:05:29 +0200
+
+[todo break thread]
+[todo subject: Creating a new thread via hkweb is not supported]
+
+> - Adding a new post to the heap: in this section, the user would
+>  create an empty heap and add a new post to it in several ways.
+
+Good thing you mentioned that. This obvious operation, adding a new
+post, is not supported directly. You can add a new post as a child of
+an existing post, then edit the raw post to remove the "Parent:"
+header, but there should be a way to start a new thread from the index
+page, too.
+
+Without this feature, a user who has no shell access, only hkweb, has
+absolutely no way of creating any posts.

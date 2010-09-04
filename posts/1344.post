@@ -1,0 +1,33 @@
+Author: Attila Nagy
+Subject: HTTPS in web.py
+Message-Id: <AANLkTim1v0-VCNN+p1gKWDq99qfir-4a2Z-e8ySRbVma@mail.gmail.com>
+Date: Fri, 27 Aug 2010 03:17:01 +0200
+
+Using HTTPS in web.py is easy (provided you have your certificates).
+Just import the WSGI server class from web.py at the beginning of
+src/hkweb.py:
+
+    from web.wsgiserver import CherryPyWSGIServer
+
+Then, add this code to the beginning of hkweb.start():
+
+    CherryPyWSGIServer.ssl_certificate = "/path/to/your.crt"
+    CherryPyWSGIServer.ssl_private_key = "/path/to/your.key"
+
+And that's all. From now on, you can access hkweb via https://localhost:8080.
+
+If you need a certificate, use this:
+
+    openssl genrsa -des3 -out server.key 1024
+    openssl req -new -key server.key -out server.csr
+    openssl x509 -req -days 365 -in server.csr -signkey server.key -out
+server.crt
+    mv server.key myserver.key
+    mv server.crt myserver.crt
+
+Your browser will warn you about the certificate being invalid, but it
+will work nonetheless.
+
+The relevant Google Groups thread:
+
+http://groups.google.com/group/webpy/browse_thread/thread/53a7cdc07af6fcc5

@@ -1,0 +1,54 @@
+Author: Csaba Hoch
+Subject: Tutorial rewrite: more hkweb
+Tag: issue
+Message-Id: <4C796034.7070408@gmail.com>
+Date: Sat, 28 Aug 2010 21:15:00 +0200
+
+I propose to modify the tutorial to propagate the usage of hkweb, and
+contrast it with other forms of Heapkeeper usage (hkshell and direct
+file system manipulation).
+
+Have a look at the following table of contents. The words after the
+colons are just explanations, not part of the TOC. I denoted the new
+parts that are not present in our current tutorial with the word
+"NEW".
+
+- Downloading Heapkeeper
+- Adding a new post to the heap: in this section, the user would
+  create an empty heap and add a new post to it in several ways.
+    - Creating an empty heap
+    - From hkweb (Heapkeeper web interface) [NEW]
+    - From hkshell (Heapkeeper console interface)
+    - From the file system
+- Editing the heap: in this section, the user would use an example
+  heap provided by us, and would edit it in several ways.
+    - Setting up Heapkeeper to use an existing heap [NEW]: We
+      should create a tutorial directory that contains example
+      heaps. The example heap used in this tutorial would be the
+      same that it is used now; the difference is that now it is
+      created as a part of the tutorial, and in the future the
+      heap directory would just be copied.
+    - From hkweb (Heapkeeper web interface) [NEW]
+    - From hkshell (Heapkeeper console interface): This subsection
+      would be basically the current "Modifying the heap with
+      hkshell" section.
+    - From the file system [NEW]: This subsection could contain a
+      simple example that uses sed to do some substitutions, and
+      then would show how the rl() command (that reload modified
+      post files) should be used.
+- Creating a heap for a mailing list
+- Opening a real world heap: the Heapkeeper Heap
+
+Work to be done:
+- Writing new tutorial subsections and reorganize the tutorial.
+- Creating an example heap. I think we could have an "examples"
+  subdirectory in the Heapkeeper git repository that would contain
+  the example heap. The strongest reason for including it in the
+  repository is that is should be kept synchronized with the tutorial.
+  The example heaps should contain dates. (The example heap in the
+  tutorial does not contain dates.)
+- Features that make it possible to add new posts to hkweb. This
+  includes the "add child" feature [1], and we also need an "add root"
+  feature.
+
+[1] heap://hh/1330

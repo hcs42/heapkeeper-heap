@@ -1,0 +1,22 @@
+Author: Attila Nagy
+Subject: JavaScript/JQuery efficiency
+Message-Id: <AANLkTim7UBGXzcYKSwg91SWgrzWqirFJ9TsfQYjDmGiZ@mail.gmail.com>
+Parent: <4C7A090D.1020703@gmail.com>
+Date: Mon, 30 Aug 2010 21:10:03 +0200
+
+My favorite part:
+
+> What is even more funny is that this takes 9 seconds:
+>
+>    $('[id|=post-body-show-button]').show();
+>
+> while this takes less than 1 second:
+>
+>    $('[id|=post-body-show-button]').hide();
+>    $('[id|=post-body-show-button]').show();
+
+We have 3 players: Chrome, jQuery and hkweb, and clearly hkweb is the
+"good guy": it doesn't do any nondeterministic nastiness. Chrome's V8
+engine does its nasty optimizations, and jQuery is made of 100% black
+magic. So I think we can only do what you did: act on the absolutely
+unintelligible and counterintuitive observations.

@@ -1,0 +1,97 @@
+Author: Csaba Hoch
+Subject: JavaScript/JQuery efficiency
+Message-Id: <4C7A090D.1020703@gmail.com>
+Date: Sun, 29 Aug 2010 09:15:25 +0200
+
+Today I set down to make the folding mechanism of hkweb more
+efficient, because the "Hide all posts" and "Show all posts" were
+quite slow on large number of messages.
+
+The results were surprising for me. I thought that the reason of the
+slowness was that I queried for `'post-body-container-' + postId`
+(which I thought took O(n) time) for each post; so this way I thought
+that it was O(n^2). Well, it turned out that building a dictionary to
+make the query O(log(n)) did not help at all. Probably it is already
+O(n), which means that the browser has its own dictionary or tag ids,
+which is quite conceivable.
+
+I worked on the search page of all hh messages [1] as the base for my
+benchmarks. This page shows 1378 messages. It takes around 6 or 7
+seconds to load it in both Chrome and Firefox. It takes 48 seconds to
+hide all posts in Chrome (it takes 98 seconds in Firefox).
+
+== Turning off JQuery animation ==
+
+As I already said, building a dictionary did not help.
+
+Then I removed the JQuery animations for the body hiding and for the
+"Show body" button appearance:
+
+    -   button.animate({opacity: visibility}, 'fast');
+    +   button.show();
+
+    -   $('#post-body-container-' + postId).hide('fast');
+    +   $('#post-body-container-' + postId).hide();
+
+This took down the 48 seconds to 8 seconds in Chrome, and the 98
+seconds to 2 seconds in Firefox!
+
+== First versus rest ==
+
+Then I made more experiments, and it turned out that the first
+"Hide all" takes longer than the others. In Chrome, the first one is
+8 seconds; the others are less then 1 second. In Firefox, the first one is
+1.50 seconds; the others are 1.25 seconds.
+
+The more interesting case is of course Chrome, where the difference is
+much bigger. This 7 seconds do not appear at all if we use one JQuery
+object to hide the boxes. For example the following loop will take 8
+seconds the first time:
+
+    getPostIds().each(function(index) {
+        $('#post-body-container-' + this).hide();
+    });
+
+On the other hand, the following look will take less then 1 second
+even the first time, which is very strange, since it includes the
+first one:
+
+    $('[id|=post-body-container]').hide();
+    $('[id|=post-body-container]').show();
+    getPostIds().each(function(index) {
+        $('#post-body-container-' + this).hide();
+    });
+
+What is even more funny is that this takes 9 seconds:
+
+    $('[id|=post-body-show-button]').show();
+
+while this takes less than 1 second:
+
+    $('[id|=post-body-show-button]').hide();
+    $('[id|=post-body-show-button]').show();
+
+but the most funny is that this takes 6 seconds:
+
+    $('[id|=post-body-container]').hide();
+    $('[id|=post-body-show-button]').show();
+
+I think some funny initialization is going on somewhere inside Chrome.
+
+== Changes ==
+
+I don't understand this data, but I acted upon it [3].
+
+I changed the code to use one JQuery object to hide and show the
+bodies, and to invoke a hide() on the "Show body" buttons on starting
+up (because as the previous example shows, a hide() before the show()
+will make the show() much faster...)
+
+This way hiding and showing all posts is always less than 1 second in
+Chrome.
+
+[1] http://localhost:8080/search?term=heap:hh
+[2] Actually, the load time seems to have changed from 7 seconds to
+    6 seconds... but I guess that is just measurement error or some
+    other funny effect.
+[3] 66ec700 2010-08-29 (hkweb: better performance for folding post bodies)
