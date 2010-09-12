@@ -1,6 +1,7 @@
 Author: Attila Nagy
 Subject: Development policies, pylint works OK on all Heapkeeper code
-Tag: proposal
+Tag: prop
+Tag: reviewed
 Message-Id: <AANLkTimdPWiXoBtfR3jqRdH5q3IRuY0EB60iTJeR_Ett@mail.gmail.com>
 Parent: <t2x4ddb9e5b1004050616rce88928fnba5cac6998c386de@mail.gmail.com>
 Date: Fri, 21 May 2010 14:36:38 +0200
