@@ -1,0 +1,14 @@
+Author: Csaba Hoch
+Subject: Development policies, pylint works OK on all Heapkeeper code
+Tag: prop
+Message-Id: <4C8CEDEA.1060803@gmail.com>
+Parent: <t2x4ddb9e5b1004050616rce88928fnba5cac6998c386de@mail.gmail.com>
+Date: Sun, 12 Sep 2010 17:12:42 +0200
+
+Unfortunately now pylint does not say OK for all Heapkeeper code. This
+is my fault, I forgot to execute pylint's.
+
+It would be hard to correct this now with several branches, so let's
+wait after releasing v0.8, and fix is quickly then.
+
+[note Parent post: http://heapkeeper-heap.github.com/hh/thread_1191.html#post-summary-hh-1191]

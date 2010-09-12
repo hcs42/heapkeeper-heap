@@ -1,0 +1,16 @@
+Author: Csaba Hoch
+Subject: Having thread pages instead of post pages
+Tag: prop
+Message-Id: <4C8D1123.1030906@gmail.com>
+Parent: <b29f917d0910181055k357ac16au38c9d83cb80f3f68@mail.gmail.com>
+Date: Sun, 12 Sep 2010 19:42:59 +0200
+
+[close]
+
+>> I propose not generating post pages, only thread pages.
+
+This has been implemented in commit 31aeb7b [1].
+
+[1] "Generator: Removing post page generation", 2010-01-24, Csaba Hoch
+
+[note Parent post: http://heapkeeper-heap.github.com/hh/thread_705.html#post-summary-hh-706]

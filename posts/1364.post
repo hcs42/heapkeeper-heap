@@ -1,0 +1,17 @@
+Author: Csaba Hoch
+Subject: Image source files
+Tag: prop
+Message-Id: <4C8D142C.4080905@gmail.com>
+Parent: <b29f917d0910162330q3cb92893w6fdb600f4bd5373e@mail.gmail.com>
+Date: Sun, 12 Sep 2010 19:55:56 +0200
+
+[close]
+
+>> It may be also wise to upload the "source" files of our images
+>> (svg files probably).
+
+This was implemented in commit 7e934c7 [1].
+
+[1] "Logo source file (svg) added", 2009-10-17, Attila Nagy István
+
+[note Parent post: http://heapkeeper-heap.github.com/hh/thread_481.html#post-summary-hh-673]

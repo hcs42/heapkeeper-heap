@@ -1,0 +1,14 @@
+Author: Csaba Hoch
+Subject: `enew` command should add the current date
+Tag: issue
+Message-Id: <4C8D1315.9070607@gmail.com>
+Parent: <4ADF29E3.1060408@gmail.com>
+Date: Sun, 12 Sep 2010 19:51:17 +0200
+
+[close]
+
+This was implemented in commit a5cb8a9 [1].
+
+[1] "hkshell.enew: adds date to the post", 2010-05-08, Csaba Hoch
+
+[note Parent post: http://heapkeeper-heap.github.com/hh/thread_731.html#post-summary-hh-731]

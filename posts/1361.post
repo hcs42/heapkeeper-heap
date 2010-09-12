@@ -1,0 +1,17 @@
+Author: Csaba Hoch
+Subject: Emails with attached files handled incorrectly
+Tag: bug
+Message-Id: <4C8CEEC7.4090207@gmail.com>
+Parent: <4ADF4D18.5080206@gmail.com>
+Date: Sun, 12 Sep 2010 17:16:23 +0200
+
+[close]
+
+Commit 4b173f7 [1] solved this problem: attachments are now ignored.
+Actual handling of attachments is a much bigger task, and was not part
+of this issue.
+
+[1] "EmailDownloader: works with multipart messages", 2010-01-16,
+    Csaba Hoch
+
+[note Parent post: http://heapkeeper-heap.github.com/hh/thread_512.html#post-summary-hh-736]
