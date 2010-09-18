@@ -1,6 +1,7 @@
 Author: Attila Nagy
 Subject: IMAP downloading generates too long commands
 Tag: bug
+Tag: reviewed
 Message-Id: <AANLkTik6KG00_oCn1NErSXsh10at4l2hDfAYi1LVTf9N@mail.gmail.com>
 Parent: <j2ib29f917d1005050956m6145f8d3o3366c403ab686211@mail.gmail.com>
 Date: Mon, 24 May 2010 09:05:45 +0200

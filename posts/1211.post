@@ -1,6 +1,7 @@
 Author: Attila Nagy
 Subject: IMAP downloading generates too long commands
 Tag: bug
+Tag: reviewed
 Message-Id: <j2ib29f917d1005050956m6145f8d3o3366c403ab686211@mail.gmail.com>
 Date: Wed, 5 May 2010 18:56:28 +0200
 
@@ -14,9 +15,9 @@ IMAP downloading currently works like this:
 
 This has a serious flaw. Thus spoke RFC 2683:
 
-	A client should limit the length of the command lines it generates to
-	approximately 1000 octets (including all quoted strings but not
- 	including literals).  If the client is unable to group things into
+    A client should limit the length of the command lines it generates to
+    approximately 1000 octets (including all quoted strings but not
+    including literals).  If the client is unable to group things into
     ranges so that the command line is within that length, it should
     split the request into multiple commands.  The client should use
     literals instead of long quoted strings, in order to keep the command
@@ -27,8 +28,7 @@ gracious so far to cooperate with our long commands, but not all IMAP
 servers are so kind. I've been playing with Dovecot on localhost, and
 I've received this error:
 
-	error: FETCH command error: BAD ['Error in IMAP command FETCH: Too
-long argument.']
+    error: FETCH command error: BAD ['Error in IMAP command FETCH: Too long argument.']
 
 The solution would be:
 - assemble the list as we do now,
