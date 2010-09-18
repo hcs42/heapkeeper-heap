@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: JavaScript testing
 Tag: issue
+Tag: reviewed
 Message-Id: <AANLkTilcoWEqgA-13I3bg6cZ0ZMR-czbUyTzFXpfiWCx@mail.gmail.com>
 Date: Fri, 9 Jul 2010 07:22:26 +0100
 
@@ -10,4 +11,4 @@ is used by the JQuery project to test their code.
 [1] http://docs.jquery.com/QUnit - Description of QUnit on jQuery's home page
 [2] http://github.com/jquery/qunit - GitHub repository
 [3] http://www.swift-lizard.com/2009/11/24/test-driven-development-with-jquery-qunit/
-- A blogpost
+    - A blogpost
