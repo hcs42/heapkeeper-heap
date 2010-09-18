@@ -1,5 +1,6 @@
 Author: Csaba Hoch
 Subject: Heapkeeper plugins
+Tag: reviewed
 Message-Id: <4C0BD611.40308@gmail.com>
 Date: Sun, 06 Jun 2010 19:08:33 +0200
 
@@ -10,22 +11,22 @@ I created a plugin infrastructure for Heapkeeper.
 Each plugin shall be placed in the plugins/<plugin name> directory,
 which the following directories:
 - plugins/<plugin name>/src: Python source files (these directories
-   will be included in the Python PATH so that the modules in them will
-   be found when imported).
+  will be included in the Python PATH so that the modules in them will
+  be found when imported).
 - plugins/<plugin name>/static: files that shall be served without
-   modification through hkweb.
+  modification through hkweb.
 
 I have already created two plugins:
 - The "Review" plugin adds a "Set to reviewed" button to each thread
-   page. This button adds "reviewed" tag to all posts in the given
-   thread and commits all modifications to the post database using git.
-   The commit message will be generated from the subject of the root of
-   the thread.
+  page. This button adds "reviewed" tag to all posts in the given
+  thread and commits all modifications to the post database using git.
+  The commit message will be generated from the subject of the root of
+  the thread.
 - The "Custom Heap Server" plugin is a parametrizable plugin that
-   serves the index of the given heap on the given url. E.g. if the
-   plugin is started with 'hh' as parameter, localhost:8080/hh will
-   display only the posts in the Heapkeeper Heap, even if other heaps
-   are loaded as well.
+  serves the index of the given heap on the given url. E.g. if the
+  plugin is started with 'hh' as parameter, localhost:8080/hh will
+  display only the posts in the Heapkeeper Heap, even if other heaps
+  are loaded as well.
 
 The plugin modules shall have a `hkp_` prefix (Heapkeeper plugin) in
 order to decrease the possibility of a name collision.
@@ -40,14 +41,14 @@ instances that serve different heaps on different URLs.
 
 Starting the "Review" plugin:
 
-     >>> import hkp_review
-     >>> hkp_review.start()
+    >>> import hkp_review
+    >>> hkp_review.start()
 
 Starting the "Custom Heap Starting plugin":
 
-     >>> import hkp_custom_heap_server
-     >>> hkp_custom_heap_server.start('hh')
-     >>> hkp_custom_heap_server.start('myotherheap')
+    >>> import hkp_custom_heap_server
+    >>> hkp_custom_heap_server.start('hh')
+    >>> hkp_custom_heap_server.start('myotherheap')
 
 == Final words ==
 
