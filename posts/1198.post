@@ -1,5 +1,6 @@
 Author: Csaba Hoch
 Subject: Automatic update of copyright notices
+Tag: reviewed
 Tag: vim
 Message-Id: <o2u4ddb9e5b1004180714tb53260bbr9e3eaedfe4fb0173@mail.gmail.com>
 Date: Sun, 18 Apr 2010 16:14:51 +0200
@@ -19,8 +20,7 @@ Heapkeeper source files:
                 \ "\\(" . strftime("%Y") . "\\)\\@![0-9]\\{4\\}" .
                 \ "\\(-" . strftime("%Y") . "\\)\\@!\\(-[0-9]\\{4\\}\\)\\?" .
                 \ " " . myname . "#" .
-                \ "s#\\([0-9]\\{4\\}\\)\\(-[0-9]\\{4\\}\\)\\?#\\1-" .
-strftime("%Y") . "#e"
+                \ "s#\\([0-9]\\{4\\}\\)\\(-[0-9]\\{4\\}\\)\\?#\\1-" . strftime("%Y") . "#e"
         endif
     endfunction
 
