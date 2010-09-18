@@ -1,17 +1,10 @@
 Author: Attila Nagy
 Subject: hkrc.py is not imported
 Tag: bug
+Tag: reviewed
 Message-Id: <AANLkTim2T8oifMSVHrhQkypaeKFPopdUjNNWw-hGLIbI@mail.gmail.com>
 Parent: <AANLkTimwp-NTVfSLQQXA8BqFdb-bfNFJHQnTNKdHl__n@mail.gmail.com>
 Date: Fri, 16 Jul 2010 17:32:03 +0200
-
->> I'd do it like this:
->>
->> - do we have any "-r" options?
->> - if yes, and it's not NONE, import them, and report error if unsuccessful
->> - if no, try to import "hkrc.py", and keep silent even if it fails
->
-> Yes, that's what we should do.
 
 [assign Attis]
 [effort 1]
