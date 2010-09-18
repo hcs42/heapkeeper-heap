@@ -1,6 +1,7 @@
 Author: Attila Nagy
 Subject: Links become static style links after a save in hkweb until page is reloaded
 Tag: bug
+Tag: reviewed
 Message-Id: <AANLkTikwIqNGb8BujONy6UtDA4-cQhUZBs7hT6cr1Y2c@mail.gmail.com>
 Date: Wed, 21 Jul 2010 23:36:44 +0200
 
