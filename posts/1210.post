@@ -1,6 +1,7 @@
 Author: Attila Nagy
 Subject: Heapkeeper attempts SSL connection to plain IMAP servers
 Tag: bug
+Tag: reviewed
 Message-Id: <j2tb29f917d1005050924tbcfc166eveb00f065afaa25ba@mail.gmail.com>
 Date: Wed, 5 May 2010 18:24:06 +0200
 
@@ -14,8 +15,7 @@ I think this should work like this:
 
 The error message is also quite ugly:
 
-    SSLError: [Errno 1] _ssl.c:480: error:140770FC:SSL
-routines:SSL23_GET_SERVER_HELLO:unknown protocol
+    SSLError: [Errno 1] _ssl.c:480: error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol
 
 at the end of a long stack trace, of course. This should be caught and
 displayed as a more meaningful message, e.g. "Error: trying to connect

@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: Heapkeeper attempts SSL connection to plain IMAP servers
 Tag: bug
+Tag: reviewed
 Message-Id: <4BF844F8.8090803@gmail.com>
 Parent: <AANLkTinSI7qW80EIJ7sW3tqB9MRLFbX3p79mCasp7bsm@mail.gmail.com>
 Date: Sat, 22 May 2010 22:56:24 +0200
