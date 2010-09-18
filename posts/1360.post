@@ -1,11 +1,10 @@
 Author: Csaba Hoch
 Subject: Tracking missing tests, documentation and other todos
 Tag: prop
+Tag: reviewed
 Message-Id: <4C8CEDFB.50409@gmail.com>
 Parent: <b29f917d0906040923g6ca9fc46oeaf50f1f1988d7d7@mail.gmail.com>
 Date: Sun, 12 Sep 2010 17:12:59 +0200
 
 The proposal was accepted, but the "small tool that extracts the
 todos" still hasn't been written, so I'll leave this issue open.
-
-[note Parent post: http://heapkeeper-heap.github.com/hh/thread_343.html#post-summary-hh-374]
