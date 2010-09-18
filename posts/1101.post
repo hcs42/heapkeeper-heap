@@ -10,26 +10,27 @@ Date: Sun, 7 Feb 2010 16:20:34 +0100
 
 Not really :)
 
-> In Hk posts, the trailing
-> whitespace should never be valid if it matches /[^ ]\s\+$/. (That is,
-> the only acceptable situation is a line that is only whitespace, and
-> nothing else.) See for example this:
+> In Hk posts, the trailing whitespace should never be valid if it
+> matches /[^ ]\s\+$/. (That is, the only acceptable situation is a
+> line that is only whitespace, and nothing else.) See for example
+> this:
 >
 >    #include <stdio>
 >
 >    int main() {}
 >
-> If I write this, if we ever do any syntax highlighting, this will show
-> up as two distinct code blocks.
+> If I write this, if we ever do any syntax highlighting, this will
+> show up as two distinct code blocks.
 >
 > There is an alternate solution: we could declare that adjacent code
-> blocks are to be interpreted as continuous including any empty lines,
+> blocks are to be interpreted as continuous including any empty
+> lines,
 
 That's what Sphinx does. (And that's what Pyhon does as well, if you
 think about it.)
 
-> but then we'd have to include a separator element, e.g. a special "no-op"
-> meta. Like this:
+> but then we'd have to include a separator element, e.g. a special
+> "no-op" meta. Like this:
 >
 >    Compare these two examples:<cr>
 >    <cr>
@@ -38,7 +39,7 @@ think about it.)
 >    <spc>print('hello world')<cr>
 
 We would have to include it if we wanted to be able to express
-everything, including your example. I don't think it it important to
+everything, including your example. I don't think it is important to
 be able to express that. For example, in Sphinx, you would put the two
 code examples into an itemization:
 
