@@ -2,17 +2,18 @@ Author: Attila Nagy
 Subject: Missing semicolon in JS
 Tag: bug
 Tag: idea
+Tag: reviewed
 Message-Id: <AANLkTinBnhKmHgUYXER7RC-H_5-PRXSR4sz7APVm_QZE@mail.gmail.com>
 Date: Sun, 25 Jul 2010 14:46:12 +0200
 
 In hkweb.js, the body of editPost() contains these lines:
 
-        var postBodyContentNode = $('.post-body-content', postBodyContainer);
+    var postBodyContentNode = $('.post-body-content', postBodyContainer);
 
-        editState[postId] = mode
+    editState[postId] = mode
 
-        // Replacing the post-body-content box with a textarea
-        postBodyContentNode.after(
+    // Replacing the post-body-content box with a textarea
+    postBodyContentNode.after(
 
 There is a missing semicolon at the end of the 3rd line. No error
 messages are on the JS console in Chromium, and the code works

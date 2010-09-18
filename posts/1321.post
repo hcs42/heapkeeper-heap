@@ -2,14 +2,17 @@ Author: Csaba Hoch
 Subject: Missing semicolon in JS
 Tag: bug
 Tag: idea
+Tag: reviewed
 Message-Id: <AANLkTimxaUycXH88jkQDU=Gc4kEPbaKRoeV4fXdbr4fu@mail.gmail.com>
 Parent: <AANLkTinBnhKmHgUYXER7RC-H_5-PRXSR4sz7APVm_QZE@mail.gmail.com>
 Date: Sun, 25 Jul 2010 16:28:47 +0200
 
-I fixed it now in commit 4a9163cf2d. I found also 4 other cases.
+I fixed it now in commit 4a9163cf2d. I found also 3 other cases.
 
 This Stack Overflow question [1] explains why JavaScript does work
 sometimes without a semicolon, and it is not nice. So let's always use
 them when we would use them in other languages with C-like syntax.
 
 [1] http://stackoverflow.com/questions/444080/do-you-recommend-using-semicolons-after-every-statement-in-javascript
+
+[close]
