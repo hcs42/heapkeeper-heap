@@ -1,12 +1,13 @@
 Author: Csaba Hoch
 Subject: Creating a hkconfig module
 Tag: issue
+Tag: reviewed
 Message-Id: <AANLkTin5kNekuAGpKxZN0lYNVG5kZ_kccYfHAfx0qiGY@mail.gmail.com>
 Date: Sun, 18 Jul 2010 21:39:25 +0100
 
 >> 5. Creating a hkconfig module and moving the functions that handle the
 >>    configuration dictionary from hklib here.
-
+>
 > OK. Point 5 is a bit broad though, maybe we should discuss the specifics.
 
 I meant moving the functions that convert the config dictionary
@@ -24,3 +25,5 @@ dictionary format:
 
 The methods that read values from the configuration dictionary would
 stay as they are now.
+
+[note Original parent: heap://hh/1296]

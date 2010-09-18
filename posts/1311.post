@@ -1,12 +1,14 @@
 Author: Attila Nagy
 Subject: Creating a hkconfig module
 Tag: issue
+Tag: reviewed
 Message-Id: <AANLkTimV2wj5rgsyTPhEPhxfrfuZleeebnk1FCjqaz4Z@mail.gmail.com>
 Parent: <AANLkTin5kNekuAGpKxZN0lYNVG5kZ_kccYfHAfx0qiGY@mail.gmail.com>
 Date: Fri, 23 Jul 2010 17:42:13 +0200
 
 >>> 5. Creating a hkconfig module and moving the functions that handle the
 >>>    configuration dictionary from hklib here.
+>>
 >> OK. Point 5 is a bit broad though, maybe we should discuss the specifics.
 
 Sorry, I misunderstood you. I didn't realize what you meant by "the
