@@ -1,6 +1,7 @@
 Author: Attila Nagy
 Subject: Missing mail directory causes both warning and exception
 Tag: bug
+Tag: reviewed
 Message-Id: <AANLkTimAjli_p1mKwhRUkPFagnkKPza4yW3swZdCDr04@mail.gmail.com>
 Parent: <AANLkTimp2uLuwYZoLzs_hFyTpZf9QixEYYZmBW1yfNoe@mail.gmail.com>
 Date: Fri, 16 Jul 2010 15:50:36 +0200
