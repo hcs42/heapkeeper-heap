@@ -1,9 +1,8 @@
 Author: Csaba Hoch
 Subject: Cookbook
+Tag: reviewed
 Message-Id: <4ddb9e5b1002182348o512c0b4du2e38121f877ee1e5@mail.gmail.com>
 Date: Fri, 19 Feb 2010 08:48:50 +0100
-
-[!todo break the thread]
 
 > I think what we need to be useful to others would be a cookbook with
 > many examples to handle a wide range of situations. It shouldn't be
@@ -13,3 +12,5 @@ Date: Fri, 19 Feb 2010 08:48:50 +0100
 
 I agree, a cookbook would be a good idea. But we have to keep it
 up-to-date, otherwise it is useless.
+
+[note Original parent: heap://hh/1177]
