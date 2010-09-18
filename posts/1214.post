@@ -1,6 +1,7 @@
 Author: Attila Nagy
 Subject: Encoding errors are fatal to IMAP downloading
 Tag: bug
+Tag: reviewed
 Message-Id: <p2gb29f917d1005060539o8202bd03jddc47f5149ed5322@mail.gmail.com>
 Date: Thu, 6 May 2010 14:39:45 +0200
 
@@ -21,5 +22,4 @@ not cause problems for English, at least. Other than that, I don't
 know what we could do to correct errorneous encodings -- maybe try
 auto-detecting?
 
-[1] heap://todo
-Subject: IMAP downloading fails when parsing a message without author
+[1] heap://hh/1212

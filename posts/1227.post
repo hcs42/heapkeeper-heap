@@ -1,6 +1,7 @@
 Author: Attila Nagy
 Subject: Encoding errors are fatal to IMAP downloading
 Tag: bug
+Tag: reviewed
 Message-Id: <v2pb29f917d1005101342s8a4692eer21b7b05724d07c2a@mail.gmail.com>
 Parent: <4BE3A33C.7010200@gmail.com>
 Date: Mon, 10 May 2010 22:42:20 +0200
