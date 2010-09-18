@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: assertEquals is removed from Python 2.7
 Tag: issue
+Tag: reviewed
 Message-Id: <4ddb9e5b1003071041x7ad8181flf9142b4efe32810a@mail.gmail.com>
 Parent: <4ddb9e5b1002281017v23e69386u2ed31bcd88f3ba82@mail.gmail.com>
 Date: Sun, 7 Mar 2010 19:41:25 +0100
@@ -9,10 +10,10 @@ Also, assert_ is deprecated, assertTrue should be used instead.
 
 There are nice improvements like:
 - assertMultilineEqual that uses diff, and which makes my unittest
-modification that also uses diff unnecessary
+  modification that also uses diff unnecessary
 - custom types can be hooked into the assert* functions
 - test.py in Heapkeeper will not be needed because test fuctions will
-be discovered automatically
+  be discovered automatically
 
 The new unittest is also backported to Python <=2.4, so we could use
 it; it can be downloaded from pypi. But the current version is fine,
