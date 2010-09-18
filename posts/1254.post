@@ -2,15 +2,10 @@ Author: Attila Nagy
 Subject: Using Javascript
 Tag: hkweb
 Tag: prop
+Tag: reviewed
 Message-Id: <AANLkTikjTY--poXy300yi_NygjDBpsKo2fcbo05im_aK@mail.gmail.com>
 Parent: <4BF84351.90209@gmail.com>
 Date: Sun, 23 May 2010 07:44:18 +0200
-
->> but how fluent are you at Javascript?
->
-> Not at all. But I wrote a snake game once in JavaScript:
->
-> http://people.inf.elte.hu/hoch/snake/javascript_firefox/snake.html
 
 Cool! An idea: let's keep it as an Easter Egg in the JS-based output
 page :)

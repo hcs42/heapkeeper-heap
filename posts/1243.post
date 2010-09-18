@@ -2,13 +2,10 @@ Author: Attila Nagy
 Subject: Using Javascript
 Tag: hkweb
 Tag: prop
+Tag: reviewed
 Message-Id: <AANLkTilXYQd4yJtUDKaXg_5OPno9n5bEAofrbc81BY2Q@mail.gmail.com>
 Parent: <AANLkTikKzS1wBI74-zKJ3OG6Rd-70huavTabX3Pm92Ea@mail.gmail.com>
 Date: Fri, 21 May 2010 00:13:50 +0200
-
-> I propose to use Javascript in the web pages served. It means that
-> Heapkeeper will be less enjoyable with Javascript turned off, but we
-> can do much more interesting stuff.
 
 Yes, I've already been thinking about things that this would make
 possible -- but how fluent are you at Javascript? I don't know the
