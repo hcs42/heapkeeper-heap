@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: IMAP downloading fails when parsing a message without author
 Tag: bug
+Tag: reviewed
 Message-Id: <4BE3A31A.1080900@gmail.com>
 Parent: <l2gb29f917d1005060509z51f61dc5if4b253a261e122f8@mail.gmail.com>
 Date: Fri, 07 May 2010 07:20:26 +0200

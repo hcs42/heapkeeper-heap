@@ -8,17 +8,17 @@ Date: Wed, 30 Jun 2010 14:39:12 +0200
 
 The hkshell module's docstring has this section:
 
-	Positional arguments
-	::::::::::::::::::::
+    Positional arguments
+    ::::::::::::::::::::
 
-	Currently the ``-c`` markers may be omitted and the positional arguments (the
-	ones without ``-<character>`` and ``--<word>``) will be executed as commands::
+    Currently the ``-c`` markers may be omitted and the positional arguments (the
+    ones without ``-<character>`` and ``--<word>``) will be executed as commands::
 
-		$ python hk.py 'dl()' 'g()' 'x()'
+        $ python hk.py 'dl()' 'g()' 'x()'
 
-	Do use this in scripts that you want to keep, because this behaviour may be
-	changed in the future if we want to use positional arguments for something
-	else.
+    Do use this in scripts that you want to keep, because this behaviour may be
+    changed in the future if we want to use positional arguments for something
+    else.
 
 This last sentence is problematic. I understand this section says that
 ``-c`` may be omitted, because at present, we interpret positional
@@ -31,6 +31,6 @@ of these is referred to by the "this" in the "Do use this" part.
 
 This would be more understandable:
 
-	Always use ``-c`` in scripts that you want to keep, because this
-	behaviour may be changed in the future if we want to use positional
-	arguments for something else.
+    Always use ``-c`` in scripts that you want to keep, because this
+    behaviour may be changed in the future if we want to use positional
+    arguments for something else.

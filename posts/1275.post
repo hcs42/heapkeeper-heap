@@ -8,12 +8,12 @@ Date: Wed, 30 Jun 2010 14:49:02 +0200
 Currently, if one attempts to launch Hk on a system with Python 2.4
 installed, xe gets this message:
 
-	$ ./hk.py
-	Traceback (most recent call last):
-	  File "./hk.py", line 29, in ?
-		import hklib
-	  File "/home/attish/heapkeeper/hklib.py", line 451
-		with open(filename, 'r') as f:
+    $ ./hk.py
+    Traceback (most recent call last):
+      File "./hk.py", line 29, in ?
+        import hklib
+      File "/home/attish/heapkeeper/hklib.py", line 451
+        with open(filename, 'r') as f:
 
 This happens due to the missing ``with`` keyword on this platform.
 However, seeing this message, the user might (and is likely to) think
