@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: "idea" tag
 Tag: meta
+Tag: reviewed
 Message-Id: <AANLkTi=caia68WdwJ13+=b50KseybGGESFRw4yvH44t=@mail.gmail.com>
 Date: Sun, 25 Jul 2010 16:35:03 +0200
 
@@ -29,7 +30,7 @@ deleting posts" thread [1] should not have an idea tag. I would not
 have given it to the "Implementing post splitting" thread [2] either,
 but I'm not so sure about that one.
 
-[todo The original parent of this post is the root of the "[bug][idea]
-Missing semicolon in JS" thread.]
 [1] heap://hh/1313
 [2] heap://hh/1318
+
+[note Original parent: heap://hh/1320]

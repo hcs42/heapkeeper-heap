@@ -1,13 +1,9 @@
 Author: Attila Nagy
 Subject: "idea" tag
 Tag: meta
+Tag: reviewed
 Message-Id: <AANLkTin+W=8=dFB1i618Tb0+k3LWpx3U0JVbR3M8dO+A@mail.gmail.com>
 Parent: <AANLkTikwRcO=sNC0QvTF4V6XyAxgEg9R+aoGLJaSQ8Pv@mail.gmail.com>
 Date: Sun, 25 Jul 2010 20:53:29 +0200
-
->> Do you think we should have a special way to denote potential bugs, or
->> we should simply use the "bug" tag for these?
->
-> Simply "bug" is enough.
 
 OK.
