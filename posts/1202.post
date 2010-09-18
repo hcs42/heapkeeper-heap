@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: hkshell: ImportError is caught even when it should not be
 Tag: bug
+Tag: reviewed
 Message-Id: <x2p4ddb9e5b1004240550qc84ae734rb7a7b391f80e6634@mail.gmail.com>
 Date: Sat, 24 Apr 2010 14:50:48 +0200
 
