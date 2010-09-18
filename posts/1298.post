@@ -1,15 +1,8 @@
 Author: Attila Nagy
 Subject: Status of the repository
+Tag: reviewed
 Message-Id: <AANLkTikFa4Q_GkbQzux8Kphc1edtRmpHIma_6RQy2UOD@mail.gmail.com>
 Parent: <AANLkTimpFC85v0K6RQRJ9KBMVU613EJDCbJpNfyJpois@mail.gmail.com>
 Date: Sat, 17 Jul 2010 14:57:55 +0200
-
->> - _issue_tracker: this branch needs the most attention; I embarked on
->>  a venture to make the issue tracker more beautiful, but it can't be
->>  included in a release like this -- it hotlinks to Canonical's forum
->>  icons, which is not a nice thing to do (and even worse to deploy!)
->
-> I want to create an issue tracker plugin, and I will use this branch
-> too. So I'll take care of this.
 
 OK.
