@@ -1,5 +1,6 @@
 Author: Attila Nagy
 Subject: "chunked" Transfer-Encoding
+Tag: reviewed
 Message-Id: <AANLkTin2OQpUFRz4WwtooMvA8Lr_5wdbesdKsjk3GR_3@mail.gmail.com>
 Parent: <4BFCBD6B.4080205@gmail.com>
 Date: Wed, 26 May 2010 08:48:02 +0200
@@ -7,7 +8,6 @@ Date: Wed, 26 May 2010 08:48:02 +0200
 >    webpy.header('Transfer-Encoding','chunked')
 >
 > Could you explain me what "chunked" means and why do we use it?
-
 
 We serve some really long pages. Chunked encoding allows such
 responses to be sent in several smaller parts. I've read it somewhere
@@ -18,4 +18,4 @@ Maybe we should test hkweb with this line commented out over a slower
 connection.
 
 [1] WP does not seem to confirm it:
-http://en.wikipedia.org/wiki/Chunked_transfer_encoding
+    http://en.wikipedia.org/wiki/Chunked_transfer_encoding
