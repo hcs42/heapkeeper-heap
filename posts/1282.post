@@ -1,5 +1,7 @@
 Author: Attila Nagy
 Subject: Skype+VNC meeting of 2010-07-10
+Tag: minutes
+Tag: reviewed
 Message-Id: <AANLkTinoWP9byu5jvQPfcjOAFALLur-rHLxb2mWwPogv@mail.gmail.com>
 Date: Tue, 13 Jul 2010 16:08:58 +0200
 
@@ -18,9 +20,9 @@ unedited log is available upon request.
 
 Recent refactoring has placed all Python code in a new "src"
 directory; this means that from now on, we can't launch Hk simply
-using "./hk.py" in the main directory, the user has to type
-"src/hk.py".  I find this ugly, but it is conceptually cleaner to have
-all py files in one place. I also raised concerns that these are not
+using "./hk.py" in the main directory, the user has to type "src/hk.py".
+Attis finds this ugly, but it is conceptually cleaner to have all py
+files in one place. Attis also raised concerns that these are not
 exactly those source files that one has e.g. in C.
 
 We came to the agreement that this will follow the general Python
@@ -38,6 +40,12 @@ We will probably keep it this way until we go to Python 3.0, because
 that handles Unicode differently so the Unicode handing of Hk has to
 be revisited when we change to Python 3.0 anyway.
 
+A more serious problem with UTF-8 strings is that they are indexed
+differently than unicode objects. For example the regular expression
+"sof.r" will match the "sof?r" unicode object, but will not match the
+"sof?r" UTF-8 encoded string, since the latter one handles "?" as two
+characters instead of one.
+
 == IMAP improvements ==
 
 AP: Attis will finish the patches concerning IMAP improvements, then
@@ -50,7 +58,7 @@ The original aim of hkcustomlib is largely superfluous. The individual
 parts of this module are reconsidered for removal or refactoring into
 other modules.  gen_indices is superfluous, its body could be the new
 body of hkshell.g() default_editor() could go to hkshell entirely.
-exception IncorrectEditorException goes to hkshell.  All other editor
+Exception IncorrectEditorException goes to hkshell.  All other editor
 handling mechanism goes to hkshell as well.
 
 Note: if you remove everything from hkcustomlib and remove it, delete
@@ -63,7 +71,7 @@ It takes into account the EDITOR variable, the system, available
 programs etc. More info on this: heap://hh/580
 
 A major issue was the parsing of the EDITOR variable w.r.t. spaces.
-hkcustomlib.edit_files if the entry point of this mechanism; now it is
+hkcustomlib.edit_files is the entry point of this mechanism; now it is
 a callback. old_content dict is used to detect which files were really
 changed. This may cause problems with extremely huge files, but it is
 unlikely.  The alternate approach would be watching the files' FS
@@ -91,7 +99,7 @@ like these:
 In these cases, we escape such spaces with a backslash, so Hk is
 launched like this:
 
-    EDITOR="gvim -c setf\ mail" src/hk.py
+    EDITOR='gvim -c setf\ mail' src/hk.py
 
 The remaining part of this mechanism decides a safe default editor to
 use without an env variable.

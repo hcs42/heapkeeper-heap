@@ -1,8 +1,13 @@
 Author: Csaba Hoch
 Subject: Skype+VNC meeting of 2010-07-10
+Tag: minutes
+Tag: reviewed
 Message-Id: <AANLkTilKZn3DPMm-h_1W8_ZhmCqqLE4OTHKifjZ9Qyb4@mail.gmail.com>
 Parent: <AANLkTinoWP9byu5jvQPfcjOAFALLur-rHLxb2mWwPogv@mail.gmail.com>
 Date: Sat, 17 Jul 2010 09:26:28 +0100
+
+[note The root of the thread has already been modified according to
+this email.]
 
 I propose adding a "minutes" tag to the thread [1].
 
@@ -32,18 +37,7 @@ propose appending the following sentences to the first paragraph:
     not match the "sof?r" UTF-8 encoded string, since the latter one
     handles "?" as two characters instead of one.
 
-== Simplification of architecture ==
-
-> [...] of hkshell.g() default_editor() could go to hkshell entirely.
-> exception IncorrectEditorException goes to hkshell.
-
-"exception" should begin with capital "E".
-
 == Analysis of file editing mechanism ==
-
-> hkcustomlib.edit_files if the entry point of this mechanism;
-
-"if" -> "is"
 
 > In these cases, we escape such spaces with a backslash, so Hk is
 > launched like this:
