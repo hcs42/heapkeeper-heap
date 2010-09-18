@@ -1,11 +1,3 @@
-Author: Csaba Hoch
-Subject: Post not marked as touched when changed via rl()
-Tag: issue
 Message-Id: <4ddb9e5b1002141449rf5e3863w4525662a3cccecc2@mail.gmail.com>
-Parent: <4ddb9e5b1002141448g65dd8f1em760e70dea31b5bf3@mail.gmail.com>
-Date: Sun, 14 Feb 2010 23:49:33 +0100
+Flag: deleted
 
-[todo]
-
-Correct address:
-http://github.com/hcs42/heapkeeper/commit/5f1dfcab30586093ac6d0faeb401be9dc675135c

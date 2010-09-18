@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: Post not marked as touched when changed via rl()
 Tag: issue
+Tag: reviewed
 Message-Id: <4ddb9e5b1002141448g65dd8f1em760e70dea31b5bf3@mail.gmail.com>
 Parent: <20100214071153.93f2a563.nagy.attila.1984@gmail.com>
 Date: Sun, 14 Feb 2010 23:48:48 +0100
@@ -11,7 +12,7 @@ Date: Sun, 14 Feb 2010 23:48:48 +0100
 
 I made a fix:
 
-http://github.com/hcs42/heapkeeper/commit/667e17db93e03030d254735eea43820450492ce2
+http://github.com/hcs42/heapkeeper/commit/5f1dfcab30586093ac6d0faeb401be9dc675135c
 
 I have tried it out, but not very thoroughly. Does it work for your scenarios?
 
