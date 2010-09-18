@@ -2,6 +2,7 @@ Author: Attila Nagy
 Subject: Empty tags are supported
 Tag: bug
 Tag: idea
+Tag: reviewed
 Message-Id: <AANLkTimnFDAvSSNB4wFOZ4mVECHyZvxapKfSkYC3nsLS@mail.gmail.com>
 Parent: <AANLkTimV5Nh5I4mtNY24RqEdONJZh_XcuQb31DOlmPf1@mail.gmail.com>
 Date: Tue, 20 Jul 2010 18:12:19 +0200
@@ -20,7 +21,6 @@ But with point 3 included, I don't think there's another option.
 The really nasty thing about this is that this situation was caused by
 an `rTr()` command! Unfortunately I couldn't reproduce it. It may be
 useful to analyse the situation backwards: find the conditions under
-which `rTr
-()` leads to the addition of an empty tag. (I have some bad feelings
-about this approach, though -- either that it won't work, or that it'd
-be insanely difficult.)
+which `rTr()` leads to the addition of an empty tag. (I have some bad
+feelings about this approach, though -- either that it won't work, or
+that it'd be insanely difficult.)
