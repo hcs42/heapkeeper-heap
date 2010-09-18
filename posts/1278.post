@@ -1,7 +1,8 @@
 Author: Attila Nagy
-Subject: features() function does not return status of event_printer_listener
+Subject: Store features and listeners in a dict, features() function does not return status of event_printer_listener
 Tag: hkshell
 Tag: idea
+Tag: reviewed
 Message-Id: <AANLkTil0bXSQ80Lh0U0dswUUWjDHYTUmlVv_P5qtIv9n@mail.gmail.com>
 Date: Wed, 30 Jun 2010 15:04:54 +0200
 
