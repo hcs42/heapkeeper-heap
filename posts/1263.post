@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: Heapkeeper v0.6 to be released
 Tag: release
+Tag: reviewed
 Tag: v0.6
 Message-Id: <AANLkTimQEj6-6uMwGtDlIwOL2nr8MO1HguAwV6YntE-6@mail.gmail.com>
 Date: Tue, 1 Jun 2010 17:24:44 +0200
@@ -12,7 +13,7 @@ The following branches are to be included:
 - hcs42/_bugfix
 - hcs42/_master
 - hcs42/_webpage
-- hcs42/_bodyparser
+- hcs42/_bodyparsing
 - hcs42/_devdoc
 - hcs42/_hkweb
 - attish/_imap
