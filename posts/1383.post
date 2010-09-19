@@ -1,0 +1,17 @@
+Author: Csaba Hoch
+Subject: Deprecating config file format 1 and 2
+Tag: issue
+Tag: removal
+Message-Id: <4C95A63C.8000306@gmail.com>
+Date: Sun, 19 Sep 2010 07:57:16 +0200
+
+In commit d823eb0 [1] I created a new config file format called
+"format 3". In the commit message I said that "the older formats are
+considered to be deprecated." I now propose deprecating the old
+formats. This could be done by having Heapkeeper v0.8 print a warning
+when the user uses these formats. Heapkeeper v0.9 and later would
+either print an error message in this case or would not even recognize
+the old formats. (Opinion?) This would mean that we could delete the
+source code and test code that deals with the legacy formats (~285 LOC).
+
+[1] "hklib: config converter functions", 2010-04-10, Csaba Hoch

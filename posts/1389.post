@@ -1,0 +1,25 @@
+Author: Csaba Hoch
+Subject: New tag: "performance"
+Tag: prop
+Tag: hh-convention
+Tag: hh-tags
+Message-Id: <4C962E39.60603@gmail.com>
+Date: Sun, 19 Sep 2010 17:37:29 +0200
+
+I propose having a new tag called "performance".
+
+We would add this tag to threads about performance problems and
+performance optimizations. I want to use it mostly to tag issues so
+that it is easy to separate functional issues and performance issues.
+Sometimes I want to look only at the functional issues; or later if we
+have a performance problem, we can just search for threads/issues
+about performance optimization ideas.
+
+Examples:
+- heap://hh/513 (Optimized IMAP downloading)
+- heap://hh/745 (Post._header['tags'] should be a set)
+- heap://hh/752 (PostDB.root cache)
+- heap://hh/756 (Profiling)
+- heap://hh/950 (Optimization in Hk)
+- heap://hh/1020 (dl() is getting slower)
+- heap://hh/1349 (JavaScript/JQuery efficiency)

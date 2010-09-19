@@ -1,0 +1,13 @@
+Author: Csaba Hoch
+Subject: IMAP downloading fails when parsing a message without author
+Tag: bug
+Message-Id: <4C94DAEF.50904@gmail.com>
+Parent: <l2gb29f917d1005060509z51f61dc5if4b253a261e122f8@mail.gmail.com>
+Date: Sat, 18 Sep 2010 17:29:51 +0200
+
+It seems that you fixed this bug in commit d8d7fd6 [1].
+
+Would you close this issue?
+
+[1] "hklib: downloading posts with no author fixed", 2010-08-19,
+    Attila Nagy

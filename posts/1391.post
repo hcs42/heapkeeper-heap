@@ -1,0 +1,15 @@
+Author: Csaba Hoch
+Subject: Caching of next heapid leads to inconsequent behavior
+Tag: bug
+Message-Id: <4C962F5D.7030700@gmail.com>
+Parent: <b29f917d0910301549n3b776697p4d51460b8ee15828@mail.gmail.com>
+Date: Sun, 19 Sep 2010 17:42:21 +0200
+
+[close]
+
+This bug was fixed in commit 52e8a70 [1].
+
+[1] "hklib: new mechanism to find next heapid w/ prefix", 2009-10-31,
+    Attila Nagy
+
+[note Parent post: http://heapkeeper-heap.github.com/hh/thread_811.html#post-summary-hh-811]

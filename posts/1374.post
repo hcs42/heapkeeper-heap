@@ -1,0 +1,13 @@
+Author: Csaba Hoch
+Subject: Display with one line per issue would be more useful for the issue tracker
+Tag: issue
+Tag: idea
+Message-Id: <4C94D729.80101@gmail.com>
+Parent: <l2xb29f917d1004250222l1272c1b1zc05f1a92673c8395@mail.gmail.com>
+Date: Sat, 18 Sep 2010 17:13:45 +0200
+
+I think you have implemented this idea in commit 6252756 [1] and now
+it is present in v0.7. Would you close this issue?
+
+[1] "hkp_issue_tracker: plugin added", 2010-08-03, Csaba Hoch
+    (based on Attis's work)

@@ -1,0 +1,17 @@
+Author: Csaba Hoch
+Subject: Standardizing post references
+Tag: prop
+Tag: post references
+Message-Id: <4C963767.3090703@gmail.com>
+Parent: <20100131231358.ea9c2a23.nagy.attila.1984@gmail.com>
+Date: Sun, 19 Sep 2010 18:16:39 +0200
+
+[close]
+
+I will close this subissue opened in heap://hh/934 (about displaying
+the Reference attribute in hkgen/hkweb), because according to
+heap://hh/1190, the Reference attribute was removed. We will have an
+"Original parent" attribute instead (see heap://hh/1332). Displaying
+that attribute in hkgen/hkweb is considered part of heap://hh/1190.
+
+[note Parent post: http://heapkeeper-heap.github.com/hh/thread_888.html#post-summary-hh-1075]

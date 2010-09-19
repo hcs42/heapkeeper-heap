@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: Sorting posts
+Tag: issue
+Message-Id: <4C94938C.4070008@gmail.com>
+Parent: <b29f917d0911150224u774d6823vcd3a814d649b92a2@mail.gmail.com>
+Date: Sat, 18 Sep 2010 12:25:16 +0200
+
+> I implemented this as `Post.__lt__`. It is now pushed to branch "_post-sort".
+
+[close]
+
+[note Parent post: http://heapkeeper-heap.github.com/hh/thread_733.html#post-summary-hh-938]

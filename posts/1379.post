@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: hkrc.py is not imported
+Tag: bug
+Message-Id: <4C94FE1D.5000908@gmail.com>
+Parent: <AANLkTim2T8oifMSVHrhQkypaeKFPopdUjNNWw-hGLIbI@mail.gmail.com>
+Date: Sat, 18 Sep 2010 19:59:57 +0200
+
+[close]
+
+We fixed this in commit a822b9b [1].
+
+[1] "hkshell: fixed bug in importing modules", 2010-08-13, Attila Nagy

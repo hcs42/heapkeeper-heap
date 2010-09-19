@@ -1,0 +1,30 @@
+Author: Csaba Hoch
+Subject: New tag: "hh-tags"
+Tag: prop
+Tag: hh-convention
+Tag: hh-tags
+Message-Id: <4C95B2E4.8000903@gmail.com>
+Date: Sun, 19 Sep 2010 08:51:16 +0200
+
+In heap://hh/892, we implicitly agreed that we should use a finite set
+of tags in Heapkeeper Heap. In a few following posts, I propose a few
+new tags that we could use.
+
+In this post, I propose the "hh-tags" tag. This tag would mean that
+the thread is about which tags are accepted in HH and how are they
+used. This is not about the generic tag support of Heapkeeper. This
+tag would usually imply the "hh-conventions" tag, and the "prop" tag
+when we are discussing a new tag.
+
+Examples:
+- heap://hh/96 (Using the "reviewed" tag)
+- heap://hh/252 (Tag proposal: "post syntax")
+- heap://hh/1323 ("idea" tag)
+
+Counter-example:
+- heap://hh/1304 (Empty tags are supported): it talks about
+  Heapkeeper's tag support and not specific tags on HH
+
+[1] heap://hh/1273; search for "method removal" in the body
+[2] In heap://hh/1337, we agreed to create a decorator called
+    @deprecated to help this process.

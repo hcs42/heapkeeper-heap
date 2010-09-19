@@ -1,0 +1,19 @@
+Author: Csaba Hoch
+Subject: New tag: "testing"
+Tag: prop
+Tag: hh-convention
+Tag: hh-tags
+Message-Id: <4C95B41D.60504@gmail.com>
+Date: Sun, 19 Sep 2010 08:56:29 +0200
+
+I propose having a new tag called "testing".
+
+Threads about discussing how Heapkeeper is tested or how it could be
+tested should have this tag.
+
+Examples:
+- heap://hh/342 (Source code, test suite, documentation)
+- heap://hh/619 (Hard to test pieces of the code)
+- heap://hh/588 (Writing tests)
+- heap://hh/1281 (JavaScript testing)
+- heap://hh/1324 (Command line JavaScript)

@@ -1,0 +1,14 @@
+Author: Csaba Hoch
+Subject: Possible mistake in docstring
+Tag: hkshell
+Tag: issue
+Tag: idea
+Message-Id: <4C94E4B9.1050909@gmail.com>
+Parent: <AANLkTilXLzwOa4UKASrVhUB3LP4zcMfFI1PUN1nji0KZ@mail.gmail.com>
+Date: Sat, 18 Sep 2010 18:11:37 +0200
+
+[close]
+
+I fixed this now in commit ef87c4e [1].
+
+[1] "hkshell: docstring is more understandable now", 2010-09-18, Csaba Hoch

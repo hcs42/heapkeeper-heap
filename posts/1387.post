@@ -1,0 +1,27 @@
+Author: Csaba Hoch
+Subject: Using deprecated feature: "hkweb{,.js}: adding new posts implemented" (2010-08-11 6c7cc72)
+Tag: commit
+Tag: bug
+Message-Id: <4C962678.8070007@gmail.com>
+Date: Sun, 19 Sep 2010 17:04:24 +0200
+
+In commit 6c7cc72 [1], you use the hkgen.Generator.augment_postitem
+method that was deprecated in commit deb3af2 [2]:
+ 
+    +   generator = PostPageGenerator(self._postdb)
+    +   generator.set_post_id(post.post_id())
+    +   postitem = generator.augment_postitem(hklib.PostItem('inner', post))
+    +   postitem.print_post_body = True
+    +   postitem.print_parent_post_id = True
+
+Since the post item augmenting mechanism is already deprecated in
+v0.7, it will be completely removed from v0.8. Therefore if commit
+6c7cc72 will be merged into v0.8, it will not work.
+
+Could you fix this? You can either rewrite 6c7cc72 or make a new
+commit on the top of _hkweb-add. I would probably do the former one.
+
+[1] "hkweb{,.js}: adding new posts implemented", 2010-08-11,
+    Attila Nagy, attish/_hkweb-add branch
+[2] "hkgen: removed PostItem augmenting mechanism", 2010-08-13,
+    Attila Nagy

@@ -1,0 +1,30 @@
+Author: Csaba Hoch
+Subject: New tag: "removal"
+Tag: prop
+Tag: hh-convention
+Tag: hh-tags
+Message-Id: <4C95B41E.8080709@gmail.com>
+Date: Sun, 19 Sep 2010 08:56:30 +0200
+
+I propose having a new tag called "removal".
+
+Sometimes we want to remove a feature, a file format or just a
+function from Heapkeeper. The usual procedure [1][2] is to:
+1. Deprecate the functionality in one Heapkeeper version, and make it
+   issue warnings when used;
+2. Remove it totally from the next Heapkeeper version.
+
+Most of these removals will probably be proposed and discussed on HH.
+I think it would be good to have a separate tag for these threads.
+(I can imagine that I only want to look at these removal threads, but
+I can even more easily imagine that I want to look at only the
+non-removal issues.)
+
+Most threads with a "removal" tag would also have an "issue" tag.
+
+I also propose using the "removal" word as a commit topic.
+
+Examples:
+- heap://hh/972 (Removing Post.html*)
+- heap://hh/1102 (Deprecation status of g(), ga() and gi())
+- heap://hh/1190 (Removing the Reference attribute)

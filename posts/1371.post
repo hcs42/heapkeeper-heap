@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: hkshell: ImportError is caught even when it should not be
+Tag: bug
+Message-Id: <4C94D570.6010803@gmail.com>
+Parent: <x2p4ddb9e5b1004240550qc84ae734rb7a7b391f80e6634@mail.gmail.com>
+Date: Sat, 18 Sep 2010 17:06:24 +0200
+
+[close]
+
+This bug was fixed in commit 100a5e0 [1].
+
+[1] "hkshell: ImportError shown when appropriate", 2010-06-26, Csaba Hoch

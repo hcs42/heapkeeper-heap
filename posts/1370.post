@@ -1,0 +1,18 @@
+Author: Csaba Hoch
+Subject: Post not marked as touched when changed via rl()
+Tag: issue
+Message-Id: <4C94D008.3070300@gmail.com>
+Parent: <4ddb9e5b1002141448g65dd8f1em760e70dea31b5bf3@mail.gmail.com>
+Date: Sat, 18 Sep 2010 16:43:20 +0200
+
+> I made a fix:
+> 
+> http://github.com/hcs42/heapkeeper/commit/5f1dfcab30586093ac6d0faeb401be9dc675135c
+> 
+> I have tried it out, but not very thoroughly. Does it work for your scenarios?
+
+[close]
+
+I had no answer, I guess it worked.
+
+[note Parent post: http://heapkeeper-heap.github.com/hh/thread_1169.html#post-summary-hh-1175]
