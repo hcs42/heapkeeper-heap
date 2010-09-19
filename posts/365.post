@@ -6,6 +6,9 @@ Message-Id: <20090531210221.1e865263.nagy.attila.1984@gmail.com>
 Parent: <4A228DB8.1070007@gmail.com>
 Date: Sun, 31 May 2009 21:02:21 +0200
 
+[note This thread is *not* about including images in heaps. That is
+just the example thread.]
+
 I like this idea. We could even extend it to merge a stream of replies
 into a single page, to simulate "in-place replies". An example:
 
