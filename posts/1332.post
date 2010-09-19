@@ -1,12 +1,10 @@
 Author: Csaba Hoch
 Subject: Removing the Reference attribute
 Tag: prop
+Tag: reviewed
 Message-Id: <AANLkTimvqV0QSyepvGzP+qvEzFZ8g1LhQ=wAf0dRfFUt@mail.gmail.com>
+Parent: hh/1190
 Date: Sun, 25 Jul 2010 22:51:20 +0200
-
-[todo The original parent of this post is heap://hh/1190, which can be
-viewed currently at:
-http://heapkeeper-heap.github.com/hh/thread_1190.html#post-summary-hh-1190 ]
 
 I already removed the Reference attribute in Heapkeeper v0.5 (commit
 5a7e03e573), but I haven't closed this thread because I know Attis has

@@ -1,6 +1,7 @@
 Author: Attila Nagy
 Subject: Removing the Reference attribute
 Tag: prop
+Tag: reviewed
 Message-Id: <AANLkTi=r_1dUUO_G4gSagu4oGABGBxXRg65FAHncg8PV@mail.gmail.com>
 Parent: <AANLkTimvqV0QSyepvGzP+qvEzFZ8g1LhQ=wAf0dRfFUt@mail.gmail.com>
 Date: Sun, 25 Jul 2010 23:33:06 +0200
@@ -14,37 +15,36 @@ However, what you are planning would work only if the maintainer of
 the heap never adds or removes posts to/from a subthread. A situation
 where automatic identification of original authors may be a problem:
 
-<1> Alfred: Chess?
+    <1> Alfred: Chess?
 
-        Anyone for chess tomorrow night?
+            Anyone for chess tomorrow night?
 
-    <2> Peter: Party tomorrow
+        <2> Peter: Party tomorrow
 
-            Please don't forget that the annual USR Party will be held
-            tomorrow evening.
+                Please don't forget that the annual USR Party will be held
+                tomorrow evening.
 
-        <3> Peter: Party tomorrow
+            <3> Peter: Party tomorrow
 
-                [note Almost forgot...]
+                    [note Almost forgot...]
 
-                > Please don't forget that the annual USR Party will be held
-                > tomorrow evening.
+                    > Please don't forget that the annual USR Party will be held
+                    > tomorrow evening.
 
-                Appropriate attire required!
+                    Appropriate attire required!
 
-                [todo join this to parent]
+                    [todo join this to parent]
 
-            <4> Susan: Party tomorrow
+                <4> Susan: Party tomorrow
 
-                    >> Please don't forget that the annual USR Party
-will be held
-                    >> tomorrow evening.
+                        >> Please don't forget that the annual USR Party will be held
+                        >> tomorrow evening.
 
-                    Oh, almost forgot.
+                        Oh, almost forgot.
 
-                    > Appropriate attire required!
+                        > Appropriate attire required!
 
-                    What do you mean?
+                        What do you mean?
 
 Now if the maintainer obeys what Peter asks in post 3, xe will also
 have to modify the quote depth in post 4, otherwise the first quote
