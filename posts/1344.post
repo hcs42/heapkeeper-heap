@@ -1,5 +1,6 @@
 Author: Attila Nagy
 Subject: HTTPS in web.py
+Tag: reviewed
 Message-Id: <AANLkTim1v0-VCNN+p1gKWDq99qfir-4a2Z-e8ySRbVma@mail.gmail.com>
 Date: Fri, 27 Aug 2010 03:17:01 +0200
 
@@ -20,8 +21,7 @@ If you need a certificate, use this:
 
     openssl genrsa -des3 -out server.key 1024
     openssl req -new -key server.key -out server.csr
-    openssl x509 -req -days 365 -in server.csr -signkey server.key -out
-server.crt
+    openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
     mv server.key myserver.key
     mv server.crt myserver.crt
 
