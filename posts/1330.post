@@ -1,6 +1,7 @@
 Author: Csaba Hoch
 Subject: Implementing adding posts in hkweb
 Tag: feature
+Tag: reviewed
 Message-Id: <AANLkTikxFv8YVF25nzjZ7NJ3ABMrXkb4QNQC4piLvHMM@mail.gmail.com>
 Date: Sun, 25 Jul 2010 21:35:23 +0200
 
@@ -66,6 +67,4 @@ have a drop-down menu button next to each post that would contain the
 less frequently used features, and that could include an "add sibling"
 button.
 
-[todo
-[1] Reference to the original parent of this post, which is root of
-    the "[feature][idea] Implementing post splitting" thread.]
+[1]  heap://hh/1318
