@@ -1,0 +1,31 @@
+Author: Csaba Hoch
+Subject: Removing hkrcs from the repository
+Tag: issue
+Message-Id: <4C99F9F8.9070404@gmail.com>
+Date: Wed, 22 Sep 2010 14:43:36 +0200
+
+I propose removing out hkrc files from the Heapkeeper repository.
+
+We added them for two reasons:
+1. So that we can copy stuff from each other's hkrc.
+2. So that we can maintain each other's hkrcs when we modify something.
+
+I don't do the first one, and you cannot do it either, because I don't
+put my own stuff into my hkrc that is in the repository (because it is
+ugly and messy). Regarding the second one: in my experience, this
+system is not good but bad for the maintainability. (E.g. I would
+boldly remove any dead code from Heapkeeper; but it would feel weird
+to remove the dead code from your hkrc. And this applies to every
+possible improvement. For example now pylint found errors in your hkrc
+("import datetime" is missing but datetime is used).) Our deprecation
+system means that everyone can correct and adjust their own hkrc files
+to the changes in Heapkeeper, so point (2) is not that relevant now.
+
+I want to remove my hkrc because I don't want to maintain it. Also, I
+don't want to document it. Sometime I want to delete whole parts of it
+or reorganize it, and I don't want it to be a Heapkeeper commit. This
+not only would increase the number of commits unnecessarily, but I
+would also have to deal with it when merging the branches. (An ideal
+way of working is if the different feature branches (that are about
+different features) touch different modules, which will make merge
+easy; but hkrcs could be modified in all of them.)

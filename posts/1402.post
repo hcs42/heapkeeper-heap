@@ -1,0 +1,15 @@
+Author: Csaba Hoch
+Subject: All posts in Heapkeeper Heap reviewed
+Tag: meta
+Message-Id: <4C9F0B49.6030609@gmail.com>
+Date: Sun, 26 Sep 2010 10:58:49 +0200
+
+I have managed to review all posts in Heapkeeper Heap.
+
+There are a few things that could be improved though:
+- I haven't cleaned up all post syntax threads. The biggest beast is
+  heap://hh/156 (Body parsing - the what). I think I will wait with that until
+  hkweb has even more features that may be helpful in cleaning up these threads.
+- I haven't examined the tags we use. They should be more standardized.
+- I haven't made all posts contain diffs and commit identifiers according to
+  a certain convention.

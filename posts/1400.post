@@ -1,0 +1,40 @@
+Author: Csaba Hoch
+Subject: hk-dev-utils rewritten
+Tag: hk-dev-utils
+Message-Id: <4C9F7C91.3030707@gmail.com>
+Date: Sun, 26 Sep 2010 19:02:09 +0200
+
+I did a major hk-dev-utils rewrite.
+
+The main points are the following:
+- More user-friendly scripts.
+- More script in Python so that they are easier to improve.
+- Python libraries so that the functionality is easier to reuse.
+- Asynchronous post-commit hook that performs several check (unittest, pylint,
+  etc.) and reports the result in a notification bubble and an editor window
+  that is popped up.
+
+I described the new system in detail in the README file. If something
+does not work, please read the Debugging section in the README file.
+The post-commit hook may even take more than one minute, but only at
+the first time when the files of the git repository are not in the OS
+cache, and I think only when you are cloning to a different filesystem
+partition. (See the "Temporary directories" in the README.)
+
+The post-commit hook is executed after each commit if you do an
+interactive rebase. Since most current branches do have
+pylint/whitespace/etc. errors, any interactive rebase of your branches
+will pop up editor windows. This may be annoying, but this will stop
+after releasing 0.8 (where we will have no test errors carried along
+commits). I already created a branch (_commit-hook) in which I already
+corrected every problem that the commit hook would find. So until the
+current branches are merged, you can ignore those errors that were not
+created by your current commit; but after the merge, every error
+report shall indicate that either:
+1. Your commit is not fine so you should correct it.
+2. Someone left a problem in a previous commit and you are working on
+   the top of that now. In this case the previous commit (whether it
+   was yours or not) should be rewritten so that the post-commit hook
+   will not raise any errors.
+
+[1] http://github.com/hcs42/hk-dev-utils
