@@ -1,0 +1,19 @@
+Author: Csaba Hoch
+Subject: New tag: "removal"
+Tag: prop
+Tag: hh-convention
+Tag: hh-tags
+Message-Id: <AANLkTikomLxA5Pg7RZ84dGays+4+uyEwd9FuyfL5S6KT@mail.gmail.com>
+Parent: <AANLkTim=NotfRgpae1w_zvYVQbnQGeE3B==E2O19ms-t@mail.gmail.com>
+Date: Wed, 22 Sep 2010 15:43:46 +0200
+
+> OK, but why not "deprecation"?
+
+I have to admit, that was the tag I wanted to use first. But the
+discussion in these threads would focus on whether the feature should
+be removed or not; the deprecation is just a process and a tool to
+make the removal less painful. That said, the tag "deprecation" has
+advantages as well: most programmers will instantly know what we are
+talking about, which is not the case for "removal".
+
+So I can accept "deprecation" if you still think that's better. Do you?

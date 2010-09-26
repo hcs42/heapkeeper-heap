@@ -1,0 +1,76 @@
+Author: Csaba Hoch
+Subject: Trailing whitespace problems
+Tag: commit
+Message-Id: <AANLkTimXtqdHYaKE2+vMwGqdcn_5avRaucZ+4Vu21dgu@mail.gmail.com>
+Date: Fri, 24 Sep 2010 09:29:46 +0200
+
+== General problem ==
+
+Attis, some of your commits have trailing whitespace and line length
+problems. Could you fix these?
+
+I consider this to be my fault because the pre-commit hook that was
+supposed to check this has been buggy:
+
+    grep -n " $" doc/*.{rst,py,hrst} > "$tmp"
+
+This did not check any Python files (they are not in the doc
+directory), and did not check of course any JavaScript, CSS, etc.
+file.
+
+In the future, the new hk-dev-utils will solve this problem, because:
+- It will provide a commit hook that will help every developer to deal
+  effortless with this issue.
+- It will provide an easy way for me to check all commits, even the
+  ones written by others. It also provides an easy way to check all
+  commits that go into a release (e.g. testing each commit that went
+  into 0.7: "hkdu-testcommit v0.6..v0.7") and an easy way to examine
+  the results (no output=no error, output=error).
+
+Nevertheless, I recommend putting an "automatic trailing space
+remover" [1] into your vimrc:
+
+    :au BufWritePre * :silent! %s/ \+$//
+
+You can change the * to *.{py,rst,hrst} or something like this if you
+don't want it to effect your other files.
+
+== Concrete cases ==
+
+deb3af2c8a (master branch): trailing whitespace
+
+    src/hkgen.py:960:
+    src/hkgen.py:983:
+    src/hkgen.py:986:
+
+    Unfortunately this commit is part of v0.7, so we should just leave
+    it. Luckily this is inside deprecated functions that will be
+    removed in v0.8 anyway (in the _hkweb branch, specifically).
+
+5806b7578e (_auth branch): trailing whitespace
+
+    src/hkweb.py:113:auth = make_auth(verify = minimal_verify)
+
+5673440e74 (_auth branch): trailing whitespace
+
+    plugins/users/src/hkp_users.py:50:
+    plugins/users/static/css/users.css:1:#userlist
+
+6c7cc72ba5 (_hkweb-add branch): too long line
+
+    src/hkweb.py:679: postitem = generator.augment_postitem([...]
+
+6c7cc72ba5 (_hkweb-add branch): trailing whitespace
+
+    static/js/hkweb.js:216:
+    static/js/hkweb.js:237:
+    static/js/hkweb.js:487:    //
+    static/js/hkweb.js:499:    // `postId` and `count` will iden[...]
+    static/js/hkweb.js:513:    // Change IDs in the clone for su[...]
+    static/js/hkweb.js:626:
+
+bfedcf6511 (_hkweb-add branch): trailing whitespace
+
+    static/js/hkweb.js:512:        parentPostSummary.before(table);
+
+[1] heap://hh/1019
