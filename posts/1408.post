@@ -1,0 +1,13 @@
+Author: Attila Nagy
+Subject: Corrected version of the authentication-chat branch
+Message-Id: <20101004160042.09876b69.nagy.attila.1984@gmail.com>
+Date: Mon, 4 Oct 2010 16:00:42 +0200
+
+I have pushed the new _auth branch. I corrected issues like whitespace
+errors, pylint messages, and improved variable names and comments in
+several cases.
+
+I also added a convenience function to check time of last hkweb
+access. As the commit message explains, this should be checked on a
+production server before server shutdown or major maintenance
+operations.

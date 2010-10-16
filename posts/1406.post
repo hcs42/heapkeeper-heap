@@ -1,0 +1,13 @@
+Author: Csaba Hoch
+Subject: Should we backport features to older config file formats?
+Message-Id: <AANLkTi=ozrtSNsdmVRwMAHFE=69odSRQyi=kBC4y1Tch@mail.gmail.com>
+Parent: <20101003154437.6c5f2da3.nagy.attila.1984@gmail.com>
+Date: Sun, 3 Oct 2010 19:20:06 +0200
+
+> I suggest we keep the legacy config file formats intact, and introduce
+> new features only to the current one.
+
+Of course.
+
+In heap://hh/1383 I proposed deprecating the old formats in 0.8 and
+remove them from 0.8+.

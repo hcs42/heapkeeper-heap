@@ -1,0 +1,27 @@
+Author: Csaba Hoch
+Subject: Heapkeeper v0.8 to be released
+Tag: release
+Tag: v0.8
+Message-Id: <4CB7492C.2090403@gmail.com>
+Date: Thu, 14 Oct 2010 20:17:16 +0200
+
+I plan to release Heapkeeper v0.8.
+
+The following branches are to be included:
+
+- hcs42/_bugfix
+- hcs42/_master
+- hcs42/_hkweb
+- hcs42/_commit-hook
+- hcs42/_webpage
+- attish/_auth
+- attish/_hkweb-add
+
+I have pushed _v0.8. I also uploaded tar.gz and zip files:
+
+- http://heapkeeper.org/releases/heapkeeper-0.8.tar.gz
+- http://heapkeeper.org/releases/heapkeeper-0.8.zip
+
+Please have a look at it and try it out. You can go through the
+tutorial for example. If everything is OK, I will do the final release
+on Sunday morning.

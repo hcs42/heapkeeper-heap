@@ -1,0 +1,11 @@
+Author: Attila Nagy
+Subject: Should we backport features to older config file formats?
+Message-Id: <20101003154437.6c5f2da3.nagy.attila.1984@gmail.com>
+Date: Sun, 3 Oct 2010 15:44:37 +0200
+
+Do we want to backport additions to the config file format to legacy
+formats (i.e. 1 and 2), or do we want to keep these as they are now,
+and make changes only to the current format (format 3 as of now)?
+
+I suggest we keep the legacy config file formats intact, and introduce
+new features only to the current one.

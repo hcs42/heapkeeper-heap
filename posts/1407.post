@@ -1,0 +1,23 @@
+Author: Attila Nagy
+Subject: Deprecating config file format 1 and 2
+Tag: issue
+Tag: removal
+Message-Id: <20101003192515.ddf95ca9.nagy.attila.1984@gmail.com>
+Parent: <4C95A63C.8000306@gmail.com>
+Date: Sun, 3 Oct 2010 19:25:15 +0200
+
+This has timed out long ago, so it passes. But there is an open
+question:
+
+> Heapkeeper v0.9 and later would
+> either print an error message in this case or would not even recognize
+> the old formats. (Opinion?)
+
+If we had a user base, we should consider keeping the legacy code. But
+since we have none (that we know of) other than us, we should take
+this opportunity to make the code simpler.
+
+Even if we had a user base, we could move this code to a separate
+utility that would convert the legacy config files to current ones.
+Then, the 285 LOC and all the problems it may cause would at least be
+separated.

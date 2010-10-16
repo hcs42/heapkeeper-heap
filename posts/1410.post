@@ -1,0 +1,52 @@
+Author: Csaba Hoch
+Subject: Organizing the Heap: adding main page, more Wiki-like Heap
+Tag: idea
+Message-Id: <4CB0C31E.3090908@gmail.com>
+Parent: <20101005180900.f5f14e6b.nagy.attila.1984@gmail.com>
+Date: Sat, 09 Oct 2010 21:31:42 +0200
+
+> Our index page couldn't be more different. It is a flat list of all
+> the posts in the heap. This is a regression. We used to have sections;
+> they helped reduce the problem, to a limited degree -- the user was
+> offered a flat list of several hundred posts instead of several
+> thousands, at least in the case of the UMS Heap.
+
+We can still use sections if we modify the hkrc. We just don't do
+that any more. I personally don't do it because using the search bar
+is easier if I want to see only a certain category of posts.
+
+> The main page could be a synthetic [3] post linking to other synthetic
+> posts, these would be the "second level TOC" pages, and they could be
+> children of the 'main' post. We could add a feature so that if there
+> is a thread where the root post's ID is 'main', it will be presented
+> as the landing page instead of the index.
+
+I like this idea!
+
+> I know this sounds like an insane amount of work, but I think that
+> it needs to be done if we hope to attract users and contributors. And
+> the software is here; the only feature that needs to be added is the
+> ability to add Wiki-like internal links to posts, but this is a
+> nontrivial task since it seems to break one of our key principles: the
+> one that dictates that the output copied and pasted yields the
+> original text.
+
+This is not even necessary, we could write links this way:
+
+    - Setting up Heapkeeper (heap://setting_up_hk) -- what you need to
+      get started, and getting it done
+    - Securing a Heapkeeper installation (heap://securing_hk_install) --
+      not all mailing lists are world-readable, and so are not all
+      heaps
+
+But all posts would look better if we made it possible to display a
+link with a custom text instead of the heap url.
+
+An additional idea: it would be good to have search result pages as
+links. This is an example with a hypothetical search url syntax:
+
+    Some interesting set of threads on HH:
+    - Post syntax (heap://search/tag:post-syntax) -- Discussions about
+      what syntax to use for post bodies
+    - Releases (heap://search/tag:release) -- Posts about Heapkeeper
+      releases
