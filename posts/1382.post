@@ -1,7 +1,7 @@
 Author: Csaba Hoch
 Subject: Deprecating hkgen.Generator.{print_post_page,write_post_pages}
+Tag: deprecation
 Tag: issue
-Tag: removal
 Message-Id: <4C95A591.2020707@gmail.com>
 Date: Sun, 19 Sep 2010 07:54:25 +0200
 
