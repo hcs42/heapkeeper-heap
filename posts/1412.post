@@ -1,0 +1,44 @@
+Author: Csaba Hoch
+Subject: Heapkeeper v0.8 released
+Tag: release
+Tag: v0.8
+Message-Id: <4CBABF45.8090907@gmail.com>
+Date: Sun, 17 Oct 2010 11:17:57 +0200
+
+I'm happy to announce that Heapkeeper v0.8 has been released.
+
+The main improvements of this release are hkweb features: better search,
+faster post body folding, possibility to use authentication and add new
+child posts.
+
+Major new features:
+- New child posts can be added in hkweb.
+- hkweb supports authenticating users.
+- The search bar in hkweb can contain new target types: the user can
+  search for posts with certain tags, posts after/before a certain date,
+  posts on a certain heap, etc; and all these can be negated and
+  combined. The "Issue Tracker" plugin even adds an "issue" target type.
+- The search page shows the number of hits and has better unicode
+  handling.
+- The "Chat" plugin implements real-time chat (instant messaging) in
+  hkweb.
+- The "Users" plugin displays users' recent activity on hkweb pages.
+- The "Custom Heap Server" plugin can be started for all heaps.
+
+Major refactorings:
+- Folding of post bodies is hkweb is 50 times faster.
+
+Other major improvements:
+- hk-dev-utils can perform automatic tests on Heapkeeper in a more
+  convenient way than before.
+- test.py collects test modules dynamically (they used to be hardcoded).
+
+Major deprecation:
+- Post item augmentation is no longer supported. It became unnecessary
+  due to refactoring: if a post item is created, it does not need to be
+  augmented any more.
+- Post pages are deprecated. (Use thread pages instead.)
+- Old configuration formats are deprecated. (Use the new format
+  instead.)
+
+The new release can be downloaded from http://heapkeeper.org/download.html
