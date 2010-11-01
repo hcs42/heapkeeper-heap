@@ -1,0 +1,15 @@
+Author: Csaba Hoch
+Subject: Deprecating config file format 1 and 2
+Tag: issue
+Tag: deprecation
+Message-Id: <4CCED28E.8090600@gmail.com>
+Parent: <4C95A63C.8000306@gmail.com>
+Date: Mon, 01 Nov 2010 15:45:34 +0100
+
+[close]
+
+The deprecation was performed in 28bf039 [1], and the removal was
+performed in c1a0ab6 [2].
+
+[1] "hklib: old config file formats deprecated", 2010-09-18, Csaba Hoch
+[2] "hklib: old config format removed", 2010-10-23, Csaba Hoch

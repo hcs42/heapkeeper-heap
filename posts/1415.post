@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: Removing hkrcs from the repository
+Tag: issue
+Message-Id: <4CCED287.7030608@gmail.com>
+Parent: <4C99F9F8.9070404@gmail.com>
+Date: Mon, 01 Nov 2010 15:45:27 +0100
+
+[close]
+
+I removed both of our hkrc files in commit d4cde17 [1].
+
+[1] "hkrc_*: removed", 2010-10-24, Csaba Hoch
