@@ -3,6 +3,7 @@ Subject: Printing post references in the body
 Tag: feature
 Tag: new post syntax
 Tag: post references
+Tag: reviewed
 Message-Id: <4C963412.9090707@gmail.com>
 Parent: <4AF70219.8000205@gmail.com>
 Date: Sun, 19 Sep 2010 18:02:26 +0200
@@ -16,5 +17,3 @@ this thread, because post references are parsed everywhere in the body
 (except for raw blocks), not only in footnotes.
 
 [1] "hkbodyparser: post body is parsed", Csaba Hoch, 2010-03-14
-
-[note Parent post: http://heapkeeper-heap.github.com/hh/thread_887.html#post-summary-hh-887]
