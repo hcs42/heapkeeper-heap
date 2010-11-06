@@ -1,19 +1,10 @@
 Author: Csaba Hoch
 Subject: Effort
-Tag: prop
 Tag: hh-conventions
+Tag: prop
+Tag: reviewed
 Message-Id: <4C9490C7.8090108@gmail.com>
 Parent: <b29f917d0911182319q11e333b0k7ea6bd107f9ef519@mail.gmail.com>
 Date: Sat, 18 Sep 2010 12:13:27 +0200
 
->>>> I'd like to assign some meta information to the issues.
->>>>
->>>> For example:
->>>> - how much effort is it to implement them
->>>> - when do we plan to do it (Heapkeeper version)
->>>> - is it assigned to someone
->>>> - what is the priority
-
 [close]
-
-[note Parent post: http://heapkeeper-heap.github.com/hh/thread_732.html#post-summary-hh-946]
