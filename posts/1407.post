@@ -2,6 +2,7 @@ Author: Attila Nagy
 Subject: Deprecating config file format 1 and 2
 Tag: deprecation
 Tag: issue
+Tag: reviewed
 Message-Id: <20101003192515.ddf95ca9.nagy.attila.1984@gmail.com>
 Parent: <4C95A63C.8000306@gmail.com>
 Date: Sun, 3 Oct 2010 19:25:15 +0200
@@ -9,9 +10,8 @@ Date: Sun, 3 Oct 2010 19:25:15 +0200
 This has timed out long ago, so it passes. But there is an open
 question:
 
-> Heapkeeper v0.9 and later would
-> either print an error message in this case or would not even recognize
-> the old formats. (Opinion?)
+> Heapkeeper v0.9 and later would either print an error message in
+> this case or would not even recognize the old formats. (Opinion?)
 
 If we had a user base, we should consider keeping the legacy code. But
 since we have none (that we know of) other than us, we should take

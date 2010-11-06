@@ -1,7 +1,8 @@
 Author: Csaba Hoch
 Subject: Deprecating config file format 1 and 2
-Tag: issue
 Tag: deprecation
+Tag: issue
+Tag: reviewed
 Message-Id: <4CCED28E.8090600@gmail.com>
 Parent: <4C95A63C.8000306@gmail.com>
 Date: Mon, 01 Nov 2010 15:45:34 +0100
