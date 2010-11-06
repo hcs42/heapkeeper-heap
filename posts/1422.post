@@ -1,7 +1,8 @@
 Author: Csaba Hoch
 Subject: Using deprecated feature: "hkweb{,.js}: adding new posts implemented" (2010-08-11 6c7cc72)
-Tag: commit
 Tag: bug
+Tag: commit
+Tag: reviewed
 Message-Id: <4CD5B73F.6040202@gmail.com>
 Parent: <4C962678.8070007@gmail.com>
 Date: Sat, 06 Nov 2010 21:14:55 +0100
