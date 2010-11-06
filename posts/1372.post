@@ -1,19 +1,10 @@
 Author: Csaba Hoch
 Subject: Issues
-Tag: prop
 Tag: hh-conventions
+Tag: prop
+Tag: reviewed
 Message-Id: <4C94A63E.3040109@gmail.com>
 Parent: <4AE200AB.5060003@gmail.com>
 Date: Sat, 18 Sep 2010 13:45:02 +0200
 
-> I propose using the following tags for posts about issues:
-> - bug: bugs
-> - feature: new features or improving existing features
-> - issue: everything else about concrete parts of Hk
-> - prop: proposals that not about concrete parts of Hk, but about
->   coding conventions, procedures, repository usage, workflows, heap
->   usage
-
 [close]
-
-[note Parent post: http://heapkeeper-heap.github.com/hh/thread_763.html#post-summary-hh-763]
