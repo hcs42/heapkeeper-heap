@@ -1,15 +1,16 @@
 Author: Attila Nagy
 Subject: New tag: "removal"
-Tag: prop
 Tag: hh-convention
 Tag: hh-tags
+Tag: prop
+Tag: reviewed
 Message-Id: <AANLkTikaSZE43AKDRi1P=LV7_Z3+yn5_Qsm+2fXECCPp@mail.gmail.com>
 Parent: <AANLkTikomLxA5Pg7RZ84dGays+4+uyEwd9FuyfL5S6KT@mail.gmail.com>
 Date: Wed, 22 Sep 2010 16:36:53 +0200
 
-> That said, the tag "deprecation" has
-> advantages as well: most programmers will instantly know what we are
-> talking about, which is not the case for "removal".
+> That said, the tag "deprecation" has advantages as well: most
+> programmers will instantly know what we are talking about, which is
+> not the case for "removal".
 
 I think this is a strong argument. I vote for "deprecation".
 

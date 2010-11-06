@@ -1,13 +1,14 @@
 Author: Csaba Hoch
 Subject: Using deprecated feature: "hkweb{,.js}: adding new posts implemented" (2010-08-11 6c7cc72)
-Tag: commit
 Tag: bug
+Tag: commit
+Tag: reviewed
 Message-Id: <4C962678.8070007@gmail.com>
 Date: Sun, 19 Sep 2010 17:04:24 +0200
 
 In commit 6c7cc72 [1], you use the hkgen.Generator.augment_postitem
 method that was deprecated in commit deb3af2 [2]:
- 
+
     +   generator = PostPageGenerator(self._postdb)
     +   generator.set_post_id(post.post_id())
     +   postitem = generator.augment_postitem(hklib.PostItem('inner', post))
