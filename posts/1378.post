@@ -1,13 +1,10 @@
 Author: Csaba Hoch
 Subject: Use getter method instead of augmentation
 Tag: issue
+Tag: reviewed
 Message-Id: <4C94ED78.1050807@gmail.com>
 Parent: <b29f917d0911100953k31f07dd7kc1b48e0817f8e04e@mail.gmail.com>
 Date: Sat, 18 Sep 2010 18:48:56 +0200
-
-> The way Generator currently modifies the PostItems to add a printing
-> function is ugly and inefficient. We have decided to use a getter
-> method in another thread [1]
 
 [close]
 
@@ -17,5 +14,3 @@ then; I now committed the rest in commit d92d06a [2].
 [1] "hkgen: removed PostItem augmenting mechanism", 2010-08-13,
     Attila Nagy
 [2] "hkgen: augmentation bug fixed", 2010-09-18, Csaba Hoch
-
-[note Parent post: http://heapkeeper-heap.github.com/hh/thread_866.html#post-summary-hh-904]
