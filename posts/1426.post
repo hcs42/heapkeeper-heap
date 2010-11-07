@@ -1,0 +1,13 @@
+Author: Csaba Hoch
+Subject: Complain about unsupported Python version
+Tag: issue
+Tag: idea
+Message-Id: <4CD65B04.1030302@gmail.com>
+Parent: <AANLkTikLDPVoMDLJGklRmZM7sl5RzVL2XEXOMf50kD-W@mail.gmail.com>
+Date: Sun, 07 Nov 2010 08:53:40 +0100
+
+[close]
+
+Check implemented in commit e541573 [1].
+
+[1] "hklib: checking Python version", 2010-11-06, Csaba Hoch

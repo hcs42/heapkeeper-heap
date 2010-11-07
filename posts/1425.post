@@ -1,0 +1,15 @@
+Author: Csaba Hoch
+Subject: Meeting 2010-08-14
+Tag: minutes
+Tag: issue
+Message-Id: <4CD65AF8.2020403@gmail.com>
+Parent: <4C67E7E8.7010807@gmail.com>
+Date: Sun, 07 Nov 2010 08:53:28 +0100
+
+> 2. Some function names, variable names and other identifiers in
+>    hkgen.py contain the word "link", but they actually mean "URL".
+>    These identifiers should be modify to contain the word "url".
+
+Done in commit 5d54742 [1].
+
+[1] "hkgen: escape_link renamed to escape_url", 2010-11-07, Csaba Hoch

@@ -1,0 +1,19 @@
+Author: Csaba Hoch
+Subject: Development policies, pylint works OK on all Heapkeeper code
+Tag: prop
+Message-Id: <4CD66C63.1070306@gmail.com>
+Parent: <4C8CEDEA.1060803@gmail.com>
+Date: Sun, 07 Nov 2010 10:07:47 +0100
+
+[close]
+
+The pylint problems were fixed in commit 8164e08 [1]. I had to migrate
+to pylint 0.21 because the older versions did not work with the
+Ubuntu, so probably the older versions will not work with Heapkeeper
+any more.
+
+The pylint execution is included in the post-commit hook if you
+install hk-dev-utils, so we hope that we will not forget about pylint
+again.
+
+[1] "*: going to pylint 0.21", 2010-10-30, Csaba Hoch
