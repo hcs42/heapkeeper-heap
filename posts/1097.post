@@ -1,6 +1,5 @@
 Author: Attila Nagy
 Subject: The need for trailing whitespaces in Heap posts
-Tag: issue
 Tag: reviewed
 Message-Id: <b29f917d1002070308g5c74d57ch24bcdbae725a195f@mail.gmail.com>
 Date: Sun, 7 Feb 2010 12:08:18 +0100
@@ -35,3 +34,5 @@ as it would happen otherwise.
 Of course this meta doesn't do anything, so it could be called "nop",
 but then its purpose wouldn't be so evident. Maybe we could say that
 "nop" and "sep" are synonyms for the same meta.
+
+[note Original parent: probably heap://hh/1091]

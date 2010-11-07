@@ -10,9 +10,10 @@ The print_post_page and write_post_pages methods of hkgen.Generator are
 used only for generating post pages. In a previous thread [1] we already
 agreed that post pages are unnecessary and we use thread pages
 instead. So I propose making them deprecated in v0.8 and removing them
-from v0.9.
+from v0.9. [2]
 
 If you agree, it will also mean that we can close heap://hh/749 which
 talks about a possible modification to post page generation.
 
 [1] heap://hh/705
+[2] This was also proposed in heap://hh/1038.

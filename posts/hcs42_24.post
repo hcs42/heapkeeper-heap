@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: assertEquals is removed from Python 2.7
+Tag: issue
+Tag: reviewed
+Parent: hh/1186
+Date: Sun, 07 Nov 2010 07:51:03 +0000
+
+[close]
+
+Done in commit 9b2390d [1].
+
+[1] "test_*: assertEquals and assert_ removed", 2010-11-07, Csaba Hoch

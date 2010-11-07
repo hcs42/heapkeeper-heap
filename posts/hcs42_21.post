@@ -1,0 +1,11 @@
+Author: Csaba Hoch
+Subject: Moving heapkeeper/script to hk-dev-utils
+Tag: prop
+Tag: reviewed
+Parent: hh/1177
+Date: Sun, 07 Nov 2010 07:29:36 +0000
+
+[close]
+
+heapkeeper/script has been partly moved to hk-dev-utils, partly
+removed.

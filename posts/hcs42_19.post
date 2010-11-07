@@ -1,0 +1,14 @@
+Author: Csaba Hoch
+Subject: hkweb: no web.py; state of hkweb
+Tag: issue
+Tag: reviewed
+Parent: hh/1007
+Date: Sun, 07 Nov 2010 07:24:26 +0000
+
+[close]
+
+hkweb has been usable for a long time and is now a crucial part of
+Heapkeeper.
+
+We decided not to include web.py in the Heapkeeper repository but to
+describe how to get it.

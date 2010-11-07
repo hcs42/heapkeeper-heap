@@ -1,0 +1,15 @@
+Author: Csaba Hoch
+Subject: Error displaying posts without heapid
+Tag: bug
+Tag: reviewed
+Parent: hh/937
+Date: Sun, 07 Nov 2010 07:16:29 +0000
+
+[close]
+
+This bug is fixed:
+
+    >>> import hklib
+    >>> a = hklib.Post.from_str('Author: a')
+    >>> a
+    <post object without post id>

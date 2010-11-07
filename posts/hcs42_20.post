@@ -1,0 +1,12 @@
+Author: Csaba Hoch
+Subject: Separate hkemail module
+Tag: issue
+Tag: reviewed
+Parent: hh/1113
+Date: Sun, 07 Nov 2010 07:28:05 +0000
+
+[close]
+
+Implemented in commit 9f5a018 [1].
+
+[1] "hkemail: extraced from hklib", 2010-10-24, Csaba Hoch
