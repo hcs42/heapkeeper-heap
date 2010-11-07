@@ -49,7 +49,7 @@ retreat if the idea turns out to be a mistake.
 
 > - 690 of the remaining lines contained '^[^\]\[]*\[\d\][^][]*$',
 
-<<<!todo Correct and remove this.>>>
+[todo Correct and remove this.]
 
 In this regexp, you use two different sequences to denote the same
 pattern:
@@ -78,7 +78,7 @@ heads" we used earlier; these look like \[3,4].
 
 == Cites ==
 
-[!todo We should change "cite" to "footnote".]
+[todo We should change "cite" to "footnote".]
 
 > There are two possibilities to solve the "two links for one footnote"
 > problem that you describe:
@@ -132,17 +132,17 @@ not as a first priority.
 
 === Itemization ===
 
-[!todo Should be second-level header.]
+[todo Should be second-level header.]
 
 I like your solution. It really is elegant, although at first I wanted
-to argue against it, since it is somewhat arteficial, ie. the post
+to argue against it, since it is somewhat artificial, ie. the post
 author must pay attention.
 
 An addition: itemizations look neat with the non-first lines of an
 item being indented by 2. Emacs or Vim can create these automatically,
 but we should nonetheless recognize multiline items even if the
 non-first lines are not indented, as it would make the life of those
-using more simplistic editors unconfortable.
+using more simplistic editors uncomfortable.
 
 So I think this would also have to be valid:
 

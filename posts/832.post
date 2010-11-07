@@ -31,4 +31,4 @@ But of course either of these should be improved because we want to
 use the cache mechanism for all prefixes. (Where an empty string is
 just a concrete prefix.)
 
-[note: I have not read your commit on this subject yet.]
+[note I have not read your commit on this subject yet.]
