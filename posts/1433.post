@@ -1,0 +1,22 @@
+Author: Attila Nagy
+Subject: JavaScript testing
+Tag: issue
+Message-Id: <AANLkTi=E8cTsKNbuMknRCWGE1juE3NH1M7-7_+SrwKAJ@mail.gmail.com>
+Parent: <4CE29C25.7050707@gmail.com>
+Date: Tue, 16 Nov 2010 18:12:32 +0100
+
+> JsTestDriver can be easily used from the
+> command line. The code is still executed in a browser, but after you
+> start the JsTestDriver server and the browser and create a
+> "JsTestDriver tab" in it, you don't have to care about it any more.
+
+Do you know how it works? I've already been thinking about this, but I
+always came to the conclusion that the only way to let JS signal back
+to the command line is the following:
+- start a minimal web server,
+- launch the testing code in a browser, either a new instance or a new tab,
+- the tests are performed, and the results are sent to the web server
+via POST or GET,
+- wait for the server to get this response.
+
+Does JsTestDriver work like this?

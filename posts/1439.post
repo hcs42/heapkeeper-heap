@@ -1,0 +1,17 @@
+Author: Csaba Hoch
+Subject: hkweb -> hkweb, hkwebgen, hkwebserver
+Tag: issue
+Tag: refactoring
+Message-Id: <4CE6D23B.6080405@gmail.com>
+Date: Fri, 19 Nov 2010 20:38:35 +0100
+
+I propose splitting the hkweb module into three parts:
+- hkwebgen: generator classes (477 lines)
+- hkwebserver: server classes (540 lines)
+- hkweb: the rest (authentication, server thread, start()) (309 lines)
+
+Also, classes like hkweb.Index and hkweb.Post (or hkwebserver.Index
+and hkwebserver.Post) could be renamed to IndexServer and PostServer
+to be less ambiguous.
+
+I calculated the lines on the _hkweb branch.

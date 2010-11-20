@@ -1,0 +1,23 @@
+Author: Csaba Hoch
+Subject: JavaScript testing
+Tag: issue
+Message-Id: <4CE29C25.7050707@gmail.com>
+Parent: <AANLkTilcoWEqgA-13I3bg6cZ0ZMR-czbUyTzFXpfiWCx@mail.gmail.com>
+Date: Tue, 16 Nov 2010 15:58:45 +0100
+
+I had a look at QUnit, but another tool called JsTestDriver [1] has a
+killer feature over it: JsTestDriver can be easily used from the
+command line. The code is still executed in a browser, but after you
+start the JsTestDriver server and the browser and create a
+"JsTestDriver tab" in it, you don't have to care about it any more.
+I will integrate JsTestDriver into hk-dev-utils, which will guide you
+to do these steps.
+
+I had a look at the other candidate, Rhino [2], but I haven't found a
+good tutorial, so I just dropped it and went with JsTestDriver. This
+blogger [3] also recommended JsTestDriver instead of other
+alternatives.
+
+[1] http://code.google.com/p/js-test-driver/
+[2] heap://hh/1324
+[3] http://codeutopia.net/blog/2009/08/04/unit-testing-javascript/

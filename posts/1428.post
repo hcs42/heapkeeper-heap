@@ -1,0 +1,147 @@
+Author: Csaba Hoch
+Subject: Handling diamond inheritance
+Tag: python
+Message-Id: <4CD9B7FF.7070705@gmail.com>
+Date: Tue, 09 Nov 2010 22:07:11 +0100
+
+I had a problem with the diamond inheritance [1] in Python, and the
+way to solve it was to introduce init() methods next to __init__()
+methods. I applied this solution only to the generator classes,
+because I don't expect to use diamond inheritance with other classes.
+
+== The problem ==
+
+The problem is the following. Consider this inheritance structure:
+
+    class A(object):
+
+        def __init__(self):
+            print 'A initialization'
+
+    class B(A):
+
+        def __init__(self):
+            A.__init__(self)
+            print 'B initialization'
+
+    class C(A):
+
+        def __init__(self):
+            A.__init__(self)
+            print 'C initialization'
+
+    class D(B, C):
+
+        def __init__(self):
+            B.__init__(self)
+            C.__init__(self)
+
+    D()
+
+The problem is that the __init__ method of A will be called twice. The
+output of the program above is this:
+
+    A initialization
+    B initialization
+    A initialization
+    C initialization
+
+This is usually not what we want, because D will have only one A
+instance inside: it will have only one of each data member of A. We
+want to see this:
+
+    A initialization
+    B initialization
+    C initialization
+
+It is usually recommended to use super() instead of just A.__init__,
+but that will not help me, it will only be more implicit and even more
+confusing, so I will not use it.
+
+== The solution ==
+
+I haven't found any proper solution to this on the Internet, so I
+invented my own. The idea is to separate the two parts of the __init__
+method:
+
+1. Calling the __init__ methods of base classes.
+2. Performing initialization, e.g. setting the values of data members.
+
+The second part shall be extracted to a separate function called init,
+so that it can be invoked by subclasses without invoking the
+initialization methods of the base classes.
+
+My example would look like this:
+
+    class A(object):
+
+        def __init__(self):
+            A.init(self)
+
+        def init(self):
+            print 'A initialization'
+
+    class B(A):
+
+        def __init__(self):
+            A.__init__(self)
+            B.init(self)
+
+        def init(self):
+            print 'B initialization'
+
+    class C(A):
+
+        def __init__(self):
+            A.__init__(self)
+            C.init(self)
+
+        def init(self):
+            print 'C initialization'
+
+    class D(B, C):
+
+        def __init__(self):
+            A.__init__(self)
+            B.init(self)
+            C.init(self)
+            D.init(self)
+
+        def init(self):
+            pass
+
+    D()
+
+Now the output is the desired one:
+
+    A initialization
+    B initialization
+    C initialization
+
+So the logic is that if you write a class that has one or more base
+classes, but without diamond inheritance, you just have to call the
+__init__ methods of the base classes after each other as usual and
+call your own init() method at the end to do the initialization of
+this class.
+
+The thinking comes in when a class has multiple base classes with
+diamond inheritance. In this case, the author of the class has to
+think about what base classes should be initialized and in what order.
+Here, the author of class D saw that first A can be initialized
+together with all its base classes, so the author first called
+A.__init__. This left B, C and D to be initialized, which was done by
+calling each of their init() methods.
+
+It is important to call <Class>.init(self) instead of self.init()
+everywhere. E.g. if A.__init__ would call self.init() instead of
+A.init(self), then this line would invoke D.init() in a D instance
+instead of A.init(), which is not what we want.
+
+== Conclusion ==
+
+I started to use this technique in Heapkeeper.
+
+I'm wondering whether you have ideas about how acceptable this
+technique is and/or how could it be improved.
+
+[1] http://en.wikipedia.org/wiki/Diamond_problem

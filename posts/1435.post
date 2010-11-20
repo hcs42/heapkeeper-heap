@@ -1,0 +1,42 @@
+Author: Csaba Hoch
+Subject: Static HTML pages: let's always regenerate all HTML pages
+Tag: issue
+Message-Id: <AANLkTimpjKXmqTegrb6xQ1KfNDw44pYFBAUadKfiKtfZ@mail.gmail.com>
+Date: Wed, 17 Nov 2010 22:10:02 +0100
+
+Currently, when the user issues the g() command in hkshell, we try to
+decide which HTML files should be regenerated based on the timestamps
+of the HTML files, the post files, and whether or not the post object
+is in "modified" state. Although the code is smart that deals with
+this, but it is not smart enough: heap://hh/926 and heap://hh/1056
+describe two problems. I think that there are other problems as well
+that we are not aware of, and it may make it harder to create new
+plugins, because this question has to be considered.
+
+One possibility is to rethink the model of how this part of the code
+works and rewrite it. I don't think this code is so useful that it is
+worth the effort. Improving hkweb, the documentation, etc. are far
+more important things to work on than this.
+
+Another possibility is to leave the code buggy. The problem with this
+is that even I don't use this feature when generating static HH pages
+because these problems are quite bad; I just delete all HTML files
+before invoking g(). We can't expect anyone to use this feature with
+these problems.
+
+So I propose to remove this code and always regenerating all HTML
+pages. When you say that Heapkeeper code is bloated, and you want it
+to be clean and simple, which is the most easy step in that direction?
+Removing features and code that are not used. I don't think it is an
+inherently bad thing: we implement a feature because we think we need
+it, then we remove it if it turns out that it is not as useful.
+
+I don't think this will be a problem for anyone. With the introduction
+of hkweb, few people will use static HTML page generation, and much
+fewer will use it in an interactive way. And this feature would be
+useful only for them.
+
+In the future, we may have other databases than post files (SQL
+database that you proposed once, a single file for each heap that I'm
+thinking about now, etc.), and this current question slows down the
+development of those possible new features.

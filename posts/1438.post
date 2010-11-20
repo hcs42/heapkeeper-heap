@@ -1,0 +1,38 @@
+Author: Csaba Hoch
+Subject: Including web.py in Heapkeeper as a submodule
+Tag: issue
+Message-Id: <4CE69447.6080102@gmail.com>
+Date: Fri, 19 Nov 2010 16:14:15 +0100
+
+In thread heap://hh/1007, we discussed whether to add web.py to the
+Heapkeeper repository. I said the following:
+
+    We have two choices:
+    - add web.py to the Heapkeeper repository
+    - describe how to get web.py and where should the user put it
+
+You said you preferred the first option, and I said I preferred the
+second one.
+
+For the automatic tests, I needed to monkey-patch hkweb, which is I
+think a bad practice in this case, especially considering that we are
+not sure what web.py version the user has. So instead we should modify
+and ship web.py, which means that we have to refine/modify our current
+approach.
+
+I have realized that we have a third option besides the ones mentioned
+above: we can fork the web.py GitHub repository, patch it, and use the
+patched version in Heapkeeper. We could apply (almost) the same
+commits for all web.py releases. Heapkeeper developers had to clone
+our web.py git repository and use that. Users just had to download the
+zip file as always, which would include web.py.
+
+We could use the "git submodules" command [1][2] to keep the two
+repositories in sync. The web.py repo would be a submodule of the
+Heapkeeper repo; I propose placing the former one in the
+external/webpy subdirectory.
+
+What do you say?
+
+[1] http://book.git-scm.com/5_submodules.html
+[2] http://www.kernel.org/pub/software/scm/git/docs/git-submodule.html

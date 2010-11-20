@@ -1,0 +1,17 @@
+Author: Attila Nagy
+Subject: Using Javascript
+Tag: hkweb
+Tag: prop
+Message-Id: <AANLkTik5cEj3nmcE0PzwxZXeHgkGPXeCRHYi_rnpHngt@mail.gmail.com>
+Parent: <4CE19537.8030500@gmail.com>
+Date: Mon, 15 Nov 2010 22:19:32 +0100
+
+>> Cool! An idea: let's keep it as an Easter Egg in the JS-based output
+>> page :)
+>
+> Is it OK as a plugin?
+
+Of course! A feature suggestion: at the end of a game, if there is a
+thread whose root has the subject 'Snake high scores', it adds a new
+child to this root that contains the name of the player (if available,
+that is, auth is enabled) and the score.

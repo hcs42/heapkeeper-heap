@@ -1,0 +1,13 @@
+Author: Csaba Hoch
+Subject: Tutorial rewrite: more hkweb
+Tag: issue
+Message-Id: <4CE55458.7090101@gmail.com>
+Parent: <4C796034.7070408@gmail.com>
+Date: Thu, 18 Nov 2010 17:29:12 +0100
+
+I have a new plan which is totally different from the proposed one.
+
+We should have a Beginner Tutorial that deals with installation and
+hkweb, and an Advanced Tutorial that deals with hkshell and the file
+system. This is not new to Attis, since we have talked about this on
+2010-10-16.
