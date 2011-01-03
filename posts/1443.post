@@ -1,0 +1,15 @@
+Author: Attila Nagy
+Subject: Including web.py in Heapkeeper as a submodule
+Tag: issue
+Message-Id: <AANLkTikmhkvMg4NjspjjbptYod5BGXwvfBaT6X_Zh6-+@mail.gmail.com>
+Parent: <4CE69447.6080102@gmail.com>
+Date: Sat, 20 Nov 2010 19:06:04 +0100
+
+> We could use the "git submodules" command [1][2] to keep the two
+> repositories in sync. The web.py repo would be a submodule of the
+> Heapkeeper repo; I propose placing the former one in the
+> external/webpy subdirectory.
+
+I have never used git submodules, and I also have to admit skipped
+this chapter in the book altogether. If you decide to take this route,
+I'll go and educate myself.

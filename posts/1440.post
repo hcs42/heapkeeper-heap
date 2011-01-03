@@ -1,0 +1,22 @@
+Author: Attila Nagy
+Subject: Static HTML pages: let's always regenerate all HTML pages
+Tag: issue
+Message-Id: <AANLkTimk+qBjhqL02MD7wsY9=zv+9eE=9r=jq1oxS7Y8@mail.gmail.com>
+Parent: <AANLkTimpjKXmqTegrb6xQ1KfNDw44pYFBAUadKfiKtfZ@mail.gmail.com>
+Date: Sat, 20 Nov 2010 18:31:40 +0100
+
+> I don't think this will be a problem for anyone. With the introduction
+> of hkweb, few people will use static HTML page generation, and much
+> fewer will use it in an interactive way. And this feature would be
+> useful only for them.
+
+I have a very strong objection to this: if we ever get any users, I
+expect them to come from the user base of ordinary mailing lists.
+These programs work exactly like this: they generate incrementally. Of
+course this is much easier for them, since their posts are immutable.
+
+Besides, if one were to use Hk to host a mailing list with a really
+huge archive, i.e. millions of posts, it would be unacceptable to have
+to rebuild the whole static output every time.
+
+So I suggest we repair this feature.

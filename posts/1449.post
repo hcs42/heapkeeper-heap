@@ -1,0 +1,19 @@
+Author: Csaba Hoch
+Subject: Heapkeeper v0.9 to be released
+Tag: release
+Tag: v0.9
+Message-Id: <4D1CD2DD.5050902@gmail.com>
+Date: Thu, 30 Dec 2010 19:43:41 +0100
+
+I plan to release Heapkeeper v0.9 tomorrow.
+
+The following branches are to be included:
+
+- hcs42/_master
+- hcs42/_hkweb
+
+The following branches are not to be included, because they are not
+yet ready:
+
+- hcs42/__hkweb-refac
+- attish/__hkweb-add-root

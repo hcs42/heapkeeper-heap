@@ -1,0 +1,25 @@
+Author: Csaba Hoch
+Subject: Static HTML pages: let's always regenerate all HTML pages
+Tag: issue
+Message-Id: <4CE813D8.7090507@gmail.com>
+Parent: <AANLkTimk+qBjhqL02MD7wsY9=zv+9eE=9r=jq1oxS7Y8@mail.gmail.com>
+Date: Sat, 20 Nov 2010 19:30:48 +0100
+
+>> I don't think this will be a problem for anyone. With the introduction
+>> of hkweb, few people will use static HTML page generation, and much
+>> fewer will use it in an interactive way. And this feature would be
+>> useful only for them.
+>
+> I have a very strong objection to this: if we ever get any users, I
+> expect them to come from the user base of ordinary mailing lists.
+> These programs work exactly like this: they generate incrementally. Of
+> course this is much easier for them, since their posts are immutable.
+
+That does not mean that we expect our users to use static HTML
+generation instead of using hkweb. They lose so much with that; for
+example searching.
+
+> So I suggest we repair this feature.
+
+OK, but if it will not get repaired in a few months, we will have to
+revisit this discussion.

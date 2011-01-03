@@ -1,0 +1,22 @@
+Author: Attila Nagy
+Subject: Import statements and threads
+Tag: prop
+Message-Id: <AANLkTimWyxjJpJaE5SWG=XumVo-EqfEazkcf7rUJVHFd@mail.gmail.com>
+Parent: <4CE69443.9080900@gmail.com>
+Date: Sat, 20 Nov 2010 19:03:04 +0100
+
+> == Proposal ==
+>
+> I propose that hkrc modules should have a start() function which will
+> be called automatically by hkshell, and everything other than
+> function/class/variable definitions and trivial calls should be done
+> there.
+
+How I hate this pattern. One finds an issue that is relevant only to a
+quite special use case (here, the testing), but ruins that case
+completely. The workaround, however, makes everyone's life a bit more
+complicated.
+
+If I understand correctly, this is only necessary for those hkrcs that
+are used for testing. In other cases, we usually don't have to wait
+for hkweb's import to finish.

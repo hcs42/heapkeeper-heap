@@ -1,0 +1,12 @@
+Author: Attila Nagy
+Subject: Import statements and threads
+Tag: prop
+Message-Id: <AANLkTi=LNw=xjf0BjALug6rVbB6cmpDru5qkLWbk98dU@mail.gmail.com>
+Parent: <4CE813D5.8070301@gmail.com>
+Date: Sun, 21 Nov 2010 16:14:14 +0100
+
+> Another reason of my proposal is that this example suggests to me
+> that executing "real code" while doing the import is not a very good
+> idea.
+
+That's a good point.

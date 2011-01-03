@@ -1,0 +1,14 @@
+Author: Attila Nagy
+Subject: Static HTML pages: let's always regenerate all HTML pages
+Tag: issue
+Message-Id: <AANLkTinkTc7urrntexgo8zsfc=FS8hXQ=4zSWDVc0JCk@mail.gmail.com>
+Parent: <4CE813D8.7090507@gmail.com>
+Date: Wed, 24 Nov 2010 17:57:07 +0100
+
+> OK, but if it will not get repaired in a few months, we will have to
+> revisit this discussion.
+
+I am OK with that -- if it doesn't get sorted out in a few months, it
+may mean that it is not as important as I thought, after all. And if
+it becomes necessary later, we can re-implement it, maybe using
+presently existing code from git as a basis.

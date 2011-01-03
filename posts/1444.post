@@ -1,0 +1,10 @@
+Author: Attila Nagy
+Subject: hkweb -> hkweb, hkwebgen, hkwebserver
+Tag: issue
+Tag: refactoring
+Message-Id: <AANLkTi=mJU-4Z2_3nf9saL5-o3GcUL+PLbs5SHcFgVDY@mail.gmail.com>
+Parent: <4CE6D23B.6080405@gmail.com>
+Date: Sat, 20 Nov 2010 19:07:54 +0100
+
+I totally agree that hkweb is getting complicated and needs to be
+split. These parts seem logical and of a manageable size, so OK.

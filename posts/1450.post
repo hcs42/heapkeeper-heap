@@ -1,0 +1,16 @@
+Author: Csaba Hoch
+Subject: Heapkeeper v0.9 to be released
+Tag: release
+Tag: v0.9
+Message-Id: <4D1CDE57.5030609@gmail.com>
+Parent: <4D1CD2DD.5050902@gmail.com>
+Date: Thu, 30 Dec 2010 20:32:39 +0100
+
+I have pushed _v0.9. I also uploaded tar.gz and zip files:
+
+- http://heapkeeper.org/releases/heapkeeper-0.9.tar.gz
+- http://heapkeeper.org/releases/heapkeeper-0.9.zip
+
+Please have a look at it and try it out. You can go through the
+tutorial for example. If everything is OK, I will do the final release
+tomorrow.

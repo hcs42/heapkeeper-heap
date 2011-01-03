@@ -1,0 +1,25 @@
+Author: Csaba Hoch
+Subject: Import statements and threads
+Tag: prop
+Message-Id: <4CE813D5.8070301@gmail.com>
+Parent: <AANLkTimWyxjJpJaE5SWG=XumVo-EqfEazkcf7rUJVHFd@mail.gmail.com>
+Date: Sat, 20 Nov 2010 19:30:45 +0100
+
+> If I understand correctly, this is only necessary for those hkrcs
+> that are used for testing. In other cases, we usually don't have to
+> wait for hkweb's import to finish.
+
+Not exactly. It can be a problem for any hkrc used for any automatic
+task, because automatic tasks are much easier to perform if the
+webserver is started synchronously.
+
+I would like to modify web.py to always start the webserver
+synchronously (it is more logical I think than do it asynchronously),
+and in that case it would affect each hkrc. In that case, for example,
+the message about the web server being started would not occur at a
+random line when hkshell is started, but always at the same place,
+where it was actually started.
+
+Another reason of my proposal is that this example suggests to me
+that executing "real code" while doing the import is not a very good
+idea.
